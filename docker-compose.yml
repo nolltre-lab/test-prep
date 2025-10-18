@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  test-prep:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: iqesolutions/test-prep:latest
+    ports:
+      - "8789:8787"
+    # For local testing you can mount your local config.json & packs if you like:
+    volumes:
+      - ./config.json:/app/config.json:ro
+      - ./packs:/app/packs:ro
+    restart: unless-stopped

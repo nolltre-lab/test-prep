@@ -1,0 +1,13 @@
+# Ignore node binaries and server start scripts
+node
+node.exe
+start-server.sh
+start-server.cmd
+config.json
+
+# Optional: Ignore Node.js dependencies if you ever add them
+node_modules/
+
+# Optional: Ignore logs or temp files
+*.log
+*.tmp

@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  test-prep:
+    image: iqesolutions/test-prep:latest
+    container_name: test-prep
+    restart: always
+
+    # Publish host:container
+    ports:
+      - "8789:8787"
+
+    # Mount only the config.json (API key lives here)
+    volumes:
+      - ./config.json:/app/config.json:ro
+
+    # Optional: uncomment to override baked-in packs with a local folder on the Pi
+    # volumes:
+    #   - ./config.json:/app/config.json:ro
+    #   - ./packs:/app/packs:ro
+
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8787/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

@@ -1,0 +1,79 @@
+{
+  "title": "Fysik: Sammanfattning (arbete, rörelse, materia m.m.)",
+  "items": [
+    { "front": "Vad menas med en storhet?", "back": "Allt som kan mätas, t.ex. längd, massa eller volym.", "hint": "Mätbar sak.", "choices": ["Något litet", "En mätbar egenskap", "Ett verktyg", "En enhet"], "answerIndex": 1, "tags": ["storheter"] },
+    { "front": "Ge exempel på enheter.", "back": "Meter (m), kilogram (kg), deciliter (dl).", "hint": "m, kg, dl", "choices": ["meter, gram, sekundhand", "meter, kilogram, deciliter", "tum, fot, armbåge", "krona, euro, dollar"], "answerIndex": 1, "tags": ["storheter","enheter"] },
+    { "front": "Formeln för volym av ett rätblock?", "back": "V = l · b · h (längd · bredd · höjd).", "hint": "Tre mått multipliceras.", "choices": ["V = l + b + h", "V = l · b · h", "V = l / b / h", "V = l · l · l"], "answerIndex": 1, "tags": ["storheter","formler"] },
+    { "front": "Hur kan man mäta volymen av ett oregelbundet föremål?", "back": "Sänka ned det i ett mätglas och läsa av volymökningen.", "hint": "Vattenförskjutning.", "choices": ["Väga det", "Mäta med linjal", "Sänka i vatten och läsa av", "Rita av det"], "answerIndex": 2, "tags": ["storheter"] },
+    { "front": "Ungefär hur mycket väger 1 liter vatten?", "back": "Cirka 1 kilogram.", "hint": "Enkelt att minnas: 1 ↔ 1.", "choices": ["0,1 kg", "1 kg", "10 kg", "100 g"], "answerIndex": 1, "tags": ["storheter"] },
+    { "front": "Vad betyder prefixet kilo (k)?", "back": "Tusen.", "hint": "Som i kilometer.", "choices": ["Hundra", "Tusen", "Miljon", "Tiondel"], "answerIndex": 1, "tags": ["enheter"] },
+    { "front": "Vad innebär densitet?", "back": "Massa per volym. Ju tätare atomerna sitter, desto större densitet.", "hint": "Hur tätt packat.", "choices": ["Volym per massa", "Massa per volym", "Längd per tid", "Energi per sekund"], "answerIndex": 1, "tags": ["materia","densitet"] },
+    { "front": "Formeln för densitet?", "back": "ρ = m / V.", "hint": "m över V.", "choices": ["ρ = V / m", "ρ = m · V", "ρ = m / V", "ρ = m + V"], "answerIndex": 2, "tags": ["materia","formler"] },
+    { "front": "Vilken densitet har vatten i g/cm³?", "back": "1 g/cm³.", "hint": "En etta.", "choices": ["0,1", "1", "10", "2"], "answerIndex": 1, "tags": ["densitet"] },
+    { "front": "Vad händer med ett ämne med lägre densitet än vatten?", "back": "Det flyter.", "hint": "Olja på vatten …", "choices": ["Det sjunker", "Det svävar", "Det flyter", "Inget händer"], "answerIndex": 2, "tags": ["densitet"] },
+
+    { "front": "Vad består en atom av?", "back": "Protoner, neutroner och elektroner.", "hint": "Tre sorters partiklar.", "choices": ["Endast protoner", "Protoner och elektroner", "Protoner, neutroner, elektroner", "Endast neutroner"], "answerIndex": 2, "tags": ["materia","atom"] },
+    { "front": "Vilken laddning har protonen?", "back": "Positiv.", "hint": "+", "choices": ["Neutral", "Negativ", "Positiv", "Växlande"], "answerIndex": 2, "tags": ["materia"] },
+    { "front": "Var finns protoner och neutroner i atomen?", "back": "I atomkärnan.", "hint": "Mitten.", "choices": ["I elektronskalen", "I atomkärnan", "Utanför atomen", "I molekyler"], "answerIndex": 1, "tags": ["materia"] },
+    { "front": "Vad är ett grundämne?", "back": "Ett ämne som består av bara en sorts atomer.", "hint": "En sorts atom.", "choices": ["En blandning", "En molekyl", "Ett ämne av en sorts atom", "Ett ämne av två atomer"], "answerIndex": 2, "tags": ["materia"] },
+
+    { "front": "Vad kan en kraft göra?", "back": "Starta/bromsa en rörelse eller ändra form på ett föremål.", "hint": "Påverkar rörelse och form.", "choices": ["Bara starta rörelse", "Bara böja saker", "Starta/bromsa/forma", "Ingenting"], "answerIndex": 2, "tags": ["krafter"] },
+    { "front": "Har en kraft alltid en motkraft?", "back": "Ja.", "hint": "Tryck mot bryggan → båten far iväg.", "choices": ["Nej", "Bara ibland", "Ja, alltid", "Bara i rymden"], "answerIndex": 2, "tags": ["krafter"] },
+    { "front": "Vilken enhet har kraft och vad mäts den med?", "back": "Newton (N), mäts med dynamometer.", "hint": "N och fjäder.", "choices": ["Joule, termometer", "Newton, dynamometer", "Watt, voltmeter", "Pascal, kronometer"], "answerIndex": 1, "tags": ["krafter","enheter"] },
+    { "front": "Hur stor tyngd har ungefär 1 kg på jorden?", "back": "Cirka 10 N.", "hint": "Nära 9,8.", "choices": ["1 N", "5 N", "10 N", "100 N"], "answerIndex": 2, "tags": ["krafter"] },
+    { "front": "Vad är tyngdpunkt och stödyta?", "back": "Tyngdpunkten är punkt där massan kan tänkas sitta. Lämnar den stödytan välter man.", "hint": "Välter när den hamnar utanför.", "choices": ["Tyngdpunkt är tyngden i N", "Stödyta är luften", "Tyngdpunkt inom stödyta = stabilt", "Inget av detta"], "answerIndex": 2, "tags": ["krafter","stabilitet"] },
+    { "front": "Vad orsakar tidvatten?", "back": "Månens gravitation som påverkar jordens vatten.", "hint": "Vår närmaste granne.", "choices": ["Solen bara", "Vind", "Månens gravitation", "Regn"], "answerIndex": 2, "tags": ["krafter","gravitation"] },
+
+    { "front": "Likformig vs olikformig rörelse?", "back": "Likformig: konstant hastighet/riktning. Olikformig: hastigheten och/eller riktningen ändras.", "hint": "Konstant vs ändras.", "choices": ["Likformig: ändras; Olikformig: konstant", "Båda ändras", "Likformig: konstant; Olikformig: ändras", "Ingen skillnad"], "answerIndex": 2, "tags": ["rörelse"] },
+    { "front": "Medelhastighet – formel?", "back": "v = s / t (sträcka delat med tid).", "hint": "s över t.", "choices": ["v = t / s", "v = s / t", "v = s · t", "v = s − t"], "answerIndex": 1, "tags": ["rörelse","formler"] },
+    { "front": "Vad är friktion?", "back": "En bromsande kraft som uppstår när ytor rör sig mot varandra.", "hint": "Motstånd mellan ytor.", "choices": ["En drivande kraft", "En temperatur", "En bromsande kraft", "Ett ljud"], "answerIndex": 2, "tags": ["rörelse","friktion"] },
+    { "front": "Exempel när man vill ha låg friktion?", "back": "Skridskor/klubba mot is, kullager i hjul.", "hint": "Rulla lätt.", "choices": ["Vandringskängor på is", "Kullager i hjul", "Handboll", "Sandpapper"], "answerIndex": 1, "tags": ["friktion"] },
+    { "front": "Vad är tröghet?", "back": "Motstånd mot att ändra hastighet/riktning. Kroppen vill fortsätta rakt fram.", "hint": "Buss bromsar → du kastas framåt.", "choices": ["Motstånd mot ljud", "Motstånd mot värme", "Motstånd mot rörelseförändring", "Motstånd mot gravitation"], "answerIndex": 2, "tags": ["rörelse","tröghet"] },
+    { "front": "Vad är luftmotstånd?", "back": "En sorts friktion mot luftens molekyler som bromsar rörelse.", "hint": "Känns när du cyklar fort.", "choices": ["Drivkraft", "Vakuum", "Friktion i luft", "Tyngdkraft"], "answerIndex": 2, "tags": ["rörelse","friktion"] },
+
+    { "front": "Vad är centripetalkraft?", "back": "Kraften som är riktad in mot centrum i en centralrörelse.", "hint": "Inåt mot mitten.", "choices": ["Utåt från centrum", "In mot centrum", "Uppåt", "Nedåt"], "answerIndex": 1, "tags": ["centralrörelse"] },
+    { "front": "Vad kallas känslan av en utåtriktad kraft i karusell?", "back": "Centrifugalkraft (upplevd i ett roterande system).", "hint": "Motsats till centripetal.", "choices": ["Tyngdkraft", "Centrifugalkraft", "Friktion", "Fjäderkraft"], "answerIndex": 1, "tags": ["centralrörelse"] },
+    { "front": "Vad är fritt fall?", "back": "När ett föremål faller utan luftmotstånd.", "hint": "Bara gravitation.", "choices": ["Fall i luftström", "Fall i vatten", "Fall utan luftmotstånd", "Fall i hiss"], "answerIndex": 2, "tags": ["rörelse","gravitation"] },
+    { "front": "Kastar du en sten horisontellt samtidigt som du släpper en lika stor lodrätt – vilken når marken först (utan luftmotstånd)?", "back": "De når marken samtidigt.", "hint": "Samma vertikala fall.", "choices": ["Den kastade först", "Den släppta först", "Samtidigt", "Ingen"], "answerIndex": 2, "tags": ["rörelse","frittfall"] },
+
+    { "front": "Vad är fysikaliskt arbete?", "back": "Energi som omvandlas när en kraft övervinns och ett föremål förflyttas i kraftens riktning.", "hint": "Kraft × sträcka.", "choices": ["Allt som känns jobbigt", "Energi utan rörelse", "Energi vid kraft × sträcka", "Bara värme"], "answerIndex": 2, "tags": ["arbete","energi"] },
+    { "front": "Formeln för arbete?", "back": "W = F · s.", "hint": "F gånger s.", "choices": ["W = F / s", "W = F · s", "W = s / F", "W = F + s"], "answerIndex": 1, "tags": ["arbete","formler"] },
+    { "front": "Enheter för arbete/energi?", "back": "Newtonmeter (Nm), även kallad joule (J).", "hint": "Nm = J.", "choices": ["Watt (W)", "Pascal (Pa)", "Newtonmeter (Joule)", "Volt (V)"], "answerIndex": 2, "tags": ["energi","enheter"] },
+    { "front": "Mekanikens gyllene regel lyder…", "back": "Det man vinner i kraft, förlorar man i väg.", "hint": "Vinst i kraft ↔ längre väg.", "choices": ["Kraften är alltid konstant", "Kraft är samma som massa", "Det man vinner i kraft, förlorar man i väg", "Ingen regel"], "answerIndex": 2, "tags": ["mekanik"] },
+    { "front": "Vad är lägesenergi och rörelseenergi?", "back": "Lägesenergi är lagrat arbete som kan bli rörelseenergi. Tillsammans kallas de mekanisk energi.", "hint": "Höjd ↔ fart.", "choices": ["Båda är värme", "Lägesenergi = kyla", "Lägesenergi lagrad; rörelseenergi när det rör sig", "Ingen skillnad"], "answerIndex": 2, "tags": ["energi"] },
+    { "front": "Formeln för effekt och enhet?", "back": "P = W / t, enhet watt (W) = joule per sekund (J/s).", "hint": "Arbete per tid.", "choices": ["P = t / W, W", "P = W · t, J/s", "P = W / t, W", "P = F · s, N"], "answerIndex": 2, "tags": ["effekt","formler"] },
+    { "front": "Vad gör ett vattenkraftverk enligt bilden?", "back": "Omvandlar vattenmassornas lägesenergi till rörelseenergi → turbin → elektrisk energi.", "hint": "Högt vatten → el.", "choices": ["Skapar värmeenergi direkt", "Omvandlar rörelse till kemisk energi", "Lägesenergi → rörelse → elektrisk", "Inget av detta"], "answerIndex": 2, "tags": ["energi","exempel"] },
+    {
+      "front": "Vad orsakar tidvattnet (flod och ebb) på jorden?",
+      "back": "Månens gravitation påverkar jordens hav, vilket skapar tidvatten.",
+      "hint": "Vår närmaste granne drar i haven.",
+      "choices": ["Vindar", "Solen värmer vattnet", "Månens gravitation", "Jordens rotation"],
+      "answerIndex": 2,
+      "tags": ["krafter","gravitation","tidvatten"]
+    },
+    {
+      "front": "Vad ger bäst stabilitet hos ett föremål eller en människa?",
+      "back": "Stor stödyta och låg tyngdpunkt.",
+      "hint": "Bred bas, låg topp.",
+      "choices": ["Liten stödyta, hög tyngdpunkt", "Stor stödyta och låg tyngdpunkt", "Stor stödyta, hög tyngdpunkt", "Liten stödyta, låg tyngdpunkt"],
+      "answerIndex": 1,
+      "tags": ["krafter","stabilitet","tyngdpunkt","stödyta"]
+    },
+    {
+      "front": "Vad är hästkraft (hk)?",
+      "back": "En gammal enhet för effekt.",
+      "hint": "Inte SI-enhet.",
+      "choices": ["Enhet för kraft", "Enhet för energi", "En gammal enhet för effekt", "Enhet för hastighet"],
+      "answerIndex": 2,
+      "tags": ["effekt","enheter","historik"]
+    },
+    {
+      "front": "Hur skapas el i ett vattenkraftverk enligt energikedjan?",
+      "back": "Vattnets lägesenergi omvandlas till rörelseenergi som driver turbiner och generatorer → elektrisk energi.",
+      "hint": "Höjdskillnad → turbin → generator.",
+      "choices": ["Värmeenergi blir el direkt", "Rörelseenergi blir lägesenergi", "Lägesenergi → rörelseenergi → elektrisk energi", "Kemisk energi → ljud"],
+      "answerIndex": 2,
+      "tags": ["energi","omvandling","exempel"]
+    }
+  ]
+}
