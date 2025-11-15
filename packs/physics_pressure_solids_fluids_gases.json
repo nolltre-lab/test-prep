@@ -1,0 +1,141 @@
+{
+  "title": "Fysik: Tryck – fasta material, vätskor och gaser (Kapitel 2)",
+  "items": [
+    {
+      "front": "Vad menas med tryck i fysik?",
+      "back": "Tryck är kraft per area: p = F / A.",
+      "hint": "Kraft delat på yta.",
+      "choices": ["Kraft gånger sträcka","Kraft per area","Massa per volym","Energi per tid"],
+      "answerIndex": 1,
+      "tags": ["tryck","formler"]
+    },
+    {
+      "front": "Vilken enhet använder man oftast för tryck i SI-systemet?",
+      "back": "Pascal (Pa), vilket är N/m².",
+      "hint": "N/m².",
+      "choices": ["Joule (J)","Watt (W)","Pascal (Pa)","Newtonmeter (Nm)"],
+      "answerIndex": 2,
+      "tags": ["tryck","enheter"]
+    },
+    {
+      "front": "Hur kan man minska trycket från en kraft?",
+      "back": "Genom att öka arean som kraften verkar på (t.ex. skidor, snöskor).",
+      "hint": "Större yta → mindre tryck.",
+      "choices": ["Minska arean","Öka arean","Öka kraften","Öka höjden"],
+      "answerIndex": 1,
+      "tags": ["tryck","vardag"]
+    },
+    {
+      "front": "Hur kan man öka trycket med samma kraft?",
+      "back": "Genom att minska arean (t.ex. knivspets, spik).",
+      "hint": "Mindre yta → större tryck.",
+      "choices": ["Öka arean","Minska arean","Minska höjden","Sänka temperaturen"],
+      "answerIndex": 1,
+      "tags": ["tryck","vardag"]
+    },
+    {
+      "front": "Hur förändras trycket i vatten med djupet?",
+      "back": "Det ökar ju djupare ner man kommer.",
+      "hint": "Djupare = större tryck.",
+      "choices": ["Minskar med djupet","Är konstant","Ökar med djupet","Beror inte på djup"],
+      "answerIndex": 2,
+      "tags": ["vätskor","tryck"]
+    },
+    {
+      "front": "Vilket är det totala trycket vid 10 m djup jämfört med vid ytan?",
+      "back": "Cirka 2 atm (absolut). Vattnet ger ~1 atm extra utöver ~1 atm luft vid ytan.",
+      "hint": "≈ 2 × (absoluttryck); +1 atm per 10 m.",
+      "choices": ["Oförändrat","Lite större (1,1×)","Cirka 2 atm (totalt)","Hälften"],
+      "answerIndex": 2,
+      "tags": ["vätskor","tryck"]
+    },
+    {
+      "front": "Vad kallas den uppåtriktade kraft som verkar på ett föremål i vatten?",
+      "back": "Lyftkraft (förklaras av Arkimedes princip).",
+      "hint": "Gör saker lättare i vatten.",
+      "choices": ["Tyngdkraft","Friktionskraft","Lyftkraft","Centripetalkraft"],
+      "answerIndex": 2,
+      "tags": ["vätskor","lyftkraft"]
+    },
+    {
+      "front": "Vad avgör om ett föremål flyter eller sjunker i vätska?",
+      "back": "Föremålets densitet jämfört med vätskans. Lägre densitet än vattnet → flyter.",
+      "hint": "Densitet jämfört med vattnets.",
+      "choices": ["Formen avgör alltid","Bara massan","Densiteten","Färgen"],
+      "answerIndex": 2,
+      "tags": ["vätskor","densitet"]
+    },
+    {
+      "front": "Vad är ett kommunicerande kärl?",
+      "back": "Kärl som sitter ihop i botten så att vätskan står på samma nivå i alla delar.",
+      "hint": "Samma nivå i alla rör.",
+      "choices": ["En sluten flaska","Kärl som inte påverkar varandra","Kärl som delar nivå via förbindelse","Enbart stora tankar"],
+      "answerIndex": 2,
+      "tags": ["vätskor","kommunicerande_kärl"]
+    },
+    {
+      "front": "Vilket vardagsexempel fungerar som ett kommunicerande kärl i samhället?",
+      "back": "Vattentornet med ledningsnätet – vattennivån jämnar ut sig.",
+      "hint": "Hushållens vattennivåer.",
+      "choices": ["Växellåda","Vattentorn och ledningar","Vindkraftverk","Ventilationssystem"],
+      "answerIndex": 1,
+      "tags": ["vätskor","exempel"]
+    },
+    {
+      "front": "Vad skapar lufttrycket vid jordytan?",
+      "back": "Luftmassan ovanför oss; högre upp i atmosfären är lufttrycket lägre.",
+      "hint": "Mer luft ovanför → större tryck.",
+      "choices": ["Jordens magnetfält","Luftmassan ovanför","Solen","Havets vågor"],
+      "answerIndex": 1,
+      "tags": ["gaser","atmosfär"]
+    },
+    {
+      "front": "Vilket är det normala lufttrycket vid havsnivå i vanliga enheter?",
+      "back": "Cirka 1 atmosfär ≈ 760 mmHg ≈ 1013 mbar/hPa.",
+      "hint": "≈ 1013 hPa.",
+      "choices": ["1 Pa","1013 hPa","760 Pa","100 hPa"],
+      "answerIndex": 1,
+      "tags": ["gaser","enheter"]
+    },
+    {
+      "front": "Vad händer med gasens tryck när man komprimerar den i en behållare?",
+      "back": "Trycket ökar (molekylerna krockar oftare).",
+      "hint": "Mindre volym → fler kollisioner.",
+      "choices": ["Trycket minskar","Trycket ökar","Trycket försvinner","Trycket blir 0 Pa"],
+      "answerIndex": 1,
+      "tags": ["gaser","tryck"]
+    },
+    {
+      "front": "Vad händer i en behållare när man suger ut luften?",
+      "back": "Det uppstår ett undertryck/vakuum.",
+      "hint": "Väldigt lite luft kvar.",
+      "choices": ["Övertryck","Undertryck (vakuum)","Konstant tryck","Mer syre"],
+      "answerIndex": 1,
+      "tags": ["gaser","vakuum"]
+    },
+    {
+      "front": "Varför hjälper tät plastförpackning (vakuumförpackning) maten att hålla längre?",
+      "back": "Luften sugs ut → mindre syre och fukt → lägre risk för mikroorganismer; dessutom trycks plasten mot maten.",
+      "hint": "Mindre luft/syre runt maten.",
+      "choices": ["Mer syre bevarar","Undertryck minskar syre/fukt","Högre temperatur","UV-ljus i plasten"],
+      "answerIndex": 1,
+      "tags": ["gaser","exempel"]
+    },
+    {
+      "front": "Hur kan en flygplansvinge ge lyftkraft enligt beskrivningen?",
+      "back": "Vingen är snett vinklad så att fler luftmolekyler krockar med undersidan än ovansidan → övertryck under vingen som trycker planet uppåt.",
+      "hint": "Övertryck på undersidan.",
+      "choices": ["Tyngdkraften minskar","Undertryck under vingen","Övertryck under vingen","Planet blåser uppåt själv"],
+      "answerIndex": 2,
+      "tags": ["gaser","aerodynamik"]
+    },
+    {
+      "front": "Vilken av följande förändringar minskar trycket du utövar på marken mest?",
+      "back": "Att öka kontaktytan, t.ex. genom att ta på snöskor.",
+      "hint": "Tänk p = F/A.",
+      "choices": ["Bära ryggsäck","Stå på tå","Ta på snöskor","Hoppa"],
+      "answerIndex": 2,
+      "tags": ["tryck","vardag"]
+    }
+  ]
+}

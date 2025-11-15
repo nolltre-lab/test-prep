@@ -1,0 +1,117 @@
+{
+  "title": "Religionskunskap åk 7: Högtider, etik och livsfrågor (Bas)",
+  "items": [
+    {
+      "front": "Vilken högtid firar kristna till minne av Jesu uppståndelse?",
+      "back": "Påsk.",
+      "choices": [
+        "Jul",
+        "Påsk",
+        "Pingst",
+        "Trettondedag"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kristendom"
+      ]
+    },
+    {
+      "front": "Vad är Ramadan?",
+      "back": "Muslimsk fastemånad som avslutas med Eid al-Fitr.",
+      "choices": [
+        "Hinduisk högtid",
+        "Muslimsk fastemånad",
+        "Kristen fasteperiod",
+        "Buddhistisk högtid"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "islam"
+      ]
+    },
+    {
+      "front": "Vilken skrift är central inom judendomen?",
+      "back": "Tanach (bl.a. Tora).",
+      "choices": [
+        "Nya testamentet",
+        "Koranen",
+        "Tanach",
+        "Tripitaka"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "judendom"
+      ]
+    },
+    {
+      "front": "Vad menas med gyllene regeln?",
+      "back": "Behandla andra som du själv vill bli behandlad.",
+      "choices": [
+        "Lyssna inte",
+        "Behandla andra väl",
+        "Gör som alla",
+        "Alltid följ regler"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "etik"
+      ]
+    },
+    {
+      "front": "Vad är en livsåskådning?",
+      "back": "Syn på livet/världen – religiös eller sekulär.",
+      "choices": [
+        "Politisk lag",
+        "Högtid",
+        "Syn på livet/världen",
+        "Byggnad"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "livsfrågor"
+      ]
+    },
+    {
+      "front": "Vilken symbol förknippas ofta med buddhismen?",
+      "back": "Dharmahjulet.",
+      "choices": [
+        "Davidsstjärnan",
+        "Halvmånen",
+        "Dharmahjulet",
+        "Korset"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "buddhism"
+      ]
+    },
+    {
+      "front": "Vad är ett samfund?",
+      "back": "Organiserad grupp av troende.",
+      "choices": [
+        "Byggnad",
+        "Högtid",
+        "Organiserad grupp",
+        "Präst"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "religion"
+      ]
+    },
+    {
+      "front": "Vilken etikmodell väger in konsekvenser av handlingar?",
+      "back": "Konsekvensetik.",
+      "choices": [
+        "Dygdetik",
+        "Pliktetik",
+        "Konsekvensetik",
+        "Relationsetik"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "etik"
+      ]
+    }
+  ]
+}

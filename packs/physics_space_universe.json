@@ -1,0 +1,110 @@
+{
+  "title": "Fysik åk 8 – Solsystemet, människan i rymden och universum",
+  "items": [
+    {
+      "front": "Vilken stjärna ligger närmast jorden?",
+      "back": "Solen är vår närmaste stjärna.",
+      "choices": ["Polstjärnan", "Solen", "Sirius", "Betelgeuse"],
+      "answerIndex": 1,
+      "tags": ["solen", "stjärnor"]
+    },
+    {
+      "front": "Vad består solen främst av?",
+      "back": "Främst väte och helium.",
+      "choices": ["Syre och kväve", "Väte och helium", "Järn och nickel", "Kväve och kol"],
+      "answerIndex": 1,
+      "tags": ["solen", "sammansättning"]
+    },
+    {
+      "front": "Vad skapar energin i solen?",
+      "back": "Kärnfusion: vätekärnor slås ihop till helium.",
+      "choices": ["Kärnfission", "Kärnfusion", "Kemiska reaktioner", "Elektricitet"],
+      "answerIndex": 1,
+      "tags": ["fusion", "energi"]
+    },
+    {
+      "front": "Vilken planet kallas den röda planeten?",
+      "back": "Mars kallas den röda planeten p.g.a. järnoxid i ytan.",
+      "choices": ["Venus", "Jupiter", "Mars", "Saturnus"],
+      "answerIndex": 2,
+      "tags": ["Mars", "planeter"]
+    },
+    {
+      "front": "Vilken är den största planeten?",
+      "back": "Jupiter är störst i solsystemet.",
+      "choices": ["Jorden", "Saturnus", "Mars", "Jupiter"],
+      "answerIndex": 3,
+      "tags": ["Jupiter", "planeter"]
+    },
+    {
+      "front": "Varför har vi årstider?",
+      "back": "Jordaxelns lutning gör att solinstrålningen varierar under året.",
+      "choices": ["Jorden lutar på sin axel", "Jorden roterar runt solen", "Solen flyttar sig", "Månen blockerar solljus"],
+      "answerIndex": 0,
+      "tags": ["årstider", "jordaxel"]
+    },
+    {
+      "front": "Vad orsakar dag och natt?",
+      "back": "Jordens rotation runt sin egen axel.",
+      "choices": ["Jordens rotation", "Månens bana", "Solens rörelse", "Molnighet"],
+      "answerIndex": 0,
+      "tags": ["rotation", "dag-natt"]
+    },
+    {
+      "front": "Vad är en galax?",
+      "back": "En enorm samling stjärnor, gas, stoft och mörk materia.",
+      "choices": ["En planet", "En stjärnhop", "En samling stjärnor, gas och mörk materia", "Ett svart hål"],
+      "answerIndex": 2,
+      "tags": ["galax", "universum"]
+    },
+    {
+      "front": "Vad heter vår galax?",
+      "back": "Vintergatan.",
+      "choices": ["Andromedagalaxen", "Orion", "Vintergatan", "Pegasus"],
+      "answerIndex": 2,
+      "tags": ["vintergatan", "galax"]
+    },
+    {
+      "front": "Vad säger Big Bang-teorin?",
+      "back": "Att universum började i ett mycket tätt och varmt tillstånd och har expanderat.",
+      "choices": ["Solen skapade jorden", "Universum började i en mycket tät punkt", "Planeter uppstod ur gas", "Galaxer rör sig mot varandra"],
+      "answerIndex": 1,
+      "tags": ["big bang", "kosmologi"]
+    },
+    {
+      "front": "Vad heter Sveriges första astronaut?",
+      "back": "Christer Fuglesang (2006).",
+      "choices": ["Neil Armstrong", "Christer Fuglesang", "Sally Ride", "Buzz Aldrin"],
+      "answerIndex": 1,
+      "tags": ["rymdfart", "Sverige"]
+    },
+    {
+      "front": "Vilken planet har tydliga ringar?",
+      "back": "Saturnus har mest framträdande ringsystem.",
+      "choices": ["Mars", "Jupiter", "Saturnus", "Uranus"],
+      "answerIndex": 2,
+      "tags": ["Saturnus", "ringar"]
+    },
+    {
+      "front": "Hur lång tid tar solens ljus till jorden?",
+      "back": "Cirka 8 minuter.",
+      "choices": ["Cirka 8 sekunder", "Cirka 8 minuter", "Cirka 1 timme", "Cirka 1 dag"],
+      "answerIndex": 1,
+      "tags": ["ljus", "astronomi"]
+    },
+    {
+      "front": "Vilken ordning kommer planeterna från solen?",
+      "back": "Merkurius, Venus, Jorden, Mars, Jupiter, Saturnus, Uranus, Neptunus.",
+      "choices": ["Merkurius, Venus, Jorden, Mars ...", "Venus, Mars, Jorden ...", "Jorden, Mars, Saturnus ...", "Mars, Venus, Jorden ..."],
+      "answerIndex": 0,
+      "tags": ["planeter", "ordning"]
+    },
+    {
+      "front": "Vad heter den internationella rymdstationen?",
+      "back": "ISS – International Space Station.",
+      "choices": ["ISS", "IRIS", "HUBBLE", "SKYLAB"],
+      "answerIndex": 0,
+      "tags": ["ISS", "rymdstation"]
+    }
+  ]
+}

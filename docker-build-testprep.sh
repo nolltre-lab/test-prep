@@ -107,6 +107,23 @@ else
   log "⚠️  ${CONFIG_JSON_LOCAL} not found locally — skipping upload."
 fi
 
+# Create and upload .env file with OPENAI_API_KEY
+if [[ -n "${OPENAI_API_KEY}" ]]; then
+  log "🔑 Creating .env file with OPENAI_API_KEY from environment"
+  TEMP_ENV_FILE=$(mktemp)
+  echo "OPENAI_API_KEY=${OPENAI_API_KEY}" > "${TEMP_ENV_FILE}"
+
+  log "📤 Uploading .env to ${REMOTE_DIR}/.env"
+  sshpass -p "$PASSWORD" scp "${SSH_COMMON_OPTS[@]}" "${TEMP_ENV_FILE}" "${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_DIR}/.env" || die "SCP of .env failed"
+
+  # Clean up temp file
+  rm -f "${TEMP_ENV_FILE}"
+  log "✅ .env uploaded"
+else
+  log "⚠️  OPENAI_API_KEY not set in environment — app will not be able to use OpenAI API"
+  log "    Set it before running: export OPENAI_API_KEY=sk-..."
+fi
+
 # Start/Restart on Pi
 log "🔁 Pulling image and restarting service on Pi"
 ssh_retry "cd '${REMOTE_DIR}' && docker compose -f '${REMOTE_COMPOSE}' pull && docker compose -f '${REMOTE_COMPOSE}' up -d" || die "docker compose pull/up failed on Pi"

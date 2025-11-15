@@ -1,0 +1,254 @@
+{
+  "title": "Fysik åk 7: Värme, värmeöverföring, väder och klimat",
+  "items": [
+    {
+      "front": "Vad är skillnaden mellan värme och temperatur?",
+      "back": "Temperatur är ett mått på hur varmt/kallt något är (medelrörelsen hos partiklar). Värme är energi som överförs på grund av temperaturskillnad.",
+      "hint": "Tänk energiöverföring vs mätvärde.",
+      "choices": [
+        "Temperatur är ett mätvärde, värme är energi i överföring",
+        "Värme är ett mätvärde, temperatur är energi som flyttas",
+        "Båda är identiska begrepp",
+        "Temperatur mäts i joule, värme i celsiusgrader"
+      ],
+      "answerIndex": 0,
+      "tags": ["värme", "temperatur", "partikelmodell"]
+    },
+    {
+      "front": "Hur rör sig partiklar i hög temperatur jämfört med låg?",
+      "back": "Vid hög temperatur rör sig partiklarna snabbare; vid låg rör de sig långsammare.",
+      "choices": [
+        "Snabbare vid hög temperatur, långsammare vid låg",
+        "Långsammare vid hög temperatur, snabbare vid låg",
+        "Alltid lika snabbt",
+        "De slutar röra sig helt vid hög temperatur"
+      ],
+      "answerIndex": 0,
+      "tags": ["partikelmodell", "temperatur"]
+    },
+    {
+      "front": "Vad menas med värmeledning (konduktion)?",
+      "back": "Energi sprids genom direkt kontakt mellan partiklar. Vanligt i fasta ämnen, särskilt metaller.",
+      "hint": "Metallsked i varm soppa.",
+      "choices": [
+        "Energiöverföring via direkt partikelsammanstötning",
+        "Energiöverföring via strömmande vätskor/gaser",
+        "Energiöverföring genom elektromagnetisk strålning",
+        "Energi skapas ur ingenting"
+      ],
+      "answerIndex": 0,
+      "tags": ["värmeöverföring", "ledning"]
+    },
+    {
+      "front": "Vad menas med konvektion?",
+      "back": "Energi transporteras med strömmande gas eller vätska. Varmt material stiger, kallt sjunker.",
+      "choices": [
+        "Energiöverföring via strålning",
+        "Energiöverföring via direkt kontakt",
+        "Energiöverföring med rörliga vätskor/gaser",
+        "Energiöverföring genom ljud"
+      ],
+      "answerIndex": 2,
+      "tags": ["värmeöverföring", "konvektion"]
+    },
+    {
+      "front": "Vad menas med värmestrålning?",
+      "back": "Energi överförs som elektromagnetisk strålning (infraröd). Behöver inget material för att spridas.",
+      "choices": [
+        "Energi via partikelsammanstötning",
+        "Energi via strömmande vätskor",
+        "Energi som elektromagnetisk strålning",
+        "Energi via ljudvågor"
+      ],
+      "answerIndex": 2,
+      "tags": ["värmeöverföring", "strålning"]
+    },
+    {
+      "front": "Ge två exempel på hur man kan isolera ett hus mot värmeförluster.",
+      "back": "Tjockare isolering i vägg/tak, treglasfönster, täta dörrar, vindskydd, reflekterande ytor.",
+      "choices": [
+        "Treglasfönster och tjock isolering",
+        "Större fönster och tunnare väggar",
+        "Öppna ventiler vintertid",
+        "Måla väggar mörka invändigt"
+      ],
+      "answerIndex": 0,
+      "tags": ["isolation", "energi"]
+    },
+    {
+      "front": "Vad är specifik värmekapacitet (beskrivning, ej formelkrav)?",
+      "back": "Hur mycket energi som krävs för att höja temperaturen 1 °C för 1 kg av ett ämne.",
+      "choices": [
+        "Energimängden för att höja 1 kg 1 °C",
+        "Energimängden för att smälta 1 kg",
+        "Effekten ett ämne avger vid förbränning",
+        "Hur mycket volymen ökar vid uppvärmning"
+      ],
+      "answerIndex": 0,
+      "tags": ["värmekapacitet", "begrepp"]
+    },
+    {
+      "front": "Ordna fasövergångarna: smältning, förångning, kondensering, stelning.",
+      "back": "Fast→flytande: smältning; flytande→gas: förångning; gas→flytande: kondensering; flytande→fast: stelning.",
+      "choices": [
+        "Smältning, förångning, kondensering, stelning",
+        "Kondensering, smältning, förångning, stelning",
+        "Förångning, stelning, smältning, kondensering",
+        "Stelning, kondensering, smältning, förångning"
+      ],
+      "answerIndex": 0,
+      "tags": ["fasövergångar"]
+    },
+    {
+      "front": "Vad är avdunstning och när går den snabbare?",
+      "back": "Vätskemolekyler lämnar ytan som gas. Går snabbare vid hög temperatur, stor yta, luftdrag och låg luftfuktighet.",
+      "choices": [
+        "Molekyler lämnar vätskeytan; snabbare vid hög temp, stor yta, luftdrag",
+        "Molekyler lämnar botten; snabbare vid hög luftfuktighet",
+        "Vätska förvandlas till is; snabbare vid låg temp",
+        "Gas blandas i vätska; snabbare vid hög fukt"
+      ],
+      "answerIndex": 0,
+      "tags": ["avdunstning", "väder"]
+    },
+    {
+      "front": "Vad betyder daggpunkt?",
+      "back": "Den temperatur där vattenånga i luften börjar kondensera till små droppar (dimma/dagg).",
+      "choices": [
+        "Temperaturen när vatten börjar koka",
+        "Temperaturen då ånga kondenserar till vätska",
+        "Temperaturen då is smälter",
+        "Temperaturen då vätska avdunstar snabbast"
+      ],
+      "answerIndex": 1,
+      "tags": ["kondensering", "luftfuktighet"]
+    },
+    {
+      "front": "Hur uppstår vind?",
+      "back": "Luft rör sig från områden med högre lufttryck till lägre. Skillnaderna skapas av ojämn uppvärmning från solen.",
+      "choices": [
+        "Luft rör sig från lågtryck till högtryck",
+        "Luft rör sig från högtryck till lågtryck",
+        "Jordens rotation driver direkt vindar",
+        "Månen skapar alla vindar"
+      ],
+      "answerIndex": 1,
+      "tags": ["vind", "lufttryck", "väder"]
+    },
+    {
+      "front": "Vad är skillnaden på väder och klimat?",
+      "back": "Väder är tillståndet i atmosfären här och nu. Klimat är genomsnittligt väder under lång tid (minst 30 år) i ett område.",
+      "choices": [
+        "Väder = nu; klimat = medel över lång tid",
+        "Väder = globalt; klimat = lokalt",
+        "Väder = medelvärden; klimat = extrema händelser",
+        "Ingen skillnad"
+      ],
+      "answerIndex": 0,
+      "tags": ["väder", "klimat"]
+    },
+    {
+      "front": "Nämn två faktorer som påverkar ett områdes klimat.",
+      "back": "Breddgrad (solinstrålning), avstånd till hav, havsströmmar, höjd över havet, vindar, topografi.",
+      "choices": [
+        "Breddgrad och havsströmmar",
+        "Veckodag och månfas",
+        "Antal städer och vägar",
+        "Antal sjöar i världen"
+      ],
+      "answerIndex": 0,
+      "tags": ["klimatfaktorer"]
+    },
+    {
+      "front": "Vad gör Golfströmmen för klimatet i Sverige?",
+      "back": "För med sig varmt vatten som mildrar klimatet, vilket ger varmare vintrar än på samma breddgrad i inlandet.",
+      "choices": [
+        "Gör vintrarna kallare",
+        "Mildrar klimatet med varmare vintrar",
+        "Ger mer snö varje år",
+        "Stoppar vindar från Atlanten"
+      ],
+      "answerIndex": 1,
+      "tags": ["havsströmmar", "klimat"]
+    },
+    {
+      "front": "Vad menas med den naturliga växthuseffekten?",
+      "back": "Växthusgaser fångar upp värmestrålning och håller kvar värme så att medeltemperaturen blir behaglig (~+15 °C).",
+      "choices": [
+        "När växter växer snabbare i växthus",
+        "När atmosfären släpper ut värme",
+        "När växthusgaser håller kvar värme nära jorden",
+        "När ozonlagret förstärks"
+      ],
+      "answerIndex": 2,
+      "tags": ["växthuseffekt", "klimat"]
+    },
+    {
+      "front": "Vilka gaser bidrar mest till den förstärkta växthuseffekten?",
+      "back": "Koldioxid (CO₂), metan (CH₄), dikväveoxid (N₂O) samt vattenånga (återkoppling).",
+      "choices": [
+        "CO₂, CH₄ och N₂O",
+        "Syre och kväve",
+        "Ozon och neon",
+        "Argon och krypton"
+      ],
+      "answerIndex": 0,
+      "tags": ["klimatförändring", "växthusgaser"]
+    },
+    {
+      "front": "Vad betyder albedo?",
+      "back": "Andel av solstrålningen som reflekteras. Ljus is/snö har högt albedo, mörkt hav/lantyta lågt.",
+      "choices": [
+        "Andel infångad värme i atmosfären",
+        "Andel reflekterad solstrålning",
+        "Mängd vattenånga i luften",
+        "Hastighet på vindar"
+      ],
+      "answerIndex": 1,
+      "tags": ["strålning", "klimat"]
+    },
+    {
+      "front": "Hur läser meteorologer av vädret för att göra prognoser?",
+      "back": "De använder mätstationer, väderballonger, satelliter och radar; analyserar tryckfält, fronter och vindar i prognosmodeller.",
+      "choices": [
+        "Endast genom att titta på moln",
+        "Mätstationer, ballonger, satelliter, radar och modeller",
+        "Genom att mäta jordbävningar",
+        "Med magnetkompass"
+      ],
+      "answerIndex": 1,
+      "tags": ["prognos", "väder"]
+    },
+    {
+      "front": "Vilken enhet används vanligt för temperatur i fysik jämfört med vardag?",
+      "back": "Fysik använder ofta kelvin (K); i vardag Celsius (°C). Skillnaden är nollpunkten.",
+      "choices": [
+        "Fysik: kelvin (K); vardag: Celsius (°C)",
+        "Fysik: decibel; vardag: kelvin",
+        "Fysik: watt; vardag: volt",
+        "Fysik: lux; vardag: candela"
+      ],
+      "answerIndex": 0,
+      "tags": ["temperaturskalor"]
+    },
+    {
+      "front": "Vilken värmeöverföring dominerar från solen till jorden?",
+      "back": "Värmestrålning (elektromagnetisk strålning).",
+      "choices": ["Värmeledning", "Konvektion", "Värmestrålning", "Avkylning"],
+      "answerIndex": 2,
+      "tags": ["strålning"]
+    },
+    {
+      "front": "Vilket av följande minskar värmeförluster bäst i ett fönster?",
+      "back": "Treglasfönster med isolerande gas och lågemissionsbeläggning minskar värmeförluster.",
+      "choices": [
+        "Enkelglas utan tätning",
+        "Treglasfönster med lågemissionsskikt",
+        "Ett öppet fönster vintertid",
+        "Mörk färg på fönsterkarm"
+      ],
+      "answerIndex": 1,
+      "tags": ["isolation", "energi"]
+    }
+  ]
+}

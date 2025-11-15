@@ -1,0 +1,117 @@
+{
+  "title": "Geografi åk 7: Risker, urbanisering och globala samband (Avancerad)",
+  "items": [
+    {
+      "front": "Vad är en konvergent plattgräns?",
+      "back": "Plattor rör sig mot varandra (subduktion/kollision).",
+      "choices": [
+        "Isär",
+        "Förbi",
+        "Mot varandra",
+        "Stillastående"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "plattektonik"
+      ]
+    },
+    {
+      "front": "Urbanisering betyder…",
+      "back": "Att fler bor i städer.",
+      "choices": [
+        "Fler på landsbygden",
+        "Fler i städer",
+        "Fler skogar",
+        "Färre transporter"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "urbanisering"
+      ]
+    },
+    {
+      "front": "Vilken risk är typisk vid subduktionszoner?",
+      "back": "Jordbävningar och tsunamier.",
+      "choices": [
+        "Sandstormar",
+        "Jordbävningar/tsunami",
+        "Permafrost",
+        "Monsun"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "risker"
+      ]
+    },
+    {
+      "front": "Konsekvens av snabb urbanisering utan planering?",
+      "back": "Trångboddhet och infrastrukturproblem.",
+      "choices": [
+        "Mindre trafik",
+        "Bättre luft",
+        "Trångboddhet",
+        "Större skogar"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "urbanisering"
+      ]
+    },
+    {
+      "front": "Vad är ekologiskt fotavtryck på nationsnivå?",
+      "back": "Yta/resurser som krävs för konsumtion.",
+      "choices": [
+        "Invånarantal",
+        "Statsskuld",
+        "Resursyta",
+        "Militär storlek"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "hållbarhet"
+      ]
+    },
+    {
+      "front": "Vilken havsström mildrar klimatet i Norden?",
+      "back": "Golfströmmen.",
+      "choices": [
+        "El Niño",
+        "Golfströmmen",
+        "Humboldtströmmen",
+        "Kanarieströmmen"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "klimat"
+      ]
+    },
+    {
+      "front": "Vad är en demografisk transition?",
+      "back": "Modell för befolkningsutveckling från höga till låga födelser/dödstal.",
+      "choices": [
+        "Klimatmodell",
+        "Ekonomisk cykel",
+        "Befolkningsmodell",
+        "Migration"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "befolkning"
+      ]
+    },
+    {
+      "front": "Vad är en global värdekedja?",
+      "back": "När produktion är uppdelad över flera länder.",
+      "choices": [
+        "Inhemsk produktion",
+        "Ingen handel",
+        "Global värdekedja",
+        "Lokal kedja"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "handel"
+      ]
+    }
+  ]
+}

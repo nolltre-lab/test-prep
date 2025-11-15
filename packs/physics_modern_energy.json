@@ -1,0 +1,110 @@
+{
+  "title": "Fysik åk 9 – Modern fysik, radioaktivitet och energi",
+  "items": [
+    {
+      "front": "Vad är radioaktivitet?",
+      "back": "När instabila atomkärnor spontant sönderfaller och avger strålning.",
+      "choices": ["När atomer förstoras", "När instabila atomkärnor sönderfaller", "När neutroner laddas", "När atomer smälter"],
+      "answerIndex": 1,
+      "tags": ["radioaktivitet", "kärnfysik"]
+    },
+    {
+      "front": "Vilka tre typer av joniserande strålning finns?",
+      "back": "Alfa-, beta- och gammastrålning.",
+      "choices": ["Alfa, beta, gamma", "Röntgen, UV, IR", "Ljud, ljus, värme", "Proton, neutron, elektron"],
+      "answerIndex": 0,
+      "tags": ["alfa", "beta", "gamma"]
+    },
+    {
+      "front": "Vilken strålning stoppas av papper?",
+      "back": "Alfastrålning stoppas av ett papper eller huden.",
+      "choices": ["Alfa", "Beta", "Gamma", "Röntgen"],
+      "answerIndex": 0,
+      "tags": ["alfa", "skydd"]
+    },
+    {
+      "front": "Vilken strålning är mest genomträngande?",
+      "back": "Gammastrålning – kräver tjockt bly/betong för att skärmas.",
+      "choices": ["Alfa", "Beta", "Gamma", "Synligt ljus"],
+      "answerIndex": 2,
+      "tags": ["gamma", "skydd"]
+    },
+    {
+      "front": "Vad betyder halveringstid?",
+      "back": "Tiden det tar för hälften av kärnorna i ett ämne att sönderfalla.",
+      "choices": ["Tid för kärnans dubblering", "Tid för hälften att sönderfalla", "Tid för en atom att bildas", "Tid mellan utsläpp"],
+      "answerIndex": 1,
+      "tags": ["halveringstid", "radioaktivitet"]
+    },
+    {
+      "front": "Vad menas med fission?",
+      "back": "När tunga kärnor klyvs och energi frigörs.",
+      "choices": ["När kärnor klyvs", "När kärnor slås ihop", "När elektroner frigörs", "När neutroner sänds ut"],
+      "answerIndex": 0,
+      "tags": ["fission", "kärnkraft"]
+    },
+    {
+      "front": "Vad menas med fusion?",
+      "back": "När lätta kärnor slås ihop till tyngre och energi frigörs (t.ex. i solen).",
+      "choices": ["När kärnor klyvs", "När lätta kärnor slås ihop", "När energi kyls ner", "När strålning absorberas"],
+      "answerIndex": 1,
+      "tags": ["fusion", "stjärnor"]
+    },
+    {
+      "front": "Vilken energiomvandling sker i ett kärnkraftverk?",
+      "back": "Kärnenergi → värme → rörelse (turbiner) → elektrisk energi.",
+      "choices": ["Kärnenergi till värme till el", "Värme till kemisk energi", "Rörelse till ljud", "Elektrisk till ljus"],
+      "answerIndex": 0,
+      "tags": ["energiomvandling", "kärnkraft"]
+    },
+    {
+      "front": "Vilken energiomvandling sker i ett kolkraftverk?",
+      "back": "Kemisk energi i kolet → värme → rörelse → el.",
+      "choices": ["Kemisk till värme till el", "Kärnenergi till ljus", "Solenergi till el", "Elektrisk till rörelse"],
+      "answerIndex": 0,
+      "tags": ["energiomvandling", "fossilt"]
+    },
+    {
+      "front": "Vilken av dessa är en förnybar energikälla?",
+      "back": "Vind är förnybar – tar inte slut och ger inga CO₂-utsläpp vid drift.",
+      "choices": ["Olja", "Naturgas", "Vind", "Uran"],
+      "answerIndex": 2,
+      "tags": ["förnybart", "vind"]
+    },
+    {
+      "front": "Vad menas med verkningsgrad?",
+      "back": "Andel tillförd energi som omvandlas till nyttig energi.",
+      "choices": ["Hur snabbt energi används", "Andel energi som blir nyttig", "Energiförlust i systemet", "Effekt per sekund"],
+      "answerIndex": 1,
+      "tags": ["verkningsgrad", "energi"]
+    },
+    {
+      "front": "Vilken fördel har kärnkraft?",
+      "back": "Producerar mycket el med låga koldioxidutsläpp under drift.",
+      "choices": ["Mycket energi och låga CO₂-utsläpp", "Helt riskfri", "Inga restprodukter", "Ingen kylning krävs"],
+      "answerIndex": 0,
+      "tags": ["kärnkraft", "klimat"]
+    },
+    {
+      "front": "Vilken risk finns med kärnkraft?",
+      "back": "Radioaktivt avfall och risk vid olyckor kräver hög säkerhet.",
+      "choices": ["Radioaktivt avfall", "Högt vattenbehov", "Buller", "CO₂-utsläpp"],
+      "answerIndex": 0,
+      "tags": ["kärnavfall", "säkerhet"]
+    },
+    {
+      "front": "Vad används radioaktivitet till i sjukvården?",
+      "back": "Diagnostik (t.ex. PET) och behandling (strålterapi).",
+      "choices": ["Diagnostik och behandling", "Desinfektion av ytor", "Uppvärmning", "Belysning"],
+      "answerIndex": 0,
+      "tags": ["sjukvård", "radioaktivitet"]
+    },
+    {
+      "front": "Vilken av följande är icke förnybar?",
+      "back": "Kol är en fossil, icke förnybar energikälla.",
+      "choices": ["Vind", "Sol", "Kol", "Vattenkraft"],
+      "answerIndex": 2,
+      "tags": ["fossilt", "energi"]
+    }
+  ]
+}

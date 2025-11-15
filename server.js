@@ -177,12 +177,20 @@ function pipeFile(res, file) {
   fs.createReadStream(file).pipe(res);
 }
 
+// --- API: check if OpenAI key is configured ---
+async function handleConfig(res) {
+  return sendJSON(res, 200, { hasOpenAI: !!OPENAI_API_KEY });
+}
+
 // --- HTTP router ---
 const server = http.createServer(async (req, res) => {
   try {
     const urlObj = new URL(req.url, `http://${req.headers.host}`);
 
     // API routes
+    if (req.method === "GET" && urlObj.pathname === "/api/config") {
+      return handleConfig(res);
+    }
     if (req.method === "GET" && urlObj.pathname === "/api/packs") {
       return handleListPacks(res);
     }

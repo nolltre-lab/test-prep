@@ -1,0 +1,117 @@
+{
+  "title": "Kemi åk 7: Partiklar, periodiska systemet och reaktioner (Bas)",
+  "items": [
+    {
+      "front": "Vilka tre partiklar bygger upp en atom?",
+      "back": "Protoner, neutroner och elektroner.",
+      "choices": [
+        "Protoner, fotoner, elektroner",
+        "Protoner, neutroner, elektroner",
+        "Kväve, syre, väte",
+        "Metaller, icke-metaller, ädelgaser"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "atom"
+      ]
+    },
+    {
+      "front": "Vad visar atomnumret?",
+      "back": "Antal protoner i kärnan.",
+      "choices": [
+        "Antal neutroner",
+        "Antal elektroner",
+        "Antal protoner",
+        "Atommassa"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "periodiska"
+      ]
+    },
+    {
+      "front": "Vilket är en kemisk förening?",
+      "back": "Vatten (H₂O).",
+      "choices": [
+        "Syre (O₂)",
+        "Kvävgas (N₂)",
+        "Vatten (H₂O)",
+        "Helium (He)"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ämnen"
+      ]
+    },
+    {
+      "front": "Vad händer vid en kemisk reaktion?",
+      "back": "Ämnen reagerar och bildar nya ämnen.",
+      "choices": [
+        "Nya atomer skapas",
+        "Blandning utan förändring",
+        "Nya ämnen bildas",
+        "Atomer försvinner"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "reaktioner"
+      ]
+    },
+    {
+      "front": "Vilken grupp är ädelgaser?",
+      "back": "Grupp 18.",
+      "choices": [
+        "Grupp 1",
+        "Grupp 2",
+        "Grupp 17",
+        "Grupp 18"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "periodiska"
+      ]
+    },
+    {
+      "front": "Vad menas med lösning?",
+      "back": "Homogen blandning där ett ämne är löst i ett annat.",
+      "choices": [
+        "Heterogen",
+        "Ren substans",
+        "Homogen",
+        "Suspension"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "blandningar"
+      ]
+    },
+    {
+      "front": "Vilken jon ger sur lösning?",
+      "back": "Vätejon, H⁺.",
+      "choices": [
+        "OH⁻",
+        "Na⁺",
+        "Cl⁻",
+        "H⁺"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "syror baser"
+      ]
+    },
+    {
+      "front": "Vad är indikator?",
+      "back": "Ämne som byter färg beroende på pH.",
+      "choices": [
+        "Konserveringsmedel",
+        "pH-indikator",
+        "Smörjmedel",
+        "Lösningsmedel"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "laborativt"
+      ]
+    }
+  ]
+}

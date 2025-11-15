@@ -1,0 +1,117 @@
+{
+  "title": "Historia åk 7: Källor, forntid och medeltid (Bas)",
+  "items": [
+    {
+      "front": "Vad är en kvarleva som historisk källa?",
+      "back": "Ett föremål/spår från tiden som undersöks.",
+      "choices": [
+        "Senare tolkning",
+        "Lärobok",
+        "Föremål från tiden",
+        "Saga"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "källor"
+      ]
+    },
+    {
+      "front": "Vilken period följer efter stenåldern i Norden?",
+      "back": "Bronsåldern.",
+      "choices": [
+        "Järnålder",
+        "Bronsålder",
+        "Medeltid",
+        "Vikingatid"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "forntid"
+      ]
+    },
+    {
+      "front": "Vad är agrara revolutionen?",
+      "back": "Förändringar i jordbruket som ökade produktionen.",
+      "choices": [
+        "Industriell utveckling",
+        "Jordbruksförändringar",
+        "Politisk revolution",
+        "Religiös reform"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "jordbruk"
+      ]
+    },
+    {
+      "front": "Vilket rike dominerade Medelhavet ca 100 f.Kr.?",
+      "back": "Romerska riket.",
+      "choices": [
+        "Grekland",
+        "Egypten",
+        "Rom",
+        "Persien"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "antiken"
+      ]
+    },
+    {
+      "front": "Vad innebär källkritikens äkthet?",
+      "back": "Om källan är vad den utger sig för att vara.",
+      "choices": [
+        "Vad som står",
+        "Om den är detaljerad",
+        "Äkta eller falsk",
+        "Att den är modern"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "källkritik"
+      ]
+    },
+    {
+      "front": "Vad kännetecknar medeltiden i Norden?",
+      "back": "Kristnande och framväxande kungamakt.",
+      "choices": [
+        "Islamisk expansion",
+        "Feodalism/kristnande",
+        "Demokratiska val",
+        "Industrialisering"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "medeltid"
+      ]
+    },
+    {
+      "front": "Vem var vikingar?",
+      "back": "Nordbor ca 800–1050 som bedrev handel/sjöfart/plundring.",
+      "choices": [
+        "Romerska soldater",
+        "Nordbor 800–1050",
+        "Mongoliska ryttare",
+        "Amerikanska nybyggare"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "vikingatid"
+      ]
+    },
+    {
+      "front": "Vad är en berättande källa?",
+      "back": "Skriftlig/munnlig berättelse om det som hänt.",
+      "choices": [
+        "Föremål",
+        "Naturresurs",
+        "Berättelse",
+        "Runsten"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "källor"
+      ]
+    }
+  ]
+}

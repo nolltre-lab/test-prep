@@ -1,0 +1,117 @@
+{
+  "title": "Fysik åk 7: Elektricitet, magnetism och tryck (Avancerad)",
+  "items": [
+    {
+      "front": "Vad är skillnaden mellan ström och spänning?",
+      "back": "Ström = laddningsflöde; spänning = drivande potential.",
+      "choices": [
+        "Samma sak",
+        "Ström=laddningsflöde, spänning=drivkraft",
+        "Ström=energi",
+        "Spänning=antal elektroner"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "el"
+      ]
+    },
+    {
+      "front": "Vilken enhet mäter elektrisk ström?",
+      "back": "Ampere (A).",
+      "choices": [
+        "Volt",
+        "Watt",
+        "Ohm",
+        "Ampere"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "el"
+      ]
+    },
+    {
+      "front": "Vad gör en säkring?",
+      "back": "Bryter strömmen vid överström.",
+      "choices": [
+        "Ökar spänningen",
+        "Mäter effekt",
+        "Bryter vid fel",
+        "Skapar el"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "elsäkerhet"
+      ]
+    },
+    {
+      "front": "Vad händer runt en strömförande ledare?",
+      "back": "Ett magnetfält uppstår.",
+      "choices": [
+        "Inget",
+        "Vakuum",
+        "Magnetfält",
+        "Ljus"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "magnetism"
+      ]
+    },
+    {
+      "front": "Vad är elektromagnetisk induktion?",
+      "back": "Förändrat magnetfält ger spänning i ledare.",
+      "choices": [
+        "Ljudvåg",
+        "Värmeledning",
+        "Induktion",
+        "Avdunstning"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "induktion"
+      ]
+    },
+    {
+      "front": "Vilken enhet används för tryck?",
+      "back": "Pascal (Pa).",
+      "choices": [
+        "Watt",
+        "Newton",
+        "Pascal",
+        "Joule"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "tryck"
+      ]
+    },
+    {
+      "front": "Vilken gaslag beskriver tryck- och volymförhållande vid konstant temperatur?",
+      "back": "Boyles lag.",
+      "choices": [
+        "Ohms lag",
+        "Boyles lag",
+        "Hookes lag",
+        "Arkimedes princip"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "gaser"
+      ]
+    },
+    {
+      "front": "Vad krävs för elektrisk effekt i en komponent?",
+      "back": "Spänning och ström (P=U·I).",
+      "choices": [
+        "Endast spänning",
+        "Endast ström",
+        "Spänning och ström",
+        "Resistans och kraft"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "effekt"
+      ]
+    }
+  ]
+}

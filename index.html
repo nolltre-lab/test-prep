@@ -2,68 +2,164 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="theme-color" content="#0f1320" />
     <title>Test Prep: Gamified Trainer</title>
     <style>
     :root{
       --bg:#0f1320;--panel:#151a2e;--ink:#e8ebff;--muted:#9aa6ff;
-      --accent:#6ee7b7;--accent2:#a78bfa;--bad:#ff6b6b;--good:#6ee7b7;--warn:#ffd166
+      --accent:#6ee7b7;--accent2:#a78bfa;--bad:#ff6b6b;--good:#6ee7b7;--warn:#ffd166;
+
+      /* responsive type scales */
+      --fs-h2:clamp(18px,2.2vw,24px);
+      --fs-h3:clamp(14px,1.8vw,18px);
+      --fs-body:clamp(14px,1.6vw,16px);
+      --fs-prompt:clamp(16px,2.1vw,20px);
+      --fs-chip:clamp(11px,1.5vw,12px);
+
+      --pad-panel:clamp(14px,2.5vw,20px);
+      --radius:16px;
+      --shadow:0 10px 30px #00000055;
+      --touch-gap:12px;
     }
+
     *{box-sizing:border-box}
-    body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;
+    html,body{height:100%}
+    body{
+      margin:0;padding:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;
+      font-size:var(--fs-body);
       background:radial-gradient(1200px 600px at 70% -10%,#1d2444 0%,#0f1320 45%,#0f1320 100%);
-      color:var(--ink)}
-    header{padding:18px 20px;display:flex;align-items:center;justify-content:space-between;
+      color:var(--ink)
+    }
+
+    /* Header */
+    header{
+      padding:14px max(12px,env(safe-area-inset-left)) 14px max(12px,env(safe-area-inset-right));
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
       position:sticky;top:0;background:linear-gradient(#0f1320cc,#0f1320cc);
-      backdrop-filter:blur(8px);border-bottom:1px solid #212748;z-index:10}
-    .brand{font-weight:800;letter-spacing:.3px}
-    .stats{display:flex;flex-wrap:wrap;gap:14px;font-size:14px;color:var(--muted)}
-    .stat{background:#12172b;padding:6px 10px;border-radius:10px;border:1px solid #242b4a}
-    .container{max-width:980px;margin:20px auto 80px;padding:0 16px}
-    .panel{background:linear-gradient(180deg,#171d35,#12172b 25%,#11162a);
-      border:1px solid #242b4a;border-radius:16px;padding:20px;box-shadow:0 10px 30px #00000055}
-    .modes{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 18px}
-    button{appearance:none;border:none;border-radius:12px;padding:10px 14px;font-weight:700;
-      color:#0f1320;background:var(--accent);cursor:pointer;transition:transform .03s ease}
+      backdrop-filter:blur(8px);border-bottom:1px solid #212748;z-index:10
+    }
+    .brand{font-weight:800;letter-spacing:.3px;white-space:nowrap}
+    .stats{
+      display:flex;gap:10px;flex-wrap:nowrap;
+      color:var(--muted);font-size:var(--fs-chip);
+      overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;max-width:70vw
+    }
+    .stats::-webkit-scrollbar{display:none}
+    .stat{background:#12172b;padding:6px 8px;border-radius:10px;border:1px solid #242b4a;flex:0 0 auto}
+
+    /* Layout */
+    .container{max-width:980px;margin:14px auto 80px;padding:0 clamp(10px,2.5vw,16px)}
+    .panel{
+      background:linear-gradient(180deg,#171d35,#12172b 25%,#11162a);
+      border:1px solid #242b4a;border-radius:var(--radius);padding:var(--pad-panel);box-shadow:var(--shadow)
+    }
+
+    /* Mode bar */
+    .modes{
+      display:flex;gap:10px;margin:12px 0 16px;flex-wrap:nowrap;
+      overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none
+    }
+    .modes::-webkit-scrollbar{display:none}
+
+    /* Buttons/inputs */
+    button{
+      appearance:none;border:none;border-radius:12px;
+      padding:10px 14px;font-weight:700;
+      color:#0f1320;background:var(--accent);cursor:pointer;
+      transition:transform .03s ease;flex:0 0 auto
+    }
     button.secondary{background:#2b335c;color:var(--ink);border:1px solid #3a4478}
     button.warn{background:var(--warn);color:#222}
     button.ghost{background:transparent;border:1px dashed #3a4478;color:var(--muted)}
     button:active{transform:translateY(1px)}
-    select{background:#2b335c;color:var(--ink);border:1px solid #3a4478;border-radius:12px;
-      padding:10px 12px;font-weight:700}
+
+    select{
+      background:#2b335c;color:var(--ink);border:1px solid #3a4478;border-radius:12px;
+      padding:10px 12px;font-weight:700;flex:1 0 auto;min-width:220px
+    }
+    @media (max-width:480px){
+      /* Tall tap targets on phones */
+      button,select{padding:12px 14px}
+    }
+
     .row{display:flex;flex-wrap:wrap;gap:16px}.col{flex:1 1 300px}
     .hidden{display:none!important}
-    .card{background:#0f1320;border:1px solid #242b4a;border-radius:14px;padding:18px;min-height:120px}
-    h2{margin:0 0 10px} h3{margin:0 0 8px;color:var(--muted);font-weight:700}
-    .prompt{font-size:18px;line-height:1.35}
-    .choices{display:grid;gap:10px;margin-top:14px}
-    .choice{background:#22284a;border:1px solid #2f3869;padding:12px;border-radius:10px;cursor:pointer}
+
+    .card{
+      background:#0f1320;border:1px solid #242b4a;border-radius:14px;
+      padding:14px;min-height:unset
+    }
+
+    h2{margin:0 0 10px;font-size:var(--fs-h2)}
+    h3{margin:0 0 8px;color:var(--muted);font-weight:700;font-size:var(--fs-h3)}
+    .prompt{font-size:var(--fs-prompt);line-height:1.4}
+
+    /* Choices become 1-col on phones, 2+ on larger screens */
+    .choices{display:grid;gap:10px;margin-top:14px;grid-template-columns:1fr}
+    @media (min-width:640px){ .choices{grid-template-columns:repeat(2,1fr)} }
+
+    .choice{
+      background:#22284a;border:1px solid #2f3869;padding:14px;border-radius:12px;cursor:pointer;
+      line-height:1.35
+    }
     .choice.correct{outline:2px solid var(--good)} .choice.wrong{outline:2px solid var(--bad)}
+
     .progressbar{height:10px;background:#1d2446;border-radius:999px;overflow:hidden;border:1px solid #2b3361}
     .progressbar>div{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%}
-    .muted{color:var(--muted)} .input{width:100%;padding:10px 12px;border-radius:10px;
-      border:1px solid #2b3361;background:#0c1022;color:var(--ink)}
+
+    .muted{color:var(--muted)}
+    .input{width:100%;padding:10px 12px;border-radius:10px;border:1px solid #2b3361;background:#0c1022;color:var(--ink)}
     textarea.input{min-height:140px;resize:vertical}
+
     .pill{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;
-      border:1px solid #2b3361;background:#141a34;color:var(--muted);font-size:12px}
-    .flex-between{display:flex;justify-content:space-between;align-items:center;gap:10px}
-    .tiny{font-size:12px;color:var(--muted)}
+      border:1px solid #2b3361;background:#141a34;color:var(--muted);font-size:var(--fs-chip)}
+    .flex-between{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+    .tiny{font-size:var(--fs-chip);color:var(--muted)}
+
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
     .tile{border:1px dashed #33407a;border-radius:12px;padding:12px;background:#12183a;cursor:pointer}
-    .tile.matched{opacity:.4}
+    .tile.matched{opacity:.5}
+
     .confetti{position:fixed;inset:0;pointer-events:none}
     .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
       background:#0b0f1f;border:1px solid #2b3361;padding:1px 6px;border-radius:6px}
+
     .badge{display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:999px;
-      border:1px solid #2b3361;background:#13183a;color:var(--muted);font-size:12px}
+      border:1px solid #2b3361;background:#13183a;color:var(--muted);font-size:var(--fs-chip)}
+
     .modal{position:fixed;inset:0;background:#0008;display:flex;align-items:center;justify-content:center;z-index:50}
     .modal .box{max-width:620px;width:92%;background:#12172b;border:1px solid #2b3361;border-radius:16px;padding:18px}
+
+    /* Sticky action bars on small screens */
+    .actionbar{
+      position:sticky;bottom:0;left:0;right:0;
+      background:linear-gradient(180deg,transparent 0%, #0f1320 40%);
+      padding-top:8px;margin-top:10px
+    }
+    .actionbar .right{display:flex;gap:10px}
+
+    /* Mobile spacing tweaks */
+    @media (max-width:640px){
+      .container{margin-top:10px}
+      .panel{padding:clamp(10px,3.5vw,14px)}
+      .card{padding:12px}
+      .modes{gap:8px}
+      .stat{padding:6px 8px}
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion:reduce){
+      *{scroll-behavior:auto}
+      button{transition:none}
+    }
   </style>
 </head>
 <body>
 <header>
     <div class="brand">⚡ Test Prep</div>
-    <div class="stats">
+    <div class="stats" aria-label="progress stats">
         <div class="stat">Pack <span id="packName">demo</span></div>
         <div class="stat">Level <span id="level">1</span></div>
         <div class="stat">XP <span id="xp">0</span></div>
@@ -78,29 +174,38 @@
             <h2>Study Modes</h2>
             <div class="pill">Tip: Press <span class="kbd">H</span> for hint</div>
         </div>
-        <div class="modes">
+
+        <div class="modes" role="tablist" aria-label="study modes">
             <button id="mode-flash">Flashcards</button>
             <button id="mode-quiz" class="secondary">Quick Quiz</button>
             <button id="mode-match" class="secondary">Match Terms</button>
             <button id="mode-write" class="secondary">Write & Review</button>
-            <button id="import" class="secondary">Import content</button>
+            <button id="import" class="secondary">Import</button>
             <button id="load-folder" class="secondary">Load folder</button>
             <select id="pack-select" class="secondary hidden" style="max-width:360px"></select>
             <input type="file" id="folder-input" webkitdirectory multiple class="hidden" />
             <button id="settings" class="ghost">Settings</button>
-            <button id="reset" class="warn">Reset progress</button>
+            <button id="reset" class="warn">Reset</button>
         </div>
-        <div class="progressbar"><div id="progress"></div></div>
+
+        <div class="progressbar" aria-label="pack progress"><div id="progress"></div></div>
     </div>
 
     <!-- Flashcards -->
     <div id="flash" class="panel hidden">
         <h3>Flashcards</h3>
-        <div class="card"><div id="flash-front" class="prompt"></div><div id="flash-back" class="muted hidden"></div></div>
-        <div class="flex-between" style="margin-top:12px">
-            <button id="flip">Flip</button>
-            <div class="tiny">Space = Flip • Left/Right = Prev/Next</div>
-            <div><button id="flash-wrong" class="secondary">Needs work</button><button id="flash-right">Got it</button></div>
+        <div class="card">
+            <div id="flash-front" class="prompt"></div>
+            <div id="flash-back" class="muted hidden" style="margin-top:8px"></div>
+        </div>
+
+        <div class="flex-between actionbar">
+            <button id="flip" aria-label="flip card">Flip</button>
+            <div class="tiny">Space = Flip • ←/→ = Prev/Next</div>
+            <div class="right">
+                <button id="flash-wrong" class="secondary">Needs work</button>
+                <button id="flash-right">Got it</button>
+            </div>
         </div>
     </div>
 
@@ -112,24 +217,28 @@
             <div id="quiz-hint" class="muted hidden" style="margin-top:6px"></div>
             <div id="quiz-choices" class="choices"></div>
         </div>
-        <div class="flex-between" style="margin-top:12px">
-            <div class="tiny">Correct in a row boosts XP</div>
-            <button id="next" class="secondary">Next</button>
+
+        <div class="flex-between actionbar">
+            <div class="tiny">Correct streak boosts XP</div>
+            <div class="right"><button id="next" class="secondary">Next</button></div>
         </div>
     </div>
 
     <!-- Match -->
-    <div id="match" class="panel hidden"><h3>Match Terms</h3><div class="grid" id="match-grid"></div></div>
+    <div id="match" class="panel hidden">
+        <h3>Match Terms</h3>
+        <div class="grid" id="match-grid"></div>
+    </div>
 
     <!-- Write & Review -->
     <div id="write" class="panel hidden">
         <div class="flex-between"><h3>Write & Review</h3><div class="pill">Min words <span id="minWords">5</span></div></div>
         <div class="card">
             <div id="write-q" class="prompt"></div>
-            <textarea id="write-ans" class="input" placeholder="Skriv ditt svar här… Förklara med egna ord och motivera."></textarea>
+            <textarea id="write-ans" class="input" placeholder="Skriv ditt svar här… Förklara med egna ord och motivera." aria-label="Ditt svar"></textarea>
             <div class="flex-between" style="margin-top:8px">
                 <div class="tiny"><span class="badge">Ord: <span id="wordCount">0</span></span></div>
-                <div><button id="btn-review" class="secondary">Send for review</button><button id="btn-newq" class="secondary">New question</button></div>
+                <div class="right"><button id="btn-review" class="secondary">Send for review</button><button id="btn-newq" class="secondary">New question</button></div>
             </div>
         </div>
         <div id="review-box" class="panel hidden" style="margin-top:14px">
@@ -178,7 +287,7 @@ const words = t => (t||"").trim().split(/\s+/).filter(Boolean);
 
 const state = {
   data:null,i:0,xp:0,streak:0,best:0,level:1,seen:{},
-  mode:"flash",timer:30,packId:null,perPack:{},minWords:5,model:""
+  mode:"flash",timer:30,packId:null,perPack:{},minWords:5,model:"",hasOpenAI:true
 };
 
 function loadState(){ try{ Object.assign(state, JSON.parse(localStorage.getItem(STORE)||"{}")); }catch{} }
@@ -220,10 +329,17 @@ function confetti(){
 
 /* ------- Mode switching ------- */
 function show(id){ ["flash","quiz","match","write"].forEach(x=>$("#"+x).classList.add("hidden")); $("#"+id).classList.remove("hidden"); }
-$("#mode-flash").onclick=()=>{state.mode="flash";show("flash");saveState();renderFlash()};
-$("#mode-quiz").onclick=()=>{state.mode="quiz";show("quiz");saveState();startQuiz()};
-$("#mode-match").onclick=()=>{state.mode="match";show("match");saveState();renderMatch()};
-$("#mode-write").onclick=()=>{state.mode="write";show("write");saveState();renderWrite()};
+function updateModeButtons(){
+  // Add "secondary" to all mode buttons, then remove from the active one
+  const modeMap = {flash:"#mode-flash", quiz:"#mode-quiz", match:"#mode-match", write:"#mode-write"};
+  Object.values(modeMap).forEach(sel=>$(sel)?.classList.add("secondary"));
+  const activeBtn = $(modeMap[state.mode]);
+  if(activeBtn) activeBtn.classList.remove("secondary");
+}
+$("#mode-flash").onclick=()=>{state.mode="flash";show("flash");updateModeButtons();saveState();renderFlash()};
+$("#mode-quiz").onclick=()=>{state.mode="quiz";show("quiz");updateModeButtons();saveState();startQuiz()};
+$("#mode-match").onclick=()=>{state.mode="match";show("match");updateModeButtons();saveState();renderMatch()};
+$("#mode-write").onclick=()=>{state.mode="write";show("write");updateModeButtons();saveState();renderWrite()};
 
 /* ------- Import & reset ------- */
 $("#import").onclick=()=>{ const t=prompt("Paste content JSON here."); if(!t) return;
@@ -239,6 +355,39 @@ function syncSelectToCurrent(){
   if(opt) sel.value = state.packId;
 }
 
+/* ------- Check server capabilities ------- */
+async function checkServerConfig(){
+  try{
+    const r = await fetch("/api/config");
+    if(!r.ok) return;
+    const data = await r.json();
+    state.hasOpenAI = data.hasOpenAI ?? true;
+    updateWriteModeAvailability();
+  }catch{}
+}
+
+function updateWriteModeAvailability(){
+  const btn = $("#mode-write");
+  if(!state.hasOpenAI){
+    btn.disabled = true;
+    btn.title = "OpenAI API key not configured on server";
+    btn.style.opacity = "0.5";
+    btn.style.cursor = "not-allowed";
+    // If currently in write mode, switch to flash
+    if(state.mode === "write"){
+      state.mode = "flash";
+      show("flash");
+      updateModeButtons();
+      renderFlash();
+    }
+  } else {
+    btn.disabled = false;
+    btn.title = "";
+    btn.style.opacity = "1";
+    btn.style.cursor = "pointer";
+  }
+}
+
 /* ------- Packs from server ------- */
 async function refreshServerPacks(){
   try{
@@ -247,11 +396,8 @@ async function refreshServerPacks(){
     const data = await r.json();
     const sel = $("#pack-select"); sel.innerHTML="";
 
-    // Placeholder ensures top item is selectable
     const placeholder = document.createElement("option");
-    placeholder.value = "";
-    placeholder.textContent = "— Choose a pack —";
-    placeholder.disabled = true;
+    placeholder.value = ""; placeholder.textContent = "— Choose a pack —"; placeholder.disabled = true;
     sel.appendChild(placeholder);
 
     if(!Array.isArray(data.packs) || !data.packs.length){
@@ -475,10 +621,14 @@ $("#btn-review").onclick=async ()=>{
       body: JSON.stringify({
         system: [
           "Du är en svensk ämneslärare för åk 7–9.",
-          "Bedöm elevens svar (korrekthet, tydlighet, fullständighet, enheter).",
-          "Svara ENDAST med JSON enligt: {correctness_score:int, clarity_score:int, completeness_score:int, units_score:int, overall_score:int, summary_feedback:string, missing_points:string[], unit_notes:string, clarity_notes:string, suggested_answer:string}"
+          "Bedöm elevens svar baserat på frågan och referenssvaret.",
+          "Anpassa din bedömning efter frågetyp: om frågan kräver enheter eller matematiska beräkningar, bedöm det; om frågan är konceptuell eller beskrivande, fokusera på förståelse och tydlighet.",
+          "Svara ENDAST med JSON enligt: {correctness_score:int, clarity_score:int, completeness_score:int, technical_accuracy_score:int, overall_score:int, summary_feedback:string, missing_points:string[], technical_notes:string, clarity_notes:string, suggested_answer:string}",
+          "Alla score-fält: 0-3 (0=bristfälligt, 1=godkänt, 2=bra, 3=utmärkt).",
+          "technical_accuracy_score: Bedöm korrekta enheter, beräkningar eller tekniska detaljer om relevant för frågan. Om inte relevant, sätt till 3.",
+          "technical_notes: Kommentera endast om det finns tekniska brister (enheter, beräkningar, etc). Lämna tom om inte relevant."
         ].join(" "),
-        user: { question: it.front, reference_answer: it.back||"", tags: it.tags||[], student_answer: ans, style_expectations: "Förklara kort men fullständigt; använd rätt begrepp och enheter." },
+        user: { question: it.front, reference_answer: it.back||"", tags: it.tags||[], student_answer: ans, style_expectations: "Förklara kort men fullständigt; använd rätt begrepp och terminologi." },
         model: state.model || undefined
       })
     });
@@ -500,24 +650,20 @@ function showReview(r){
     badge("Korrekthet", (r.correctness_score??0)+"/3"),
     badge("Tydlighet", (r.clarity_score??0)+"/3"),
     badge("Fullständighet", (r.completeness_score??0)+"/3"),
-    badge("Enheter", (r.units_score??0)+"/3"),
+    badge("Teknisk noggrannhet", (r.technical_accuracy_score??0)+"/3"),
     badge("Helhetsbetyg", (r.overall_score??0)+"/3"),
   );
   $("#review-text").innerHTML =
     `<p>${escapeHtml(r.summary_feedback||"Ingen feedback")}</p>` +
     (r.missing_points?.length?`<p><strong>Saknade punkter:</strong> ${escapeHtml(r.missing_points.join("; "))}</p>`:"") +
-    (r.unit_notes?`<p><strong>Enheter:</strong> ${escapeHtml(r.unit_notes)}</p>`:"") +
+    (r.technical_notes?`<p><strong>Tekniska detaljer:</strong> ${escapeHtml(r.technical_notes)}</p>`:"") +
     (r.clarity_notes?`<p><strong>Språk:</strong> ${escapeHtml(r.clarity_notes)}</p>`:"");
   $("#suggested-answer").textContent = r.suggested_answer || "";
   $("#review-box").classList.remove("hidden");
 }
 function escapeHtml(s){
   return (s||"").replace(/[&<>"']/g, m => ({
-    "&":"&amp;",
-    "<":"&lt;",
-    ">":"&gt;",
-    "\"":"&quot;",
-    "'":"&#039;"
+    "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"
   }[m]));
 }
 
@@ -544,12 +690,15 @@ function boot(){
   updateHeader();
   if(!state.data){ state.data=demoData; state.packId=demoData.title; saveState(); }
   setProgress();
+  checkServerConfig(); // Check if OpenAI is available
   refreshServerPacks();
 
   if(state.mode==="quiz")       show("quiz");
   else if(state.mode==="match") show("match");
   else if(state.mode==="write") show("write");
   else                          show("flash");
+
+  updateModeButtons(); // Update button highlighting based on current mode
 
   if(state.mode==="quiz")       startQuiz();
   else if(state.mode==="match") renderMatch();

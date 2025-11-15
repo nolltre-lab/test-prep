@@ -1,0 +1,117 @@
+{
+  "title": "Samhällskunskap åk 7: Demokrati och medier (Bas)",
+  "items": [
+    {
+      "front": "Vad betyder demokrati?",
+      "back": "Folkstyre – makten utgår från folket.",
+      "choices": [
+        "Diktatur",
+        "Folkstyre",
+        "Kungamakt",
+        "Militärstyre"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "demokrati"
+      ]
+    },
+    {
+      "front": "Vem stiftar lagar i Sverige?",
+      "back": "Riksdagen.",
+      "choices": [
+        "Regeringen",
+        "Riksdagen",
+        "Högsta domstolen",
+        "Kungahuset"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "statsskick"
+      ]
+    },
+    {
+      "front": "Vad gör regeringen?",
+      "back": "Leder landet och genomför riksdagens beslut.",
+      "choices": [
+        "Stiftar lagar",
+        "Dömer i mål",
+        "Genomför beslut",
+        "Sköter kommuner"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "statsskick"
+      ]
+    },
+    {
+      "front": "Vad är yttrandefrihet?",
+      "back": "Rätt att uttrycka åsikter inom lagens ramar.",
+      "choices": [
+        "Rätt att förtala",
+        "Endast anonymt",
+        "Rätt att uttrycka åsikter",
+        "Bara i skolan"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "rättigheter"
+      ]
+    },
+    {
+      "front": "Vad är en kommun?",
+      "back": "Lokal nivå som sköter skola, omsorg m.m.",
+      "choices": [
+        "EU",
+        "Länsstyrelse",
+        "Kommun",
+        "Riksdag"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "nivåer"
+      ]
+    },
+    {
+      "front": "Vad menas med källkritik i sociala medier?",
+      "back": "Granska avsändare, syfte och fakta innan delning.",
+      "choices": [
+        "Dela allt",
+        "Lita på följare",
+        "Granska källor",
+        "Endast bilder"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "medier"
+      ]
+    },
+    {
+      "front": "Vad är skatt?",
+      "back": "Avgift till stat/kommun/region för gemensam service.",
+      "choices": [
+        "Frivillig gåva",
+        "Bara till staten",
+        "Avgift för service",
+        "Bara moms"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ekonomi"
+      ]
+    },
+    {
+      "front": "Vad är åsiktsfrihet?",
+      "back": "Rätt att ha en åsikt utan att straffas för den.",
+      "choices": [
+        "Rätt att ljuga",
+        "Rätt att skrika",
+        "Rätt att ha en åsikt",
+        "Rätt att hota"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "rättigheter"
+      ]
+    }
+  ]
+}

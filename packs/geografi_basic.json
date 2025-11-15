@@ -1,0 +1,117 @@
+{
+  "title": "Geografi åk 7: Kartor, klimat och resurser (Bas)",
+  "items": [
+    {
+      "front": "Vad visar en topografisk karta?",
+      "back": "Terräng och höjdskillnader.",
+      "choices": [
+        "Befolkning",
+        "Terräng och höjd",
+        "Klimat",
+        "Språk"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kartor"
+      ]
+    },
+    {
+      "front": "Vilken breddgrad har ekvatorn?",
+      "back": "0°.",
+      "choices": [
+        "90°N",
+        "45°S",
+        "0°",
+        "180°"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "kartor"
+      ]
+    },
+    {
+      "front": "Vad driver den globala cirkulationen av vindar?",
+      "back": "Skillnader i solinstrålning och jordens rotation.",
+      "choices": [
+        "Månen",
+        "Vulkaner",
+        "Solinstrålning+rotation",
+        "Öar"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "klimat"
+      ]
+    },
+    {
+      "front": "Exempel på naturresurs:",
+      "back": "Skog/mineraler/odlingsmark.",
+      "choices": [
+        "Plast",
+        "Skog",
+        "Betong",
+        "Asfalt"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "resurser"
+      ]
+    },
+    {
+      "front": "Vilket klimat finns nära ekvatorn?",
+      "back": "Tropiskt klimat.",
+      "choices": [
+        "Polarklimat",
+        "Tropiskt",
+        "Öken",
+        "Tundra"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "klimat"
+      ]
+    },
+    {
+      "front": "Vad betyder hållbar utveckling?",
+      "back": "Balans mellan miljö, socialt och ekonomi.",
+      "choices": [
+        "Bara ekonomi",
+        "Snabb tillväxt",
+        "Balans miljö–socialt–ekonomi",
+        "Fler resurser"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "hållbarhet"
+      ]
+    },
+    {
+      "front": "Vad är landhöjning?",
+      "back": "Mark som höjs efter inlandsisens tyngd försvunnit.",
+      "choices": [
+        "Erosion",
+        "Landhöjning",
+        "Sedimentation",
+        "Vulkanism"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "Sverige"
+      ]
+    },
+    {
+      "front": "Vad är monsun?",
+      "back": "Årstidsvindar som ändrar riktning och ger regnperioder.",
+      "choices": [
+        "Orkan",
+        "Monsun",
+        "Sandstorm",
+        "Kallfront"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "klimat"
+      ]
+    }
+  ]
+}

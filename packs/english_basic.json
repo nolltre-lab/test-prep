@@ -1,0 +1,117 @@
+{
+  "title": "English Year 7: Reading, vocabulary and communication (Basic)",
+  "items": [
+    {
+      "front": "What does 'gist' reading mean?",
+      "back": "Reading to get the main idea without every detail.",
+      "choices": [
+        "Reading every word",
+        "Reading for the main idea",
+        "Memorising the text",
+        "Skipping the text"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "reading"
+      ]
+    },
+    {
+      "front": "Choose the correct question tag: “You like science, ___?”",
+      "back": "“don’t you?”",
+      "choices": [
+        "do you",
+        "don’t you",
+        "are you",
+        "isn’t it"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "grammar"
+      ]
+    },
+    {
+      "front": "What’s a formal greeting in an email?",
+      "back": "“Dear Ms/Mr …”",
+      "choices": [
+        "Hey!",
+        "Dear Ms/Mr …",
+        "Yo!",
+        "Sup?"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "writing"
+      ]
+    },
+    {
+      "front": "Which word is a synonym of 'happy'?",
+      "back": "Joyful.",
+      "choices": [
+        "Sad",
+        "Angry",
+        "Joyful",
+        "Afraid"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "vocabulary"
+      ]
+    },
+    {
+      "front": "Pick the correct preposition: “I’m interested ___ music.”",
+      "back": "in",
+      "choices": [
+        "at",
+        "on",
+        "in",
+        "to"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "grammar"
+      ]
+    },
+    {
+      "front": "What is the past tense of 'go'?",
+      "back": "Went.",
+      "choices": [
+        "Goed",
+        "Go",
+        "Went",
+        "Goes"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "verbs"
+      ]
+    },
+    {
+      "front": "Which strategy helps when you don’t know a word?",
+      "back": "Use context clues.",
+      "choices": [
+        "Skip it",
+        "Context clues",
+        "Guess",
+        "Translate only"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "strategies"
+      ]
+    },
+    {
+      "front": "What is 'pronunciation'?",
+      "back": "How a word is spoken.",
+      "choices": [
+        "Spelling",
+        "How a word is spoken",
+        "Writing",
+        "Grammar"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "speaking"
+      ]
+    }
+  ]
+}

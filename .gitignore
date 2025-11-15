@@ -5,6 +5,9 @@ start-server.sh
 start-server.cmd
 config.json
 
+# Environment variables (contains secrets)
+.env
+
 # Optional: Ignore Node.js dependencies if you ever add them
 node_modules/
 

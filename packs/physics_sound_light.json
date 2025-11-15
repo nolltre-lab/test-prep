@@ -1,0 +1,110 @@
+{
+  "title": "Fysik åk 7 – Ljud, toner, buller och optik",
+  "items": [
+    {
+      "front": "Vad är ljud?",
+      "back": "Ljud är mekaniska vibrationer i materia (t.ex. luft) som sprids som tryckvågor.",
+      "choices": ["Vibrationer i materia", "Strålning från solen", "Elektriska signaler", "Ljuset som reflekteras"],
+      "answerIndex": 0,
+      "tags": ["ljud", "vibrationer", "vågor"]
+    },
+    {
+      "front": "I vilket medium går ljud snabbast?",
+      "back": "I fasta ämnen (t.ex. metall) eftersom partiklarna sitter tätare.",
+      "choices": ["Luft", "Vatten", "Metall", "Vakuum"],
+      "answerIndex": 2,
+      "tags": ["ljudhastighet", "medium"]
+    },
+    {
+      "front": "Vad mäter man frekvens i?",
+      "back": "Hertz (Hz) anger antal svängningar per sekund.",
+      "choices": ["Watt", "Hertz", "Pascal", "Decibel"],
+      "answerIndex": 1,
+      "tags": ["frekvens", "Hz"]
+    },
+    {
+      "front": "Vad avgör tonhöjden på ett ljud?",
+      "back": "Frekvensen: hög frekvens = ljus ton, låg frekvens = mörk ton.",
+      "choices": ["Amplituden", "Frekvensen", "Ljudstyrkan", "Våglängden"],
+      "answerIndex": 1,
+      "tags": ["tonhöjd", "frekvens"]
+    },
+    {
+      "front": "Vad menas med buller?",
+      "back": "Oregelbundna, ofta störande ljudsvängningar som kan skada hörseln.",
+      "choices": ["Oregelbundna ljudsvängningar", "En hög ton", "Ett starkt ljus", "En svag vibration"],
+      "answerIndex": 0,
+      "tags": ["buller", "hörsel"]
+    },
+    {
+      "front": "Hur skyddar man sig mot buller?",
+      "back": "Genom att minska exponeringen och använda hörselskydd.",
+      "choices": ["Öppna fönstret", "Använda hörselskydd", "Öka amplituden", "Lyssna med hörlurar"],
+      "answerIndex": 1,
+      "tags": ["buller", "skydd"]
+    },
+    {
+      "front": "Vad menas med eko?",
+      "back": "Ett fördröjt ljud som reflekteras från en yta och kommer tillbaka.",
+      "choices": ["Fördröjt ljud", "Starkt ljud", "Ljusets reflektion", "Ljudvågor som bryts"],
+      "answerIndex": 0,
+      "tags": ["eko", "reflektion", "ljud"]
+    },
+    {
+      "front": "Vad är ljus?",
+      "back": "Ljus är elektromagnetisk strålning som kan färdas i vakuum.",
+      "choices": ["Mekaniska vågor", "Elektromagnetisk strålning", "Kemiska partiklar", "Ljudvågor"],
+      "answerIndex": 1,
+      "tags": ["ljus", "EM-strålning"]
+    },
+    {
+      "front": "Vad händer när ljus reflekteras?",
+      "back": "Ljus studsar mot en yta enligt reflektionslagen.",
+      "choices": ["Det ändrar färg", "Det böjs", "Det studsar", "Det absorberas"],
+      "answerIndex": 2,
+      "tags": ["reflektion", "ljus"]
+    },
+    {
+      "front": "Vad betyder ljusbrytning?",
+      "back": "När ljus byter riktning då det går mellan material med olika optisk täthet.",
+      "choices": ["När ljus studsar", "När ljus ändrar riktning mellan olika material", "När ljus förstärks", "När ljus delas i färger"],
+      "answerIndex": 1,
+      "tags": ["brytning", "optik", "ljus"]
+    },
+    {
+      "front": "Vilken färg har längst våglängd?",
+      "back": "Rött ljus har längst våglängd i det synliga spektrumet.",
+      "choices": ["Blå", "Grön", "Röd", "Violett"],
+      "answerIndex": 2,
+      "tags": ["färg", "våglängd", "spektrum"]
+    },
+    {
+      "front": "Varför ser himlen blå ut?",
+      "back": "Blått ljus sprids mest i atmosfären (Rayleighspridning).",
+      "choices": ["Luften reflekterar blått bäst", "Solen är blå", "Blått ljus sprids mest", "Moln reflekterar ljus"],
+      "answerIndex": 2,
+      "tags": ["spridning", "färg", "atmosfär"]
+    },
+    {
+      "front": "Vad är totalreflektion?",
+      "back": "När allt ljus reflekteras tillbaka i ett tätare medium vid stor infallsvinkel.",
+      "choices": ["När ljuset helt absorberas", "När allt ljus reflekteras inom ett medium", "När ljuset byter färg", "När ljuset passerar genom vatten"],
+      "answerIndex": 1,
+      "tags": ["totalreflektion", "optik", "fiber"]
+    },
+    {
+      "front": "Vad mäter man ljudnivå i?",
+      "back": "Decibel (dB) anger ljudnivå/logaritmisk skala.",
+      "choices": ["Hertz", "Pascal", "Decibel", "Watt"],
+      "answerIndex": 2,
+      "tags": ["decibel", "ljudnivå"]
+    },
+    {
+      "front": "Vad används ultraljud till i vården?",
+      "back": "Diagnostik (bildgivning) och ibland behandling.",
+      "choices": ["Belysning", "Diagnostik och bildtagning", "Sterilisering", "Blodprov"],
+      "answerIndex": 1,
+      "tags": ["ultraljud", "diagnostik"]
+    }
+  ]
+}

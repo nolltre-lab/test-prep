@@ -1,0 +1,117 @@
+{
+  "title": "Fysik åk 7: Värme, väder och enkla rörelser (Bas)",
+  "items": [
+    {
+      "front": "Vad är skillnaden mellan värme och temperatur?",
+      "back": "Värme = energiöverföring; temperatur = hur varmt, partiklarnas medelrörelse.",
+      "choices": [
+        "Samma sak",
+        "Energi vs mätvärde",
+        "Värme = kallt",
+        "Temperatur = energi"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "värme"
+      ]
+    },
+    {
+      "front": "Vilken värmeöverföring kräver inget material?",
+      "back": "Strålning.",
+      "choices": [
+        "Ledning",
+        "Konvektion",
+        "Strålning",
+        "Kokning"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "värme"
+      ]
+    },
+    {
+      "front": "Vad händer med partiklar när temperaturen ökar?",
+      "back": "De rör sig snabbare.",
+      "choices": [
+        "De stannar",
+        "Rör sig långsammare",
+        "Rör sig snabbare",
+        "Krymper helt"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "temperatur"
+      ]
+    },
+    {
+      "front": "Vad är vind?",
+      "back": "Luft som rör sig från högre till lägre tryck.",
+      "choices": [
+        "Luft uppåt",
+        "Regn",
+        "Tryckutjämning",
+        "Väderprognos"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "väder"
+      ]
+    },
+    {
+      "front": "Vad menas med densitet?",
+      "back": "Massa per volym.",
+      "choices": [
+        "Massa per area",
+        "Kraft per area",
+        "Massa per volym",
+        "Volym per tid"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "materia"
+      ]
+    },
+    {
+      "front": "Vilken energi kopplas till rörelse?",
+      "back": "Rörelseenergi (kinetisk).",
+      "choices": [
+        "Lägesenergi",
+        "Kärnenergi",
+        "Rörelseenergi",
+        "Värmeenergi"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "energi"
+      ]
+    },
+    {
+      "front": "Vilken enhet används för kraft?",
+      "back": "Newton (N).",
+      "choices": [
+        "Joule",
+        "Watt",
+        "Newton",
+        "Pascal"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "kraft"
+      ]
+    },
+    {
+      "front": "Vilken enhet används för effekt?",
+      "back": "Watt (W).",
+      "choices": [
+        "Joule",
+        "Newton",
+        "Watt",
+        "Pascal"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "effekt"
+      ]
+    }
+  ]
+}

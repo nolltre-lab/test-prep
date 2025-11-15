@@ -1,0 +1,117 @@
+{
+  "title": "Samhällskunskap åk 7: Privatekonomi och samhällsekonomi (Avancerad)",
+  "items": [
+    {
+      "front": "Vad är ränta på lån?",
+      "back": "Kostnaden du betalar för att låna pengar.",
+      "choices": [
+        "Avgift för kort",
+        "Skatt",
+        "Kostnad för lån",
+        "Pris på varor"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "privatekonomi"
+      ]
+    },
+    {
+      "front": "Vad är disponibel inkomst?",
+      "back": "Inkomst efter skatt.",
+      "choices": [
+        "Bruttolön",
+        "Inkomst efter skatt",
+        "Bidrag",
+        "Pension"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "privatekonomi"
+      ]
+    },
+    {
+      "front": "Vad är inflation?",
+      "back": "Allmän prisökning över tid.",
+      "choices": [
+        "Prisfall",
+        "Oförändrade priser",
+        "Prisökning",
+        "Skattehöjning"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ekonomi"
+      ]
+    },
+    {
+      "front": "Vad gör Riksbanken?",
+      "back": "Styr räntan och håller inflationen låg/stabil.",
+      "choices": [
+        "Sköter skolan",
+        "Bestämmer skatter",
+        "Styr räntan",
+        "Lagstiftar"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ekonomi"
+      ]
+    },
+    {
+      "front": "Vad är en budget?",
+      "back": "Plan för inkomster och utgifter.",
+      "choices": [
+        "Sparande",
+        "Lönespec",
+        "Plan för pengar",
+        "Skatt"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "privatekonomi"
+      ]
+    },
+    {
+      "front": "Vad betyder 'utbud och efterfrågan'?",
+      "back": "Priser påverkas av hur mycket som finns och hur många som vill ha.",
+      "choices": [
+        "Bara utbud",
+        "Bara efterfrågan",
+        "Utbud + efterfrågan",
+        "Inget samband"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ekonomi"
+      ]
+    },
+    {
+      "front": "Vad är en konjunktur?",
+      "back": "Samhällsekonomins svängningar (hög/låg).",
+      "choices": [
+        "Väder",
+        "Val",
+        "Konjunktur",
+        "Budget"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ekonomi"
+      ]
+    },
+    {
+      "front": "Vad menas med socialförsäkringar?",
+      "back": "Statliga skyddssystem, t.ex. sjukpenning, föräldrapenning.",
+      "choices": [
+        "Privata lån",
+        "Kommunala avgifter",
+        "Socialförsäkringar",
+        "Pension endast"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "välfärd"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "title": "Svenska åk 7: Lässtrategier, texttyper och språk (Bas)",
+  "items": [
+    {
+      "front": "Vilken lässtrategi innebär att du förutspår vad som kommer härnäst i texten?",
+      "back": "Att förutspå (predicera) – använda rubriker, bilder och tidigare kunskap för att gissa fortsättningen.",
+      "choices": [
+        "Sammanfatta",
+        "Ställa frågor",
+        "Förutspå (predicera)",
+        "Skumläsa"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "lässtrategier"
+      ],
+      "hint": "Titta på rubriker."
+    },
+    {
+      "front": "Vilken texttyp är en faktatext?",
+      "back": "En utredande/informerande text som ska vara saklig och källhänvisa.",
+      "choices": [
+        "Krönika",
+        "Novell",
+        "Faktatext",
+        "Dikt"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "texttyper"
+      ]
+    },
+    {
+      "front": "Vad kännetecknar ett referat?",
+      "back": "Kort återgivning av en annan text med källhänvisning och neutral stil.",
+      "choices": [
+        "Personligt språk",
+        "Kort återgivning med källa",
+        "Gestaltning",
+        "Rim och rytm"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "referat"
+      ]
+    },
+    {
+      "front": "Syftet med styckeindelning är…",
+      "back": "Att göra texten tydligare genom att dela upp i olika innehållsdelar.",
+      "choices": [
+        "Att få texten längre",
+        "Tydlighet och struktur",
+        "Att undvika källor",
+        "Att skapa rim"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "skrivregler"
+      ]
+    },
+    {
+      "front": "Vad är en huvudidé i en text?",
+      "back": "Textens viktigaste budskap eller poäng.",
+      "choices": [
+        "Författarens namn",
+        "Huvudidé",
+        "Detalj",
+        "Källhänvisning"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "läsförståelse"
+      ]
+    },
+    {
+      "front": "Vad menas med källkritik?",
+      "back": "Att granska avsändare, syfte, beroende och aktualitet för källor.",
+      "choices": [
+        "Att skriva egna källor",
+        "Att granska källor kritiskt",
+        "Alltid lita på internet",
+        "Undvika källor"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "källkritik"
+      ]
+    },
+    {
+      "front": "Vilket stämmer om argumenterande text?",
+      "back": "Den har tes, argument och ofta ett bemötande av motargument.",
+      "choices": [
+        "Saknar struktur",
+        "Innehåller tes och argument",
+        "Är helt neutral",
+        "Ska rimma"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "argumentation"
+      ]
+    },
+    {
+      "front": "Vilken är en vanlig skillnad mellan tal- och skriftspråk?",
+      "back": "Talspråk är oftare mer informellt; skriftspråk mer planerat.",
+      "choices": [
+        "Ingen skillnad",
+        "Talspråk mer informellt",
+        "Skrift mer informellt",
+        "Talspråk alltid korrekt"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "språkbruk"
+      ]
+    }
+  ]
+}

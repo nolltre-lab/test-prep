@@ -1,0 +1,117 @@
+{
+  "title": "Matematik åk 7: Tal, procent och geometri (Bas)",
+  "items": [
+    {
+      "front": "Vad är 25% av 200?",
+      "back": "50.",
+      "choices": [
+        "25",
+        "40",
+        "50",
+        "75"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "procent"
+      ]
+    },
+    {
+      "front": "Vilket tal är primtal?",
+      "back": "13.",
+      "choices": [
+        "12",
+        "13",
+        "15",
+        "21"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "tal"
+      ]
+    },
+    {
+      "front": "Medelvärdet av 4, 6 och 10 är…",
+      "back": "6,67.",
+      "choices": [
+        "6",
+        "6,5",
+        "6,67",
+        "7"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "statistik"
+      ]
+    },
+    {
+      "front": "En rektangel med sidor 3 och 7 cm har area…",
+      "back": "21 cm².",
+      "choices": [
+        "10",
+        "14",
+        "21",
+        "28"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "geometri"
+      ]
+    },
+    {
+      "front": "Vilket bråk är lika med 0,5?",
+      "back": "1/2.",
+      "choices": [
+        "1/3",
+        "1/2",
+        "2/3",
+        "3/5"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "bråk"
+      ]
+    },
+    {
+      "front": "Förenkla 3x + 2x.",
+      "back": "5x.",
+      "choices": [
+        "6x",
+        "5x",
+        "x²",
+        "x/5"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "algebra"
+      ]
+    },
+    {
+      "front": "Omkretsen av en cirkel beror på…",
+      "back": "Radie/diameter (C=2πr).",
+      "choices": [
+        "Arean",
+        "Radie/diameter",
+        "Höjden",
+        "Vinkeln"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "geometri"
+      ]
+    },
+    {
+      "front": "Vad är 0,2 i bråkform?",
+      "back": "1/5.",
+      "choices": [
+        "1/2",
+        "1/4",
+        "1/5",
+        "2/5"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "tal"
+      ]
+    }
+  ]
+}

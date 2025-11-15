@@ -1,0 +1,117 @@
+{
+  "title": "Teknik åk 7: Tekniska system och hållbar utveckling (Bas)",
+  "items": [
+    {
+      "front": "Vad är ett tekniskt system?",
+      "back": "Sammansatta delar som samverkar för ett syfte.",
+      "choices": [
+        "En detalj",
+        "Naturfenomen",
+        "Delar som samverkar",
+        "Datorprogram"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "system"
+      ]
+    },
+    {
+      "front": "Vad är återkoppling i ett system?",
+      "back": "När resultatet påverkar systemets fortsatta arbete.",
+      "choices": [
+        "Ingen påverkan",
+        "Alltid positiv",
+        "Resultat påverkar",
+        "Enbart ljud"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "system"
+      ]
+    },
+    {
+      "front": "Vad betyder CAD?",
+      "back": "Datorstödd konstruktion (Computer-Aided Design).",
+      "choices": [
+        "Central analog design",
+        "Datorstödd konstruktion",
+        "Cirkulär data",
+        "Automatisk drift"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "konstruktion"
+      ]
+    },
+    {
+      "front": "Vilket material är en komposit?",
+      "back": "Glasfiber.",
+      "choices": [
+        "Koppar",
+        "Glasfiber",
+        "Aluminium",
+        "Järn"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "material"
+      ]
+    },
+    {
+      "front": "Syftet med en sprängskiss är att…",
+      "back": "Visa hur delar sitter ihop och kan monteras.",
+      "choices": [
+        "Visa färger",
+        "Visa hopmontering",
+        "Visa energiflöde",
+        "Visa pris"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ritningar"
+      ]
+    },
+    {
+      "front": "Vad menas med livscykelanalys (LCA)?",
+      "back": "Bedöma miljöpåverkan från vaggan till graven.",
+      "choices": [
+        "Endast produktion",
+        "Hela livscykeln",
+        "Endast återvinning",
+        "Endast användning"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "hållbarhet"
+      ]
+    },
+    {
+      "front": "Vilken är en förnybar energikälla?",
+      "back": "Solenergi.",
+      "choices": [
+        "Olja",
+        "Kol",
+        "Sol",
+        "Naturgas"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "energi"
+      ]
+    },
+    {
+      "front": "Vad är en prototyp?",
+      "back": "En första fungerande modell att testa och förbättra.",
+      "choices": [
+        "Slutprodukt",
+        "Ritning",
+        "Prototyp",
+        "Affärscase"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "utveckling"
+      ]
+    }
+  ]
+}

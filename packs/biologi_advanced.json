@@ -1,0 +1,117 @@
+{
+  "title": "Biologi åk 7: Genetik, organ och hållbar utveckling (Avancerad)",
+  "items": [
+    {
+      "front": "Vad är en gen?",
+      "back": "Ett avsnitt av DNA som kodar för ett protein/egenskap.",
+      "choices": [
+        "En celltyp",
+        "En kromosom",
+        "Ett DNA-avsnitt",
+        "Ett organ"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "genetik"
+      ]
+    },
+    {
+      "front": "Vad menas med anpassning (adaptation)?",
+      "back": "Ärftliga egenskaper som ökar överlevnad i en viss miljö.",
+      "choices": [
+        "Lärt beteende",
+        "Tillfällig förändring",
+        "Ärftliga fördelar",
+        "Minskat urval"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "evolution"
+      ]
+    },
+    {
+      "front": "Vilket organ filtrerar blod och bildar urin?",
+      "back": "Njurarna.",
+      "choices": [
+        "Levern",
+        "Njurarna",
+        "Mjälten",
+        "Bukspottkörteln"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kropp"
+      ]
+    },
+    {
+      "front": "Vad innebär ekologiskt fotavtryck?",
+      "back": "Hur mycket resurser/mark som krävs för konsumtion.",
+      "choices": [
+        "Antal steg",
+        "Koldioxid enbart",
+        "Resursyta",
+        "Vattnets kretslopp"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "hållbarhet"
+      ]
+    },
+    {
+      "front": "Skillnaden mellan art och population är…",
+      "back": "Art = reproduktionsenhet; population = individer av samma art i ett område.",
+      "choices": [
+        "Synonymer",
+        "Population = flera arter",
+        "Art = område",
+        "Art = reproduktion, population = område"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ekologi"
+      ]
+    },
+    {
+      "front": "Vad är homeostas?",
+      "back": "Kroppens förmåga att hålla inre miljön stabil.",
+      "choices": [
+        "Rörelse",
+        "Homeostas",
+        "Nedbrytning",
+        "Tillväxt"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kropp"
+      ]
+    },
+    {
+      "front": "Vilken struktur förbinder mun och magsäck?",
+      "back": "Matstrupen.",
+      "choices": [
+        "Luftstrupe",
+        "Tunntarm",
+        "Matstrupe",
+        "Tjocktarm"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "kropp"
+      ]
+    },
+    {
+      "front": "Vad menas med naturligt urval?",
+      "back": "Egenskaper som ger fördel sprids genom högre överlevnad/fertilitet.",
+      "choices": [
+        "Slump utan miljö",
+        "Alla överlever lika",
+        "Fördelaktiga egenskaper sprids",
+        "Miljön saknar betydelse"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "evolution"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "title": "Svenska åk 7: Stil, grammatik och textanalys (Avancerad)",
+  "items": [
+    {
+      "front": "Vilken funktion har konnektiver som 'däremot', 'alltså', 'för det första'?",
+      "back": "De binder samman satser och visar samband som motsats, slutsats eller uppräkning.",
+      "choices": [
+        "Skapar rim",
+        "Binder satser och visar samband",
+        "Markerar direkt tal",
+        "Anger tempus"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "textbindning"
+      ]
+    },
+    {
+      "front": "Skillnaden mellan subjekt och predikat är…",
+      "back": "Subjekt: den som gör något; predikat: vad som händer/handlingen.",
+      "choices": [
+        "Subjekt=plats, predikat=tid",
+        "Subjekt=gör, predikat=handlingen",
+        "Ingen skillnad",
+        "Subjekt=verbet"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "grammatik"
+      ]
+    },
+    {
+      "front": "Vilket är en stilfigur?",
+      "back": "Metafor – bildligt uttryck utan 'som'.",
+      "choices": [
+        "Metafor",
+        "Pronomen",
+        "Räkneord",
+        "Verb"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "stilfigurer"
+      ]
+    },
+    {
+      "front": "Tema i en berättelse är…",
+      "back": "Den övergripande idé/fråga texten kretsar kring.",
+      "choices": [
+        "Miljöbeskrivning",
+        "Tema",
+        "Handlingen punkt för punkt",
+        "Bara språkets stil"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "litteraturanalys"
+      ]
+    },
+    {
+      "front": "Vilken satsdel beskriver tid/plats/sätt?",
+      "back": "Adverbial.",
+      "choices": [
+        "Subjekt",
+        "Predikat",
+        "Adverbial",
+        "Objekt"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "grammatik"
+      ]
+    },
+    {
+      "front": "Vad är korrekt källhänvisning?",
+      "back": "Att ange upphov, titel, år och var texten hämtats.",
+      "choices": [
+        "Endast länk",
+        "Inga källor behövs",
+        "Upphov, titel, år, källa",
+        "Förnamn räcker"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "källor"
+      ]
+    },
+    {
+      "front": "Att analysera språkbruk innebär att…",
+      "back": "Studera ordval, stil, ton och påverkan på läsaren.",
+      "choices": [
+        "Räkna tecken",
+        "Kolla stavning",
+        "Studera stil och ton",
+        "Färglägga texten"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "analys"
+      ]
+    },
+    {
+      "front": "Vilken berättarteknik kan öka tempo och spänning?",
+      "back": "Parallellhandling genom växling mellan linjer.",
+      "choices": [
+        "Parallellhandling",
+        "Allvetande berättare",
+        "In medias res",
+        "Miljöbeskrivning"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "berättarteknik"
+      ]
+    }
+  ]
+}

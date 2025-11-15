@@ -1,0 +1,125 @@
+{
+  "title": "Animationsfilmer: Klassiker och favoriter för alla åldrar",
+  "items": [
+    {
+      "front": "Vilken studio skapade 'Toy Story' (1995), den första datoranimerade långfilmen?",
+      "back": "Pixar Animation Studios.",
+      "hint": "Samarbetade tidigt med Disney.",
+      "choices": ["DreamWorks", "Pixar", "Illumination", "Blue Sky"],
+      "answerIndex": 1,
+      "tags": ["Pixar", "filmhistoria"]
+    },
+    {
+      "front": "Vad heter den lilla clownfisken som försvinner i filmen 'Hitta Nemo'?",
+      "back": "Nemo.",
+      "hint": "Titeln avslöjar svaret.",
+      "choices": ["Marlin", "Nemo", "Dory", "Gill"],
+      "answerIndex": 1,
+      "tags": ["Pixar", "hav"]
+    },
+    {
+      "front": "Vilken Disneyfilm har en isdrottning och låten 'Let It Go'?",
+      "back": "Frost (Frozen).",
+      "hint": "Handlar om systrarna Elsa och Anna.",
+      "choices": ["Tangled", "Frozen", "Moana", "Encanto"],
+      "answerIndex": 1,
+      "tags": ["Disney", "musik"]
+    },
+    {
+      "front": "I filmen 'Lejonkungen', vad heter Simbas pappa?",
+      "back": "Mufasa.",
+      "hint": "Hans död är en av Disneys mest kända scener.",
+      "choices": ["Scar", "Mufasa", "Rafiki", "Zazu"],
+      "answerIndex": 1,
+      "tags": ["Disney", "klassiker"]
+    },
+    {
+      "front": "Vilken film från Studio Ghibli handlar om två systrar och en stor skogsvarelse?",
+      "back": "Min granne Totoro.",
+      "hint": "Totoro är också studions maskot.",
+      "choices": ["Spirited Away", "Min granne Totoro", "Ponyo", "Kikis expressbud"],
+      "answerIndex": 1,
+      "tags": ["Ghibli", "Japan"]
+    },
+    {
+      "front": "Vilket djur är huvudperson i filmen 'Kung Fu Panda'?",
+      "back": "En panda.",
+      "hint": "Svartvit mästare i kampsport.",
+      "choices": ["Tiger", "Panda", "Apa", "Sköldpadda"],
+      "answerIndex": 1,
+      "tags": ["DreamWorks", "action"]
+    },
+    {
+      "front": "Vilken film handlar om ett robotpar i framtiden som städar upp jorden?",
+      "back": "WALL·E.",
+      "hint": "Han hittar en växt och träffar roboten EVE.",
+      "choices": ["Robots", "WALL·E", "Big Hero 6", "The Iron Giant"],
+      "answerIndex": 1,
+      "tags": ["Pixar", "miljö"]
+    },
+    {
+      "front": "Vilken Disneyfilm bygger på ett sydamerikanskt tema och handlar om familjen Madrigal?",
+      "back": "Encanto.",
+      "hint": "Ingen pratar om Bruno…",
+      "choices": ["Coco", "Encanto", "Raya och den sista draken", "Moana"],
+      "answerIndex": 1,
+      "tags": ["Disney", "familj"]
+    },
+    {
+      "front": "I filmen 'Shrek', vad heter prinsessan som han räddar?",
+      "back": "Fiona.",
+      "hint": "Hon bär på en hemlighet.",
+      "choices": ["Fiona", "Ella", "Aurora", "Merida"],
+      "answerIndex": 0,
+      "tags": ["DreamWorks", "humor"]
+    },
+    {
+      "front": "Vilken Pixarfilm visar insidan av en flickas känslor som egna figurer?",
+      "back": "Insidan ut (Inside Out).",
+      "hint": "Glädje, Ilska och Avsky är några karaktärer.",
+      "choices": ["Soul", "Coco", "Inside Out", "Up"],
+      "answerIndex": 2,
+      "tags": ["Pixar", "psykologi"]
+    },
+    {
+      "front": "Vad heter pojken som blir vän med draken Tuff i filmen 'Draktränaren'?",
+      "back": "Hicke (Hiccup).",
+      "hint": "Han är son till hövdingen.",
+      "choices": ["Tuff", "Hicke", "Stormfly", "Fiskben"],
+      "answerIndex": 1,
+      "tags": ["DreamWorks", "äventyr"]
+    },
+    {
+      "front": "Vilken film handlar om en mexikansk pojke som älskar musik trots familjens förbud?",
+      "back": "Coco.",
+      "hint": "Dödens dag och gitarr.",
+      "choices": ["Coco", "Encanto", "Soul", "The Book of Life"],
+      "answerIndex": 0,
+      "tags": ["Pixar", "musik"]
+    },
+    {
+      "front": "Vilken karaktär i 'Frozen' älskar varma kramar?",
+      "back": "Olaf.",
+      "hint": "Snögubbe med morotsnäsa.",
+      "choices": ["Sven", "Olaf", "Kristoff", "Hans"],
+      "answerIndex": 1,
+      "tags": ["Disney", "humor"]
+    },
+    {
+      "front": "Vilken film har roboten Baymax som vårdassistent?",
+      "back": "Big Hero 6.",
+      "hint": "Superhjältar + teknik.",
+      "choices": ["The Incredibles", "Big Hero 6", "Robots", "Zootropolis"],
+      "answerIndex": 1,
+      "tags": ["Disney", "superhjälte"]
+    },
+    {
+      "front": "Vilken film handlar om en råtta som vill bli kock i Paris?",
+      "back": "Ratatouille.",
+      "hint": "Råtta i köket!",
+      "choices": ["Ratatouille", "Bolt", "Sing", "Over the Hedge"],
+      "answerIndex": 0,
+      "tags": ["Pixar", "matlagning"]
+    }
+  ]
+}

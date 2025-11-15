@@ -1,0 +1,117 @@
+{
+  "title": "Biologi åk 7: Cellen, fotosyntes och ekologi (Bas)",
+  "items": [
+    {
+      "front": "Vad är cellens 'kraftverk'?",
+      "back": "Mitokondrierna där cellandningen sker.",
+      "choices": [
+        "Kloroplaster",
+        "Cellkärna",
+        "Mitokondrier",
+        "Ribosomer"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "cell"
+      ]
+    },
+    {
+      "front": "Formeln för fotosyntes i ord:",
+      "back": "Koldioxid + vatten + ljus → druvsocker + syre.",
+      "choices": [
+        "Syre + vatten → koldioxid",
+        "Koldioxid + vatten + ljus → socker + syre",
+        "Socker → koldioxid",
+        "Ljus → vatten"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "fotosyntes"
+      ]
+    },
+    {
+      "front": "Vad är en producent i en näringskedja?",
+      "back": "Växt/grönalg som tillverkar energi via fotosyntes.",
+      "choices": [
+        "Rovdjur",
+        "Nedbrytare",
+        "Producent",
+        "Konsument"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ekologi"
+      ]
+    },
+    {
+      "front": "Vad kallas process där celler blir två identiska?",
+      "back": "Mitos.",
+      "choices": [
+        "Meios",
+        "Mitos",
+        "Diffusion",
+        "Osmos"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "cell"
+      ]
+    },
+    {
+      "front": "Vilken gas släpper växter ut vid fotosyntes?",
+      "back": "Syre.",
+      "choices": [
+        "Kväve",
+        "Syre",
+        "Ozon",
+        "Koldioxid"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "fotosyntes"
+      ]
+    },
+    {
+      "front": "Vad är biodiversitet?",
+      "back": "Mångfald av arter, gener och ekosystem.",
+      "choices": [
+        "Mängd syre",
+        "Antal rovdjur",
+        "Biologisk mångfald",
+        "Artens livslängd"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ekologi"
+      ]
+    },
+    {
+      "front": "Vad gör nedbrytare?",
+      "back": "Bryter ner dött material och frigör näringsämnen.",
+      "choices": [
+        "Producerar syre",
+        "Bryter ner material",
+        "Skapar socker",
+        "Stoppar kretslopp"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ekologi"
+      ]
+    },
+    {
+      "front": "Var finns DNA hos eukaryoter?",
+      "back": "I cellkärnan.",
+      "choices": [
+        "Ribosomer",
+        "Cellkärna",
+        "Cellvägg",
+        "Mitokondrier"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "genetik"
+      ]
+    }
+  ]
+}

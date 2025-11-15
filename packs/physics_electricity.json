@@ -1,0 +1,257 @@
+{
+  "title": "Fysik åk 7: Elektricitet, elsäkerhet, magnetism, induktion, energi & effekt",
+  "items": [
+    {
+      "front": "Vad är skillnaden mellan ström och spänning?",
+      "back": "Ström (A) är hur många laddningar som passerar per sekund. Spänning (V) är drivkraften som får laddningar att röra sig.",
+      "choices": [
+        "Ström är laddningsflöde, spänning är drivkraften",
+        "Spänning är laddningsflöde, ström är trycket",
+        "Båda betyder samma sak",
+        "Spänning mäts i ampere, ström i volt"
+      ],
+      "answerIndex": 0,
+      "tags": ["ström", "spänning", "grundbegrepp"]
+    },
+    {
+      "front": "Vad beskriver resistans?",
+      "back": "Hur mycket ett material eller komponent bromsar strömmen. Mäts i ohm (Ω).",
+      "choices": [
+        "Motstånd mot strömflöde",
+        "Energimängd per sekund",
+        "Kraft på elektroner",
+        "Temperatur i ledaren"
+      ],
+      "answerIndex": 0,
+      "tags": ["resistans"]
+    },
+    {
+      "front": "Ohms lag: hur hänger U, I och R ihop?",
+      "back": "Spänningen (U) över en komponent är lika med strömmen (I) genom den gånger resistansen (R): U = I·R.",
+      "choices": [
+        "U = I·R",
+        "U = R/I",
+        "I = R·U",
+        "R = U²/I"
+      ],
+      "answerIndex": 0,
+      "tags": ["ohms lag"]
+    },
+    {
+      "front": "Vad är en kortslutning och varför är den farlig?",
+      "back": "Strömmen tar en väg med mycket låg resistans → mycket stor ström som kan orsaka brand eller elchock.",
+      "choices": [
+        "Strömmen går genom kroppen – ofarligt",
+        "Strömmen tar en väg med låg resistans och kan orsaka överhettning",
+        "En krets som inte leder någon ström alls",
+        "Ett batteri som har laddats ur"
+      ],
+      "answerIndex": 1,
+      "tags": ["elsäkerhet"]
+    },
+    {
+      "front": "Vad gör en säkring eller automatsäkring?",
+      "back": "Bryter strömmen om den blir för stor för att skydda ledningar och apparater.",
+      "choices": [
+        "Mäter hur mycket el som används",
+        "Skyddar mot överspänning genom att bryta strömmen",
+        "Förstärker spänningen i ledningarna",
+        "Lagrar energi i systemet"
+      ],
+      "answerIndex": 1,
+      "tags": ["elsäkerhet", "säkring"]
+    },
+    {
+      "front": "Vad gör en jordfelsbrytare?",
+      "back": "Bryter snabbt om ström läcker till jord, till exempel vid fel i apparater eller våtrum, för att skydda mot elchock.",
+      "choices": [
+        "Mäter spänning i vägguttag",
+        "Bryter om strömmen till jord skiljer sig från returströmmen",
+        "Ökar effekten i kretsen",
+        "Förhindrar kortslutningar i säkringen"
+      ],
+      "answerIndex": 1,
+      "tags": ["elsäkerhet", "jordfelsbrytare"]
+    },
+    {
+      "front": "Vad händer om en lampa går sönder i serie- respektive parallellkoppling?",
+      "back": "I serie slocknar alla, i parallell lyser de andra vidare.",
+      "choices": [
+        "I serie lyser alla ändå, i parallell slocknar alla",
+        "I serie slocknar alla, i parallell lyser de andra vidare",
+        "Båda fortsätter lysa lika starkt",
+        "Endast parallella kretsar kan slockna"
+      ],
+      "answerIndex": 1,
+      "tags": ["kopplingar"]
+    },
+    {
+      "front": "Formel för elektrisk effekt?",
+      "back": "Effekt = spänning × ström (P = U·I).",
+      "choices": [
+        "P = U·I",
+        "P = I/R",
+        "P = U/R",
+        "P = R·I²"
+      ],
+      "answerIndex": 0,
+      "tags": ["effekt", "formel"]
+    },
+    {
+      "front": "Hur beräknas elektrisk energi vid hushållsförbrukning?",
+      "back": "E = P·t. Mäts i kilowattimmar (kWh).",
+      "choices": [
+        "E = P·t",
+        "E = U·R",
+        "E = I/R",
+        "E = P/U"
+      ],
+      "answerIndex": 0,
+      "tags": ["energi", "kWh"]
+    },
+    {
+      "front": "Vad är fördelen med LED jämfört med glödlampa?",
+      "back": "LED använder mycket mindre effekt för samma ljusstyrka och håller längre.",
+      "choices": [
+        "LED kräver mer energi men ger mer värme",
+        "LED drar mindre ström och håller längre",
+        "Glödlampor är effektivare",
+        "LED fungerar bara med likström"
+      ],
+      "answerIndex": 1,
+      "tags": ["effektivitet", "energi"]
+    },
+    {
+      "front": "Runt vilken ledare uppstår magnetfält?",
+      "back": "Runt varje strömförande ledare uppstår ett magnetfält.",
+      "choices": [
+        "Endast runt batterier",
+        "Runt varje strömförande ledare",
+        "Endast runt koppartråd",
+        "Endast runt magneter"
+      ],
+      "answerIndex": 1,
+      "tags": ["magnetism"]
+    },
+    {
+      "front": "Hur gör man en elektromagnet starkare?",
+      "back": "Fler varv på spolen, högre ström, och järnkärna i mitten.",
+      "choices": [
+        "Färre varv och mindre ström",
+        "Fler varv, högre ström, järnkärna",
+        "Använder träkärna",
+        "Använder växelström"
+      ],
+      "answerIndex": 1,
+      "tags": ["elektromagnet"]
+    },
+    {
+      "front": "Vad är elektromagnetisk induktion?",
+      "back": "När ett magnetfält förändras i en ledare uppstår en spänning (inducerad spänning).",
+      "choices": [
+        "Strömmen ökar när magneten står stilla",
+        "Förändrat magnetfält skapar spänning",
+        "Magneter attraherar metaller",
+        "Elektroner försvinner ur ledaren"
+      ],
+      "answerIndex": 1,
+      "tags": ["induktion"]
+    },
+    {
+      "front": "Vad gör en generator?",
+      "back": "Omvandlar rörelseenergi till elektrisk energi genom elektromagnetisk induktion.",
+      "choices": [
+        "Omvandlar el till rörelseenergi",
+        "Omvandlar rörelseenergi till el",
+        "Lagrar el i batterier",
+        "Ökar spänningen i en krets"
+      ],
+      "answerIndex": 1,
+      "tags": ["generator"]
+    },
+    {
+      "front": "Varför kräver en transformator växelspänning?",
+      "back": "För att ett varierande magnetfält krävs för att inducera spänning i den andra spolen.",
+      "choices": [
+        "För att skapa statiskt magnetfält",
+        "För att induktion bara sker med varierande magnetfält",
+        "För att likström är farlig",
+        "För att minska resistans"
+      ],
+      "answerIndex": 1,
+      "tags": ["transformator", "induktion"]
+    },
+    {
+      "front": "Hur påverkar tjocklek och längd resistansen i en ledare?",
+      "back": "Längre ledare → större resistans; tjockare → mindre resistans.",
+      "choices": [
+        "Längre → större, tjockare → mindre resistans",
+        "Längre → mindre, tjockare → större resistans",
+        "Båda ger större resistans",
+        "Båda minskar resistansen"
+      ],
+      "answerIndex": 0,
+      "tags": ["resistans", "material"]
+    },
+    {
+      "front": "Vilken spänning är vanlig i svenska vägguttag?",
+      "back": "Cirka 230 V växelspänning (50 Hz).",
+      "choices": [
+        "12 V likspänning",
+        "110 V växelspänning",
+        "230 V växelspänning",
+        "400 V likspänning"
+      ],
+      "answerIndex": 2,
+      "tags": ["nätspänning"]
+    },
+    {
+      "front": "Nämn två förnybara sätt att producera el i Sverige.",
+      "back": "Vattenkraft och vindkraft (även solceller).",
+      "choices": [
+        "Vattenkraft och vindkraft",
+        "Kärnkraft och kolkraft",
+        "Oljekraft och naturgas",
+        "Dieselgeneratorer och vedpanna"
+      ],
+      "answerIndex": 0,
+      "tags": ["elproduktion", "förnybart"]
+    },
+    {
+      "front": "Vad mäter en elmätare i hemmet?",
+      "back": "Energi i kWh – hur mycket el som använts över tid.",
+      "choices": [
+        "Ström i ampere",
+        "Spänning i volt",
+        "Effekt i watt",
+        "Energi i kilowattimmar"
+      ],
+      "answerIndex": 3,
+      "tags": ["mätning", "energi"]
+    },
+    {
+      "front": "Hur kopplar du batterier för högre spänning?",
+      "back": "Seriekopplar dem, pluss till minus.",
+      "choices": [
+        "Seriekoppling (pluss till minus)",
+        "Parallellkoppling (pluss till pluss)",
+        "Sluter kretsen via jord",
+        "Kopplar slumpmässigt"
+      ],
+      "answerIndex": 0,
+      "tags": ["batteri", "koppling"]
+    },
+    {
+      "front": "Varför transporteras el oftast med hög spänning i ledningar?",
+      "back": "Hög spänning ger låg ström för samma effekt → mindre värmeförluster i ledningarna.",
+      "choices": [
+        "För att spara koppar",
+        "För att minska värmeförluster",
+        "För att göra det säkrare för människor",
+        "För att öka resistansen"
+      ],
+      "answerIndex": 1,
+      "tags": ["elnät", "förluster"]
+    }
+  ]
+}

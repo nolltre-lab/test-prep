@@ -1,0 +1,117 @@
+{
+  "title": "English Year 7: Grammar and text types (Advanced)",
+  "items": [
+    {
+      "front": "Choose the correct relative pronoun: “The book ___ I bought is great.”",
+      "back": "that/which.",
+      "choices": [
+        "who",
+        "whom",
+        "which/that",
+        "where"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "grammar"
+      ]
+    },
+    {
+      "front": "Which sentence uses present perfect?",
+      "back": "“I have seen that movie.”",
+      "choices": [
+        "I see that movie.",
+        "I saw that movie.",
+        "I have seen that movie.",
+        "I will see it."
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "tenses"
+      ]
+    },
+    {
+      "front": "What is a thesis statement in an essay?",
+      "back": "The main claim/idea.",
+      "choices": [
+        "An example",
+        "The main claim",
+        "A random fact",
+        "A source list"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "writing"
+      ]
+    },
+    {
+      "front": "Which word is an adverb?",
+      "back": "Quickly.",
+      "choices": [
+        "Quick",
+        "Quickly",
+        "Quicker",
+        "Quickest"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "word classes"
+      ]
+    },
+    {
+      "front": "Pick the correct conditional: “If it rains, we ___ inside.”",
+      "back": "will stay",
+      "choices": [
+        "stay",
+        "stayed",
+        "will stay",
+        "have stayed"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "conditionals"
+      ]
+    },
+    {
+      "front": "What is paraphrasing?",
+      "back": "Rewriting someone’s ideas in your own words with credit.",
+      "choices": [
+        "Copy/paste",
+        "Summarising without credit",
+        "Rewriting with credit",
+        "Your opinion"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "sources"
+      ]
+    },
+    {
+      "front": "Which register fits a formal email to a teacher?",
+      "back": "Polite and formal.",
+      "choices": [
+        "Slang",
+        "Polite and formal",
+        "All caps",
+        "Memes"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "register"
+      ]
+    },
+    {
+      "front": "What is cohesion in a text?",
+      "back": "How parts stick together via linking words and structure.",
+      "choices": [
+        "Word length",
+        "Cohesion",
+        "Font choice",
+        "Page count"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "cohesion"
+      ]
+    }
+  ]
+}

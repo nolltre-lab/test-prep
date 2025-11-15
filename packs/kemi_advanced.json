@@ -1,0 +1,117 @@
+{
+  "title": "Kemi åk 7: Bindningar, pH och säkerhet (Avancerad)",
+  "items": [
+    {
+      "front": "Vad kallas bindningen när atomer delar elektronpar?",
+      "back": "Kovalent bindning.",
+      "choices": [
+        "Jonbindning",
+        "Kovalent bindning",
+        "Metallbindning",
+        "Vätebindning"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "bindningar"
+      ]
+    },
+    {
+      "front": "Vilken jon är basisk?",
+      "back": "Hydroxidjon, OH⁻.",
+      "choices": [
+        "H⁺",
+        "Cl⁻",
+        "OH⁻",
+        "Na⁺"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "syror baser"
+      ]
+    },
+    {
+      "front": "Vad menas med lagen om massans bevarande?",
+      "back": "Atomer bevaras – massan samma före/efter reaktionen.",
+      "choices": [
+        "Massa skapas",
+        "Massa bevaras",
+        "Massan minskar alltid",
+        "Massan ökar alltid"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "reaktioner"
+      ]
+    },
+    {
+      "front": "Metaller leder värme och el bra tack vare…",
+      "back": "Fria elektroner.",
+      "choices": [
+        "Fria elektroner",
+        "Stark jonbindning",
+        "Hög densitet",
+        "Ädelgasstruktur"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "material"
+      ]
+    },
+    {
+      "front": "H₂O(s) → H₂O(l) betyder…",
+      "back": "Smältning (is till vatten).",
+      "choices": [
+        "Förångning",
+        "Kondensering",
+        "Sublimering",
+        "Smältning"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "fasövergångar"
+      ]
+    },
+    {
+      "front": "Vad är säkerhetsdatablad?",
+      "back": "Dokument om faror och hantering av kemikalier.",
+      "choices": [
+        "Receptbok",
+        "Säkerhetsdatablad",
+        "Skolplan",
+        "Resultatlista"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "säkerhet"
+      ]
+    },
+    {
+      "front": "Exempel på oxidation?",
+      "back": "Järn som rostar.",
+      "choices": [
+        "Is smälter",
+        "Järn rostar",
+        "Socker löses",
+        "Vatten fryser"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "reaktioner"
+      ]
+    },
+    {
+      "front": "Vilken partikel har laddningen +1 i kärnan?",
+      "back": "Protonen.",
+      "choices": [
+        "Neutronen",
+        "Elektronen",
+        "Protonen",
+        "Positronen"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "atom"
+      ]
+    }
+  ]
+}

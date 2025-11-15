@@ -1,0 +1,151 @@
+{
+  "title": "Halloweenquiz – Bus eller godis!",
+  "items": [
+    {
+      "front": "Vad firar man egentligen på Halloween?",
+      "back": "Halloween kommer från 'All Hallows' Eve' – kvällen före Allhelgonadagen, då man förr mindes de döda.",
+      "hint": "Tänk 'Allhelgona'.",
+      "choices": [
+        "En gammal skördefest",
+        "Kvällen före Allhelgona",
+        "En födelsedag för spöken",
+        "En amerikansk nationaldag"
+      ],
+      "answerIndex": 1,
+      "tags": ["halloween", "tradition"]
+    },
+    {
+      "front": "Vilken färg är vanligast på Halloween-dekorationer tillsammans med svart?",
+      "back": "Orange, som pumpor och höstlöv!",
+      "choices": ["Grön", "Orange", "Lila", "Röd"],
+      "answerIndex": 1,
+      "tags": ["färg", "höst"]
+    },
+    {
+      "front": "Vilken grön dryck förknippas ofta med häxor?",
+      "back": "Häxbrygd – en bubblande trolldryck i en kittel!",
+      "choices": ["Äppelmust", "Häxbrygd", "Slimejuice", "Trollte"],
+      "answerIndex": 1,
+      "tags": ["häxor", "dryck"]
+    },
+    {
+      "front": "Vilken sorts grönsak gröper man ofta ur till en lykta på Halloween?",
+      "back": "Pumpan – man gör en Jack O'Lantern med ljus inuti!",
+      "choices": ["Kålrot", "Potatis", "Pumpa", "Morot"],
+      "answerIndex": 2,
+      "tags": ["pumpa", "tradition"]
+    },
+    {
+      "front": "Vad säger barnen ofta när de knackar dörr på Halloween?",
+      "back": "\"Bus eller godis!\" – då får man godis, eller så hittar barnen på ett bus!",
+      "choices": ["Glad Halloween!", "Bus eller godis!", "Spöka eller festa!", "Ge mig godis nu!"],
+      "answerIndex": 1,
+      "tags": ["bus", "tradition"]
+    },
+    {
+      "front": "Vilket djur förknippas ofta med häxor?",
+      "back": "Svart katt – ibland sällskap till häxor på kvasten.",
+      "choices": ["Hund", "Uggla", "Svart katt", "Råtta"],
+      "answerIndex": 2,
+      "tags": ["häxor", "djur"]
+    },
+    {
+      "front": "Vad är en zombie?",
+      "back": "En figur i skräckfilmer som är en levande död, men här mest en rolig maskeradkaraktär!",
+      "choices": ["En snäll vampyr", "En levande död", "En pumpa med ben", "Ett spöke"],
+      "answerIndex": 1,
+      "tags": ["monster", "zombie"]
+    },
+    {
+      "front": "Vilken dryck tror man att vampyrer dricker?",
+      "back": "Blod – men i lekar kan det förstås vara saft eller tomatjuice!",
+      "choices": ["Mjölk", "Saft", "Blod", "Soppa"],
+      "answerIndex": 2,
+      "tags": ["vampyr", "monster"]
+    },
+    {
+      "front": "Vad använder man för att flyga om man är en häxa?",
+      "back": "En kvast!",
+      "choices": ["En kvast", "En dammsugare", "En ballong", "En drake"],
+      "answerIndex": 0,
+      "tags": ["häxor", "lek"]
+    },
+    {
+      "front": "Vad kallas det när man klär ut sig till något läskigt?",
+      "back": "Maskerad!",
+      "choices": ["Kamouflage", "Maskerad", "Förklädnad", "Teater"],
+      "answerIndex": 1,
+      "tags": ["maskerad", "kläder"]
+    },
+    {
+      "front": "Vilken månfas passar bäst till Halloween enligt filmer?",
+      "back": "Fullmåne – extra mystiskt ljus!",
+      "choices": ["Nymåne", "Halvmåne", "Fullmåne", "Ingen måne alls"],
+      "answerIndex": 2,
+      "tags": ["måne", "höst"]
+    },
+    {
+      "front": "Vad är ett spöke gjort av, enligt sagorna?",
+      "back": "Av dimma, lakan eller ingenting – bara något osynligt som svävar!",
+      "choices": ["Socker", "Dimma eller lakan", "Mjukis", "Ljus"],
+      "answerIndex": 1,
+      "tags": ["spöken", "lek"]
+    },
+    {
+      "front": "Vilken figur sover i en kista och gillar natten?",
+      "back": "Vampyren!",
+      "choices": ["Zombie", "Varulv", "Vampyr", "Häxa"],
+      "answerIndex": 2,
+      "tags": ["vampyr", "monster"]
+    },
+    {
+      "front": "Vilket ljud gör ofta varulvar i filmer?",
+      "back": "Auuuu! – de ylar mot månen.",
+      "choices": ["Krax", "Yl", "Bröl", "Mjau"],
+      "answerIndex": 1,
+      "tags": ["varulv", "ljud"]
+    },
+    {
+      "front": "Vad gör man om man får slut på godis när barnen knackar på?",
+      "back": "Man får säga att det är slut – eller ge något annat snällt!",
+      "choices": ["Gömmer sig", "Ger bus", "Säger att godiset är slut", "Ringer polisen"],
+      "answerIndex": 2,
+      "tags": ["bus", "vardag"]
+    },
+    {
+      "front": "Vilken höstväxt används ofta till pynt på Halloween?",
+      "back": "Pumpor, majs och höstlöv i orange färger.",
+      "choices": ["Tulpaner", "Pumpor", "Smörblommor", "Ljung"],
+      "answerIndex": 1,
+      "tags": ["pynt", "höst"]
+    },
+    {
+      "front": "Vad är 'Trick or Treat' på svenska?",
+      "back": "\"Bus eller godis!\" – samma sak fast på engelska.",
+      "choices": ["Tricksa och äta", "Bus eller godis", "Godis eller bus", "Ge eller gå"],
+      "answerIndex": 1,
+      "tags": ["översättning", "tradition"]
+    },
+    {
+      "front": "Vad kan man göra om man vill ha en snäll Halloweenfest?",
+      "back": "Klär ut sig, lyssnar på musik, har frågesport, tänder ljus och äter godis!",
+      "choices": ["Skrämma vuxna", "Släcka alla lampor", "Fira med vänner", "Springa runt på natten"],
+      "answerIndex": 2,
+      "tags": ["fest", "tips"]
+    },
+    {
+      "front": "Vad betyder ordet 'spöklikt'?",
+      "back": "Något mystiskt, kusligt eller tyst – som ett spöke!",
+      "choices": ["Roligt", "Kusligt", "Färgglatt", "Mysigt"],
+      "answerIndex": 1,
+      "tags": ["ord", "språk"]
+    },
+    {
+      "front": "Vilket svenskt helgfirande ligger nära Halloween i tid?",
+      "back": "Allhelgonahelgen – då tänder man ljus på gravar för att minnas de döda.",
+      "choices": ["Midsommar", "Allhelgonahelgen", "Jul", "Påsk"],
+      "answerIndex": 1,
+      "tags": ["tradition", "kultur"]
+    }
+  ]
+}

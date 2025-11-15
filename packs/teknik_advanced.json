@@ -1,0 +1,117 @@
+{
+  "title": "Teknik åk 7: Mekanismer, elektronik och designprocess (Avancerad)",
+  "items": [
+    {
+      "front": "Vilken mekanism ändrar rotationsriktning och hastighet?",
+      "back": "Kugghjul.",
+      "choices": [
+        "Remskiva",
+        "Kugghjul",
+        "Länkarm",
+        "Fjäder"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "mekanik"
+      ]
+    },
+    {
+      "front": "Vad gör en växelriktare i solcellsanläggning?",
+      "back": "Omvandlar likström till växelström.",
+      "choices": [
+        "Lagrar energi",
+        "Kylsystem",
+        "DC→AC",
+        "Mäter instrålning"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "el"
+      ]
+    },
+    {
+      "front": "Vilken komponent begränsar ström?",
+      "back": "Resistor.",
+      "choices": [
+        "Diod",
+        "Resistor",
+        "Kondensator",
+        "Transistor"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "elektronik"
+      ]
+    },
+    {
+      "front": "Vilken sensor mäter temperatur?",
+      "back": "Termistor/temperatursensor.",
+      "choices": [
+        "Fotocell",
+        "Termistor",
+        "Mikrofon",
+        "Gyro"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "sensorer"
+      ]
+    },
+    {
+      "front": "Vad betyder 'iteration' i designprocessen?",
+      "back": "Att testa och förbättra i upprepade varv.",
+      "choices": [
+        "Hoppa över test",
+        "En version",
+        "Upprepade förbättringar",
+        "Bara dokumentation"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "design"
+      ]
+    },
+    {
+      "front": "Vilken komponent lagrar elektrisk laddning?",
+      "back": "Kondensator.",
+      "choices": [
+        "Resistor",
+        "Diod",
+        "Kondensator",
+        "Spole"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "elektronik"
+      ]
+    },
+    {
+      "front": "Vilken mekanism omvandlar rotation till linjär rörelse?",
+      "back": "Kamskiva eller skruv/spindel.",
+      "choices": [
+        "Remskiva",
+        "Kugghjul",
+        "Kamskiva/skruv",
+        "Spak"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "mekanik"
+      ]
+    },
+    {
+      "front": "Vad betyder IP-klassning?",
+      "back": "Skydd mot damm/vatten enligt standard (t.ex. IP67).",
+      "choices": [
+        "Internettakt",
+        "Isolering",
+        "Ingress Protection",
+        "Inköpspris"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "standard"
+      ]
+    }
+  ]
+}

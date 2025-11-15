@@ -1,0 +1,117 @@
+{
+  "title": "Religionskunskap åk 7: Tolkning, etik och samhälle (Avancerad)",
+  "items": [
+    {
+      "front": "Vad menas med tolkningstraditioner inom religioner?",
+      "back": "Olika sätt att förstå texter/regler, t.ex. ortodox vs liberal.",
+      "choices": [
+        "Samma tolkning",
+        "Bara bokstavlig",
+        "Olika traditioner",
+        "Enbart präster"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "tolkning"
+      ]
+    },
+    {
+      "front": "Vad är religionsfrihet?",
+      "back": "Rätten att tro, byta tro eller inte tro – inom lagen.",
+      "choices": [
+        "Plikt att tro",
+        "Rätt att tro/inte tro",
+        "Rätt att tvinga andra",
+        "Endast privat tro"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "rättigheter"
+      ]
+    },
+    {
+      "front": "Vilken fråga hör ihop med livets mening?",
+      "back": "Existentiella frågor om syfte/identitet/döden.",
+      "choices": [
+        "Mobilval",
+        "TV-serie",
+        "Existentiella frågor",
+        "Väder"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "livsfrågor"
+      ]
+    },
+    {
+      "front": "Vad innebär interreligiös dialog?",
+      "back": "Samtal mellan religioner för förståelse.",
+      "choices": [
+        "Politisk debatt",
+        "Endast mission",
+        "Dialog mellan religioner",
+        "Tystnad"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "dialog"
+      ]
+    },
+    {
+      "front": "Vilken etikmodell betonar regler/plikt?",
+      "back": "Pliktetik.",
+      "choices": [
+        "Pliktetik",
+        "Konsekvensetik",
+        "Dygdetik",
+        "Situationsetik"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "etik"
+      ]
+    },
+    {
+      "front": "Vad menas med sekularisering?",
+      "back": "Religionens minskade betydelse i samhället.",
+      "choices": [
+        "Ökad religiositet",
+        "Minskad betydelse",
+        "Fler texter",
+        "Fler ritualer"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "samhälle"
+      ]
+    },
+    {
+      "front": "Vad är en ritual?",
+      "back": "Återkommande religiös handling.",
+      "choices": [
+        "Foto",
+        "Präst",
+        "Återkommande handling",
+        "Byggnad"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "praktik"
+      ]
+    },
+    {
+      "front": "Etik vs moral?",
+      "back": "Etik = reflektion; moral = handling.",
+      "choices": [
+        "Samma sak",
+        "Etik=handling",
+        "Etik=tankar, moral=handling",
+        "Ingen skillnad"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "etik"
+      ]
+    }
+  ]
+}

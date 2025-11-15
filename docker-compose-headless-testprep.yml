@@ -10,7 +10,7 @@ services:
     ports:
       - "8789:8787"
 
-    # Mount only the config.json (API key lives here)
+    # Mount config.json (non-sensitive settings)
     volumes:
       - ./config.json:/app/config.json:ro
 
@@ -18,6 +18,10 @@ services:
     # volumes:
     #   - ./config.json:/app/config.json:ro
     #   - ./packs:/app/packs:ro
+
+    # Load environment variables from .env file (contains OPENAI_API_KEY)
+    env_file:
+      - .env
 
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:8787/"]

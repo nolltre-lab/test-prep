@@ -1,0 +1,117 @@
+{
+  "title": "Historia åk 7: Källkritik och förändringsprocesser (Avancerad)",
+  "items": [
+    {
+      "front": "Vad menas med tendens i källkritik?",
+      "back": "Att källan kan vara vinklad och ha ett syfte.",
+      "choices": [
+        "Äkta eller falsk",
+        "Vinklad med syfte",
+        "Modern",
+        "Kort"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "källkritik"
+      ]
+    },
+    {
+      "front": "Vilken process förändrade produktionen i Europa på 1700–1800-talet?",
+      "back": "Industrialismen.",
+      "choices": [
+        "Kolonisationen",
+        "Reformationen",
+        "Industrialismen",
+        "Franska revolutionen"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "industri"
+      ]
+    },
+    {
+      "front": "Vad innebar upplysningen?",
+      "back": "Betoning på förnuft, vetenskap och rättigheter.",
+      "choices": [
+        "Fler krig",
+        "Starkare kungamakt",
+        "Förnuft och rättigheter",
+        "Mer censur"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "upplysningen"
+      ]
+    },
+    {
+      "front": "Orsaker bakom triangelhandeln?",
+      "back": "Efterfrågan på råvaror/arbetskraft; koloniala strukturer.",
+      "choices": [
+        "Religiösa skäl",
+        "Vetenskap",
+        "Ekonomiska/koloniala skäl",
+        "Ingen orsak"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "handel"
+      ]
+    },
+    {
+      "front": "Hur påverkade digerdöden Europa på 1300-talet?",
+      "back": "Stor befolkningsminskning och sociala förändringar.",
+      "choices": [
+        "Ingen påverkan",
+        "Ökade befolkningen",
+        "Minskning och förändring",
+        "Påverkade bara klimatet"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "pest"
+      ]
+    },
+    {
+      "front": "Vad menas med kontinuitet?",
+      "back": "Bestående drag över tid trots förändringar.",
+      "choices": [
+        "Snabba förändringar",
+        "Allt förändras",
+        "Bestående drag",
+        "Inget förändras"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "historiebruk"
+      ]
+    },
+    {
+      "front": "Vad innebär källpluralism?",
+      "back": "Att använda flera olika källor för tillförlitlighet.",
+      "choices": [
+        "En källa räcker",
+        "Endast samtida källor",
+        "Flera källor",
+        "Bara historikers tolkning"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "källkritik"
+      ]
+    },
+    {
+      "front": "Exempel på orsak–konsekvens?",
+      "back": "Missväxt → svält → politisk oro.",
+      "choices": [
+        "Flaggfärger",
+        "Klädmode",
+        "Missväxt→svält→oro",
+        "Antal slott"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "orsak konsekvens"
+      ]
+    }
+  ]
+}
