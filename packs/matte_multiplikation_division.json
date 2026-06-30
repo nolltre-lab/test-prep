@@ -1,0 +1,2705 @@
+{
+  "title": "Multiplikation & division (åk 3)",
+  "items": [
+    {
+      "front": "8 ÷ 4 = ?",
+      "back": "8 ÷ 4 = 2",
+      "choices": [
+        "2",
+        "7",
+        "1",
+        "4"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-4"
+      ]
+    },
+    {
+      "front": "1 × 4 = ?",
+      "back": "1 × 4 = 4",
+      "choices": [
+        "14",
+        "9",
+        "4",
+        "3"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "1gånger"
+      ]
+    },
+    {
+      "front": "10 × 7 = ?",
+      "back": "10 × 7 = 70",
+      "choices": [
+        "70",
+        "65",
+        "69",
+        "75"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "10gånger"
+      ]
+    },
+    {
+      "front": "3 × 10 = ?",
+      "back": "3 × 10 = 30",
+      "choices": [
+        "29",
+        "31",
+        "30",
+        "35"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "3gånger"
+      ]
+    },
+    {
+      "front": "28 ÷ 7 = ?",
+      "back": "28 ÷ 7 = 4",
+      "choices": [
+        "9",
+        "5",
+        "4",
+        "1"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-7"
+      ]
+    },
+    {
+      "front": "8 × 7 = ?",
+      "back": "8 × 7 = 56",
+      "choices": [
+        "56",
+        "66",
+        "51",
+        "57"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "8gånger"
+      ]
+    },
+    {
+      "front": "24 ÷ 3 = ?",
+      "back": "24 ÷ 3 = 8",
+      "choices": [
+        "9",
+        "6",
+        "5",
+        "8"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "division",
+        "delat-med-3"
+      ]
+    },
+    {
+      "front": "21 ÷ 7 = ?",
+      "back": "21 ÷ 7 = 3",
+      "choices": [
+        "5",
+        "1",
+        "3",
+        "4"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-7"
+      ]
+    },
+    {
+      "front": "24 ÷ 6 = ?",
+      "back": "24 ÷ 6 = 4",
+      "choices": [
+        "5",
+        "4",
+        "2",
+        "7"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "division",
+        "delat-med-6"
+      ]
+    },
+    {
+      "front": "10 × 6 = ?",
+      "back": "10 × 6 = 60",
+      "choices": [
+        "55",
+        "58",
+        "60",
+        "59"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "10gånger"
+      ]
+    },
+    {
+      "front": "63 ÷ 7 = ?",
+      "back": "63 ÷ 7 = 9",
+      "choices": [
+        "7",
+        "12",
+        "9",
+        "10"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-7"
+      ]
+    },
+    {
+      "front": "20 ÷ 2 = ?",
+      "back": "20 ÷ 2 = 10",
+      "choices": [
+        "12",
+        "11",
+        "13",
+        "10"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "division",
+        "delat-med-2"
+      ]
+    },
+    {
+      "front": "30 ÷ 5 = ?",
+      "back": "30 ÷ 5 = 6",
+      "choices": [
+        "6",
+        "3",
+        "11",
+        "5"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-5"
+      ]
+    },
+    {
+      "front": "3 × 6 = ?",
+      "back": "3 × 6 = 18",
+      "choices": [
+        "17",
+        "13",
+        "18",
+        "21"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "3gånger"
+      ]
+    },
+    {
+      "front": "45 ÷ 5 = ?",
+      "back": "45 ÷ 5 = 9",
+      "choices": [
+        "9",
+        "14",
+        "10",
+        "8"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-5"
+      ]
+    },
+    {
+      "front": "6 ÷ 3 = ?",
+      "back": "6 ÷ 3 = 2",
+      "choices": [
+        "4",
+        "2",
+        "1",
+        "3"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "division",
+        "delat-med-3"
+      ]
+    },
+    {
+      "front": "7 × 8 = ?",
+      "back": "7 × 8 = 56",
+      "choices": [
+        "56",
+        "46",
+        "57",
+        "58"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "7gånger"
+      ]
+    },
+    {
+      "front": "5 × 7 = ?",
+      "back": "5 × 7 = 35",
+      "choices": [
+        "34",
+        "32",
+        "25",
+        "35"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "5gånger"
+      ]
+    },
+    {
+      "front": "3 × 3 = ?",
+      "back": "3 × 3 = 9",
+      "choices": [
+        "7",
+        "8",
+        "9",
+        "6"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "3gånger"
+      ]
+    },
+    {
+      "front": "6 ÷ 2 = ?",
+      "back": "6 ÷ 2 = 3",
+      "choices": [
+        "2",
+        "3",
+        "1",
+        "8"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "division",
+        "delat-med-2"
+      ]
+    },
+    {
+      "front": "7 × 2 = ?",
+      "back": "7 × 2 = 14",
+      "choices": [
+        "14",
+        "9",
+        "15",
+        "13"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "7gånger"
+      ]
+    },
+    {
+      "front": "21 ÷ 3 = ?",
+      "back": "21 ÷ 3 = 7",
+      "choices": [
+        "12",
+        "9",
+        "4",
+        "7"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "division",
+        "delat-med-3"
+      ]
+    },
+    {
+      "front": "2 × 3 = ?",
+      "back": "2 × 3 = 6",
+      "choices": [
+        "11",
+        "4",
+        "1",
+        "6"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "2gånger"
+      ]
+    },
+    {
+      "front": "1 × 10 = ?",
+      "back": "1 × 10 = 10",
+      "choices": [
+        "5",
+        "9",
+        "8",
+        "10"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "1gånger"
+      ]
+    },
+    {
+      "front": "1 × 6 = ?",
+      "back": "1 × 6 = 6",
+      "choices": [
+        "9",
+        "8",
+        "11",
+        "6"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "1gånger"
+      ]
+    },
+    {
+      "front": "8 × 10 = ?",
+      "back": "8 × 10 = 80",
+      "choices": [
+        "80",
+        "82",
+        "77",
+        "79"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "8gånger"
+      ]
+    },
+    {
+      "front": "48 ÷ 8 = ?",
+      "back": "48 ÷ 8 = 6",
+      "choices": [
+        "6",
+        "7",
+        "11",
+        "8"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-8"
+      ]
+    },
+    {
+      "front": "3 × 9 = ?",
+      "back": "3 × 9 = 27",
+      "choices": [
+        "27",
+        "22",
+        "24",
+        "32"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "3gånger"
+      ]
+    },
+    {
+      "front": "1 × 2 = ?",
+      "back": "1 × 2 = 2",
+      "choices": [
+        "4",
+        "3",
+        "2",
+        "5"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "1gånger"
+      ]
+    },
+    {
+      "front": "2 × 9 = ?",
+      "back": "2 × 9 = 18",
+      "choices": [
+        "8",
+        "17",
+        "13",
+        "18"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "2gånger"
+      ]
+    },
+    {
+      "front": "10 × 8 = ?",
+      "back": "10 × 8 = 80",
+      "choices": [
+        "81",
+        "70",
+        "79",
+        "80"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "10gånger"
+      ]
+    },
+    {
+      "front": "8 × 6 = ?",
+      "back": "8 × 6 = 48",
+      "choices": [
+        "51",
+        "46",
+        "45",
+        "48"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "8gånger"
+      ]
+    },
+    {
+      "front": "72 ÷ 9 = ?",
+      "back": "72 ÷ 9 = 8",
+      "choices": [
+        "6",
+        "8",
+        "7",
+        "10"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "division",
+        "delat-med-9"
+      ]
+    },
+    {
+      "front": "7 × 10 = ?",
+      "back": "7 × 10 = 70",
+      "choices": [
+        "70",
+        "75",
+        "72",
+        "80"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "7gånger"
+      ]
+    },
+    {
+      "front": "4 × 7 = ?",
+      "back": "4 × 7 = 28",
+      "choices": [
+        "31",
+        "25",
+        "28",
+        "30"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "4gånger"
+      ]
+    },
+    {
+      "front": "9 ÷ 3 = ?",
+      "back": "9 ÷ 3 = 3",
+      "choices": [
+        "2",
+        "8",
+        "5",
+        "3"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "division",
+        "delat-med-3"
+      ]
+    },
+    {
+      "front": "60 ÷ 10 = ?",
+      "back": "60 ÷ 10 = 6",
+      "choices": [
+        "6",
+        "5",
+        "11",
+        "3"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-10"
+      ]
+    },
+    {
+      "front": "8 × 8 = ?",
+      "back": "8 × 8 = 64",
+      "choices": [
+        "62",
+        "74",
+        "65",
+        "64"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "8gånger"
+      ]
+    },
+    {
+      "front": "7 × 4 = ?",
+      "back": "7 × 4 = 28",
+      "choices": [
+        "28",
+        "38",
+        "25",
+        "23"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "7gånger"
+      ]
+    },
+    {
+      "front": "15 ÷ 3 = ?",
+      "back": "15 ÷ 3 = 5",
+      "choices": [
+        "5",
+        "10",
+        "4",
+        "6"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-3"
+      ]
+    },
+    {
+      "front": "40 ÷ 4 = ?",
+      "back": "40 ÷ 4 = 10",
+      "choices": [
+        "11",
+        "7",
+        "12",
+        "10"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "division",
+        "delat-med-4"
+      ]
+    },
+    {
+      "front": "3 × 7 = ?",
+      "back": "3 × 7 = 21",
+      "choices": [
+        "23",
+        "16",
+        "21",
+        "31"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "3gånger"
+      ]
+    },
+    {
+      "front": "20 ÷ 10 = ?",
+      "back": "20 ÷ 10 = 2",
+      "choices": [
+        "7",
+        "4",
+        "3",
+        "2"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "division",
+        "delat-med-10"
+      ]
+    },
+    {
+      "front": "1 × 3 = ?",
+      "back": "1 × 3 = 3",
+      "choices": [
+        "5",
+        "2",
+        "4",
+        "3"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "1gånger"
+      ]
+    },
+    {
+      "front": "6 × 6 = ?",
+      "back": "6 × 6 = 36",
+      "choices": [
+        "46",
+        "26",
+        "35",
+        "36"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "6gånger"
+      ]
+    },
+    {
+      "front": "3 × 1 = ?",
+      "back": "3 × 1 = 3",
+      "choices": [
+        "5",
+        "3",
+        "8",
+        "6"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation",
+        "3gånger"
+      ]
+    },
+    {
+      "front": "30 ÷ 6 = ?",
+      "back": "30 ÷ 6 = 5",
+      "choices": [
+        "8",
+        "10",
+        "5",
+        "2"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-6"
+      ]
+    },
+    {
+      "front": "4 × 1 = ?",
+      "back": "4 × 1 = 4",
+      "choices": [
+        "5",
+        "1",
+        "6",
+        "4"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "4gånger"
+      ]
+    },
+    {
+      "front": "12 ÷ 6 = ?",
+      "back": "12 ÷ 6 = 2",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "3"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "division",
+        "delat-med-6"
+      ]
+    },
+    {
+      "front": "18 ÷ 2 = ?",
+      "back": "18 ÷ 2 = 9",
+      "choices": [
+        "10",
+        "12",
+        "9",
+        "8"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-2"
+      ]
+    },
+    {
+      "front": "10 × 9 = ?",
+      "back": "10 × 9 = 90",
+      "choices": [
+        "93",
+        "80",
+        "90",
+        "91"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "10gånger"
+      ]
+    },
+    {
+      "front": "5 × 10 = ?",
+      "back": "5 × 10 = 50",
+      "choices": [
+        "51",
+        "50",
+        "55",
+        "45"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation",
+        "5gånger"
+      ]
+    },
+    {
+      "front": "7 × 9 = ?",
+      "back": "7 × 9 = 63",
+      "choices": [
+        "62",
+        "65",
+        "58",
+        "63"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "7gånger"
+      ]
+    },
+    {
+      "front": "10 × 4 = ?",
+      "back": "10 × 4 = 40",
+      "choices": [
+        "37",
+        "30",
+        "45",
+        "40"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "10gånger"
+      ]
+    },
+    {
+      "front": "32 ÷ 8 = ?",
+      "back": "32 ÷ 8 = 4",
+      "choices": [
+        "4",
+        "6",
+        "3",
+        "5"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-8"
+      ]
+    },
+    {
+      "front": "4 × 8 = ?",
+      "back": "4 × 8 = 32",
+      "choices": [
+        "30",
+        "35",
+        "31",
+        "32"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "4gånger"
+      ]
+    },
+    {
+      "front": "10 × 5 = ?",
+      "back": "10 × 5 = 50",
+      "choices": [
+        "60",
+        "55",
+        "40",
+        "50"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "10gånger"
+      ]
+    },
+    {
+      "front": "6 × 4 = ?",
+      "back": "6 × 4 = 24",
+      "choices": [
+        "24",
+        "27",
+        "22",
+        "19"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "6gånger"
+      ]
+    },
+    {
+      "front": "32 ÷ 4 = ?",
+      "back": "32 ÷ 4 = 8",
+      "choices": [
+        "10",
+        "11",
+        "13",
+        "8"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "division",
+        "delat-med-4"
+      ]
+    },
+    {
+      "front": "18 ÷ 6 = ?",
+      "back": "18 ÷ 6 = 3",
+      "choices": [
+        "5",
+        "8",
+        "3",
+        "2"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-6"
+      ]
+    },
+    {
+      "front": "6 × 7 = ?",
+      "back": "6 × 7 = 42",
+      "choices": [
+        "44",
+        "52",
+        "42",
+        "47"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "6gånger"
+      ]
+    },
+    {
+      "front": "10 × 2 = ?",
+      "back": "10 × 2 = 20",
+      "choices": [
+        "15",
+        "25",
+        "21",
+        "20"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "10gånger"
+      ]
+    },
+    {
+      "front": "42 ÷ 6 = ?",
+      "back": "42 ÷ 6 = 7",
+      "choices": [
+        "5",
+        "4",
+        "9",
+        "7"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "division",
+        "delat-med-6"
+      ]
+    },
+    {
+      "front": "10 × 3 = ?",
+      "back": "10 × 3 = 30",
+      "choices": [
+        "29",
+        "33",
+        "30",
+        "32"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "10gånger"
+      ]
+    },
+    {
+      "front": "6 × 1 = ?",
+      "back": "6 × 1 = 6",
+      "choices": [
+        "6",
+        "1",
+        "11",
+        "7"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "6gånger"
+      ]
+    },
+    {
+      "front": "10 ÷ 5 = ?",
+      "back": "10 ÷ 5 = 2",
+      "choices": [
+        "2",
+        "1",
+        "7",
+        "4"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-5"
+      ]
+    },
+    {
+      "front": "1 × 8 = ?",
+      "back": "1 × 8 = 8",
+      "choices": [
+        "8",
+        "9",
+        "10",
+        "13"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "1gånger"
+      ]
+    },
+    {
+      "front": "2 × 4 = ?",
+      "back": "2 × 4 = 8",
+      "choices": [
+        "3",
+        "6",
+        "13",
+        "8"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "2gånger"
+      ]
+    },
+    {
+      "front": "9 × 7 = ?",
+      "back": "9 × 7 = 63",
+      "choices": [
+        "66",
+        "58",
+        "73",
+        "63"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "9gånger"
+      ]
+    },
+    {
+      "front": "30 ÷ 10 = ?",
+      "back": "30 ÷ 10 = 3",
+      "choices": [
+        "5",
+        "3",
+        "4",
+        "6"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "division",
+        "delat-med-10"
+      ]
+    },
+    {
+      "front": "60 ÷ 6 = ?",
+      "back": "60 ÷ 6 = 10",
+      "choices": [
+        "10",
+        "8",
+        "13",
+        "7"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-6"
+      ]
+    },
+    {
+      "front": "4 × 6 = ?",
+      "back": "4 × 6 = 24",
+      "choices": [
+        "21",
+        "19",
+        "24",
+        "34"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "4gånger"
+      ]
+    },
+    {
+      "front": "2 × 7 = ?",
+      "back": "2 × 7 = 14",
+      "choices": [
+        "19",
+        "14",
+        "12",
+        "9"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation",
+        "2gånger"
+      ]
+    },
+    {
+      "front": "10 × 1 = ?",
+      "back": "10 × 1 = 10",
+      "choices": [
+        "13",
+        "10",
+        "12",
+        "15"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation",
+        "10gånger"
+      ]
+    },
+    {
+      "front": "4 × 2 = ?",
+      "back": "4 × 2 = 8",
+      "choices": [
+        "8",
+        "7",
+        "11",
+        "9"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "4gånger"
+      ]
+    },
+    {
+      "front": "30 ÷ 3 = ?",
+      "back": "30 ÷ 3 = 10",
+      "choices": [
+        "12",
+        "8",
+        "10",
+        "13"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-3"
+      ]
+    },
+    {
+      "front": "2 × 5 = ?",
+      "back": "2 × 5 = 10",
+      "choices": [
+        "15",
+        "10",
+        "7",
+        "9"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation",
+        "2gånger"
+      ]
+    },
+    {
+      "front": "8 × 3 = ?",
+      "back": "8 × 3 = 24",
+      "choices": [
+        "14",
+        "24",
+        "27",
+        "29"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation",
+        "8gånger"
+      ]
+    },
+    {
+      "front": "7 × 7 = ?",
+      "back": "7 × 7 = 49",
+      "choices": [
+        "52",
+        "39",
+        "49",
+        "54"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "7gånger"
+      ]
+    },
+    {
+      "front": "5 × 9 = ?",
+      "back": "5 × 9 = 45",
+      "choices": [
+        "50",
+        "45",
+        "40",
+        "35"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation",
+        "5gånger"
+      ]
+    },
+    {
+      "front": "50 ÷ 10 = ?",
+      "back": "50 ÷ 10 = 5",
+      "choices": [
+        "10",
+        "3",
+        "5",
+        "2"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-10"
+      ]
+    },
+    {
+      "front": "4 ÷ 2 = ?",
+      "back": "4 ÷ 2 = 2",
+      "choices": [
+        "2",
+        "4",
+        "7",
+        "3"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-2"
+      ]
+    },
+    {
+      "front": "5 × 6 = ?",
+      "back": "5 × 6 = 30",
+      "choices": [
+        "33",
+        "30",
+        "32",
+        "35"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation",
+        "5gånger"
+      ]
+    },
+    {
+      "front": "9 × 6 = ?",
+      "back": "9 × 6 = 54",
+      "choices": [
+        "64",
+        "52",
+        "54",
+        "49"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "9gånger"
+      ]
+    },
+    {
+      "front": "5 × 2 = ?",
+      "back": "5 × 2 = 10",
+      "choices": [
+        "13",
+        "20",
+        "10",
+        "5"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "5gånger"
+      ]
+    },
+    {
+      "front": "27 ÷ 9 = ?",
+      "back": "27 ÷ 9 = 3",
+      "choices": [
+        "4",
+        "6",
+        "3",
+        "1"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-9"
+      ]
+    },
+    {
+      "front": "90 ÷ 9 = ?",
+      "back": "90 ÷ 9 = 10",
+      "choices": [
+        "12",
+        "10",
+        "13",
+        "8"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "division",
+        "delat-med-9"
+      ]
+    },
+    {
+      "front": "25 ÷ 5 = ?",
+      "back": "25 ÷ 5 = 5",
+      "choices": [
+        "7",
+        "8",
+        "10",
+        "5"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "division",
+        "delat-med-5"
+      ]
+    },
+    {
+      "front": "18 ÷ 9 = ?",
+      "back": "18 ÷ 9 = 2",
+      "choices": [
+        "2",
+        "3",
+        "1",
+        "5"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-9"
+      ]
+    },
+    {
+      "front": "7 × 1 = ?",
+      "back": "7 × 1 = 7",
+      "choices": [
+        "4",
+        "2",
+        "9",
+        "7"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "7gånger"
+      ]
+    },
+    {
+      "front": "10 ÷ 2 = ?",
+      "back": "10 ÷ 2 = 5",
+      "choices": [
+        "7",
+        "10",
+        "5",
+        "8"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-2"
+      ]
+    },
+    {
+      "front": "18 ÷ 3 = ?",
+      "back": "18 ÷ 3 = 6",
+      "choices": [
+        "6",
+        "5",
+        "3",
+        "4"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-3"
+      ]
+    },
+    {
+      "front": "6 × 8 = ?",
+      "back": "6 × 8 = 48",
+      "choices": [
+        "50",
+        "51",
+        "49",
+        "48"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "6gånger"
+      ]
+    },
+    {
+      "front": "36 ÷ 6 = ?",
+      "back": "36 ÷ 6 = 6",
+      "choices": [
+        "9",
+        "6",
+        "7",
+        "8"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "division",
+        "delat-med-6"
+      ]
+    },
+    {
+      "front": "1 × 9 = ?",
+      "back": "1 × 9 = 9",
+      "choices": [
+        "8",
+        "10",
+        "9",
+        "14"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "1gånger"
+      ]
+    },
+    {
+      "front": "54 ÷ 6 = ?",
+      "back": "54 ÷ 6 = 9",
+      "choices": [
+        "14",
+        "9",
+        "10",
+        "6"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "division",
+        "delat-med-6"
+      ]
+    },
+    {
+      "front": "2 × 1 = ?",
+      "back": "2 × 1 = 2",
+      "choices": [
+        "1",
+        "3",
+        "2",
+        "7"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "2gånger"
+      ]
+    },
+    {
+      "front": "6 × 10 = ?",
+      "back": "6 × 10 = 60",
+      "choices": [
+        "62",
+        "70",
+        "60",
+        "57"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "6gånger"
+      ]
+    },
+    {
+      "front": "12 ÷ 2 = ?",
+      "back": "12 ÷ 2 = 6",
+      "choices": [
+        "11",
+        "9",
+        "8",
+        "6"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "division",
+        "delat-med-2"
+      ]
+    },
+    {
+      "front": "6 × 3 = ?",
+      "back": "6 × 3 = 18",
+      "choices": [
+        "13",
+        "23",
+        "18",
+        "28"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "6gånger"
+      ]
+    },
+    {
+      "front": "9 × 9 = ?",
+      "back": "9 × 9 = 81",
+      "choices": [
+        "86",
+        "76",
+        "81",
+        "78"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "9gånger"
+      ]
+    },
+    {
+      "front": "70 ÷ 10 = ?",
+      "back": "70 ÷ 10 = 7",
+      "choices": [
+        "10",
+        "4",
+        "7",
+        "12"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-10"
+      ]
+    },
+    {
+      "front": "7 × 3 = ?",
+      "back": "7 × 3 = 21",
+      "choices": [
+        "18",
+        "21",
+        "19",
+        "31"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation",
+        "7gånger"
+      ]
+    },
+    {
+      "front": "4 × 10 = ?",
+      "back": "4 × 10 = 40",
+      "choices": [
+        "38",
+        "37",
+        "40",
+        "50"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "4gånger"
+      ]
+    },
+    {
+      "front": "20 ÷ 4 = ?",
+      "back": "20 ÷ 4 = 5",
+      "choices": [
+        "5",
+        "6",
+        "8",
+        "4"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-4"
+      ]
+    },
+    {
+      "front": "4 × 9 = ?",
+      "back": "4 × 9 = 36",
+      "choices": [
+        "37",
+        "46",
+        "38",
+        "36"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "4gånger"
+      ]
+    },
+    {
+      "front": "8 × 1 = ?",
+      "back": "8 × 1 = 8",
+      "choices": [
+        "13",
+        "8",
+        "7",
+        "5"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation",
+        "8gånger"
+      ]
+    },
+    {
+      "front": "9 × 2 = ?",
+      "back": "9 × 2 = 18",
+      "choices": [
+        "18",
+        "20",
+        "8",
+        "17"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "9gånger"
+      ]
+    },
+    {
+      "front": "7 × 5 = ?",
+      "back": "7 × 5 = 35",
+      "choices": [
+        "35",
+        "33",
+        "32",
+        "40"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "7gånger"
+      ]
+    },
+    {
+      "front": "36 ÷ 4 = ?",
+      "back": "36 ÷ 4 = 9",
+      "choices": [
+        "14",
+        "7",
+        "10",
+        "9"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "division",
+        "delat-med-4"
+      ]
+    },
+    {
+      "front": "36 ÷ 9 = ?",
+      "back": "36 ÷ 9 = 4",
+      "choices": [
+        "9",
+        "6",
+        "4",
+        "2"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-9"
+      ]
+    },
+    {
+      "front": "40 ÷ 10 = ?",
+      "back": "40 ÷ 10 = 4",
+      "choices": [
+        "1",
+        "7",
+        "9",
+        "4"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "division",
+        "delat-med-10"
+      ]
+    },
+    {
+      "front": "6 × 5 = ?",
+      "back": "6 × 5 = 30",
+      "choices": [
+        "20",
+        "32",
+        "30",
+        "33"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "6gånger"
+      ]
+    },
+    {
+      "front": "12 ÷ 4 = ?",
+      "back": "12 ÷ 4 = 3",
+      "choices": [
+        "6",
+        "5",
+        "3",
+        "8"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-4"
+      ]
+    },
+    {
+      "front": "80 ÷ 8 = ?",
+      "back": "80 ÷ 8 = 10",
+      "choices": [
+        "12",
+        "10",
+        "8",
+        "11"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "division",
+        "delat-med-8"
+      ]
+    },
+    {
+      "front": "3 × 8 = ?",
+      "back": "3 × 8 = 24",
+      "choices": [
+        "25",
+        "29",
+        "22",
+        "24"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "3gånger"
+      ]
+    },
+    {
+      "front": "9 × 5 = ?",
+      "back": "9 × 5 = 45",
+      "choices": [
+        "48",
+        "45",
+        "46",
+        "35"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation",
+        "9gånger"
+      ]
+    },
+    {
+      "front": "24 ÷ 8 = ?",
+      "back": "24 ÷ 8 = 3",
+      "choices": [
+        "8",
+        "6",
+        "5",
+        "3"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "division",
+        "delat-med-8"
+      ]
+    },
+    {
+      "front": "8 × 5 = ?",
+      "back": "8 × 5 = 40",
+      "choices": [
+        "35",
+        "50",
+        "40",
+        "41"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "8gånger"
+      ]
+    },
+    {
+      "front": "10 × 10 = ?",
+      "back": "10 × 10 = 100",
+      "choices": [
+        "102",
+        "110",
+        "97",
+        "100"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "10gånger"
+      ]
+    },
+    {
+      "front": "14 ÷ 7 = ?",
+      "back": "14 ÷ 7 = 2",
+      "choices": [
+        "2",
+        "7",
+        "3",
+        "5"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-7"
+      ]
+    },
+    {
+      "front": "24 ÷ 4 = ?",
+      "back": "24 ÷ 4 = 6",
+      "choices": [
+        "3",
+        "9",
+        "7",
+        "6"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "division",
+        "delat-med-4"
+      ]
+    },
+    {
+      "front": "1 × 7 = ?",
+      "back": "1 × 7 = 7",
+      "choices": [
+        "10",
+        "7",
+        "12",
+        "9"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation",
+        "1gånger"
+      ]
+    },
+    {
+      "front": "15 ÷ 5 = ?",
+      "back": "15 ÷ 5 = 3",
+      "choices": [
+        "6",
+        "4",
+        "3",
+        "2"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-5"
+      ]
+    },
+    {
+      "front": "1 × 5 = ?",
+      "back": "1 × 5 = 5",
+      "choices": [
+        "4",
+        "15",
+        "5",
+        "8"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "1gånger"
+      ]
+    },
+    {
+      "front": "16 ÷ 8 = ?",
+      "back": "16 ÷ 8 = 2",
+      "choices": [
+        "7",
+        "4",
+        "2",
+        "3"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-8"
+      ]
+    },
+    {
+      "front": "81 ÷ 9 = ?",
+      "back": "81 ÷ 9 = 9",
+      "choices": [
+        "9",
+        "7",
+        "10",
+        "14"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-9"
+      ]
+    },
+    {
+      "front": "2 × 2 = ?",
+      "back": "2 × 2 = 4",
+      "choices": [
+        "4",
+        "6",
+        "1",
+        "14"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "2gånger"
+      ]
+    },
+    {
+      "front": "9 × 8 = ?",
+      "back": "9 × 8 = 72",
+      "choices": [
+        "67",
+        "77",
+        "62",
+        "72"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "9gånger"
+      ]
+    },
+    {
+      "front": "35 ÷ 5 = ?",
+      "back": "35 ÷ 5 = 7",
+      "choices": [
+        "7",
+        "8",
+        "10",
+        "9"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-5"
+      ]
+    },
+    {
+      "front": "42 ÷ 7 = ?",
+      "back": "42 ÷ 7 = 6",
+      "choices": [
+        "3",
+        "8",
+        "6",
+        "5"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-7"
+      ]
+    },
+    {
+      "front": "5 × 5 = ?",
+      "back": "5 × 5 = 25",
+      "choices": [
+        "27",
+        "25",
+        "20",
+        "28"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation",
+        "5gånger"
+      ]
+    },
+    {
+      "front": "70 ÷ 7 = ?",
+      "back": "70 ÷ 7 = 10",
+      "choices": [
+        "10",
+        "7",
+        "13",
+        "15"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-7"
+      ]
+    },
+    {
+      "front": "3 × 5 = ?",
+      "back": "3 × 5 = 15",
+      "choices": [
+        "12",
+        "15",
+        "14",
+        "17"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation",
+        "3gånger"
+      ]
+    },
+    {
+      "front": "63 ÷ 9 = ?",
+      "back": "63 ÷ 9 = 7",
+      "choices": [
+        "7",
+        "4",
+        "10",
+        "9"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-9"
+      ]
+    },
+    {
+      "front": "56 ÷ 8 = ?",
+      "back": "56 ÷ 8 = 7",
+      "choices": [
+        "7",
+        "9",
+        "6",
+        "5"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-8"
+      ]
+    },
+    {
+      "front": "8 × 2 = ?",
+      "back": "8 × 2 = 16",
+      "choices": [
+        "16",
+        "19",
+        "17",
+        "14"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "8gånger"
+      ]
+    },
+    {
+      "front": "6 × 2 = ?",
+      "back": "6 × 2 = 12",
+      "choices": [
+        "15",
+        "12",
+        "7",
+        "13"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation",
+        "6gånger"
+      ]
+    },
+    {
+      "front": "7 × 6 = ?",
+      "back": "7 × 6 = 42",
+      "choices": [
+        "42",
+        "44",
+        "45",
+        "43"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "7gånger"
+      ]
+    },
+    {
+      "front": "3 × 2 = ?",
+      "back": "3 × 2 = 6",
+      "choices": [
+        "6",
+        "4",
+        "7",
+        "1"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "3gånger"
+      ]
+    },
+    {
+      "front": "8 × 4 = ?",
+      "back": "8 × 4 = 32",
+      "choices": [
+        "32",
+        "42",
+        "33",
+        "29"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "8gånger"
+      ]
+    },
+    {
+      "front": "49 ÷ 7 = ?",
+      "back": "49 ÷ 7 = 7",
+      "choices": [
+        "7",
+        "9",
+        "4",
+        "10"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-7"
+      ]
+    },
+    {
+      "front": "64 ÷ 8 = ?",
+      "back": "64 ÷ 8 = 8",
+      "choices": [
+        "11",
+        "8",
+        "9",
+        "13"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "division",
+        "delat-med-8"
+      ]
+    },
+    {
+      "front": "6 × 9 = ?",
+      "back": "6 × 9 = 54",
+      "choices": [
+        "51",
+        "53",
+        "54",
+        "56"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "6gånger"
+      ]
+    },
+    {
+      "front": "9 × 4 = ?",
+      "back": "9 × 4 = 36",
+      "choices": [
+        "36",
+        "34",
+        "35",
+        "31"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "9gånger"
+      ]
+    },
+    {
+      "front": "5 × 3 = ?",
+      "back": "5 × 3 = 15",
+      "choices": [
+        "15",
+        "25",
+        "16",
+        "10"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "5gånger"
+      ]
+    },
+    {
+      "front": "5 × 4 = ?",
+      "back": "5 × 4 = 20",
+      "choices": [
+        "17",
+        "10",
+        "22",
+        "20"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "5gånger"
+      ]
+    },
+    {
+      "front": "8 × 9 = ?",
+      "back": "8 × 9 = 72",
+      "choices": [
+        "77",
+        "69",
+        "72",
+        "70"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "8gånger"
+      ]
+    },
+    {
+      "front": "5 × 1 = ?",
+      "back": "5 × 1 = 5",
+      "choices": [
+        "5",
+        "6",
+        "8",
+        "15"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "5gånger"
+      ]
+    },
+    {
+      "front": "72 ÷ 8 = ?",
+      "back": "72 ÷ 8 = 9",
+      "choices": [
+        "7",
+        "10",
+        "12",
+        "9"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "division",
+        "delat-med-8"
+      ]
+    },
+    {
+      "front": "4 × 3 = ?",
+      "back": "4 × 3 = 12",
+      "choices": [
+        "17",
+        "7",
+        "14",
+        "12"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "4gånger"
+      ]
+    },
+    {
+      "front": "2 × 6 = ?",
+      "back": "2 × 6 = 12",
+      "choices": [
+        "13",
+        "12",
+        "10",
+        "14"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation",
+        "2gånger"
+      ]
+    },
+    {
+      "front": "20 ÷ 5 = ?",
+      "back": "20 ÷ 5 = 4",
+      "choices": [
+        "3",
+        "1",
+        "4",
+        "2"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-5"
+      ]
+    },
+    {
+      "front": "12 ÷ 3 = ?",
+      "back": "12 ÷ 3 = 4",
+      "choices": [
+        "2",
+        "6",
+        "3",
+        "4"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "division",
+        "delat-med-3"
+      ]
+    },
+    {
+      "front": "80 ÷ 10 = ?",
+      "back": "80 ÷ 10 = 8",
+      "choices": [
+        "10",
+        "8",
+        "7",
+        "13"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "division",
+        "delat-med-10"
+      ]
+    },
+    {
+      "front": "5 × 8 = ?",
+      "back": "5 × 8 = 40",
+      "choices": [
+        "40",
+        "38",
+        "37",
+        "35"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "5gånger"
+      ]
+    },
+    {
+      "front": "56 ÷ 7 = ?",
+      "back": "56 ÷ 7 = 8",
+      "choices": [
+        "5",
+        "11",
+        "8",
+        "7"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-7"
+      ]
+    },
+    {
+      "front": "90 ÷ 10 = ?",
+      "back": "90 ÷ 10 = 9",
+      "choices": [
+        "7",
+        "9",
+        "6",
+        "10"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "division",
+        "delat-med-10"
+      ]
+    },
+    {
+      "front": "45 ÷ 9 = ?",
+      "back": "45 ÷ 9 = 5",
+      "choices": [
+        "5",
+        "2",
+        "3",
+        "10"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-9"
+      ]
+    },
+    {
+      "front": "9 × 10 = ?",
+      "back": "9 × 10 = 90",
+      "choices": [
+        "87",
+        "80",
+        "90",
+        "92"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "9gånger"
+      ]
+    },
+    {
+      "front": "40 ÷ 5 = ?",
+      "back": "40 ÷ 5 = 8",
+      "choices": [
+        "9",
+        "5",
+        "8",
+        "7"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-5"
+      ]
+    },
+    {
+      "front": "100 ÷ 10 = ?",
+      "back": "100 ÷ 10 = 10",
+      "choices": [
+        "10",
+        "9",
+        "11",
+        "15"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-10"
+      ]
+    },
+    {
+      "front": "27 ÷ 3 = ?",
+      "back": "27 ÷ 3 = 9",
+      "choices": [
+        "7",
+        "9",
+        "11",
+        "12"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "division",
+        "delat-med-3"
+      ]
+    },
+    {
+      "front": "54 ÷ 9 = ?",
+      "back": "54 ÷ 9 = 6",
+      "choices": [
+        "6",
+        "4",
+        "7",
+        "9"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-9"
+      ]
+    },
+    {
+      "front": "9 × 3 = ?",
+      "back": "9 × 3 = 27",
+      "choices": [
+        "27",
+        "26",
+        "29",
+        "32"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "9gånger"
+      ]
+    },
+    {
+      "front": "4 × 4 = ?",
+      "back": "4 × 4 = 16",
+      "choices": [
+        "18",
+        "16",
+        "21",
+        "11"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation",
+        "4gånger"
+      ]
+    },
+    {
+      "front": "2 × 10 = ?",
+      "back": "2 × 10 = 20",
+      "choices": [
+        "18",
+        "17",
+        "23",
+        "20"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "2gånger"
+      ]
+    },
+    {
+      "front": "35 ÷ 7 = ?",
+      "back": "35 ÷ 7 = 5",
+      "choices": [
+        "4",
+        "6",
+        "2",
+        "5"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "division",
+        "delat-med-7"
+      ]
+    },
+    {
+      "front": "14 ÷ 2 = ?",
+      "back": "14 ÷ 2 = 7",
+      "choices": [
+        "6",
+        "4",
+        "7",
+        "8"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-2"
+      ]
+    },
+    {
+      "front": "16 ÷ 2 = ?",
+      "back": "16 ÷ 2 = 8",
+      "choices": [
+        "8",
+        "11",
+        "9",
+        "7"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-2"
+      ]
+    },
+    {
+      "front": "50 ÷ 5 = ?",
+      "back": "50 ÷ 5 = 10",
+      "choices": [
+        "8",
+        "10",
+        "11",
+        "7"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "division",
+        "delat-med-5"
+      ]
+    },
+    {
+      "front": "28 ÷ 4 = ?",
+      "back": "28 ÷ 4 = 7",
+      "choices": [
+        "7",
+        "6",
+        "8",
+        "12"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "division",
+        "delat-med-4"
+      ]
+    },
+    {
+      "front": "8 ÷ 2 = ?",
+      "back": "8 ÷ 2 = 4",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "1"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-2"
+      ]
+    },
+    {
+      "front": "9 × 1 = ?",
+      "back": "9 × 1 = 9",
+      "choices": [
+        "7",
+        "14",
+        "9",
+        "8"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "9gånger"
+      ]
+    },
+    {
+      "front": "2 × 8 = ?",
+      "back": "2 × 8 = 16",
+      "choices": [
+        "16",
+        "14",
+        "13",
+        "6"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation",
+        "2gånger"
+      ]
+    },
+    {
+      "front": "3 × 4 = ?",
+      "back": "3 × 4 = 12",
+      "choices": [
+        "2",
+        "11",
+        "13",
+        "12"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation",
+        "3gånger"
+      ]
+    },
+    {
+      "front": "40 ÷ 8 = ?",
+      "back": "40 ÷ 8 = 5",
+      "choices": [
+        "3",
+        "10",
+        "5",
+        "4"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-8"
+      ]
+    },
+    {
+      "front": "4 × 5 = ?",
+      "back": "4 × 5 = 20",
+      "choices": [
+        "22",
+        "30",
+        "20",
+        "19"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation",
+        "4gånger"
+      ]
+    },
+    {
+      "front": "48 ÷ 6 = ?",
+      "back": "48 ÷ 6 = 8",
+      "choices": [
+        "11",
+        "8",
+        "6",
+        "10"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "division",
+        "delat-med-6"
+      ]
+    },
+    {
+      "front": "16 ÷ 4 = ?",
+      "back": "16 ÷ 4 = 4",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "division",
+        "delat-med-4"
+      ]
+    }
+  ]
+}

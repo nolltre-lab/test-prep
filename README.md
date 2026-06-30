@@ -33,6 +33,14 @@ A gamified, self-hosted study application designed for students (grades 7-9) wit
   - Touch-optimized controls
   - Keyboard shortcuts for desktop
 
+- **Analytics & Management Dashboard**
+  - Real-time usage analytics
+  - Client activity tracking (by IP/hostname)
+  - Pack popularity statistics
+  - Review score analytics with averages
+  - Session tracking with timestamps
+  - Auto-refresh dashboard (30s interval)
+
 ## Prerequisites
 
 ### For Local Development
@@ -144,13 +152,21 @@ This project includes a fully automated deployment script for Raspberry Pi.
    ./docker-build-testprep.sh
    ```
 
-The script will:
-- Build a multi-architecture Docker image (amd64 + arm64)
-- Push to Docker Hub
+The script will (in **direct copy** mode - fast!):
+- Build a Docker image for ARM64 (Raspberry Pi)
+- Save the image as a tar file
+- Copy it directly to the Pi over local network (fast!)
 - Create a `.env` file on the Pi with your OpenAI API key
 - Upload configuration files
-- Deploy and start the container
+- Load the image and start the container
 - Perform a health check
+
+**Fast deployment**: Typically completes in 30-90 seconds!
+
+Optional: Push to Docker Hub as backup:
+```bash
+PUSH_TO_HUB=1 ./docker-build-testprep.sh
+```
 
 5. **Access your app**
    ```
@@ -317,6 +333,71 @@ Non-sensitive configuration settings:
 - **Streaks** reset on wrong answers
 - **Level** increases based on total XP
 
+## Management Dashboard
+
+The application includes a real-time analytics dashboard for teachers and administrators to monitor student usage and progress.
+
+### Accessing the Dashboard
+
+Navigate to the `/admin.html` page:
+
+- **Local Development**: `http://localhost:8787/admin.html`
+- **Docker**: `http://localhost:8789/admin.html`
+- **Raspberry Pi**: `http://raspberrypi.local:8789/admin.html`
+
+### Dashboard Features
+
+**Summary Statistics**
+- Total active clients (unique IP addresses)
+- Total reviews submitted
+- Number of unique packs used
+- Average overall review score
+
+**Active Clients Table**
+- Client IP addresses and hostnames
+- Number of packs each client has used
+- Review count per client
+- Last activity timestamp with relative time display
+
+**Pack Usage Statistics**
+- Most popular question packs ranked by usage count
+- Total loads per pack
+- Helps identify which topics are most studied
+
+**Average Review Scores**
+- Visual score bars for all assessment metrics:
+  - Correctness (accuracy of answers)
+  - Clarity (communication quality)
+  - Completeness (thoroughness)
+  - Technical Accuracy (units, calculations, etc.)
+  - Overall Score (combined assessment)
+- Based on last 100 review submissions
+
+**Recent Reviews**
+- Timestamped submission log
+- Client identification
+- Question previews
+- Score badges (color-coded)
+- Word count statistics
+
+### Dashboard Behavior
+
+- **Auto-refresh**: Updates every 30 seconds automatically
+- **Manual Refresh**: Click the refresh button for immediate update
+- **Data Persistence**: Analytics are saved to `analytics.json` on the server
+- **Historical Data**: Keeps last 1000 reviews in storage
+- **Privacy**: Only tracks IP addresses and hostnames (local network identification)
+
+### Analytics Data Storage
+
+All analytics data is stored in `analytics.json` in the application root directory:
+- Debounced writes (saves maximum once per minute to reduce disk I/O)
+- Survives server restarts
+- Can be backed up or analyzed externally
+- JSON format for easy parsing
+
+**Note**: The dashboard is accessible to anyone who can reach the server. For production use in a classroom environment on an internal network, this is typically acceptable. For internet-facing deployments, consider adding authentication.
+
 ## Troubleshooting
 
 ### Server won't start
@@ -351,7 +432,9 @@ Non-sensitive configuration settings:
 ```
 .
 ├── index.html                              # Main application (SPA)
+├── admin.html                              # Management dashboard (analytics)
 ├── server.js                               # Node.js backend server
+├── analytics.json                          # Analytics data storage (auto-generated)
 ├── Dockerfile                              # Docker image definition
 ├── docker-compose.yml                      # Local Docker setup
 ├── docker-compose-headless-testprep.yml   # Pi deployment config
@@ -381,6 +464,7 @@ Non-sensitive configuration settings:
 | `/api/packs` | GET | List available question packs |
 | `/api/pack/:filename` | GET | Fetch specific pack contents |
 | `/api/review` | POST | Submit answer for AI review |
+| `/api/analytics` | GET | Get analytics data (sessions, pack usage, review stats) |
 
 ## Contributing
 

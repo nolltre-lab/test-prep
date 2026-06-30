@@ -11,4 +11,5 @@ services:
     volumes:
       - ./config.json:/app/config.json:ro
       - ./packs:/app/packs:ro
+      - ./analytics.json:/app/analytics.json
     restart: unless-stopped

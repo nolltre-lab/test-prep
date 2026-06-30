@@ -1,0 +1,394 @@
+{
+  "title": "Svenska åk 7: Ordklasser – grund & fördjupning",
+  "items": [
+    {
+      "front": "Vad är en ordklass?",
+      "back": "En ordklass är en grupp ord som fungerar på liknande sätt och har liknande egenskaper, till exempel substantiv, verb och adjektiv.",
+      "hint": "Tänk \"sorter\" av ord.",
+      "choices": [
+        "En grupp ord som fungerar på liknande sätt",
+        "En svår stavningsregel",
+        "En typ av mening",
+        "Ett annat ord för alfabetet"
+      ],
+      "answerIndex": 0,
+      "tags": ["ordklasser", "grundbegrepp"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"hund\" i meningen: \"Hunden sprang fort\"?",
+      "back": "\"Hund\" är ett substantiv (namn på en sak/djur).",
+      "hint": "Namn på sak/djur.",
+      "choices": [
+        "Substantiv",
+        "Verb",
+        "Adjektiv",
+        "Adverb"
+      ],
+      "answerIndex": 0,
+      "tags": ["substantiv", "identifiera"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"sprang\" i meningen: \"Hunden sprang fort\"?",
+      "back": "\"Sprang\" är ett verb (någonting man gör).",
+      "hint": "Handling.",
+      "choices": [
+        "Substantiv",
+        "Verb",
+        "Adjektiv",
+        "Adverb"
+      ],
+      "answerIndex": 1,
+      "tags": ["verb", "identifiera"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"fort\" i meningen: \"Hunden sprang fort\"?",
+      "back": "\"Fort\" är ett adverb, det beskriver hur hunden sprang (hur handlingen utförs).",
+      "hint": "Beskriver verbet – hur? när? var?",
+      "choices": [
+        "Substantiv",
+        "Verb",
+        "Adjektiv",
+        "Adverb"
+      ],
+      "answerIndex": 3,
+      "tags": ["adverb", "identifiera"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"röd\" i meningen: \"Hon köpte en röd cykel\"?",
+      "back": "\"Röd\" är ett adjektiv (beskriver hur något är).",
+      "hint": "Beskriver egenskap.",
+      "choices": [
+        "Substantiv",
+        "Verb",
+        "Adjektiv",
+        "Adverb"
+      ],
+      "answerIndex": 2,
+      "tags": ["adjektiv", "identifiera"]
+    },
+    {
+      "front": "Vad kännetecknar ett substantiv?",
+      "back": "Substantiv är ord för saker, personer, platser, djur, idéer och känslor. Ofta kan man sätta \"en\", \"ett\" eller \"flera\" framför.",
+      "hint": "En/ett/flera brukar fungera.",
+      "choices": [
+        "Beskriver hur något är",
+        "Är ord för saker, personer och platser",
+        "Beskriver hur, var eller när något sker",
+        "Binder ihop satser"
+      ],
+      "answerIndex": 1,
+      "tags": ["substantiv", "definition"]
+    },
+    {
+      "front": "Vad kännetecknar ett verb?",
+      "back": "Verb är ord för handlingar, tillstånd eller händelser, t.ex. springa, sova, regna.",
+      "hint": "Något man gör eller som händer.",
+      "choices": [
+        "Ord som visar antal",
+        "Ord för handlingar och händelser",
+        "Ord som beskriver substantiv",
+        "Ord som ersätter andra ord"
+      ],
+      "answerIndex": 1,
+      "tags": ["verb", "definition"]
+    },
+    {
+      "front": "Vad kännetecknar ett adjektiv?",
+      "back": "Adjektiv beskriver hur något eller någon är, t.ex. lång, röd, snäll.",
+      "hint": "Svarar ofta på frågan \"hur är…?\"",
+      "choices": [
+        "Ord för handlingar",
+        "Ord för saker",
+        "Ord som beskriver egenskaper",
+        "Ord som anger plats"
+      ],
+      "answerIndex": 2,
+      "tags": ["adjektiv", "definition"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"hon\" i meningen: \"Hon gillar musik\"?",
+      "back": "\"Hon\" är ett pronomen (ersätter ett substantiv, t.ex. ett namn).",
+      "hint": "Ersätter t.ex. ett namn.",
+      "choices": [
+        "Substantiv",
+        "Pronomen",
+        "Adjektiv",
+        "Interjektion"
+      ],
+      "answerIndex": 1,
+      "tags": ["pronomen", "identifiera"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"jag\"?",
+      "back": "\"Jag\" är ett personligt pronomen i första person singular.",
+      "hint": "Ersätter talaren.",
+      "choices": [
+        "Substantiv",
+        "Verb",
+        "Pronomen",
+        "Adverb"
+      ],
+      "answerIndex": 2,
+      "tags": ["pronomen", "personliga_pronomen"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"och\" i meningen: \"Jag gillar musik och film\"?",
+      "back": "\"Och\" är en konjunktion. Den binder ihop ord och satser.",
+      "hint": "Binder ihop två saker.",
+      "choices": [
+        "Preposition",
+        "Konjunktion",
+        "Adverb",
+        "Pronomen"
+      ],
+      "answerIndex": 1,
+      "tags": ["konjunktion", "bindeord"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"men\" i meningen: \"Jag vill gå, men jag hinner inte\"?",
+      "back": "\"Men\" är en konjunktion som visar en motsättning.",
+      "hint": "Skapar en kontrast.",
+      "choices": [
+        "Substantiv",
+        "Adverb",
+        "Konjunktion",
+        "Preposition"
+      ],
+      "answerIndex": 2,
+      "tags": ["konjunktion", "bindeord"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"på\" i meningen: \"Boken ligger på bordet\"?",
+      "back": "\"På\" är en preposition som anger läge.",
+      "hint": "Anger plats eller riktning.",
+      "choices": [
+        "Adverb",
+        "Konjunktion",
+        "Preposition",
+        "Pronomen"
+      ],
+      "answerIndex": 2,
+      "tags": ["preposition", "läge"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"under\" i meningen: \"Katten ligger under sängen\"?",
+      "back": "\"Under\" är en preposition (läge).",
+      "hint": "Var är katten?",
+      "choices": [
+        "Preposition",
+        "Adverb",
+        "Substantiv",
+        "Adjektiv"
+      ],
+      "answerIndex": 0,
+      "tags": ["preposition", "läge"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"aj\" i meningen: \"Aj, det gjorde ont!\"?",
+      "back": "\"Aj\" är en interjektion (utropsord).",
+      "hint": "Spontant utrop.",
+      "choices": [
+        "Substantiv",
+        "Verb",
+        "Interjektion",
+        "Pronomen"
+      ],
+      "answerIndex": 2,
+      "tags": ["interjektion", "utrop"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"wow\" i: \"Wow, vilken fin låt!\"?",
+      "back": "\"Wow\" är en interjektion som uttrycker känsla/reaktion.",
+      "hint": "Uttrycker överraskning eller beundran.",
+      "choices": [
+        "Substantiv",
+        "Interjektion",
+        "Adjektiv",
+        "Adverb"
+      ],
+      "answerIndex": 1,
+      "tags": ["interjektion", "känslor"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"tio\" i meningen: \"Hon har tio böcker\"?",
+      "back": "\"Tio\" är ett räkneord (grundtal).",
+      "hint": "Anger antal.",
+      "choices": [
+        "Pronomen",
+        "Adverb",
+        "Räkneord",
+        "Adjektiv"
+      ],
+      "answerIndex": 2,
+      "tags": ["räkneord", "antal"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"första\" i meningen: \"Han kom på första plats\"?",
+      "back": "\"Första\" är ett räkneord (ordningstal).",
+      "hint": "Anger ordningen: vilken i turordningen.",
+      "choices": [
+        "Adjektiv",
+        "Räkneord (ordningstal)",
+        "Pronomen",
+        "Adverb"
+      ],
+      "answerIndex": 1,
+      "tags": ["räkneord", "ordningstal"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"denna\" i meningen: \"Denna bok är spännande\"?",
+      "back": "\"Denna\" är ett determinerande ord (bestämningsord), ofta räknat till pronomen/determinerare i skolan.",
+      "hint": "Bestämmer vilket substantiv man menar.",
+      "choices": [
+        "Substantiv",
+        "Verb",
+        "Pronomen/determinerare",
+        "Adverb"
+      ],
+      "answerIndex": 2,
+      "tags": ["pronomen", "determinerare"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"inte\" i meningen: \"Jag vill inte\"?",
+      "back": "\"Inte\" är ett adverb. Det påverkar verbet och gör meningen nekande.",
+      "hint": "Gör meningen negation.",
+      "choices": [
+        "Adverb",
+        "Verb",
+        "Konjunktion",
+        "Substantiv"
+      ],
+      "answerIndex": 0,
+      "tags": ["adverb", "negation"]
+    },
+    {
+      "front": "Vilken ordklass passar bäst för orden \"snabbt\", \"ofta\", \"här\"?",
+      "back": "Det är adverb. De beskriver hur, när eller var något sker.",
+      "hint": "Hur? när? var?",
+      "choices": [
+        "Substantiv",
+        "Adverb",
+        "Adjektiv",
+        "Prepositioner"
+      ],
+      "answerIndex": 1,
+      "tags": ["adverb", "exempel"]
+    },
+    {
+      "front": "Vilken ordklass passar bäst för orden \"snäll\", \"trött\", \"blå\"?",
+      "back": "Det är adjektiv. De beskriver egenskaper hos någon eller något.",
+      "hint": "Beskriver hur någon eller något är.",
+      "choices": [
+        "Substantiv",
+        "Verb",
+        "Adjektiv",
+        "Adverb"
+      ],
+      "answerIndex": 2,
+      "tags": ["adjektiv", "exempel"]
+    },
+    {
+      "front": "I meningen \"De gamla husen revs\" – vilken ordklass är \"gamla\"?",
+      "back": "\"Gamla\" är ett adjektiv, det beskriver substantivet \"husen\".",
+      "choices": [
+        "Substantiv",
+        "Verb",
+        "Adjektiv",
+        "Adverb"
+      ],
+      "answerIndex": 2,
+      "tags": ["adjektiv", "identifiera"]
+    },
+    {
+      "front": "I meningen \"Barnen sprang snabbt hem\" – vilken ordklass är ordet \"hem\"?",
+      "back": "\"Hem\" fungerar här som ett adverb som anger riktning (vart).",
+      "hint": "Anger riktning: vart?",
+      "choices": [
+        "Substantiv",
+        "Adverb",
+        "Preposition",
+        "Pronomen"
+      ],
+      "answerIndex": 1,
+      "tags": ["adverb", "riktning"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"eftersom\" i meningen: \"Jag stannade hemma eftersom jag var sjuk\"?",
+      "back": "\"Eftersom\" är en subjunktion, ett underordnande bindeord som inleder en bisats.",
+      "hint": "Inleder en bisats med orsak.",
+      "choices": [
+        "Konjunktion",
+        "Subjunktion",
+        "Adverb",
+        "Preposition"
+      ],
+      "answerIndex": 1,
+      "tags": ["subjunktion", "bisats"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"om\" i meningen: \"Om det regnar stannar vi inne\"?",
+      "back": "\"Om\" är en subjunktion som inleder en villkorsbisats.",
+      "hint": "Inleder en villkorsbisats.",
+      "choices": [
+        "Konjunktion",
+        "Subjunktion",
+        "Adverb",
+        "Preposition"
+      ],
+      "answerIndex": 1,
+      "tags": ["subjunktion", "villkor"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"vilken\" i meningen: \"Vilken bok läser du?\"?",
+      "back": "\"Vilken\" är ett frågande pronomen (interrogativt pronomen).",
+      "hint": "Frågeord som syftar på ett substantiv.",
+      "choices": [
+        "Adverb",
+        "Frågande pronomen",
+        "Räkneord",
+        "Konjunktion"
+      ],
+      "answerIndex": 1,
+      "tags": ["pronomen", "frågande_pronomen"]
+    },
+    {
+      "front": "Vilken ordklass är ordet \"någon\" i meningen: \"Någon knackar på dörren\"?",
+      "back": "\"Någon\" är ett obestämt pronomen.",
+      "hint": "Syftar på en obestämd person.",
+      "choices": [
+        "Personligt pronomen",
+        "Obestämt pronomen",
+        "Räkneord",
+        "Adjektiv"
+      ],
+      "answerIndex": 1,
+      "tags": ["pronomen", "obestämda_pronomen"]
+    },
+    {
+      "front": "Vad är viktigaste skillnaden mellan ett adjektiv och ett adverb i svenskan?",
+      "back": "Adjektiv beskriver substantiv (\"en snabb bil\"), medan adverb oftast beskriver verb, adjektiv eller andra adverb (\"bilen kör snabbt\").",
+      "hint": "Vad beskriver vad?",
+      "choices": [
+        "Adjektiv beskriver verb, adverb beskriver substantiv",
+        "Adjektiv beskriver substantiv, adverb beskriver verb/adjektiv/adverb",
+        "De betyder samma sak",
+        "Adverb används bara i tal"
+      ],
+      "answerIndex": 1,
+      "tags": ["adjektiv", "adverb", "skillnad"]
+    },
+    {
+      "front": "Vilken ordklass är \"inte\" i meningen: \"Hon är inte glad idag\" – och vad gör ordet i satsen?",
+      "back": "\"Inte\" är ett adverb som framför allt påverkar predikatet/hela satsen (\"är glad\") och gör satsen nekande.",
+      "hint": "Titta på att satsen blir nekande.",
+      "choices": [
+        "\"Inte\" är ett verb som uttrycker känsla",
+        "\"Inte\" är ett adverb som gör satsen nekande",
+        "\"Inte\" är en konjunktion som binder ihop satser",
+        "\"Inte\" är ett pronomen som ersätter substantiv"
+      ],
+      "answerIndex": 1,
+      "tags": ["adverb", "negation", "sats"]
+    }
+  ]
+}

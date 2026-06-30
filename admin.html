@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+  (function(){
+    var p = window.location.pathname;
+    var base = p.endsWith('/') ? p.slice(0,-1) : p.replace(/\/[^/]*$/,'');
+    if(!base) return;
+    var _fetch = window.fetch;
+    window.fetch = function(url,opts){
+      if(typeof url==='string' && url.startsWith('/api/')) url = base+url;
+      return _fetch.call(this,url,opts);
+    };
+  })();
+  </script>
+  <title>Test Prep - Management Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #333;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: white;
+      border-radius: 12px;
+      padding: 20px 30px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #667eea;
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .stat-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 32px;
+      font-weight: bold;
+      color: #667eea;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .stat-label {
+      color: #666;
+      font-size: 13px;
+    }
+
+    .panel {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .panel h2 {
+      color: #667eea;
+      font-size: 20px;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th {
+      background: #f8f9fa;
+      padding: 10px;
+      text-align: left;
+      font-weight: 600;
+      color: #555;
+      border-bottom: 2px solid #e0e0e0;
+    }
+
+    td {
+      padding: 10px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    tr:hover {
+      background: #f8f9fa;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .badge-primary {
+      background: #e7f0ff;
+      color: #667eea;
+    }
+
+    .badge-success {
+      background: #d4edda;
+      color: #28a745;
+    }
+
+    .badge-warning {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    .badge-danger {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: #f0f0f0;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 5px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      transition: width 0.3s ease;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 40px;
+      color: #999;
+    }
+
+    .refresh-btn {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      float: right;
+      transition: background 0.3s;
+    }
+
+    .refresh-btn:hover {
+      background: #5568d3;
+    }
+
+    .timestamp {
+      color: #999;
+      font-size: 12px;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 40px;
+      color: white;
+      font-size: 18px;
+    }
+
+    .client-detail {
+      font-size: 12px;
+      color: #666;
+      margin-top: 3px;
+    }
+
+    .perf-good { color: #28a745; font-weight: 600; }
+    .perf-ok { color: #856404; font-weight: 600; }
+    .perf-poor { color: #721c24; font-weight: 600; }
+
+    @media (max-width: 768px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      table {
+        font-size: 12px;
+      }
+
+      th, td {
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📊 Test Prep - Teacher Dashboard</h1>
+      <p class="subtitle">Student performance and activity analytics</p>
+      <button class="refresh-btn" onclick="loadAnalytics()">🔄 Refresh</button>
+    </header>
+
+    <div id="loading" class="loading">Loading analytics data...</div>
+
+    <div id="dashboard" style="display: none;">
+      <!-- Summary Stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-value" id="totalSessions">0</span>
+          <span class="stat-label">Active Students</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value" id="totalAttempts">0</span>
+          <span class="stat-label">Quiz Attempts</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value" id="overallAccuracy">-</span>
+          <span class="stat-label">Overall Accuracy</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value" id="totalPacks">0</span>
+          <span class="stat-label">Packs Used</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value" id="avgReviewScore">-</span>
+          <span class="stat-label">Avg Review Score</span>
+        </div>
+      </div>
+
+      <!-- Student Performance Overview -->
+      <div class="panel">
+        <h2>👥 Student Performance by Pack</h2>
+        <div id="studentPerformance"></div>
+      </div>
+
+      <!-- Pack Statistics -->
+      <div class="panel">
+        <h2>📚 Pack Statistics</h2>
+        <div id="packStats"></div>
+      </div>
+
+      <!-- Time Spent Analysis -->
+      <div class="panel">
+        <h2>⏱️ Time Spent by Student & Pack</h2>
+        <div id="timeSpent"></div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="panel">
+        <h2>📝 Recent Quiz Activity</h2>
+        <div id="recentActivity"></div>
+      </div>
+
+      <!-- AI Review Scores (if available) -->
+      <div class="panel" id="reviewScoresPanel" style="display: none;">
+        <h2>✍️ AI Review Scores (Last 100 Reviews)</h2>
+        <div id="reviewScores"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const $ = sel => document.querySelector(sel);
+
+    async function loadAnalytics() {
+      try {
+        $('#loading').style.display = 'block';
+        $('#dashboard').style.display = 'none';
+
+        const response = await fetch('/api/analytics');
+        const data = await response.json();
+
+        console.log('Analytics data:', data); // Debug
+
+        // Update summary stats
+        $('#totalSessions').textContent = data.totalSessions || 0;
+        $('#totalAttempts').textContent = data.quizStats?.totalAttempts || 0;
+        $('#overallAccuracy').textContent = data.quizStats?.recentAccuracy
+          ? data.quizStats.recentAccuracy + '%'
+          : '-';
+        $('#totalPacks').textContent = data.packUsage?.length || 0;
+        $('#avgReviewScore').textContent = data.avgScores?.overall
+          ? data.avgScores.overall.toFixed(1) + '/5'
+          : '-';
+
+        // Render sections
+        renderStudentPerformance(data.packPerformance || {}, data.sessions || [], data.timeSpentByClient || {});
+        renderPackStats(data.packUsage || [], data.packPerformance || {});
+        renderTimeSpent(data.timeSpentByClient || {}, data.sessions || []);
+        renderRecentActivity(data.recentQuizActivity || []);
+
+        if (data.avgScores) {
+          renderReviewScores(data.avgScores);
+          $('#reviewScoresPanel').style.display = 'block';
+        }
+
+        $('#loading').style.display = 'none';
+        $('#dashboard').style.display = 'block';
+      } catch (error) {
+        console.error('Failed to load analytics:', error);
+        $('#loading').innerHTML = '<div class="empty-state">❌ Failed to load analytics data</div>';
+      }
+    }
+
+    function renderStudentPerformance(packPerf, sessions, timeSpent) {
+      const container = $('#studentPerformance');
+
+      if (Object.keys(packPerf).length === 0) {
+        container.innerHTML = '<div class="empty-state">No student activity data yet. Students will appear here once they start using quiz or flashcard modes.</div>';
+        return;
+      }
+
+      let html = '<table><thead><tr><th>Student (IP)</th><th>Pack</th><th>Attempts</th><th>Accuracy</th><th>Avg Time/Q</th><th>Last Activity</th></tr></thead><tbody>';
+
+      Object.entries(packPerf).forEach(([clientId, packs]) => {
+        const session = sessions.find(s => s.clientId === clientId);
+        const clientLabel = session ? `${clientId.split('.').slice(-2).join('.')}` : clientId;
+
+        Object.entries(packs).forEach(([packId, stats]) => {
+          const accuracy = parseFloat(stats.accuracy) || 0;
+          const perfClass = accuracy >= 70 ? 'perf-good' : accuracy >= 50 ? 'perf-ok' : 'perf-poor';
+          const avgTime = stats.avgTimePerQuestion ? (stats.avgTimePerQuestion / 1000).toFixed(1) + 's' : '-';
+
+          html += `
+            <tr>
+              <td><strong>${clientLabel}</strong></td>
+              <td>${formatPackName(packId)}</td>
+              <td>${stats.totalAttempts}</td>
+              <td class="${perfClass}">${accuracy}%</td>
+              <td>${avgTime}</td>
+              <td class="timestamp">${formatTimestamp(stats.lastActivity)}</td>
+            </tr>
+          `;
+        });
+      });
+
+      html += '</tbody></table>';
+      container.innerHTML = html;
+    }
+
+    function renderPackStats(packUsage, packPerf) {
+      const container = $('#packStats');
+
+      if (packUsage.length === 0) {
+        container.innerHTML = '<div class="empty-state">No pack usage data yet</div>';
+        return;
+      }
+
+      // Calculate pack-level stats
+      const packStats = {};
+      packUsage.forEach(p => {
+        packStats[p.packId] = { loads: p.count, totalAttempts: 0, correctAttempts: 0, students: new Set() };
+      });
+
+      Object.entries(packPerf).forEach(([clientId, packs]) => {
+        Object.entries(packs).forEach(([packId, stats]) => {
+          if (packStats[packId]) {
+            packStats[packId].totalAttempts += stats.totalAttempts;
+            packStats[packId].correctAttempts += stats.correctAttempts;
+            packStats[packId].students.add(clientId);
+          }
+        });
+      });
+
+      let html = '<table><thead><tr><th>Pack Name</th><th>Students</th><th>Total Loads</th><th>Quiz Attempts</th><th>Avg Accuracy</th></tr></thead><tbody>';
+
+      packUsage.forEach(p => {
+        const stats = packStats[p.packId];
+        const accuracy = stats.totalAttempts > 0
+          ? ((stats.correctAttempts / stats.totalAttempts) * 100).toFixed(1)
+          : '-';
+        const perfClass = parseFloat(accuracy) >= 70 ? 'perf-good' : parseFloat(accuracy) >= 50 ? 'perf-ok' : 'perf-poor';
+
+        html += `
+          <tr>
+            <td><strong>${formatPackName(p.packId)}</strong></td>
+            <td>${stats.students.size} student${stats.students.size !== 1 ? 's' : ''}</td>
+            <td>${stats.loads}</td>
+            <td>${stats.totalAttempts}</td>
+            <td class="${accuracy !== '-' ? perfClass : ''}">${accuracy}${accuracy !== '-' ? '%' : ''}</td>
+          </tr>
+        `;
+      });
+
+      html += '</tbody></table>';
+      container.innerHTML = html;
+    }
+
+    function renderTimeSpent(timeSpent, sessions) {
+      const container = $('#timeSpent');
+
+      if (Object.keys(timeSpent).length === 0) {
+        container.innerHTML = '<div class="empty-state">No time tracking data yet. Time will be tracked when students load and work with packs.</div>';
+        return;
+      }
+
+      let html = '<table><thead><tr><th>Student (IP)</th><th>Pack</th><th>Time Spent</th></tr></thead><tbody>';
+
+      Object.entries(timeSpent).forEach(([clientId, packs]) => {
+        const session = sessions.find(s => s.clientId === clientId);
+        const clientLabel = session ? `${clientId.split('.').slice(-2).join('.')}` : clientId;
+
+        Object.entries(packs).forEach(([packId, duration]) => {
+          html += `
+            <tr>
+              <td><strong>${clientLabel}</strong></td>
+              <td>${formatPackName(packId)}</td>
+              <td>${formatDuration(duration)}</td>
+            </tr>
+          `;
+        });
+      });
+
+      html += '</tbody></table>';
+      container.innerHTML = html;
+    }
+
+    function renderRecentActivity(activity) {
+      const container = $('#recentActivity');
+
+      if (activity.length === 0) {
+        container.innerHTML = '<div class="empty-state">No quiz activity yet. Activity will appear as students answer questions.</div>';
+        return;
+      }
+
+      let html = '<table><thead><tr><th>Time</th><th>Student</th><th>Pack</th><th>Mode</th><th>Question</th><th>Result</th><th>Time Taken</th></tr></thead><tbody>';
+
+      activity.slice(0, 50).reverse().forEach(a => {
+        const resultBadge = a.isCorrect
+          ? '<span class="badge badge-success">✓ Correct</span>'
+          : '<span class="badge badge-danger">✗ Wrong</span>';
+        const timeTaken = a.timeTaken ? (a.timeTaken / 1000).toFixed(1) + 's' : '-';
+        const clientLabel = a.clientId.split('.').slice(-2).join('.');
+
+        html += `
+          <tr>
+            <td class="timestamp">${formatTimestamp(a.timestamp)}</td>
+            <td>${clientLabel}</td>
+            <td style="font-size: 11px;">${formatPackName(a.packId)}</td>
+            <td><span class="badge badge-primary">${a.mode}</span></td>
+            <td style="max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+              ${a.question || 'N/A'}
+            </td>
+            <td>${resultBadge}</td>
+            <td>${timeTaken}</td>
+          </tr>
+        `;
+      });
+
+      html += '</tbody></table>';
+      container.innerHTML = html;
+    }
+
+    function renderReviewScores(avgScores) {
+      const container = $('#reviewScores');
+
+      const scoreItems = [
+        { label: 'Correctness', value: avgScores.correctness },
+        { label: 'Clarity', value: avgScores.clarity },
+        { label: 'Completeness', value: avgScores.completeness },
+        { label: 'Technical', value: avgScores.technical },
+        { label: 'Overall', value: avgScores.overall }
+      ];
+
+      let html = '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">';
+
+      scoreItems.forEach(item => {
+        const percent = (item.value / 5) * 100;
+        html += `
+          <div style="padding: 15px; background: #f8f9fa; border-radius: 8px;">
+            <div style="font-size: 12px; color: #666; margin-bottom: 5px;">${item.label}</div>
+            <div style="font-size: 24px; font-weight: bold; color: #667eea;">${item.value.toFixed(1)}/5</div>
+            <div class="progress-bar"><div class="progress-fill" style="width: ${percent}%"></div></div>
+          </div>
+        `;
+      });
+
+      html += '</div>';
+      container.innerHTML = html;
+    }
+
+    function formatTimestamp(timestamp) {
+      const date = new Date(timestamp);
+      const now = new Date();
+      const diffMs = now - date;
+      const diffMins = Math.floor(diffMs / 60000);
+
+      if (diffMins < 1) return 'Just now';
+      if (diffMins < 60) return `${diffMins}m ago`;
+      if (diffMins < 1440) return `${Math.floor(diffMins / 60)}h ago`;
+
+      return date.toLocaleDateString('sv-SE', {
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+    }
+
+    function formatPackName(packId) {
+      return packId
+        .replace(/\.json$/i, '')
+        .replace(/_/g, ' ')
+        .split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+    }
+
+    function formatDuration(ms) {
+      const seconds = Math.floor(ms / 1000);
+      const minutes = Math.floor(seconds / 60);
+      const hours = Math.floor(minutes / 60);
+
+      if (hours > 0) {
+        return `${hours}h ${minutes % 60}m`;
+      } else if (minutes > 0) {
+        return `${minutes}m ${seconds % 60}s`;
+      } else {
+        return `${seconds}s`;
+      }
+    }
+
+    // Auto-refresh every 30 seconds
+    setInterval(loadAnalytics, 30000);
+
+    // Load on page load
+    loadAnalytics();
+  </script>
+</body>
+</html>

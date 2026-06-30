@@ -1,0 +1,159 @@
+{
+  "title": "Kemi åk 7 – Kemins grunder (Grundpaket)",
+  "items": [
+    {
+      "front": "Vad studerar kemi som naturvetenskap?",
+      "back": "Ämnens egenskaper, uppbyggnad och hur de reagerar med varandra.",
+      "choices": ["Ämnens egenskaper och reaktioner", "Planeters rörelser", "Kroppens organ", "Väder och klimat"],
+      "answerIndex": 0,
+      "tags": ["kemi", "naturvetenskap"]
+    },
+    {
+      "front": "Vilket påstående om materia stämmer?",
+      "back": "All materia är uppbyggd av atomer.",
+      "choices": ["All materia är uppbyggd av atomer", "All materia är osynligt", "Materia består bara av vätskor", "Endast metaller är materia"],
+      "answerIndex": 0,
+      "tags": ["materia", "atomer"]
+    },
+    {
+      "front": "Vilka partiklar finns i atomkärnan?",
+      "back": "Protoner och neutroner.",
+      "choices": ["Elektroner och protoner", "Protoner och neutroner", "Neutroner och elektroner", "Endast elektroner"],
+      "answerIndex": 1,
+      "tags": ["atomer", "partikelmodell"]
+    },
+    {
+      "front": "Vilken laddning har en elektron?",
+      "back": "Negativ laddning.",
+      "choices": ["Positiv", "Ingen laddning", "Negativ", "Både positiv och negativ"],
+      "answerIndex": 2,
+      "tags": ["elektron", "atomer"]
+    },
+    {
+      "front": "Vad är en molekyl?",
+      "back": "Två eller flera atomer som sitter ihop.",
+      "choices": ["En atom med extra elektroner", "Två eller fler atomer bundna till varandra", "En blandning av ämnen", "En atomkärna"],
+      "answerIndex": 1,
+      "tags": ["molekyl", "atomer"]
+    },
+    {
+      "front": "Vad är ett grundämne?",
+      "back": "Ett ämne som består av enbart en sorts atomer.",
+      "choices": ["En blandning av flera ämnen", "Ett ämne med minst två atomslag", "Ett ämne med endast en sorts atomer", "Ett ämne som alltid är gas"],
+      "answerIndex": 2,
+      "tags": ["grundämne", "periodiska systemet"]
+    },
+    {
+      "front": "Hur många grundämnen finns det ungefär?",
+      "back": "Drygt 100 stycken.",
+      "choices": ["20", "50", "Drygt 100", "Över 500"],
+      "answerIndex": 2,
+      "tags": ["grundämnen"]
+    },
+    {
+      "front": "Vad är en kemisk förening?",
+      "back": "Ett ämne som är uppbyggt av minst två olika slags atomer.",
+      "choices": ["Ett ämne med en sorts atomer", "Två likadana molekyler bredvid varandra", "Ett ämne byggt av minst två olika atomslag", "En blandning av vätskor"],
+      "answerIndex": 2,
+      "tags": ["kemisk förening"]
+    },
+    {
+      "front": "Vilken formel motsvarar koldioxid?",
+      "back": "CO₂",
+      "choices": ["CO₂", "CO", "C₂O", "C₂"],
+      "answerIndex": 0,
+      "tags": ["kemiska formler", "koldioxid"]
+    },
+    {
+      "front": "Vad händer i en kemisk reaktion?",
+      "back": "Ämnen förändras och nya ämnen bildas.",
+      "choices": ["Inget förändras", "Ämnen byter bara färg", "Ämnen förändras och nya ämnen bildas", "Elektroner försvinner"],
+      "answerIndex": 2,
+      "tags": ["kemiska reaktioner"]
+    },
+    {
+      "front": "Vad kallas den uppåtpekande kraften på ett föremål i vatten?",
+      "back": "Lyftkraft.",
+      "choices": ["Tyngdkraft", "Friktionskraft", "Lyftkraft", "Densitet"],
+      "answerIndex": 2,
+      "tags": ["vätskor", "lyftkraft"]
+    },
+    {
+      "front": "Vilka tre delar behövs för att eld ska kunna brinna?",
+      "back": "Bränsle, syre och värme.",
+      "choices": ["Bränsle, jord och värme", "Bränsle, syre och värme", "Värme, kol och vatten", "Syre, helium och värme"],
+      "answerIndex": 1,
+      "tags": ["brandtriangeln"]
+    },
+    {
+      "front": "Vad ska man aldrig släcka en brinnande olja med?",
+      "back": "Vatten.",
+      "choices": ["Skum", "Brandfilt", "Vatten", "Koldioxid"],
+      "answerIndex": 2,
+      "tags": ["brandsäkerhet"]
+    },
+    {
+      "front": "Vad betyder farosymbolen med en dödskalle?",
+      "back": "Giftigt ämne.",
+      "choices": ["Explosivt", "Frätande", "Giftigt", "Brandfarligt"],
+      "answerIndex": 2,
+      "tags": ["farosymboler"]
+    },
+    {
+      "front": "Vad gör man i slutsats och diskussion i en labbrapport?",
+      "back": "Man förklarar resultatet och besvarar frågeställningen.",
+      "choices": ["Man listar materialet", "Man skriver bara siffror", "Man förklarar resultatet och kopplar till frågan", "Man skriver hur labben kändes"],
+      "answerIndex": 2,
+      "tags": ["laboration", "labbrapport"]
+    },
+    {
+      "front": "Vad är en hypotes?",
+      "back": "En förutsägelse av vad man tror kommer hända.",
+      "choices": ["En slutsats", "Ett facit", "En förutsägelse innan experimentet", "En utrustningslista"],
+      "answerIndex": 2,
+      "tags": ["hypotes"]
+    },
+    {
+      "front": "Vilken partikel har positiv laddning?",
+      "back": "Proton.",
+      "choices": ["Elektron", "Neutron", "Proton", "Helium"],
+      "answerIndex": 2,
+      "tags": ["atomer"]
+    },
+    {
+      "front": "Vad visar det periodiska systemet?",
+      "back": "Alla grundämnen och hur de är ordnade.",
+      "choices": ["Alla kemiska reaktioner", "Alla metaller", "Endast giftiga ämnen", "Alla grundämnen och deras ordning"],
+      "answerIndex": 3,
+      "tags": ["periodiska systemet"]
+    },
+    {
+      "front": "Vad menas med att ett ämne har hög densitet?",
+      "back": "Att det väger mycket per volymenhet.",
+      "choices": ["Att det är gas", "Att det väger mycket per volym", "Att det är varmt", "Att det är lätt"],
+      "answerIndex": 1,
+      "tags": ["densitet"]
+    },
+    {
+      "front": "Vad är en kemisk formel?",
+      "back": "Ett sätt att visa vilka atomer som ingår i ett ämne.",
+      "choices": ["Ett recept", "En lista på lösningar", "En beskrivning av vilka atomer ett ämne består av", "Antalet molekyler i ett ämne"],
+      "answerIndex": 2,
+      "tags": ["kemisk formel"]
+    },
+    {
+      "front": "Vilket ämne är en kemisk förening?",
+      "back": "Vatten (H₂O).",
+      "choices": ["Syre", "Guld", "Vatten", "Väte"],
+      "answerIndex": 2,
+      "tags": ["kemisk förening"]
+    },
+    {
+      "front": "Vad är förbränning ett exempel på?",
+      "back": "En kemisk reaktion.",
+      "choices": ["En fysikalisk förändring", "En blandning", "En kemisk reaktion", "En fasövergång"],
+      "answerIndex": 2,
+      "tags": ["förbränning", "kemiska reaktioner"]
+    }
+  ]
+}

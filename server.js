@@ -12,6 +12,7 @@ const ROOT = __dirname;
 const PUBLIC_DIR = ROOT;            // serve index.html and static files from here
 const PACKS_DIR = path.join(ROOT, "packs");
 const PORT = process.env.PORT ? Number(process.env.PORT) : 8787;
+const ANALYTICS_FILE = path.join(ROOT, "analytics.json");
 
 // --- Load config / API key ---
 let OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
@@ -28,6 +29,179 @@ if (!OPENAI_API_KEY && fs.existsSync(cfgPath)) {
 if (!OPENAI_API_KEY) {
   console.warn("\n⚠️  No OPENAI_API_KEY set. /api/review will return 503 until you add one.\n" +
                "   Set env var OPENAI_API_KEY or create config.json with { \"OPENAI_API_KEY\": \"sk-...\" }\n");
+}
+
+// --- Analytics System ---
+const analytics = {
+  sessions: new Map(),      // clientId -> session data
+  reviews: [],              // all review submissions
+  packUsage: new Map(),     // packId -> usage count
+  packSessions: [],         // detailed pack activity sessions
+  quizActivity: [],         // quiz question attempts
+  packPerformance: new Map(), // clientId -> packId -> performance stats
+  lastSave: Date.now()
+};
+
+// Load analytics from file
+try {
+  if (fs.existsSync(ANALYTICS_FILE)) {
+    const data = JSON.parse(fs.readFileSync(ANALYTICS_FILE, "utf-8"));
+    if (data.sessions) analytics.sessions = new Map(Object.entries(data.sessions));
+    if (data.reviews) analytics.reviews = data.reviews || [];
+    if (data.packUsage) analytics.packUsage = new Map(Object.entries(data.packUsage));
+    if (data.packSessions) analytics.packSessions = data.packSessions || [];
+    if (data.quizActivity) analytics.quizActivity = data.quizActivity || [];
+    if (data.packPerformance) {
+      analytics.packPerformance = new Map();
+      Object.entries(data.packPerformance).forEach(([clientId, packs]) => {
+        analytics.packPerformance.set(clientId, new Map(Object.entries(packs)));
+      });
+    }
+    console.log(`📊 Loaded analytics: ${analytics.sessions.size} sessions, ${analytics.reviews.length} reviews, ${analytics.quizActivity.length} quiz attempts`);
+  }
+} catch (e) {
+  console.warn("Could not load analytics.json:", e.message);
+}
+
+// Save analytics to file (debounced)
+function saveAnalytics() {
+  const now = Date.now();
+  if (now - analytics.lastSave < 60000) return; // Save max once per minute
+  analytics.lastSave = now;
+
+  // Convert nested Maps to objects for JSON serialization
+  const packPerfObj = {};
+  analytics.packPerformance.forEach((packs, clientId) => {
+    packPerfObj[clientId] = Object.fromEntries(packs);
+  });
+
+  const data = {
+    sessions: Object.fromEntries(analytics.sessions),
+    reviews: analytics.reviews.slice(-1000), // Keep last 1000 reviews
+    packUsage: Object.fromEntries(analytics.packUsage),
+    packSessions: analytics.packSessions.slice(-2000), // Keep last 2000 sessions
+    quizActivity: analytics.quizActivity.slice(-5000), // Keep last 5000 quiz attempts
+    packPerformance: packPerfObj,
+    savedAt: new Date().toISOString()
+  };
+
+  fs.writeFile(ANALYTICS_FILE, JSON.stringify(data, null, 2), err => {
+    if (err) console.error("Failed to save analytics:", err.message);
+  });
+}
+
+// Get or create session for client
+function getClientSession(req) {
+  const ip = req.headers['x-forwarded-for']?.split(',')[0]?.trim() ||
+             req.socket.remoteAddress ||
+             'unknown';
+  const hostname = req.headers['x-forwarded-host'] || req.headers['host'] || 'unknown';
+  const clientId = `${ip}`;
+
+  if (!analytics.sessions.has(clientId)) {
+    analytics.sessions.set(clientId, {
+      clientId,
+      ip,
+      hostname,
+      firstSeen: new Date().toISOString(),
+      lastSeen: new Date().toISOString(),
+      packsUsed: new Set(),
+      reviewCount: 0,
+      totalReviews: 0
+    });
+  }
+
+  const session = analytics.sessions.get(clientId);
+  session.lastSeen = new Date().toISOString();
+  return session;
+}
+
+// Track pack usage
+function trackPackUsage(packId, session) {
+  if (!packId) return;
+
+  session.packsUsed.add(packId);
+  const count = analytics.packUsage.get(packId) || 0;
+  analytics.packUsage.set(packId, count + 1);
+}
+
+// Track review submission
+function trackReview(req, reviewData) {
+  const session = getClientSession(req);
+  session.reviewCount++;
+  session.totalReviews++;
+
+  analytics.reviews.push({
+    timestamp: new Date().toISOString(),
+    clientId: session.clientId,
+    question: reviewData.user?.question || '',
+    scores: {
+      correctness: reviewData.review?.correctness_score,
+      clarity: reviewData.review?.clarity_score,
+      completeness: reviewData.review?.completeness_score,
+      technical: reviewData.review?.technical_accuracy_score,
+      overall: reviewData.review?.overall_score
+    },
+    wordCount: reviewData.user?.student_answer?.split(/\s+/).filter(Boolean).length || 0
+  });
+
+  saveAnalytics();
+}
+
+// Track pack activity session (start/end)
+function trackPackSession(req, packId, action, duration = null) {
+  const session = getClientSession(req);
+
+  analytics.packSessions.push({
+    timestamp: new Date().toISOString(),
+    clientId: session.clientId,
+    packId,
+    action, // 'start' or 'end'
+    duration // time spent in milliseconds (only for 'end')
+  });
+
+  saveAnalytics();
+}
+
+// Track quiz activity
+function trackQuizActivity(req, packId, questionData) {
+  const session = getClientSession(req);
+  const { question, userAnswer, correctAnswer, isCorrect, mode, timeTaken } = questionData;
+
+  analytics.quizActivity.push({
+    timestamp: new Date().toISOString(),
+    clientId: session.clientId,
+    packId,
+    question: question || '',
+    userAnswer,
+    correctAnswer,
+    isCorrect,
+    mode, // 'quiz', 'flashcard', 'match', etc.
+    timeTaken // time to answer in milliseconds
+  });
+
+  // Update pack performance stats
+  if (!analytics.packPerformance.has(session.clientId)) {
+    analytics.packPerformance.set(session.clientId, new Map());
+  }
+  const clientPacks = analytics.packPerformance.get(session.clientId);
+
+  if (!clientPacks.has(packId)) {
+    clientPacks.set(packId, {
+      totalAttempts: 0,
+      correctAttempts: 0,
+      totalTime: 0,
+      lastActivity: new Date().toISOString()
+    });
+  }
+
+  const packStats = clientPacks.get(packId);
+  packStats.totalAttempts++;
+  if (isCorrect) packStats.correctAttempts++;
+  if (timeTaken) packStats.totalTime += timeTaken;
+  packStats.lastActivity = new Date().toISOString();
+
+  saveAnalytics();
 }
 
 // --- tiny helpers ---
@@ -80,7 +254,7 @@ async function handleListPacks(res) {
 }
 
 // --- API: fetch one pack ---
-async function handleGetPack(res, fnameRaw) {
+async function handleGetPack(req, res, fnameRaw) {
   const fname = path.basename(fnameRaw); // prevent traversal
   const full = safeJoin(PACKS_DIR, fname);
   if (!full || !full.toLowerCase().endsWith(".json")) {
@@ -89,6 +263,12 @@ async function handleGetPack(res, fnameRaw) {
   try {
     const txt = await fsp.readFile(full, "utf-8");
     const obj = JSON.parse(txt);
+
+    // Track pack usage
+    const session = getClientSession(req);
+    trackPackUsage(fname, session);
+    saveAnalytics();
+
     return sendJSON(res, 200, obj);
   } catch (e) {
     return sendJSON(res, 404, { error: "Pack not found or invalid JSON", detail: e.message });
@@ -130,6 +310,10 @@ async function handleReview(req, res) {
     const text = data?.choices?.[0]?.message?.content || "{}";
     let review;
     try { review = JSON.parse(text); } catch { review = { summary_feedback: "Kunde inte tolka svaret från modellen." }; }
+
+    // Track review submission
+    trackReview(req, { user, review });
+
     return sendJSON(res, 200, { review });
   } catch (e) {
     return sendJSON(res, 500, { error: "fetch_failed", detail: e.message });
@@ -182,6 +366,106 @@ async function handleConfig(res) {
   return sendJSON(res, 200, { hasOpenAI: !!OPENAI_API_KEY });
 }
 
+// --- API: get analytics data ---
+async function handleAnalytics(res) {
+  // Convert Map data to plain objects for JSON
+  const sessions = Array.from(analytics.sessions.values()).map(s => ({
+    ...s,
+    packsUsed: Array.from(s.packsUsed)
+  }));
+
+  const packUsage = Array.from(analytics.packUsage.entries()).map(([packId, count]) => ({
+    packId,
+    count
+  })).sort((a, b) => b.count - a.count);
+
+  // Convert pack performance data
+  const packPerformance = {};
+  analytics.packPerformance.forEach((packs, clientId) => {
+    packPerformance[clientId] = {};
+    packs.forEach((stats, packId) => {
+      const accuracy = stats.totalAttempts > 0 ? (stats.correctAttempts / stats.totalAttempts) * 100 : 0;
+      const avgTime = stats.totalAttempts > 0 ? stats.totalTime / stats.totalAttempts : 0;
+      packPerformance[clientId][packId] = {
+        ...stats,
+        accuracy: accuracy.toFixed(1),
+        avgTimePerQuestion: Math.round(avgTime)
+      };
+    });
+  });
+
+  // Calculate quiz statistics
+  const recentQuizActivity = analytics.quizActivity.slice(-200);
+  const quizStats = {
+    totalAttempts: analytics.quizActivity.length,
+    recentAccuracy: recentQuizActivity.length > 0
+      ? ((recentQuizActivity.filter(q => q.isCorrect).length / recentQuizActivity.length) * 100).toFixed(1)
+      : null
+  };
+
+  // Calculate time spent per pack per client
+  const timeSpentByClient = {};
+  analytics.packSessions.forEach(session => {
+    if (session.action === 'end' && session.duration) {
+      if (!timeSpentByClient[session.clientId]) {
+        timeSpentByClient[session.clientId] = {};
+      }
+      if (!timeSpentByClient[session.clientId][session.packId]) {
+        timeSpentByClient[session.clientId][session.packId] = 0;
+      }
+      timeSpentByClient[session.clientId][session.packId] += session.duration;
+    }
+  });
+
+  // Calculate statistics
+  const recentReviews = analytics.reviews.slice(-100); // Last 100 reviews
+  const avgScores = recentReviews.length > 0 ? {
+    correctness: recentReviews.reduce((sum, r) => sum + (r.scores.correctness || 0), 0) / recentReviews.length,
+    clarity: recentReviews.reduce((sum, r) => sum + (r.scores.clarity || 0), 0) / recentReviews.length,
+    completeness: recentReviews.reduce((sum, r) => sum + (r.scores.completeness || 0), 0) / recentReviews.length,
+    technical: recentReviews.reduce((sum, r) => sum + (r.scores.technical || 0), 0) / recentReviews.length,
+    overall: recentReviews.reduce((sum, r) => sum + (r.scores.overall || 0), 0) / recentReviews.length
+  } : null;
+
+  return sendJSON(res, 200, {
+    sessions,
+    packUsage,
+    packPerformance,
+    timeSpentByClient,
+    quizStats,
+    recentQuizActivity: recentQuizActivity.slice(-50),
+    recentReviews,
+    avgScores,
+    totalSessions: sessions.length,
+    totalReviews: analytics.reviews.length
+  });
+}
+
+// --- API: track activity ---
+async function handleTrackActivity(req, res) {
+  const body = await readBody(req);
+  const { type, packId, data } = body;
+
+  try {
+    if (type === 'quiz' || type === 'flashcard' || type === 'match') {
+      trackQuizActivity(req, packId, {
+        question: data.question,
+        userAnswer: data.userAnswer,
+        correctAnswer: data.correctAnswer,
+        isCorrect: data.isCorrect,
+        mode: type,
+        timeTaken: data.timeTaken
+      });
+    } else if (type === 'session') {
+      trackPackSession(req, packId, data.action, data.duration);
+    }
+
+    return sendJSON(res, 200, { success: true });
+  } catch (e) {
+    return sendJSON(res, 500, { error: "tracking_failed", detail: e.message });
+  }
+}
+
 // --- HTTP router ---
 const server = http.createServer(async (req, res) => {
   try {
@@ -196,10 +480,16 @@ const server = http.createServer(async (req, res) => {
     }
     if (req.method === "GET" && urlObj.pathname.startsWith("/api/pack/")) {
       const fname = urlObj.pathname.replace("/api/pack/", "");
-      return handleGetPack(res, fname);
+      return handleGetPack(req, res, fname);
     }
     if (req.method === "POST" && urlObj.pathname === "/api/review") {
       return handleReview(req, res);
+    }
+    if (req.method === "GET" && urlObj.pathname === "/api/analytics") {
+      return handleAnalytics(res);
+    }
+    if (req.method === "POST" && urlObj.pathname === "/api/track") {
+      return handleTrackActivity(req, res);
     }
 
     // Static

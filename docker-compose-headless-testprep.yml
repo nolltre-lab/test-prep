@@ -10,9 +10,10 @@ services:
     ports:
       - "8789:8787"
 
-    # Mount config.json (non-sensitive settings)
+    # Mount config.json (non-sensitive settings) and analytics data
     volumes:
       - ./config.json:/app/config.json:ro
+      - ./analytics.json:/app/analytics.json
 
     # Optional: uncomment to override baked-in packs with a local folder on the Pi
     # volumes:

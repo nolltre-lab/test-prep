@@ -1,0 +1,159 @@
+{
+  "title": "Kemi åk 7 – Kemins grunder (Avancerat paket)",
+  "items": [
+    {
+      "front": "Varför är elektroner viktiga i kemiska reaktioner?",
+      "back": "Det är elektronerna som omfördelas mellan atomer när nya ämnen bildas.",
+      "choices": ["Elektronerna bildar värme", "Elektronerna omfördelas vid reaktioner", "Elektroner ändrar kärnans laddning", "Elektroner bestämmer ämnets densitet"],
+      "answerIndex": 1,
+      "tags": ["elektroner", "kemiska reaktioner"]
+    },
+    {
+      "front": "Vad avgör vilket grundämne en atom tillhör?",
+      "back": "Antalet protoner i atomkärnan.",
+      "choices": ["Antalet elektroner", "Antalet neutroner", "Antalet protoner", "Antalet molekyler i ämnet"],
+      "answerIndex": 2,
+      "tags": ["grundämnen", "atomnummer"]
+    },
+    {
+      "front": "Varför är ädelgaser oftast mycket stabila och reagerar sällan?",
+      "back": "De har fullt yttre elektronskal.",
+      "choices": ["De är tunga", "De saknar protoner", "De har fullt yttre elektronskal", "De är alltid gaser vid rumstemperatur"],
+      "answerIndex": 2,
+      "tags": ["ädelgaser", "elektronskal"]
+    },
+    {
+      "front": "Vilket påstående beskriver bäst en kemisk förening?",
+      "back": "Atomer från olika grundämnen sitter kemiskt bundna i bestämda proportioner.",
+      "choices": ["Atomer blandas utan att binda", "Endast ett atomslag finns", "Flera atomslag bundna i bestämda mängder", "Elektroner delas mellan neutroner"],
+      "answerIndex": 2,
+      "tags": ["kemisk förening"]
+    },
+    {
+      "front": "Vilket av följande är en fysikalisk förändring, inte en kemisk reaktion?",
+      "back": "Is som smälter till vatten.",
+      "choices": ["Förbränning av kol", "Järn som rostar", "Is som smälter", "Mat som möglar"],
+      "answerIndex": 2,
+      "tags": ["fasövergångar", "fysikalisk förändring"]
+    },
+    {
+      "front": "Vad kallas summan av protoner och neutroner i en atom?",
+      "back": "Masstal.",
+      "choices": ["Atomnummer", "Masstal", "Molekylvärde", "Densitetstal"],
+      "answerIndex": 1,
+      "tags": ["masstal"]
+    },
+    {
+      "front": "Varför förändras inte massan vid en kemisk reaktion?",
+      "back": "Atomerna omarrangeras men försvinner inte.",
+      "choices": ["Lite massa förvandlas till värme", "Massa kan skapas ur energi", "Atomer omarrangeras men försvinner inte", "Elektroner väger ingenting"],
+      "answerIndex": 2,
+      "tags": ["kemiska reaktioner", "massans bevarande"]
+    },
+    {
+      "front": "Vilken kraft håller elektronerna bundna till kärnan?",
+      "back": "Den elektromagnetiska kraften.",
+      "choices": ["Gravitationskraften", "Den elektromagnetiska kraften", "Kärnkraften", "Friktionskraften"],
+      "answerIndex": 1,
+      "tags": ["atomer", "krafter"]
+    },
+    {
+      "front": "Varför kan två syreatomer bilda en syremolekyl (O₂)?",
+      "back": "De delar elektroner för att få fullt yttre skal.",
+      "choices": ["De delar elektroner", "De tappar neutroner", "De splittrar kärnan", "De är magnetiska"],
+      "answerIndex": 0,
+      "tags": ["molekyler", "bindningar"]
+    },
+    {
+      "front": "Vilken är den främsta skillnaden mellan en blandning och en kemisk förening?",
+      "back": "I en blandning sitter ämnena inte kemiskt bundna.",
+      "choices": ["Blandningar är alltid vätskor", "Föreningar blandas med luft", "I blandningar är ämnena inte kemiskt bundna", "Föreningar är alltid farliga"],
+      "answerIndex": 2,
+      "tags": ["blandning", "kemisk förening"]
+    },
+    {
+      "front": "Vilken del av labbrapporten används för att förklara varför resultatet blev som det blev?",
+      "back": "Diskussion.",
+      "choices": ["Material", "Utförande", "Diskussion", "Rubrik"],
+      "answerIndex": 2,
+      "tags": ["laboration", "labbrapport"]
+    },
+    {
+      "front": "Varför är kontroll av variabler viktigt i en undersökning?",
+      "back": "För att kunna avgöra vad som påverkar resultatet.",
+      "choices": ["Det gör labben kortare", "Det är ett krav från Skolverket", "Det gör resultatet roligare", "Det visar vad som påverkar resultatet"],
+      "answerIndex": 3,
+      "tags": ["undersökning", "variabler"]
+    },
+    {
+      "front": "Vad visar en reaktionsformel?",
+      "back": "Vilka ämnen som reagerar och vilka produkter som bildas.",
+      "choices": ["Ämnens densitet", "Vilka ämnen och produkter som ingår", "Hur snabbt reaktionen går", "Vilket ämne som är giftigt"],
+      "answerIndex": 1,
+      "tags": ["reaktionsformel"]
+    },
+    {
+      "front": "Vilket av följande är ett exempel på oxidation?",
+      "back": "Järn som reagerar med syre och bildar rost.",
+      "choices": ["Is som smälter", "Salt som löser sig i vatten", "Järn som rostar", "Vatten som kokar"],
+      "answerIndex": 2,
+      "tags": ["oxidation"]
+    },
+    {
+      "front": "Vilket av följande är en indikator på att en kemisk reaktion skett?",
+      "back": "Ett nytt ämne bildas.",
+      "choices": ["Temperaturen sjunker", "Ett nytt ämne bildas", "Ämnet byter form", "Ämnet värms upp"],
+      "answerIndex": 1,
+      "tags": ["kemiska reaktioner"]
+    },
+    {
+      "front": "Vad är en jon?",
+      "back": "En atom som tagit upp eller lämnat ifrån sig elektroner.",
+      "choices": ["En atom utan kärna", "En atom som ändrat elektronantal", "En atom som saknar protoner", "En atom som tappat neutroner"],
+      "answerIndex": 1,
+      "tags": ["joner"]
+    },
+    {
+      "front": "Varför måste man aldrig hälla vatten på brinnande olja?",
+      "back": "Vattnet förångas direkt och kan kasta upp brinnande olja.",
+      "choices": ["Det kyler för långsamt", "Det innehåller syre", "Det kan sprida elden kraftigt", "Det förstör kastrullen"],
+      "answerIndex": 2,
+      "tags": ["brandsäkerhet"]
+    },
+    {
+      "front": "Vad innebär det att ett ämne är frätande?",
+      "back": "Det kan skada hud, ögon och material genom kemisk påverkan.",
+      "choices": ["Det luktar illa", "Det skadar hud och material", "Det är alltid giftigt", "Det är magnetiskt"],
+      "answerIndex": 1,
+      "tags": ["farosymboler", "frätande"]
+    },
+    {
+      "front": "Varför påverkas kokpunkten av lufttrycket?",
+      "back": "Lägre lufttryck gör att vätskemolekyler lättare lämnar ytan.",
+      "choices": ["Högre tryck stoppar värme", "Lägre tryck gör att molekyler lättare avdunstar", "Högre tryck ökar densiteten", "Lägre tryck gör ämnen mer giftiga"],
+      "answerIndex": 1,
+      "tags": ["kokpunkt", "tryck"]
+    },
+    {
+      "front": "Varför har metaller ofta hög smältpunkt?",
+      "back": "Metallbindningarna är starka och kräver mycket energi att bryta.",
+      "choices": ["De är tunga", "De innehåller många neutroner", "Metallbindningar är starka", "De leder värme"],
+      "answerIndex": 2,
+      "tags": ["metaller", "bindningar"]
+    },
+    {
+      "front": "Vilken typ av förändring är förorening av luft genom förbränning av fossila bränslen?",
+      "back": "En kemisk förändring där nya ämnen bildas.",
+      "choices": ["Ingen förändring", "Fysikalisk förändring", "Kemisk förändring", "Blandning av gaser"],
+      "answerIndex": 2,
+      "tags": ["förbränning", "miljö"]
+    },
+    {
+      "front": "Vilken molekyl består av två väteatomer och en syreatom?",
+      "back": "Vattenmolekylen (H₂O).",
+      "choices": ["CO₂", "H₂O", "O₂H", "HO₂"],
+      "answerIndex": 1,
+      "tags": ["molekyler", "vatten"]
+    }
+  ]
+}

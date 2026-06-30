@@ -3,6 +3,25 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <script>
+    // Detect subpath prefix when served behind a reverse proxy (e.g. /test-prep/).
+    // Patches fetch and sendBeacon so /api/* calls reach the right container.
+    (function(){
+      var p = window.location.pathname;
+      var base = p.endsWith('/') ? p.slice(0,-1) : p.replace(/\/[^/]*$/,'');
+      if(!base) return;
+      var _fetch = window.fetch;
+      window.fetch = function(url,opts){
+        if(typeof url==='string' && url.startsWith('/api/')) url = base+url;
+        return _fetch.call(this,url,opts);
+      };
+      var _beacon = navigator.sendBeacon.bind(navigator);
+      navigator.sendBeacon = function(url,data){
+        if(typeof url==='string' && url.startsWith('/api/')) url = base+url;
+        return _beacon(url,data);
+      };
+    })();
+    </script>
     <meta name="theme-color" content="#0f1320" />
     <title>Test Prep: Gamified Trainer</title>
     <style>
@@ -287,8 +306,23 @@ const words = t => (t||"").trim().split(/\s+/).filter(Boolean);
 
 const state = {
   data:null,i:0,xp:0,streak:0,best:0,level:1,seen:{},
-  mode:"flash",timer:30,packId:null,perPack:{},minWords:5,model:"",hasOpenAI:true
+  mode:"flash",timer:30,packId:null,perPack:{},minWords:5,model:"",hasOpenAI:true,
+  sessionStart:null,questionStart:null
 };
+
+// Analytics tracking helper
+function trackActivity(type, data) {
+  if (!state.packId) return; // Don't track demo data
+
+  // Fire and forget - don't let tracking errors break the app
+  fetch('/api/track', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ type, packId: state.packId, data })
+  }).catch(() => {
+    // Silent fail - analytics shouldn't break the app
+  });
+}
 
 function loadState(){ try{ Object.assign(state, JSON.parse(localStorage.getItem(STORE)||"{}")); }catch{} }
 function saveState(){ localStorage.setItem(STORE, JSON.stringify(state)); }
@@ -484,11 +518,24 @@ function renderFlash(){
   $("#flash-back").textContent=it.back;
   $("#flash-back").classList.add("hidden");
   setProgress();
+  state.questionStart = Date.now(); // Track question start time
 }
 $("#flip").onclick=()=>$("#flash-back").classList.toggle("hidden");
 $("#flash-right").onclick=()=>scoreF(true);
 $("#flash-wrong").onclick=()=>scoreF(false);
 function scoreF(ok){
+  const it=state.data.items[state.i];
+  const timeTaken = state.questionStart ? Date.now() - state.questionStart : 0;
+
+  // Track flashcard activity
+  trackActivity('flashcard', {
+    question: it.front,
+    userAnswer: ok ? 'correct' : 'incorrect',
+    correctAnswer: it.back,
+    isCorrect: ok,
+    timeTaken
+  });
+
   const r=state.seen[state.i]||{right:0,wrong:0};
   r[ok?"right":"wrong"]++; state.seen[state.i]=r;
   if(ok){ state.streak++; state.best=Math.max(state.best,state.streak); state.xp+=5+Math.min(20,state.streak); }
@@ -512,14 +559,28 @@ function startQuiz(){
   const idx=[...answers.keys()];
   for(let i=idx.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [idx[i],idx[j]]=[idx[j],idx[i]]; }
 
+  state.questionStart = Date.now(); // Track question start time
+
   const wrap=$("#quiz-choices"); wrap.innerHTML="";
   idx.forEach(k=>{
     const d=document.createElement("div");
     d.className="choice"; d.textContent=answers[k];
     d.onclick=()=>{
       $$("#quiz-choices .choice").forEach(c=>c.style.pointerEvents="none");
+      const isCorrect = k === correct;
+      const timeTaken = state.questionStart ? Date.now() - state.questionStart : 0;
+
+      // Track quiz activity
+      trackActivity('quiz', {
+        question: it.front,
+        userAnswer: answers[k],
+        correctAnswer: answers[correct],
+        isCorrect,
+        timeTaken
+      });
+
       const r=state.seen[state.i]||{right:0,wrong:0};
-      if(k===correct){
+      if(isCorrect){
         d.classList.add("correct"); r.right++; state.streak++; state.best=Math.max(state.best,state.streak); state.xp += 10 + Math.min(25, state.streak);
       } else {
         d.classList.add("wrong"); r.wrong++; state.streak=0; state.xp=Math.max(0,state.xp-3); $("#quiz-hint").classList.remove("hidden");
@@ -589,6 +650,12 @@ function restorePack(k){ const p=state.perPack[k];
   if(p){ state.xp=p.xp||0; state.streak=p.streak||0; state.best=p.best||0; state.seen=p.seen||{}; state.i=p.i||0; }
   else { state.xp=0; state.streak=0; state.best=0; state.seen={}; state.i=0; } }
 function loadPack(obj, packId){
+  // End previous session if any
+  if(state.packId && state.sessionStart){
+    const duration = Date.now() - state.sessionStart;
+    trackActivity('session', { action: 'end', duration });
+  }
+
   if(state.data) savePack();
   state.data = obj;
   state.packId = packId;
@@ -596,6 +663,11 @@ function loadPack(obj, packId){
   saveState();
   syncSelectToCurrent();
   boot();
+
+  // Start new session
+  state.sessionStart = Date.now();
+  trackActivity('session', { action: 'start' });
+
   alert(`Loaded: ${obj.title || packId}`);
 }
 
@@ -705,6 +777,21 @@ function boot(){
   else if(state.mode==="write") renderWrite();
   else                          renderFlash();
 }
+
+// Track session end when user leaves
+window.addEventListener('beforeunload', () => {
+  if(state.packId && state.sessionStart){
+    const duration = Date.now() - state.sessionStart;
+    // Use sendBeacon for reliable tracking on page unload
+    const blob = new Blob([JSON.stringify({
+      type: 'session',
+      packId: state.packId,
+      data: { action: 'end', duration }
+    })], { type: 'application/json' });
+    navigator.sendBeacon('/api/track', blob);
+  }
+});
+
 loadState(); boot();
 </script>
 </body>

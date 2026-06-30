@@ -4,7 +4,7 @@ FROM node:20-alpine
 WORKDIR /app
 
 # App code
-COPY index.html server.js ./
+COPY index.html admin.html server.js ./
 
 # ✅ Include packs inside the image
 #    If you don't have a /packs folder locally yet, create one.

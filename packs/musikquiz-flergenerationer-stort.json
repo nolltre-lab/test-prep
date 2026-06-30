@@ -1,0 +1,393 @@
+{
+  "title": "Musikquiz: Fler generationer – Stort paket",
+  "items": [
+    {
+      "front": "Vilket svenskt band sjunger den klassiska discodängan \"Dancing Queen\"?",
+      "back": "ABBA sjunger \"Dancing Queen\" – en av deras största internationella hits.",
+      "hint": "Svensk kvartett från 70-talet.",
+      "choices": ["ABBA", "Roxette", "Ace of Base", "Europe"],
+      "answerIndex": 0,
+      "tags": ["ABBA", "70-tal", "svensk pop"]
+    },
+    {
+      "front": "Vilken svensk DJ heter egentligen Tim Bergling?",
+      "back": "Tim Bergling är mer känd som Avicii.",
+      "choices": ["Avicii", "Alesso", "Kygo", "Swedish House Mafia"],
+      "answerIndex": 0,
+      "tags": ["Avicii", "modern pop", "DJ"]
+    },
+    {
+      "front": "Vilken artist blev världsberömd med låten \"Thriller\"?",
+      "back": "Michael Jackson gjorde albumet och låten \"Thriller\".",
+      "choices": ["Prince", "Michael Jackson", "Stevie Wonder", "Elton John"],
+      "answerIndex": 1,
+      "tags": ["80-tal", "pop", "klassiker"]
+    },
+    {
+      "front": "Vilken låt från filmen \"Frost\" blev en global succé bland barn?",
+      "back": "\"Let It Go\" från Frozen blev en av 2010-talets största låtar.",
+      "choices": ["Let It Go", "Into the Unknown", "Do You Want to Build a Snowman?", "Under the Sea"],
+      "answerIndex": 0,
+      "tags": ["Disney", "barn", "2010-tal"]
+    },
+    {
+      "front": "Vilket band sjunger arenalåten \"We Will Rock You\"?",
+      "back": "Queen gjorde \"We Will Rock You\".",
+      "choices": ["Queen", "The Beatles", "U2", "Rolling Stones"],
+      "answerIndex": 0,
+      "tags": ["Queen", "rock", "klassiker"]
+    },
+    {
+      "front": "Vilken svensk artist slog igenom med \"Lush Life\"?",
+      "back": "Zara Larsson fick sitt internationella genombrott med \"Lush Life\".",
+      "choices": ["Molly Sandén", "Zara Larsson", "Tove Lo", "Miriam Bryant"],
+      "answerIndex": 1,
+      "tags": ["svensk pop", "Zara Larsson"]
+    },
+    {
+      "front": "Vad heter gruppen som gjorde barnklassikern \"Hej Monika\"?",
+      "back": "Det är gruppen Nic & The Family.",
+      "choices": ["Gyllene Tider", "Nic & The Family", "E.M.D.", "Hov1"],
+      "answerIndex": 1,
+      "tags": ["barnmusik", "party", "2000-tal"]
+    },
+    {
+      "front": "Vilket land kommer The Beatles från?",
+      "back": "The Beatles kommer från Liverpool i Storbritannien.",
+      "choices": ["USA", "Irland", "Storbritannien", "Kanada"],
+      "answerIndex": 2,
+      "tags": ["The Beatles", "60-tal", "rock"]
+    },
+    {
+      "front": "Vem sjunger \"Känn ingen sorg för mig Göteborg\"?",
+      "back": "Håkan Hellström.",
+      "choices": ["Lars Winnerbäck", "Håkan Hellström", "Petter", "Olle Ljungström"],
+      "answerIndex": 1,
+      "tags": ["svensk pop", "Håkan Hellström"]
+    },
+    {
+      "front": "Vilken barnlåt har den upprepande texten \"doo doo doo doo doo doo\"?",
+      "back": "\"Baby Shark\".",
+      "choices": ["Baby Shark", "Little Fish", "Shark Song", "Underwater Dance"],
+      "answerIndex": 0,
+      "tags": ["barnmusik", "viral"]
+    },
+
+    {
+      "front": "Vem vann Melodifestivalen 1983 med låten \"Främling\"?",
+      "back": "Carola vann med \"Främling\".",
+      "choices": ["Carola", "Sanna Nielsen", "Charlotte Perrelli", "Lena Philipsson"],
+      "answerIndex": 0,
+      "tags": ["Mello", "Carola", "80-tal"]
+    },
+    {
+      "front": "Vilken artist kallas \"The King of Rock'n'Roll\"?",
+      "back": "Elvis Presley.",
+      "choices": ["David Bowie", "Elvis Presley", "Bruce Springsteen", "Buddy Holly"],
+      "answerIndex": 1,
+      "tags": ["rock", "Elvis"]
+    },
+    {
+      "front": "Vilket band gjorde \"The Final Countdown\"?",
+      "back": "Europe.",
+      "choices": ["Europe", "Kent", "The Ark", "Mando Diao"],
+      "answerIndex": 0,
+      "tags": ["rock", "Europe", "80-tal"]
+    },
+    {
+      "front": "Vem är en känd svensk rapartist?",
+      "back": "Petter.",
+      "choices": ["Petter", "Tommy Körberg", "Evert Taube", "Lisa Nilsson"],
+      "answerIndex": 0,
+      "tags": ["hiphop", "svensk musik"]
+    },
+    {
+      "front": "Vilken låt slog Justin Bieber igenom med?",
+      "back": "\"Baby\".",
+      "choices": ["Baby", "Sorry", "Love Yourself", "Ghost"],
+      "answerIndex": 0,
+      "tags": ["pop", "2000-tal"]
+    },
+    {
+      "front": "Vilken ABBA-låt ligger till grund för en musikal och film?",
+      "back": "\"Mamma Mia\".",
+      "choices": ["Fernando", "Mamma Mia", "Voulez-Vous", "Super Trouper"],
+      "answerIndex": 1,
+      "tags": ["ABBA"]
+    },
+
+    {
+      "front": "Vilken låt gjorde Avicii världsberömd 2011?",
+      "back": "\"Levels\".",
+      "choices": ["Levels", "Wake Me Up", "Hey Brother", "Broken Arrows"],
+      "answerIndex": 0,
+      "tags": ["Avicii", "EDM"]
+    },
+    {
+      "front": "Vilket dansband är känt för låten \"Leende guldbruna ögon\"?",
+      "back": "Vikingarna.",
+      "choices": ["Vikingarna", "Streaplers", "Larz-Kristerz", "Flamingokvintetten"],
+      "answerIndex": 0,
+      "tags": ["dansband"]
+    },
+    {
+      "front": "Vilket instrument är vanligast i en symfoniorkester?",
+      "back": "Fiolen.",
+      "choices": ["Fiol", "Elgitarr", "Trumpet", "Trummor"],
+      "answerIndex": 0,
+      "tags": ["instrument", "klassisk musik"]
+    },
+    {
+      "front": "Vilken jullåt är skriven av Wham!?",
+      "back": "\"Last Christmas\".",
+      "choices": ["Last Christmas", "White Christmas", "Fairytale of New York", "All I Want for Christmas Is You"],
+      "answerIndex": 0,
+      "tags": ["julmusik"]
+    },
+
+    {
+      "front": "Vem ligger bakom låten \"Purple Rain\"?",
+      "back": "Prince.",
+      "choices": ["Prince", "Phil Collins", "David Bowie", "George Michael"],
+      "answerIndex": 0,
+      "tags": ["80-tal", "Prince"]
+    },
+
+    {
+      "front": "Vilken Roxette-låt användes i filmen \"Pretty Woman\"?",
+      "back": "\"It Must Have Been Love\".",
+      "choices": [
+        "It Must Have Been Love",
+        "Listen to Your Heart",
+        "Joyride",
+        "The Look"
+      ],
+      "answerIndex": 0,
+      "tags": ["Roxette", "90-tal"]
+    },
+
+    {
+      "front": "Vilken typ av musik är Evert Taube mest känd för?",
+      "back": "Svenska visor och sjömansvisor.",
+      "choices": ["Svenska visor", "Rock", "Hiphop", "Jazz"],
+      "answerIndex": 0,
+      "tags": ["Taube", "visor"]
+    },
+
+    {
+      "front": "Vilken artist sjunger \"Bad Romance\"?",
+      "back": "Lady Gaga.",
+      "choices": ["Lady Gaga", "Madonna", "Rihanna", "Adele"],
+      "answerIndex": 0,
+      "tags": ["pop", "Lady Gaga"]
+    },
+
+    {
+      "front": "Vilken 70-talslåt med Bee Gees är känd för sitt falsettsång?",
+      "back": "\"Stayin' Alive\".",
+      "choices": ["Stayin' Alive", "Night Fever", "How Deep Is Your Love", "Tragedy"],
+      "answerIndex": 0,
+      "tags": ["70-tal", "disco"]
+    },
+
+    {
+      "front": "Vilken låt av Ed Sheeran blev globalt känd 2017?",
+      "back": "\"Shape of You\".",
+      "choices": ["Shape of You", "Perfect", "Shivers", "Photograph"],
+      "answerIndex": 0,
+      "tags": ["2010-tal", "pop"]
+    },
+
+    {
+      "front": "Vilken artist är känd som \"The Boss\"?",
+      "back": "Bruce Springsteen.",
+      "choices": ["Bruce Springsteen", "Bob Dylan", "Tom Petty", "Bryan Adams"],
+      "answerIndex": 0,
+      "tags": ["rock", "Springsteen"]
+    },
+
+    {
+      "front": "Vilket år släpptes albumet \"Thriller\"?",
+      "back": "Albumet släpptes 1982.",
+      "choices": ["1979", "1982", "1986", "1990"],
+      "answerIndex": 1,
+      "tags": ["80-tal", "Michael Jackson", "album"]
+    },
+
+    {
+      "front": "Vem sjunger \"Piano Man\"?",
+      "back": "Billy Joel.",
+      "choices": ["Billy Joel", "Elton John", "Phil Collins", "Bruce Hornsby"],
+      "answerIndex": 0,
+      "tags": ["klassiker", "piano"]
+    },
+
+    {
+      "front": "Vilken rockgrupp framförde \"Smells Like Teen Spirit\"?",
+      "back": "Nirvana.",
+      "choices": ["Nirvana", "Pearl Jam", "Foo Fighters", "Metallica"],
+      "answerIndex": 0,
+      "tags": ["grunge", "90-tal"]
+    },
+
+    {
+      "front": "Vilken svensk popduo skapade låten \"The Look\"?",
+      "back": "Roxette.",
+      "choices": ["Roxette", "Ace of Base", "Icona Pop", "First Aid Kit"],
+      "answerIndex": 0,
+      "tags": ["Roxette", "svensk musik"]
+    },
+
+    {
+      "front": "Vilket band skrev låten \"Hotel California\"?",
+      "back": "Eagles.",
+      "choices": ["Eagles", "Fleetwood Mac", "Pink Floyd", "U2"],
+      "answerIndex": 0,
+      "tags": ["rock", "70-tal"]
+    },
+
+    {
+      "front": "Vem sjunger \"Rolling in the Deep\"?",
+      "back": "Adele.",
+      "choices": ["Adele", "Sia", "Whitney Houston", "Mariah Carey"],
+      "answerIndex": 0,
+      "tags": ["pop", "Adele"]
+    },
+
+    {
+      "front": "Vilken låt vann Eurovision 1974 och gjorde ABBA världsberömda?",
+      "back": "\"Waterloo\".",
+      "choices": ["Waterloo", "SOS", "Honey Honey", "Ring Ring"],
+      "answerIndex": 0,
+      "tags": ["Eurovision", "ABBA"]
+    },
+
+    {
+      "front": "Vilken artist ligger bakom albumet \"Born in the U.S.A.\"?",
+      "back": "Bruce Springsteen.",
+      "choices": ["Bruce Springsteen", "Bon Jovi", "Tom Petty", "Neil Young"],
+      "answerIndex": 0,
+      "tags": ["rock", "80-tal"]
+    },
+
+    {
+      "front": "Vilket band låg bakom låten \"Wonderwall\"?",
+      "back": "Oasis.",
+      "choices": ["Oasis", "Blur", "Radiohead", "Coldplay"],
+      "answerIndex": 0,
+      "tags": ["90-tal", "britpop"]
+    },
+
+    {
+      "front": "Vilken artist gjorde \"Take On Me\"?",
+      "back": "A-ha.",
+      "choices": ["A-ha", "Wham!", "Duran Duran", "Pet Shop Boys"],
+      "answerIndex": 0,
+      "tags": ["80-tal", "synthpop"]
+    },
+
+    {
+      "front": "Vad heter Taylor Swifts största hit från albumet \"1989\"?",
+      "back": "\"Shake It Off\".",
+      "choices": ["Shake It Off", "Style", "Blank Space", "Red"],
+      "answerIndex": 0,
+      "tags": ["2010-tal", "pop"]
+    },
+
+    {
+      "front": "Vilken artist gjorde \"Hound Dog\" känd?",
+      "back": "Elvis Presley.",
+      "choices": ["Elvis Presley", "Bill Haley", "Chuck Berry", "Little Richard"],
+      "answerIndex": 0,
+      "tags": ["50-tal", "rock"]
+    },
+
+    {
+      "front": "Vilket årtionde slog Beatles igenom?",
+      "back": "1960-talet.",
+      "choices": ["1950-talet", "1960-talet", "1970-talet", "1980-talet"],
+      "answerIndex": 1,
+      "tags": ["The Beatles", "60-tal"]
+    },
+
+    {
+      "front": "Vilket instrument är Eric Clapton mest känd för?",
+      "back": "Gitarr.",
+      "choices": ["Gitarr", "Piano", "Saxofon", "Trummor"],
+      "answerIndex": 0,
+      "tags": ["gitarr", "bluesrock"]
+    },
+
+    {
+      "front": "Vilket band gjorde albumet \"Rumours\"?",
+      "back": "Fleetwood Mac.",
+      "choices": ["Fleetwood Mac", "Eagles", "Bee Gees", "Chicago"],
+      "answerIndex": 0,
+      "tags": ["klassiker", "70-tal"]
+    },
+
+    {
+      "front": "Vem sjunger klassikern \"Imagine\"?",
+      "back": "John Lennon.",
+      "choices": ["John Lennon", "Paul McCartney", "George Harrison", "Bob Dylan"],
+      "answerIndex": 0,
+      "tags": ["klassiker", "fred"]
+    },
+
+    {
+      "front": "Vem skrev låten \"Hallelujah\", innan Jeff Buckley gjorde den känd igen?",
+      "back": "Leonard Cohen.",
+      "choices": ["Leonard Cohen", "Jeff Buckley", "Bob Dylan", "Neil Young"],
+      "answerIndex": 0,
+      "tags": ["folk", "klassiker"]
+    },
+
+    {
+      "front": "Vilken artist har smeknamnet \"Queen of Pop\"?",
+      "back": "Madonna.",
+      "choices": ["Madonna", "Beyoncé", "Lady Gaga", "Whitney Houston"],
+      "answerIndex": 0,
+      "tags": ["pop", "80-tal"]
+    },
+
+    {
+      "front": "Vilket band gjorde \"Bohemian Rhapsody\"?",
+      "back": "Queen.",
+      "choices": ["Queen", "Led Zeppelin", "Pink Floyd", "The Who"],
+      "answerIndex": 0,
+      "tags": ["Queen", "klassiker"]
+    },
+
+    {
+      "front": "Vilket band spelade metalhiten \"Enter Sandman\"?",
+      "back": "Metallica.",
+      "choices": ["Metallica", "Iron Maiden", "Slayer", "Megadeth"],
+      "answerIndex": 0,
+      "tags": ["metal", "90-tal"]
+    },
+
+    {
+      "front": "Vem sjunger \"Valerie\" tillsammans med Mark Ronson?",
+      "back": "Amy Winehouse.",
+      "choices": ["Amy Winehouse", "Adele", "Duffy", "Lana Del Rey"],
+      "answerIndex": 0,
+      "tags": ["soul", "2000-tal"]
+    },
+
+    {
+      "front": "Vilket band ligger bakom \"Everybody (Backstreet's Back)\"?",
+      "back": "Backstreet Boys.",
+      "choices": ["Backstreet Boys", "NSYNC", "Westlife", "Boyz II Men"],
+      "answerIndex": 0,
+      "tags": ["90-tal", "boyband"]
+    },
+
+    {
+      "front": "Vem sjunger den ikoniska låten \"Respect\"?",
+      "back": "Aretha Franklin.",
+      "choices": ["Aretha Franklin", "Tina Turner", "Whitney Houston", "Diana Ross"],
+      "answerIndex": 0,
+      "tags": ["soul", "60-tal"]
+    }
+  ]
+}

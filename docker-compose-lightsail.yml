@@ -1,0 +1,16 @@
+services:
+  test-prep:
+    image: iqesolutions/test-prep:latest
+    container_name: test-prep
+    restart: always
+    volumes:
+      - ./config.json:/app/config.json:ro
+      - ./analytics.json:/app/analytics.json
+    env_file:
+      - .env
+    networks:
+      - iqe-proxy-net
+
+networks:
+  iqe-proxy-net:
+    external: true
