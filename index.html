@@ -284,7 +284,7 @@
     <div class="box">
         <div class="flex-between"><h3>Settings</h3><button id="closeSettings" class="secondary">Close</button></div>
         <div class="row" style="margin-top:6px">
-            <div class="col"><label class="tiny">Model (server default is fine)</label><input id="model" class="input" placeholder="gpt-4o-mini" /></div>
+            <div class="col"><label class="tiny">Model (server default is fine)</label><input id="model" class="input" placeholder="claude-haiku-4-5-20251001" /></div>
         </div>
         <div class="tiny" style="margin-top:8px">No API key in this page — the Node server holds it.</div>
         <div style="margin-top:10px"><button id="saveSettings">Save</button></div>
@@ -306,7 +306,7 @@ const words = t => (t||"").trim().split(/\s+/).filter(Boolean);
 
 const state = {
   data:null,i:0,xp:0,streak:0,best:0,level:1,seen:{},
-  mode:"flash",timer:30,packId:null,perPack:{},minWords:5,model:"",hasOpenAI:true,
+  mode:"flash",timer:30,packId:null,perPack:{},minWords:5,model:"",hasClaude:true,
   sessionStart:null,questionStart:null
 };
 
@@ -395,16 +395,16 @@ async function checkServerConfig(){
     const r = await fetch("/api/config");
     if(!r.ok) return;
     const data = await r.json();
-    state.hasOpenAI = data.hasOpenAI ?? true;
+    state.hasClaude = data.hasClaude ?? true;
     updateWriteModeAvailability();
   }catch{}
 }
 
 function updateWriteModeAvailability(){
   const btn = $("#mode-write");
-  if(!state.hasOpenAI){
+  if(!state.hasClaude){
     btn.disabled = true;
-    btn.title = "OpenAI API key not configured on server";
+    btn.title = "Claude API key not configured on server";
     btn.style.opacity = "0.5";
     btn.style.cursor = "not-allowed";
     // If currently in write mode, switch to flash
@@ -762,7 +762,7 @@ function boot(){
   updateHeader();
   if(!state.data){ state.data=demoData; state.packId=demoData.title; saveState(); }
   setProgress();
-  checkServerConfig(); // Check if OpenAI is available
+  checkServerConfig(); // Check if Claude is available
   refreshServerPacks();
 
   if(state.mode==="quiz")       show("quiz");

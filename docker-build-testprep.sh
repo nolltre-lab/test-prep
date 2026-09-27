@@ -21,6 +21,11 @@
 # Deployment methods:
 #   DIRECT_COPY=1 (default): Build locally → save as tar → copy to host → load (FAST!)
 #   DIRECT_COPY=0: Build, push to Docker Hub, host pulls from Hub (slower)
+#
+# Claude API key (optional — enables the "Write & Review" AI feedback mode):
+#   Pulled from Keychain entry "testprep_anthropic_api_key" by default, or set ANTHROPIC_API_KEY
+#   env var to override. Add it once with:
+#     security add-generic-password -s testprep_anthropic_api_key -a "$USER" -w sk-ant-...
 
 set -euo pipefail
 
@@ -56,6 +61,12 @@ SLEEP_BETWEEN="${SLEEP_BETWEEN:-2}"
 
 # Files to upload
 CONFIG_JSON_LOCAL="${CONFIG_JSON_LOCAL:-config.json}"
+
+# Claude API key (Anthropic) — pulled from macOS Keychain by default, same pattern as the Pi
+# password / lightsail_ip lookups above. Add it once with:
+#   security add-generic-password -s "testprep_anthropic_api_key" -a "$USER" -w "sk-ant-..."
+# Override with ANTHROPIC_API_KEY=sk-ant-... to bypass the Keychain lookup entirely.
+ANTHROPIC_KEYCHAIN_SERVICE="${ANTHROPIC_KEYCHAIN_SERVICE:-testprep_anthropic_api_key}"
 ######## END CONFIG #########
 
 [[ "$TRACE" == "1" ]] && set -x
@@ -266,16 +277,23 @@ else
   log "⚠️  ${CONFIG_JSON_LOCAL} not found locally — skipping upload."
 fi
 
-if [[ -n "${OPENAI_API_KEY:-}" ]]; then
-  log "🔑 Creating .env file with OPENAI_API_KEY"
+if [[ -n "${ANTHROPIC_API_KEY:-}" ]]; then
+  log "🔑 Using ANTHROPIC_API_KEY from environment"
+elif ANTHROPIC_API_KEY=$(security find-generic-password -s "${ANTHROPIC_KEYCHAIN_SERVICE}" -w 2>/dev/null) && [[ -n "${ANTHROPIC_API_KEY:-}" ]]; then
+  log "🔑 Claude API key from Keychain (${ANTHROPIC_KEYCHAIN_SERVICE})"
+fi
+
+if [[ -n "${ANTHROPIC_API_KEY:-}" ]]; then
+  log "🔑 Creating .env file with ANTHROPIC_API_KEY"
   TEMP_ENV_FILE=$(mktemp)
-  echo "OPENAI_API_KEY=${OPENAI_API_KEY}" > "${TEMP_ENV_FILE}"
+  echo "ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}" > "${TEMP_ENV_FILE}"
   scp_file "${TEMP_ENV_FILE}" "${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_DIR}/.env" || die "SCP of .env failed"
   rm -f "${TEMP_ENV_FILE}"
   log "✅ .env uploaded"
 else
-  log "⚠️  OPENAI_API_KEY not set — app will not be able to use OpenAI API"
-  log "    Set it before running: export OPENAI_API_KEY=sk-..."
+  log "⚠️  ANTHROPIC_API_KEY not set — app will not be able to use Claude API"
+  log "    Set it before running (export ANTHROPIC_API_KEY=sk-ant-...) or store it in Keychain:"
+  log "    security add-generic-password -s ${ANTHROPIC_KEYCHAIN_SERVICE} -a \"\$USER\" -w sk-ant-..."
 fi
 
 log "📊 Ensuring analytics.json exists..."

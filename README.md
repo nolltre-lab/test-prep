@@ -8,7 +8,7 @@ A gamified, self-hosted study application designed for students (grades 7-9) wit
   - 📚 **Flashcards**: Traditional flip-card study with spaced repetition
   - ⚡ **Quick Quiz**: Timed multiple-choice questions with streak tracking
   - 🎯 **Match Terms**: Memory-style matching game
-  - ✍️ **Write & Review**: Free-form answers with AI-powered feedback (requires OpenAI API key)
+  - ✍️ **Write & Review**: Free-form answers with AI-powered feedback (requires Anthropic/Claude API key)
 
 - **Progress Tracking**
   - XP and leveling system
@@ -45,18 +45,18 @@ A gamified, self-hosted study application designed for students (grades 7-9) wit
 
 ### For Local Development
 - **Node.js** >= 18 (includes built-in `fetch`)
-- **Optional**: OpenAI API key (only needed for Write & Review mode)
+- **Optional**: Anthropic (Claude) API key (only needed for Write & Review mode)
 
 ### For Docker Deployment
 - **Docker** and **Docker Compose**
-- **Optional**: OpenAI API key
+- **Optional**: Anthropic (Claude) API key
 
 ### For Raspberry Pi Deployment
 - **Raspberry Pi** (tested on Pi 4) running Raspberry Pi OS
 - **Docker** installed on the Pi
 - **macOS/Linux** deployment machine (for the build script)
 - SSH access to the Pi
-- **Optional**: OpenAI API key
+- **Optional**: Anthropic (Claude) API key
 
 ## Getting Started
 
@@ -71,7 +71,7 @@ A gamified, self-hosted study application designed for students (grades 7-9) wit
 2. **Set up environment variables** (optional, for AI features)
    ```bash
    # Add to ~/.zshrc or ~/.bash_profile
-   export OPENAI_API_KEY=sk-your-actual-api-key-here
+   export ANTHROPIC_API_KEY=sk-ant-your-actual-api-key-here
 
    # Reload shell
    source ~/.zshrc
@@ -87,7 +87,7 @@ A gamified, self-hosted study application designed for students (grades 7-9) wit
    http://localhost:8787
    ```
 
-The app will run without an OpenAI API key - the "Write & Review" mode will be automatically disabled if no key is configured.
+The app will run without an Anthropic API key - the "Write & Review" mode will be automatically disabled if no key is configured.
 
 ### Docker (Local Testing)
 
@@ -104,7 +104,7 @@ The app will run without an OpenAI API key - the "Write & Review" mode will be a
 3. **To use AI features**, create a `.env` file:
    ```bash
    cp .env.example .env
-   # Edit .env and add your OpenAI API key
+   # Edit .env and add your Anthropic API key
    ```
 
 4. **Restart the container**
@@ -143,8 +143,11 @@ This project includes a fully automated deployment script for Raspberry Pi.
    export DOCKER_REPO="iqesolutions/test-prep"
    export REMOTE_USER="your-pi-username"
    export REMOTE_HOST="raspberrypi.local"
-   export OPENAI_API_KEY="sk-your-actual-api-key-here"
    ```
+
+   The Claude API key doesn't need an env var at all if it's already in Keychain (see
+   [Claude API Key Setup](#claude-anthropic-api-key-setup) below) — the script fetches it
+   automatically. Set `ANTHROPIC_API_KEY` only if you want to override that.
 
 4. **Run the deployment script**
    ```bash
@@ -156,7 +159,7 @@ The script will (in **direct copy** mode - fast!):
 - Build a Docker image for ARM64 (Raspberry Pi)
 - Save the image as a tar file
 - Copy it directly to the Pi over local network (fast!)
-- Create a `.env` file on the Pi with your OpenAI API key
+- Create a `.env` file on the Pi with your Claude API key (from Keychain, or the env var override)
 - Upload configuration files
 - Load the image and start the container
 - Perform a health check
@@ -180,51 +183,81 @@ Edit variables at the top of `docker-build-testprep.sh`:
 ```bash
 DOCKER_REPO="${DOCKER_REPO:-iqesolutions/test-prep}"
 TAG="${TAG:-latest}"
-REMOTE_USER="${REMOTE_USER:-pi}"
+REMOTE_USER="${REMOTE_USER:-magnusjohansson}"
 REMOTE_HOST="${REMOTE_HOST:-raspberrypi.local}"
-KEYCHAIN_SERVICE="${KEYCHAIN_SERVICE:-raspberrypi_scp}"
+PI_KEYCHAIN_SERVICE="${PI_KEYCHAIN_SERVICE:-raspberrypi_scp}"
+ANTHROPIC_KEYCHAIN_SERVICE="${ANTHROPIC_KEYCHAIN_SERVICE:-testprep_anthropic_api_key}"
 ```
 
-## OpenAI API Key Setup
+### Lightsail Deployment
 
-The "Write & Review" mode uses OpenAI's API to provide intelligent feedback on student answers.
+The same script also deploys to an AWS Lightsail instance (key-based SSH, behind the `apps-home`
+Caddy reverse proxy on the shared `iqe-proxy-net` Docker network) — used for internet-facing
+deployments rather than a local-network Raspberry Pi.
+
+```bash
+TARGET=lightsail ./docker-build-testprep.sh
+```
+
+Requires:
+- `LIGHTSAIL_IP` env var, **or** a Keychain entry named `lightsail_ip`:
+  ```bash
+  security add-generic-password -s lightsail_ip -a lightsail -w <your-lightsail-ip>
+  ```
+- An SSH key at `~/.ssh/lightsail.pem` (override with `LIGHTSAIL_KEY`)
+
+The Claude API key is picked up the same way as for the Pi target — see
+[Claude (Anthropic) API Key Setup](#claude-anthropic-api-key-setup) below.
+
+## Claude (Anthropic) API Key Setup
+
+The "Write & Review" mode uses Anthropic's Claude API (Messages API, model `claude-haiku-4-5-20251001`
+by default) to provide intelligent feedback on student answers.
 
 ### Getting an API Key
 
-1. **Sign up** at [OpenAI Platform](https://platform.openai.com/)
-2. **Create an API key** at [API Keys](https://platform.openai.com/api-keys)
-3. **Copy** the key (starts with `sk-`)
+1. **Sign up** at [Anthropic Console](https://console.anthropic.com/)
+2. **Create an API key** at [API Keys](https://console.anthropic.com/settings/keys)
+3. **Copy** the key (starts with `sk-ant-`)
 
 ### Setting the API Key
 
 #### Local Development
 ```bash
 # Add to your shell profile (~/.zshrc or ~/.bash_profile)
-export OPENAI_API_KEY=sk-your-actual-api-key-here
+export ANTHROPIC_API_KEY=sk-ant-your-actual-api-key-here
 source ~/.zshrc
 ```
 
 #### Docker Local
 ```bash
 # Create .env file
-echo "OPENAI_API_KEY=sk-your-actual-api-key-here" > .env
+echo "ANTHROPIC_API_KEY=sk-ant-your-actual-api-key-here" > .env
 
 # Restart container
 docker compose down && docker compose up -d
 ```
 
-#### Raspberry Pi
+#### Raspberry Pi / Lightsail deployment script (recommended: Keychain)
+Store the key once in macOS Keychain and the deploy script picks it up automatically for either
+target — no env var needed on every run:
 ```bash
-# Set before running the deployment script
-export OPENAI_API_KEY=sk-your-actual-api-key-here
+security add-generic-password -s testprep_anthropic_api_key -a "$USER" -w sk-ant-your-actual-api-key-here
+./docker-build-testprep.sh                       # Pi
+TARGET=lightsail ./docker-build-testprep.sh      # Lightsail
+```
+To override without touching Keychain (e.g. rotating a key temporarily), set the env var instead —
+it takes precedence over Keychain:
+```bash
+export ANTHROPIC_API_KEY=sk-ant-your-actual-api-key-here
 ./docker-build-testprep.sh
 ```
 
-The script will automatically create and upload the `.env` file to your Pi.
+Either way, the script creates and uploads the `.env` file to the remote host automatically.
 
 ### Running Without an API Key
 
-The application works perfectly fine without an OpenAI API key! The "Write & Review" button will be automatically disabled and show a tooltip explaining why. All other modes (Flashcards, Quiz, Match) work without any API key.
+The application works perfectly fine without a Claude API key! The "Write & Review" button will be automatically disabled and show a tooltip explaining why. All other modes (Flashcards, Quiz, Match) work without any API key.
 
 ## Creating Question Packs
 
@@ -286,7 +319,7 @@ The repository includes several example packs:
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `OPENAI_API_KEY` | OpenAI API key for AI review | None (optional) |
+| `ANTHROPIC_API_KEY` | Anthropic (Claude) API key for AI review | None (optional) |
 | `PORT` | Server port | 8787 |
 
 ### config.json
@@ -295,7 +328,7 @@ Non-sensitive configuration settings:
 
 ```json
 {
-  "model": "gpt-4o-mini",
+  "model": "claude-haiku-4-5-20251001",
   "host": "127.0.0.1",
   "port": 8787,
   "packs_dir": "./packs",
@@ -406,7 +439,7 @@ All analytics data is stored in `analytics.json` in the application root directo
 - **Review logs** for errors
 
 ### Write & Review mode disabled
-- **Verify API key** is set: `echo $OPENAI_API_KEY`
+- **Verify API key** is set: `echo $ANTHROPIC_API_KEY`
 - **Check server logs** for API key warnings
 - **Restart server** after setting environment variable
 
@@ -420,6 +453,11 @@ All analytics data is stored in `analytics.json` in the application root directo
 - **Verify Keychain password**: `security find-generic-password -s raspberrypi_scp -w`
 - **Check Pi has Docker**: SSH to Pi and run `docker --version`
 - **Review script output** for specific error messages
+
+### Claude API key not picked up during deploy
+- **Verify it's in Keychain**: `security find-generic-password -s testprep_anthropic_api_key -w`
+- **Check for an env var shadowing it**: `echo $ANTHROPIC_API_KEY` — a stale/wrong value here takes precedence over Keychain
+- **Look for the deploy log line**: should say either "Using ANTHROPIC_API_KEY from environment" or "Claude API key from Keychain" — if neither appears, no key was found on either path
 
 ### Question packs not showing
 - **Verify JSON syntax**: Use a JSON validator
@@ -454,13 +492,13 @@ All analytics data is stored in `analytics.json` in the application root directo
 - **Frontend**: Vanilla JavaScript, HTML5, CSS3
 - **Backend**: Node.js (zero dependencies except built-in modules)
 - **Containerization**: Docker, multi-arch builds (amd64/arm64)
-- **AI Integration**: OpenAI GPT-4o-mini (via REST API)
+- **AI Integration**: Anthropic Claude, `claude-haiku-4-5-20251001` by default (via REST API)
 
 ### API Endpoints
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
-| `/api/config` | GET | Check server capabilities (OpenAI status) |
+| `/api/config` | GET | Check server capabilities (Claude API status) |
 | `/api/packs` | GET | List available question packs |
 | `/api/pack/:filename` | GET | Fetch specific pack contents |
 | `/api/review` | POST | Submit answer for AI review |

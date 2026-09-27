@@ -1,6 +1,6 @@
 // server.js — zero-dependency Node server for Test Prep
 // Node >= 18 required (built-in fetch).
-// Reads OpenAI key from ENV OPENAI_API_KEY or ./config.json { "OPENAI_API_KEY": "sk-..." }
+// Reads Anthropic key from ENV ANTHROPIC_API_KEY or ./config.json { "ANTHROPIC_API_KEY": "sk-ant-..." }
 
 const http = require("http");
 const fs = require("fs");
@@ -15,20 +15,20 @@ const PORT = process.env.PORT ? Number(process.env.PORT) : 8787;
 const ANALYTICS_FILE = path.join(ROOT, "analytics.json");
 
 // --- Load config / API key ---
-let OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
+let ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || "";
 const cfgPath = path.join(ROOT, "config.json");
-if (!OPENAI_API_KEY && fs.existsSync(cfgPath)) {
+if (!ANTHROPIC_API_KEY && fs.existsSync(cfgPath)) {
   try {
     const cfg = JSON.parse(fs.readFileSync(cfgPath, "utf-8"));
-    if (cfg.OPENAI_API_KEY) OPENAI_API_KEY = cfg.OPENAI_API_KEY;
+    if (cfg.ANTHROPIC_API_KEY) ANTHROPIC_API_KEY = cfg.ANTHROPIC_API_KEY;
     if (cfg.PORT && !process.env.PORT) console.warn("Tip: You can set PORT in config.json, but ENV wins.");
   } catch (e) {
     console.warn("Could not read config.json:", e.message);
   }
 }
-if (!OPENAI_API_KEY) {
-  console.warn("\n⚠️  No OPENAI_API_KEY set. /api/review will return 503 until you add one.\n" +
-               "   Set env var OPENAI_API_KEY or create config.json with { \"OPENAI_API_KEY\": \"sk-...\" }\n");
+if (!ANTHROPIC_API_KEY) {
+  console.warn("\n⚠️  No ANTHROPIC_API_KEY set. /api/review will return 503 until you add one.\n" +
+               "   Set env var ANTHROPIC_API_KEY or create config.json with { \"ANTHROPIC_API_KEY\": \"sk-ant-...\" }\n");
 }
 
 // --- Analytics System ---
@@ -46,7 +46,12 @@ const analytics = {
 try {
   if (fs.existsSync(ANALYTICS_FILE)) {
     const data = JSON.parse(fs.readFileSync(ANALYTICS_FILE, "utf-8"));
-    if (data.sessions) analytics.sessions = new Map(Object.entries(data.sessions));
+    if (data.sessions) {
+      analytics.sessions = new Map(Object.entries(data.sessions));
+      analytics.sessions.forEach(session => {
+        session.packsUsed = new Set(Array.isArray(session.packsUsed) ? session.packsUsed : []);
+      });
+    }
     if (data.reviews) analytics.reviews = data.reviews || [];
     if (data.packUsage) analytics.packUsage = new Map(Object.entries(data.packUsage));
     if (data.packSessions) analytics.packSessions = data.packSessions || [];
@@ -75,8 +80,13 @@ function saveAnalytics() {
     packPerfObj[clientId] = Object.fromEntries(packs);
   });
 
+  const sessionsObj = {};
+  analytics.sessions.forEach((session, clientId) => {
+    sessionsObj[clientId] = { ...session, packsUsed: Array.from(session.packsUsed) };
+  });
+
   const data = {
-    sessions: Object.fromEntries(analytics.sessions),
+    sessions: sessionsObj,
     reviews: analytics.reviews.slice(-1000), // Keep last 1000 reviews
     packUsage: Object.fromEntries(analytics.packUsage),
     packSessions: analytics.packSessions.slice(-2000), // Keep last 2000 sessions
@@ -275,28 +285,46 @@ async function handleGetPack(req, res, fnameRaw) {
   }
 }
 
-// --- API: review via OpenAI ---
+// --- API: review via Claude (Anthropic Messages API) ---
+const CLAUDE_DEFAULT_MODEL = "claude-haiku-4-5-20251001"; // fast/cheap — matches the review task's cost profile
+const CLAUDE_API_VERSION = "2023-06-01";
+
+// Claude has no OpenAI-style response_format:{type:"json_object"} guarantee, so even with a
+// strict "respond with ONLY JSON" system prompt it can occasionally wrap the object in a
+// ```json ... ``` fence or add a stray sentence around it. Pulling out the first {...} block
+// (rather than assuming the whole string is bare JSON) makes parsing robust to that without
+// needing tool-use/function-calling machinery for what's a simple scoring response.
+function extractJsonObject(text) {
+  const fenced = text.match(/```(?:json)?\s*([\s\S]*?)```/i);
+  const candidate = fenced ? fenced[1] : text;
+  const start = candidate.indexOf("{");
+  const end = candidate.lastIndexOf("}");
+  if (start === -1 || end === -1 || end < start) return candidate.trim();
+  return candidate.slice(start, end + 1);
+}
+
 async function handleReview(req, res) {
-  if (!OPENAI_API_KEY) return sendJSON(res, 503, { error: "OPENAI_API_KEY not configured on server" });
+  if (!ANTHROPIC_API_KEY) return sendJSON(res, 503, { error: "ANTHROPIC_API_KEY not configured on server" });
 
   const body = await readBody(req);
   const system = typeof body.system === "string" ? body.system : "Du är en svensk ämneslärare.";
   const user = body.user || {};
-  const model = (body.model && String(body.model)) || "gpt-4o-mini";
+  const model = (body.model && String(body.model)) || CLAUDE_DEFAULT_MODEL;
 
   try {
-    const r = await fetch("https://api.openai.com/v1/chat/completions", {
+    const r = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
       headers: {
-        "Authorization": `Bearer ${OPENAI_API_KEY}`,
+        "x-api-key": ANTHROPIC_API_KEY,
+        "anthropic-version": CLAUDE_API_VERSION,
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
         model,
+        max_tokens: 1024,
         temperature: 0.2,
-        response_format: { type: "json_object" },
+        system: system + " Svara ENDAST med ett giltigt JSON-objekt — ingen inledande eller avslutande text, inga markdown-kodblock.",
         messages: [
-          { role: "system", content: system },
           { role: "user", content: JSON.stringify(user) }
         ]
       })
@@ -304,12 +332,12 @@ async function handleReview(req, res) {
 
     if (!r.ok) {
       const t = await r.text();
-      return sendJSON(res, r.status, { error: "openai_error", detail: t });
+      return sendJSON(res, r.status, { error: "anthropic_error", detail: t });
     }
     const data = await r.json();
-    const text = data?.choices?.[0]?.message?.content || "{}";
+    const text = data?.content?.[0]?.text || "{}";
     let review;
-    try { review = JSON.parse(text); } catch { review = { summary_feedback: "Kunde inte tolka svaret från modellen." }; }
+    try { review = JSON.parse(extractJsonObject(text)); } catch { review = { summary_feedback: "Kunde inte tolka svaret från modellen." }; }
 
     // Track review submission
     trackReview(req, { user, review });
@@ -361,9 +389,9 @@ function pipeFile(res, file) {
   fs.createReadStream(file).pipe(res);
 }
 
-// --- API: check if OpenAI key is configured ---
+// --- API: check if the Claude API key is configured ---
 async function handleConfig(res) {
-  return sendJSON(res, 200, { hasOpenAI: !!OPENAI_API_KEY });
+  return sendJSON(res, 200, { hasClaude: !!ANTHROPIC_API_KEY });
 }
 
 // --- API: get analytics data ---

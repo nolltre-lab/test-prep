@@ -20,7 +20,7 @@ services:
     #   - ./config.json:/app/config.json:ro
     #   - ./packs:/app/packs:ro
 
-    # Load environment variables from .env file (contains OPENAI_API_KEY)
+    # Load environment variables from .env file (contains ANTHROPIC_API_KEY)
     env_file:
       - .env
 
