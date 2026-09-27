@@ -251,7 +251,7 @@
 
     <!-- Write & Review -->
     <div id="write" class="panel hidden">
-        <div class="flex-between"><h3>Write & Review</h3><div class="pill">Min words <span id="minWords">5</span></div></div>
+        <div class="flex-between"><h3>Write & Review</h3></div>
         <div class="card">
             <div id="write-q" class="prompt"></div>
             <textarea id="write-ans" class="input" placeholder="Skriv ditt svar här… Förklara med egna ord och motivera." aria-label="Ditt svar"></textarea>
@@ -306,7 +306,7 @@ const words = t => (t||"").trim().split(/\s+/).filter(Boolean);
 
 const state = {
   data:null,i:0,xp:0,streak:0,best:0,level:1,seen:{},
-  mode:"flash",timer:30,packId:null,perPack:{},minWords:5,model:"",hasClaude:true,
+  mode:"flash",timer:30,packId:null,perPack:{},model:"",hasClaude:true,
   sessionStart:null,questionStart:null
 };
 
@@ -677,14 +677,13 @@ function renderWrite(){
   $("#write-q").textContent=it.front;
   $("#write-ans").value="";
   $("#review-box").classList.add("hidden");
-  $("#minWords").textContent=state.minWords;
   $("#wordCount").textContent="0";
 }
 $("#btn-newq").onclick=()=>{ state.i=pickNext(); renderWrite(); };
 $("#write-ans").oninput=()=>{ $("#wordCount").textContent=words($("#write-ans").value).length; };
 $("#btn-review").onclick=async ()=>{
   const it=state.data.items[state.i]; const ans=$("#write-ans").value.trim(); const wc=words(ans).length;
-  if(wc<state.minWords){ alert(`Skriv minst ${state.minWords} ord (du har ${wc}).`); return; }
+  if(wc===0){ alert("Skriv ett svar innan du skickar in."); return; }
   setReviewLoading(true);
   try{
     const resp = await fetch("/api/review", {
@@ -692,15 +691,22 @@ $("#btn-review").onclick=async ()=>{
       headers:{ "Content-Type":"application/json" },
       body: JSON.stringify({
         system: [
-          "Du är en svensk ämneslärare för åk 7–9.",
-          "Bedöm elevens svar baserat på frågan och referenssvaret.",
+          "Du är en svensk ämneslärare.",
+          "Bedöm elevens svar baserat på frågan, referenssvaret och (om angivet) paketets titel, som ofta anger årskurs (t.ex. 'åk 4' eller 'åk 7').",
+          "Kräv INTE en lång motivering bara för sakens skull: om frågan har ett kort, entydigt svar (t.ex. ett namn, en enhet, ett årtal eller ett enstaka begrepp räcker), bedöm svaret på om det är korrekt och tydligt — ett kort svar ska inte ge lägre completeness_score bara för att det är kort.",
+          "Om frågan istället kräver resonemang, förklaring eller att beskriva ett samband eller en process, förvänta en mer utförlig förklaring och sänk completeness_score om eleven bara ger ett kort svar utan motivering.",
+          "Kalibrera även hur djupt resonemang som rimligen kan förväntas efter årskursen i paketets titel om den anges — en lägre årskurs ska inte bedömas lika strängt på djup och terminologi som en högre årskurs.",
           "Anpassa din bedömning efter frågetyp: om frågan kräver enheter eller matematiska beräkningar, bedöm det; om frågan är konceptuell eller beskrivande, fokusera på förståelse och tydlighet.",
           "Svara ENDAST med JSON enligt: {correctness_score:int, clarity_score:int, completeness_score:int, technical_accuracy_score:int, overall_score:int, summary_feedback:string, missing_points:string[], technical_notes:string, clarity_notes:string, suggested_answer:string}",
           "Alla score-fält: 0-3 (0=bristfälligt, 1=godkänt, 2=bra, 3=utmärkt).",
           "technical_accuracy_score: Bedöm korrekta enheter, beräkningar eller tekniska detaljer om relevant för frågan. Om inte relevant, sätt till 3.",
           "technical_notes: Kommentera endast om det finns tekniska brister (enheter, beräkningar, etc). Lämna tom om inte relevant."
         ].join(" "),
-        user: { question: it.front, reference_answer: it.back||"", tags: it.tags||[], student_answer: ans, style_expectations: "Förklara kort men fullständigt; använd rätt begrepp och terminologi." },
+        user: {
+          question: it.front, reference_answer: it.back||"", tags: it.tags||[], student_answer: ans,
+          pack_title: state.data.title || "",
+          style_expectations: "Ett kort, korrekt svar räcker om frågan är av faktatyp — kräv resonemang och förklaring bara när frågan faktiskt kallar för det. Använd rätt begrepp och terminologi."
+        },
         model: state.model || undefined
       })
     });
@@ -708,7 +714,7 @@ $("#btn-review").onclick=async ()=>{
     const data = await resp.json();
     showReview(data.review || data);
     const s=Math.max(0,Math.min(3,Number((data.review||data).overall_score)));
-    const gain=8 + s*6 + Math.min(10, Math.floor((wc-state.minWords)/20));
+    const gain=8 + s*6 + Math.min(10, Math.floor(wc/20));
     state.xp += gain; state.streak++; state.best=Math.max(state.best,state.streak);
     savePack(); saveState(); updateHeader();
   }catch(e){ console.error(e); alert("Review failed: " + e.message); }
