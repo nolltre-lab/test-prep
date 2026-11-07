@@ -9,8 +9,11 @@ services:
     env_file:
       - .env
     networks:
-      - iqe-proxy-net
+      - edge-test-prep
 
 networks:
-  iqe-proxy-net:
+  # This app's own edge network — only apps-home's Caddy joins it (see apps-home CLAUDE.md
+  # "Network isolation"); not the shared iqe-proxy-net, where any other app could reach it.
+  edge-test-prep:
+    name: edge-test-prep
     external: true
