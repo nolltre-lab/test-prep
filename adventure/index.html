@@ -1,0 +1,1398 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<script>
+// Same subpath detection as index.html: behind the proxy (/adventure/) /api/* must get the prefix.
+(function(){
+  var p = window.location.pathname;
+  var base = p.endsWith('/') ? p.slice(0,-1) : p.replace(/\/[^/]*$/,'');
+  if(!base) return;
+  var _fetch = window.fetch;
+  window.fetch = function(url,opts){
+    if(typeof url==='string' && url.startsWith('/api/')) url = base+url;
+    return _fetch.call(this,url,opts);
+  };
+})();
+</script>
+<meta name="theme-color" content="#7cc26b" />
+<link rel="icon" href="icon.svg" type="image/svg+xml" />
+<title>Kunskapsäventyret</title>
+<style>
+:root{
+  --ink:#2b2340; --paper:#fffaf0; --sun:#ffd447;
+  --good:#3fbf6b; --bad:#ff7a6b; --accent:#ff8fb8; --accent2:#7b6cff; --shadow:rgba(43,35,64,.18);
+  --radius:22px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{
+  font-family: "Trebuchet MS", "Comic Sans MS", "Chalkboard SE", system-ui, sans-serif;
+  color:var(--ink); background:#9edb7f; overflow:hidden;
+  -webkit-tap-highlight-color:transparent; user-select:none; -webkit-user-select:none;
+}
+button{font:inherit;color:inherit;cursor:pointer;border:0}
+.screen{position:fixed;inset:0;display:none}
+.screen.on{display:block}
+
+/* ---------- Start screen ---------- */
+#start{overflow:auto;background:linear-gradient(#bfe8ff 0%,#e3f6ff 40%,#9edb7f 40%,#7cc26b 100%)}
+.start-wrap{max-width:760px;margin:0 auto;padding:24px 16px 60px}
+.title{text-align:center;margin:8px 0 4px;font-size:clamp(30px,7vw,52px);letter-spacing:1px;
+  color:#fff;text-shadow:0 3px 0 var(--accent2),0 6px 0 rgba(0,0,0,.12)}
+.subtitle{text-align:center;margin:0 0 20px;font-size:18px}
+.card{background:var(--paper);border-radius:var(--radius);padding:16px;margin:14px 0;box-shadow:0 6px 0 var(--shadow)}
+.card h2{margin:0 0 10px;font-size:20px}
+.heroes{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px}
+.hero-btn{background:#fff;border-radius:18px;padding:6px 4px 2px;border:4px solid transparent;box-shadow:0 4px 0 var(--shadow)}
+.hero-btn.sel{border-color:var(--accent2);background:#f1efff;transform:translateY(-3px)}
+.hero-btn svg{width:74px;height:74px;display:block;margin:0 auto}
+.hero-btn span{display:block;text-align:center;font-weight:bold;font-size:13px;padding:2px 0 4px}
+.name-in{width:100%;padding:12px 14px;font:inherit;font-size:18px;border-radius:14px;border:3px solid #e6dcc8;background:#fff}
+.packs{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;max-height:300px;overflow:auto;padding:2px}
+.pack-btn{background:#fff;border-radius:14px;padding:10px 12px;text-align:left;border:3px solid #eee3cf;font-size:15px}
+.pack-btn small{display:block;opacity:.6;margin-top:2px}
+.pack-btn.sel{border-color:var(--accent2);background:#f1efff}
+.pack-btn .badge{float:right;font-size:12px;background:var(--sun);border-radius:99px;padding:1px 8px}
+.lengths{display:flex;gap:10px;flex-wrap:wrap}
+.len-btn{flex:1;min-width:120px;background:#fff;border-radius:14px;padding:10px;border:3px solid #eee3cf;font-size:16px}
+.len-btn.sel{border-color:var(--accent2);background:#f1efff}
+.big-btn{display:block;width:100%;padding:16px;font-size:22px;font-weight:bold;color:#fff;border-radius:18px;
+  background:var(--accent2);box-shadow:0 6px 0 #5446c9;margin-top:10px}
+.big-btn:active{transform:translateY(4px);box-shadow:0 2px 0 #5446c9}
+.big-btn:disabled{opacity:.5}
+.big-btn.alt{background:var(--good);box-shadow:0 6px 0 #2a9150}
+
+/* ---------- Scene ---------- */
+#play{background:#000}
+#world{position:absolute;inset:0;overflow:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+#world::-webkit-scrollbar{display:none}
+#scene{display:block}
+.hud{position:fixed;top:0;left:0;right:0;display:flex;gap:8px;align-items:center;
+  padding:10px 12px;padding-top:max(10px,env(safe-area-inset-top));pointer-events:none;z-index:5}
+.hud>*{pointer-events:auto}
+.hud .grow{flex:1}
+.pill{background:var(--paper);border-radius:99px;padding:7px 14px;font-weight:bold;box-shadow:0 4px 0 var(--shadow);font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.hud .pill#starCount{flex:0 0 auto}
+@media(max-width:520px){.hud .place{display:none}}
+.icon-btn{background:var(--paper);border-radius:99px;width:44px;height:44px;flex:0 0 44px;font-size:21px;box-shadow:0 4px 0 var(--shadow)}
+#fade{position:fixed;inset:0;background:#fffaf0;opacity:0;pointer-events:none;transition:opacity .45s;z-index:8}
+#fade.on{opacity:1;pointer-events:auto}
+#banner{position:fixed;left:50%;top:22%;transform:translate(-50%,-50%);background:var(--paper);border-radius:24px;padding:16px 26px;
+  text-align:center;box-shadow:0 8px 0 var(--shadow);z-index:7;pointer-events:none;opacity:0;width:max-content;max-width:90vw}
+#banner.on{animation:banner 3.2s ease forwards}
+#banner b{display:block;font-size:28px;color:var(--accent2)}
+#banner span{font-size:18px}
+@keyframes banner{0%{opacity:0;transform:translate(-50%,-30%) scale(.8)}12%,80%{opacity:1;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-60%)}}
+
+/* things inside the scene SVG */
+.spot{cursor:pointer}
+.peeker{transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
+.peeker.hiding{animation:peekaboo 6s ease-in-out infinite}
+.peeker.peek-now{animation:none;transform:translateY(var(--pk))}
+@keyframes peekaboo{0%,52%,100%{transform:translateY(0)}60%,84%{transform:translateY(var(--pk))}}
+.peeker.out{animation:none;transform:translateY(var(--out))}
+.wiggle{animation:wiggle .5s;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes wiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-5deg)}75%{transform:rotate(5deg)}}
+.bob{animation:bob 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.pulse{animation:pulse 1.2s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+.ripple{animation:ripple 2.4s ease-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes ripple{0%{transform:scale(.4);opacity:.9}100%{transform:scale(1.6);opacity:0}}
+.bubble-up{animation:bubbleUp 3s ease-in infinite}
+@keyframes bubbleUp{0%{transform:translateY(0);opacity:0}15%{opacity:.9}100%{transform:translateY(-46px);opacity:0}}
+.sparkle{animation:sparkle .9s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sparkle{0%,100%{transform:scale(.6) rotate(0);opacity:.4}50%{transform:scale(1.25) rotate(45deg);opacity:1}}
+.flutter{animation:flutter 7s ease-in-out infinite}
+@keyframes flutter{0%{transform:translate(0,0)}25%{transform:translate(60px,-30px)}50%{transform:translate(120px,10px)}75%{transform:translate(50px,30px)}100%{transform:translate(0,0)}}
+.sway{animation:sway 4s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+
+/* ---------- Question dialog ---------- */
+#dlg{position:fixed;inset:0;background:rgba(43,35,64,.45);display:none;align-items:flex-end;justify-content:center;z-index:10;padding:12px}
+#dlg.on{display:flex}
+@media(min-height:640px){#dlg{align-items:center}}
+.dlg-box{width:100%;max-width:560px;background:var(--paper);border-radius:28px;padding:16px;box-shadow:0 10px 0 var(--shadow);
+  animation:pop .25s ease-out;max-height:calc(100vh - 24px);overflow:auto}
+@keyframes pop{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
+.talker{display:flex;gap:12px;align-items:flex-end}
+.talker .who{flex:0 0 110px}
+.talker .who svg{width:110px;height:110px;display:block}
+.bubble{position:relative;flex:1;background:#fff;border-radius:20px;padding:14px 16px;font-size:clamp(17px,2.6vw,21px);line-height:1.35;
+  border:3px solid #eee3cf;margin-bottom:18px}
+.bubble:after{content:"";position:absolute;left:-14px;bottom:18px;border:10px solid transparent;border-right:14px solid #fff;border-left:0}
+.bubble .name{display:block;font-size:13px;font-weight:bold;opacity:.6;margin-bottom:4px}
+.answers{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+@media(max-width:420px){.answers{grid-template-columns:1fr}}
+.ans{background:#fff;border-radius:16px;padding:14px 12px;font-size:18px;border:3px solid #eee3cf;box-shadow:0 4px 0 var(--shadow);text-align:left}
+.ans .k{display:inline-block;width:28px;height:28px;line-height:28px;text-align:center;border-radius:50%;background:var(--sun);font-weight:bold;margin-right:8px;font-size:15px}
+.ans:active{transform:translateY(3px);box-shadow:0 1px 0 var(--shadow)}
+.ans.right{background:#dcf7e5;border-color:var(--good)}
+.ans.wrong{background:#ffe3df;border-color:var(--bad);animation:shake .35s}
+.ans:disabled{cursor:default}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.dlg-foot{display:flex;gap:10px;margin-top:12px;align-items:center}
+.dlg-foot .grow{flex:1}
+.small-btn{background:#fff;border-radius:14px;padding:10px 14px;border:3px solid #eee3cf;font-size:15px}
+.feedback{margin-top:10px;font-size:17px;border-radius:14px;padding:10px 12px;display:none}
+.feedback.on{display:block}
+.feedback.good{background:#dcf7e5}
+.feedback.bad{background:#ffe3df}
+.feedback.hint{background:#fff6c9}
+.hearts{font-size:20px;letter-spacing:2px}
+
+/* ---------- Floating effects ---------- */
+.float{position:fixed;pointer-events:none;font-size:30px;font-weight:bold;z-index:20;animation:floatUp 1.8s ease-out forwards;
+  text-shadow:0 2px 0 #fff,0 0 6px #fff;max-width:80vw;text-align:center}
+@keyframes floatUp{from{transform:translate(-50%,0) scale(.6);opacity:0}15%{opacity:1;transform:translate(-50%,-10px) scale(1.1)}70%{opacity:1}to{transform:translate(-50%,-80px) scale(1);opacity:0}}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:30}
+
+/* ---------- Finish screen ---------- */
+#finish{background:radial-gradient(circle at 50% 30%,#fff6c9,#ffd447 45%,#ff9fc4);overflow:auto}
+.finish-wrap{max-width:560px;margin:0 auto;padding:30px 16px;text-align:center}
+.stars-big{font-size:46px;letter-spacing:4px;margin:6px 0}
+</style>
+</head>
+<body>
+
+<!-- ================= START ================= -->
+<section id="start" class="screen on">
+  <div class="start-wrap">
+    <h1 class="title">Kunskapsäventyret</h1>
+    <p class="subtitle">Djuren har gömt sig! Leta upp dem, svara på deras frågor och ta dig hela vägen till drakens slott.</p>
+
+    <div class="card">
+      <h2>1. Välj din hjälte</h2>
+      <div class="heroes" id="heroes"></div>
+      <div style="margin-top:12px"><input id="heroName" class="name-in" maxlength="16" placeholder="Vad heter du?" /></div>
+    </div>
+
+    <div class="card">
+      <h2>2. Välj vad du vill öva på</h2>
+      <div class="packs" id="packs"><div>Laddar…</div></div>
+    </div>
+
+    <div class="card">
+      <h2>3. Hur långt äventyr?</h2>
+      <div class="lengths" id="lengths"></div>
+    </div>
+
+    <button class="big-btn alt" id="continueBtn" style="display:none">Fortsätt äventyret</button>
+    <button class="big-btn" id="goBtn" disabled>Starta äventyret!</button>
+  </div>
+</section>
+
+<!-- ================= PLAY ================= -->
+<section id="play" class="screen">
+  <div id="world"></div>
+  <div class="hud">
+    <button class="icon-btn" id="homeBtn" title="Till start">🏠</button>
+    <span class="pill" id="where"></span>
+    <span class="grow"></span>
+    <span class="pill" id="starCount">⭐ 0</span>
+    <button class="icon-btn" id="hintSpotBtn" title="Var gömmer de sig?">🔍</button>
+    <button class="icon-btn" id="soundBtn" title="Ljud">🔊</button>
+  </div>
+  <div id="banner"><b id="bannerTitle"></b><span id="bannerSub"></span></div>
+</section>
+<div id="fade"></div>
+
+<!-- ================= QUESTION DIALOG ================= -->
+<div id="dlg">
+  <div class="dlg-box">
+    <div class="talker">
+      <div class="who" id="dlgWho"></div>
+      <div class="bubble"><span class="name" id="dlgName"></span><span id="dlgQ"></span></div>
+    </div>
+    <div class="answers" id="dlgAns"></div>
+    <div class="feedback" id="dlgFb"></div>
+    <div class="dlg-foot">
+      <span class="hearts" id="dlgHearts"></span>
+      <span class="grow"></span>
+      <button class="small-btn" id="hintBtn">💡 Ledtråd</button>
+      <button class="small-btn" id="closeBtn">Senare</button>
+      <button class="big-btn alt" id="nextBtn" style="display:none;width:auto;margin:0;padding:10px 18px;font-size:18px">Vidare →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= FINISH ================= -->
+<section id="finish" class="screen">
+  <div class="finish-wrap">
+    <h1 class="title" style="text-shadow:0 3px 0 #ff6fa3">Du klarade det!</h1>
+    <div id="finishArt"></div>
+    <div class="stars-big" id="finishStars"></div>
+    <p id="finishText" style="font-size:19px"></p>
+    <button class="big-btn" id="againBtn">Nytt äventyr</button>
+  </div>
+</section>
+
+<canvas id="confetti"></canvas>
+
+<script>
+"use strict";
+/* =====================================================================
+   Characters — inline SVG in a 100×100 box, so the same drawing works
+   small in the scene and big in the question dialog.
+   mood: "idle" | "happy" | "sad"
+   ===================================================================== */
+const INK = "#2b2340";
+const eyes = (x1, x2, y, mood, r = 5) => mood === "happy"
+  ? `<path d="M${x1-r} ${y} q${r} -${r+2} ${2*r} 0 M${x2-r} ${y} q${r} -${r+2} ${2*r} 0" stroke="${INK}" stroke-width="3" fill="none" stroke-linecap="round"/>`
+  : `<circle cx="${x1}" cy="${y}" r="${r}" fill="${INK}"/><circle cx="${x2}" cy="${y}" r="${r}" fill="${INK}"/>
+     <circle cx="${x1+r*.32}" cy="${y-r*.36}" r="${r/2.6}" fill="#fff"/><circle cx="${x2+r*.32}" cy="${y-r*.36}" r="${r/2.6}" fill="#fff"/>`;
+const mouth = (cx, y, mood, w = 8) => mood === "sad"
+  ? `<path d="M${cx-w} ${y+4} q${w} -7 ${2*w} 0" stroke="${INK}" stroke-width="3" fill="none" stroke-linecap="round"/>`
+  : `<path d="M${cx-w} ${y} q${w} ${mood==="happy"?10:6} ${2*w} 0" stroke="${INK}" stroke-width="3" fill="${mood==="happy"?"#ff7a8a":"none"}" stroke-linecap="round"/>`;
+const cheeks = (x1, x2, y) => `<circle cx="${x1}" cy="${y}" r="4.5" fill="#ff9fb6" opacity=".7"/><circle cx="${x2}" cy="${y}" r="4.5" fill="#ff9fb6" opacity=".7"/>`;
+const shadow = `<ellipse cx="50" cy="95" rx="30" ry="5" fill="#000" opacity=".12"/>`;
+
+/* The animals that hide in the scenes and ask the questions. */
+const CHARACTERS = {
+  duck: { name: "Anki Anka", draw: m => `${shadow}
+    <ellipse cx="54" cy="70" rx="32" ry="22" fill="#ffd93b"/>
+    <path d="M78 62 q14 -6 12 8 q-6 4 -14 0z" fill="#ffd93b"/>
+    <ellipse cx="50" cy="72" rx="14" ry="9" fill="#ffc400" transform="rotate(-15 50 72)"/>
+    <circle cx="40" cy="38" r="21" fill="#ffd93b"/>
+    <path d="M14 40 q8 -8 16 -2 q-6 8 -16 2z" fill="#ff9a2e"/>
+    ${eyes(36, 48, 33, m, 4)}${cheeks(30, 52, 44)}
+    <path d="M37 18 q4 -10 8 0" stroke="#ffc400" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M44 92 l-5 4 h10z M62 92 l-5 4 h10z" fill="#ff9a2e"/>` },
+
+  frog: { name: "Fridolf Groda", draw: m => `${shadow}
+    <ellipse cx="50" cy="70" rx="34" ry="24" fill="#5cc766"/>
+    <ellipse cx="50" cy="76" rx="20" ry="14" fill="#c9f0a8"/>
+    <circle cx="32" cy="40" r="14" fill="#5cc766"/><circle cx="68" cy="40" r="14" fill="#5cc766"/>
+    <ellipse cx="50" cy="56" rx="30" ry="18" fill="#5cc766"/>
+    <circle cx="32" cy="40" r="9" fill="#fff"/><circle cx="68" cy="40" r="9" fill="#fff"/>
+    ${m==="happy" ? eyes(32, 68, 41, m, 5) : `<circle cx="33" cy="41" r="5" fill="${INK}"/><circle cx="69" cy="41" r="5" fill="${INK}"/>`}
+    ${mouth(50, 60, m, 14)}${cheeks(30, 70, 60)}
+    <path d="M22 88 q-8 6 -2 8 h14z M78 88 q8 6 2 8 h-14z" fill="#3fa94e"/>` },
+
+  owl: { name: "Ugglan Ulla", draw: m => `${shadow}
+    <path d="M22 30 L30 12 L42 26 Z M78 30 L70 12 L58 26 Z" fill="#9a6a45"/>
+    <ellipse cx="50" cy="58" rx="32" ry="36" fill="#a9774f"/>
+    <ellipse cx="50" cy="70" rx="20" ry="22" fill="#f1d8b4"/>
+    <path d="M38 64 q4 4 8 0 M54 64 q4 4 8 0 M42 74 q4 4 8 0 M50 74 q4 4 8 0" stroke="#c9a57c" stroke-width="2" fill="none"/>
+    <circle cx="37" cy="40" r="13" fill="#fff"/><circle cx="63" cy="40" r="13" fill="#fff"/>
+    ${eyes(37, 63, 40, m, 6)}
+    <path d="M46 50 l4 8 l4 -8z" fill="#ff9a2e"/>
+    ${m==="sad" ? `<path d="M44 60 q6 -4 12 0" stroke="${INK}" stroke-width="2.5" fill="none"/>` : ""}
+    <path d="M30 22 h40 l-4 -8 h-32z" fill="${INK}"/><rect x="40" y="6" width="20" height="10" fill="${INK}"/>
+    <path d="M70 14 l8 10" stroke="#ffd447" stroke-width="3"/><circle cx="78" cy="25" r="3" fill="#ffd447"/>` },
+
+  hedgehog: { name: "Igge Igelkott", draw: m => `${shadow}
+    <path d="M14 78 L10 62 L20 58 L16 44 L28 44 L28 30 L40 36 L46 22 L54 34 L64 24 L66 38 L80 34 L76 48 L90 50 L82 62 L90 74 L80 80Z" fill="#6b4a33"/>
+    <ellipse cx="54" cy="70" rx="30" ry="22" fill="#7d5a3f"/>
+    <ellipse cx="34" cy="70" rx="20" ry="18" fill="#f3d6ae"/>
+    <circle cx="16" cy="72" r="4" fill="${INK}"/>
+    ${eyes(28, 40, 64, m, 3.5)}${cheeks(26, 44, 74)}${mouth(32, 78, m, 5)}
+    <circle cx="70" cy="44" r="6" fill="#e33"/><path d="M70 38 q2 -4 5 -4" stroke="#3a7d2c" stroke-width="2" fill="none"/>` },
+
+  bunny: { name: "Kaninen Kim", draw: m => `${shadow}
+    <ellipse cx="38" cy="22" rx="8" ry="20" fill="#fff" stroke="#e8dfef" stroke-width="2" transform="rotate(-10 38 22)"/>
+    <ellipse cx="62" cy="22" rx="8" ry="20" fill="#fff" stroke="#e8dfef" stroke-width="2" transform="rotate(10 62 22)"/>
+    <ellipse cx="38" cy="24" rx="4" ry="13" fill="#ffc0d3" transform="rotate(-10 38 24)"/>
+    <ellipse cx="62" cy="24" rx="4" ry="13" fill="#ffc0d3" transform="rotate(10 62 24)"/>
+    <ellipse cx="50" cy="74" rx="28" ry="20" fill="#fff" stroke="#e8dfef" stroke-width="2"/>
+    <circle cx="50" cy="50" r="22" fill="#fff" stroke="#e8dfef" stroke-width="2"/>
+    ${eyes(42, 58, 47, m, 4)}${cheeks(36, 64, 56)}
+    <path d="M47 54 h6 l-3 3z" fill="#ff8fb8"/>${mouth(50, 60, m, 5)}
+    <rect x="47" y="61" width="6" height="5" rx="1" fill="#fff" stroke="#e8dfef"/>` },
+
+  turtle: { name: "Sköldpaddan Sigge", draw: m => `${shadow}
+    <ellipse cx="22" cy="64" rx="14" ry="12" fill="#8fd16f"/>
+    ${eyes(18, 28, 60, m, 3.2)}${mouth(23, 67, m, 4)}
+    <path d="M28 82 q-2 10 8 10 M76 82 q2 10 -8 10" stroke="#8fd16f" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <path d="M24 82 q26 -64 64 0z" fill="#3f9e5a"/>
+    <path d="M40 80 l8 -24 h16 l8 24 M56 56 v-12" stroke="#2e7a43" stroke-width="3" fill="none"/>
+    <rect x="22" y="80" width="68" height="6" rx="3" fill="#2e7a43"/>` },
+
+  fox: { name: "Räven Rut", draw: m => `${shadow}
+    <path d="M70 84 q28 -6 22 -34 q-10 22 -24 22z" fill="#ff8a3d"/><path d="M88 52 q4 6 4 0z" fill="#fff"/>
+    <ellipse cx="50" cy="74" rx="24" ry="20" fill="#ff8a3d"/>
+    <ellipse cx="50" cy="80" rx="12" ry="12" fill="#fff3e4"/>
+    <path d="M24 22 L34 48 L46 34Z M76 22 L66 48 L54 34Z" fill="#ff8a3d"/>
+    <path d="M28 28 L35 44 L41 36Z M72 28 L65 44 L59 36Z" fill="${INK}"/>
+    <path d="M26 44 q24 -16 48 0 q-6 22 -24 26 q-18 -4 -24 -26z" fill="#ff8a3d"/>
+    <path d="M34 54 q16 24 32 0 q-6 18 -16 18 q-10 0 -16 -18z" fill="#fff3e4"/>
+    ${eyes(40, 60, 50, m, 4)}
+    <circle cx="50" cy="62" r="4" fill="${INK}"/>
+    ${m==="sad" ? `<path d="M45 70 q5 -4 10 0" stroke="${INK}" stroke-width="2.5" fill="none"/>` : `<path d="M45 67 q5 5 10 0" stroke="${INK}" stroke-width="2.5" fill="none"/>`}` },
+
+  squirrel: { name: "Ekorren Ella", draw: m => `${shadow}
+    <path d="M62 90 C96 86 98 40 78 30 C64 22 56 40 70 46 C84 52 80 74 60 80Z" fill="#d9772f"/>
+    <path d="M74 40 C84 46 84 62 74 70" stroke="#f0a35e" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <ellipse cx="44" cy="74" rx="20" ry="18" fill="#e0843a"/>
+    <ellipse cx="42" cy="78" rx="11" ry="12" fill="#ffe2bf"/>
+    <path d="M28 28 L30 10 L40 24Z M56 28 L58 10 L48 22Z" fill="#e0843a"/>
+    <path d="M30 12 l-2 -6 M58 12 l2 -6" stroke="#c4621f" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="43" cy="44" r="19" fill="#e0843a"/>
+    <ellipse cx="43" cy="52" rx="11" ry="8" fill="#ffe2bf"/>
+    ${eyes(36, 50, 42, m, 3.6)}${cheeks(30, 56, 50)}
+    <circle cx="43" cy="49" r="2.4" fill="${INK}"/>${mouth(43, 54, m, 4)}
+    <ellipse cx="44" cy="68" rx="6" ry="7" fill="#b07a3b"/><path d="M38 64 q6 -6 12 0z" fill="#7a5233"/>` },
+
+  beaver: { name: "Bävern Bosse", draw: m => `${shadow}
+    <ellipse cx="80" cy="86" rx="16" ry="7" fill="#5b3c27" transform="rotate(-20 80 86)"/>
+    <path d="M70 82 l16 -6 M72 88 l16 -6" stroke="#7a5233" stroke-width="1.5"/>
+    <ellipse cx="50" cy="72" rx="28" ry="22" fill="#9a6640"/>
+    <ellipse cx="50" cy="78" rx="16" ry="13" fill="#c08a5c"/>
+    <circle cx="30" cy="26" r="7" fill="#9a6640"/><circle cx="70" cy="26" r="7" fill="#9a6640"/>
+    <circle cx="50" cy="42" r="23" fill="#9a6640"/>
+    <ellipse cx="50" cy="52" rx="13" ry="9" fill="#c08a5c"/>
+    ${eyes(41, 59, 38, m, 4)}
+    <ellipse cx="50" cy="47" rx="5" ry="3.5" fill="${INK}"/>
+    ${m==="sad" ? `<path d="M44 56 q6 -3 12 0" stroke="${INK}" stroke-width="2.5" fill="none"/>` : `<path d="M44 53 q6 4 12 0" stroke="${INK}" stroke-width="2.5" fill="none"/>`}
+    <rect x="45" y="56" width="5" height="8" rx="1" fill="#fff" stroke="#e0d6c8"/><rect x="50" y="56" width="5" height="8" rx="1" fill="#fff" stroke="#e0d6c8"/>` },
+
+  dragon: { name: "Draken Doris", draw: m => `${shadow}
+    <path d="M78 74 q22 2 16 -20 l6 -4 l-10 -2 q4 18 -14 14z" fill="#9b7bff"/>
+    <path d="M30 48 Q8 20 6 46 Q16 40 22 56Z M70 48 Q92 20 94 46 Q84 40 78 56Z" fill="#c9b6ff"/>
+    <ellipse cx="50" cy="72" rx="28" ry="22" fill="#9b7bff"/>
+    <ellipse cx="50" cy="78" rx="16" ry="14" fill="#ffe7a6"/>
+    <path d="M42 70 h16 M41 78 h18 M43 86 h14" stroke="#f0c96a" stroke-width="2"/>
+    <path d="M34 18 l4 -12 l6 10z M66 18 l-4 -12 l-6 10z" fill="#ffd447"/>
+    <circle cx="50" cy="38" r="22" fill="#9b7bff"/>
+    <ellipse cx="50" cy="48" rx="15" ry="10" fill="#b9a2ff"/>
+    <circle cx="45" cy="47" r="1.8" fill="${INK}"/><circle cx="55" cy="47" r="1.8" fill="${INK}"/>
+    ${eyes(41, 59, 33, m, 5)}${mouth(50, 53, m, 7)}
+    ${m==="happy" ? `<path d="M72 46 q10 -6 18 -2 q-6 2 -6 6 q-6 -6 -12 -4z" fill="#ff8a3d"/>` : ""}
+    <path d="M44 18 l6 -8 l6 8z" fill="#ffd447"/>` },
+};
+
+/* Heroes the player can choose — the sillier the better. */
+const HEROES = {
+  panda: { name: "Pandan Pling", draw: m => `${shadow}
+    <ellipse cx="50" cy="76" rx="24" ry="18" fill="#fff" stroke="#e8e8ee" stroke-width="2"/>
+    <ellipse cx="29" cy="72" rx="7" ry="11" fill="${INK}" transform="rotate(20 29 72)"/><ellipse cx="71" cy="72" rx="7" ry="11" fill="${INK}" transform="rotate(-20 71 72)"/>
+    <ellipse cx="38" cy="91" rx="9" ry="6" fill="${INK}"/><ellipse cx="62" cy="91" rx="9" ry="6" fill="${INK}"/>
+    <rect x="74" y="44" width="6" height="46" rx="3" fill="#7cc35a"/><path d="M74 58 h6 M74 72 h6" stroke="#5a9e3c" stroke-width="2"/>
+    <path d="M80 50 q12 -8 14 -2 q-8 2 -14 6z" fill="#7cc35a"/>
+    <circle cx="30" cy="28" r="10" fill="${INK}"/><circle cx="70" cy="28" r="10" fill="${INK}"/>
+    <circle cx="50" cy="48" r="25" fill="#fff" stroke="#e8e8ee" stroke-width="2"/>
+    <ellipse cx="40" cy="47" rx="7" ry="10" fill="${INK}" transform="rotate(-25 40 47)"/>
+    <ellipse cx="60" cy="47" rx="7" ry="10" fill="${INK}" transform="rotate(25 60 47)"/>
+    ${m==="happy"
+      ? `<path d="M36 47 q4 -5 8 0 M56 47 q4 -5 8 0" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>`
+      : `<circle cx="41" cy="46" r="3.4" fill="#fff"/><circle cx="59" cy="46" r="3.4" fill="#fff"/><circle cx="41.5" cy="46.5" r="1.8" fill="${INK}"/><circle cx="59.5" cy="46.5" r="1.8" fill="${INK}"/>`}
+    <ellipse cx="50" cy="57" rx="4.5" ry="3" fill="${INK}"/>${mouth(50, 61, m, 5)}${cheeks(33, 67, 59)}` },
+
+  corgi: { name: "Corgin Kexet", draw: m => `${shadow}
+    <path d="M76 70 q10 -6 8 4 q-4 2 -8 -4z" fill="#e8a04c"/>
+    <ellipse cx="54" cy="78" rx="28" ry="14" fill="#e8a04c"/>
+    <ellipse cx="40" cy="80" rx="11" ry="10" fill="#fff"/>
+    <rect x="32" y="84" width="9" height="10" rx="3" fill="#e8a04c"/><rect x="66" y="84" width="9" height="10" rx="3" fill="#e8a04c"/>
+    <path d="M26 38 L28 6 L46 30Z M74 38 L72 6 L54 30Z" fill="#e8a04c"/>
+    <path d="M30 32 L31 14 L41 28Z M70 32 L69 14 L59 28Z" fill="#ffc8b0"/>
+    <ellipse cx="50" cy="46" rx="25" ry="21" fill="#e8a04c"/>
+    <path d="M47 28 h6 l4 22 h-14z" fill="#fff"/>
+    <ellipse cx="50" cy="56" rx="15" ry="10" fill="#fff"/>
+    ${eyes(40, 60, 43, m, 4.2)}
+    <ellipse cx="50" cy="51" rx="4.5" ry="3.2" fill="${INK}"/>
+    ${m==="sad" ? `<path d="M44 60 q6 -4 12 0" stroke="${INK}" stroke-width="2.5" fill="none"/>`
+      : `<path d="M43 56 q7 6 14 0" stroke="${INK}" stroke-width="2.5" fill="none"/><path d="M48 59 q2 10 8 6 q0 -6 -2 -7z" fill="#ff7a8a"/>`}` },
+
+  cat: { name: "Katten Morris", draw: m => `${shadow}
+    <path d="M74 86 q24 -4 16 -30" stroke="#ffa54f" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <ellipse cx="50" cy="76" rx="22" ry="18" fill="#ffa54f"/>
+    <path d="M26 26 L32 50 L48 38Z M74 26 L68 50 L52 38Z" fill="#ffa54f"/>
+    <path d="M30 32 L34 46 L42 40Z M70 32 L66 46 L58 40Z" fill="#ffc8d6"/>
+    <circle cx="50" cy="50" r="24" fill="#ffa54f"/>
+    <path d="M42 30 l2 8 M50 28 v9 M58 30 l-2 8" stroke="#e9853a" stroke-width="3" stroke-linecap="round"/>
+    ${eyes(41, 59, 50, m, 4.5)}${cheeks(34, 66, 60)}
+    <path d="M47 57 h6 l-3 3z" fill="#ff7a8a"/>${mouth(50, 61, m, 5)}
+    <path d="M24 58 h12 M24 63 h12 M64 58 h12 M64 63 h12" stroke="${INK}" stroke-width="1.5"/>
+    <path d="M34 72 q16 8 32 0 v6 q-16 6 -32 0z" fill="#7b6cff"/><circle cx="50" cy="78" r="4" fill="#ffd447"/>` },
+
+  unicorn: { name: "Enhörningen Glitter", draw: m => `${shadow}
+    <ellipse cx="50" cy="76" rx="24" ry="18" fill="#fff" stroke="#efe6f7" stroke-width="2"/>
+    <path d="M50 4 l7 28 h-14z" fill="#ffd447"/><path d="M45 22 l9 -3 M44 28 l11 -3" stroke="#f0b400" stroke-width="2"/>
+    <path d="M30 40 L26 22 L40 32Z M70 40 L74 22 L60 32Z" fill="#fff" stroke="#efe6f7" stroke-width="2"/>
+    <circle cx="50" cy="50" r="24" fill="#fff" stroke="#efe6f7" stroke-width="2"/>
+    <path d="M28 42 q-10 10 -4 26 q6 -10 10 -14 q-6 -6 -6 -12z" fill="#ff8fb8"/>
+    <path d="M32 32 q10 -10 22 -4 q-10 2 -14 10z" fill="#9b7bff"/>
+    <path d="M30 38 q4 -8 12 -6 q-4 4 -6 10z" fill="#7ad7ff"/>
+    ${eyes(42, 60, 50, m, 4.5)}${cheeks(36, 66, 60)}
+    <ellipse cx="51" cy="62" rx="10" ry="6" fill="#ffe1ec"/>${mouth(51, 63, m, 5)}` },
+
+  penguin: { name: "Pingvinen Cool", draw: m => `${shadow}
+    <ellipse cx="40" cy="94" rx="9" ry="4" fill="#ff9a2e"/><ellipse cx="60" cy="94" rx="9" ry="4" fill="#ff9a2e"/>
+    <ellipse cx="50" cy="58" rx="27" ry="35" fill="#2b2f45"/>
+    <ellipse cx="50" cy="66" rx="18" ry="25" fill="#fff"/>
+    <ellipse cx="24" cy="66" rx="6" ry="16" fill="#2b2f45" transform="rotate(20 24 66)"/>
+    <path d="M74 56 q16 -14 18 -28 q-14 8 -22 20z" fill="#2b2f45"/>
+    <ellipse cx="50" cy="42" rx="19" ry="13" fill="#fff"/>
+    <rect x="31" y="35" width="16" height="11" rx="4" fill="${INK}"/><rect x="53" y="35" width="16" height="11" rx="4" fill="${INK}"/>
+    <path d="M47 39 h6" stroke="${INK}" stroke-width="3"/>
+    <path d="M34 38 l5 5 M56 38 l5 5" stroke="#7ad7ff" stroke-width="2" stroke-linecap="round"/>
+    <path d="M44 49 L50 56 L56 49Z" fill="#ff9a2e"/>
+    ${m==="happy" ? `<path d="M42 57 q8 7 16 0" stroke="${INK}" stroke-width="2.5" fill="none"/>` : m==="sad" ? `<path d="M43 60 q7 -4 14 0" stroke="${INK}" stroke-width="2.5" fill="none"/>` : ""}` },
+
+  dino: { name: "Dinon Rex", draw: m => `${shadow}
+    <path d="M68 82 Q98 84 96 60 Q88 74 68 72Z" fill="#6cc36a"/>
+    <ellipse cx="50" cy="76" rx="24" ry="18" fill="#6cc36a"/>
+    <ellipse cx="46" cy="80" rx="13" ry="12" fill="#d9f5a8"/>
+    <ellipse cx="38" cy="93" rx="8" ry="5" fill="#57a956"/><ellipse cx="60" cy="93" rx="8" ry="5" fill="#57a956"/>
+    <path d="M30 66 l-7 3 M31 71 l-7 3" stroke="#57a956" stroke-width="4" stroke-linecap="round"/>
+    <path d="M66 30 l8 -2 l-4 8 l9 1 l-6 7 l8 3 l-8 5" fill="#ffd447"/>
+    <ellipse cx="46" cy="42" rx="27" ry="21" fill="#6cc36a"/>
+    ${eyes(37, 55, 36, m, 4.5)}
+    <path d="M26 48 Q46 ${m==="sad"?54:64} 66 48" stroke="${INK}" stroke-width="3" fill="${m==="sad"?"none":"#fff"}" stroke-linecap="round"/>
+    ${m==="sad" ? "" : `<path d="M32 51 l3 5 l3 -4 M42 54 l3 5 l3 -5 M52 53 l3 4 l3 -6" stroke="${INK}" stroke-width="1" fill="none"/>`}
+    <path d="M36 24 L46 0 L56 24Z" fill="#ff8fb8"/><path d="M40 16 h12 M43 8 h6" stroke="#fff" stroke-width="3"/>
+    <circle cx="46" cy="2" r="4.5" fill="#ffd447"/>` },
+
+  alien: { name: "Rymdisen Zork", draw: m => `${shadow}
+    <path d="M40 92 v-8 M60 92 v-8" stroke="#7cc95a" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="50" cy="80" rx="16" ry="11" fill="#9be36b"/>
+    <path d="M38 28 L28 8 M62 28 L72 8" stroke="#7cc95a" stroke-width="3"/>
+    <circle cx="28" cy="8" r="5" fill="#ff8fb8"/><circle cx="72" cy="8" r="5" fill="#ff8fb8"/>
+    <ellipse cx="50" cy="50" rx="32" ry="27" fill="#9be36b"/>
+    <circle cx="30" cy="38" r="3" fill="#7cc95a"/><circle cx="72" cy="62" r="3.5" fill="#7cc95a"/><circle cx="66" cy="32" r="2.5" fill="#7cc95a"/>
+    <circle cx="50" cy="44" r="11" fill="#fff"/>
+    ${m==="happy" ? `<path d="M43 45 q7 -8 14 0" stroke="${INK}" stroke-width="3" fill="none"/>` : `<circle cx="51" cy="45" r="5.5" fill="${INK}"/><circle cx="53" cy="43" r="2" fill="#fff"/>`}
+    <circle cx="31" cy="50" r="5.5" fill="#fff"/><circle cx="69" cy="50" r="5.5" fill="#fff"/>
+    <circle cx="31.5" cy="50.5" r="3" fill="${INK}"/><circle cx="69.5" cy="50.5" r="3" fill="${INK}"/>
+    ${mouth(50, 63, m, 7)}` },
+
+  ghost: { name: "Spöket Buu", draw: m => `
+    <ellipse cx="50" cy="96" rx="20" ry="3.5" fill="#000" opacity=".08"/>
+    <path d="M22 60 q-12 0 -14 -12" stroke="#e3e0f0" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M78 60 q12 0 14 -12" stroke="#e3e0f0" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M22 86 V44 a28 28 0 0 1 56 0 V86 l-7 -6 l-7 6 l-7 -6 l-7 6 l-7 -6 l-7 6 l-7 -6z" fill="#fff" stroke="#e3e0f0" stroke-width="2"/>
+    ${eyes(41, 59, 44, m, 5)}${cheeks(34, 66, 54)}
+    ${m==="sad" ? mouth(50, 60, m, 6) : `<ellipse cx="50" cy="61" rx="6" ry="${m==="happy"?8:6}" fill="${INK}"/><ellipse cx="50" cy="65" rx="4" ry="2.5" fill="#ff7a8a"/>`}` },
+
+  sloth: { name: "Sengångaren Slö", draw: m => `${shadow}
+    <ellipse cx="50" cy="75" rx="26" ry="19" fill="#a88b6a"/>
+    <ellipse cx="26" cy="72" rx="7" ry="14" fill="#977a59" transform="rotate(15 26 72)"/>
+    <ellipse cx="74" cy="72" rx="7" ry="14" fill="#977a59" transform="rotate(-15 74 72)"/>
+    <path d="M20 84 l-3 6 M24 85 l-1 6 M80 84 l3 6 M76 85 l1 6" stroke="#f0e0c4" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="50" cy="46" r="25" fill="#a88b6a"/>
+    <ellipse cx="50" cy="49" rx="19" ry="15" fill="#f0e0c4"/>
+    <ellipse cx="40" cy="46" rx="8" ry="5" fill="#5b4632" transform="rotate(18 40 46)"/>
+    <ellipse cx="60" cy="46" rx="8" ry="5" fill="#5b4632" transform="rotate(-18 60 46)"/>
+    ${m==="happy"
+      ? `<path d="M36 47 q4 -4 8 0 M56 47 q4 -4 8 0" stroke="#f0e0c4" stroke-width="2.5" fill="none" stroke-linecap="round"/>`
+      : `<path d="M36 46 q4 4 8 0 M56 46 q4 4 8 0" stroke="#f0e0c4" stroke-width="2.5" fill="none" stroke-linecap="round"/>`}
+    <ellipse cx="50" cy="53" rx="4" ry="3" fill="#5b4632"/>${mouth(50, 57, m, 5)}
+    ${m==="idle" ? `<text x="74" y="22" font-size="13" font-weight="bold" fill="#7b6cff" font-family="sans-serif">z</text><text x="82" y="12" font-size="10" font-weight="bold" fill="#7b6cff" font-family="sans-serif">z</text>` : ""}` },
+
+  raccoon: { name: "Tvättbjörnen Rocky", draw: m => `${shadow}
+    <path d="M66 86 C92 86 98 60 86 48 C82 62 74 70 64 74Z" fill="#9aa0a8"/>
+    <path d="M86 52 l-6 6 M90 62 l-8 4 M88 74 l-8 1" stroke="${INK}" stroke-width="4"/>
+    <ellipse cx="48" cy="76" rx="22" ry="18" fill="#9aa0a8"/>
+    <ellipse cx="48" cy="80" rx="12" ry="11" fill="#d9dce0"/>
+    <path d="M26 34 L28 12 L42 26Z M74 34 L72 12 L58 26Z" fill="#9aa0a8"/>
+    <path d="M30 28 L31 17 L38 24Z M70 28 L69 17 L62 24Z" fill="${INK}"/>
+    <ellipse cx="50" cy="48" rx="27" ry="22" fill="#9aa0a8"/>
+    <path d="M28 52 q22 26 44 0 q-8 14 -22 14 q-14 0 -22 -14z" fill="#f2f2f2"/>
+    <path d="M22 44 q14 -10 28 0 q14 -10 28 0 q-4 12 -14 10 q-8 0 -14 -6 q-6 6 -14 6 q-10 2 -14 -10z" fill="${INK}"/>
+    ${m==="happy"
+      ? `<path d="M34 46 q5 -5 10 0 M56 46 q5 -5 10 0" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>`
+      : `<circle cx="39" cy="46" r="3.6" fill="#fff"/><circle cx="61" cy="46" r="3.6" fill="#fff"/><circle cx="39.5" cy="46.5" r="1.8" fill="${INK}"/><circle cx="61.5" cy="46.5" r="1.8" fill="${INK}"/>`}
+    <circle cx="50" cy="57" r="3.8" fill="${INK}"/>${mouth(50, 61, m, 5)}` },
+
+  banana: { name: "Bananen Bob", draw: m => `${shadow}
+    <path d="M38 80 l-6 12 h-6 M58 82 l4 10 h6" stroke="${INK}" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M28 54 l-12 -8 M70 52 l12 -10" stroke="${INK}" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="16" cy="46" r="3.5" fill="#fff" stroke="${INK}" stroke-width="2"/><circle cx="82" cy="42" r="3.5" fill="#fff" stroke="${INK}" stroke-width="2"/>
+    <path d="M30 88 C8 58 24 18 54 8 C46 32 48 60 72 82 C60 92 42 94 30 88Z" fill="#ffe14d" stroke="#e0b800" stroke-width="2"/>
+    <path d="M54 8 l6 -6 l3 4 l-6 5z" fill="#7a5233"/>
+    <path d="M44 34 C40 52 46 70 60 82" stroke="#f5c800" stroke-width="3" fill="none"/>
+    ${eyes(32, 46, 46, m, 4)}
+    <path d="M28 56 q5 -5 10 -1 q5 -4 10 1 q-5 4 -10 0 q-5 4 -10 0z" fill="#7a5233"/>
+    ${mouth(38, 62, m, 5)}` },
+
+  robot: { name: "Roboten Bip", draw: m => `${shadow}
+    <line x1="50" y1="8" x2="50" y2="22" stroke="#6c7a99" stroke-width="3"/><circle cx="50" cy="8" r="5" fill="#ff7a6b"/>
+    <rect x="28" y="66" width="44" height="26" rx="8" fill="#9fb3d9"/>
+    <rect x="40" y="72" width="20" height="12" rx="3" fill="#7ad7ff"/>
+    <rect x="22" y="22" width="56" height="44" rx="14" fill="#c5d4f0"/>
+    <rect x="30" y="30" width="40" height="26" rx="8" fill="${INK}"/>
+    ${m==="happy"
+      ? `<path d="M36 44 q5 -6 10 0 M54 44 q5 -6 10 0" stroke="#7affc4" stroke-width="3" fill="none"/>`
+      : `<circle cx="41" cy="42" r="4" fill="#7affc4"/><circle cx="59" cy="42" r="4" fill="#7affc4"/>`}
+    ${m==="sad" ? `<path d="M44 53 q6 -4 12 0" stroke="#7affc4" stroke-width="2" fill="none"/>` : `<path d="M44 50 q6 4 12 0" stroke="#7affc4" stroke-width="2" fill="none"/>`}
+    <circle cx="20" cy="44" r="5" fill="#9fb3d9"/><circle cx="80" cy="44" r="5" fill="#9fb3d9"/>` },
+
+  hamster: { name: "Hamstern Pluttis", draw: m => `${shadow}
+    <ellipse cx="50" cy="66" rx="34" ry="28" fill="#f2b56b"/>
+    <ellipse cx="50" cy="74" rx="22" ry="18" fill="#fff1dc"/>
+    <circle cx="26" cy="36" r="9" fill="#f2b56b"/><circle cx="74" cy="36" r="9" fill="#f2b56b"/>
+    <circle cx="26" cy="36" r="5" fill="#ffc0d3"/><circle cx="74" cy="36" r="5" fill="#ffc0d3"/>
+    <circle cx="27" cy="62" r="13" fill="#ffe1bd"/><circle cx="73" cy="62" r="13" fill="#ffe1bd"/>
+    ${eyes(40, 60, 50, m, 4.5)}
+    <path d="M47 57 h6 l-3 3z" fill="#ff8fb8"/>${mouth(50, 62, m, 4)}
+    <path d="M40 92 q4 -6 8 0 M52 92 q4 -6 8 0" stroke="#e0a05a" stroke-width="3" fill="none"/>
+    <ellipse cx="50" cy="84" rx="7" ry="5" fill="#b07a3b"/><path d="M44 82 q6 -6 12 0z" fill="#7a5233"/>` },
+};
+
+const svgOf = (drawing, mood = "idle") => `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">${drawing.draw(mood)}</svg>`;
+
+/* =====================================================================
+   Places. Each scene is a wide landscape (W×H) the hero walks around in.
+   Animals hide in "spots"; finding and answering all of them opens the
+   way on (a bridge over the stream, or the boulder rolls away).
+   ===================================================================== */
+const W = 1600, H = 900;
+const GROUND_TOP = 640, GROUND_BOTTOM = 860;   // where the hero can walk
+const GATE_X = 1420;                           // the stream / boulder
+const HERO_SIZE = 86;
+const VIEW_H = 620;
+
+const PLACES = {
+  forest:   { name: "Skogsgläntan", spots: ["bush", "log", "leaves", "hollow", "rock", "bush"], gate: "stream" },
+  lake:     { name: "Glittersjön",  spots: ["reeds", "water", "water", "rock", "bush", "reeds"], gate: "stream" },
+  valley:   { name: "Forsdalen",    spots: ["bush", "rock", "hollow", "log", "leaves", "rock"], gate: "stream" },
+  mushroom: { name: "Svampskogen",  spots: ["leaves", "log", "hollow", "bush", "leaves"], gate: "stream" },
+  mountain: { name: "Molnberget",   spots: ["rock", "snowbush", "rock", "log", "hollow"], gate: "boulder" },
+  castle:   { name: "Drakslottet",  spots: [], gate: null },
+};
+const ROUTES = { 3: ["forest", "lake", "mountain"], 4: ["forest", "lake", "valley", "mountain"], 5: ["forest", "lake", "valley", "mushroom", "mountain"] };
+
+/* How each kind of hiding spot looks and how its animal peeks out of it.
+   restTop: the animal's top edge at rest (just the ears show), relative to the spot's ground point.
+   peek / out: how far it moves up when peeking / when found. clipY: the animal is cut off below this. */
+const SPOT_KINDS = {
+  bush:     { box: [150, 110], size: 80, restTop: -92, peek: -30, out: -62, clipY: -6, animals: ["bunny", "hedgehog", "fox", "duck"] },
+  snowbush: { box: [150, 110], size: 80, restTop: -92, peek: -30, out: -62, clipY: -6, animals: ["bunny", "fox", "hedgehog"] },
+  log:      { box: [160, 80],  size: 64, restTop: -56, peek: -26, out: -42, clipY: -4, animals: ["fox", "hedgehog", "squirrel", "beaver", "bunny"] },
+  rock:     { box: [140, 95],  size: 68, restTop: -72, peek: -28, out: -46, clipY: -4, animals: ["fox", "bunny", "turtle", "beaver", "hedgehog"] },
+  leaves:   { box: [140, 75],  size: 58, restTop: -56, peek: -22, out: -40, clipY: -4, animals: ["hedgehog", "squirrel", "bunny"] },
+  reeds:    { box: [130, 125], size: 74, restTop: -76, peek: -22, out: -54, clipY: 0,  animals: ["duck", "frog", "turtle", "beaver"] },
+  hollow:   { box: [90, 300],  size: 46, restTop: -102, peek: -22, out: -42, clipEllipse: [0, -110, 17, 22], animals: ["owl", "squirrel"] },
+  water:    { box: [110, 80],  size: 64, restTop: 2,   peek: -24, out: -52, clipY: 0,  animals: ["frog", "turtle", "beaver"] },
+};
+
+const GREETINGS = [
+  "Oj, du hittade mig! Då får du en fråga:",
+  "Kurragömma är roligt! Men kan du det här?",
+  "Hallå där, äventyrare! Svara på min fråga:",
+  "Psst! Jag har en klurig fråga åt dig:",
+  "Du har skarpa ögon! Vet du svaret på det här?",
+];
+const PRAISE = ["Toppen!", "Rätt svar!", "Superbra!", "Wow, vad du kan!", "Helt rätt!", "Snyggt jobbat!"];
+const COMFORT = ["Nästan! Rätt svar var:", "Inte riktigt. Det rätta svaret är:", "Oj, det var svårt! Svaret är:"];
+const EMPTY = {
+  bush: ["Bara en sovande snigel här. Zzz…", "En fjäril flög ut! 🦋", "Här växer blåbär! Mums 🫐", "Tomt! Men det prasslade…"],
+  snowbush: ["Brr! Bara snö här ❄️", "En snöboll! Men inget djur.", "Tomt! Bara frost."],
+  log: ["Bara myror här 🐜", "Stocken är ihålig – och tom!", "En gammal sko?! 👟", "Här bor bara en mask 🪱"],
+  rock: ["Bara en mossig sten.", "Under stenen: en skalbagge 🪲", "Tomt! Men stenen ser ut som en potatis."],
+  leaves: ["Prassel prassel… bara löv! 🍂", "Ekorren har gömt nötter här 🌰", "Tomt! Men det luktar höst."],
+  reeds: ["Bara vass som viskar i vinden.", "En trollslända! 🪰", "Plask! Bara en fisk 🐟"],
+  hollow: ["Tomt hål – men det ekar! Hallååå!", "En spindel bor här 🕷️", "Bara gamla ekollon."],
+  water: ["Plask! En fisk hoppade 🐟", "Bara vattenbubblor.", "Vattnet är kallt! Inget djur här."],
+};
+
+/* =====================================================================
+   State & persistence
+   ===================================================================== */
+const STORE = "adventure.v2";
+const LENGTHS = [
+  { scenes: 3, per: 2, label: "Kort",   sub: "3 platser · 6 djur" },
+  { scenes: 4, per: 3, label: "Mellan", sub: "4 platser · 12 djur" },
+  { scenes: 5, per: 4, label: "Långt",  sub: "5 platser · 20 djur" },
+];
+const BOSS_QUESTIONS = 3;
+
+let saved = load();
+let setup = { hero: HEROES[saved.hero] ? saved.hero : "panda", name: saved.name || "", pack: null, packTitle: "", length: saved.length || 4 };
+let game = null;
+let packs = [];
+let sound = saved.sound !== false;
+
+function load() { try { return JSON.parse(localStorage.getItem(STORE) || "{}"); } catch { return {}; } }
+function persist() {
+  saved = { ...saved, hero: setup.hero, name: setup.name, length: setup.length, sound, game };
+  try { localStorage.setItem(STORE, JSON.stringify(saved)); } catch {}
+}
+
+const $ = s => document.querySelector(s);
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const pick = a => a[Math.floor(Math.random() * a.length)];
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+// Deterministic noise, so a scene's decorations look the same every time it is drawn.
+const rnd = seed => { const x = Math.sin(seed * 9301 + 49297) * 233280; return x - Math.floor(x); };
+
+/* =====================================================================
+   Sound (tiny WebAudio blips, no files)
+   ===================================================================== */
+let actx = null;
+function tone(freqs, dur = 0.12, type = "triangle", gap = 0.09) {
+  if (!sound) return;
+  try {
+    actx = actx || new (window.AudioContext || window.webkitAudioContext)();
+    freqs.forEach((f, i) => {
+      const o = actx.createOscillator(), g = actx.createGain();
+      const t = actx.currentTime + i * gap;
+      o.type = type; o.frequency.value = f;
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(0.18, t + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      o.connect(g).connect(actx.destination); o.start(t); o.stop(t + dur + 0.02);
+    });
+  } catch {}
+}
+const sfx = {
+  pop: () => tone([660], 0.08),
+  found: () => tone([523, 784, 1047], 0.12, "sine", 0.07),
+  rustle: () => tone([220, 180], 0.1, "square", 0.06),
+  right: () => tone([523, 659, 784], 0.16),
+  wrong: () => tone([300, 220], 0.2, "sawtooth", 0.12),
+  open: () => tone([392, 523, 659, 784, 1047], 0.18, "triangle", 0.1),
+  win: () => tone([523, 659, 784, 1047, 784, 1047], 0.2, "triangle", 0.12),
+};
+
+/* =====================================================================
+   Start screen
+   ===================================================================== */
+function renderStart() {
+  $("#heroes").innerHTML = Object.entries(HEROES).map(([k, h]) =>
+    `<button class="hero-btn ${setup.hero === k ? "sel" : ""}" data-hero="${k}">${svgOf(h, setup.hero === k ? "happy" : "idle")}<span>${h.name}</span></button>`
+  ).join("");
+  $("#lengths").innerHTML = LENGTHS.map(l =>
+    `<button class="len-btn ${setup.length === l.scenes ? "sel" : ""}" data-len="${l.scenes}"><b>${l.label}</b><br><small>${l.sub}</small></button>`
+  ).join("");
+  renderPacks();
+  $("#heroName").value = setup.name;
+  $("#goBtn").disabled = !setup.pack;
+  const g = saved.game;
+  $("#continueBtn").style.display = g && !g.finished ? "block" : "none";
+  if (g && !g.finished) $("#continueBtn").textContent = `Fortsätt i ${PLACES[g.scenes[g.si].place].name} (${g.packTitle.slice(0, 30)})`;
+}
+
+function renderPacks() {
+  if (!packs.length) return;
+  const done = saved.finishedPacks || {};
+  $("#packs").innerHTML = packs.map(p =>
+    `<button class="pack-btn ${setup.pack === p.file ? "sel" : ""}" data-pack="${esc(p.file)}">
+      ${done[p.file] ? `<span class="badge">🏆 ${done[p.file]}</span>` : ""}${esc(p.title)}<small>${p.count} frågor</small></button>`
+  ).join("");
+}
+
+async function loadPacks() {
+  try {
+    const r = await fetch("/api/packs");
+    const j = await r.json();
+    packs = (j.packs || []).filter(p => p.count > 0).sort((a, b) => a.title.localeCompare(b.title, "sv"));
+    renderPacks();
+    if (!packs.length) $("#packs").innerHTML = "<div>Inga frågepaket hittades.</div>";
+  } catch {
+    $("#packs").innerHTML = "<div>Kunde inte hämta frågepaket.</div>";
+  }
+}
+
+$("#heroes").onclick = e => { const b = e.target.closest("[data-hero]"); if (!b) return; setup.hero = b.dataset.hero; sfx.pop(); renderStart(); };
+$("#lengths").onclick = e => { const b = e.target.closest("[data-len]"); if (!b) return; setup.length = +b.dataset.len; sfx.pop(); renderStart(); };
+$("#packs").onclick = e => {
+  const b = e.target.closest("[data-pack]"); if (!b) return;
+  setup.pack = b.dataset.pack; setup.packTitle = packs.find(p => p.file === setup.pack)?.title || setup.pack;
+  sfx.pop(); renderPacks(); $("#goBtn").disabled = false;
+};
+$("#heroName").oninput = e => { setup.name = e.target.value.trim(); };
+$("#goBtn").onclick = startJourney;
+$("#continueBtn").onclick = () => { game = saved.game; enterScene(false); };
+
+/* =====================================================================
+   Building a journey from a pack
+   ===================================================================== */
+// Turn pack items into multiple-choice questions. Items without choices get
+// three wrong answers borrowed from other items' answers.
+function toQuestions(items) {
+  const backs = items.map(it => String(it.back ?? "").trim()).filter(Boolean);
+  return items.map(it => {
+    const q = String(it.front ?? "").trim();
+    if (!q) return null;
+    let choices, answer;
+    if (Array.isArray(it.choices) && it.choices.length >= 2 && Number.isInteger(it.answerIndex) && it.choices[it.answerIndex] != null) {
+      choices = it.choices.map(String); answer = choices[it.answerIndex];
+    } else {
+      answer = String(it.back ?? "").trim();
+      if (!answer || answer.length > 80) return null;
+      const wrong = shuffle(backs.filter(b => b !== answer && b.length <= 80)).slice(0, 3);
+      if (wrong.length < 2) return null;
+      choices = [answer, ...wrong];
+    }
+    return { q, choices: shuffle(choices), answer, explain: String(it.back ?? ""), hint: it.hint ? String(it.hint) : "" };
+  }).filter(Boolean);
+}
+
+// Lay out one scene: hiding spots spread over the width, some of them with an animal.
+function buildScene(place, animals) {
+  const def = PLACES[place];
+  const seed = Math.floor(Math.random() * 100000);
+  if (place === "castle") {
+    return { place, seed, open: false, hero: { x: 840, y: 790 },
+      spots: [{ kind: "boss", x: 1060, y: 790, animal: "dragon", found: true, answered: false, stars: 0, bossLeft: BOSS_QUESTIONS }] };
+  }
+  const count = animals + Math.max(3, animals + 1);           // about half the spots are empty
+  const kinds = shuffle(Array.from({ length: count }, (_, i) => def.spots[i % def.spots.length]));
+  const x0 = 230, x1 = GATE_X - 160, step = (x1 - x0) / (count - 1);
+  const spots = kinds.map((kind, i) => {
+    const x = x0 + i * step + (Math.random() - .5) * step * .5;
+    let y;
+    if (kind === "water") y = 470 + Math.random() * 90;           // out in the lake
+    else if (kind === "reeds") y = 640 + Math.random() * 30;      // along the shore
+    else if (kind === "hollow") y = 655 + Math.random() * 25;     // trees stand at the back
+    else y = (i % 2 ? 690 : 760) + Math.random() * 70;
+    return { kind, x: Math.round(x), y: Math.round(y), animal: null, found: false, answered: false, stars: 0 };
+  });
+  // Put animals in spots they like; don't use the same animal twice in a scene if avoidable.
+  const used = new Set();
+  shuffle(spots.map((_, i) => i)).slice(0, animals).forEach(i => {
+    const options = SPOT_KINDS[spots[i].kind].animals;
+    const fresh = options.filter(a => !used.has(a));
+    const a = pick(fresh.length ? fresh : options);
+    used.add(a); spots[i].animal = a;
+  });
+  return { place, seed, open: false, hero: { x: 110, y: 770 }, spots };
+}
+
+async function startJourney() {
+  $("#goBtn").disabled = true;
+  let pack;
+  try {
+    const r = await fetch(`/api/pack/${encodeURIComponent(setup.pack)}`);
+    pack = await r.json();
+  } catch { alert("Kunde inte ladda frågepaketet."); $("#goBtn").disabled = false; return; }
+  const qs = shuffle(toQuestions(pack.items || []));
+  if (qs.length < 3) { alert("Det här paketet har för få frågor för ett äventyr."); $("#goBtn").disabled = false; return; }
+
+  const len = LENGTHS.find(l => l.scenes === setup.length) || LENGTHS[1];
+  const scenes = ROUTES[len.scenes].map(p => buildScene(p, len.per));
+  scenes.push(buildScene("castle", 0));
+
+  game = {
+    pack: setup.pack, packTitle: setup.packTitle || pack.title || setup.pack,
+    hero: setup.hero, name: setup.name, scenes, si: 0, stars: 0,
+    questions: qs, qi: 0, finished: false, startedAt: Date.now(),
+  };
+  persist();
+  track("session", { action: "start" });
+  enterScene(true);
+}
+
+function nextQuestion() {
+  if (game.qi >= game.questions.length) { game.questions = shuffle(game.questions); game.qi = 0; }
+  return game.questions[game.qi++];
+}
+
+const scene = () => game.scenes[game.si];
+const animalSpots = sc => sc.spots.filter(s => s.animal && s.kind !== "boss");
+
+/* =====================================================================
+   Drawing the scene
+   ===================================================================== */
+function bgTree(x, y, s, c1, c2) {
+  return `<g transform="translate(${x} ${y}) scale(${s})"><rect x="-7" y="-40" width="14" height="44" fill="#6e4a2f"/>
+    <circle cx="0" cy="-70" r="40" fill="${c1}"/><circle cx="-26" cy="-50" r="26" fill="${c2}"/><circle cx="26" cy="-52" r="28" fill="${c2}"/></g>`;
+}
+function pine(x, y, s, c = "#2f7d4a", snow = false) {
+  return `<g transform="translate(${x} ${y}) scale(${s})"><rect x="-6" y="-14" width="12" height="18" fill="#6e4a2f"/>
+    <path d="M0 -120 L36 -50 H-36Z M0 -90 L44 -14 H-44Z" fill="${c}"/>
+    ${snow ? `<path d="M0 -120 L14 -94 Q0 -88 -14 -94Z M-30 -50 q30 -10 60 0 l-8 -14 h-44z" fill="#fff" opacity=".95"/>` : ""}</g>`;
+}
+function cloud(x, y, s) {
+  return `<g transform="translate(${x} ${y}) scale(${s})" opacity=".95"><ellipse rx="50" ry="20" fill="#fff"/><ellipse cx="-24" cy="-12" rx="26" ry="20" fill="#fff"/><ellipse cx="20" cy="-16" rx="30" ry="24" fill="#fff"/></g>`;
+}
+function flower(x, y, c) {
+  return `<g transform="translate(${x} ${y})"><path d="M0 0 v14" stroke="#4f9a3c" stroke-width="2.5"/>${[0, 72, 144, 216, 288].map(a =>
+    `<circle cx="${(Math.cos(a * Math.PI / 180) * 6).toFixed(1)}" cy="${(Math.sin(a * Math.PI / 180) * 6).toFixed(1)}" r="5" fill="${c}"/>`).join("")}<circle r="3.5" fill="#ffb02e"/></g>`;
+}
+const tuft = (x, y, c = "#5fae4c") => `<path d="M${x - 12} ${y} q4 -16 8 0 q4 -20 8 0 q4 -14 8 0z" fill="${c}"/>`;
+function toadstool(x, y, s, cap = "#e8433a") {
+  return `<g transform="translate(${x} ${y}) scale(${s})"><path d="M-10 0 q-2 -30 4 -40 h12 q6 10 4 40z" fill="#fff4e0"/>
+    <path d="M-40 -36 q40 -50 80 0 q-40 12 -80 0z" fill="${cap}"/><circle cx="-18" cy="-48" r="6" fill="#fff"/><circle cx="8" cy="-56" r="5" fill="#fff"/><circle cx="22" cy="-42" r="4" fill="#fff"/></g>`;
+}
+
+function background(sc) {
+  const seed = sc.seed, p = sc.place;
+  let s = "";
+  const sky = { forest: ["#9fdcff", "#e2f6ff"], lake: ["#8fd3ff", "#e8f8ff"], valley: ["#a7e0ff", "#eafaff"],
+    mushroom: ["#b9b0ff", "#f3e9ff"], mountain: ["#c3dcf2", "#f2f8ff"], castle: ["#ffb3c8", "#ffe9b0"] }[p];
+  s += `<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${sky[0]}"/><stop offset="1" stop-color="${sky[1]}"/></linearGradient>
+    <linearGradient id="grd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${p === "mountain" ? "#a9c99a" : p === "mushroom" ? "#7dbf7a" : "#8fd16f"}"/><stop offset="1" stop-color="${p === "mountain" ? "#8fb284" : p === "mushroom" ? "#5e9f64" : "#6cb85c"}"/></linearGradient>
+    <linearGradient id="wat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fd0ee"/><stop offset="1" stop-color="#3f9fd6"/></linearGradient></defs>
+    <rect width="${W}" height="${H}" fill="url(#sky)"/>`;
+  s += `<circle cx="${180 + rnd(seed) * 300}" cy="110" r="52" fill="${p === "mushroom" ? "#fff7d6" : "#ffe36b"}" opacity=".95"/>`;
+  for (let k = 0; k < 5; k++) s += cloud(rnd(seed + k) * W, 70 + rnd(seed + k + 9) * 160, .7 + rnd(seed + k + 3) * .6);
+
+  if (p === "mountain" || p === "lake" || p === "valley") {
+    for (let k = 0; k < 6; k++) {
+      const x = k * 300 + rnd(seed + 20 + k) * 120 - 60, h = 230 + rnd(seed + 30 + k) * 170, base = p === "lake" ? 380 : 560;
+      s += `<path d="M${x - 220} ${base} L${x} ${base - h} L${x + 220} ${base}Z" fill="${k % 2 ? "#a7b9d6" : "#93a8ca"}"/>
+        <path d="M${x - 50} ${base - h + 50} L${x} ${base - h} L${x + 50} ${base - h + 50} L${x + 22} ${base - h + 40} L${x} ${base - h + 54} L${x - 22} ${base - h + 40}Z" fill="#fff"/>`;
+    }
+  }
+  if (p === "forest" || p === "mushroom" || p === "valley") {
+    s += `<path d="M0 520 Q200 440 420 500 T860 490 T1300 480 T1600 500 V640 H0Z" fill="${p === "mushroom" ? "#8ea6d9" : "#a6d98f"}"/>`;
+    const c = p === "mushroom" ? ["#4f7d8f", "#5f8f9f"] : ["#3f8f4f", "#4ea35c"];
+    for (let k = 0; k < 24; k++) s += bgTree(k * 70 + rnd(seed + 40 + k) * 30, 620 - rnd(seed + 60 + k) * 40, .9 + rnd(seed + 80 + k) * .6, c[0], c[1]);
+  }
+  if (p === "valley") {
+    // waterfall into a pond at the back
+    const wx = 520 + rnd(seed + 5) * 300;
+    s += `<rect x="${wx - 40}" y="250" width="80" height="360" fill="#bfe9fb"/>
+      <path d="M${wx - 30} 260 v340 M${wx - 10} 260 v340 M${wx + 12} 260 v340 M${wx + 30} 260 v340" stroke="#fff" stroke-width="4" stroke-dasharray="20 14" opacity=".8"/>
+      <path d="M${wx - 90} 250 q90 -40 180 0 v20 h-180z" fill="#93a8ca"/>
+      <ellipse cx="${wx}" cy="635" rx="150" ry="26" fill="url(#wat)"/>
+      <ellipse cx="${wx}" cy="618" rx="70" ry="12" fill="#fff" opacity=".6"/>`;
+  }
+  if (p === "mountain") {
+    for (let k = 0; k < 18; k++) s += pine(k * 95 + rnd(seed + 50 + k) * 40, 640 - rnd(seed + 70 + k) * 30, .8 + rnd(seed + 90 + k) * .5, k % 2 ? "#2f7d4a" : "#3a8a55", true);
+  }
+  if (p === "lake") {
+    for (let k = 0; k < 30; k++) s += pine(k * 56 + rnd(seed + 50 + k) * 20, 384, .45 + rnd(seed + 90 + k) * .25, k % 2 ? "#2f7d4a" : "#3a8a55");
+    s += `<rect x="0" y="380" width="${W}" height="260" fill="url(#wat)"/>`;
+    for (let k = 0; k < 26; k++) {
+      const x = rnd(seed + 120 + k) * W, y = 400 + rnd(seed + 140 + k) * 210;
+      s += `<path d="M${x - 18} ${y} q9 -6 18 0 q9 6 18 0" stroke="#fff" stroke-width="2.5" fill="none" opacity=".7"/>`;
+    }
+    for (let k = 0; k < 6; k++) {
+      const x = rnd(seed + 160 + k) * (GATE_X - 100), y = 430 + rnd(seed + 170 + k) * 150;
+      s += `<g transform="translate(${x} ${y})"><ellipse rx="22" ry="9" fill="#4fae5b"/><path d="M0 0 L22 -3 L19 5Z" fill="#5fb6dc"/>${k % 2 ? `<circle cx="-6" cy="-5" r="5" fill="#ff9fc4"/>` : ""}</g>`;
+    }
+  }
+  if (p === "castle") {
+    s += `<path d="M0 560 Q300 480 640 540 T1300 520 T1600 540 V640 H0Z" fill="#c6e7a8"/>`;
+    // rainbow behind the castle
+    ["#ff8a8a", "#ffc46b", "#fff07a", "#8fe08a", "#7ad7ff", "#b39bff"].forEach((c, k) =>
+      s += `<path d="M${640 + k * 14} 640 A${440 - k * 14} ${360 - k * 14} 0 0 1 ${1520 - k * 14} 640" stroke="${c}" stroke-width="14" fill="none" opacity=".75"/>`);
+    s += castleSvg(1080, 640);
+  }
+
+  // the ground
+  const groundTop = p === "lake" ? 625 : 600;
+  s += `<path d="M0 ${groundTop} Q400 ${groundTop - 20} 800 ${groundTop} T1600 ${groundTop} V${H} H0Z" fill="url(#grd)"/>`;
+  if (p === "lake") s += `<path d="M0 622 Q400 600 800 620 T1600 620 V640 Q800 650 0 640Z" fill="#ead9a2"/>`;
+  if (p === "castle") s += `<path d="M120 800 Q500 820 760 760 T1080 690" stroke="#e9d3a6" stroke-width="54" fill="none" stroke-linecap="round"/>`;
+  // ground decorations
+  for (let k = 0; k < 40; k++) {
+    const x = rnd(seed + 200 + k) * W, y = 650 + rnd(seed + 260 + k) * 240, r = rnd(seed + 320 + k);
+    if (p === "mountain") s += r < .5 ? tuft(x, y, "#7fa874") : `<ellipse cx="${x}" cy="${y}" rx="${8 + r * 10}" ry="${5 + r * 5}" fill="#b6bfc9"/>`;
+    else if (p === "mushroom" && r < .25) s += toadstool(x, y, .4 + r, ["#e8433a", "#b36bff", "#ff8a3d"][k % 3]);
+    else s += r < .55 ? tuft(x, y) : flower(x, y, ["#ff8fb8", "#ffd447", "#fff", "#b48bff", "#7ad7ff"][k % 5]);
+  }
+  if (p === "mushroom") for (let k = 0; k < 14; k++)
+    s += `<circle cx="${rnd(seed + 400 + k) * W}" cy="${300 + rnd(seed + 420 + k) * 500}" r="3" fill="#fff59a" class="pulse" style="animation-delay:${(rnd(seed + 440 + k) * 2).toFixed(2)}s"/>`;
+  // a butterfly or two
+  for (let k = 0; k < 2; k++) {
+    const x = 200 + rnd(seed + 500 + k) * 1000, y = 560 + rnd(seed + 510 + k) * 120;
+    s += `<g class="flutter" style="animation-delay:-${k * 3}s"><g transform="translate(${x} ${y})"><ellipse cx="-6" cy="0" rx="7" ry="9" fill="#ff9fc4"/><ellipse cx="6" cy="0" rx="7" ry="9" fill="#ffd447"/><rect x="-1.5" y="-7" width="3" height="14" rx="1.5" fill="${INK}"/></g></g>`;
+  }
+  return s;
+}
+
+function castleSvg(x, y) {
+  return `<g transform="translate(${x} ${y})">
+    <rect x="-150" y="-170" width="300" height="180" fill="#e8d9ff"/>
+    ${[-150, -100, -50, 0, 50, 100].map(cx => `<rect x="${cx}" y="-190" width="26" height="22" fill="#e8d9ff"/>`).join("")}
+    <rect x="-210" y="-260" width="80" height="270" fill="#d7c4ff"/><rect x="130" y="-260" width="80" height="270" fill="#d7c4ff"/>
+    <rect x="-40" y="-300" width="80" height="140" fill="#d7c4ff"/>
+    <path d="M-220 -260 L-170 -350 L-120 -260Z M120 -260 L170 -350 L220 -260Z M-50 -300 L0 -390 L50 -300Z" fill="#ff8fb8"/>
+    <path d="M-170 -350 v-28 l24 10 l-24 10 M170 -350 v-28 l24 10 l-24 10 M0 -390 v-28 l24 10 l-24 10" fill="#ffd447" stroke="#b08a00" stroke-width="2"/>
+    <path d="M-44 10 v-70 a44 44 0 0 1 88 0 v70z" fill="#7a5233"/><path d="M0 -104 v114" stroke="#5b3c27" stroke-width="3"/>
+    <circle cx="-170" cy="-170" r="16" fill="#7ad7ff"/><circle cx="170" cy="-170" r="16" fill="#7ad7ff"/><circle cx="0" cy="-230" r="16" fill="#7ad7ff"/>
+  </g>`;
+}
+
+// The thing blocking the way on: a stream (bridge appears) or a boulder (rolls away).
+function gateSvg(sc) {
+  const def = PLACES[sc.place];
+  if (!def.gate) return "";
+  let s = "";
+  if (def.gate === "stream") {
+    const top = sc.place === "lake" ? 625 : 600;
+    s += `<path d="M${GATE_X - 30} ${top} C${GATE_X - 70} 700 ${GATE_X + 10} 780 ${GATE_X - 40} ${H} H${GATE_X + 60} C${GATE_X + 110} 780 ${GATE_X + 30} 700 ${GATE_X + 60} ${top}Z" fill="url(#wat)"/>`;
+    for (let k = 0; k < 6; k++) s += `<path d="M${GATE_X - 10 + (k % 2) * 20} ${top + 30 + k * 45} q8 -5 16 0" stroke="#fff" stroke-width="2.5" fill="none" opacity=".8"/>`;
+    if (sc.open) {
+      s += `<g><rect x="${GATE_X - 90}" y="700" width="200" height="90" rx="10" fill="#a4703f"/>
+        ${Array.from({ length: 9 }, (_, k) => `<rect x="${GATE_X - 86 + k * 22}" y="702" width="18" height="86" rx="3" fill="${k % 2 ? "#c08a52" : "#b87f48"}"/>`).join("")}
+        <path d="M${GATE_X - 90} 700 h200 M${GATE_X - 90} 790 h200" stroke="#7a5233" stroke-width="8" stroke-linecap="round"/>
+        <path d="M${GATE_X - 80} 700 v-24 M${GATE_X + 100} 700 v-24 M${GATE_X - 80} 676 h180" stroke="#7a5233" stroke-width="6" stroke-linecap="round"/></g>`;
+    }
+  } else {
+    const bx = sc.open ? GATE_X + 80 : GATE_X + 10, by = sc.open ? 640 : 830, r = sc.open ? .7 : 1;
+    s += `<g transform="translate(${bx} ${by}) scale(${r})"><path d="M-110 0 Q-130 -120 -30 -170 Q80 -190 110 -80 Q130 0 90 0Z" fill="#8f99a6"/>
+      <path d="M-60 -120 q30 -20 60 -10 M30 -60 q20 10 30 30" stroke="#aab3be" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <ellipse cx="-20" cy="-150" rx="30" ry="10" fill="#fff" opacity=".9"/></g>`;
+  }
+  // signpost to the next place
+  const next = PLACES[game.scenes[game.si + 1]?.place]?.name || "";
+  s += `<g class="exit ${sc.open ? "pulse" : ""}" style="cursor:pointer">
+    <rect x="1530" y="650" width="10" height="110" fill="#7a5233"/>
+    <path d="M1478 640 h96 l20 22 l-20 22 h-96z" fill="${sc.open ? "#ffd447" : "#d8cbb4"}" stroke="#7a5233" stroke-width="3"/>
+    <text x="1530" y="668" text-anchor="middle" font-size="16" font-weight="bold" fill="${INK}">${sc.open ? esc(next.slice(0, 11)) : "🔒"}</text></g>`;
+  return s;
+}
+
+// One hiding spot: the object, the animal peeking out of it, and what it says once answered.
+function spotSvg(sp, i) {
+  const sid = `${game.si}-${i}`, x = sp.x, y = sp.y;
+  if (sp.kind === "boss") {
+    const done = sp.answered;
+    return `<g class="spot" data-i="${i}">
+      <rect x="${x - 90}" y="${y - 170}" width="180" height="180" fill="transparent" pointer-events="all"/>
+      <g class="${done ? "" : "bob"}"><svg x="${x - 80}" y="${y - 160}" width="160" height="160" viewBox="0 0 100 100">${CHARACTERS.dragon.draw(done ? "happy" : "idle")}</svg></g>
+      ${done ? "" : `<g class="pulse"><circle cx="${x + 60}" cy="${y - 150}" r="20" fill="#ffd447" stroke="#fff" stroke-width="4"/><text x="${x + 60}" y="${y - 141}" text-anchor="middle" font-size="26" font-weight="bold" fill="${INK}">!</text></g>`}
+    </g>`;
+  }
+  const k = SPOT_KINDS[sp.kind];
+  const [bw, bh] = k.box;
+  const objects = spotObject(sp.kind, x, y, sid);
+  let peeker = "", clip = "";
+  if (sp.animal) {
+    const st = sp.found ? "out" : "hiding";
+    const dur = (5 + rnd(sp.x) * 3).toFixed(2), delay = (-rnd(sp.y) * 6).toFixed(2);
+    const mood = sp.answered ? "happy" : "idle";
+    const inner = `<g class="peeker ${st}" style="--pk:${k.peek}px;--out:${k.out}px;animation-duration:${dur}s;animation-delay:${delay}s">
+      <svg x="${x - k.size / 2}" y="${y + k.restTop}" width="${k.size}" height="${k.size}" viewBox="0 0 100 100">${CHARACTERS[sp.animal].draw(mood)}</svg></g>`;
+    if (!sp.found) {
+      clip = k.clipEllipse
+        ? `<clipPath id="c${sid}"><ellipse cx="${x + k.clipEllipse[0]}" cy="${y + k.clipEllipse[1]}" rx="${k.clipEllipse[2]}" ry="${k.clipEllipse[3]}"/></clipPath>`
+        : `<clipPath id="c${sid}"><rect x="${x - 200}" y="${y - 600}" width="400" height="${600 + k.clipY}"/></clipPath>`;
+      peeker = `<g class="peek-wrap" clip-path="url(#c${sid})">${inner}</g>`;
+    } else peeker = `<g class="peek-wrap">${inner}</g>`;
+  }
+  const topY = y + k.restTop + k.out;
+  const badge = sp.answered
+    ? `<text x="${x}" y="${topY - 6}" text-anchor="middle" font-size="22">${"⭐".repeat(sp.stars)}</text>`
+    : sp.found ? `<g class="pulse"><circle cx="${x + k.size / 2}" cy="${topY + 4}" r="15" fill="#ffd447" stroke="#fff" stroke-width="3"/><text x="${x + k.size / 2}" y="${topY + 11}" text-anchor="middle" font-size="19" font-weight="bold" fill="${INK}">?</text></g>` : "";
+  const bubbles = sp.kind === "water" && sp.animal && !sp.found
+    ? [0, 1, 2].map(b => `<circle cx="${x - 10 + b * 10}" cy="${y - 4}" r="${3 + b}" fill="#fff" opacity=".8" class="bubble-up" style="animation-delay:${b * 0.9 + rnd(sp.x + b) * 2}s"/>`).join("") : "";
+  // a found animal stands in front of its hiding place; a hidden one behind it
+  return `<g class="spot" data-i="${i}">${clip ? `<defs>${clip}</defs>` : ""}
+    <rect x="${x - bw / 2}" y="${y - bh}" width="${bw}" height="${bh + 14}" fill="transparent" pointer-events="all"/>
+    ${objects.back}${sp.found ? "" : peeker}<g class="front">${objects.front}</g>${sp.found ? peeker : ""}${bubbles}${badge}</g>`;
+}
+
+function spotObject(kind, x, y, sid) {
+  const r = rnd(x + y);
+  switch (kind) {
+    case "bush": case "snowbush": {
+      const c1 = kind === "snowbush" ? "#4f8f62" : "#3f9a4a", c2 = kind === "snowbush" ? "#5ea672" : "#4fb35a";
+      return { back: "", front: `<g>
+        <circle cx="${x - 40}" cy="${y - 30}" r="32" fill="${c1}"/><circle cx="${x + 40}" cy="${y - 30}" r="32" fill="${c1}"/>
+        <circle cx="${x}" cy="${y - 50}" r="36" fill="${c2}"/><circle cx="${x - 18}" cy="${y - 20}" r="30" fill="${c2}"/><circle cx="${x + 18}" cy="${y - 20}" r="30" fill="${c2}"/>
+        ${kind === "snowbush"
+          ? `<path d="M${x - 34} ${y - 80} q34 -18 68 0 q-34 8 -68 0z M${x - 70} ${y - 52} q22 -14 40 -4 q-20 6 -40 4z" fill="#fff"/>`
+          : `<circle cx="${x - 20}" cy="${y - 44}" r="5" fill="#e8433a"/><circle cx="${x + 26}" cy="${y - 30}" r="5" fill="#e8433a"/><circle cx="${x + 6}" cy="${y - 66}" r="4.5" fill="#e8433a"/>`}
+        <path d="M${x - 50} ${y - 46} q10 -8 20 -2 M${x + 30} ${y - 56} q10 -8 20 -2" stroke="#6fd07a" stroke-width="3" fill="none" stroke-linecap="round"/></g>` };
+    }
+    case "log":
+      return { back: "", front: `<rect x="${x - 70}" y="${y - 48}" width="136" height="48" rx="22" fill="#8a5a3b"/>
+        <path d="M${x - 50} ${y - 34} h60 M${x - 30} ${y - 18} h70" stroke="#6e4528" stroke-width="3" stroke-linecap="round"/>
+        <ellipse cx="${x + 62}" cy="${y - 24}" rx="14" ry="24" fill="#d8a873"/><ellipse cx="${x + 62}" cy="${y - 24}" rx="8" ry="14" fill="none" stroke="#a8784a" stroke-width="2.5"/>
+        <path d="M${x - 60} ${y - 46} q20 -12 40 0z" fill="#6fbf4f"/>${r > .5 ? toadstool(x - 20, y - 44, .35) : ""}` };
+    case "rock":
+      return { back: "", front: `<path d="M${x - 62} ${y} Q${x - 70} ${y - 50} ${x - 22} ${y - 66} Q${x + 34} ${y - 78} ${x + 60} ${y - 34} Q${x + 70} ${y} ${x + 44} ${y}Z" fill="#9aa3ad"/>
+        <path d="M${x - 30} ${y - 50} q20 -12 40 -6" stroke="#b8c0c9" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <path d="M${x - 62} ${y - 6} q18 -18 38 -10 q-10 10 -38 10z" fill="#7fbf5f"/>` };
+    case "leaves": {
+      const leaf = (lx, ly, rot, c) => `<ellipse cx="${lx}" cy="${ly}" rx="10" ry="5" fill="${c}" transform="rotate(${rot} ${lx} ${ly})"/>`;
+      return { back: "", front: `<path d="M${x - 66} ${y} Q${x - 56} ${y - 44} ${x} ${y - 54} Q${x + 56} ${y - 44} ${x + 66} ${y}Z" fill="#d9822f"/>
+        ${leaf(x - 30, y - 30, 20, "#f0a43a")}${leaf(x + 10, y - 44, -30, "#e8533a")}${leaf(x + 34, y - 22, 40, "#f5c84a")}${leaf(x - 8, y - 16, -10, "#c96a26")}${leaf(x - 46, y - 10, 60, "#e8533a")}${leaf(x + 48, y - 8, -50, "#f0a43a")}` };
+    }
+    case "reeds": {
+      let reeds = "";
+      for (let k = 0; k < 11; k++) {
+        const rx = x - 55 + k * 11, h = 80 + rnd(x + k) * 45, lean = (rnd(y + k) - .5) * 16;
+        reeds += `<path d="M${rx} ${y} q${lean / 2} ${-h / 2} ${lean} ${-h}" stroke="${k % 2 ? "#4f9a3c" : "#5fae4c"}" stroke-width="5" fill="none" stroke-linecap="round"/>`;
+        if (k % 3 === 1) reeds += `<ellipse cx="${rx + lean}" cy="${y - h + 6}" rx="4.5" ry="12" fill="#8a5a3b"/>`;
+      }
+      return { back: `<ellipse cx="${x}" cy="${y}" rx="70" ry="10" fill="#5fb6dc" opacity=".5"/>`, front: `<g class="sway">${reeds}</g>` };
+    }
+    case "hollow":
+      return { back: `<g><path d="M${x - 26} ${y} q-14 4 -22 2 q14 -8 22 -14z M${x + 26} ${y} q14 4 22 2 q-14 -8 -22 -14z" fill="#7a5233"/>
+          <rect x="${x - 26}" y="${y - 210}" width="52" height="212" fill="#8a5a3b"/>
+          <path d="M${x - 14} ${y - 180} v60 M${x + 12} ${y - 60} v50" stroke="#6e4528" stroke-width="3"/>
+          <circle cx="${x}" cy="${y - 262}" r="70" fill="#3f9a4a"/><circle cx="${x - 52}" cy="${y - 222}" r="46" fill="#4fb35a"/><circle cx="${x + 54}" cy="${y - 226}" r="48" fill="#4fb35a"/>
+          <ellipse cx="${x}" cy="${y - 110}" rx="19" ry="24" fill="#6e4528"/><ellipse cx="${x}" cy="${y - 110}" rx="16" ry="21" fill="#2f1d12"/></g>`, front: "" };
+    case "water":
+      return { back: "", front: `<ellipse cx="${x}" cy="${y}" rx="26" ry="7" fill="none" stroke="#fff" stroke-width="3" class="ripple" style="animation-delay:${(r * 2).toFixed(2)}s"/>
+        <ellipse cx="${x}" cy="${y}" rx="26" ry="7" fill="none" stroke="#fff" stroke-width="3" class="ripple" style="animation-delay:${(r * 2 + 1.2).toFixed(2)}s"/>
+        <g transform="translate(${x + 34} ${y + 6})"><ellipse rx="20" ry="8" fill="#4fae5b"/><path d="M0 0 L20 -3 L17 5Z" fill="#5fb6dc"/></g>` };
+  }
+  return { back: "", front: "" };
+}
+
+let scale = 1;
+function renderScene() {
+  const sc = scene();
+  // draw spots back to front so nearer things overlap farther ones
+  const order = sc.spots.map((s, i) => i).sort((a, b) => sc.spots[a].y - sc.spots[b].y);
+  const h = sc.hero;
+  $("#world").innerHTML = `<svg id="scene" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+    ${background(sc)}${gateSvg(sc)}
+    <g id="spots">${order.map(i => spotSvg(sc.spots[i], i)).join("")}</g>
+    <g id="fx"></g>
+    <g id="hero" transform="translate(${h.x} ${h.y})"><g id="heroFlip">
+      <ellipse cx="0" cy="-4" rx="30" ry="7" fill="#000" opacity=".15"/>
+      <svg x="${-HERO_SIZE / 2}" y="${-HERO_SIZE}" width="${HERO_SIZE}" height="${HERO_SIZE}" viewBox="0 0 100 100">${HEROES[game.hero].draw("idle")}</svg></g></g>
+  </svg>`;
+  fitScene();
+  updateHud();
+}
+
+function fitScene() {
+  const svg = $("#scene"); if (!svg) return;
+  // show about 620 units of height, so the screen is mostly ground (where the animals are), not sky
+  scale = Math.max(innerHeight / VIEW_H, innerWidth / W);
+  svg.style.width = W * scale + "px";
+  svg.style.height = H * scale + "px";
+}
+
+function camera(x, y, smooth) {
+  $("#world").scrollTo({ left: x * scale - innerWidth / 2, top: y * scale - innerHeight * 0.66, behavior: smooth ? "smooth" : "auto" });
+}
+
+function updateHud() {
+  const sc = scene();
+  const as = animalSpots(sc), found = as.filter(s => s.answered).length;
+  $("#where").innerHTML = sc.place === "castle" ? `🏰 <span class="place">${PLACES.castle.name}</span>` : `<span class="place">${PLACES[sc.place].name} · </span>🐾 ${found}/${as.length}`;
+  $("#starCount").textContent = `⭐ ${game.stars}`;
+  $("#soundBtn").textContent = sound ? "🔊" : "🔇";
+  $("#hintSpotBtn").style.display = sc.place === "castle" ? "none" : "";
+}
+
+function banner(title, sub) {
+  $("#bannerTitle").textContent = title; $("#bannerSub").textContent = sub;
+  const b = $("#banner"); b.classList.remove("on"); void b.offsetWidth; b.classList.add("on");
+}
+
+function enterScene(fresh) {
+  show("play");
+  renderScene();
+  const sc = scene(), as = animalSpots(sc);
+  const look = sc.place === "castle" ? { x: (sc.hero.x + sc.spots[0].x) / 2, y: sc.hero.y } : sc.hero;
+  requestAnimationFrame(() => camera(look.x, look.y, false));
+  if (sc.place === "castle") banner(PLACES.castle.name, "Draken Doris väntar vid slottet!");
+  else if (sc.open) banner(PLACES[sc.place].name, "Bra jobbat! Gå vidare till nästa plats →");
+  else banner(PLACES[sc.place].name, `${as.length} djur har gömt sig här. Kan du hitta dem?${game.si === 0 ? " Svep för att se dig omkring!" : ""}`);
+  if (fresh) sfx.open();
+}
+
+/* =====================================================================
+   Walking around
+   ===================================================================== */
+let walking = false;
+function walkTo(tx, ty, done) {
+  const sc = scene();
+  ty = clamp(ty, GROUND_TOP + 30, GROUND_BOTTOM);
+  tx = clamp(tx, 50, sc.open || !PLACES[sc.place].gate ? W - 40 : GATE_X - 70);
+  const from = { ...sc.hero }, dist = Math.hypot(tx - from.x, ty - from.y);
+  const hero = $("#hero"), flip = $("#heroFlip");
+  if (Math.abs(tx - from.x) > 4) flip.setAttribute("transform", tx < from.x ? "scale(-1 1)" : "");
+  if (dist < 6) { done && done(); return; }
+  walking = true;
+  const dur = Math.max(250, dist / 0.5), hops = Math.max(1, Math.round(dist / 70)), t0 = performance.now();
+  (function frame(now) {
+    const t = Math.min(1, (now - t0) / dur);
+    const x = from.x + (tx - from.x) * t, y = from.y + (ty - from.y) * t;
+    const hop = Math.abs(Math.sin(t * Math.PI * hops)) * 14;
+    hero.setAttribute("transform", `translate(${x} ${y - hop})`);
+    camera(x, y, false);
+    if (t < 1) return requestAnimationFrame(frame);
+    hero.setAttribute("transform", `translate(${x} ${y})`);
+    sc.hero = { x: Math.round(x), y: Math.round(y) };
+    walking = false; persist();
+    done && done();
+  })(t0);
+}
+
+function toScene(e) {
+  const svg = $("#scene"), pt = svg.createSVGPoint();
+  pt.x = e.clientX; pt.y = e.clientY;
+  return pt.matrixTransform(svg.getScreenCTM().inverse());
+}
+
+// Drag with the mouse to look around (touch screens scroll by themselves).
+let drag = null, dragged = false;
+$("#world").addEventListener("pointerdown", e => {
+  if (e.pointerType !== "mouse") return;
+  const w = $("#world");
+  drag = { x: e.clientX, y: e.clientY, l: w.scrollLeft, t: w.scrollTop }; dragged = false;
+});
+addEventListener("pointermove", e => {
+  if (!drag) return;
+  const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+  if (Math.abs(dx) + Math.abs(dy) > 6) dragged = true;
+  if (dragged) { const w = $("#world"); w.scrollLeft = drag.l - dx; w.scrollTop = drag.t - dy; }
+});
+addEventListener("pointerup", () => { drag = null; });
+
+$("#world").onclick = e => {
+  if (dragged) { dragged = false; return; }
+  if (walking || !$("#scene")) return;
+  const sc = scene();
+  const spotEl = e.target.closest(".spot");
+  if (spotEl) {
+    const i = +spotEl.dataset.i, sp = sc.spots[i];
+    // stand next to the spot, on the side the hero comes from
+    const side = sc.hero.x < sp.x ? -1 : 1;
+    const standX = sp.x + side * (SPOT_KINDS[sp.kind]?.box[0] / 2 + 20 || 110);
+    const standY = sp.kind === "water" || sp.kind === "hollow" || sp.kind === "reeds" ? GROUND_TOP + 50 : sp.y + 6;
+    return walkTo(standX, standY, () => {
+      $("#heroFlip").setAttribute("transform", side < 0 ? "" : "scale(-1 1)");
+      inspect(i);
+    });
+  }
+  if (e.target.closest(".exit")) {
+    if (!sc.open) return say("Hitta alla gömda djur först! 🔍", e.clientX, e.clientY);
+    return walkTo(W - 60, 740, leaveScene);
+  }
+  const p = toScene(e);
+  walkTo(p.x, p.y, () => { if (sc.open && sc.hero.x > GATE_X + 80) leaveScene(); });
+};
+
+// What happens when the hero reaches a spot.
+function inspect(i) {
+  const sc = scene(), sp = sc.spots[i];
+  const el = document.querySelector(`.spot[data-i="${i}"]`);
+  if (!sp.animal) {
+    sfx.rustle();
+    el.querySelector(".front")?.classList.remove("wiggle"); void el.getBoundingClientRect();
+    el.querySelector(".front")?.classList.add("wiggle");
+    const r = el.getBoundingClientRect();
+    return say(pick(EMPTY[sp.kind] || ["Tomt här!"]), r.left + r.width / 2, r.top + 10);
+  }
+  if (sp.answered) {
+    const r = el.getBoundingClientRect();
+    return say(`${CHARACTERS[sp.animal].name}: Tack för hjälpen! 💛`, r.left + r.width / 2, r.top);
+  }
+  if (!sp.found) {
+    // pop out of the hiding place, in front of it
+    sp.found = true; persist();
+    sfx.found();
+    const wrap = el.querySelector(".peek-wrap"), pk = el.querySelector(".peeker");
+    wrap.removeAttribute("clip-path");
+    el.insertBefore(wrap, el.querySelector(".front").nextSibling);
+    pk.classList.remove("hiding");
+    pk.style.transform = "translateY(0)"; void pk.getBoundingClientRect(); pk.style.transform = "";
+    pk.classList.add("out");
+    const r = el.getBoundingClientRect();
+    say("Hittad! 🎉", r.left + r.width / 2, r.top);
+    return setTimeout(() => openStation(i), 650);
+  }
+  openStation(i);
+}
+
+// The 🔍 button: one hidden animal peeks out and sparkles for a moment.
+$("#hintSpotBtn").onclick = () => {
+  const sc = scene();
+  const hidden = sc.spots.map((s, i) => [s, i]).filter(([s]) => s.animal && !s.found);
+  if (!hidden.length) {
+    const left = animalSpots(sc).some(s => !s.answered);
+    return say(left ? "Du har hittat alla – nu ska de bara få sina svar!" : "Alla djur är hittade! Gå till skylten →", innerWidth / 2, innerHeight / 3);
+  }
+  const [sp, i] = pick(hidden);
+  const el = document.querySelector(`.spot[data-i="${i}"]`), pk = el.querySelector(".peeker");
+  pk.classList.add("peek-now");
+  const k = SPOT_KINDS[sp.kind];
+  $("#fx").innerHTML = [[-50, -60], [46, -80], [0, -120], [-30, -10], [40, -20]].map(([dx, dy], n) =>
+    `<text x="${sp.x + dx}" y="${sp.y + dy + (k.restTop + 90) / 2}" font-size="30" class="sparkle" style="animation-delay:${n * .15}s">✨</text>`).join("");
+  camera(sp.x, sp.y, true);
+  tone([880, 1175], 0.1, "sine", 0.1);
+  setTimeout(() => { pk.classList.remove("peek-now"); $("#fx").innerHTML = ""; }, 2600);
+};
+
+function openGate() {
+  const sc = scene();
+  sc.open = true; persist();
+  sfx.open();
+  renderScene();
+  const msg = PLACES[sc.place].gate === "boulder" ? "Stenen rullade undan!" : "En bro dök upp över bäcken!";
+  banner(msg, "Gå till skylten för att komma vidare →");
+  camera(GATE_X, 740, true);
+  confetti(1800);
+}
+
+function leaveScene() {
+  $("#fade").classList.add("on");
+  setTimeout(() => {
+    game.si++; persist();
+    enterScene(true);
+    $("#fade").classList.remove("on");
+  }, 500);
+}
+
+/* =====================================================================
+   Question dialog
+   ===================================================================== */
+let cur = null; // { i, q, answered, mistakes, right }
+
+function openStation(i) {
+  cur = { i, q: nextQuestion(), answered: false, mistakes: 0, t0: Date.now() };
+  sfx.pop();
+  renderQuestion(true);
+  $("#dlg").classList.add("on");
+}
+
+function renderQuestion(first) {
+  const sp = scene().spots[cur.i], c = CHARACTERS[sp.animal];
+  $("#dlgWho").innerHTML = svgOf(c, "idle");
+  $("#dlgName").textContent = c.name;
+  const boss = sp.kind === "boss";
+  const intro = boss
+    ? (sp.bossLeft === BOSS_QUESTIONS ? `Rooaar! Jag vaktar slottet. Svara rätt på ${BOSS_QUESTIONS} frågor så släpper jag in dig! Fråga 1:` : `Bra! Fråga ${BOSS_QUESTIONS - sp.bossLeft + 1} av ${BOSS_QUESTIONS}:`)
+    : (first ? pick(GREETINGS) : "Okej, här kommer en ny fråga:");
+  $("#dlgQ").innerHTML = `${esc(intro)}<br><b>${esc(cur.q.q)}</b>`;
+  $("#dlgAns").innerHTML = cur.q.choices.map((ch, k) =>
+    `<button class="ans" data-k="${k}"><span class="k">${"ABCDEF"[k] || k + 1}</span>${esc(ch)}</button>`).join("");
+  $("#dlgFb").className = "feedback"; $("#dlgFb").innerHTML = "";
+  $("#hintBtn").style.display = cur.q.hint ? "" : "none";
+  $("#closeBtn").style.display = "";
+  $("#nextBtn").style.display = "none";
+  $("#dlgHearts").textContent = boss ? "🐉 " + "❤️".repeat(sp.bossLeft) : "";
+}
+
+$("#dlgAns").onclick = e => {
+  const b = e.target.closest(".ans"); if (!b || cur.answered) return;
+  const sp = scene().spots[cur.i], c = CHARACTERS[sp.animal], boss = sp.kind === "boss";
+  const choice = cur.q.choices[+b.dataset.k];
+  const right = choice === cur.q.answer;
+  cur.answered = true; cur.right = right;
+  [...$("#dlgAns").children].forEach(x => { x.disabled = true; if (cur.q.choices[+x.dataset.k] === cur.q.answer) x.classList.add("right"); });
+  track("adventure", { question: cur.q.q, userAnswer: choice, correctAnswer: cur.q.answer, isCorrect: right, timeTaken: Date.now() - cur.t0 });
+
+  const fb = $("#dlgFb");
+  const explain = cur.q.explain && cur.q.explain !== cur.q.answer ? `<br><small>${esc(cur.q.explain)}</small>` : "";
+  if (right) {
+    sfx.right();
+    $("#dlgWho").innerHTML = svgOf(c, "happy");
+    fb.className = "feedback on good";
+    fb.innerHTML = `<b>${pick(PRAISE)}</b>${explain}`;
+    const r = b.getBoundingClientRect();
+    say("+⭐", r.left + r.width / 2, r.top, "#f0a400");
+    if (boss && sp.bossLeft > 1) {
+      sp.bossLeft--; game.stars++;
+      $("#nextBtn").textContent = "Nästa fråga →";
+    } else {
+      if (boss) sp.bossLeft = 0;
+      // 3 stars on the first try, 2 after one miss, 1 after more
+      sp.stars = boss ? 3 : Math.max(1, 3 - cur.mistakes);
+      game.stars += boss ? 1 : sp.stars;
+      $("#nextBtn").textContent = boss ? "In i slottet! 🏰" : "Tack! →";
+    }
+  } else {
+    sfx.wrong();
+    cur.mistakes++;
+    b.classList.add("wrong");
+    $("#dlgWho").innerHTML = svgOf(c, "sad");
+    fb.className = "feedback bad on";
+    fb.innerHTML = `${pick(COMFORT)} <b>${esc(cur.q.answer)}</b>${explain}<br>Du får en ny fråga – försök igen!`;
+    $("#nextBtn").textContent = "Ny fråga →";
+  }
+  $("#closeBtn").style.display = "none";
+  $("#hintBtn").style.display = "none";
+  $("#nextBtn").style.display = "";
+  persist();
+};
+
+$("#nextBtn").onclick = () => {
+  const sc = scene(), sp = sc.spots[cur.i];
+  if (!cur.right || (sp.kind === "boss" && sp.bossLeft > 0)) {
+    cur.q = nextQuestion(); cur.answered = false; cur.t0 = Date.now();
+    return renderQuestion(false);
+  }
+  $("#dlg").classList.remove("on");
+  sp.answered = true; persist();
+  if (sp.kind === "boss") return finish();
+  renderScene();
+  if (animalSpots(sc).every(s => s.answered)) setTimeout(openGate, 400);
+  else {
+    const left = animalSpots(sc).filter(s => !s.answered).length;
+    say(left === 1 ? "Ett djur kvar att hitta!" : `${left} djur kvar att hitta!`, innerWidth / 2, innerHeight / 3);
+  }
+};
+
+$("#closeBtn").onclick = () => { $("#dlg").classList.remove("on"); renderScene(); };
+$("#hintBtn").onclick = () => {
+  const fb = $("#dlgFb");
+  fb.className = "feedback on hint";
+  fb.innerHTML = `💡 ${esc(cur.q.hint)}`;
+  $("#hintBtn").style.display = "none";
+};
+
+/* =====================================================================
+   Finish
+   ===================================================================== */
+function finish() {
+  game.finished = true;
+  const animals = game.scenes.reduce((n, sc) => n + animalSpots(sc).length, 0);
+  const max = animals * 3 + BOSS_QUESTIONS;
+  saved.finishedPacks = saved.finishedPacks || {};
+  saved.finishedPacks[game.pack] = Math.max(saved.finishedPacks[game.pack] || 0, game.stars);
+  persist();
+  track("session", { action: "finish", duration: Date.now() - game.startedAt });
+  sfx.win();
+  show("finish");
+  $("#finishArt").innerHTML = `<svg viewBox="0 0 220 120" width="300" height="160">
+    <g transform="translate(0 10)"><svg width="110" height="110" viewBox="0 0 100 100">${HEROES[game.hero].draw("happy")}</svg></g>
+    <g transform="translate(110 10)"><svg width="110" height="110" viewBox="0 0 100 100">${CHARACTERS.dragon.draw("happy")}</svg></g></svg>`;
+  $("#finishStars").textContent = `⭐ ${game.stars}`;
+  const who = game.name ? `${esc(game.name)}, du` : "Du";
+  $("#finishText").innerHTML = `${who} hittade alla ${animals} gömda djur, tog dig hela vägen till slottet och samlade <b>${game.stars}</b> av ${max} möjliga stjärnor i<br><i>${esc(game.packTitle)}</i>!<br>Draken Doris bjuder på tårta. 🎂`;
+  confetti(4500);
+}
+$("#againBtn").onclick = () => { saved.game = null; game = null; persist(); show("start"); renderStart(); };
+
+/* =====================================================================
+   Effects & helpers
+   ===================================================================== */
+function say(txt, x, y, color = INK) {
+  const el = document.createElement("div");
+  el.className = "float"; el.textContent = txt;
+  el.style.left = clamp(x, 120, innerWidth - 120) + "px"; el.style.top = clamp(y, 80, innerHeight - 60) + "px";
+  el.style.color = color; el.style.fontSize = txt.length > 12 ? "21px" : "30px";
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 1900);
+}
+
+function confetti(ms) {
+  const cv = $("#confetti"), ctx = cv.getContext("2d");
+  cv.width = innerWidth; cv.height = innerHeight;
+  const colors = ["#ff8fb8", "#ffd447", "#7b6cff", "#3fbf6b", "#7ad7ff"];
+  const bits = Array.from({ length: 150 }, () => ({
+    x: Math.random() * cv.width, y: -20 - Math.random() * cv.height * 0.5,
+    vx: (Math.random() - .5) * 3, vy: 2 + Math.random() * 3, r: 4 + Math.random() * 5,
+    a: Math.random() * 6, va: (Math.random() - .5) * .3, c: pick(colors),
+  }));
+  const t0 = performance.now();
+  (function frame(now) {
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    bits.forEach(b => { b.x += b.vx; b.y += b.vy; b.a += b.va;
+      ctx.save(); ctx.translate(b.x, b.y); ctx.rotate(b.a); ctx.fillStyle = b.c; ctx.fillRect(-b.r, -b.r / 2, b.r * 2, b.r); ctx.restore(); });
+    if (now - t0 < ms) requestAnimationFrame(frame); else ctx.clearRect(0, 0, cv.width, cv.height);
+  })(t0);
+}
+
+function show(id) { document.querySelectorAll(".screen").forEach(s => s.classList.toggle("on", s.id === id)); }
+
+function track(type, data) {
+  if (!game) return;
+  fetch("/api/track", { method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ type, packId: game.pack, data }) }).catch(() => {});
+}
+
+$("#homeBtn").onclick = () => { $("#dlg").classList.remove("on"); show("start"); renderStart(); };
+$("#soundBtn").onclick = () => { sound = !sound; persist(); updateHud(); sfx.pop(); };
+addEventListener("resize", () => { if ($("#play").classList.contains("on") && game) { fitScene(); camera(scene().hero.x, scene().hero.y, false); } });
+addEventListener("keydown", e => {
+  if (!$("#dlg").classList.contains("on")) return;
+  const k = "abcd1234".indexOf(e.key.toLowerCase());
+  if (k >= 0) { const btn = $("#dlgAns").children[k % 4]; if (btn && !btn.disabled) btn.click(); }
+  else if (e.key === "Enter" && $("#nextBtn").style.display !== "none") $("#nextBtn").click();
+  else if (e.key === "Escape" && !cur.answered) $("#closeBtn").click();
+});
+
+renderStart();
+loadPacks();
+</script>
+</body>
+</html>

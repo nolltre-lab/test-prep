@@ -41,6 +41,25 @@ A gamified, self-hosted study application designed for students (grades 7-9) wit
   - Session tracking with timestamps
   - Auto-refresh dashboard (30s interval)
 
+## Kunskapsäventyret (adventure game)
+
+A second app in the same server, for younger players (around 10 years old). Pick one of twelve
+heroes (a panda, a corgi, a dinosaur in a party hat, a banana with a moustache…) and a pack, then
+explore a series of places — a forest glade, a lake, a valley with a waterfall, a mushroom forest,
+a mountain. In each place animals hide behind bushes, logs, rocks and leaf piles, in reeds, in tree
+hollows and under water, peeking out now and then. Tap to walk there; a found animal asks a question
+from the pack (3 stars on the first try, fewer after a miss, with a new question each time). When
+every animal in a place has been answered, a bridge appears over the stream (or a boulder rolls
+away) and the signpost leads on. A friendly dragon at the castle asks three in a row. 🔍 makes one
+hidden animal peek out. Progress is saved in the browser.
+
+- Source: `adventure/index.html` (one file, no dependencies; all characters and scenery are inline SVG)
+- Served on its own port: `ADVENTURE_PORT` (default `PORT + 1`, i.e. 8788), e.g.
+  `http://127.0.0.1:8788/`. Also reachable on the main port at `/adventure/`.
+- Uses the same `/api/packs`, `/api/pack/:file` and `/api/track` (type `adventure`) as Test Prep,
+  so every pack works in both apps. Items without `choices` get wrong answers borrowed from other
+  items' answers.
+
 ## Prerequisites
 
 ### For Local Development

@@ -12,6 +12,8 @@ const ROOT = __dirname;
 const PUBLIC_DIR = ROOT;            // serve index.html and static files from here
 const PACKS_DIR = path.join(ROOT, "packs");
 const PORT = process.env.PORT ? Number(process.env.PORT) : 8787;
+const ADVENTURE_DIR = path.join(ROOT, "adventure");
+const ADVENTURE_PORT = process.env.ADVENTURE_PORT ? Number(process.env.ADVENTURE_PORT) : PORT + 1;
 const ANALYTICS_FILE = path.join(ROOT, "analytics.json");
 
 // --- Load config / API key ---
@@ -349,7 +351,7 @@ async function handleReview(req, res) {
 }
 
 // --- Static files (and index fallback) ---
-async function serveStatic(req, res, urlObj) {
+async function serveStatic(req, res, urlObj, publicDir = PUBLIC_DIR) {
   let pathname = decodeURIComponent(urlObj.pathname);
   if (pathname === "/") pathname = "/index.html";
 
@@ -358,7 +360,7 @@ async function serveStatic(req, res, urlObj) {
     return sendJSON(res, 403, { error: "Use /api/pack endpoints" });
   }
 
-  const full = safeJoin(PUBLIC_DIR, pathname);
+  const full = safeJoin(publicDir, pathname);
   if (!full) return sendJSON(res, 400, { error: "Bad path" });
 
   try {
@@ -372,7 +374,7 @@ async function serveStatic(req, res, urlObj) {
     return pipeFile(res, full);
   } catch {
     // SPA fallback -> index.html
-    return pipeFile(res, path.join(PUBLIC_DIR, "index.html"));
+    return pipeFile(res, path.join(publicDir, "index.html"));
   }
 }
 function pipeFile(res, file) {
@@ -475,7 +477,7 @@ async function handleTrackActivity(req, res) {
   const { type, packId, data } = body;
 
   try {
-    if (type === 'quiz' || type === 'flashcard' || type === 'match') {
+    if (type === 'quiz' || type === 'flashcard' || type === 'match' || type === 'adventure') {
       trackQuizActivity(req, packId, {
         question: data.question,
         userAnswer: data.userAnswer,
@@ -495,9 +497,12 @@ async function handleTrackActivity(req, res) {
 }
 
 // --- HTTP router ---
-const server = http.createServer(async (req, res) => {
+// Both apps share the API (packs, review, tracking); only the static root differs.
+const router = publicDir => async (req, res) => {
   try {
     const urlObj = new URL(req.url, `http://${req.headers.host}`);
+    // Opening the adventure on the main port (/adventure/) makes its pages call /adventure/api/*.
+    if (urlObj.pathname.startsWith("/adventure/api/")) urlObj.pathname = urlObj.pathname.slice("/adventure".length);
 
     // API routes
     if (req.method === "GET" && urlObj.pathname === "/api/config") {
@@ -521,15 +526,20 @@ const server = http.createServer(async (req, res) => {
     }
 
     // Static
-    return serveStatic(req, res, urlObj);
+    return serveStatic(req, res, urlObj, publicDir);
   } catch (e) {
     console.error("Server error:", e);
     return sendJSON(res, 500, { error: "server_error", detail: e.message });
   }
-});
+};
 
-server.listen(PORT, "0.0.0.0", () => {
+http.createServer(router(PUBLIC_DIR)).listen(PORT, "0.0.0.0", () => {
   console.log(`✅ Test Prep server running at http://127.0.0.1:${PORT}`);
   console.log(`   Static: ${PUBLIC_DIR}`);
   console.log(`   Packs : ${PACKS_DIR} (list via GET /api/packs)`);
+});
+
+// Kunskapsäventyret (the adventure game) — its own app on its own port, same packs and API.
+http.createServer(router(ADVENTURE_DIR)).listen(ADVENTURE_PORT, "0.0.0.0", () => {
+  console.log(`✅ Adventure running at http://127.0.0.1:${ADVENTURE_PORT}`);
 });

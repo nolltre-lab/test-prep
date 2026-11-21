@@ -9,6 +9,7 @@ services:
     # Publish host:container
     ports:
       - "8789:8787"
+      - "8790:8788"   # Kunskapsäventyret
 
     # Mount config.json (non-sensitive settings) and analytics data
     volumes:
