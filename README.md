@@ -318,6 +318,20 @@ Question packs are JSON files stored in the `packs/` directory.
 | `choices` | No | Array of multiple-choice options (for quiz mode) |
 | `answerIndex` | No | Index of correct answer in `choices` array (0-based) |
 
+### Content guidelines
+
+- **Follow the Swedish curriculum (Lgr22)** for the subject and grade: build on the subject's
+  *centralt innehåll* for that stage (åk 1–3, 4–6, 7–9) at the level of the named grade, and use
+  Swedish terms where Swedish schools do. Put the grade in the title and file name
+  (`Engelska åk 4: …`, `english_ak4.json`) and tag items with it (`"åk4"`).
+- **Language:** Swedish for every subject except English (and other language subjects). For English
+  in the younger years (åk 4–6), give instructions and explanations in Swedish and keep the English
+  in the words and sentences being practised, so a child can manage alone.
+- **Every item has four choices** with exactly one right answer, and a `back` that explains why —
+  the quiz modes and the adventure show it after a wrong answer. Add a `hint` where it helps.
+- Wrong choices should be believable mistakes (half past one for "halv ett", mouses for mice), not
+  nonsense.
+
 ### Adding Packs
 
 1. **Create** a JSON file in the `packs/` directory

@@ -1,0 +1,1848 @@
+{
+  "title": "Engelska åk 4: Ord, fraser, grammatik och läsförståelse (Lgr22)",
+  "items": [
+    {
+      "front": "Vad heter 'hund' på engelska?",
+      "back": "dog",
+      "choices": [
+        "horse",
+        "dog",
+        "bird",
+        "cat"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ordförråd",
+        "djur",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'fjäril' på engelska?",
+      "back": "butterfly",
+      "choices": [
+        "ladybird",
+        "butterfly",
+        "bee",
+        "dragonfly"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ordförråd",
+        "djur",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'kanin' på engelska?",
+      "back": "rabbit",
+      "choices": [
+        "mouse",
+        "squirrel",
+        "hamster",
+        "rabbit"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ordförråd",
+        "djur",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'röd' på engelska?",
+      "back": "red",
+      "choices": [
+        "red",
+        "blue",
+        "yellow",
+        "green"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "ordförråd",
+        "färger",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'lila' på engelska?",
+      "back": "purple",
+      "choices": [
+        "brown",
+        "pink",
+        "orange",
+        "purple"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ordförråd",
+        "färger",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'tisdag' på engelska?",
+      "back": "Tuesday. Veckodagar skrivs med stor bokstav på engelska.",
+      "choices": [
+        "Thursday",
+        "Monday",
+        "Tuesday",
+        "Wednesday"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ordförråd",
+        "veckodagar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'torsdag' på engelska?",
+      "back": "Thursday. Tuesday = tisdag, Thursday = torsdag.",
+      "choices": [
+        "Tuesday",
+        "Friday",
+        "Thursday",
+        "Saturday"
+      ],
+      "answerIndex": 2,
+      "hint": "Torsdag har fått sitt namn efter Tor – på engelska Thor.",
+      "tags": [
+        "ordförråd",
+        "veckodagar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'juli' på engelska?",
+      "back": "July. Månader skrivs med stor bokstav på engelska.",
+      "choices": [
+        "August",
+        "July",
+        "June",
+        "January"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ordförråd",
+        "månader",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'februari' på engelska?",
+      "back": "February",
+      "choices": [
+        "February",
+        "March",
+        "December",
+        "January"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "ordförråd",
+        "månader",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'mormor' eller 'farmor' på engelska?",
+      "back": "grandmother (eller grandma/granny). Engelskan skiljer inte på mormor och farmor.",
+      "choices": [
+        "sister",
+        "mother",
+        "grandmother",
+        "aunt"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ordförråd",
+        "familj",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'kusin' på engelska?",
+      "back": "cousin",
+      "choices": [
+        "uncle",
+        "cousin",
+        "nephew",
+        "brother"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ordförråd",
+        "familj",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'moster' eller 'faster' på engelska?",
+      "back": "aunt. Morbror/farbror heter uncle.",
+      "choices": [
+        "cousin",
+        "niece",
+        "aunt",
+        "uncle"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ordförråd",
+        "familj",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'knä' på engelska?",
+      "back": "knee (k:et uttalas inte).",
+      "choices": [
+        "shoulder",
+        "elbow",
+        "knee",
+        "ankle"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ordförråd",
+        "kroppen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'tänder' på engelska?",
+      "back": "teeth. En tand = one tooth, två tänder = two teeth.",
+      "choices": [
+        "lips",
+        "tongue",
+        "toes",
+        "teeth"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ordförråd",
+        "kroppen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'frukost' på engelska?",
+      "back": "breakfast",
+      "choices": [
+        "breakfast",
+        "dinner",
+        "supper",
+        "lunch"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "ordförråd",
+        "mat",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'jordgubbe' på engelska?",
+      "back": "strawberry",
+      "choices": [
+        "strawberry",
+        "cherry",
+        "raspberry",
+        "blueberry"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "ordförråd",
+        "mat",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'morot' på engelska?",
+      "back": "carrot",
+      "choices": [
+        "cucumber",
+        "onion",
+        "carrot",
+        "potato"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ordförråd",
+        "mat",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'suddgummi' på engelska?",
+      "back": "eraser (i Storbritannien säger man också rubber).",
+      "choices": [
+        "ruler",
+        "glue",
+        "eraser",
+        "pencil case"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ordförråd",
+        "skolan",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'linjal' på engelska?",
+      "back": "ruler",
+      "choices": [
+        "sharpener",
+        "eraser",
+        "scissors",
+        "ruler"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ordförråd",
+        "skolan",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'byxor' på engelska?",
+      "back": "trousers (i USA: pants).",
+      "choices": [
+        "trousers",
+        "shorts",
+        "socks",
+        "shirt"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "ordförråd",
+        "kläder",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'regnigt' på engelska?",
+      "back": "rainy",
+      "choices": [
+        "cloudy",
+        "rainy",
+        "windy",
+        "sunny"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ordförråd",
+        "väder",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'badrum' på engelska?",
+      "back": "bathroom. Bedroom = sovrum.",
+      "choices": [
+        "kitchen",
+        "living room",
+        "bedroom",
+        "bathroom"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ordförråd",
+        "hemmet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'kök' på engelska?",
+      "back": "kitchen. Chicken = kyckling – lätt att blanda ihop!",
+      "choices": [
+        "garden",
+        "kitchen",
+        "chicken",
+        "hall"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ordförråd",
+        "hemmet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'simma' på engelska?",
+      "back": "swim",
+      "choices": [
+        "swim",
+        "climb",
+        "run",
+        "jump"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "ordförråd",
+        "aktiviteter",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'glad' på engelska?",
+      "back": "happy",
+      "choices": [
+        "angry",
+        "happy",
+        "tired",
+        "sad"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ordförråd",
+        "känslor",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'trött' på engelska?",
+      "back": "tired",
+      "choices": [
+        "hungry",
+        "bored",
+        "scared",
+        "tired"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ordförråd",
+        "känslor",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'sjuksköterska' på engelska?",
+      "back": "nurse",
+      "choices": [
+        "doctor",
+        "nurse",
+        "dentist",
+        "teacher"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ordförråd",
+        "yrken",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'bibliotek' på engelska?",
+      "back": "library. Se upp: bookshop = bokhandel.",
+      "choices": [
+        "museum",
+        "school",
+        "bookshop",
+        "library"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ordförråd",
+        "platser",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder 'Thursday' på svenska?",
+      "back": "torsdag",
+      "choices": [
+        "fredag",
+        "torsdag",
+        "tisdag",
+        "onsdag"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ordförråd",
+        "veckodagar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder 'cloudy' på svenska?",
+      "back": "molnigt (cloud = moln)",
+      "choices": [
+        "blåsigt",
+        "kallt",
+        "dimmigt",
+        "molnigt"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ordförråd",
+        "väder",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder 'ugly' på svenska?",
+      "back": "ful",
+      "choices": [
+        "ful",
+        "arg",
+        "liten",
+        "rolig"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "ordförråd",
+        "adjektiv",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder 'hungry' på svenska?",
+      "back": "hungrig",
+      "choices": [
+        "rädd",
+        "törstig",
+        "arg",
+        "hungrig"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ordförråd",
+        "känslor",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder det engelska ordet 'gift'?",
+      "back": "A gift = en present. Svenskans 'gift' (med någon) heter married på engelska.",
+      "choices": [
+        "ett kort",
+        "gift med någon",
+        "en present",
+        "giftig"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ordförråd",
+        "falska vänner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder det engelska ordet 'barn'?",
+      "back": "A barn = en lada. Barn heter children (eller kids) på engelska.",
+      "choices": [
+        "bark",
+        "en balkong",
+        "barn",
+        "en lada"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ordförråd",
+        "falska vänner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder det engelska ordet 'glass'?",
+      "back": "glas. Glass (att äta) heter ice cream.",
+      "choices": [
+        "gräs",
+        "glas",
+        "glass",
+        "glasögon"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ordförråd",
+        "falska vänner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur skriver man 13 på engelska?",
+      "back": "thirteen (13). Thirty = 30.",
+      "choices": [
+        "threeteen",
+        "thirteen",
+        "thirty",
+        "three"
+      ],
+      "answerIndex": 1,
+      "hint": "Tonåren heter teens – 13–19 slutar på -teen.",
+      "tags": [
+        "siffror",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket tal är 'forty-five'?",
+      "back": "45 (forty = 40, five = 5)",
+      "choices": [
+        "54",
+        "45",
+        "15",
+        "405"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "siffror",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur stavas 12 på engelska?",
+      "back": "twelve",
+      "choices": [
+        "tvelve",
+        "twelf",
+        "twelve",
+        "twelfe"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "siffror",
+        "åk4"
+      ]
+    },
+    {
+      "front": "What is twenty plus thirty?",
+      "back": "fifty (20 + 30 = 50)",
+      "choices": [
+        "fifty",
+        "sixty",
+        "fifteen",
+        "forty"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "siffror",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'tredje' på engelska?",
+      "back": "third (first, second, third, fourth …)",
+      "choices": [
+        "three",
+        "third",
+        "thirdth",
+        "thirth"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "siffror",
+        "ordningstal",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur säger man 'den första maj' på engelska?",
+      "back": "the first of May (skrivs ofta 1st May)",
+      "choices": [
+        "the first May of",
+        "the one of May",
+        "the first of May",
+        "May the one"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "siffror",
+        "datum",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket tal är 'a hundred'?",
+      "back": "100",
+      "choices": [
+        "110",
+        "1000",
+        "100",
+        "10"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "siffror",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Klockan är halv ett (12.30). Vad säger man på engelska?",
+      "back": "half past twelve – på engelska säger man 'halv efter' timmen som har varit.",
+      "choices": [
+        "half past one",
+        "quarter past twelve",
+        "twelve o'clock",
+        "half past twelve"
+      ],
+      "answerIndex": 3,
+      "hint": "Svenskans 'halv ett' räknar mot nästa timme. Engelskan räknar från timmen som har varit.",
+      "tags": [
+        "klockan",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Klockan är kvart över tre. Vad säger man på engelska?",
+      "back": "quarter past three",
+      "choices": [
+        "three o'clock",
+        "quarter past three",
+        "half past three",
+        "quarter to three"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "klockan",
+        "åk4"
+      ]
+    },
+    {
+      "front": "'It's quarter to five.' Vad är klockan?",
+      "back": "kvart i fem (4.45). To = i, past = över.",
+      "choices": [
+        "kvart över fem",
+        "kvart i fem",
+        "halv fem",
+        "kvart över fyra"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "klockan",
+        "åk4"
+      ]
+    },
+    {
+      "front": "'It's seven o'clock.' Vad är klockan?",
+      "back": "sju (prick)",
+      "choices": [
+        "halv sju",
+        "elva",
+        "sju",
+        "kvart över sju"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "klockan",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: I have ___ apple.",
+      "back": "an – före ord som börjar på vokalljud (a, e, i, o, u) säger man an.",
+      "choices": [
+        "many",
+        "an",
+        "a",
+        "two"
+      ],
+      "answerIndex": 1,
+      "hint": "Apple börjar på a – ett vokalljud.",
+      "tags": [
+        "grammatik",
+        "a/an",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: She has ___ umbrella.",
+      "back": "an umbrella – umbrella börjar på vokalljud.",
+      "choices": [
+        "a",
+        "two",
+        "an",
+        "much"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "grammatik",
+        "a/an",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: Look, it's ___ elephant!",
+      "back": "an elephant",
+      "choices": [
+        "an",
+        "many",
+        "a",
+        "some"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "grammatik",
+        "a/an",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: He is ___ teacher.",
+      "back": "a teacher – teacher börjar på konsonantljud.",
+      "choices": [
+        "any",
+        "an",
+        "much",
+        "a"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "grammatik",
+        "a/an",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: There is ___ owl in the tree.",
+      "back": "an owl",
+      "choices": [
+        "two",
+        "a",
+        "an",
+        "many"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "grammatik",
+        "a/an",
+        "åk4"
+      ]
+    },
+    {
+      "front": "One cat, two ___",
+      "back": "cats – oftast lägger man bara till -s.",
+      "choices": [
+        "cates",
+        "cats",
+        "caties",
+        "cat"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "grammatik",
+        "plural",
+        "åk4"
+      ]
+    },
+    {
+      "front": "One mouse, two ___",
+      "back": "mice – ett oregelbundet plural.",
+      "choices": [
+        "mices",
+        "mouses",
+        "mouse",
+        "mice"
+      ],
+      "answerIndex": 3,
+      "hint": "Det är inte mouses!",
+      "tags": [
+        "grammatik",
+        "plural",
+        "åk4"
+      ]
+    },
+    {
+      "front": "One child, three ___",
+      "back": "children – ett oregelbundet plural.",
+      "choices": [
+        "childs",
+        "childes",
+        "children",
+        "childrens"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "grammatik",
+        "plural",
+        "åk4"
+      ]
+    },
+    {
+      "front": "One foot, two ___",
+      "back": "feet – ett oregelbundet plural.",
+      "choices": [
+        "feet",
+        "feets",
+        "footes",
+        "foots"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "grammatik",
+        "plural",
+        "åk4"
+      ]
+    },
+    {
+      "front": "One box, two ___",
+      "back": "boxes – efter x, s, ch och sh lägger man till -es.",
+      "choices": [
+        "boxen",
+        "boxes",
+        "box",
+        "boxs"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "grammatik",
+        "plural",
+        "åk4"
+      ]
+    },
+    {
+      "front": "One baby, two ___",
+      "back": "babies – konsonant + y blir -ies.",
+      "choices": [
+        "babys",
+        "babies",
+        "babis",
+        "babyes"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "grammatik",
+        "plural",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: I ___ ten years old.",
+      "back": "I am (I'm) ten years old.",
+      "choices": [
+        "is",
+        "am",
+        "are",
+        "be"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "grammatik",
+        "be",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: They ___ my friends.",
+      "back": "They are (they're) my friends.",
+      "choices": [
+        "am",
+        "are",
+        "is",
+        "be"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "grammatik",
+        "be",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: My sister ___ at school.",
+      "back": "My sister is at school. He/she/it → is.",
+      "choices": [
+        "are",
+        "am",
+        "is",
+        "be"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "grammatik",
+        "be",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: ___ you hungry?",
+      "back": "Are you hungry?",
+      "choices": [
+        "Are",
+        "Do",
+        "Is",
+        "Am"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "grammatik",
+        "be",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: She ___ a red bike.",
+      "back": "She has a red bike. He/she/it → has.",
+      "choices": [
+        "is",
+        "has",
+        "have",
+        "haves"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "grammatik",
+        "have",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: We ___ two cats.",
+      "back": "We have two cats.",
+      "choices": [
+        "have",
+        "is",
+        "has",
+        "are"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "grammatik",
+        "have",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: My dad ___ coffee every morning.",
+      "back": "drinks – he/she/it får -s i presens.",
+      "choices": [
+        "drinking",
+        "drink",
+        "drinks",
+        "drinked"
+      ],
+      "answerIndex": 2,
+      "hint": "Han/hon/den/det → verbet slutar på -s.",
+      "tags": [
+        "grammatik",
+        "presens",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: Tom ___ football on Saturdays.",
+      "back": "plays – Tom = he, så verbet får -s.",
+      "choices": [
+        "playing",
+        "plaies",
+        "plays",
+        "play"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "grammatik",
+        "presens",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: I ___ in Sweden.",
+      "back": "I live in Sweden. Inget -s efter I.",
+      "choices": [
+        "living",
+        "live",
+        "am live",
+        "lives"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "grammatik",
+        "presens",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: I ___ like spiders.",
+      "back": "I don't like spiders.",
+      "choices": [
+        "don't",
+        "not",
+        "isn't",
+        "doesn't"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "grammatik",
+        "nekande",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: ___ she like pizza?",
+      "back": "Does she like pizza? He/she/it → does.",
+      "choices": [
+        "Does",
+        "Do",
+        "Is",
+        "Has"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "grammatik",
+        "frågor",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Can you swim? – Yes, I ___.",
+      "back": "Yes, I can.",
+      "choices": [
+        "do",
+        "am",
+        "can",
+        "swim"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "grammatik",
+        "can",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: There ___ three dogs in the park.",
+      "back": "There are – flera saker.",
+      "choices": [
+        "be",
+        "am",
+        "are",
+        "is"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "grammatik",
+        "there is/are",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: There ___ a cat on the sofa.",
+      "back": "There is – en sak.",
+      "choices": [
+        "have",
+        "are",
+        "is",
+        "am"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "grammatik",
+        "there is/are",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Katten ligger under bordet. The cat is ___ the table.",
+      "back": "under",
+      "choices": [
+        "on",
+        "in",
+        "under",
+        "behind"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "grammatik",
+        "prepositioner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Boken ligger i väskan. The book is ___ the bag.",
+      "back": "in",
+      "choices": [
+        "under",
+        "at",
+        "in",
+        "on"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "grammatik",
+        "prepositioner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: I was born ___ May.",
+      "back": "in May – in före månader.",
+      "choices": [
+        "in",
+        "on",
+        "at",
+        "to"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "grammatik",
+        "prepositioner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: We have English ___ Monday.",
+      "back": "on Monday – on före veckodagar.",
+      "choices": [
+        "in",
+        "at",
+        "to",
+        "on"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "grammatik",
+        "prepositioner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Choose: School starts ___ eight o'clock.",
+      "back": "at eight o'clock – at före klockslag.",
+      "choices": [
+        "to",
+        "on",
+        "in",
+        "at"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "grammatik",
+        "prepositioner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "This is Anna. ___ is my best friend.",
+      "back": "She – Anna är en flicka.",
+      "choices": [
+        "It",
+        "Her",
+        "She",
+        "He"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "grammatik",
+        "pronomen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "This is my brother. ___ name is Leo.",
+      "back": "His name is Leo (hans namn).",
+      "choices": [
+        "Her",
+        "Him",
+        "He",
+        "His"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "grammatik",
+        "pronomen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Lisa has a dog. ___ dog is brown.",
+      "back": "Her dog (hennes hund).",
+      "choices": [
+        "He",
+        "Her",
+        "His",
+        "She"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "grammatik",
+        "pronomen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter 'vi' på engelska?",
+      "back": "we",
+      "choices": [
+        "you",
+        "they",
+        "us",
+        "we"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "grammatik",
+        "pronomen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "___ is your birthday? – In June.",
+      "back": "When (när)",
+      "choices": [
+        "What",
+        "Where",
+        "When",
+        "Who"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "grammatik",
+        "frågeord",
+        "åk4"
+      ]
+    },
+    {
+      "front": "___ do you live? – In Malmö.",
+      "back": "Where (var)",
+      "choices": [
+        "Who",
+        "When",
+        "Where",
+        "How"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "grammatik",
+        "frågeord",
+        "åk4"
+      ]
+    },
+    {
+      "front": "___ old are you? – I'm ten.",
+      "back": "How old (hur gammal)",
+      "choices": [
+        "What",
+        "Who",
+        "How",
+        "Which"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "grammatik",
+        "frågeord",
+        "åk4"
+      ]
+    },
+    {
+      "front": "___ is that girl? – She's my cousin.",
+      "back": "Who (vem)",
+      "choices": [
+        "Why",
+        "What",
+        "Where",
+        "Who"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "grammatik",
+        "frågeord",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Look! The dog ___ running.",
+      "back": "The dog is running – just nu.",
+      "choices": [
+        "is",
+        "am",
+        "are",
+        "be"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "grammatik",
+        "pågående form",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör de just nu? They are ___ a film.",
+      "back": "They are watching a film.",
+      "choices": [
+        "watch",
+        "watched",
+        "watches",
+        "watching"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "grammatik",
+        "pågående form",
+        "åk4"
+      ]
+    },
+    {
+      "front": "What is the opposite of 'big'?",
+      "back": "small",
+      "choices": [
+        "small",
+        "old",
+        "tall",
+        "long"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "grammatik",
+        "adjektiv",
+        "åk4"
+      ]
+    },
+    {
+      "front": "What is the opposite of 'hot'?",
+      "back": "cold",
+      "choices": [
+        "wet",
+        "slow",
+        "high",
+        "cold"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "grammatik",
+        "adjektiv",
+        "åk4"
+      ]
+    },
+    {
+      "front": "What is the opposite of 'early'?",
+      "back": "late",
+      "choices": [
+        "soon",
+        "first",
+        "late",
+        "fast"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "grammatik",
+        "adjektiv",
+        "åk4"
+      ]
+    },
+    {
+      "front": "An elephant is ___ than a mouse.",
+      "back": "bigger – big blir bigger (g:et dubbleras).",
+      "choices": [
+        "bigger",
+        "more big",
+        "big",
+        "biger"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "grammatik",
+        "jämförelse",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur säger man 'Tack så mycket' på engelska?",
+      "back": "Thank you very much!",
+      "choices": [
+        "Very thank you!",
+        "Thank you very much!",
+        "Thanks you much!",
+        "Thank much you!"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "uttryck",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Någon frågar 'How are you?'. Vad svarar du?",
+      "back": "I'm fine, thank you. (How are you = hur mår du?)",
+      "choices": [
+        "My name is Sara.",
+        "I'm from Sweden.",
+        "I'm fine, thank you.",
+        "I'm ten years old."
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "uttryck",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Du vill artigt låna en penna. Vad säger du?",
+      "back": "Can I borrow a pen, please? Please gör det artigt.",
+      "choices": [
+        "Give me pen!",
+        "Pen me now.",
+        "I borrow pen.",
+        "Can I borrow a pen, please?"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "uttryck",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur säger man 'Förlåt, jag förstår inte'?",
+      "back": "Sorry, I don't understand.",
+      "choices": [
+        "Sorry, I don't understand.",
+        "Sorry, I not understand.",
+        "Sorry, I am not understand.",
+        "Sorry, me don't understand."
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "uttryck",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder 'Nice to meet you!'?",
+      "back": "Trevligt att träffas!",
+      "choices": [
+        "Vi ses snart!",
+        "Välkommen hem!",
+        "Ha en bra dag!",
+        "Trevligt att träffas!"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "uttryck",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder 'What's your name?'",
+      "back": "Vad heter du?",
+      "choices": [
+        "Vad heter du?",
+        "Hur gammal är du?",
+        "Var bor du?",
+        "Hur mår du?"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "uttryck",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad säger du när du går hem från en kompis?",
+      "back": "Goodbye! / Bye! / See you!",
+      "choices": [
+        "Happy birthday!",
+        "Nice to meet you!",
+        "Goodbye, see you tomorrow!",
+        "Good morning!"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "uttryck",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är rätt stavat? (vän)",
+      "back": "friend – i före e.",
+      "choices": [
+        "frient",
+        "freind",
+        "frend",
+        "friend"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "stavning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är rätt stavat? (skola)",
+      "back": "school",
+      "choices": [
+        "school",
+        "scool",
+        "skool",
+        "shool"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "stavning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är rätt stavat? (vacker)",
+      "back": "beautiful",
+      "choices": [
+        "beautiful",
+        "beatiful",
+        "beautifull",
+        "butiful"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "stavning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur stavas 'onsdag' på engelska?",
+      "back": "Wednesday – d:et hörs inte när man säger ordet.",
+      "choices": [
+        "Wendsday",
+        "Wensday",
+        "Wednesday",
+        "Wednsday"
+      ],
+      "answerIndex": 2,
+      "hint": "Det finns ett tyst d i ordet.",
+      "tags": [
+        "stavning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Read: “Sam has a little sister. Her name is Mia. Mia is five years old.” How old is Mia?",
+      "back": "Mia is five years old.",
+      "choices": [
+        "five",
+        "three",
+        "ten",
+        "seven"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "läsförståelse",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Read: “It is Saturday. Emma and her dad go to the beach. The sun is shining.” What is the weather like?",
+      "back": "It is sunny – the sun is shining.",
+      "choices": [
+        "snowy",
+        "sunny",
+        "windy",
+        "rainy"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "läsförståelse",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Read: “My favourite animal is the owl. Owls sleep in the day and fly at night.” When do owls fly?",
+      "back": "at night (på natten)",
+      "choices": [
+        "in the day",
+        "at night",
+        "at lunch",
+        "in the morning"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "läsförståelse",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Read: “Ben gets up at seven. He eats breakfast and goes to school by bike.” How does Ben go to school?",
+      "back": "by bike (med cykel)",
+      "choices": [
+        "by car",
+        "by bike",
+        "by bus",
+        "on foot"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "läsförståelse",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Read: “Lily's cat is black and white. It likes milk and sleeps on Lily's bed.” Where does the cat sleep?",
+      "back": "on Lily's bed",
+      "choices": [
+        "in the garden",
+        "on Lily's bed",
+        "in a box",
+        "under the sofa"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "läsförståelse",
+        "åk4"
+      ]
+    },
+    {
+      "front": "En skylt säger: “NO DOGS ALLOWED”. Vad betyder den?",
+      "back": "Hundar är inte tillåtna här.",
+      "choices": [
+        "Hundarna är lösa",
+        "Hundar måste ha koppel",
+        "Hundar säljs här",
+        "Hundar är inte tillåtna"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "läsförståelse",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Läraren säger: “Open your books at page ten.” Vad ska du göra?",
+      "back": "Öppna boken på sidan tio.",
+      "choices": [
+        "Öppna boken på sidan tio",
+        "Stänga boken",
+        "Skriva tio sidor",
+        "Läsa tio böcker"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "klassrummet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder “Listen and repeat”?",
+      "back": "Lyssna och upprepa (säg efter).",
+      "choices": [
+        "Titta och peka",
+        "Lyssna och skriv",
+        "Lyssna och upprepa",
+        "Läs och rita"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "klassrummet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder 'homework'?",
+      "back": "läxa",
+      "choices": [
+        "hemkunskap",
+        "städning",
+        "hemsida",
+        "läxa"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "klassrummet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder “Work in pairs”?",
+      "back": "Arbeta två och två.",
+      "choices": [
+        "Arbeta i stor grupp",
+        "Ta rast",
+        "Arbeta ensam",
+        "Arbeta två och två"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "klassrummet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "What is the capital of the United Kingdom?",
+      "back": "London",
+      "choices": [
+        "Edinburgh",
+        "Manchester",
+        "London",
+        "Dublin"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "kultur",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket djur förknippas med Australien?",
+      "back": "Kängurun (kangaroo)",
+      "choices": [
+        "lion",
+        "panda",
+        "moose",
+        "kangaroo"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "kultur",
+        "åk4"
+      ]
+    },
+    {
+      "front": "I vilket land firar man Thanksgiving med kalkon i november?",
+      "back": "USA (Kanada firar i oktober).",
+      "choices": [
+        "Storbritannien",
+        "USA",
+        "Australien",
+        "Irland"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kultur",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas Londons kända röda bussar med två våningar?",
+      "back": "double-decker buses (dubbeldäckare)",
+      "choices": [
+        "double-deckers",
+        "taxis",
+        "trams",
+        "the tube"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "kultur",
+        "åk4"
+      ]
+    },
+    {
+      "front": "På vilken högtid klär man ut sig och säger “Trick or treat!”?",
+      "back": "Halloween, den 31 oktober.",
+      "choices": [
+        "Easter",
+        "Halloween",
+        "Thanksgiving",
+        "Christmas"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kultur",
+        "åk4"
+      ]
+    },
+    {
+      "front": "I vilket land ligger staden New York?",
+      "back": "USA",
+      "choices": [
+        "Australien",
+        "USA",
+        "Kanada",
+        "England"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kultur",
+        "åk4"
+      ]
+    }
+  ]
+}
