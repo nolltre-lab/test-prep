@@ -1,5 +1,7 @@
 {
   "title": "Teknik åk 7: Mekanismer, elektronik och designprocess (Avancerad)",
+  "grades": [7],
+  "subject": "Teknik",
   "items": [
     {
       "front": "Vilken mekanism ändrar rotationsriktning och hastighet?",

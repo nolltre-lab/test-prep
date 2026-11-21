@@ -1,5 +1,7 @@
 {
   "title": "Fysik: Utökat träningspaket (åk 7–9)",
+  "grades": [7, 8, 9],
+  "subject": "Fysik",
   "items": [
     { "front": "Skillnad på massa och tyngd?", "back": "Massa är hur mycket materia (kg). Tyngd är gravitationskraften på massan (N).", "hint": "kg vs N.", "choices": ["Ingen skillnad", "Massa i N, tyngd i kg", "Massa i kg, tyngd i N", "Båda i J"], "answerIndex": 2, "tags": ["extra","krafter"] },
     { "front": "När ökar stabiliteten?", "back": "När stödytan är stor och tyngdpunkten låg.", "hint": "Bred bas, låg topp.", "choices": ["Små fötter, hög tyngdpunkt", "Stor stödyta och låg tyngdpunkt", "Liten stödyta, låg tyngdpunkt", "Stor stödyta, hög tyngdpunkt"], "answerIndex": 1, "tags": ["extra","stabilitet"] },

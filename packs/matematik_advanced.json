@@ -1,5 +1,7 @@
 {
   "title": "Matematik åk 7: Ekvationer, potenser och problemlösning (Avancerad)",
+  "grades": [7],
+  "subject": "Matematik",
   "items": [
     {
       "front": "Lös ekvationen: 3x − 5 = 7.",

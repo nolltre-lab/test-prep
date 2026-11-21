@@ -1,5 +1,7 @@
 {
   "title": "Fysik åk 7 – Ljud, toner, buller och optik",
+  "grades": [7],
+  "subject": "Fysik",
   "items": [
     {
       "front": "Vad är ljud?",

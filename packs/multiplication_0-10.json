@@ -1,5 +1,7 @@
 {
   "title": "Matematik: Multiplikationstabellen 0–10",
+  "grades": [3, 4],
+  "subject": "Matematik",
   "items": [
     {
       "front": "3 × 7 = ?",

@@ -286,7 +286,9 @@ Question packs are JSON files stored in the `packs/` directory.
 
 ```json
 {
-  "title": "Physics: Electricity Basics",
+  "title": "Fysik åk 7: Elektricitet",
+  "grades": [7],
+  "subject": "Fysik",
   "items": [
     {
       "front": "What is electric current?",
@@ -310,6 +312,9 @@ Question packs are JSON files stored in the `packs/` directory.
 | Field | Required | Description |
 |-------|----------|-------------|
 | `title` | Yes | Pack name shown in the UI |
+| `grades` | One of these two | Grades (åk) the pack is for, e.g. `[4]` or `[7, 8, 9]` — the pickers show it under each |
+| `category` | One of these two | For packs that aren't schoolwork: `"fun"` (shown as "Kul & spel"). Packs with neither land under "Övrigt" |
+| `subject` | Yes | Subject heading the pack is grouped under, in Swedish (`Matematik`, `Engelska`, `Film`…) |
 | `items` | Yes | Array of questions |
 | `front` | Yes | The question text |
 | `back` | Yes | The answer/explanation |
@@ -320,6 +325,8 @@ Question packs are JSON files stored in the `packs/` directory.
 
 ### Content guidelines
 
+- **Every pack says where it belongs:** `grades` (or `category` for quizzes that aren't
+  schoolwork) and `subject`. Both apps pick packs by grade first, then by subject.
 - **Follow the Swedish curriculum (Lgr22)** for the subject and grade: build on the subject's
   *centralt innehåll* for that stage (åk 1–3, 4–6, 7–9) at the level of the named grade, and use
   Swedish terms where Swedish schools do. Put the grade in the title and file name

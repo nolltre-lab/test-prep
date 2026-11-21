@@ -1,5 +1,7 @@
 {
   "title": "Fysik åk 9 – Modern fysik, radioaktivitet och energi",
+  "grades": [9],
+  "subject": "Fysik",
   "items": [
     {
       "front": "Vad är radioaktivitet?",

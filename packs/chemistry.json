@@ -1,5 +1,7 @@
 {
   "title": "Kemi: Ämnen, reaktioner och laboration (åk 7–9)",
+  "grades": [7, 8, 9],
+  "subject": "Kemi",
   "items": [
     { "front": "Vad är en kemisk förening?", "back": "Ett ämne som består av två eller fler grundämnen bundna till varandra, t.ex. H₂O.", "hint": "Flera grundämnen tillsammans.", "choices": ["Ett grundämne", "En blandning", "Flera grundämnen bundna", "Bara gaser"], "answerIndex": 2, "tags": ["ämnen"] },
     { "front": "Skillnad mellan blandning och kemisk förening?", "back": "Blandning: ämnena är inte kemiskt bundna och kan separeras. Förening: bundna på atomnivå.", "hint": "Bundna eller ej.", "choices": ["Båda bundna", "Blandning ej bunden; förening bunden", "Förening ej bunden; blandning bunden", "Ingen skillnad"], "answerIndex": 1, "tags": ["ämnen"] },

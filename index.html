@@ -81,6 +81,9 @@
       overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none
     }
     .modes::-webkit-scrollbar{display:none}
+    .pack-picker{display:flex;gap:10px;margin:-4px 0 16px;flex-wrap:wrap}
+    .pack-picker #group-select{flex:0 0 auto;min-width:140px}
+    .pack-picker #pack-select{flex:1 1 300px;min-width:0}
 
     /* Buttons/inputs */
     button{
@@ -201,10 +204,15 @@
             <button id="mode-write" class="secondary">Write & Review</button>
             <button id="import" class="secondary">Import</button>
             <button id="load-folder" class="secondary">Load folder</button>
-            <select id="pack-select" class="secondary hidden" style="max-width:360px"></select>
             <input type="file" id="folder-input" webkitdirectory multiple class="hidden" />
             <button id="settings" class="ghost">Settings</button>
             <button id="reset" class="warn">Reset</button>
+        </div>
+
+        <!-- pick a grade (or "Kul & spel") first, then a pack in it -->
+        <div class="pack-picker">
+            <select id="group-select" class="secondary hidden" aria-label="Grade"></select>
+            <select id="pack-select" class="secondary hidden" aria-label="Pack"></select>
         </div>
 
         <div class="progressbar" aria-label="pack progress"><div id="progress"></div></div>
@@ -423,29 +431,69 @@ function updateWriteModeAvailability(){
 }
 
 /* ------- Packs from server ------- */
+// Packs are picked by group first: a grade (åk, from the pack's "grades"), a category such as
+// "fun", or "other" for packs with neither. A pack in several grades shows up in each.
+const CATEGORY_LABELS = { fun: "Kul & spel" };
+const GROUP_STORE = "testprep.packGroup";
+let serverPacks = [];
+function packGroups(p){
+  if(p.grades && p.grades.length) return p.grades.map(g=>"g"+g);
+  return [p.category || "other"];
+}
+function groupLabel(id){
+  if(id.startsWith("g")) return "Åk " + id.slice(1);
+  return CATEGORY_LABELS[id] || (id === "other" ? "Övrigt" : id);
+}
+function allGroups(){
+  const ids = [...new Set(serverPacks.flatMap(packGroups))];
+  const grades = ids.filter(i=>i.startsWith("g")).sort((a,b)=>a.slice(1)-b.slice(1));
+  const rest = ids.filter(i=>!i.startsWith("g") && i!=="other").sort();
+  return [...grades, ...rest, ...(ids.includes("other")?["other"]:[])];
+}
+function renderPackOptions(group){
+  const sel = $("#pack-select"); sel.innerHTML="";
+  const placeholder = document.createElement("option");
+  placeholder.value = ""; placeholder.textContent = "— Choose a pack —"; placeholder.disabled = true; placeholder.selected = true;
+  sel.appendChild(placeholder);
+  const inGroup = serverPacks.filter(p=>packGroups(p).includes(group));
+  const bySubject = {};
+  inGroup.forEach(p=>{ (bySubject[p.subject || "Övrigt"] ||= []).push(p); });
+  Object.keys(bySubject).sort((a,b)=>a.localeCompare(b,"sv")).forEach(subject=>{
+    const og = document.createElement("optgroup"); og.label = subject;
+    bySubject[subject].sort((a,b)=>a.title.localeCompare(b.title,"sv")).forEach(p=>{
+      const opt = document.createElement("option");
+      opt.value = p.file;
+      opt.textContent = `${p.title} (${p.count})`;
+      og.appendChild(opt);
+    });
+    sel.appendChild(og);
+  });
+  syncSelectToCurrent();
+}
 async function refreshServerPacks(){
   try{
     const r = await fetch("/api/packs");
     if(!r.ok) return;
     const data = await r.json();
-    const sel = $("#pack-select"); sel.innerHTML="";
-
-    const placeholder = document.createElement("option");
-    placeholder.value = ""; placeholder.textContent = "— Choose a pack —"; placeholder.disabled = true;
-    sel.appendChild(placeholder);
+    const sel = $("#pack-select"), gsel = $("#group-select");
 
     if(!Array.isArray(data.packs) || !data.packs.length){
-      sel.classList.add("hidden"); return;
+      sel.classList.add("hidden"); gsel.classList.add("hidden"); return;
     }
-    data.packs.forEach(p=>{
-      const opt = document.createElement("option");
-      opt.value = p.file;
-      opt.textContent = `${p.title} — ${p.file} (${p.count})`;
-      sel.appendChild(opt);
-    });
+    serverPacks = data.packs;
+    const groups = allGroups();
+    // start in the current pack's group, else the last chosen one, else the first
+    const current = serverPacks.find(p=>p.file===state.packId);
+    let stored = null; try{ stored = localStorage.getItem(GROUP_STORE); }catch{}
+    const start = current
+      ? (packGroups(current).includes(stored) ? stored : packGroups(current)[0])
+      : (groups.includes(stored) ? stored : groups[0]);
+    gsel.innerHTML = groups.map(g=>`<option value="${g}">${groupLabel(g)}</option>`).join("");
+    gsel.value = start;
+    gsel.onchange = () => { try{ localStorage.setItem(GROUP_STORE, gsel.value); }catch{} renderPackOptions(gsel.value); };
+    renderPackOptions(start);
+    gsel.classList.remove("hidden");
     sel.classList.remove("hidden");
-
-    syncSelectToCurrent();
 
     sel.onchange = async () => {
       const fname = sel.value;
@@ -471,6 +519,7 @@ async function scanDirHandle(h){
 }
 function rebuildMenuLocal(){
   const s=$("#pack-select");
+  $("#group-select").classList.add("hidden"); // local folders have no grades
   const placeholder = document.createElement("option");
   placeholder.value = ""; placeholder.textContent = "— Choose a pack —"; placeholder.disabled = true;
 

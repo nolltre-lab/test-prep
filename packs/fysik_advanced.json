@@ -1,5 +1,7 @@
 {
   "title": "Fysik åk 7: Elektricitet, magnetism och tryck (Avancerad)",
+  "grades": [7],
+  "subject": "Fysik",
   "items": [
     {
       "front": "Vad är skillnaden mellan ström och spänning?",

@@ -1,5 +1,7 @@
 {
   "title": "Matematik åk 7: Tal, procent och geometri (Bas)",
+  "grades": [7],
+  "subject": "Matematik",
   "items": [
     {
       "front": "Vad är 25% av 200?",

@@ -1,5 +1,7 @@
 {
   "title": "Samhällskunskap: Demokrati, ekonomi och medier (åk 7–9)",
+  "grades": [7, 8, 9],
+  "subject": "Samhällskunskap",
   "items": [
     { "front": "Vad kännetecknar en demokrati?", "back": "Fria val, mänskliga rättigheter, yttrandefrihet, rättssäkerhet och maktdelning.", "hint": "Fria val och rättigheter.", "choices": ["En ledare bestämmer allt", "Fria val och rättigheter", "Censur av medier", "Arvmakten styr"], "answerIndex": 1, "tags": ["demokrati"] },
     { "front": "Vad menas med rättsstat?", "back": "Lagar gäller lika för alla, oberoende domstolar och rättssäkerhet.", "hint": "Lika inför lagen.", "choices": ["Polisen gör lagarna", "Statsministern dömer", "Lika inför lagen, oberoende domstolar", "Inga domstolar behövs"], "answerIndex": 2, "tags": ["juridik"] },

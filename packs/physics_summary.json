@@ -1,5 +1,7 @@
 {
   "title": "Fysik: Sammanfattning (arbete, rörelse, materia m.m.)",
+  "grades": [7, 8, 9],
+  "subject": "Fysik",
   "items": [
     { "front": "Vad menas med en storhet?", "back": "Allt som kan mätas, t.ex. längd, massa eller volym.", "hint": "Mätbar sak.", "choices": ["Något litet", "En mätbar egenskap", "Ett verktyg", "En enhet"], "answerIndex": 1, "tags": ["storheter"] },
     { "front": "Ge exempel på enheter.", "back": "Meter (m), kilogram (kg), deciliter (dl).", "hint": "m, kg, dl", "choices": ["meter, gram, sekundhand", "meter, kilogram, deciliter", "tum, fot, armbåge", "krona, euro, dollar"], "answerIndex": 1, "tags": ["storheter","enheter"] },

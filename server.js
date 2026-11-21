@@ -256,7 +256,11 @@ async function handleListPacks(res) {
       out.push({
         file: name,
         title: (obj && obj.title) ? obj.title : name,
-        count: Array.isArray(obj?.items) ? obj.items.length : 0
+        count: Array.isArray(obj?.items) ? obj.items.length : 0,
+        // how the pickers group packs: by grade (åk), or a category like "fun"; then by subject
+        grades: Array.isArray(obj?.grades) ? obj.grades.filter(Number.isInteger) : [],
+        category: typeof obj?.category === "string" ? obj.category : null,
+        subject: typeof obj?.subject === "string" ? obj.subject : null
       });
     } catch {
       // skip bad file

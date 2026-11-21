@@ -1,5 +1,7 @@
 {
   "title": "Fysik åk 7: Värme, väder och enkla rörelser (Bas)",
+  "grades": [7],
+  "subject": "Fysik",
   "items": [
     {
       "front": "Vad är skillnaden mellan värme och temperatur?",

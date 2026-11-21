@@ -50,7 +50,11 @@ button{font:inherit;color:inherit;cursor:pointer;border:0}
 .hero-btn svg{width:74px;height:74px;display:block;margin:0 auto}
 .hero-btn span{display:block;text-align:center;font-weight:bold;font-size:13px;padding:2px 0 4px}
 .name-in{width:100%;padding:12px 14px;font:inherit;font-size:18px;border-radius:14px;border:3px solid #e6dcc8;background:#fff}
-.packs{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;max-height:300px;overflow:auto;padding:2px}
+.groups{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.group-btn{background:#fff;border-radius:99px;padding:8px 16px;border:3px solid #eee3cf;font-size:16px;font-weight:bold}
+.group-btn.sel{border-color:var(--accent2);background:var(--accent2);color:#fff}
+.packs{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;max-height:340px;overflow:auto;padding:2px}
+.subject{grid-column:1/-1;font-weight:bold;font-size:15px;opacity:.7;margin:6px 2px -2px}
 .pack-btn{background:#fff;border-radius:14px;padding:10px 12px;text-align:left;border:3px solid #eee3cf;font-size:15px}
 .pack-btn small{display:block;opacity:.6;margin-top:2px}
 .pack-btn.sel{border-color:var(--accent2);background:#f1efff}
@@ -170,7 +174,8 @@ button{font:inherit;color:inherit;cursor:pointer;border:0}
     </div>
 
     <div class="card">
-      <h2>2. Välj vad du vill öva på</h2>
+      <h2>2. Välj årskurs och vad du vill öva på</h2>
+      <div class="groups" id="groups"></div>
       <div class="packs" id="packs"><div>Laddar…</div></div>
     </div>
 
@@ -600,14 +605,14 @@ const LENGTHS = [
 const BOSS_QUESTIONS = 3;
 
 let saved = load();
-let setup = { hero: HEROES[saved.hero] ? saved.hero : "panda", name: saved.name || "", pack: null, packTitle: "", length: saved.length || 4 };
+let setup = { hero: HEROES[saved.hero] ? saved.hero : "panda", name: saved.name || "", pack: null, packTitle: "", length: saved.length || 4, group: saved.group || null };
 let game = null;
 let packs = [];
 let sound = saved.sound !== false;
 
 function load() { try { return JSON.parse(localStorage.getItem(STORE) || "{}"); } catch { return {}; } }
 function persist() {
-  saved = { ...saved, hero: setup.hero, name: setup.name, length: setup.length, sound, game };
+  saved = { ...saved, hero: setup.hero, name: setup.name, length: setup.length, group: setup.group, sound, game };
   try { localStorage.setItem(STORE, JSON.stringify(saved)); } catch {}
 }
 
@@ -666,12 +671,31 @@ function renderStart() {
   if (g && !g.finished) $("#continueBtn").textContent = `Fortsätt i ${PLACES[g.scenes[g.si].place].name} (${g.packTitle.slice(0, 30)})`;
 }
 
+// Packs are picked by group first: a grade (åk, from the pack's "grades"), a category such as
+// "fun", or "other" for packs with neither. A pack in several grades shows up in each.
+const CATEGORY_LABELS = { fun: "Kul & spel 🎉" };
+const packGroups = p => p.grades && p.grades.length ? p.grades.map(g => "g" + g) : [p.category || "other"];
+const groupLabel = id => id.startsWith("g") ? `Åk ${id.slice(1)}` : CATEGORY_LABELS[id] || (id === "other" ? "Övrigt" : id);
+function allGroups() {
+  const ids = [...new Set(packs.flatMap(packGroups))];
+  const grades = ids.filter(i => i.startsWith("g")).sort((a, b) => a.slice(1) - b.slice(1));
+  const rest = ids.filter(i => !i.startsWith("g") && i !== "other").sort();
+  return [...grades, ...rest, ...(ids.includes("other") ? ["other"] : [])];
+}
+
 function renderPacks() {
   if (!packs.length) return;
+  const groups = allGroups();
+  if (!groups.includes(setup.group)) setup.group = groups[0];
+  $("#groups").innerHTML = groups.map(g =>
+    `<button class="group-btn ${setup.group === g ? "sel" : ""}" data-group="${g}">${groupLabel(g)}</button>`).join("");
   const done = saved.finishedPacks || {};
-  $("#packs").innerHTML = packs.map(p =>
-    `<button class="pack-btn ${setup.pack === p.file ? "sel" : ""}" data-pack="${esc(p.file)}">
-      ${done[p.file] ? `<span class="badge">🏆 ${done[p.file]}</span>` : ""}${esc(p.title)}<small>${p.count} frågor</small></button>`
+  const bySubject = {};
+  packs.filter(p => packGroups(p).includes(setup.group)).forEach(p => (bySubject[p.subject || "Övrigt"] ||= []).push(p));
+  $("#packs").innerHTML = Object.keys(bySubject).sort((a, b) => a.localeCompare(b, "sv")).map(subject =>
+    `<div class="subject">${esc(subject)}</div>` + bySubject[subject].map(p =>
+      `<button class="pack-btn ${setup.pack === p.file ? "sel" : ""}" data-pack="${esc(p.file)}">
+        ${done[p.file] ? `<span class="badge">🏆 ${done[p.file]}</span>` : ""}${esc(p.title)}<small>${p.count} frågor</small></button>`).join("")
   ).join("");
 }
 
@@ -689,6 +713,11 @@ async function loadPacks() {
 
 $("#heroes").onclick = e => { const b = e.target.closest("[data-hero]"); if (!b) return; setup.hero = b.dataset.hero; sfx.pop(); renderStart(); };
 $("#lengths").onclick = e => { const b = e.target.closest("[data-len]"); if (!b) return; setup.length = +b.dataset.len; sfx.pop(); renderStart(); };
+$("#groups").onclick = e => {
+  const b = e.target.closest("[data-group]"); if (!b) return;
+  setup.group = b.dataset.group; persist(); sfx.pop(); renderPacks();
+  $("#packs").scrollTop = 0;
+};
 $("#packs").onclick = e => {
   const b = e.target.closest("[data-pack]"); if (!b) return;
   setup.pack = b.dataset.pack; setup.packTitle = packs.find(p => p.file === setup.pack)?.title || setup.pack;

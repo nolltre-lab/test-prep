@@ -1,5 +1,7 @@
 {
   "title": "Geografi: Natur, klimat och hållbar utveckling (åk 7–9)",
+  "grades": [7, 8, 9],
+  "subject": "Geografi",
   "items": [
     { "front": "Vad är skillnaden mellan väder och klimat?", "back": "Väder är hur det är just nu eller de närmaste dagarna; klimat är genomsnittligt väder under lång tid (minst 30 år).", "hint": "Nu vs lång sikt.", "choices": ["Väder = 30 år, klimat = idag", "Väder = kort sikt; klimat = lång sikt", "Ingen skillnad", "Klimat handlar bara om temperatur"], "answerIndex": 1, "tags": ["klimat","grundbegrepp"] },
     { "front": "Vilka tre faktorer påverkar klimatet mest globalt?", "back": "Breddgrad (solinstrålning), höjd över havet, och avstånd till hav/strömmar.", "hint": "Läge, höjd, hav.", "choices": ["Vind, moln, regnbågar", "Breddgrad, höjd, hav", "Städer, bilar, flyg", "Bara nederbörd"], "answerIndex": 1, "tags": ["klimat"] },
