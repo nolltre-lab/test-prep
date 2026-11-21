@@ -92,11 +92,18 @@ button{font:inherit;color:inherit;cursor:pointer;border:0}
 
 /* things inside the scene SVG */
 .spot{cursor:pointer}
-.peeker{transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
-.peeker.hiding{animation:peekaboo 6s ease-in-out infinite}
+.peeker{transform:translateY(var(--hide,0px));transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
+.peeker.hiding{animation:peekaboo 10s ease-in-out infinite}
+.peeker.hiding.easy{animation-name:peekaboo-easy}
 .peeker.peek-now{animation:none;transform:translateY(var(--pk))}
-@keyframes peekaboo{0%,52%,100%{transform:translateY(0)}60%,84%{transform:translateY(var(--pk))}}
+@keyframes peekaboo{0%,76%,100%{transform:translateY(var(--hide,0px))}82%,90%{transform:translateY(var(--pk))}}
+@keyframes peekaboo-easy{0%,56%,100%{transform:translateY(var(--hide,0px))}64%,84%{transform:translateY(var(--pk))}}
 .peeker.out{animation:none;transform:translateY(var(--out))}
+.front.wiggle{animation:wiggle .5s!important}
+.rustle{animation:rustle 8s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes rustle{0%,86%,100%{transform:rotate(0)}88%{transform:rotate(-4deg)}90%{transform:rotate(4deg)}92%{transform:rotate(-3deg)}94%{transform:rotate(2deg)}}
+.glint{opacity:0;animation:glint 8s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes glint{0%,78%,100%{opacity:0;transform:scaleY(1)}81%,92%{opacity:1;transform:scaleY(1)}86%{opacity:1;transform:scaleY(.1)}}
 .wiggle{animation:wiggle .5s;transform-box:fill-box;transform-origin:50% 100%}
 @keyframes wiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-5deg)}75%{transform:rotate(5deg)}}
 .bob{animation:bob 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
@@ -197,7 +204,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0}
     <span class="pill" id="where"></span>
     <span class="grow"></span>
     <span class="pill" id="starCount">⭐ 0</span>
-    <button class="icon-btn" id="hintSpotBtn" title="Var gömmer de sig?">🔍</button>
+    <button class="icon-btn" id="hintSpotBtn" title="Var gömmer de sig? (kostar 1 ⭐)">🔍</button>
     <button class="icon-btn" id="soundBtn" title="Ljud">🔊</button>
   </div>
   <div id="banner"><b id="bannerTitle"></b><span id="bannerSub"></span></div>
@@ -550,11 +557,11 @@ const HERO_SIZE = 86;
 const VIEW_H = 620;
 
 const PLACES = {
-  forest:   { name: "Skogsgläntan", spots: ["bush", "log", "leaves", "hollow", "rock", "bush"], gate: "stream" },
-  lake:     { name: "Glittersjön",  spots: ["reeds", "water", "water", "rock", "bush", "reeds"], gate: "stream" },
-  valley:   { name: "Forsdalen",    spots: ["bush", "rock", "hollow", "log", "leaves", "rock"], gate: "stream" },
-  mushroom: { name: "Svampskogen",  spots: ["leaves", "log", "hollow", "bush", "leaves"], gate: "stream" },
-  mountain: { name: "Molnberget",   spots: ["rock", "snowbush", "rock", "log", "hollow"], gate: "boulder" },
+  forest:   { name: "Skogsgläntan", spots: ["bush", "log", "leaves", "hollow", "rock", "burrow", "stump", "treetop"], gate: "stream" },
+  lake:     { name: "Glittersjön",  spots: ["reeds", "water", "water", "rock", "bush", "reeds", "stump"], gate: "stream" },
+  valley:   { name: "Forsdalen",    spots: ["bush", "rock", "hollow", "log", "burrow", "treetop", "stump"], gate: "stream" },
+  mushroom: { name: "Svampskogen",  spots: ["leaves", "log", "hollow", "bush", "stump", "burrow", "treetop"], gate: "stream" },
+  mountain: { name: "Molnberget",   spots: ["rock", "snowbush", "rock", "burrow", "log", "stump"], gate: "boulder" },
   castle:   { name: "Drakslottet",  spots: [], gate: null },
 };
 const ROUTES = { 3: ["forest", "lake", "mountain"], 4: ["forest", "lake", "valley", "mountain"], 5: ["forest", "lake", "valley", "mushroom", "mountain"] };
@@ -562,16 +569,23 @@ const ROUTES = { 3: ["forest", "lake", "mountain"], 4: ["forest", "lake", "valle
 /* How each kind of hiding spot looks and how its animal peeks out of it.
    restTop: the animal's top edge at rest (just the ears show), relative to the spot's ground point.
    peek / out: how far it moves up when peeking / when found. clipY: the animal is cut off below this. */
+/* hide: how far the animal sinks at rest so not even its ears show. eyes: where glinting eyes can
+   appear (only places with a dark gap). */
 const SPOT_KINDS = {
-  bush:     { box: [150, 110], size: 80, restTop: -92, peek: -30, out: -62, clipY: -6, animals: ["bunny", "hedgehog", "fox", "duck"] },
-  snowbush: { box: [150, 110], size: 80, restTop: -92, peek: -30, out: -62, clipY: -6, animals: ["bunny", "fox", "hedgehog"] },
-  log:      { box: [160, 80],  size: 64, restTop: -56, peek: -26, out: -42, clipY: -4, animals: ["fox", "hedgehog", "squirrel", "beaver", "bunny"] },
-  rock:     { box: [140, 95],  size: 68, restTop: -72, peek: -28, out: -46, clipY: -4, animals: ["fox", "bunny", "turtle", "beaver", "hedgehog"] },
-  leaves:   { box: [140, 75],  size: 58, restTop: -56, peek: -22, out: -40, clipY: -4, animals: ["hedgehog", "squirrel", "bunny"] },
-  reeds:    { box: [130, 125], size: 74, restTop: -76, peek: -22, out: -54, clipY: 0,  animals: ["duck", "frog", "turtle", "beaver"] },
-  hollow:   { box: [90, 300],  size: 46, restTop: -102, peek: -22, out: -42, clipEllipse: [0, -110, 17, 22], animals: ["owl", "squirrel"] },
-  water:    { box: [110, 80],  size: 64, restTop: 2,   peek: -24, out: -52, clipY: 0,  animals: ["frog", "turtle", "beaver"] },
+  bush:     { box: [150, 110], size: 80, restTop: -92, hide: 14, peek: -30, out: -62, clipY: -6, eyes: [-14, -46], animals: ["bunny", "hedgehog", "fox", "duck"] },
+  snowbush: { box: [150, 110], size: 80, restTop: -92, hide: 14, peek: -30, out: -62, clipY: -6, eyes: [-14, -46], animals: ["bunny", "fox", "hedgehog"] },
+  log:      { box: [160, 80],  size: 64, restTop: -56, hide: 12, peek: -26, out: -42, clipY: -4, animals: ["fox", "hedgehog", "squirrel", "beaver", "bunny"] },
+  rock:     { box: [140, 95],  size: 68, restTop: -72, hide: 12, peek: -28, out: -46, clipY: -4, animals: ["fox", "bunny", "turtle", "beaver", "hedgehog"] },
+  leaves:   { box: [140, 75],  size: 58, restTop: -56, hide: 10, peek: -22, out: -40, clipY: -4, animals: ["hedgehog", "squirrel", "bunny"] },
+  stump:    { box: [110, 80],  size: 62, restTop: -58, hide: 12, peek: -24, out: -40, clipY: -4, animals: ["squirrel", "hedgehog", "bunny", "fox"] },
+  burrow:   { box: [130, 70],  size: 60, restTop: -8,  hide: 0,  peek: -32, out: -58, clipY: -12, eyes: [0, -10], animals: ["fox", "bunny", "hedgehog"] },
+  reeds:    { box: [130, 125], size: 74, restTop: -76, hide: 30, peek: -40, out: -54, clipY: 0, eyes: [0, -44], animals: ["duck", "frog", "turtle", "beaver"] },
+  hollow:   { box: [90, 300],  size: 46, restTop: -102, hide: 16, peek: -22, out: -42, clipEllipse: [0, -110, 17, 22], eyes: [0, -110], animals: ["owl", "squirrel"] },
+  treetop:  { box: [130, 340], size: 44, restTop: -270, hide: 12, peek: -26, out: -40, clipY: 0, eyes: [0, -244], animals: ["owl", "squirrel"] },
+  water:    { box: [110, 80],  size: 64, restTop: 2,   hide: 0,  peek: -24, out: -52, clipY: 0, animals: ["frog", "turtle", "beaver"] },
 };
+const WATER_KINDS = ["water", "reeds"];
+const TALL_KINDS = ["hollow", "treetop"];
 
 const GREETINGS = [
   "Oj, du hittade mig! Då får du en fråga:",
@@ -591,6 +605,9 @@ const EMPTY = {
   reeds: ["Bara vass som viskar i vinden.", "En trollslända! 🪰", "Plask! Bara en fisk 🐟"],
   hollow: ["Tomt hål – men det ekar! Hallååå!", "En spindel bor här 🕷️", "Bara gamla ekollon."],
   water: ["Plask! En fisk hoppade 🐟", "Bara vattenbubblor.", "Vattnet är kallt! Inget djur här."],
+  stump: ["Bara en gammal stubbe.", "Myror bor i stubben 🐜", "Tomt! Men här växer svamp 🍄"],
+  burrow: ["Bara en mullvad som sover 😴", "Ett tomt hål. Ekooo!", "En mask tittade ut 🪱"],
+  treetop: ["Bara löv och kvistar 🍃", "En fågel flög iväg! 🐦", "Tomt i trädkronan!"],
 };
 
 /* =====================================================================
@@ -752,14 +769,43 @@ function toQuestions(items) {
 }
 
 // Lay out one scene: hiding spots spread over the width, some of them with an animal.
-function buildScene(place, animals) {
+// How animals hide, per place in the journey: the first place is gentle, later ones get harder.
+//   peek   – pops up now and then        eyes   – only two glinting eyes in a dark gap
+//   clue   – never shows itself; leaves tracks, feathers or nutshells, rustles, or bubbles
+//   runner – when found, runs off to another hiding place, leaving tracks
+const STYLE_WEIGHTS = [
+  { peek: .55, eyes: .25, clue: .2, runner: 0 },
+  { peek: .35, eyes: .25, clue: .25, runner: .15 },
+  { peek: .2, eyes: .25, clue: .3, runner: .25 },
+];
+function weighted(w) {
+  let r = Math.random() * Object.values(w).reduce((a, b) => a + b, 0);
+  for (const [k, v] of Object.entries(w)) { if ((r -= v) < 0) return k; }
+  return Object.keys(w)[0];
+}
+// Somewhere 160–240 units away on the ground, for a trail of tracks to start from.
+function trailStart(x, y) {
+  const a = Math.random() * Math.PI * 2, d = 160 + Math.random() * 80;
+  return { x: Math.round(clamp(x + Math.cos(a) * d, 60, GATE_X - 90)), y: Math.round(clamp(y + Math.sin(a) * d * .5, GROUND_TOP + 30, GROUND_BOTTOM)) };
+}
+function giveClue(sp) {
+  if (sp.kind === "water") sp.clue = "bubbles";
+  else if (TALL_KINDS.includes(sp.kind)) sp.clue = "items";
+  else if (sp.kind === "reeds") sp.clue = "rustle";
+  else {
+    sp.clue = Math.random() < .55 ? "tracks" : "rustle";
+    if (sp.clue === "tracks") sp.trackFrom = trailStart(sp.x, sp.y + 6);
+  }
+}
+
+function buildScene(place, animals, si = 0) {
   const def = PLACES[place];
   const seed = Math.floor(Math.random() * 100000);
   if (place === "castle") {
     return { place, seed, open: false, hero: { x: 840, y: 790 },
       spots: [{ kind: "boss", x: 1060, y: 790, animal: "dragon", found: true, answered: false, stars: 0, bossLeft: BOSS_QUESTIONS }] };
   }
-  const count = animals + Math.max(3, animals + 1);           // about half the spots are empty
+  const count = animals + Math.max(3, animals + 1) + Math.min(si, 2);  // more empty spots further on
   const kinds = shuffle(Array.from({ length: count }, (_, i) => def.spots[i % def.spots.length]));
   const x0 = 230, x1 = GATE_X - 160, step = (x1 - x0) / (count - 1);
   const spots = kinds.map((kind, i) => {
@@ -767,7 +813,7 @@ function buildScene(place, animals) {
     let y;
     if (kind === "water") y = 470 + Math.random() * 90;           // out in the lake
     else if (kind === "reeds") y = 640 + Math.random() * 30;      // along the shore
-    else if (kind === "hollow") y = 655 + Math.random() * 25;     // trees stand at the back
+    else if (TALL_KINDS.includes(kind)) y = 655 + Math.random() * 25;  // trees stand at the back
     else y = (i % 2 ? 690 : 760) + Math.random() * 70;
     return { kind, x: Math.round(x), y: Math.round(y), animal: null, found: false, answered: false, stars: 0 };
   });
@@ -779,6 +825,21 @@ function buildScene(place, animals) {
     const a = pick(fresh.length ? fresh : options);
     used.add(a); spots[i].animal = a;
   });
+  // How each animal hides. At most one runner per place, and only if it has somewhere to run to.
+  const weights = STYLE_WEIGHTS[Math.min(si, STYLE_WEIGHTS.length - 1)];
+  let runners = 0;
+  spots.forEach(sp => {
+    if (!sp.animal) return;
+    let style = weighted(weights);
+    if (style === "eyes" && !SPOT_KINDS[sp.kind].eyes) style = "clue";
+    if (style === "runner" && (runners || WATER_KINDS.includes(sp.kind) || !runTarget(spots, sp))) style = "peek";
+    if (style === "runner") runners++;
+    sp.style = style;
+    if (style === "clue") giveClue(sp);
+  });
+  // False clues further on: an empty bush that rustles, or tracks that lead to nothing.
+  shuffle(spots.filter(sp => !sp.animal && !WATER_KINDS.includes(sp.kind) && !TALL_KINDS.includes(sp.kind)))
+    .slice(0, Math.min(si, 2)).forEach(giveClue);
   return { place, seed, open: false, hero: { x: 110, y: 770 }, spots };
 }
 
@@ -793,7 +854,7 @@ async function startJourney() {
   if (qs.length < 3) { alert("Det här paketet har för få frågor för ett äventyr."); $("#goBtn").disabled = false; return; }
 
   const len = LENGTHS.find(l => l.scenes === setup.length) || LENGTHS[1];
-  const scenes = ROUTES[len.scenes].map(p => buildScene(p, len.per));
+  const scenes = ROUTES[len.scenes].map((p, si) => buildScene(p, len.per, si));
   scenes.push(buildScene("castle", 0));
 
   game = {
@@ -975,11 +1036,12 @@ function spotSvg(sp, i) {
   const [bw, bh] = k.box;
   const objects = spotObject(sp.kind, x, y, sid);
   let peeker = "", clip = "";
+  const style = sp.style || "peek";
   if (sp.animal) {
-    const st = sp.found ? "out" : "hiding";
-    const dur = (5 + rnd(sp.x) * 3).toFixed(2), delay = (-rnd(sp.y) * 6).toFixed(2);
+    const st = sp.found ? "out" : style === "peek" || style === "runner" ? `hiding${game.si === 0 ? " easy" : ""}` : "still";
+    const dur = (game.si === 0 ? 6 + rnd(sp.x) * 3 : 9 + rnd(sp.x) * 5).toFixed(2), delay = (-rnd(sp.y) * 8).toFixed(2);
     const mood = sp.answered ? "happy" : "idle";
-    const inner = `<g class="peeker ${st}" style="--pk:${k.peek}px;--out:${k.out}px;animation-duration:${dur}s;animation-delay:${delay}s">
+    const inner = `<g class="peeker ${st}" style="--hide:${k.hide}px;--pk:${k.peek}px;--out:${k.out}px;animation-duration:${dur}s;animation-delay:${delay}s">
       <svg x="${x - k.size / 2}" y="${y + k.restTop}" width="${k.size}" height="${k.size}" viewBox="0 0 100 100">${CHARACTERS[sp.animal].draw(mood)}</svg></g>`;
     if (!sp.found) {
       clip = k.clipEllipse
@@ -992,12 +1054,51 @@ function spotSvg(sp, i) {
   const badge = sp.answered
     ? `<text x="${x}" y="${topY - 6}" text-anchor="middle" font-size="22">${"⭐".repeat(sp.stars)}</text>`
     : sp.found ? `<g class="pulse"><circle cx="${x + k.size / 2}" cy="${topY + 4}" r="15" fill="#ffd447" stroke="#fff" stroke-width="3"/><text x="${x + k.size / 2}" y="${topY + 11}" text-anchor="middle" font-size="19" font-weight="bold" fill="${INK}">?</text></g>` : "";
-  const bubbles = sp.kind === "water" && sp.animal && !sp.found
+  const hidden = !sp.found;
+  const clue = hidden ? sp.clue : null;  // also set on some empty spots, as false clues
+  const bubbles = clue === "bubbles"
     ? [0, 1, 2].map(b => `<circle cx="${x - 10 + b * 10}" cy="${y - 4}" r="${3 + b}" fill="#fff" opacity=".8" class="bubble-up" style="animation-delay:${b * 0.9 + rnd(sp.x + b) * 2}s"/>`).join("") : "";
+  const items = clue === "items" ? clueItems(sp.animal === "squirrel" ? "nuts" : "feathers", x + 40, y + 6) : "";
+  const eyesSvg = hidden && sp.animal && style === "eyes" ? glintEyes(x + k.eyes[0], y + k.eyes[1], sp) : "";
+  const rustle = clue === "rustle" ? ` rustle" style="animation-delay:-${(rnd(sp.x + 7) * 8).toFixed(2)}s;animation-duration:${(7 + rnd(sp.y) * 4).toFixed(2)}s` : "";
   // a found animal stands in front of its hiding place; a hidden one behind it
   return `<g class="spot" data-i="${i}">${clip ? `<defs>${clip}</defs>` : ""}
     <rect x="${x - bw / 2}" y="${y - bh}" width="${bw}" height="${bh + 14}" fill="transparent" pointer-events="all"/>
-    ${objects.back}${sp.found ? "" : peeker}<g class="front">${objects.front}</g>${sp.found ? peeker : ""}${bubbles}${badge}</g>`;
+    ${objects.back}${sp.found ? "" : peeker}<g class="front${rustle}">${objects.front}</g>${eyesSvg}${sp.found ? peeker : ""}${bubbles}${items}${badge}</g>`;
+}
+
+// Two eyes that blink in a dark gap now and then.
+function glintEyes(ex, ey, sp) {
+  const eye = dx => `<ellipse cx="${ex + dx}" cy="${ey}" rx="3.4" ry="4" fill="#fff6a8"/><circle cx="${ex + dx + .6}" cy="${ey + .4}" r="1.8" fill="${INK}"/>`;
+  return `<g class="glint" style="animation-delay:-${(rnd(sp.x + 3) * 8).toFixed(2)}s;animation-duration:${(7 + rnd(sp.y + 3) * 4).toFixed(2)}s">${eye(-6)}${eye(6)}</g>`;
+}
+
+// Feathers or nutshells under a tree: someone is up there.
+function clueItems(type, x, y) {
+  if (type === "nuts") return [[0, 0], [14, 4], [-8, 6]].map(([dx, dy]) =>
+    `<path d="M${x + dx - 5} ${y + dy} a5 5 0 0 1 10 0z" fill="#9a6640"/>`).join("");
+  return [[0, 0, 20], [16, 5, -30]].map(([dx, dy, rot]) =>
+    `<g transform="translate(${x + dx} ${y + dy}) rotate(${rot})"><path d="M-9 0 Q0 -6 9 0 Q0 4 -9 0z" fill="#f2efe6" stroke="#c9c2b0"/><path d="M-10 0 H10" stroke="#a8a090" stroke-width="1"/></g>`).join("");
+}
+
+// Trails of footprints: to an animal that leaves tracks or ran away, and some false ones.
+function tracksSvg(sc) {
+  let s = "";
+  sc.spots.forEach(sp => {
+    if (!sp.trackFrom || sp.found) return;
+    const bird = sp.animal === "duck";
+    const tx = sp.x, ty = sp.y + 6, fx = sp.trackFrom.x, fy = sp.trackFrom.y;
+    const len = Math.hypot(tx - fx, ty - fy), ang = Math.atan2(ty - fy, tx - fx), steps = Math.floor((len - 60) / 30);
+    for (let n = 0; n <= steps; n++) {
+      const d = n * 30, side = n % 2 ? 7 : -7;
+      const px = fx + Math.cos(ang) * d - Math.sin(ang) * side, py = fy + Math.sin(ang) * d + Math.cos(ang) * side;
+      const rot = (ang * 180 / Math.PI + 90).toFixed(0);
+      s += bird
+        ? `<path transform="translate(${px.toFixed(1)} ${py.toFixed(1)}) rotate(${rot})" d="M0 4 V-4 M0 0 L-4 -5 M0 0 L4 -5" stroke="#5b4632" stroke-width="2" fill="none" opacity=".5"/>`
+        : `<g transform="translate(${px.toFixed(1)} ${py.toFixed(1)}) rotate(${rot})" fill="#5b4632" opacity=".45"><ellipse cy="1.5" rx="3.6" ry="3"/><circle cx="-3.6" cy="-3" r="1.5"/><circle cy="-4.4" r="1.5"/><circle cx="3.6" cy="-3" r="1.5"/></g>`;
+    }
+  });
+  return s;
 }
 
 function spotObject(kind, x, y, sid) {
@@ -1042,6 +1143,24 @@ function spotObject(kind, x, y, sid) {
           <path d="M${x - 14} ${y - 180} v60 M${x + 12} ${y - 60} v50" stroke="#6e4528" stroke-width="3"/>
           <circle cx="${x}" cy="${y - 262}" r="70" fill="#3f9a4a"/><circle cx="${x - 52}" cy="${y - 222}" r="46" fill="#4fb35a"/><circle cx="${x + 54}" cy="${y - 226}" r="48" fill="#4fb35a"/>
           <ellipse cx="${x}" cy="${y - 110}" rx="19" ry="24" fill="#6e4528"/><ellipse cx="${x}" cy="${y - 110}" rx="16" ry="21" fill="#2f1d12"/></g>`, front: "" };
+    case "stump":
+      return { back: "", front: `<path d="M${x - 40} ${y} q8 -6 10 -12 M${x + 40} ${y} q-8 -6 -10 -12" stroke="#7a5233" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <path d="M${x - 34} ${y} L${x - 30} ${y - 48} H${x + 30} L${x + 34} ${y}Z" fill="#8a5a3b"/>
+        <path d="M${x - 18} ${y - 40} v30 M${x + 12} ${y - 34} v24" stroke="#6e4528" stroke-width="3"/>
+        <ellipse cx="${x}" cy="${y - 48}" rx="30" ry="9" fill="#d8a873"/><ellipse cx="${x}" cy="${y - 48}" rx="18" ry="5" fill="none" stroke="#a8784a" stroke-width="2"/>
+        ${r > .5 ? toadstool(x + 26, y - 2, .3) : ""}` };
+    case "burrow":
+      return { back: `<path d="M${x - 64} ${y} Q${x - 52} ${y - 36} ${x} ${y - 38} Q${x + 52} ${y - 36} ${x + 64} ${y}Z" fill="#9a7048"/>
+          <ellipse cx="${x}" cy="${y - 12}" rx="25" ry="14" fill="#2f1d12"/>`,
+        front: `<path d="M${x - 27} ${y - 10} Q${x} ${y + 4} ${x + 27} ${y - 10} Q${x} ${y - 2} ${x - 27} ${y - 10}Z" fill="#9a7048"/>
+          <circle cx="${x - 46}" cy="${y - 4}" r="4" fill="#7a5233"/><circle cx="${x + 44}" cy="${y - 6}" r="3" fill="#7a5233"/>` };
+    case "treetop":
+      return { back: `<g><path d="M${x - 24} ${y} q-14 4 -22 2 q14 -8 22 -14z M${x + 24} ${y} q14 4 22 2 q-14 -8 -22 -14z" fill="#7a5233"/>
+          <rect x="${x - 22}" y="${y - 200}" width="44" height="202" fill="#8a5a3b"/>
+          <path d="M${x - 10} ${y - 170} v60 M${x + 10} ${y - 70} v50" stroke="#6e4528" stroke-width="3"/>
+          <circle cx="${x}" cy="${y - 262}" r="72" fill="#3a8f45"/><circle cx="${x - 56}" cy="${y - 220}" r="46" fill="#46a852"/><circle cx="${x + 56}" cy="${y - 224}" r="48" fill="#46a852"/></g>`,
+        front: `<circle cx="${x - 20}" cy="${y - 238}" r="24" fill="#4fb35a"/><circle cx="${x + 20}" cy="${y - 236}" r="24" fill="#4aad55"/>
+          <circle cx="${x}" cy="${y - 222}" r="22" fill="#4fb35a"/><circle cx="${x}" cy="${y - 252}" r="17" fill="#4aad55"/>` };
     case "water":
       return { back: "", front: `<ellipse cx="${x}" cy="${y}" rx="26" ry="7" fill="none" stroke="#fff" stroke-width="3" class="ripple" style="animation-delay:${(r * 2).toFixed(2)}s"/>
         <ellipse cx="${x}" cy="${y}" rx="26" ry="7" fill="none" stroke="#fff" stroke-width="3" class="ripple" style="animation-delay:${(r * 2 + 1.2).toFixed(2)}s"/>
@@ -1058,6 +1177,7 @@ function renderScene() {
   const h = sc.hero;
   $("#world").innerHTML = `<svg id="scene" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
     ${background(sc)}${gateSvg(sc)}
+    <g id="tracks">${tracksSvg(sc)}</g>
     <g id="spots">${order.map(i => spotSvg(sc.spots[i], i)).join("")}</g>
     <g id="fx"></g>
     <g id="hero" transform="translate(${h.x} ${h.y})"><g id="heroFlip">
@@ -1165,7 +1285,7 @@ $("#world").onclick = e => {
     // stand next to the spot, on the side the hero comes from
     const side = sc.hero.x < sp.x ? -1 : 1;
     const standX = sp.x + side * (SPOT_KINDS[sp.kind]?.box[0] / 2 + 20 || 110);
-    const standY = sp.kind === "water" || sp.kind === "hollow" || sp.kind === "reeds" ? GROUND_TOP + 50 : sp.y + 6;
+    const standY = sp.kind === "water" || sp.kind === "reeds" || TALL_KINDS.includes(sp.kind) ? GROUND_TOP + 50 : sp.y + 6;
     return walkTo(standX, standY, () => {
       $("#heroFlip").setAttribute("transform", side < 0 ? "" : "scale(-1 1)");
       inspect(i);
@@ -1205,10 +1325,47 @@ function inspect(i) {
     pk.style.transform = "translateY(0)"; void pk.getBoundingClientRect(); pk.style.transform = "";
     pk.classList.add("out");
     const r = el.getBoundingClientRect();
+    if (sp.style === "runner" && !sp.ran && runTarget(sc.spots, sp)) {
+      say("Hihi! Ta mig om du kan! 💨", r.left + r.width / 2, r.top);
+      return setTimeout(() => runAway(i), 900);
+    }
     say("Hittad! 🎉", r.left + r.width / 2, r.top);
     return setTimeout(() => openStation(i), 650);
   }
   openStation(i);
+}
+
+// An empty land spot the animal likes, preferably not right next door.
+function runTarget(spots, sp) {
+  const ok = spots.filter(t => t !== sp && !t.animal && !WATER_KINDS.includes(t.kind) && SPOT_KINDS[t.kind].animals.includes(sp.animal));
+  ok.sort((a, b) => Math.abs(b.x - sp.x) - Math.abs(a.x - sp.x));
+  return ok[0] || null;
+}
+
+// The runner dashes to another hiding place and hides there for real, leaving tracks behind.
+function runAway(i) {
+  const sc = scene(), sp = sc.spots[i], target = runTarget(sc.spots, sp);
+  if (!target) return openStation(i);
+  const k = SPOT_KINDS[sp.kind], size = 60, a = sp.animal;
+  const from = { x: sp.x, y: sp.y + k.restTop + k.out + k.size - 4 }, to = { x: target.x, y: target.y };
+  const el = document.querySelector(`.spot[data-i="${i}"] .peek-wrap`);
+  if (el) el.style.display = "none";
+  $("#fx").innerHTML = `<g id="runner"><svg x="${-size / 2}" y="${-size}" width="${size}" height="${size}" viewBox="0 0 100 100">${CHARACTERS[a].draw("happy")}</svg></g>`;
+  const g = $("#runner"), t0 = performance.now(), dur = 1300;
+  tone([700, 900, 1100], 0.06, "square", 0.05);
+  (function frame(now) {
+    const t = Math.min(1, (now - t0) / dur);
+    const x = from.x + (to.x - from.x) * t, y = from.y + (to.y - from.y) * t - Math.abs(Math.sin(t * Math.PI * 6)) * 22;
+    g.setAttribute("transform", `translate(${x} ${y})${to.x < from.x ? " scale(-1 1)" : ""}`);
+    if (t < 1) return requestAnimationFrame(frame);
+    Object.assign(target, { animal: a, style: "clue", clue: "tracks", trackFrom: { x: sp.x, y: sp.y + 6 }, ran: true, found: false });
+    Object.assign(sp, { animal: null, style: null, clue: null, trackFrom: null, found: false });
+    persist();
+    $("#fx").innerHTML = "";
+    renderScene();
+    camera(sc.hero.x, sc.hero.y, false);
+    say("Den sprang iväg! Följ spåren 🐾", innerWidth / 2, innerHeight / 3);
+  })(t0);
 }
 
 // The 🔍 button: one hidden animal peeks out and sparkles for a moment.
@@ -1219,6 +1376,7 @@ $("#hintSpotBtn").onclick = () => {
     const left = animalSpots(sc).some(s => !s.answered);
     return say(left ? "Du har hittat alla – nu ska de bara få sina svar!" : "Alla djur är hittade! Gå till skylten →", innerWidth / 2, innerHeight / 3);
   }
+  if (game.stars > 0) { game.stars--; persist(); updateHud(); say("−1 ⭐", innerWidth - 120, 70, "#c07a00"); }
   const [sp, i] = pick(hidden);
   const el = document.querySelector(`.spot[data-i="${i}"]`), pk = el.querySelector(".peeker");
   pk.classList.add("peek-now");
