@@ -1,0 +1,752 @@
+{
+  "title": "Biologi åk 4: Djur, växter, kroppen och naturen (Lgr22)",
+  "grades": [
+    4
+  ],
+  "subject": "Biologi",
+  "items": [
+    {
+      "front": "Vilken djurgrupp hör valen till?",
+      "back": "däggdjur – valar andas luft och ger di åt sina ungar.",
+      "choices": [
+        "kräldjur",
+        "däggdjur",
+        "groddjur",
+        "fiskar"
+      ],
+      "answerIndex": 1,
+      "hint": "Valen andas med lungor och dricker mjölk som unge.",
+      "tags": [
+        "djur",
+        "djurgrupper",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken djurgrupp hör grodan till?",
+      "back": "groddjur – de börjar livet i vattnet och lever sedan även på land.",
+      "choices": [
+        "fiskar",
+        "groddjur",
+        "kräldjur",
+        "insekter"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "djur",
+        "djurgrupper",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken djurgrupp hör ormen till?",
+      "back": "kräldjur – de har torr hud med fjäll.",
+      "choices": [
+        "groddjur",
+        "däggdjur",
+        "maskar",
+        "kräldjur"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "djur",
+        "djurgrupper",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många ben har en insekt?",
+      "back": "6",
+      "choices": [
+        "6",
+        "8",
+        "4",
+        "10"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "djur",
+        "insekter",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många ben har en spindel?",
+      "back": "8 – spindlar är inte insekter.",
+      "choices": [
+        "10",
+        "6",
+        "4",
+        "8"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "djur",
+        "spindeldjur",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad har alla fåglar?",
+      "back": "fjädrar (och näbb, och de lägger ägg)",
+      "choices": [
+        "päls",
+        "gälar",
+        "fjädrar",
+        "fjäll"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "djur",
+        "djurgrupper",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur andas fiskar?",
+      "back": "med gälar – de tar syre ur vattnet.",
+      "choices": [
+        "med lungor",
+        "med näsan",
+        "med gälar",
+        "genom huden bara"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "djur",
+        "fiskar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas djur som bara äter växter?",
+      "back": "växtätare",
+      "choices": [
+        "asätare",
+        "växtätare",
+        "rovdjur",
+        "allätare"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "djur",
+        "föda",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket djur är ett rovdjur?",
+      "back": "lodjur",
+      "choices": [
+        "lodjur",
+        "hare",
+        "älg",
+        "rådjur"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "djur",
+        "föda",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör igelkotten på vintern?",
+      "back": "går i ide – sover hela vintern.",
+      "choices": [
+        "bygger ett bo i vattnet",
+        "flyttar söderut",
+        "går i ide",
+        "byter färg till vit"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "djur",
+        "vintern",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket djur byter päls till vit på vintern?",
+      "back": "fjällharen (skogsharen)",
+      "choices": [
+        "rådjuret",
+        "skogsharen",
+        "räven",
+        "ekorren"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "djur",
+        "vintern",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför flyttar många fåglar söderut på hösten?",
+      "back": "Det blir ont om mat (insekter) här på vintern.",
+      "choices": [
+        "de ska lägga ägg i snön",
+        "det blir för ljust",
+        "det blir ont om mat",
+        "de tycker om att resa"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "djur",
+        "vintern",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad behöver en växt för att kunna växa?",
+      "back": "ljus, vatten och koldioxid (luft) – och näring från jorden",
+      "choices": [
+        "bara sand",
+        "bara mörker",
+        "ljus, vatten och luft",
+        "mjölk och socker"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "växter",
+        "fotosyntes",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter det när växter gör näring av solljus?",
+      "back": "fotosyntes",
+      "choices": [
+        "förbränning",
+        "pollinering",
+        "matsmältning",
+        "fotosyntes"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "växter",
+        "fotosyntes",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken gas ger växterna ifrån sig som vi behöver för att andas?",
+      "back": "syre",
+      "choices": [
+        "syre",
+        "kväve",
+        "rök",
+        "koldioxid"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "växter",
+        "fotosyntes",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken del av växten tar upp vatten från jorden?",
+      "back": "roten",
+      "choices": [
+        "roten",
+        "stjälken",
+        "bladet",
+        "blomman"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "växter",
+        "växtens delar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör bina för blommorna?",
+      "back": "pollinerar dem – flyttar pollen så att det kan bli frön och frukt.",
+      "choices": [
+        "vattnar dem",
+        "gör dem färgglada",
+        "pollinerar dem",
+        "äter upp dem"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "växter",
+        "pollinering",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket träd är ett barrträd?",
+      "back": "gran",
+      "choices": [
+        "björk",
+        "lönn",
+        "gran",
+        "ek"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "växter",
+        "träd",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket träd har vit stam med svarta fläckar?",
+      "back": "björk",
+      "choices": [
+        "ek",
+        "gran",
+        "tall",
+        "björk"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "växter",
+        "träd",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket träd får ekollon?",
+      "back": "ek",
+      "choices": [
+        "ek",
+        "björk",
+        "tall",
+        "rönn"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "växter",
+        "träd",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför fäller lövträden sina löv på hösten?",
+      "back": "för att spara vatten och klara vintern",
+      "choices": [
+        "för att få nya färger",
+        "för att klara vintern",
+        "för att djuren ska äta dem",
+        "för att de är trötta"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "växter",
+        "årstider",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är en svamp?",
+      "back": "varken växt eller djur – en egen grupp. Den bryter ner döda saker.",
+      "choices": [
+        "ett djur",
+        "en sten",
+        "en växt",
+        "varken växt eller djur"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "växter",
+        "svampar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas det när en växt eller ett djur äter ett annat i en kedja?",
+      "back": "näringskedja",
+      "choices": [
+        "kretslopp",
+        "näringskedja",
+        "livscykel",
+        "släktträd"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ekosystem",
+        "näringskedja",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är rätt ordning i en näringskedja?",
+      "back": "gräs → hare → räv",
+      "choices": [
+        "gräs → hare → räv",
+        "gräs → räv → hare",
+        "räv → hare → gräs",
+        "hare → gräs → räv"
+      ],
+      "answerIndex": 0,
+      "hint": "Börja med det som får sin energi från solen.",
+      "tags": [
+        "ekosystem",
+        "näringskedja",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Var börjar alla näringskedjor?",
+      "back": "med växter, som får energi från solen",
+      "choices": [
+        "med människor",
+        "med växter",
+        "med svampar",
+        "med rovdjur"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ekosystem",
+        "näringskedja",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör maskar och svampar i naturen?",
+      "back": "bryter ner döda växter och djur till näring (nedbrytare)",
+      "choices": [
+        "jagar fåglar",
+        "äter levande träd",
+        "gör syre",
+        "bryter ner döda saker"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ekosystem",
+        "nedbrytare",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas ett område där växter och djur lever tillsammans, t.ex. en skog eller en sjö?",
+      "back": "ekosystem",
+      "choices": [
+        "näringskedja",
+        "ekosystem",
+        "kontinent",
+        "livscykel"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ekosystem",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad blir en grodyngel till?",
+      "back": "en groda",
+      "choices": [
+        "en ödla",
+        "en salamander",
+        "en fisk",
+        "en groda"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "livscykler",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är rätt ordning i fjärilens liv?",
+      "back": "ägg → larv → puppa → fjäril",
+      "choices": [
+        "fjäril → larv → ägg → puppa",
+        "ägg → larv → puppa → fjäril",
+        "larv → ägg → fjäril → puppa",
+        "ägg → puppa → larv → fjäril"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "livscykler",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Var lägger grodan sina ägg?",
+      "back": "i vatten (grodrom)",
+      "choices": [
+        "i sanden",
+        "i ett fågelbo",
+        "i ett träd",
+        "i vatten"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "livscykler",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör hjärtat?",
+      "back": "pumpar runt blodet i kroppen",
+      "choices": [
+        "pumpar runt blodet",
+        "andas",
+        "tänker",
+        "smälter maten"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "kroppen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket organ använder vi för att andas?",
+      "back": "lungorna",
+      "choices": [
+        "njurarna",
+        "levern",
+        "magen",
+        "lungorna"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "kroppen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör skelettet?",
+      "back": "håller upp kroppen och skyddar de inre organen",
+      "choices": [
+        "känner lukt",
+        "pumpar blod",
+        "håller upp och skyddar kroppen",
+        "smälter maten"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "kroppen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Var i kroppen finns det största benet, lårbenet?",
+      "back": "i benet, mellan höften och knät",
+      "choices": [
+        "i ryggen",
+        "i huvudet",
+        "i armen",
+        "mellan höft och knä"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "kroppen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket organ styr hela kroppen och tänker?",
+      "back": "hjärnan",
+      "choices": [
+        "magen",
+        "hjärnan",
+        "hjärtat",
+        "lungorna"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kroppen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många sinnen brukar man säga att vi har?",
+      "back": "fem: syn, hörsel, lukt, smak och känsel",
+      "choices": [
+        "10",
+        "5",
+        "3",
+        "7"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kroppen",
+        "sinnen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Med vilket sinne känner vi om något är varmt?",
+      "back": "känseln (huden)",
+      "choices": [
+        "synen",
+        "känseln",
+        "lukten",
+        "hörseln"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kroppen",
+        "sinnen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Var börjar matsmältningen?",
+      "back": "i munnen – tänderna tuggar och saliven börjar bryta ner maten.",
+      "choices": [
+        "i halsen",
+        "i magen",
+        "i munnen",
+        "i tarmen"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "kroppen",
+        "matsmältning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många mjölktänder har ett barn?",
+      "back": "20",
+      "choices": [
+        "20",
+        "10",
+        "28",
+        "32"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "kroppen",
+        "tänder",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur länge behöver ett barn i din ålder sova varje natt?",
+      "back": "ungefär 9–11 timmar",
+      "choices": [
+        "4–5 timmar",
+        "9–11 timmar",
+        "15–16 timmar",
+        "6 timmar"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "hälsa",
+        "sömn",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför ska man borsta tänderna?",
+      "back": "för att få bort bakterier och undvika hål (karies)",
+      "choices": [
+        "för att få vitare tunga",
+        "för att tänderna ska växa",
+        "för att undvika hål i tänderna",
+        "för att somna lättare"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "hälsa",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad händer med pulsen när du springer?",
+      "back": "Den går upp – hjärtat slår fortare.",
+      "choices": [
+        "den ändras inte",
+        "den stannar",
+        "den går upp",
+        "den går ner"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "hälsa",
+        "rörelse",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken årstid slår de flesta träd ut?",
+      "back": "våren",
+      "choices": [
+        "sommaren",
+        "hösten",
+        "vintern",
+        "våren"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "naturen",
+        "årstider",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder allemansrätten?",
+      "back": "att alla får vistas i naturen – men inte störa, inte förstöra",
+      "choices": [
+        "man får göra upp eld överallt",
+        "alla får vara i naturen om man är rädd om den",
+        "man får tälta i trädgårdar",
+        "man får plocka allt man vill"
+      ],
+      "answerIndex": 1,
+      "hint": "Inte störa – inte förstöra.",
+      "tags": [
+        "naturen",
+        "allemansrätten",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilka bär får man plocka enligt allemansrätten?",
+      "back": "vilda bär, som blåbär och lingon i skogen",
+      "choices": [
+        "äpplen i grannens trädgård",
+        "blåbär i skogen",
+        "jordgubbar på en odling",
+        "fridlysta blommor"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "naturen",
+        "allemansrätten",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder det att en växt är fridlyst?",
+      "back": "Man får inte plocka eller skada den.",
+      "choices": [
+        "den är giftig",
+        "den får plockas när som helst",
+        "man får inte plocka den",
+        "den växer bara i fred"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "naturen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför är det viktigt att inte slänga skräp i naturen?",
+      "back": "Djur kan skada sig eller äta det, och det tar lång tid att brytas ner.",
+      "choices": [
+        "det spelar ingen roll",
+        "djur kan skada sig",
+        "det är fult bara",
+        "det blir jord direkt"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "naturen",
+        "åk4"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,526 @@
+{
+  "title": "Samhällskunskap åk 4: Demokrati, rättigheter, pengar och medier (Lgr22)",
+  "grades": [
+    4
+  ],
+  "subject": "Samhällskunskap",
+  "items": [
+    {
+      "front": "Vad betyder demokrati?",
+      "back": "folkstyre – folket bestämmer, t.ex. genom att rösta",
+      "choices": [
+        "den rikaste bestämmer",
+        "folket bestämmer",
+        "ingen bestämmer",
+        "kungen bestämmer allt"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "demokrati",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur gammal måste man vara för att rösta i riksdagsvalet?",
+      "back": "18 år",
+      "choices": [
+        "16 år",
+        "18 år",
+        "15 år",
+        "21 år"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "demokrati",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur ofta är det riksdagsval i Sverige?",
+      "back": "vart fjärde år",
+      "choices": [
+        "varje år",
+        "vartannat år",
+        "vart tionde år",
+        "vart fjärde år"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "demokrati",
+        "åk4"
+      ]
+    },
+    {
+      "front": "I klassen röstar 14 på fotboll och 11 på brännboll. Vad blir det i en demokrati?",
+      "back": "fotboll – majoriteten bestämmer",
+      "choices": [
+        "fotboll",
+        "brännboll",
+        "båda samtidigt",
+        "läraren lottar alltid"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "demokrati",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är ett klassråd?",
+      "back": "ett möte där eleverna får säga sin åsikt och vara med och bestämma",
+      "choices": [
+        "en rast",
+        "en sorts prov",
+        "en lärarutbildning",
+        "ett möte där elever får vara med och bestämma"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "demokrati",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter FN:s överenskommelse om barns rättigheter?",
+      "back": "barnkonventionen",
+      "choices": [
+        "grundlagen",
+        "skollagen",
+        "barnkonventionen",
+        "allemansrätten"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "barnets rättigheter",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Upp till vilken ålder räknas man som barn enligt barnkonventionen?",
+      "back": "18 år",
+      "choices": [
+        "12 år",
+        "20 år",
+        "18 år",
+        "15 år"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "barnets rättigheter",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Sedan vilket år är barnkonventionen svensk lag?",
+      "back": "2020",
+      "choices": [
+        "2010",
+        "2020",
+        "1950",
+        "1995"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "barnets rättigheter",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken är en rättighet enligt barnkonventionen?",
+      "back": "att få gå i skolan",
+      "choices": [
+        "att få gå i skolan",
+        "att slippa läxor",
+        "att bestämma över vuxna",
+        "att få en egen mobil"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "barnets rättigheter",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter Sveriges statschef?",
+      "back": "kung Carl XVI Gustaf",
+      "choices": [
+        "kronprinsessan Victoria",
+        "statsministern",
+        "kung Carl XVI Gustaf",
+        "talmannen"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "så styrs Sverige",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem leder Sveriges regering?",
+      "back": "statsministern",
+      "choices": [
+        "kungen",
+        "statsministern",
+        "talmannen",
+        "polischefen"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "så styrs Sverige",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör riksdagen?",
+      "back": "bestämmer Sveriges lagar och hur skattepengarna ska användas",
+      "choices": [
+        "lagar vägar",
+        "styr skolorna i en kommun",
+        "bestämmer lagar",
+        "dömer brottslingar"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "så styrs Sverige",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många ledamöter har riksdagen?",
+      "back": "349",
+      "choices": [
+        "500",
+        "100",
+        "349",
+        "290"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "så styrs Sverige",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem ansvarar för grundskolan där du bor?",
+      "back": "kommunen",
+      "choices": [
+        "kungen",
+        "regionen",
+        "riksdagen",
+        "kommunen"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "så styrs Sverige",
+        "kommunen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem ansvarar för sjukhusen och vårdcentralerna?",
+      "back": "regionen",
+      "choices": [
+        "regionen",
+        "skolan",
+        "polisen",
+        "kommunen"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "så styrs Sverige",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betalas av skatter?",
+      "back": "t.ex. skolor, vård, vägar och polis",
+      "choices": [
+        "skolor, vård och vägar",
+        "ingenting",
+        "godis och leksaker",
+        "privata semestrar"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "så styrs Sverige",
+        "skatter",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket nummer ringer du vid en olycka eller nödsituation?",
+      "back": "112",
+      "choices": [
+        "114 14",
+        "911",
+        "112",
+        "1177"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "lagar och regler",
+        "säkerhet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket nummer ringer man för sjukvårdsråd när det inte är akut?",
+      "back": "1177",
+      "choices": [
+        "112",
+        "118 118",
+        "1177",
+        "114 14"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "lagar och regler",
+        "säkerhet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Från vilken ålder kan man dömas till straff för brott i Sverige?",
+      "back": "15 år (straffmyndig)",
+      "choices": [
+        "12 år",
+        "18 år",
+        "10 år",
+        "15 år"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "lagar och regler",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför har vi lagar och regler?",
+      "back": "så att alla ska vara trygga och veta vad som gäller",
+      "choices": [
+        "för att alla ska vara trygga",
+        "för att det ska bli krångligt",
+        "bara för vuxna",
+        "för att polisen ska få jobb"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "lagar och regler",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är skillnaden mellan en regel och en lag?",
+      "back": "En lag bestäms av riksdagen och gäller alla; en regel kan gälla t.ex. i en skola eller familj.",
+      "choices": [
+        "lagar gäller bara barn",
+        "lagar gäller alla, regler kan gälla en plats",
+        "regler gäller hela landet",
+        "ingen skillnad"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "lagar och regler",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är en budget?",
+      "back": "en plan för hur man ska använda sina pengar",
+      "choices": [
+        "en bank",
+        "en sorts skatt",
+        "ett kvitto",
+        "en plan för pengar"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "pengar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder det att spara pengar?",
+      "back": "lägga undan pengar för att kunna använda dem senare",
+      "choices": [
+        "låna pengar",
+        "lägga undan pengar till senare",
+        "slösa pengar",
+        "ge bort pengar"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "pengar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är lön?",
+      "back": "pengar man får för att man arbetar",
+      "choices": [
+        "pengar för arbete",
+        "veckopeng",
+        "pengar från banken gratis",
+        "en sorts skatt"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "pengar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför finns reklam?",
+      "back": "för att få oss att köpa något",
+      "choices": [
+        "för att vara rolig bara",
+        "för att få oss att köpa",
+        "för att lära oss i skolan",
+        "för att informera om vädret"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "pengar",
+        "reklam",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Samma glass kostar 25 kr i en butik och 19 kr i en annan. Vad är klokast?",
+      "back": "köpa den för 19 kr – jämför priser",
+      "choices": [
+        "köpa den dyrare",
+        "det spelar ingen roll",
+        "köpa båda",
+        "köpa den billigare"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "pengar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder källkritik?",
+      "back": "att fundera på om information är sann och vem som står bakom den",
+      "choices": [
+        "att kritisera en vattenkälla",
+        "att granska om information är sann",
+        "att aldrig läsa nyheter",
+        "att tro på allt man läser"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "medier och källkritik",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Du ser ett klipp om att skolan är stängd i morgon. Vad bör du göra?",
+      "back": "kolla med en säker källa, t.ex. skolan eller en vuxen",
+      "choices": [
+        "stanna hemma",
+        "tro på det",
+        "dela det direkt",
+        "kolla med skolan eller en vuxen"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "medier och källkritik",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad ska du aldrig dela med någon på nätet?",
+      "back": "ditt lösenord",
+      "choices": [
+        "en bild på en blomma",
+        "ditt lösenord",
+        "din favoritfärg",
+        "ett skämt"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "medier och källkritik",
+        "nätet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad ska du göra om någon är elak mot dig på nätet?",
+      "back": "berätta för en vuxen du litar på",
+      "choices": [
+        "hålla det hemligt",
+        "radera hela telefonen",
+        "vara elak tillbaka",
+        "berätta för en vuxen"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "medier och källkritik",
+        "nätet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilka är Sveriges fem nationella minoriteter?",
+      "back": "judar, romer, samer, sverigefinnar och tornedalingar",
+      "choices": [
+        "judar, romer, samer, sverigefinnar, tornedalingar",
+        "danskar, norrmän, finnar, tyskar, polacker",
+        "skåningar, gotlänningar, smålänningar, norrlänningar, stockholmare",
+        "bara samer"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "minoriteter",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket urfolk lever i Sverige?",
+      "back": "samerna",
+      "choices": [
+        "romerna",
+        "tornedalingarna",
+        "vikingarna",
+        "samerna"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "minoriteter",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Sedan vilket år är Sverige med i EU?",
+      "back": "1995",
+      "choices": [
+        "2015",
+        "1945",
+        "1995",
+        "1809"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "världen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter organisationen där nästan alla världens länder samarbetar för fred?",
+      "back": "FN (Förenta nationerna)",
+      "choices": [
+        "NATO",
+        "OS",
+        "EU",
+        "FN"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "världen",
+        "åk4"
+      ]
+    }
+  ]
+}

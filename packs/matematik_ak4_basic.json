@@ -1,0 +1,894 @@
+{
+  "title": "Matematik åk 4: Tal, räkning, bråk, mätning och geometri (Bas)",
+  "grades": [
+    4
+  ],
+  "subject": "Matematik",
+  "items": [
+    {
+      "front": "Vilket tal är störst: 5 120, 5 012, 5 201 eller 5 210?",
+      "back": "5 210",
+      "choices": [
+        "5 012",
+        "5 210",
+        "5 201",
+        "5 120"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "tal",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur skrivs ”tre tusen fyrtio” med siffror?",
+      "back": "3 040",
+      "choices": [
+        "340",
+        "3 040",
+        "3 400",
+        "3 004"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "tal",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket värde har siffran 6 i talet 2 650?",
+      "back": "600 (sex hundratal)",
+      "choices": [
+        "6",
+        "60",
+        "6 000",
+        "600"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "tal",
+        "positionssystem",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket tal kommer direkt efter 4 999?",
+      "back": "5 000",
+      "choices": [
+        "5 000",
+        "4 1000",
+        "5 999",
+        "4 998"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "tal",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket tal är udda?",
+      "back": "37 – udda tal slutar på 1, 3, 5, 7 eller 9.",
+      "choices": [
+        "50",
+        "24",
+        "18",
+        "37"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "tal",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Avrunda 68 till närmaste tiotal.",
+      "back": "70 – 8 är 5 eller mer, så man avrundar uppåt.",
+      "choices": [
+        "60",
+        "80",
+        "70",
+        "65"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "tal",
+        "avrundning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Avrunda 432 till närmaste hundratal.",
+      "back": "400 – 3 tiotal är mindre än 5, så man avrundar nedåt.",
+      "choices": [
+        "500",
+        "450",
+        "400",
+        "430"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "tal",
+        "avrundning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket tal fattas? 15, 20, 25, __, 35",
+      "back": "30 – talen ökar med 5.",
+      "choices": [
+        "28",
+        "30",
+        "26",
+        "40"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "tal",
+        "mönster",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket tal fattas? 64, 32, 16, __, 4",
+      "back": "8 – talet halveras varje gång.",
+      "choices": [
+        "8",
+        "10",
+        "6",
+        "12"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "tal",
+        "mönster",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är 47 + 38?",
+      "back": "85",
+      "choices": [
+        "84",
+        "75",
+        "85",
+        "95"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "räkna",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är 300 + 450?",
+      "back": "750",
+      "choices": [
+        "705",
+        "750",
+        "345",
+        "780"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "räkna",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är 92 − 45?",
+      "back": "47",
+      "choices": [
+        "53",
+        "43",
+        "47",
+        "57"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "räkna",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är 1 000 − 250?",
+      "back": "750",
+      "choices": [
+        "1 250",
+        "850",
+        "750",
+        "650"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "räkna",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är 236 + 145?",
+      "back": "381",
+      "choices": [
+        "481",
+        "391",
+        "371",
+        "381"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "räkna",
+        "uppställning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är 503 − 128?",
+      "back": "375",
+      "choices": [
+        "375",
+        "425",
+        "475",
+        "385"
+      ],
+      "answerIndex": 0,
+      "hint": "Växla: låna ett tiotal och ett hundratal.",
+      "tags": [
+        "räkna",
+        "uppställning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är 6 · 7?",
+      "back": "42",
+      "choices": [
+        "42",
+        "43",
+        "36",
+        "48"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation och division",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är 8 · 9?",
+      "back": "72",
+      "choices": [
+        "81",
+        "76",
+        "72",
+        "63"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation och division",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är 4 · 25?",
+      "back": "100",
+      "choices": [
+        "90",
+        "80",
+        "100",
+        "125"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "multiplikation och division",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är 30 · 3?",
+      "back": "90",
+      "choices": [
+        "900",
+        "60",
+        "33",
+        "90"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation och division",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är 56 / 8?",
+      "back": "7",
+      "choices": [
+        "7",
+        "6",
+        "8",
+        "9"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation och division",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är 45 / 5?",
+      "back": "9",
+      "choices": [
+        "40",
+        "9",
+        "7",
+        "8"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation och division",
+        "åk4"
+      ]
+    },
+    {
+      "front": "24 kakor delas lika mellan 6 barn. Hur många får varje barn?",
+      "back": "4 (24 / 6 = 4)",
+      "choices": [
+        "6",
+        "18",
+        "3",
+        "4"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "multiplikation och division",
+        "problemlösning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Ett paket har 6 ägg. Hur många ägg finns i 5 paket?",
+      "back": "30 (5 · 6 = 30)",
+      "choices": [
+        "25",
+        "30",
+        "11",
+        "36"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation och division",
+        "problemlösning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är dubbelt så mycket som 35?",
+      "back": "70",
+      "choices": [
+        "70",
+        "75",
+        "65",
+        "53"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "multiplikation och division",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är hälften av 90?",
+      "back": "45",
+      "choices": [
+        "35",
+        "45",
+        "50",
+        "40"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "multiplikation och division",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur stor del av pizzan är kvar om man ätit 1 av 4 lika stora bitar?",
+      "back": "3/4 (tre fjärdedelar)",
+      "choices": [
+        "1/4",
+        "4/3",
+        "1/3",
+        "3/4"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "bråk och decimaltal",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket bråk är störst?",
+      "back": "1/2 – ju färre delar, desto större bitar.",
+      "choices": [
+        "1/3",
+        "1/2",
+        "1/8",
+        "1/4"
+      ],
+      "answerIndex": 1,
+      "hint": "Tänk dig en tårta delad i 2 eller i 8 bitar.",
+      "tags": [
+        "bråk och decimaltal",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur mycket är 1/2 av 20?",
+      "back": "10",
+      "choices": [
+        "2",
+        "40",
+        "5",
+        "10"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "bråk och decimaltal",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur mycket är 1/4 av 12?",
+      "back": "3",
+      "choices": [
+        "48",
+        "3",
+        "4",
+        "6"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "bråk och decimaltal",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur skrivs 3 tiondelar som decimaltal?",
+      "back": "0,3",
+      "choices": [
+        "0,03",
+        "30",
+        "3,0",
+        "0,3"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "bråk och decimaltal",
+        "decimaltal",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket decimaltal är störst?",
+      "back": "0,7",
+      "choices": [
+        "0,7",
+        "0,5",
+        "0,1",
+        "0,07"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "bråk och decimaltal",
+        "decimaltal",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många centimeter är 1 meter?",
+      "back": "100 cm",
+      "choices": [
+        "50",
+        "1 000",
+        "10",
+        "100"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "mätning",
+        "längd",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många meter är 1 kilometer?",
+      "back": "1 000 m",
+      "choices": [
+        "10 000",
+        "100",
+        "1 000",
+        "10"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "mätning",
+        "längd",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många deciliter är 1 liter?",
+      "back": "10 dl",
+      "choices": [
+        "1 000",
+        "5",
+        "100",
+        "10"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "mätning",
+        "volym",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många gram är 1 kilogram?",
+      "back": "1 000 g",
+      "choices": [
+        "10",
+        "1 000",
+        "100",
+        "500"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "mätning",
+        "vikt",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket är rimligast att mäta i kilogram?",
+      "back": "en hund",
+      "choices": [
+        "ett suddgummi",
+        "en hund",
+        "en penna",
+        "en myra"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "mätning",
+        "vikt",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket mått är rimligast för en dörrs höjd?",
+      "back": "2 meter",
+      "choices": [
+        "2 centimeter",
+        "2 meter",
+        "2 kilometer",
+        "20 meter"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "mätning",
+        "längd",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många minuter är en timme?",
+      "back": "60",
+      "choices": [
+        "24",
+        "100",
+        "60",
+        "30"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "tid",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många timmar är ett dygn?",
+      "back": "24",
+      "choices": [
+        "24",
+        "60",
+        "48",
+        "12"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "tid",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Klockan är 14.30. Hur säger man det?",
+      "back": "halv tre (på eftermiddagen)",
+      "choices": [
+        "halv två",
+        "halv tre",
+        "tjugo i tre",
+        "kvart över två"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "tid",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Filmen börjar 18.15 och är 1 timme och 30 minuter. När slutar den?",
+      "back": "19.45",
+      "choices": [
+        "20.15",
+        "19.30",
+        "19.45",
+        "19.15"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "tid",
+        "problemlösning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många dagar har en vecka?",
+      "back": "7",
+      "choices": [
+        "30",
+        "10",
+        "7",
+        "5"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "tid",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken månad har oftast 28 dagar?",
+      "back": "februari",
+      "choices": [
+        "januari",
+        "april",
+        "juni",
+        "februari"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "tid",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många hörn har en rektangel?",
+      "back": "4",
+      "choices": [
+        "6",
+        "4",
+        "5",
+        "3"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "geometri",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken form har tre sidor?",
+      "back": "triangel",
+      "choices": [
+        "kvadrat",
+        "triangel",
+        "cirkel",
+        "rektangel"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "geometri",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas en fyrhörning där alla sidor är lika långa och alla vinklar räta?",
+      "back": "kvadrat",
+      "choices": [
+        "rektangel",
+        "cylinder",
+        "kvadrat",
+        "triangel"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "geometri",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken kropp ser ut som en tärning?",
+      "back": "kub",
+      "choices": [
+        "kon",
+        "kub",
+        "klot",
+        "cylinder"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "geometri",
+        "kroppar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken kropp ser ut som en fotboll?",
+      "back": "klot",
+      "choices": [
+        "kub",
+        "pyramid",
+        "klot",
+        "cylinder"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "geometri",
+        "kroppar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "En kvadrat har sidan 5 cm. Vad är omkretsen?",
+      "back": "20 cm (4 · 5)",
+      "choices": [
+        "20 cm",
+        "10 cm",
+        "25 cm",
+        "15 cm"
+      ],
+      "answerIndex": 0,
+      "hint": "Omkrets = alla sidor tillsammans.",
+      "tags": [
+        "geometri",
+        "omkrets",
+        "åk4"
+      ]
+    },
+    {
+      "front": "En rektangel är 6 cm lång och 2 cm bred. Vad är omkretsen?",
+      "back": "16 cm (6 + 2 + 6 + 2)",
+      "choices": [
+        "8 cm",
+        "12 cm",
+        "14 cm",
+        "16 cm"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "geometri",
+        "omkrets",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas en vinkel som är precis som hörnet på ett papper?",
+      "back": "rät vinkel (90°)",
+      "choices": [
+        "trubbig vinkel",
+        "spetsig vinkel",
+        "rät vinkel",
+        "rak linje"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "geometri",
+        "vinklar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Linnea har 50 kr och köper en glass för 18 kr. Hur mycket har hon kvar?",
+      "back": "32 kr",
+      "choices": [
+        "28 kr",
+        "32 kr",
+        "68 kr",
+        "42 kr"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "problemlösning",
+        "pengar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Tre böcker kostar 40 kr styck. Vad kostar de tillsammans?",
+      "back": "120 kr",
+      "choices": [
+        "100 kr",
+        "43 kr",
+        "160 kr",
+        "120 kr"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "problemlösning",
+        "pengar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hugo är 9 år. Hans syster är 4 år äldre. Hur gammal är systern?",
+      "back": "13 år",
+      "choices": [
+        "5 år",
+        "14 år",
+        "13 år",
+        "12 år"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "problemlösning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "I ett stapeldiagram är stapeln för ”katt” högst. Vad betyder det?",
+      "back": "Flest har röstat på katt / katt har störst värde.",
+      "choices": [
+        "Katt har flest",
+        "Katt är bäst",
+        "Diagrammet är fel",
+        "Katt har minst"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "diagram",
+        "åk4"
+      ]
+    },
+    {
+      "front": "En klass röstade: hund 8, katt 12, häst 5. Hur många röstade totalt?",
+      "back": "25",
+      "choices": [
+        "12",
+        "25",
+        "30",
+        "20"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "diagram",
+        "problemlösning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många fler röstade på katt (12) än på häst (5)?",
+      "back": "7",
+      "choices": [
+        "17",
+        "7",
+        "8",
+        "5"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "diagram",
+        "problemlösning",
+        "åk4"
+      ]
+    }
+  ]
+}

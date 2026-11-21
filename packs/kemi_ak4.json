@@ -1,0 +1,602 @@
+{
+  "title": "Kemi åk 4: Ämnen, luft, vatten, eld och återvinning (Lgr22)",
+  "grades": [
+    4
+  ],
+  "subject": "Kemi",
+  "items": [
+    {
+      "front": "Vilket ämne är flytande vid rumstemperatur?",
+      "back": "vatten",
+      "choices": [
+        "sten",
+        "vatten",
+        "syre",
+        "is"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "faser",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter det när is blir vatten?",
+      "back": "smälta",
+      "choices": [
+        "frysa",
+        "smälta",
+        "koka",
+        "avdunsta"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "faser",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter det när vattenånga blir vattendroppar, t.ex. på en kall spegel?",
+      "back": "kondensera",
+      "choices": [
+        "smälta",
+        "frysa",
+        "lösa sig",
+        "kondensera"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "faser",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är luft?",
+      "back": "en blandning av gaser, mest kväve och syre",
+      "choices": [
+        "en blandning av gaser",
+        "ingenting",
+        "bara syre",
+        "vattenånga bara"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "luft",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken gas behöver vi för att andas?",
+      "back": "syre",
+      "choices": [
+        "helium",
+        "koldioxid",
+        "kväve",
+        "syre"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "luft",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken gas andas vi ut mer av?",
+      "back": "koldioxid",
+      "choices": [
+        "syre",
+        "vätgas",
+        "koldioxid",
+        "helium"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "luft",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken gas finns i ballonger som svävar uppåt?",
+      "back": "helium – lättare än luft.",
+      "choices": [
+        "syre",
+        "vattenånga",
+        "helium",
+        "koldioxid"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "luft",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad händer med socker i varmt te?",
+      "back": "Det löser sig – det blandas ut i vattnet så man inte ser det.",
+      "choices": [
+        "det flyter upp",
+        "det löser sig",
+        "det försvinner för alltid",
+        "det blir sand"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "lösningar och blandningar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur kan man skilja sand från vatten?",
+      "back": "filtrera – häll genom ett filter (t.ex. ett kaffefilter)",
+      "choices": [
+        "filtrera",
+        "frysa",
+        "röra om",
+        "skaka"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "lösningar och blandningar",
+        "separation",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur får man tillbaka saltet ur saltvatten?",
+      "back": "låta vattnet avdunsta (koka bort det) – saltet blir kvar",
+      "choices": [
+        "skaka",
+        "filtrera",
+        "låta vattnet avdunsta",
+        "frysa"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "lösningar och blandningar",
+        "separation",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken blandning löser sig INTE i vatten?",
+      "back": "olja – den lägger sig ovanpå.",
+      "choices": [
+        "socker",
+        "olja",
+        "salt",
+        "saft"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "lösningar och blandningar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad smakar surt?",
+      "back": "citron",
+      "choices": [
+        "salt",
+        "mjölk",
+        "citron",
+        "socker"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "lösningar och blandningar",
+        "surt",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är ett material?",
+      "back": "det som en sak är gjord av, t.ex. trä, glas eller metall",
+      "choices": [
+        "ett verktyg",
+        "en färg",
+        "det som saker är gjorda av",
+        "en form"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ämnen och material",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket material är genomskinligt?",
+      "back": "glas",
+      "choices": [
+        "papp",
+        "järn",
+        "trä",
+        "glas"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ämnen och material",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket material flyter på vatten?",
+      "back": "trä (de flesta träslag)",
+      "choices": [
+        "trä",
+        "sten",
+        "glas",
+        "järn"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "ämnen och material",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad händer med järn som är ute i regn länge?",
+      "back": "Det rostar.",
+      "choices": [
+        "det rostar",
+        "det blir mjukt",
+        "det smälter",
+        "det blir guld"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "ämnen och material",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör man papper av?",
+      "back": "trä (träfibrer)",
+      "choices": [
+        "olja",
+        "sten",
+        "trä",
+        "sand"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ämnen och material",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör man plast av oftast?",
+      "back": "olja",
+      "choices": [
+        "trä",
+        "ull",
+        "olja",
+        "sand"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ämnen och material",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör man glas av?",
+      "back": "sand (som smälts vid hög värme)",
+      "choices": [
+        "plast",
+        "trä",
+        "is",
+        "sand"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ämnen och material",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad behöver en eld för att brinna?",
+      "back": "bränsle, syre och värme (brandtriangeln)",
+      "choices": [
+        "bränsle, syre och värme",
+        "vatten, salt och luft",
+        "bara ved",
+        "kyla och syre"
+      ],
+      "answerIndex": 0,
+      "hint": "Tänk på brandtriangeln – tre saker.",
+      "tags": [
+        "eld",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför släcker man en brinnande kastrull med ett lock?",
+      "back": "Locket stänger ute syret.",
+      "choices": [
+        "locket ger mer bränsle",
+        "locket stänger ute syret",
+        "locket blir blött",
+        "locket kyler"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "eld",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför får man aldrig släcka brinnande olja med vatten?",
+      "back": "Vattnet kokar explosivt och sprider den brinnande oljan.",
+      "choices": [
+        "det blir rök bara",
+        "det gör ingenting",
+        "vatten är för kallt",
+        "elden sprids explosivt"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "eld",
+        "säkerhet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket nummer ringer man vid brand?",
+      "back": "112",
+      "choices": [
+        "1177",
+        "112",
+        "911",
+        "114 14"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "eld",
+        "säkerhet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "I vilken behållare lägger man en tom mjölkkartong?",
+      "back": "pappersförpackningar",
+      "choices": [
+        "pappersförpackningar",
+        "matavfall",
+        "glas",
+        "metall"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "återvinning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Var lämnar man gamla batterier?",
+      "back": "i batteriholk eller på återvinningscentral – aldrig i soporna",
+      "choices": [
+        "i naturen",
+        "i batteriholk",
+        "i pappersinsamlingen",
+        "i hushållssoporna"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "återvinning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför ska man återvinna?",
+      "back": "för att materialen kan användas igen och naturen skonas",
+      "choices": [
+        "för att få mer skräp",
+        "för att soporna ska bli tyngre",
+        "för att det är roligt bara",
+        "materialen kan användas igen"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "återvinning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad blir matavfall ofta till?",
+      "back": "biogas och jord (gödsel)",
+      "choices": [
+        "plast",
+        "biogas och jord",
+        "papper",
+        "glas"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "återvinning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder en varningssymbol med en dödskalle?",
+      "back": "Ämnet är giftigt.",
+      "choices": [
+        "frätande",
+        "ofarligt",
+        "brandfarligt",
+        "giftigt"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "säkerhet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder en varningssymbol med en låga?",
+      "back": "Ämnet är brandfarligt.",
+      "choices": [
+        "frätande",
+        "brandfarligt",
+        "giftigt",
+        "explosivt"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "säkerhet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Var ska rengöringsmedel förvaras hemma?",
+      "back": "utom räckhåll för små barn, i originalförpackningen",
+      "choices": [
+        "bredvid maten",
+        "på golvet",
+        "i en saftflaska",
+        "utom räckhåll för små barn"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "säkerhet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad händer med en flaska vatten som glöms i frysen?",
+      "back": "Vattnet blir is och tar större plats – flaskan kan spricka.",
+      "choices": [
+        "vattnet blir is och tar större plats",
+        "vattnet försvinner",
+        "vattnet blir varmare",
+        "isen tar mindre plats"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "faser",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför flyter is på vatten?",
+      "back": "Is är lättare än lika mycket vatten (mindre tät).",
+      "choices": [
+        "is flyter inte",
+        "is har luftbubblor av plast",
+        "is är tyngre än vatten",
+        "is är lättare än vatten"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "faser",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken av dessa är en gas?",
+      "back": "vattenånga",
+      "choices": [
+        "olja",
+        "is",
+        "vattenånga",
+        "sand"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "faser",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är rätt i vattnets kretslopp?",
+      "back": "vatten avdunstar → blir moln → regnar ner → rinner till sjöar och hav",
+      "choices": [
+        "moln → sand → sol → regn",
+        "hav → is → eld → moln",
+        "regn → is → sand → moln",
+        "avdunstar → moln → regn → hav"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "faser",
+        "kretslopp",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas det när ämnen blir ett nytt ämne, t.ex. när en kaka gräddas?",
+      "back": "en kemisk reaktion",
+      "choices": [
+        "lösning",
+        "kemisk reaktion",
+        "blandning",
+        "avdunstning"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ämnen och material",
+        "reaktioner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad blir kvar när man eldat ved?",
+      "back": "aska (röken och koldioxiden har gått upp i luften)",
+      "choices": [
+        "nya vedträn",
+        "aska",
+        "sand",
+        "is"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "eld",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket material är förnybart?",
+      "back": "trä – nya träd kan växa upp",
+      "choices": [
+        "olja",
+        "trä",
+        "kol",
+        "plast"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ämnen och material",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken sak är gjord av metall?",
+      "back": "en konservburk",
+      "choices": [
+        "en plastpåse",
+        "en glasburk",
+        "en konservburk",
+        "en pappkartong"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ämnen och material",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem skapade temperaturskalan som vi använder i Sverige?",
+      "back": "Anders Celsius",
+      "choices": [
+        "Anders Celsius",
+        "Carl von Linné",
+        "Selma Lagerlöf",
+        "Alfred Nobel"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "historia",
+        "åk4"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,800 @@
+{
+  "title": "Geografi åk 4: Sverige, Norden, kartor och världen (Lgr22)",
+  "grades": [
+    4
+  ],
+  "subject": "Geografi",
+  "items": [
+    {
+      "front": "Hur många landskap har Sverige?",
+      "back": "25",
+      "choices": [
+        "12",
+        "25",
+        "30",
+        "21"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "Sverige",
+        "landskap",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilka är Sveriges tre landsdelar?",
+      "back": "Götaland, Svealand och Norrland",
+      "choices": [
+        "Norr, Söder och Mitten",
+        "Götaland, Svealand och Norrland",
+        "Skåne, Lappland och Gotland",
+        "Väst, Öst och Syd"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "Sverige",
+        "landsdelar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken är Sveriges största sjö?",
+      "back": "Vänern",
+      "choices": [
+        "Vättern",
+        "Mälaren",
+        "Siljan",
+        "Vänern"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "Sverige",
+        "sjöar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken är Sveriges näst största sjö?",
+      "back": "Vättern",
+      "choices": [
+        "Vättern",
+        "Vänern",
+        "Hjälmaren",
+        "Storsjön"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "Sverige",
+        "sjöar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken sjö ligger Stockholm vid?",
+      "back": "Mälaren (och Östersjön)",
+      "choices": [
+        "Vättern",
+        "Vänern",
+        "Siljan",
+        "Mälaren"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "Sverige",
+        "sjöar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken är Sveriges största ö?",
+      "back": "Gotland",
+      "choices": [
+        "Öland",
+        "Hisingen",
+        "Gotland",
+        "Orust"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "Sverige",
+        "öar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter Sveriges högsta berg?",
+      "back": "Kebnekaise",
+      "choices": [
+        "Åreskutan",
+        "Kinnekulle",
+        "Kebnekaise",
+        "Sarek"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "Sverige",
+        "åk4"
+      ]
+    },
+    {
+      "front": "I vilket landskap ligger Kebnekaise?",
+      "back": "Lappland",
+      "choices": [
+        "Härjedalen",
+        "Lappland",
+        "Jämtland",
+        "Dalarna"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "Sverige",
+        "landskap",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter Sveriges huvudstad?",
+      "back": "Stockholm",
+      "choices": [
+        "Stockholm",
+        "Uppsala",
+        "Malmö",
+        "Göteborg"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "Sverige",
+        "städer",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken är Sveriges näst största stad?",
+      "back": "Göteborg",
+      "choices": [
+        "Västerås",
+        "Malmö",
+        "Göteborg",
+        "Uppsala"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "Sverige",
+        "städer",
+        "åk4"
+      ]
+    },
+    {
+      "front": "I vilket landskap ligger Malmö?",
+      "back": "Skåne",
+      "choices": [
+        "Småland",
+        "Skåne",
+        "Halland",
+        "Blekinge"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "Sverige",
+        "landskap",
+        "åk4"
+      ]
+    },
+    {
+      "front": "I vilket landskap ligger Kiruna?",
+      "back": "Lappland",
+      "choices": [
+        "Ångermanland",
+        "Medelpad",
+        "Lappland",
+        "Norrbotten"
+      ],
+      "answerIndex": 2,
+      "hint": "Norrbotten är ett län och ett landskap – men Kiruna ligger i landskapet Lappland.",
+      "tags": [
+        "Sverige",
+        "landskap",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken stad ligger på Gotland?",
+      "back": "Visby",
+      "choices": [
+        "Ystad",
+        "Kalmar",
+        "Visby",
+        "Borgholm"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "Sverige",
+        "städer",
+        "åk4"
+      ]
+    },
+    {
+      "front": "I vilket landskap ligger Falun?",
+      "back": "Dalarna",
+      "choices": [
+        "Uppland",
+        "Gästrikland",
+        "Värmland",
+        "Dalarna"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "Sverige",
+        "landskap",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket landskap är Sveriges sydligaste?",
+      "back": "Skåne",
+      "choices": [
+        "Skåne",
+        "Halland",
+        "Småland",
+        "Blekinge"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "Sverige",
+        "landskap",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket landskap är Sveriges största?",
+      "back": "Lappland",
+      "choices": [
+        "Lappland",
+        "Dalarna",
+        "Småland",
+        "Jämtland"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "Sverige",
+        "landskap",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilka två länder har Sverige landgräns mot?",
+      "back": "Norge och Finland",
+      "choices": [
+        "Finland och Ryssland",
+        "Danmark och Tyskland",
+        "Norge och Finland",
+        "Danmark och Norge"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "Sverige",
+        "Norden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken bro går mellan Sverige och Danmark?",
+      "back": "Öresundsbron, mellan Malmö och Köpenhamn",
+      "choices": [
+        "Ölandsbron",
+        "Högakustenbron",
+        "Öresundsbron",
+        "Tjörnbron"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "Sverige",
+        "Norden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket hav ligger öster om Sverige?",
+      "back": "Östersjön",
+      "choices": [
+        "Medelhavet",
+        "Atlanten",
+        "Nordsjön",
+        "Östersjön"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "Sverige",
+        "hav",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter havet mellan Sverige och Danmark norr om Öresund?",
+      "back": "Kattegatt",
+      "choices": [
+        "Kattegatt",
+        "Bottenviken",
+        "Östersjön",
+        "Barents hav"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "Sverige",
+        "hav",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter Norges huvudstad?",
+      "back": "Oslo",
+      "choices": [
+        "Trondheim",
+        "Oslo",
+        "Stockholm",
+        "Bergen"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "Norden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter Danmarks huvudstad?",
+      "back": "Köpenhamn",
+      "choices": [
+        "Odense",
+        "Oslo",
+        "Århus",
+        "Köpenhamn"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "Norden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter Finlands huvudstad?",
+      "back": "Helsingfors (Helsinki)",
+      "choices": [
+        "Tammerfors",
+        "Helsingfors",
+        "Åbo",
+        "Uleåborg"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "Norden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter Islands huvudstad?",
+      "back": "Reykjavik",
+      "choices": [
+        "Reykjavik",
+        "Oslo",
+        "Tórshavn",
+        "Nuuk"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "Norden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilka länder räknas till Norden?",
+      "back": "Sverige, Norge, Danmark, Finland och Island",
+      "choices": [
+        "Sverige, Finland, Ryssland, Estland, Lettland",
+        "Sverige, Norge, Danmark, Finland, Island",
+        "bara Sverige och Norge",
+        "Sverige, Norge, Danmark, Tyskland, Polen"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "Norden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket land har en flagga med vitt kors på rött?",
+      "back": "Danmark",
+      "choices": [
+        "Norge",
+        "Sverige",
+        "Finland",
+        "Danmark"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "Norden",
+        "flaggor",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket land i Norden har vulkaner och gejsrar?",
+      "back": "Island",
+      "choices": [
+        "Finland",
+        "Island",
+        "Sverige",
+        "Danmark"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "Norden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket väderstreck är uppåt på de flesta kartor?",
+      "back": "norr",
+      "choices": [
+        "öster",
+        "väster",
+        "söder",
+        "norr"
+      ],
+      "answerIndex": 3,
+      "hint": "Kom ihåg: Norr – Öster – Söder – Väster medsols.",
+      "tags": [
+        "kartkunskap",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Solen går upp i ...",
+      "back": "öster",
+      "choices": [
+        "söder",
+        "öster",
+        "väster",
+        "norr"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kartkunskap",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Solen går ner i ...",
+      "back": "väster",
+      "choices": [
+        "norr",
+        "söder",
+        "öster",
+        "väster"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "kartkunskap",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad står bokstaven S för på en kompassros?",
+      "back": "söder (syd)",
+      "choices": [
+        "söder",
+        "sjö",
+        "sol",
+        "stad"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "kartkunskap",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken färg har vatten på de flesta kartor?",
+      "back": "blå",
+      "choices": [
+        "brun",
+        "röd",
+        "grön",
+        "blå"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "kartkunskap",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad visar en kartas skala?",
+      "back": "hur mycket mindre kartan är än verkligheten",
+      "choices": [
+        "hur gammal kartan är",
+        "hur kallt det är",
+        "hur mycket förminskad kartan är",
+        "var norr är"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "kartkunskap",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Skalan är 1 : 100 000. Hur långt är 1 cm på kartan i verkligheten?",
+      "back": "1 km (100 000 cm = 1 000 m)",
+      "choices": [
+        "10 km",
+        "1 m",
+        "100 m",
+        "1 km"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "kartkunskap",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas förklaringen till symbolerna på en karta?",
+      "back": "teckenförklaring",
+      "choices": [
+        "skala",
+        "teckenförklaring",
+        "innehållsförteckning",
+        "kompass"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kartkunskap",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är en glob?",
+      "back": "en modell av jorden som ett klot",
+      "choices": [
+        "en sorts lampa",
+        "en modell av jorden",
+        "en karta över en stad",
+        "en kompass"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kartkunskap",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många kontinenter finns det?",
+      "back": "7",
+      "choices": [
+        "5",
+        "7",
+        "10",
+        "6"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "världen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "I vilken världsdel ligger Sverige?",
+      "back": "Europa",
+      "choices": [
+        "Afrika",
+        "Asien",
+        "Europa",
+        "Nordamerika"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "världen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken är den största kontinenten?",
+      "back": "Asien",
+      "choices": [
+        "Asien",
+        "Europa",
+        "Antarktis",
+        "Afrika"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "världen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket är världens största hav?",
+      "back": "Stilla havet",
+      "choices": [
+        "Atlanten",
+        "Stilla havet",
+        "Östersjön",
+        "Indiska oceanen"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "världen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är ekvatorn?",
+      "back": "en tänkt linje runt jordens mitt som delar den i norra och södra halvklotet",
+      "choices": [
+        "en bergskedja",
+        "en flod i Afrika",
+        "en tänkt linje runt jordens mitt",
+        "en stad"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "världen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken kontinent är täckt av is och har nästan inga människor?",
+      "back": "Antarktis",
+      "choices": [
+        "Oceanien",
+        "Grönland",
+        "Antarktis",
+        "Arktis"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "världen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför är det oftast varmare i södra Sverige än i norra?",
+      "back": "Solen står högre och värmer mer längre söderut.",
+      "choices": [
+        "det finns fler städer i söder",
+        "havet är varmt bara i söder",
+        "det är inte varmare",
+        "solen står högre i söder"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "natur och klimat",
+        "klimat",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas det när solen inte går ner alls på sommaren i norra Sverige?",
+      "back": "midnattssol",
+      "choices": [
+        "norrsken",
+        "midnattssol",
+        "solförmörkelse",
+        "polarnatt"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "natur och klimat",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas de höga, kala bergen i nordvästra Sverige?",
+      "back": "fjäll",
+      "choices": [
+        "slätter",
+        "fjäll",
+        "skärgård",
+        "åsar"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "natur och klimat",
+        "naturtyper",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Var i Sverige finns mest jordbruk på stora slätter?",
+      "back": "i Skåne och på slätterna i Götaland",
+      "choices": [
+        "i fjällen",
+        "på Kebnekaise",
+        "i Skåne",
+        "i Lappland"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "natur och klimat",
+        "naturtyper",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas alla småöar utanför kusten, t.ex. utanför Stockholm?",
+      "back": "skärgård",
+      "choices": [
+        "slätt",
+        "skärgård",
+        "fjäll",
+        "delta"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "natur och klimat",
+        "naturtyper",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken naturtyp täcker mest av Sverige?",
+      "back": "skog",
+      "choices": [
+        "åker",
+        "fjäll",
+        "skog",
+        "sjöar"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "natur och klimat",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter samernas område som sträcker sig över fyra länder?",
+      "back": "Sápmi",
+      "choices": [
+        "Sápmi",
+        "Tornedalen",
+        "Lappland",
+        "Norrbotten"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "Sápmi",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket djur föder samer traditionellt upp?",
+      "back": "ren",
+      "choices": [
+        "ko",
+        "älg",
+        "får",
+        "ren"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "Sápmi",
+        "åk4"
+      ]
+    },
+    {
+      "front": "I vilka länder ligger Sápmi?",
+      "back": "Sverige, Norge, Finland och Ryssland",
+      "choices": [
+        "Sverige och Danmark",
+        "bara Sverige",
+        "Sverige, Norge, Finland och Ryssland",
+        "Island och Norge"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "Sápmi",
+        "åk4"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,402 @@
+{
+  "title": "Idrott och hälsa åk 4: Träning, hälsa, vattensäkerhet och friluftsliv (Lgr22)",
+  "grades": [
+    4
+  ],
+  "subject": "Idrott och hälsa",
+  "items": [
+    {
+      "front": "Varför värmer man upp innan man tränar?",
+      "back": "för att musklerna ska bli varma och man inte ska skada sig",
+      "choices": [
+        "för att det är kallt ute",
+        "för att inte skada sig",
+        "för att bli svettig snabbare",
+        "för att bli trött"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kroppen och träning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad händer med pulsen när du tränar hårt?",
+      "back": "Den går upp – hjärtat pumpar mer blod till musklerna.",
+      "choices": [
+        "den stannar",
+        "den går upp",
+        "den går ner",
+        "den blir likadan"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kroppen och träning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Var kan du känna din puls?",
+      "back": "på handleden eller på halsen",
+      "choices": [
+        "på knät",
+        "i håret",
+        "på nageln",
+        "på handleden"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "kroppen och träning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur mycket bör barn röra på sig varje dag?",
+      "back": "minst en timme (60 minuter)",
+      "choices": [
+        "minst en timme",
+        "5 minuter",
+        "en gång i veckan",
+        "inte alls"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "kroppen och träning",
+        "hälsa",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken träning gör hjärtat och lungorna starkare?",
+      "back": "konditionsträning, t.ex. springa, simma eller cykla",
+      "choices": [
+        "att spela tv-spel",
+        "att sitta still",
+        "att sova",
+        "konditionsträning"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "kroppen och träning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder smidighet?",
+      "back": "att kunna röra sig mjukt och böja sig (rörlighet)",
+      "choices": [
+        "att vara stark",
+        "att vara lång",
+        "att vara rörlig",
+        "att springa fort"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "kroppen och träning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför ska man dricka vatten när man tränar?",
+      "back": "Kroppen förlorar vätska när man svettas.",
+      "choices": [
+        "för att bli tyngre",
+        "det behövs inte",
+        "kroppen förlorar vätska",
+        "för att få mindre muskler"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "hälsa",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är bäst att äta före ett träningspass?",
+      "back": "något lagom, t.ex. en smörgås eller frukt, en stund innan",
+      "choices": [
+        "tre hamburgare",
+        "en smörgås en stund innan",
+        "en stor påse godis precis innan",
+        "ingenting på hela dagen"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "hälsa",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför är sömn viktigt för den som tränar?",
+      "back": "Kroppen återhämtar sig och bygger upp sig när man sover.",
+      "choices": [
+        "kroppen återhämtar sig",
+        "man blir mer trött av sömn",
+        "sömn spelar ingen roll",
+        "man glömmer träningen"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "hälsa",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur långt ska man enligt kursplanen kunna simma i slutet av åk 6?",
+      "back": "200 meter, varav 50 meter på rygg",
+      "choices": [
+        "10 meter",
+        "25 meter",
+        "200 m, varav 50 m på rygg",
+        "1 000 meter"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "simning och livräddning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad ska du göra om du ser någon som har det svårt i vattnet?",
+      "back": "ropa på hjälp, kasta något som flyter – hoppa inte i själv",
+      "choices": [
+        "hoppa i direkt",
+        "ropa på hjälp och kasta något som flyter",
+        "titta på",
+        "gå därifrån"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "simning och livräddning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför ska man bära flytväst i båt?",
+      "back": "den håller dig flytande om du ramlar i",
+      "choices": [
+        "för att det är snyggt",
+        "för att båten ska gå fortare",
+        "den håller dig flytande",
+        "för att hålla värmen bara"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "simning och livräddning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad ska man ha med sig när man går på isen?",
+      "back": "isdubbar (ispik) runt halsen – och aldrig gå ensam",
+      "choices": [
+        "solglasögon",
+        "en paraply",
+        "isdubbar",
+        "en badboll"
+      ],
+      "answerIndex": 2,
+      "hint": "Isdubbarna hjälper dig att ta dig upp om du går igenom.",
+      "tags": [
+        "simning och livräddning",
+        "isvett",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken är en viktig badvettsregel?",
+      "back": "bada aldrig ensam",
+      "choices": [
+        "hoppa på huvudet där det är grunt",
+        "simma långt ut ensam",
+        "bada alltid ensam",
+        "bada aldrig ensam"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "simning och livräddning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är viktigt att tänka på när man gör upp eld i naturen?",
+      "back": "följa eldningsförbud, vara försiktig och släcka ordentligt",
+      "choices": [
+        "kolla eldningsförbud och släcka ordentligt",
+        "lämna elden brinnande",
+        "elda på berghällar alltid",
+        "elda nära träd"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "friluftsliv",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför ska man klä sig i lager på lager ute på vintern?",
+      "back": "Luften mellan lagren håller värmen och man kan ta av när man blir varm.",
+      "choices": [
+        "luften mellan lagren håller värmen",
+        "en tjock tröja är alltid bättre",
+        "för att bli tyngre",
+        "för att det är modernt"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "friluftsliv",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder allemansrätten i friluftslivet?",
+      "back": "Man får röra sig i naturen – inte störa, inte förstöra.",
+      "choices": [
+        "man får tälta i trädgårdar",
+        "man får plocka fridlysta blommor",
+        "inte störa – inte förstöra",
+        "man får göra vad man vill"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "friluftsliv",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör man i orientering?",
+      "back": "letar upp kontroller med hjälp av en karta",
+      "choices": [
+        "springer på en bana utan karta",
+        "spelar boll",
+        "letar kontroller med karta",
+        "simmar mellan bojar"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "orientering",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör man först med kartan i orientering?",
+      "back": "passar in (orienterar) kartan så att den stämmer med terrängen",
+      "choices": [
+        "lägger den i fickan",
+        "läser den uppochned alltid",
+        "viker ihop den",
+        "passar in kartan mot terrängen"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "orientering",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad visar kompassnålens röda ände?",
+      "back": "norr",
+      "choices": [
+        "norr",
+        "söder",
+        "öster",
+        "närmaste kontroll"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "orientering",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken färg har vatten på en orienteringskarta?",
+      "back": "blå",
+      "choices": [
+        "brun",
+        "blå",
+        "gul",
+        "svart"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "orientering",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder fair play?",
+      "back": "att spela juste – följa reglerna och respektera alla",
+      "choices": [
+        "att fuska lite",
+        "att bara spela med kompisar",
+        "att vinna till varje pris",
+        "att spela juste"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "lek och idrott",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör du om en kompis ramlar och gör sig illa på idrotten?",
+      "back": "hjälper till och säger till en vuxen",
+      "choices": [
+        "fortsätter spela",
+        "hjälper och säger till en vuxen",
+        "skrattar",
+        "går därifrån"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "lek och idrott",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många spelare har ett fotbollslag på planen?",
+      "back": "11",
+      "choices": [
+        "11",
+        "15",
+        "6",
+        "9"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "lek och idrott",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter spelet där man slår en boll och springer runt baser?",
+      "back": "brännboll",
+      "choices": [
+        "basket",
+        "brännboll",
+        "volleyboll",
+        "innebandy"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "lek och idrott",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är en bra sak att göra efter träningen?",
+      "back": "varva ner och stretcha lugnt",
+      "choices": [
+        "springa ännu fortare",
+        "inte dricka något",
+        "äta en hel tårta",
+        "varva ner och stretcha"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "kroppen och träning",
+        "åk4"
+      ]
+    }
+  ]
+}

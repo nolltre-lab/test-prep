@@ -1,0 +1,1005 @@
+{
+  "title": "Svenska åk 4: Ordklasser, stavning, texter och läsförståelse (Lgr22)",
+  "grades": [
+    4
+  ],
+  "subject": "Svenska",
+  "items": [
+    {
+      "front": "Vilket ord är ett substantiv?",
+      "back": "hund – substantiv är namn på saker, djur, personer och platser.",
+      "choices": [
+        "snabb",
+        "hund",
+        "hon",
+        "springa"
+      ],
+      "answerIndex": 1,
+      "hint": "Kan du sätta 'en' eller 'ett' framför ordet?",
+      "tags": [
+        "ordklasser",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är ett verb?",
+      "back": "hoppar – verb är ord som berättar vad någon gör.",
+      "choices": [
+        "glad",
+        "hoppar",
+        "boll",
+        "vi"
+      ],
+      "answerIndex": 1,
+      "hint": "Verb är gör-ord.",
+      "tags": [
+        "ordklasser",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är ett adjektiv?",
+      "back": "röd – adjektiv beskriver hur något är.",
+      "choices": [
+        "bil",
+        "äter",
+        "de",
+        "röd"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ordklasser",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är ett pronomen?",
+      "back": "hon – pronomen ersätter ett namn eller substantiv.",
+      "choices": [
+        "hon",
+        "Lisa",
+        "katt",
+        "liten"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "ordklasser",
+        "åk4"
+      ]
+    },
+    {
+      "front": "I meningen ”Den lilla katten sover” – vilket ord är verbet?",
+      "back": "sover",
+      "choices": [
+        "lilla",
+        "Den",
+        "katten",
+        "sover"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ordklasser",
+        "åk4"
+      ]
+    },
+    {
+      "front": "I meningen ”Oskar har en blå cykel” – vilket ord är adjektivet?",
+      "back": "blå",
+      "choices": [
+        "Oskar",
+        "cykel",
+        "blå",
+        "har"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ordklasser",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är ett egennamn och ska skrivas med stor bokstav?",
+      "back": "Göteborg – namn på platser och personer skrivs med stor bokstav.",
+      "choices": [
+        "staden",
+        "båt",
+        "Göteborg",
+        "hav"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ordklasser",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken ordklass hör ordet ”under” till i ”Katten ligger under bordet”?",
+      "back": "preposition – den talar om var något är.",
+      "choices": [
+        "adjektiv",
+        "preposition",
+        "verb",
+        "substantiv"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ordklasser",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är plural (flertal) av ”en mus”?",
+      "back": "möss",
+      "choices": [
+        "möss",
+        "muser",
+        "mössar",
+        "musar"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "ordklasser",
+        "böjning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är plural av ”en bok”?",
+      "back": "böcker",
+      "choices": [
+        "böckar",
+        "bokar",
+        "böcker",
+        "boker"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ordklasser",
+        "böjning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är bestämd form av ”ett hus”?",
+      "back": "huset",
+      "choices": [
+        "husen",
+        "huset",
+        "husa",
+        "ett huset"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ordklasser",
+        "böjning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken form är preteritum (dåtid) av ”springer”?",
+      "back": "sprang",
+      "choices": [
+        "sprungit",
+        "springde",
+        "sprang",
+        "springa"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ordklasser",
+        "verbtider",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken form är preteritum av ”äter”?",
+      "back": "åt",
+      "choices": [
+        "äta",
+        "ätit",
+        "åt",
+        "ätade"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ordklasser",
+        "verbtider",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken mening står i futurum (framtid)?",
+      "back": "Jag ska åka till mormor. – ska/kommer att visar framtid.",
+      "choices": [
+        "Jag har åkt till mormor.",
+        "Jag åker till mormor nu.",
+        "Jag åkte till mormor.",
+        "Jag ska åka till mormor."
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ordklasser",
+        "verbtider",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Jämför: stor – större – ?",
+      "back": "störst",
+      "choices": [
+        "störst",
+        "storast",
+        "störrest",
+        "mest stor"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "ordklasser",
+        "komparation",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Jämför: bra – bättre – ?",
+      "back": "bäst",
+      "choices": [
+        "bäst",
+        "mest bra",
+        "braast",
+        "bättrest"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "ordklasser",
+        "komparation",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är en synonym till ”glad”?",
+      "back": "lycklig – synonymer betyder ungefär samma sak.",
+      "choices": [
+        "arg",
+        "trött",
+        "lycklig",
+        "ledsen"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ord och uttryck",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är en synonym till ”snabb”?",
+      "back": "kvick",
+      "choices": [
+        "långsam",
+        "lat",
+        "kvick",
+        "tung"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ord och uttryck",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket är motsatsordet till ”tung”?",
+      "back": "lätt",
+      "choices": [
+        "mjuk",
+        "hård",
+        "stor",
+        "lätt"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ord och uttryck",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket är motsatsordet till ”modig”?",
+      "back": "feg",
+      "choices": [
+        "feg",
+        "stark",
+        "snäll",
+        "rolig"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "ord och uttryck",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är ett sammansatt ord?",
+      "back": "fotboll – fot + boll.",
+      "choices": [
+        "grön",
+        "fotboll",
+        "springa",
+        "boll"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ord och uttryck",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder uttrycket ”Ingen ko på isen”?",
+      "back": "Det är ingen fara, ingen brådska.",
+      "choices": [
+        "Korna är inne",
+        "Isen är tunn",
+        "Det är kallt ute",
+        "Det är ingen fara"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ord och uttryck",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder ”att ha bråttom”?",
+      "back": "att ha ont om tid",
+      "choices": [
+        "att vara trött",
+        "att ha ont om tid",
+        "att vara arg",
+        "att ha tråkigt"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ord och uttryck",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord kommer först i alfabetisk ordning?",
+      "back": "banan – b kommer före k, p och ä.",
+      "choices": [
+        "banan",
+        "äpple",
+        "kiwi",
+        "päron"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "ord och uttryck",
+        "alfabetet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord kommer först i alfabetisk ordning: sol, sax, sill, sur?",
+      "back": "sax – titta på andra bokstaven: a kommer före i, o, u.",
+      "choices": [
+        "sol",
+        "sax",
+        "sur",
+        "sill"
+      ],
+      "answerIndex": 1,
+      "hint": "Är första bokstaven samma? Titta på den andra.",
+      "tags": [
+        "ord och uttryck",
+        "alfabetet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilka är de tre sista bokstäverna i det svenska alfabetet?",
+      "back": "å, ä, ö",
+      "choices": [
+        "ä, å, ö",
+        "ö, ä, å",
+        "x, y, z",
+        "å, ä, ö"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ord och uttryck",
+        "alfabetet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är rätt stavat? (ett plagg med knappar)",
+      "back": "skjorta – sj-ljudet kan stavas skj.",
+      "choices": [
+        "sjorta",
+        "skjorta",
+        "sjjorta",
+        "schorta"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "stavning",
+        "sj-ljud",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är rätt stavat? (ett plagg, som en klänning utan överdel)",
+      "back": "kjol – tj-ljudet kan stavas kj.",
+      "choices": [
+        "sjol",
+        "kol",
+        "tjol",
+        "kjol"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "stavning",
+        "tj-ljud",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är rätt stavat? (det som slår i bröstet)",
+      "back": "hjärta – j-ljudet kan stavas hj.",
+      "choices": [
+        "jerta",
+        "hjärta",
+        "järta",
+        "gjärta"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "stavning",
+        "j-ljud",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är rätt stavat? (motsatsen till mörker)",
+      "back": "ljus – j-ljudet kan stavas lj.",
+      "choices": [
+        "hjus",
+        "gjus",
+        "jus",
+        "ljus"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "stavning",
+        "j-ljud",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är rätt stavat? (talet 20)",
+      "back": "tjugo",
+      "choices": [
+        "tjugo",
+        "kjugo",
+        "tschugo",
+        "sjugo"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "stavning",
+        "tj-ljud",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är rätt stavat? (djuret som jamar)",
+      "back": "katt – kort vokal följs ofta av dubbel konsonant.",
+      "choices": [
+        "katth",
+        "kaatt",
+        "kat",
+        "katt"
+      ],
+      "answerIndex": 3,
+      "hint": "Säg ordet högt: är a-ljudet kort eller långt?",
+      "tags": [
+        "stavning",
+        "dubbelteckning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är rätt stavat? (kallt och gott att äta)",
+      "back": "glass",
+      "choices": [
+        "glasz",
+        "glas",
+        "glass",
+        "gllass"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "stavning",
+        "dubbelteckning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är rätt stavat? (du och jag är en …)",
+      "back": "människa",
+      "choices": [
+        "mäniska",
+        "menniska",
+        "mänska",
+        "människa"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "stavning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord stavas med o fast det låter som å?",
+      "back": "sova",
+      "choices": [
+        "gås",
+        "sova",
+        "åka",
+        "påse"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "stavning",
+        "o/å",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket ord är rätt stavat? (där tåget stannar)",
+      "back": "station – sj-ljudet stavas ti i ord som slutar på -tion.",
+      "choices": [
+        "stashon",
+        "station",
+        "stasjon",
+        "staschon"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "stavning",
+        "sj-ljud",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket tecken sätter man efter en fråga?",
+      "back": "frågetecken (?)",
+      "choices": [
+        "punkt",
+        "frågetecken",
+        "kolon",
+        "kommatecken"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "skiljetecken",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken mening är rätt skriven?",
+      "back": "Vi ska åka till Malmö i morgon. – stor bokstav först och vid namn, punkt sist.",
+      "choices": [
+        "vi Ska åka till Malmö i morgon.",
+        "vi ska åka till malmö i morgon.",
+        "Vi ska åka till Malmö i morgon.",
+        "Vi ska åka till malmö i morgon"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "skiljetecken",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket tecken passar efter ”Oj, vad du skrämde mig”?",
+      "back": "utropstecken (!) – visar en stark känsla.",
+      "choices": [
+        "!",
+        "?",
+        ",",
+        "."
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "skiljetecken",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur kan man visa att någon pratar i en text (dialog)?",
+      "back": "med talstreck (–) eller citattecken (”…”)",
+      "choices": [
+        "med parentes",
+        "med talstreck eller citattecken",
+        "med punkt",
+        "med stora bokstäver"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "skiljetecken",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Var ska kommatecknet stå: ”Jag köpte mjölk ägg och bröd”?",
+      "back": "Jag köpte mjölk, ägg och bröd. – komma mellan sakerna i en uppräkning.",
+      "choices": [
+        "efter ”köpte”",
+        "efter ”Jag”",
+        "efter ”mjölk”",
+        "efter ”bröd”"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "skiljetecken",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur börjar en saga ofta?",
+      "back": "Det var en gång …",
+      "choices": [
+        "Hej mormor!",
+        "Fakta om hajar",
+        "Det var en gång …",
+        "Gör så här:"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "texter",
+        "saga",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilka tre delar har en berättelse?",
+      "back": "inledning, handling (med problem) och avslutning",
+      "choices": [
+        "rubrik, bild, källa",
+        "fråga, svar, fråga",
+        "början, början, slut",
+        "inledning, handling, avslutning"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "texter",
+        "berättelse",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är syftet med en faktatext?",
+      "back": "att informera – berätta fakta om något",
+      "choices": [
+        "att sälja något",
+        "att informera",
+        "att rimma",
+        "att skrämma"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "texter",
+        "faktatext",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken texttyp är ett recept?",
+      "back": "en instruktion – den berättar steg för steg hur man gör.",
+      "choices": [
+        "saga",
+        "instruktion",
+        "dikt",
+        "insändare"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "texter",
+        "instruktion",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas personerna i en berättelse?",
+      "back": "karaktärer (eller personer)",
+      "choices": [
+        "författare",
+        "kapitel",
+        "karaktärer",
+        "rubriker"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "texter",
+        "berättelse",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är en insändare?",
+      "back": "en text där man tycker något och försöker övertyga andra (argumenterande text)",
+      "choices": [
+        "en dikt",
+        "en åsiktstext",
+        "en saga",
+        "ett recept"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "texter",
+        "argumenterande",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilka ord rimmar?",
+      "back": "sol – stol",
+      "choices": [
+        "sol – sand",
+        "katt – hund",
+        "sol – stol",
+        "bil – båt"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "texter",
+        "dikt",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör en författare?",
+      "back": "skriver böcker eller texter",
+      "choices": [
+        "skriver böcker",
+        "säljer böcker",
+        "ritar bilderna",
+        "trycker böcker"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "texter",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas det när man gissar vad som ska hända i en bok innan man läser?",
+      "back": "att förutspå – en lässtrategi.",
+      "choices": [
+        "att stava",
+        "att sammanfatta",
+        "att rimma",
+        "att förutspå"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "texter",
+        "lässtrategier",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör man när man sammanfattar en text?",
+      "back": "berättar det viktigaste med egna ord, kort",
+      "choices": [
+        "skriver av allt",
+        "läser texten baklänges",
+        "berättar det viktigaste kort",
+        "ritar en bild"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "texter",
+        "lässtrategier",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem skrev böckerna om Pippi Långstrump?",
+      "back": "Astrid Lindgren",
+      "choices": [
+        "Elsa Beskow",
+        "Astrid Lindgren",
+        "Gunilla Bergström",
+        "Selma Lagerlöf"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "litteratur",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter pojken som flyger på en gås genom Sverige i Selma Lagerlöfs bok?",
+      "back": "Nils Holgersson",
+      "choices": [
+        "Alfons",
+        "Emil",
+        "Karlsson",
+        "Nils Holgersson"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "litteratur",
+        "åk4"
+      ]
+    },
+    {
+      "front": "I vilken by bor Emil?",
+      "back": "Lönneberga (Katthult i Lönneberga)",
+      "choices": [
+        "Bullerbyn",
+        "Mattisborgen",
+        "Lönneberga",
+        "Vimmerby"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "litteratur",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem är Ronjas pappa i Ronja Rövardotter?",
+      "back": "Mattis",
+      "choices": [
+        "Mattis",
+        "Birk",
+        "Skalle-Per",
+        "Borka"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "litteratur",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilka språk är lättast för svenskar att förstå?",
+      "back": "norska och danska – de är nära släkt med svenska.",
+      "choices": [
+        "engelska och tyska",
+        "norska och danska",
+        "isländska och ryska",
+        "finska och samiska"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "språk i Norden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter ”flicka” på norska och danska?",
+      "back": "jente (norska), pige (danska)",
+      "choices": [
+        "girl / mädchen",
+        "jente / pige",
+        "flicka / flicka",
+        "tyttö / tyttö"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "språk i Norden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket av dessa är ett nationellt minoritetsspråk i Sverige?",
+      "back": "samiska – de fem är finska, jiddisch, meänkieli, romani chib och samiska.",
+      "choices": [
+        "norska",
+        "samiska",
+        "engelska",
+        "tyska"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "språk i Norden",
+        "minoritetsspråk",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket språk talas i Tornedalen?",
+      "back": "meänkieli",
+      "choices": [
+        "danska",
+        "meänkieli",
+        "jiddisch",
+        "isländska"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "språk i Norden",
+        "minoritetsspråk",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket nordiskt språk är INTE släkt med svenska?",
+      "back": "finska – det hör till en annan språkfamilj.",
+      "choices": [
+        "norska",
+        "danska",
+        "finska",
+        "isländska"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "språk i Norden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Läs: ”Maja hade glömt sin regnjacka. När hon kom hem var hon dyblöt.” Hur var vädret?",
+      "back": "Det regnade – hon blev dyblöt utan regnjacka.",
+      "choices": [
+        "Det regnade",
+        "Det var varmt och torrt",
+        "Det var soligt",
+        "Det snöade"
+      ],
+      "answerIndex": 0,
+      "hint": "Läs mellan raderna: varför blev hon blöt?",
+      "tags": [
+        "läsförståelse",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Läs: ”Leo log stort när han öppnade paketet. Det var precis den bok han önskat sig.” Hur kände sig Leo?",
+      "back": "glad",
+      "choices": [
+        "rädd",
+        "glad",
+        "ledsen",
+        "arg"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "läsförståelse",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Läs: ”Igelkotten rullade ihop sig till en taggig boll när hunden kom.” Varför rullade den ihop sig?",
+      "back": "för att skydda sig mot hunden",
+      "choices": [
+        "för att skydda sig",
+        "för att den var hungrig",
+        "för att den var trött",
+        "för att leka"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "läsförståelse",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Läs: ”Först kokade Sam vatten. Sedan lade han i pastan. Till sist hällde han av vattnet.” Vad gjorde Sam först?",
+      "back": "kokade vatten",
+      "choices": [
+        "hällde av vattnet",
+        "lade i pastan",
+        "kokade vatten",
+        "åt pastan"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "läsförståelse",
+        "åk4"
+      ]
+    }
+  ]
+}

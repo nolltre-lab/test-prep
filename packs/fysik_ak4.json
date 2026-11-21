@@ -1,0 +1,637 @@
+{
+  "title": "Fysik åk 4: Ljus, ljud, el, krafter och rymden (Lgr22)",
+  "grades": [
+    4
+  ],
+  "subject": "Fysik",
+  "items": [
+    {
+      "front": "Vilken av dessa är en ljuskälla?",
+      "back": "solen – den ger ifrån sig eget ljus.",
+      "choices": [
+        "en spegel",
+        "solen",
+        "ett fönster",
+        "månen"
+      ],
+      "answerIndex": 1,
+      "hint": "Månen lyser bara för att solen lyser på den.",
+      "tags": [
+        "ljus",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför bildas en skugga?",
+      "back": "Ett föremål stoppar ljuset.",
+      "choices": [
+        "solen går ner",
+        "ett föremål stoppar ljuset",
+        "ljuset blir mörkt",
+        "luften blir svart"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ljus",
+        "åk4"
+      ]
+    },
+    {
+      "front": "När är din skugga kortast en solig dag?",
+      "back": "mitt på dagen, när solen står högt",
+      "choices": [
+        "på morgonen",
+        "på kvällen",
+        "på natten",
+        "mitt på dagen"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ljus",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör en spegel med ljuset?",
+      "back": "reflekterar det – studsar tillbaka",
+      "choices": [
+        "reflekterar det",
+        "äter upp det",
+        "gör det varmt",
+        "släcker det"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "ljus",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilka färger finns i regnbågen?",
+      "back": "röd, orange, gul, grön, blå, indigo och violett",
+      "choices": [
+        "svart och vit",
+        "bara vit",
+        "bara rosa och blå",
+        "röd, orange, gul, grön, blå, violett"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "ljus",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför ska man ha reflex när det är mörkt?",
+      "back": "Den reflekterar billjus så att föraren ser dig mycket tidigare.",
+      "choices": [
+        "för att det är snyggt",
+        "för att lysa upp vägen själv",
+        "så att bilister ser dig",
+        "för att hålla värmen"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ljus",
+        "trafik",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur uppstår ljud?",
+      "back": "Något vibrerar (svänger fram och tillbaka).",
+      "choices": [
+        "något blir varmt",
+        "något blir kallt",
+        "något vibrerar",
+        "något lyser"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ljud",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är ett eko?",
+      "back": "Ljud som studsar mot t.ex. en bergvägg och kommer tillbaka.",
+      "choices": [
+        "ett starkt ljus",
+        "ljud som studsar tillbaka",
+        "ljus som studsar",
+        "ett djur"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ljud",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Kan ljud färdas i rymden?",
+      "back": "Nej – det finns ingen luft som kan vibrera där.",
+      "choices": [
+        "nej, det finns ingen luft",
+        "ja, men bara musik",
+        "bara på dagen",
+        "ja, väldigt fort"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "ljud",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad färdas fortast, ljus eller ljud?",
+      "back": "ljus – därför ser man blixten före åskmullret.",
+      "choices": [
+        "det beror på vädret",
+        "ljud",
+        "ljus",
+        "lika fort"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "ljud",
+        "ljus",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kan skada hörseln?",
+      "back": "starka ljud under lång tid",
+      "choices": [
+        "att viska",
+        "starka ljud länge",
+        "tystnad",
+        "fågelsång"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "ljud",
+        "hälsa",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad dras en magnet till?",
+      "back": "järn (t.ex. ett spik eller ett gem)",
+      "choices": [
+        "plast",
+        "papper",
+        "järn",
+        "trä"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "magnetism",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad händer om man håller två nordpoler mot varandra?",
+      "back": "De stöter bort varandra.",
+      "choices": [
+        "ingenting",
+        "de drar till sig varandra",
+        "de stöter bort varandra",
+        "de blir varma"
+      ],
+      "answerIndex": 2,
+      "hint": "Lika poler stöter bort, olika poler dras till varandra.",
+      "tags": [
+        "magnetism",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad visar en kompassnål?",
+      "back": "norr – nålen är en liten magnet som påverkas av jordens magnetism.",
+      "choices": [
+        "vädret",
+        "närmaste stad",
+        "solen",
+        "norr"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "magnetism",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad behövs för att en lampa ska lysa i en enkel krets?",
+      "back": "ett batteri, sladdar och en sluten krets",
+      "choices": [
+        "en sluten krets med batteri",
+        "bara en lampa",
+        "en öppen krets",
+        "bara en sladd"
+      ],
+      "answerIndex": 0,
+      "hint": "Strömmen måste kunna gå hela vägen runt.",
+      "tags": [
+        "elektricitet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket material leder ström?",
+      "back": "koppar (metall)",
+      "choices": [
+        "koppar",
+        "trä",
+        "plast",
+        "gummi"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "elektricitet",
+        "ledare",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför är sladdar täckta med plast?",
+      "back": "Plast är en isolator – den leder inte ström och skyddar oss.",
+      "choices": [
+        "plast gör strömmen snabbare",
+        "för färgens skull",
+        "plast leder inte ström",
+        "plast är billigt"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "elektricitet",
+        "isolator",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad ska man aldrig göra med eluttaget?",
+      "back": "sticka in saker i det – det är livsfarligt",
+      "choices": [
+        "sätta i en laddare",
+        "titta på det",
+        "sticka in saker i det",
+        "släcka lampan"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "elektricitet",
+        "säkerhet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör en strömbrytare?",
+      "back": "öppnar eller sluter kretsen – släcker och tänder",
+      "choices": [
+        "byter färg på ljuset",
+        "laddar batteriet",
+        "gör strömmen starkare",
+        "öppnar och sluter kretsen"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "elektricitet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför faller ett äpple ner mot marken?",
+      "back": "Tyngdkraften drar allt mot jorden.",
+      "choices": [
+        "tyngdkraften",
+        "vinden",
+        "magnetism",
+        "friktion"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "kraft och rörelse",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför är det svårt att gå på blank is?",
+      "back": "Det är nästan ingen friktion.",
+      "choices": [
+        "tyngdkraften försvinner",
+        "lite friktion",
+        "isen är magnetisk",
+        "för mycket friktion"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kraft och rörelse",
+        "friktion",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför strör man sand på isiga vägar?",
+      "back": "för att öka friktionen så att man inte halkar",
+      "choices": [
+        "för att det ser fint ut",
+        "för att minska friktionen",
+        "för att smälta isen",
+        "för att öka friktionen"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "kraft och rörelse",
+        "friktion",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad händer med en boll du sparkar på gräset?",
+      "back": "Den rullar långsammare och stannar – friktionen bromsar.",
+      "choices": [
+        "den åker uppåt",
+        "den stannar till slut",
+        "den rullar för alltid",
+        "den blir tyngre"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kraft och rörelse",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vid vilken temperatur fryser vatten till is?",
+      "back": "0 °C",
+      "choices": [
+        "0 °C",
+        "100 °C",
+        "10 °C",
+        "−10 °C"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "vatten och väder",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vid vilken temperatur kokar vatten?",
+      "back": "100 °C",
+      "choices": [
+        "0 °C",
+        "100 °C",
+        "200 °C",
+        "50 °C"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "vatten och väder",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilka tre former kan vatten ha?",
+      "back": "fast (is), flytande (vatten) och gas (vattenånga)",
+      "choices": [
+        "is, snö och hagel",
+        "regn, moln och dimma",
+        "varmt, kallt och ljummet",
+        "is, vatten och vattenånga"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "vatten och väder",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad händer med en vattenpöl en varm dag?",
+      "back": "Vattnet avdunstar – blir vattenånga i luften.",
+      "choices": [
+        "vattnet sjunker ner i asfalten bara",
+        "vattnet avdunstar",
+        "ingenting",
+        "vattnet blir is"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "vatten och väder",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är moln gjorda av?",
+      "back": "små vattendroppar eller iskristaller",
+      "choices": [
+        "bomull",
+        "damm",
+        "rök",
+        "små vattendroppar"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "vatten och väder",
+        "väder",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad mäter en termometer?",
+      "back": "temperatur",
+      "choices": [
+        "tid",
+        "temperatur",
+        "vind",
+        "regn"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "vatten och väder",
+        "väder",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken planet bor vi på?",
+      "back": "Jorden",
+      "choices": [
+        "Venus",
+        "Månen",
+        "Mars",
+        "Jorden"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "rymden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många planeter finns i vårt solsystem?",
+      "back": "8",
+      "choices": [
+        "8",
+        "9",
+        "12",
+        "7"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "rymden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken är den största planeten?",
+      "back": "Jupiter",
+      "choices": [
+        "Mars",
+        "Saturnus",
+        "Jorden",
+        "Jupiter"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "rymden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken planet ligger närmast solen?",
+      "back": "Merkurius",
+      "choices": [
+        "Neptunus",
+        "Venus",
+        "Merkurius",
+        "Jorden"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "rymden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken planet kallas den röda planeten?",
+      "back": "Mars",
+      "choices": [
+        "Venus",
+        "Saturnus",
+        "Jupiter",
+        "Mars"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "rymden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför blir det dag och natt?",
+      "back": "Jorden snurrar runt sin egen axel ett varv per dygn.",
+      "choices": [
+        "månen skymmer solen",
+        "jorden snurrar runt sig själv",
+        "solen slocknar",
+        "jorden flyttar sig bort från solen"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "rymden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur lång tid tar det för jorden att åka ett varv runt solen?",
+      "back": "ett år (ungefär 365 dagar)",
+      "choices": [
+        "en vecka",
+        "ett år",
+        "ett dygn",
+        "en månad"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "rymden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är solen?",
+      "back": "en stjärna",
+      "choices": [
+        "en planet",
+        "en stjärna",
+        "ett moln",
+        "en måne"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "rymden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför ser månen olika ut under en månad?",
+      "back": "Vi ser olika mycket av den sida som solen lyser på.",
+      "choices": [
+        "den byter form",
+        "månen krymper",
+        "solen lyser på olika delar av den som vi ser",
+        "moln täcker den"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "rymden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken energi ger solen oss?",
+      "back": "ljus och värme",
+      "choices": [
+        "ljus och värme",
+        "kyla",
+        "vind och regn",
+        "ljud och el"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "energi",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken av dessa är en förnybar energikälla?",
+      "back": "vindkraft – vinden tar aldrig slut.",
+      "choices": [
+        "olja",
+        "vindkraft",
+        "naturgas",
+        "kol"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "energi",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur kan du spara energi hemma?",
+      "back": "släcka lampor i rum där ingen är",
+      "choices": [
+        "öppna kylskåpet ofta",
+        "ha tv:n på hela natten",
+        "släcka lampan när du går ut",
+        "duscha jättelänge"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "energi",
+        "åk4"
+      ]
+    }
+  ]
+}

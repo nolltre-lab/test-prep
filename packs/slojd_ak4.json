@@ -1,0 +1,431 @@
+{
+  "title": "Slöjd åk 4: Verktyg, material, säkerhet och arbetsprocess (Lgr22)",
+  "grades": [
+    4
+  ],
+  "subject": "Slöjd",
+  "items": [
+    {
+      "front": "Vilket verktyg använder man för att såga trä?",
+      "back": "fogsvans (såg)",
+      "choices": [
+        "tång",
+        "såg",
+        "nål",
+        "hammare"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "verktyg",
+        "trä",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad använder man sandpapper till?",
+      "back": "slipa ytor släta",
+      "choices": [
+        "slå i spik",
+        "slipa ytor släta",
+        "skära tyg",
+        "mäta längd"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "verktyg",
+        "trä",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket verktyg använder man för att slå i spik?",
+      "back": "hammare",
+      "choices": [
+        "fil",
+        "sax",
+        "skruvmejsel",
+        "hammare"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "verktyg",
+        "trä",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket verktyg används för att skruva i en skruv?",
+      "back": "skruvmejsel (eller skruvdragare)",
+      "choices": [
+        "skruvmejsel",
+        "hammare",
+        "såg",
+        "virknål"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "verktyg",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket verktyg håller fast arbetsstycket på hyvelbänken?",
+      "back": "tving (eller bänkens skruvstäd)",
+      "choices": [
+        "måttband",
+        "sticka",
+        "sandpapper",
+        "tving"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "verktyg",
+        "trä",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket verktyg mäter man längd med i träslöjden?",
+      "back": "tumstock eller linjal",
+      "choices": [
+        "sax",
+        "sylvass nål",
+        "tumstock",
+        "fil"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "verktyg",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter maskinen som syr med tråd fort?",
+      "back": "symaskin",
+      "choices": [
+        "vävstol",
+        "strykjärn",
+        "symaskin",
+        "borrmaskin"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "verktyg",
+        "textil",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad behöver man för att virka?",
+      "back": "en virknål och garn",
+      "choices": [
+        "hammare och tråd",
+        "virknål och garn",
+        "stickor och spik",
+        "såg och lim"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "verktyg",
+        "textil",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad behöver man för att sticka?",
+      "back": "stickor och garn",
+      "choices": [
+        "stickor och garn",
+        "en sax och lim",
+        "en såg och tyg",
+        "en virknål och spik"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "verktyg",
+        "textil",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur bär man en sax säkert?",
+      "back": "med spetsen nedåt och handen runt bladen",
+      "choices": [
+        "genom att kasta den",
+        "med spetsen uppåt",
+        "med spetsen nedåt",
+        "i bakfickan öppen"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "säkerhet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför ska man såga bort från kroppen och hålla handen bakom sågbladet?",
+      "back": "så att man inte skär sig om sågen slinter",
+      "choices": [
+        "för att det går fortare",
+        "för att inte skära sig",
+        "för att sågen blir vassare",
+        "det spelar ingen roll"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "säkerhet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad ska man göra om man skär sig i slöjden?",
+      "back": "säga till läraren direkt",
+      "choices": [
+        "gömma det",
+        "torka av på tyget",
+        "säga till läraren",
+        "fortsätta jobba"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "säkerhet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför ska man ha håret uppsatt vid borrmaskinen?",
+      "back": "så att det inte fastnar i maskinen",
+      "choices": [
+        "det behövs inte",
+        "för att det ser snyggt ut",
+        "så att det inte fastnar",
+        "för att borren blir snabbare"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "säkerhet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför ska man ha skyddsglasögon när man slipar eller borrar?",
+      "back": "för att skydda ögonen mot spån och damm",
+      "choices": [
+        "för att inte bli trött",
+        "för att det är kallt",
+        "för att se bättre i mörker",
+        "skydda ögonen mot spån"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "säkerhet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket material kommer från får?",
+      "back": "ull",
+      "choices": [
+        "ull",
+        "lin",
+        "polyester",
+        "bomull"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "material",
+        "textil",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket material kommer från en växt?",
+      "back": "bomull",
+      "choices": [
+        "bomull",
+        "läder",
+        "ull",
+        "siden från silkesmask"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "material",
+        "textil",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket träslag är mjukt och vanligt i slöjden?",
+      "back": "furu (tall)",
+      "choices": [
+        "bok",
+        "ebenholts",
+        "furu",
+        "ek"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "material",
+        "trä",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas trädets årsringar?",
+      "back": "ringarna i stammen som visar hur gammalt trädet är – en ring per år",
+      "choices": [
+        "trädets bark",
+        "trädets löv",
+        "ringar som visar trädets ålder",
+        "trädets rötter"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "material",
+        "trä",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är polyester?",
+      "back": "ett konstgjort material gjort av olja",
+      "choices": [
+        "en sorts trä",
+        "en växt",
+        "ull från får",
+        "ett konstgjort material av olja"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "material",
+        "textil",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är ett förstygn?",
+      "back": "ett enkelt stygn där tråden går upp och ner genom tyget i en rak linje",
+      "choices": [
+        "ett enkelt rakt stygn",
+        "en sorts knapp",
+        "ett mönster i trä",
+        "en sorts nål"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "tekniker",
+        "textil",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför trär man tråden genom nålsögat?",
+      "back": "för att kunna sy med nålen",
+      "choices": [
+        "för att klippa tyget",
+        "för att kunna sy",
+        "för att färga tråden",
+        "för att mäta tyget"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "tekniker",
+        "textil",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör man med tyget innan man syr ihop delarna, så att de ligger still?",
+      "back": "nålar fast dem med knappnålar",
+      "choices": [
+        "spikar dem",
+        "tvättar dem",
+        "limmar dem",
+        "nålar fast med knappnålar"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "tekniker",
+        "textil",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är ett mönster i textilslöjd?",
+      "back": "en mall som visar hur man ska klippa tyget",
+      "choices": [
+        "en sorts tråd",
+        "en mall för att klippa tyget",
+        "en färg",
+        "en symaskin"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "tekniker",
+        "textil",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör man först i slöjdens arbetsprocess?",
+      "back": "får en idé och planerar",
+      "choices": [
+        "får en idé och planerar",
+        "värderar arbetet",
+        "visar upp det färdiga",
+        "slänger materialet"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "arbetsprocess",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är rätt ordning i slöjdens arbetsprocess?",
+      "back": "idé → planera → framställa → värdera",
+      "choices": [
+        "framställa → idé → värdera → planera",
+        "idé → planera → framställa → värdera",
+        "planera → värdera → idé → framställa",
+        "värdera → idé → planera → framställa"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "arbetsprocess",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder det att värdera sitt slöjdarbete?",
+      "back": "fundera på vad som blev bra och vad man kan göra bättre nästa gång",
+      "choices": [
+        "sälja det",
+        "slänga det",
+        "räkna hur mycket det väger",
+        "tänka på vad som blev bra och vad man kan förbättra"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "arbetsprocess",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför är det bra att laga och återanvända saker i stället för att köpa nytt?",
+      "back": "Det sparar pengar och naturens resurser.",
+      "choices": [
+        "det är dåligt för miljön",
+        "det sparar resurser och pengar",
+        "det går inte att laga saker",
+        "nya saker är alltid bättre"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "arbetsprocess",
+        "hållbarhet",
+        "åk4"
+      ]
+    }
+  ]
+}

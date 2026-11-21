@@ -1,0 +1,449 @@
+{
+  "title": "Musik åk 4: Instrument, noter, rytm och sånger (Lgr22)",
+  "grades": [
+    4
+  ],
+  "subject": "Musik",
+  "items": [
+    {
+      "front": "Vilken instrumentgrupp hör fiolen till?",
+      "back": "stråkinstrument",
+      "choices": [
+        "slagverk",
+        "stråkinstrument",
+        "klaviatur",
+        "blåsinstrument"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "instrument",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken instrumentgrupp hör trumpeten till?",
+      "back": "blåsinstrument (bleckblås)",
+      "choices": [
+        "slagverk",
+        "blåsinstrument",
+        "stråkinstrument",
+        "stränginstrument"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "instrument",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken instrumentgrupp hör trumman till?",
+      "back": "slagverk (slaginstrument)",
+      "choices": [
+        "blåsinstrument",
+        "stråkinstrument",
+        "klaviatur",
+        "slagverk"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "instrument",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många strängar har en vanlig gitarr?",
+      "back": "6",
+      "choices": [
+        "6",
+        "4",
+        "8",
+        "12"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "instrument",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket instrument har svarta och vita tangenter?",
+      "back": "piano",
+      "choices": [
+        "flöjt",
+        "gitarr",
+        "fiol",
+        "piano"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "instrument",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket är det största stråkinstrumentet i en orkester?",
+      "back": "kontrabas",
+      "choices": [
+        "fiol",
+        "cello",
+        "kontrabas",
+        "altfiol"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "instrument",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket instrument blåser man i och har klaffar, men är gjort av metall och ändå räknas till träblås?",
+      "back": "tvärflöjt",
+      "choices": [
+        "trumpet",
+        "tuba",
+        "tvärflöjt",
+        "trombon"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "instrument",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas en stor grupp musiker med många olika instrument, ledd av en dirigent?",
+      "back": "orkester (symfoniorkester)",
+      "choices": [
+        "duett",
+        "orkester",
+        "kör",
+        "band"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "instrument",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas en grupp som sjunger tillsammans?",
+      "back": "kör",
+      "choices": [
+        "kör",
+        "kvartett av instrument",
+        "publik",
+        "orkester"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "sång och spel",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många slag är en helnot i 4/4-takt?",
+      "back": "4 slag",
+      "choices": [
+        "8",
+        "1",
+        "4",
+        "2"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "noter och rytm",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många slag är en halvnot?",
+      "back": "2 slag",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "3"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "noter och rytm",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många slag är en fjärdedelsnot?",
+      "back": "1 slag",
+      "choices": [
+        "4",
+        "1/2",
+        "1",
+        "2"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "noter och rytm",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många fjärdedelsnoter ryms i en helnot?",
+      "back": "4",
+      "choices": [
+        "3",
+        "2",
+        "4",
+        "8"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "noter och rytm",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas det jämna slaget i musiken som man kan klappa till?",
+      "back": "puls",
+      "choices": [
+        "klang",
+        "dynamik",
+        "melodi",
+        "puls"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "musikens byggstenar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är en melodi?",
+      "back": "en följd av toner som bildar en låt man kan nynna",
+      "choices": [
+        "toner som bildar en låt",
+        "hur starkt man spelar",
+        "en sorts instrument",
+        "bara trummor"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "musikens byggstenar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder ”tempo” i musik?",
+      "back": "hur snabbt eller långsamt musiken går",
+      "choices": [
+        "hur snabbt musiken går",
+        "hur högt tonen är",
+        "hur starkt man spelar",
+        "vilket instrument man spelar"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "musikens byggstenar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder forte (f)?",
+      "back": "starkt",
+      "choices": [
+        "snabbt",
+        "långsamt",
+        "starkt",
+        "svagt"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "musikens byggstenar",
+        "dynamik",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder piano (p) i noter?",
+      "back": "svagt",
+      "choices": [
+        "starkt",
+        "spela piano",
+        "svagt",
+        "snabbt"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "musikens byggstenar",
+        "dynamik",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur låter musik i moll ofta jämfört med dur?",
+      "back": "mer sorgsen eller allvarlig – dur låter ofta gladare",
+      "choices": [
+        "starkare",
+        "snabbare",
+        "gladare",
+        "sorgsnare"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "musikens byggstenar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter tonerna i en durskala, från do?",
+      "back": "do, re, mi, fa, so, la, ti (si), do",
+      "choices": [
+        "do re mi fa so la ti do",
+        "a b c d e f g",
+        "do mi so do re fa la",
+        "la so fa mi re do ti"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "musikens byggstenar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas det när en sång sjungs i omgångar, så att grupper börjar vid olika tillfällen?",
+      "back": "kanon",
+      "choices": [
+        "duett",
+        "kanon",
+        "solo",
+        "refräng"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "sång och spel",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas den del i en låt som återkommer flera gånger?",
+      "back": "refräng",
+      "choices": [
+        "intro",
+        "solo",
+        "vers",
+        "refräng"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "sång och spel",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter Sveriges nationalsång?",
+      "back": "Du gamla, du fria",
+      "choices": [
+        "Idas sommarvisa",
+        "Du gamla, du fria",
+        "Sverige, Sverige fosterland",
+        "Små grodorna"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "sång och spel",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken svensk grupp vann Eurovision 1974 med ”Waterloo”?",
+      "back": "ABBA",
+      "choices": [
+        "ABBA",
+        "Ace of Base",
+        "Roxette",
+        "Europe"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "musik förr och nu",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad sjunger man på luciamorgonen?",
+      "back": "Sankta Lucia (Natten går tunga fot)",
+      "choices": [
+        "Du gamla, du fria",
+        "Sankta Lucia",
+        "Ja, må du leva",
+        "Små grodorna"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "musik förr och nu",
+        "traditioner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken sång dansar man ofta runt midsommarstången?",
+      "back": "Små grodorna",
+      "choices": [
+        "Bä, bä, vita lamm",
+        "Waterloo",
+        "Nu tändas tusen juleljus",
+        "Små grodorna"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "musik förr och nu",
+        "traditioner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas en jojk?",
+      "back": "samisk sång som beskriver en person, ett djur eller en plats",
+      "choices": [
+        "en dans",
+        "en samisk sång",
+        "en julsång",
+        "ett blåsinstrument"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "musik förr och nu",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem var en berömd tonsättare som skrev klassisk musik för länge sedan?",
+      "back": "Wolfgang Amadeus Mozart",
+      "choices": [
+        "Benjamin Ingrosso",
+        "Avicii",
+        "Zara Larsson",
+        "Mozart"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "musik förr och nu",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför ska man skydda öronen på en konsert med väldigt hög musik?",
+      "back": "Höga ljud kan skada hörseln för alltid.",
+      "choices": [
+        "man behöver inte skydda dem",
+        "höga ljud kan skada hörseln",
+        "för att musiken blir bättre",
+        "för att det är kallt"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "musik förr och nu",
+        "hälsa",
+        "åk4"
+      ]
+    }
+  ]
+}

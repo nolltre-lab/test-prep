@@ -1,0 +1,541 @@
+{
+  "title": "Teknik åk 4: Maskiner, konstruktioner, uppfinningar och programmering (Lgr22)",
+  "grades": [
+    4
+  ],
+  "subject": "Teknik",
+  "items": [
+    {
+      "front": "Vilken enkel maskin är en gungbräda?",
+      "back": "hävstång",
+      "choices": [
+        "lutande plan",
+        "hävstång",
+        "skruv",
+        "kugghjul"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "enkla maskiner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför är det lättare att rulla en tung låda uppför en ramp än att lyfta den?",
+      "back": "Rampen (ett lutande plan) gör att kraften fördelas över en längre väg.",
+      "choices": [
+        "lådan blir mindre",
+        "rampen gör det lättare men vägen längre",
+        "rampen gör lådan lättare",
+        "det är inte lättare"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "enkla maskiner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad används kugghjul till?",
+      "back": "att överföra rörelse, t.ex. i en cykel eller en klocka",
+      "choices": [
+        "att lysa",
+        "att isolera",
+        "att hålla värmen",
+        "att överföra rörelse"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "enkla maskiner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad på en cykel är ett exempel på hjul och axel?",
+      "back": "hjulen som snurrar på sina axlar",
+      "choices": [
+        "hjulen",
+        "sadeln",
+        "ringklockan",
+        "reflexen"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "enkla maskiner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken enkel maskin är en sax?",
+      "back": "två hävstänger",
+      "choices": [
+        "hjul och axel",
+        "kugghjul",
+        "lutande plan",
+        "hävstänger"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "enkla maskiner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken form är mest stabil i en konstruktion, t.ex. en bro?",
+      "back": "triangeln – den ändrar inte form när man trycker på den.",
+      "choices": [
+        "kvadrat",
+        "rektangel",
+        "triangel",
+        "cirkel"
+      ],
+      "answerIndex": 2,
+      "hint": "Tryck på en fyrkant av sugrör – den viker sig. Prova en triangel!",
+      "tags": [
+        "konstruktioner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför är ett pappersrör starkare än ett platt papper?",
+      "back": "Formen gör det stabilare – profilen hjälper till att bära.",
+      "choices": [
+        "röret är tyngre",
+        "det är inte starkare",
+        "formen gör det starkare",
+        "det är annat papper"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "konstruktioner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas en bro som hänger i kablar från höga torn?",
+      "back": "hängbro",
+      "choices": [
+        "flottbro",
+        "hängbro",
+        "balkbro",
+        "valvbro"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "konstruktioner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är en balk?",
+      "back": "en lång bärande del, t.ex. i ett tak eller en bro",
+      "choices": [
+        "en bärande del",
+        "en lampa",
+        "ett verktyg",
+        "en sorts skruv"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "konstruktioner",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket material passar bäst till en stekpanna?",
+      "back": "metall – den tål värme och leder värme bra",
+      "choices": [
+        "trä",
+        "plast",
+        "metall",
+        "papper"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "material",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket material passar bäst till en regnjacka?",
+      "back": "ett vattentätt material, t.ex. med plastbeläggning",
+      "choices": [
+        "bomull",
+        "vattentätt tyg",
+        "papper",
+        "ull utan beläggning"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "material",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför har en kastrull handtag av plast eller trä?",
+      "back": "De leder inte värme lika bra, så man bränner sig inte.",
+      "choices": [
+        "för att de är vackra",
+        "för att de leder värme",
+        "de leder inte värme",
+        "för att de är tunga"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "material",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör en kyl för att hålla maten fräsch?",
+      "back": "håller den kall så att bakterier växer långsammare",
+      "choices": [
+        "lyser på maten",
+        "värmer maten",
+        "håller maten kall",
+        "torkar maten"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "el och teknik hemma",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Var kommer elen ifrån som når våra eluttag?",
+      "back": "från kraftverk (t.ex. vatten- och vindkraft) via elledningar",
+      "choices": [
+        "från telefonen",
+        "från solen direkt",
+        "från batterier i väggen",
+        "från kraftverk via ledningar"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "el och teknik hemma",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är en robotdammsugare ett exempel på?",
+      "back": "ett tekniskt system som styrs av sensorer och ett program",
+      "choices": [
+        "en programmerad maskin",
+        "en enkel hävstång",
+        "ett instrument",
+        "ett djur"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "el och teknik hemma",
+        "programmering",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är en sensor?",
+      "back": "en del som känner av något, t.ex. ljus, värme eller rörelse",
+      "choices": [
+        "något som känner av omgivningen",
+        "en skärm",
+        "en motor",
+        "en sladd"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "el och teknik hemma",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem uppfann skiftnyckeln?",
+      "back": "Johan Petter Johansson, en svensk uppfinnare",
+      "choices": [
+        "Thomas Edison",
+        "Carl Larsson",
+        "Johan Petter Johansson",
+        "Alfred Nobel"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "uppfinningar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem uppfann dynamiten och instiftade Nobelpriset?",
+      "back": "Alfred Nobel",
+      "choices": [
+        "Anders Celsius",
+        "Gustav Vasa",
+        "Alfred Nobel",
+        "Carl von Linné"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "uppfinningar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad användes för att se på kvällarna innan glödlampan fanns?",
+      "back": "stearinljus och fotogenlampor",
+      "choices": [
+        "lysrör",
+        "mobiltelefoner",
+        "ficklampor",
+        "stearinljus och fotogenlampor"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "uppfinningar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är en algoritm?",
+      "back": "en steg-för-steg-instruktion för att lösa en uppgift",
+      "choices": [
+        "en steg-för-steg-instruktion",
+        "en sorts dator",
+        "ett spel",
+        "ett tangentbord"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "programmering",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas det när en instruktion upprepas flera gånger i ett program?",
+      "back": "loop (upprepning)",
+      "choices": [
+        "skärm",
+        "loop",
+        "variabel",
+        "bugg"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "programmering",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är en bugg?",
+      "back": "ett fel i ett program",
+      "choices": [
+        "ett snabbt program",
+        "en ny dator",
+        "en sorts insekt i datorn",
+        "ett fel i programmet"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "programmering",
+        "åk4"
+      ]
+    },
+    {
+      "front": "En robot får koden: fram, fram, sväng höger, fram. Hur många steg går den framåt totalt?",
+      "back": "3",
+      "choices": [
+        "4",
+        "3",
+        "2",
+        "1"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "programmering",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör man först när man ska konstruera något nytt?",
+      "back": "undersöker behovet och kommer på idéer",
+      "choices": [
+        "kommer på idéer",
+        "målar det",
+        "säljer det",
+        "slänger det"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "teknikutveckling",
+        "arbetsprocess",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är rätt ordning när man utvecklar en teknisk lösning?",
+      "back": "idé → skiss → modell → testa → förbättra",
+      "choices": [
+        "modell → idé → testa → skiss",
+        "idé → skiss → modell → testa",
+        "skiss → testa → idé → modell",
+        "testa → idé → modell → skiss"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "teknikutveckling",
+        "arbetsprocess",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför gör man en modell innan man bygger på riktigt?",
+      "back": "för att testa idén billigt och hitta fel innan",
+      "choices": [
+        "för att det är roligt bara",
+        "modeller behövs inte",
+        "för att slippa rita",
+        "för att testa idén"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "teknikutveckling",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är en skiss?",
+      "back": "en enkel ritning som visar en idé",
+      "choices": [
+        "en färdig maskin",
+        "en enkel ritning av en idé",
+        "en sorts lim",
+        "ett datorprogram"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "teknikutveckling",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter de små rutorna som en digital bild består av?",
+      "back": "pixlar",
+      "choices": [
+        "batterier",
+        "sensorer",
+        "kugghjul",
+        "pixlar"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "programmering",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken uppfinning gjorde att man kunde prata med någon långt bort?",
+      "back": "telefonen",
+      "choices": [
+        "spiken",
+        "telefonen",
+        "glödlampan",
+        "cykeln"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "uppfinningar",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför har bilar säkerhetsbälte?",
+      "back": "Bältet håller kvar dig i sätet om bilen krockar eller tvärbromsar.",
+      "choices": [
+        "för att sitta bekvämare",
+        "det behövs bara för föraren",
+        "för att bilen ska gå fortare",
+        "det håller kvar dig vid en krock"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "el och teknik hemma",
+        "säkerhet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är ett tekniskt system?",
+      "back": "flera delar som fungerar tillsammans, t.ex. elnätet eller vattenledningarna",
+      "choices": [
+        "delar som fungerar tillsammans",
+        "en enda skruv",
+        "en tavla",
+        "ett djur"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "el och teknik hemma",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vart tar vattnet vägen när du spolar på toaletten?",
+      "back": "genom avloppsrören till ett reningsverk",
+      "choices": [
+        "upp i luften",
+        "tillbaka in i kranen",
+        "rakt ut i havet orenat",
+        "till ett reningsverk"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "el och teknik hemma",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad behöver en solcell för att ge el?",
+      "back": "ljus",
+      "choices": [
+        "mörker",
+        "vind",
+        "ljus",
+        "vatten"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "el och teknik hemma",
+        "energi",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad driver en elbil?",
+      "back": "en elmotor och ett batteri",
+      "choices": [
+        "segel",
+        "pedaler",
+        "en ångmaskin",
+        "en elmotor och ett batteri"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "el och teknik hemma",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket föremål är äldst?",
+      "back": "hjulet – flera tusen år gammalt",
+      "choices": [
+        "bilen",
+        "hjulet",
+        "telefonen",
+        "datorn"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "teknikutveckling",
+        "historia",
+        "åk4"
+      ]
+    }
+  ]
+}

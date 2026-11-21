@@ -1,0 +1,435 @@
+{
+  "title": "Hem- och konsumentkunskap åk 4: Mat, hygien, säkerhet och miljö (Lgr22)",
+  "grades": [
+    4
+  ],
+  "subject": "Hem- och konsumentkunskap",
+  "items": [
+    {
+      "front": "Vad är det första du gör innan du lagar mat?",
+      "back": "tvättar händerna",
+      "choices": [
+        "diskar",
+        "tvättar händerna",
+        "äter",
+        "dukar"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "hygien",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför ska man tvätta händerna innan man lagar mat?",
+      "back": "för att inte föra över bakterier till maten",
+      "choices": [
+        "för att maten ska smaka mer",
+        "för att få bort bakterier",
+        "för att händerna ska bli varma",
+        "det behövs inte"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "hygien",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför ska man ha olika skärbrädor till rått kött och grönsaker?",
+      "back": "så att bakterier från köttet inte hamnar på grönsakerna",
+      "choices": [
+        "för att det är finare",
+        "för att köttet ska bli mört",
+        "det spelar ingen roll",
+        "så att bakterier inte sprids"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "hygien",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Var ska mjölk och kött förvaras?",
+      "back": "i kylskåpet",
+      "choices": [
+        "i kylskåpet",
+        "i skafferiet",
+        "på bänken",
+        "i fönstret"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "hygien",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken del av tallriken ska vara störst enligt tallriksmodellen?",
+      "back": "grönsaker och rotfrukter",
+      "choices": [
+        "sås",
+        "kött eller fisk",
+        "efterrätt",
+        "grönsaker och rotfrukter"
+      ],
+      "answerIndex": 3,
+      "hint": "Tänk: mest från växtriket.",
+      "tags": [
+        "måltider och livsmedel",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken måltid äter man på morgonen?",
+      "back": "frukost",
+      "choices": [
+        "middag",
+        "mellanmål",
+        "frukost",
+        "lunch"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "måltider och livsmedel",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket livsmedel ger mycket protein?",
+      "back": "bönor (och fisk, kött, ägg)",
+      "choices": [
+        "socker",
+        "saft",
+        "bönor",
+        "smör"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "måltider och livsmedel",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket mellanmål är nyttigast?",
+      "back": "en frukt och en smörgås",
+      "choices": [
+        "glass och kakor",
+        "frukt och en smörgås",
+        "chips och läsk",
+        "godis"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "måltider och livsmedel",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför är det bra att äta regelbundet?",
+      "back": "kroppen får energi hela dagen och man orkar bättre",
+      "choices": [
+        "man orkar bättre hela dagen",
+        "man växer inte",
+        "det spelar ingen roll",
+        "man blir tröttare"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "måltider och livsmedel",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket är mest socker i?",
+      "back": "läsk",
+      "choices": [
+        "gurka",
+        "vatten",
+        "läsk",
+        "mjölk utan smak"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "måltider och livsmedel",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många deciliter är 1 liter?",
+      "back": "10 dl",
+      "choices": [
+        "100",
+        "10",
+        "5",
+        "1"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "mått och recept",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad står förkortningen msk för?",
+      "back": "matsked",
+      "choices": [
+        "milliliter",
+        "måttsked",
+        "matsked",
+        "mjölksked"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "mått och recept",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad står tsk för?",
+      "back": "tesked",
+      "choices": [
+        "teskål",
+        "tumsked",
+        "tesked",
+        "tårtsked"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "mått och recept",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket mått är minst?",
+      "back": "krm (kryddmått)",
+      "choices": [
+        "dl",
+        "msk",
+        "tsk",
+        "krm"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "mått och recept",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många teskedar är en matsked?",
+      "back": "3",
+      "choices": [
+        "3",
+        "5",
+        "10",
+        "2"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "mått och recept",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför läser man hela receptet innan man börjar?",
+      "back": "för att veta vad man behöver och hur lång tid det tar",
+      "choices": [
+        "för att veta vad som behövs",
+        "det behövs inte",
+        "för att slippa laga maten",
+        "för att det är roligt"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "mått och recept",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad använder man en visp till?",
+      "back": "vispa grädde, ägg eller smet",
+      "choices": [
+        "steka",
+        "mäta mjöl",
+        "vispa",
+        "skära bröd"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "i köket",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad använder man en stekspade till?",
+      "back": "vända mat i stekpannan",
+      "choices": [
+        "vispa grädde",
+        "skära grönsaker",
+        "vända mat i stekpannan",
+        "mäta mjöl"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "i köket",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur diskar man i rätt ordning för hand?",
+      "back": "det renaste först (glas), det smutsigaste sist (kastruller)",
+      "choices": [
+        "bara stekpannan",
+        "i vilken ordning som helst",
+        "smutsigaste först",
+        "renaste först, smutsigaste sist"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "i köket",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur ska kastrullhandtaget vara vänt på spisen?",
+      "back": "inåt, så att ingen stöter till det",
+      "choices": [
+        "inåt",
+        "utåt mot golvet",
+        "rakt ut mot rummet",
+        "det spelar ingen roll"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "säkerhet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör man om det börjar brinna i en stekpanna?",
+      "back": "lägger på ett lock och stänger av plattan – aldrig vatten",
+      "choices": [
+        "blåser på elden",
+        "lägger på ett lock",
+        "springer ut med pannan",
+        "häller vatten på"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "säkerhet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur håller man en kniv säkert när man skär?",
+      "back": "med fingertopparna inböjda på handen som håller maten",
+      "choices": [
+        "med kniven mot sig",
+        "med blöta händer",
+        "med fingrarna rakt ut",
+        "med fingrarna inböjda"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "säkerhet",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder ”bäst före” på en förpackning?",
+      "back": "Maten är oftast bra även efter datumet – titta, lukta och smaka.",
+      "choices": [
+        "datumet maten gjordes",
+        "ofta bra även efter datumet – kolla själv",
+        "måste slängas samma dag",
+        "maten är giftig efter datumet"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "miljö och ekonomi",
+        "matsvinn",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder ”sista förbrukningsdag”?",
+      "back": "Maten ska inte ätas efter det datumet.",
+      "choices": [
+        "ska inte ätas efter datumet",
+        "datumet när den kom till butiken",
+        "den håller ett år till",
+        "bara en rekommendation"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "miljö och ekonomi",
+        "matsvinn",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är matsvinn?",
+      "back": "mat som slängs fast den hade kunnat ätas",
+      "choices": [
+        "en sorts kryddor",
+        "mat som slängs i onödan",
+        "mat i frysen",
+        "mat som växer"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "miljö och ekonomi",
+        "matsvinn",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur kan man minska matsvinnet hemma?",
+      "back": "äta upp rester och bara ta så mycket man orkar",
+      "choices": [
+        "köpa extra mycket",
+        "laga dubbelt varje dag",
+        "slänga allt efter en dag",
+        "äta rester och ta lagom mycket"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "miljö och ekonomi",
+        "matsvinn",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är ett jämförpris?",
+      "back": "priset per kilo eller liter, så att man kan jämföra varor",
+      "choices": [
+        "priset på kvittot",
+        "pris per kilo eller liter",
+        "priset i en annan butik",
+        "rabatt"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "miljö och ekonomi",
+        "ekonomi",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken märkning visar att en vara är ekologiskt odlad?",
+      "back": "t.ex. KRAV eller EU:s ekologiska märke",
+      "choices": [
+        "bäst före",
+        "priset",
+        "streckkoden",
+        "KRAV"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "miljö och ekonomi",
+        "åk4"
+      ]
+    }
+  ]
+}

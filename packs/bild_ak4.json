@@ -1,0 +1,435 @@
+{
+  "title": "Bild åk 4: Färger, tekniker, perspektiv och konstnärer (Lgr22)",
+  "grades": [
+    4
+  ],
+  "subject": "Bild",
+  "items": [
+    {
+      "front": "Vilka är primärfärgerna i bildämnet?",
+      "back": "rött, gult och blått",
+      "choices": [
+        "svart, vitt och grått",
+        "rött, gult och blått",
+        "rosa, brunt och turkos",
+        "grönt, orange och lila"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "färger",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken färg får du om du blandar gult och blått?",
+      "back": "grönt",
+      "choices": [
+        "orange",
+        "grönt",
+        "lila",
+        "brunt"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "färger",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken färg får du om du blandar rött och gult?",
+      "back": "orange",
+      "choices": [
+        "lila",
+        "grönt",
+        "rosa",
+        "orange"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "färger",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken färg får du om du blandar rött och blått?",
+      "back": "lila",
+      "choices": [
+        "lila",
+        "grönt",
+        "orange",
+        "turkos"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "färger",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur gör man en färg ljusare?",
+      "back": "blandar i vitt",
+      "choices": [
+        "blandar i vatten och salt",
+        "blandar i svart",
+        "blandar i brunt",
+        "blandar i vitt"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "färger",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken färg är en varm färg?",
+      "back": "orange",
+      "choices": [
+        "blå",
+        "lila",
+        "orange",
+        "turkos"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "färger",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken färg är en kall färg?",
+      "back": "blå",
+      "choices": [
+        "röd",
+        "orange",
+        "blå",
+        "gul"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "färger",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken är komplementfärgen till rött?",
+      "back": "grönt – den står mittemot i färgcirkeln",
+      "choices": [
+        "lila",
+        "grönt",
+        "orange",
+        "blått"
+      ],
+      "answerIndex": 1,
+      "hint": "Titta mittemot i färgcirkeln.",
+      "tags": [
+        "färger",
+        "färgcirkeln",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken är komplementfärgen till blått?",
+      "back": "orange",
+      "choices": [
+        "orange",
+        "lila",
+        "gult",
+        "grönt"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "färger",
+        "färgcirkeln",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas målning med vattenfärger?",
+      "back": "akvarell",
+      "choices": [
+        "tryck",
+        "collage",
+        "akvarell",
+        "skulptur"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "tekniker",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är ett collage?",
+      "back": "en bild gjord av urklippta bitar som limmas på ett papper",
+      "choices": [
+        "en sorts pensel",
+        "en bild av urklipp som limmas",
+        "en staty av sten",
+        "en målning i olja"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "tekniker",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är en skulptur?",
+      "back": "ett tredimensionellt konstverk, t.ex. av lera, sten eller trä",
+      "choices": [
+        "en film",
+        "en sorts färg",
+        "ett konstverk i tre dimensioner",
+        "en platt teckning"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "tekniker",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör man när man skissar?",
+      "back": "ritar snabbt och enkelt för att pröva en idé",
+      "choices": [
+        "suddar ut allt",
+        "målar klart en tavla",
+        "ritar snabbt för att pröva en idé",
+        "ramar in en bild"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "tekniker",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas det när man trycker en bild flera gånger, t.ex. med en potatisstämpel?",
+      "back": "tryck (grafik)",
+      "choices": [
+        "skiss",
+        "skulptur",
+        "akvarell",
+        "tryck"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "tekniker",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas den del av bilden som är närmast den som tittar?",
+      "back": "förgrund",
+      "choices": [
+        "förgrund",
+        "mellangrund",
+        "horisont",
+        "bakgrund"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "perspektiv och komposition",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur kan man få saker att se långt bort ut i en bild?",
+      "back": "rita dem mindre och högre upp, ofta blekare",
+      "choices": [
+        "rita dem mindre",
+        "rita dem i förgrunden",
+        "rita dem större",
+        "rita dem med tjockare linjer"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "perspektiv och komposition",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas linjen där himmel och mark verkar mötas?",
+      "back": "horisont",
+      "choices": [
+        "ram",
+        "skugga",
+        "horisont",
+        "förgrund"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "perspektiv och komposition",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är ett porträtt?",
+      "back": "en bild av en person",
+      "choices": [
+        "en bild av ett landskap",
+        "en karta",
+        "en bild av en person",
+        "en bild av frukt"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "perspektiv och komposition",
+        "motiv",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är ett stilleben?",
+      "back": "en bild av saker som står still, t.ex. frukt och vaser",
+      "choices": [
+        "en bild av ett landskap",
+        "en film",
+        "en bild av en person",
+        "en bild av saker som står still"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "perspektiv och komposition",
+        "motiv",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken svensk konstnär är känd för sina troll och tomtar i ”Bland tomtar och troll”?",
+      "back": "John Bauer",
+      "choices": [
+        "John Bauer",
+        "Carl Larsson",
+        "Anders Zorn",
+        "Vincent van Gogh"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "konst och konstnärer",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken svensk konstnär målade hemmet i Sundborn med familjen, i bilderna ”Ett hem”?",
+      "back": "Carl Larsson",
+      "choices": [
+        "Leonardo da Vinci",
+        "Carl Larsson",
+        "Hilma af Klint",
+        "John Bauer"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "konst och konstnärer",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem målade Mona Lisa?",
+      "back": "Leonardo da Vinci",
+      "choices": [
+        "Carl Larsson",
+        "Claude Monet",
+        "Pablo Picasso",
+        "Leonardo da Vinci"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "konst och konstnärer",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken svensk konstnär målade abstrakt konst tidigt, redan för över hundra år sedan?",
+      "back": "Hilma af Klint",
+      "choices": [
+        "Elsa Beskow",
+        "Hilma af Klint",
+        "Astrid Lindgren",
+        "Selma Lagerlöf"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "konst och konstnärer",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas konst som inte föreställer något som finns i verkligheten?",
+      "back": "abstrakt konst",
+      "choices": [
+        "abstrakt konst",
+        "stilleben",
+        "realistisk konst",
+        "porträtt"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "konst och konstnärer",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är syftet med en reklambild?",
+      "back": "att få oss att vilja köpa något",
+      "choices": [
+        "att lära oss räkna",
+        "att få oss att köpa",
+        "att visa vädret",
+        "att vara konst på museum"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "bildanalys och bilder i samhället",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför ska man fråga innan man lägger ut en bild på någon annan på nätet?",
+      "back": "Alla har rätt att bestämma över bilder på sig själva.",
+      "choices": [
+        "det behövs inte",
+        "för att det är gratis",
+        "för att bilden blir skarpare",
+        "alla bestämmer över bilder på sig själva"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "bildanalys och bilder i samhället",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Får man kopiera någon annans bild och säga att man gjort den själv?",
+      "back": "Nej – bilden skyddas av upphovsrätten.",
+      "choices": [
+        "ja, alltid",
+        "nej, det är fusk mot upphovsrätten",
+        "ja, på nätet är allt fritt",
+        "ja, om den är snygg"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "bildanalys och bilder i samhället",
+        "upphovsrätt",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är en symbol i en bild, t.ex. ett hjärta?",
+      "back": "något som betyder mer än det föreställer, t.ex. kärlek",
+      "choices": [
+        "ett fel i bilden",
+        "en ram",
+        "en sorts pensel",
+        "något som står för något annat"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "bildanalys och bilder i samhället",
+        "åk4"
+      ]
+    }
+  ]
+}

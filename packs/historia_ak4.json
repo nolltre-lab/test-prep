@@ -1,0 +1,577 @@
+{
+  "title": "Historia åk 4: Forntiden, vikingatiden och medeltiden (Lgr22)",
+  "grades": [
+    4
+  ],
+  "subject": "Historia",
+  "items": [
+    {
+      "front": "Hur många år är ett sekel (århundrade)?",
+      "back": "100 år",
+      "choices": [
+        "1 000 år",
+        "100 år",
+        "50 år",
+        "10 år"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "tid och tideräkning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betyder e.Kr.?",
+      "back": "efter Kristus – år räknade från när man tror att Jesus föddes",
+      "choices": [
+        "en kung",
+        "efter Kristus",
+        "efter krigen",
+        "efter kalendern"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "tid och tideräkning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket århundrade är år 1523 i?",
+      "back": "1500-talet",
+      "choices": [
+        "1400-talet",
+        "1600-talet",
+        "1200-talet",
+        "1500-talet"
+      ],
+      "answerIndex": 3,
+      "hint": "År 1500–1599 kallas 1500-talet.",
+      "tags": [
+        "tid och tideräkning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket kommer först: stenåldern, bronsåldern eller järnåldern?",
+      "back": "stenåldern",
+      "choices": [
+        "stenåldern",
+        "bronsåldern",
+        "järnåldern",
+        "vikingatiden"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "tid och tideräkning",
+        "forntiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är rätt ordning?",
+      "back": "stenålder → bronsålder → järnålder → medeltid",
+      "choices": [
+        "järnålder → stenålder → bronsålder → medeltid",
+        "bronsålder → stenålder → medeltid → järnålder",
+        "medeltid → stenålder → bronsålder → järnålder",
+        "stenålder → bronsålder → järnålder → medeltid"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "tid och tideräkning",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad täckte Sverige under istiden?",
+      "back": "en tjock inlandsis",
+      "choices": [
+        "öken",
+        "hav med palmer",
+        "en tjock inlandsis",
+        "regnskog"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "forntiden",
+        "istiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur levde de första människorna i Sverige?",
+      "back": "som jägare och samlare – de jagade, fiskade och plockade växter",
+      "choices": [
+        "som bönder i städer",
+        "som riddare",
+        "som jägare och samlare",
+        "som fabriksarbetare"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "forntiden",
+        "stenåldern",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken sten använde man ofta till verktyg på stenåldern?",
+      "back": "flinta – den är hård och kan slås vass",
+      "choices": [
+        "sandsten",
+        "flinta",
+        "marmor",
+        "granit"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "forntiden",
+        "stenåldern",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad hände när människor började odla och ha djur under stenåldern?",
+      "back": "De blev bofasta bönder.",
+      "choices": [
+        "de blev bofasta bönder",
+        "de slutade äta kött",
+        "de byggde städer av sten",
+        "de flyttade till månen"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "forntiden",
+        "stenåldern",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är brons?",
+      "back": "en blandning av koppar och tenn",
+      "choices": [
+        "silver och bly",
+        "järn och guld",
+        "koppar och tenn",
+        "sten och lera"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "forntiden",
+        "bronsåldern",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är hällristningar?",
+      "back": "bilder huggna i berghällar, t.ex. skepp och djur från bronsåldern",
+      "choices": [
+        "målningar på papper",
+        "bilder huggna i berg",
+        "gamla böcker",
+        "runor på trä"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "forntiden",
+        "bronsåldern",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Var hittade man järn under järnåldern?",
+      "back": "i myrmalm i sjöar och myrar",
+      "choices": [
+        "i havet",
+        "det köptes i affärer",
+        "i myrar och sjöar (myrmalm)",
+        "i träden"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "forntiden",
+        "järnåldern",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Ungefär när var vikingatiden?",
+      "back": "ca 800–1050 e.Kr.",
+      "choices": [
+        "ca 3000 f.Kr.",
+        "ca 100–200 e.Kr.",
+        "ca 800–1050 e.Kr.",
+        "ca 1500–1600"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad hette vikingarnas skrifttecken?",
+      "back": "runor",
+      "choices": [
+        "bokstäver på papper",
+        "noter",
+        "hieroglyfer",
+        "runor"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är en runsten?",
+      "back": "en sten med runor som ofta minns en död person",
+      "choices": [
+        "en sten med inristade runor",
+        "en sorts mynt",
+        "en grav av trä",
+        "en ädelsten"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad hette vikingatidens handelsstad på Björkö i Mälaren?",
+      "back": "Birka",
+      "choices": [
+        "Birka",
+        "Sigtuna",
+        "Visby",
+        "Uppsala"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallades en slav på vikingatiden?",
+      "back": "träl",
+      "choices": [
+        "karl",
+        "kung",
+        "träl",
+        "jarl"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad var tinget?",
+      "back": "ett möte där fria män löste tvister och bestämde lagar",
+      "choices": [
+        "en sorts båt",
+        "en fest",
+        "ett möte där man bestämde lagar",
+        "en gud"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken viking seglade enligt sagorna till Nordamerika (Vinland)?",
+      "back": "Leif Eriksson",
+      "choices": [
+        "Ragnar Lodbrok",
+        "Gustav Vasa",
+        "Erik Segersäll",
+        "Leif Eriksson"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilka var vikingarnas gudar?",
+      "back": "asagudarna, t.ex. Oden, Tor och Freja",
+      "choices": [
+        "Oden, Tor och Freja",
+        "Zeus, Hera och Apollon",
+        "Jesus och Maria",
+        "Ra och Isis"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "vikingatiden",
+        "asatro",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad sysslade de flesta vikingar med till vardags?",
+      "back": "jordbruk, djurskötsel och hantverk",
+      "choices": [
+        "fabriksarbete",
+        "jordbruk och hantverk",
+        "fotboll",
+        "bara krig"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem var munken som kom till Birka för att sprida kristendomen?",
+      "back": "Ansgar",
+      "choices": [
+        "Olof",
+        "Erik",
+        "Birgitta",
+        "Ansgar"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "medeltiden",
+        "kristendomen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken religion spreds i Sverige när medeltiden började?",
+      "back": "kristendomen",
+      "choices": [
+        "islam",
+        "kristendomen",
+        "asatron",
+        "buddhismen"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "medeltiden",
+        "kristendomen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad byggdes det många av på medeltiden?",
+      "back": "stenkyrkor, kloster och borgar",
+      "choices": [
+        "kyrkor, kloster och borgar",
+        "järnvägar",
+        "fabriker",
+        "flygplatser"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "medeltiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem var den heliga Birgitta?",
+      "back": "en svensk kvinna på 1300-talet som grundade ett kloster i Vadstena",
+      "choices": [
+        "Gustav Vasas mamma",
+        "grundade ett kloster i Vadstena",
+        "en uppfinnare",
+        "en vikingadrottning"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "medeltiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad var Hansan?",
+      "back": "ett förbund av tyska handelsstäder som handlade runt Östersjön",
+      "choices": [
+        "en kung",
+        "ett slott",
+        "en sjukdom",
+        "ett förbund av handelsstäder"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "medeltiden",
+        "handel",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken svensk stad har en ringmur från medeltiden?",
+      "back": "Visby",
+      "choices": [
+        "Kiruna",
+        "Visby",
+        "Umeå",
+        "Göteborg"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "medeltiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad var digerdöden?",
+      "back": "en pest som dödade många människor i mitten av 1300-talet",
+      "choices": [
+        "en svår vinter",
+        "en kung",
+        "ett krig",
+        "en pest på 1300-talet"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "medeltiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gjorde en riddare?",
+      "back": "stred till häst åt kungen eller en herre, i rustning",
+      "choices": [
+        "seglade vikingaskepp",
+        "stred till häst i rustning",
+        "sydde kläder",
+        "skrev böcker"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "medeltiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad var Kalmarunionen?",
+      "back": "när Sverige, Norge och Danmark hade samma kung (från 1397)",
+      "choices": [
+        "en kyrka",
+        "ett krig mot vikingar",
+        "en handelsstad",
+        "Sverige, Norge och Danmark under samma kung"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "medeltiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad hände i Stockholms blodbad 1520?",
+      "back": "Den danske kungen Kristian II lät avrätta många svenska adelsmän.",
+      "choices": [
+        "Kristian II lät avrätta många svenskar",
+        "en stor brand",
+        "en kröning",
+        "en översvämning"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "medeltiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem valdes till kung den 6 juni 1523?",
+      "back": "Gustav Vasa",
+      "choices": [
+        "Kristian II",
+        "Karl XII",
+        "Gustav II Adolf",
+        "Gustav Vasa"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "Vasatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför är 6 juni Sveriges nationaldag?",
+      "back": "Gustav Vasa valdes till kung den dagen 1523 (och en ny grundlag kom 1809).",
+      "choices": [
+        "Sverige fick sin flagga i en storm",
+        "midsommar firas",
+        "Gustav Vasa valdes till kung",
+        "vikingatiden började"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "Vasatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket lopp påminner om Gustav Vasas flykt på skidor?",
+      "back": "Vasaloppet",
+      "choices": [
+        "Göteborgsvarvet",
+        "Lidingöloppet",
+        "Vätternrundan",
+        "Vasaloppet"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "Vasatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör en arkeolog?",
+      "back": "letar efter och undersöker saker från förr, ofta genom att gräva",
+      "choices": [
+        "skriver nyheter",
+        "undersöker fynd från förr",
+        "bygger nya hus",
+        "lagar bilar"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "källor",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är en historisk källa?",
+      "back": "något som berättar om förr, t.ex. ett fornfynd, en runsten eller ett gammalt brev",
+      "choices": [
+        "en karta över framtiden",
+        "något som berättar om förr",
+        "en vattenkälla",
+        "en påhittad saga"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "källor",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad ska du göra om du hittar något mycket gammalt i marken?",
+      "back": "lämna det och berätta för länsstyrelsen eller ett museum (fornfynd)",
+      "choices": [
+        "sälja det",
+        "anmäla fyndet",
+        "gömma det",
+        "slänga det"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "källor",
+        "åk4"
+      ]
+    }
+  ]
+}

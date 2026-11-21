@@ -1,0 +1,578 @@
+{
+  "title": "Religionskunskap åk 4: Världsreligioner, asatro och etik (Lgr22)",
+  "grades": [
+    4
+  ],
+  "subject": "Religionskunskap",
+  "items": [
+    {
+      "front": "Vad heter kristendomens heliga bok?",
+      "back": "Bibeln",
+      "choices": [
+        "Toran",
+        "Bibeln",
+        "Veda",
+        "Koranen"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kristendom",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Var föddes Jesus enligt Bibeln?",
+      "back": "i Betlehem",
+      "choices": [
+        "i Rom",
+        "i Betlehem",
+        "i Mecka",
+        "i Kairo"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kristendom",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad firar kristna på julen?",
+      "back": "att Jesus föddes",
+      "choices": [
+        "Jesu död",
+        "att Moses fick budorden",
+        "nyår",
+        "Jesu födelse"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "kristendom",
+        "högtider",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad firar kristna på påsken?",
+      "back": "att Jesus dog och uppstod från de döda",
+      "choices": [
+        "Jesu död och uppståndelse",
+        "Jesu födelse",
+        "skörden",
+        "ljusets återkomst"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "kristendom",
+        "högtider",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken symbol är kristendomens?",
+      "back": "korset",
+      "choices": [
+        "Davidsstjärnan",
+        "halvmånen",
+        "hjulet",
+        "korset"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "kristendom",
+        "symboler",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter kristnas byggnad för gudstjänst?",
+      "back": "kyrka",
+      "choices": [
+        "moské",
+        "tempel",
+        "kyrka",
+        "synagoga"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "kristendom",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gjorde Noa enligt Bibelns berättelse?",
+      "back": "byggde en ark och räddade djuren från en stor flod",
+      "choices": [
+        "delade havet",
+        "slogs mot en jätte",
+        "byggde en ark",
+        "byggde ett torn"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "kristendom",
+        "berättelser",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem besegrade jätten Goliat enligt Bibeln?",
+      "back": "David",
+      "choices": [
+        "Abraham",
+        "David",
+        "Moses",
+        "Noa"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "kristendom",
+        "berättelser",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter judendomens viktigaste heliga skrift?",
+      "back": "Toran",
+      "choices": [
+        "Toran",
+        "Koranen",
+        "Veda",
+        "Bibelns Nya testamente"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "judendom",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter judarnas byggnad för gudstjänst?",
+      "back": "synagoga",
+      "choices": [
+        "pagod",
+        "kyrka",
+        "synagoga",
+        "moské"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "judendom",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken symbol är judendomens?",
+      "back": "Davidsstjärnan",
+      "choices": [
+        "korset",
+        "Davidsstjärnan",
+        "halvmånen",
+        "lotusblomman"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "judendom",
+        "symboler",
+        "åk4"
+      ]
+    },
+    {
+      "front": "När firar judar sabbat?",
+      "back": "från fredag kväll till lördag kväll",
+      "choices": [
+        "måndag",
+        "bara på jul",
+        "fredag kväll till lördag kväll",
+        "söndag förmiddag"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "judendom",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad påminner högtiden pesach om?",
+      "back": "uttåget ur Egypten, när Moses ledde israeliterna ut ur slaveriet",
+      "choices": [
+        "skörden i Indien",
+        "Jesu födelse",
+        "uttåget ur Egypten",
+        "Muhammeds resa"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "judendom",
+        "högtider",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter judendomens ljushögtid som firas i åtta dagar?",
+      "back": "chanukka",
+      "choices": [
+        "pesach",
+        "ramadan",
+        "divali",
+        "chanukka"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "judendom",
+        "högtider",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem tog emot de tio budorden enligt berättelsen?",
+      "back": "Moses",
+      "choices": [
+        "Moses",
+        "David",
+        "Jesus",
+        "Noa"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "judendom",
+        "kristendom",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter islams heliga bok?",
+      "back": "Koranen",
+      "choices": [
+        "Koranen",
+        "Talmud",
+        "Bibeln",
+        "Toran"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "islam",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter islams profet?",
+      "back": "Muhammed",
+      "choices": [
+        "Buddha",
+        "Abraham",
+        "Muhammed",
+        "Moses"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "islam",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter muslimernas byggnad för bön?",
+      "back": "moské",
+      "choices": [
+        "synagoga",
+        "tempel",
+        "moské",
+        "kyrka"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "islam",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör många muslimer under ramadan?",
+      "back": "fastar – äter och dricker inte när det är ljust ute",
+      "choices": [
+        "badar i floden Ganges",
+        "tänder ljus i åtta dagar",
+        "firar Jesu födelse",
+        "fastar när det är ljust"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "islam",
+        "högtider",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter festen när ramadan är slut?",
+      "back": "id al-fitr",
+      "choices": [
+        "id al-fitr",
+        "pesach",
+        "divali",
+        "påsk"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "islam",
+        "högtider",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Till vilken stad vallfärdar muslimer?",
+      "back": "Mecka",
+      "choices": [
+        "Varanasi",
+        "Mecka",
+        "Rom",
+        "Jerusalem"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "islam",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilka tre religioner kallas Abrahams religioner?",
+      "back": "judendom, kristendom och islam",
+      "choices": [
+        "kristendom, buddhism och hinduism",
+        "islam, hinduism och asatro",
+        "hinduism, buddhism och asatro",
+        "judendom, kristendom och islam"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "islam",
+        "judendom",
+        "åk4"
+      ]
+    },
+    {
+      "front": "I vilket land har hinduismen sitt ursprung?",
+      "back": "Indien",
+      "choices": [
+        "Egypten",
+        "Indien",
+        "Kina",
+        "Sverige"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "hinduism",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter hinduismens ljusfest?",
+      "back": "divali",
+      "choices": [
+        "divali",
+        "lucia",
+        "chanukka",
+        "id al-fitr"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "hinduism",
+        "högtider",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken flod är helig för hinduer?",
+      "back": "Ganges",
+      "choices": [
+        "Amazonas",
+        "Ganges",
+        "Donau",
+        "Nilen"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "hinduism",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter grundaren av buddhismen?",
+      "back": "Buddha (Siddharta Gautama)",
+      "choices": [
+        "Muhammed",
+        "Moses",
+        "Krishna",
+        "Buddha"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "buddhism",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gör buddhister ofta för att få lugn och fokus?",
+      "back": "mediterar",
+      "choices": [
+        "fastar under ramadan",
+        "mediterar",
+        "läser Koranen",
+        "firar sabbat"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "buddhism",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem var asatrons högste gud, med korparna Hugin och Munin?",
+      "back": "Oden",
+      "choices": [
+        "Loke",
+        "Balder",
+        "Tor",
+        "Oden"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "asatro",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad hette Tors hammare?",
+      "back": "Mjölner",
+      "choices": [
+        "Sleipner",
+        "Mjölner",
+        "Gungner",
+        "Draupner"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "asatro",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad hette världsträdet i asatron?",
+      "back": "Yggdrasil",
+      "choices": [
+        "Asgård",
+        "Midgård",
+        "Valhall",
+        "Yggdrasil"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "asatro",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken veckodag har fått sitt namn efter guden Tor?",
+      "back": "torsdag",
+      "choices": [
+        "torsdag",
+        "tisdag",
+        "söndag",
+        "fredag"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "asatro",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem var en noaidi i den gamla samiska religionen?",
+      "back": "en person som kunde ha kontakt med andevärlden, ofta med hjälp av en trumma",
+      "choices": [
+        "en präst i en kyrka",
+        "en kung",
+        "en renskötare",
+        "en person med kontakt med andevärlden"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "samisk religion",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur såg samerna traditionellt på naturen?",
+      "back": "Allt i naturen har en själ och ska behandlas med respekt.",
+      "choices": [
+        "bara djuren har själ",
+        "naturen är bara till för människor",
+        "allt i naturen har en själ",
+        "naturen är farlig och ond"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "samisk religion",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad säger den gyllene regeln?",
+      "back": "Behandla andra så som du själv vill bli behandlad.",
+      "choices": [
+        "Ta hand om dig själv först",
+        "Gör vad du vill",
+        "Den starkaste bestämmer",
+        "Behandla andra som du vill bli behandlad"
+      ],
+      "answerIndex": 3,
+      "hint": "Den finns i nästan alla religioner.",
+      "tags": [
+        "etik och livsfrågor",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är en livsfråga?",
+      "back": "en stor fråga som saknar ett enkelt rätt svar, t.ex. ”Vad händer när man dör?”",
+      "choices": [
+        "en fråga om vädret",
+        "en stor fråga utan enkelt svar",
+        "en fråga i matte",
+        "en fråga med ett rätt svar"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "etik och livsfrågor",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Din kompis tappar en hundralapp utan att märka det. Vad är rätt att göra?",
+      "back": "säga till och ge tillbaka den",
+      "choices": [
+        "låtsas att du inte såg",
+        "ge tillbaka den",
+        "behålla den",
+        "gömma den"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "etik och livsfrågor",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är etik?",
+      "back": "att fundera på vad som är rätt och fel och hur vi ska vara mot varandra",
+      "choices": [
+        "att lära sig räkna",
+        "att tänka på rätt och fel",
+        "en idrott",
+        "en sorts religion"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "etik och livsfrågor",
+        "åk4"
+      ]
+    }
+  ]
+}
