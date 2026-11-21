@@ -1,0 +1,1265 @@
+{
+  "title": "Matematik åk 4: Fördjupning – tal, bråk, geometri, mätning och problemlösning (Avancerad)",
+  "items": [
+    {
+      "front": "Vilken siffra står på tusentalsplatsen i talet 7 342?",
+      "back": "7 (siffran längst till vänster i ett fyrsiffrigt tal).",
+      "choices": ["7", "3", "4", "2"],
+      "answerIndex": 0,
+      "tags": ["positionssystem", "åk4"]
+    },
+    {
+      "front": "Skriv talet \"fem tusen sextio\" med siffror.",
+      "back": "5 060.",
+      "choices": ["5060", "5600", "560", "5006"],
+      "answerIndex": 0,
+      "tags": ["positionssystem", "åk4"]
+    },
+    {
+      "front": "Vad är 4000 + 300 + 20 + 5?",
+      "back": "4 325.",
+      "choices": ["4325", "4235", "3425", "4352"],
+      "answerIndex": 0,
+      "tags": ["positionssystem", "åk4"]
+    },
+    {
+      "front": "Vilket tal är störst?",
+      "back": "6 990 är störst av de fyra talen.",
+      "choices": ["6099", "6909", "6990", "6019"],
+      "answerIndex": 2,
+      "tags": ["positionssystem", "åk4"]
+    },
+    {
+      "front": "Vilken siffra står på hundratalsplatsen i 8 350?",
+      "back": "3 (8 tusental, 3 hundratal, 5 tiotal, 0 ental).",
+      "choices": ["8", "3", "5", "0"],
+      "answerIndex": 1,
+      "tags": ["positionssystem", "åk4"]
+    },
+    {
+      "front": "Hur skriver man talet 9 007 i ord?",
+      "back": "Nio tusen sju.",
+      "choices": ["Nio tusen sju", "Nio hundra sju", "Nio tusen sjuttio", "Nittio tusen sju"],
+      "answerIndex": 0,
+      "tags": ["positionssystem", "åk4"]
+    },
+    {
+      "front": "Vilket tal ligger mellan 2 499 och 2 501?",
+      "back": "2500.",
+      "choices": ["2500", "2510", "2490", "2501"],
+      "answerIndex": 0,
+      "tags": ["positionssystem", "åk4"]
+    },
+    {
+      "front": "Talet 3 208 avrundat till närmaste tusental blir?",
+      "back": "3000 (3 208 ligger närmare 3000 än 4000).",
+      "choices": ["3000", "3200", "4000", "3210"],
+      "answerIndex": 0,
+      "tags": ["positionssystem", "avrundning", "åk4"]
+    },
+    {
+      "front": "Avrunda 456 till närmaste hundratal.",
+      "back": "500.",
+      "choices": ["400", "450", "500", "460"],
+      "answerIndex": 2,
+      "tags": ["avrundning", "åk4"]
+    },
+    {
+      "front": "Avrunda 3 452 till närmaste tusental.",
+      "back": "3000.",
+      "choices": ["3000", "3500", "4000", "3450"],
+      "answerIndex": 0,
+      "tags": ["avrundning", "åk4"]
+    },
+    {
+      "front": "Ungefär hur mycket är 198 + 302, om du avrundar till hundratal?",
+      "back": "Ca 200 + 300 = 500.",
+      "choices": ["400", "500", "600", "700"],
+      "answerIndex": 1,
+      "tags": ["avrundning", "överslagsräkning", "åk4"]
+    },
+    {
+      "front": "Avrunda 65 till närmaste tiotal.",
+      "back": "70.",
+      "choices": ["60", "65", "70", "80"],
+      "answerIndex": 2,
+      "tags": ["avrundning", "åk4"]
+    },
+    {
+      "front": "En biljett kostar 289 kr. Ungefär hur mycket kostar 3 biljetter, om du avrundar priset till 300 kr?",
+      "back": "300 × 3 = 900 kr.",
+      "choices": ["600", "900", "1200", "800"],
+      "answerIndex": 1,
+      "tags": ["avrundning", "överslagsräkning", "åk4"]
+    },
+    {
+      "front": "Vilket avrundat värde är rimligast för 512 − 198?",
+      "back": "Ca 500 − 200 = 300.",
+      "choices": ["200", "300", "400", "500"],
+      "answerIndex": 1,
+      "tags": ["avrundning", "överslagsräkning", "åk4"]
+    },
+    {
+      "front": "Temperaturen är −3°C på morgonen och stiger med 5 grader. Vad blir temperaturen?",
+      "back": "−3 + 5 = 2°C.",
+      "choices": ["−2°C", "2°C", "8°C", "−8°C"],
+      "answerIndex": 1,
+      "tags": ["negativa-tal", "åk4"]
+    },
+    {
+      "front": "Vilket tal är minst?",
+      "back": "−5 är minst (ligger längst till vänster på tallinjen).",
+      "choices": ["−5", "−2", "0", "3"],
+      "answerIndex": 0,
+      "tags": ["negativa-tal", "åk4"]
+    },
+    {
+      "front": "Vilket av dessa tal ligger till vänster om −2 på tallinjen?",
+      "back": "−4 ligger till vänster om −2.",
+      "choices": ["−1", "−4", "0", "1"],
+      "answerIndex": 1,
+      "tags": ["negativa-tal", "åk4"]
+    },
+    {
+      "front": "Temperaturen är 4°C och sjunker med 6 grader. Vad blir den nya temperaturen?",
+      "back": "4 − 6 = −2°C.",
+      "choices": ["−2°C", "2°C", "−10°C", "10°C"],
+      "answerIndex": 0,
+      "tags": ["negativa-tal", "åk4"]
+    },
+    {
+      "front": "Vilket tecken stämmer: −6 ___ −2?",
+      "back": "−6 < −2, eftersom −6 ligger längre till vänster på tallinjen.",
+      "choices": ["<", ">", "=", "kan inte avgöras"],
+      "answerIndex": 0,
+      "tags": ["negativa-tal", "åk4"]
+    },
+    {
+      "front": "Vilket bråk visar att 3 av 4 delar är färgade?",
+      "back": "3/4.",
+      "choices": ["3/4", "4/3", "1/4", "3/3"],
+      "answerIndex": 0,
+      "tags": ["bråk", "åk4"]
+    },
+    {
+      "front": "Vad är 1/2 av 10?",
+      "back": "10 ÷ 2 = 5.",
+      "choices": ["2", "5", "10", "20"],
+      "answerIndex": 1,
+      "tags": ["bråk", "åk4"]
+    },
+    {
+      "front": "Vad är 1/4 av 20?",
+      "back": "20 ÷ 4 = 5.",
+      "choices": ["4", "5", "8", "10"],
+      "answerIndex": 1,
+      "tags": ["bråk", "åk4"]
+    },
+    {
+      "front": "Vilket bråk är störst?",
+      "back": "1/2 är störst (halva är mer än en fjärdedel, en åttondel eller en tredjedel).",
+      "choices": ["1/2", "1/4", "1/8", "1/3"],
+      "answerIndex": 0,
+      "tags": ["bråk", "åk4"]
+    },
+    {
+      "front": "Skriv bråket \"två tredjedelar\" med siffror.",
+      "back": "2/3.",
+      "choices": ["2/3", "3/2", "2/2", "1/3"],
+      "answerIndex": 0,
+      "tags": ["bråk", "åk4"]
+    },
+    {
+      "front": "Hur många fjärdedelar går det på en hel?",
+      "back": "4 fjärdedelar bildar en hel.",
+      "choices": ["2", "3", "4", "8"],
+      "answerIndex": 2,
+      "tags": ["bråk", "åk4"]
+    },
+    {
+      "front": "Vad är 3/4 av 8?",
+      "back": "8 ÷ 4 = 2, sedan 2 × 3 = 6.",
+      "choices": ["4", "6", "8", "2"],
+      "answerIndex": 1,
+      "tags": ["bråk", "åk4"]
+    },
+    {
+      "front": "Vilket bråk är lika stort som 2/4?",
+      "back": "2/4 = 1/2 (förkortat).",
+      "choices": ["1/3", "1/2", "2/3", "3/4"],
+      "answerIndex": 1,
+      "tags": ["bråk", "åk4"]
+    },
+    {
+      "front": "En pizza delas i 8 lika stora bitar. Erik äter 3 bitar. Vilket bråk av pizzan åt han?",
+      "back": "3/8.",
+      "choices": ["3/8", "5/8", "3/5", "8/3"],
+      "answerIndex": 0,
+      "tags": ["bråk", "åk4"]
+    },
+    {
+      "front": "Vad är 1/3 + 1/3?",
+      "back": "1/3 + 1/3 = 2/3.",
+      "choices": ["1/3", "2/3", "2/6", "1"],
+      "answerIndex": 1,
+      "tags": ["bråk", "åk4"]
+    },
+    {
+      "front": "Vilket tal fattas? 1/2 = ?/8",
+      "back": "1/2 = 4/8.",
+      "choices": ["2", "4", "6", "8"],
+      "answerIndex": 1,
+      "tags": ["bråk", "åk4"]
+    },
+    {
+      "front": "Vad är 1 hel minus en fjärdedel (1 − 1/4)?",
+      "back": "1 − 1/4 = 3/4.",
+      "choices": ["1/4", "1/2", "3/4", "4/4"],
+      "answerIndex": 2,
+      "tags": ["bråk", "åk4"]
+    },
+    {
+      "front": "Vad är 0,1 + 0,2?",
+      "back": "0,1 + 0,2 = 0,3.",
+      "choices": ["0,3", "0,03", "3", "1,2"],
+      "answerIndex": 0,
+      "tags": ["decimaltal", "åk4"]
+    },
+    {
+      "front": "Vilket tal är störst?",
+      "back": "0,6 är störst av talen.",
+      "choices": ["0,5", "0,45", "0,6", "0,09"],
+      "answerIndex": 2,
+      "tags": ["decimaltal", "åk4"]
+    },
+    {
+      "front": "Skriv 3/10 som decimaltal.",
+      "back": "3/10 = 0,3.",
+      "choices": ["0,3", "0,03", "3,0", "0,7"],
+      "answerIndex": 0,
+      "tags": ["decimaltal", "bråk", "åk4"]
+    },
+    {
+      "front": "Vad är 1,5 + 2,5?",
+      "back": "1,5 + 2,5 = 4,0.",
+      "choices": ["4,0", "3,5", "4,5", "5,0"],
+      "answerIndex": 0,
+      "tags": ["decimaltal", "åk4"]
+    },
+    {
+      "front": "Hur många tiondelar är 0,7?",
+      "back": "0,7 är 7 tiondelar.",
+      "choices": ["7", "70", "0,7", "17"],
+      "answerIndex": 0,
+      "tags": ["decimaltal", "åk4"]
+    },
+    {
+      "front": "Vilket decimaltal motsvarar bråket 7/10?",
+      "back": "7/10 = 0,7.",
+      "choices": ["0,7", "7,0", "0,07", "1,7"],
+      "answerIndex": 0,
+      "tags": ["decimaltal", "bråk", "åk4"]
+    },
+    {
+      "front": "Avrunda 2,7 till närmaste heltal.",
+      "back": "2,7 avrundas till 3.",
+      "choices": ["2", "3", "2,7", "4"],
+      "answerIndex": 1,
+      "tags": ["decimaltal", "avrundning", "åk4"]
+    },
+    {
+      "front": "Vad är 5 − 1,5?",
+      "back": "5 − 1,5 = 3,5.",
+      "choices": ["3,5", "4,5", "3", "4"],
+      "answerIndex": 0,
+      "tags": ["decimaltal", "åk4"]
+    },
+    {
+      "front": "Vilket tal är minst?",
+      "back": "0,19 är minst av talen.",
+      "choices": ["0,2", "0,19", "0,25", "0,3"],
+      "answerIndex": 1,
+      "tags": ["decimaltal", "åk4"]
+    },
+    {
+      "front": "En läsk kostar 12,50 kr. Hur mycket kostar två läskar?",
+      "back": "12,50 × 2 = 25,00 kr.",
+      "choices": ["25,00 kr", "24,50 kr", "25,50 kr", "20,00 kr"],
+      "answerIndex": 0,
+      "tags": ["decimaltal", "pengar", "åk4"]
+    },
+    {
+      "front": "45 + 38 = ?",
+      "back": "45 + 38 = 83.",
+      "choices": ["83", "73", "93", "82"],
+      "answerIndex": 0,
+      "tags": ["huvudräkning", "åk4"]
+    },
+    {
+      "front": "120 − 45 = ?",
+      "back": "120 − 45 = 75.",
+      "choices": ["65", "75", "85", "55"],
+      "answerIndex": 1,
+      "tags": ["huvudräkning", "åk4"]
+    },
+    {
+      "front": "260 + 340 = ?",
+      "back": "260 + 340 = 600.",
+      "choices": ["500", "600", "590", "610"],
+      "answerIndex": 1,
+      "tags": ["huvudräkning", "åk4"]
+    },
+    {
+      "front": "1000 − 350 = ?",
+      "back": "1000 − 350 = 650.",
+      "choices": ["650", "750", "550", "600"],
+      "answerIndex": 0,
+      "tags": ["huvudräkning", "åk4"]
+    },
+    {
+      "front": "99 + 99 = ?",
+      "back": "99 + 99 = 198.",
+      "choices": ["188", "198", "189", "208"],
+      "answerIndex": 1,
+      "tags": ["huvudräkning", "åk4"]
+    },
+    {
+      "front": "500 − 275 = ?",
+      "back": "500 − 275 = 225.",
+      "choices": ["225", "235", "215", "325"],
+      "answerIndex": 0,
+      "tags": ["huvudräkning", "åk4"]
+    },
+    {
+      "front": "Beräkna: 3 456 + 2 378 = ?",
+      "back": "3 456 + 2 378 = 5 834.",
+      "choices": ["5834", "5734", "5844", "6834"],
+      "answerIndex": 0,
+      "tags": ["uppställning", "åk4"]
+    },
+    {
+      "front": "Beräkna: 6 003 − 2 469 = ?",
+      "back": "6 003 − 2 469 = 3 534.",
+      "choices": ["3534", "3634", "3544", "4534"],
+      "answerIndex": 0,
+      "tags": ["uppställning", "åk4"]
+    },
+    {
+      "front": "Beräkna: 4 275 + 1 897 = ?",
+      "back": "4 275 + 1 897 = 6 172.",
+      "choices": ["6172", "6072", "6182", "5172"],
+      "answerIndex": 0,
+      "tags": ["uppställning", "åk4"]
+    },
+    {
+      "front": "Beräkna: 8 002 − 3 456 = ?",
+      "back": "8 002 − 3 456 = 4 546.",
+      "choices": ["4546", "4646", "4556", "5546"],
+      "answerIndex": 0,
+      "tags": ["uppställning", "åk4"]
+    },
+    {
+      "front": "Beräkna: 5 619 + 3 284 = ?",
+      "back": "5 619 + 3 284 = 8 903.",
+      "choices": ["8903", "8803", "8913", "9903"],
+      "answerIndex": 0,
+      "tags": ["uppställning", "åk4"]
+    },
+    {
+      "front": "Beräkna: 7 500 − 4 875 = ?",
+      "back": "7 500 − 4 875 = 2 625.",
+      "choices": ["2625", "2725", "2615", "3625"],
+      "answerIndex": 0,
+      "tags": ["uppställning", "åk4"]
+    },
+    {
+      "front": "6 × 7 = ?",
+      "back": "6 × 7 = 42.",
+      "choices": ["40", "42", "48", "36"],
+      "answerIndex": 1,
+      "tags": ["multiplikationstabeller", "åk4"]
+    },
+    {
+      "front": "8 × 9 = ?",
+      "back": "8 × 9 = 72.",
+      "choices": ["72", "81", "64", "80"],
+      "answerIndex": 0,
+      "tags": ["multiplikationstabeller", "åk4"]
+    },
+    {
+      "front": "7 × 7 = ?",
+      "back": "7 × 7 = 49.",
+      "choices": ["42", "49", "56", "48"],
+      "answerIndex": 1,
+      "tags": ["multiplikationstabeller", "åk4"]
+    },
+    {
+      "front": "9 × 6 = ?",
+      "back": "9 × 6 = 54.",
+      "choices": ["54", "56", "48", "63"],
+      "answerIndex": 0,
+      "tags": ["multiplikationstabeller", "åk4"]
+    },
+    {
+      "front": "8 × 8 = ?",
+      "back": "8 × 8 = 64.",
+      "choices": ["64", "72", "56", "68"],
+      "answerIndex": 0,
+      "tags": ["multiplikationstabeller", "åk4"]
+    },
+    {
+      "front": "9 × 9 = ?",
+      "back": "9 × 9 = 81.",
+      "choices": ["81", "72", "90", "99"],
+      "answerIndex": 0,
+      "tags": ["multiplikationstabeller", "åk4"]
+    },
+    {
+      "front": "7 × 8 = ?",
+      "back": "7 × 8 = 56.",
+      "choices": ["54", "56", "64", "48"],
+      "answerIndex": 1,
+      "tags": ["multiplikationstabeller", "åk4"]
+    },
+    {
+      "front": "6 × 9 = ?",
+      "back": "6 × 9 = 54.",
+      "choices": ["45", "54", "56", "63"],
+      "answerIndex": 1,
+      "tags": ["multiplikationstabeller", "åk4"]
+    },
+    {
+      "front": "23 × 4 = ?",
+      "back": "23 × 4 = 92.",
+      "choices": ["92", "82", "88", "96"],
+      "answerIndex": 0,
+      "tags": ["multiplikation", "åk4"]
+    },
+    {
+      "front": "34 × 6 = ?",
+      "back": "34 × 6 = 204.",
+      "choices": ["204", "214", "194", "244"],
+      "answerIndex": 0,
+      "tags": ["multiplikation", "åk4"]
+    },
+    {
+      "front": "45 × 3 = ?",
+      "back": "45 × 3 = 135.",
+      "choices": ["135", "145", "125", "150"],
+      "answerIndex": 0,
+      "tags": ["multiplikation", "åk4"]
+    },
+    {
+      "front": "52 × 5 = ?",
+      "back": "52 × 5 = 260.",
+      "choices": ["260", "250", "270", "255"],
+      "answerIndex": 0,
+      "tags": ["multiplikation", "åk4"]
+    },
+    {
+      "front": "123 × 3 = ?",
+      "back": "123 × 3 = 369.",
+      "choices": ["369", "359", "379", "396"],
+      "answerIndex": 0,
+      "tags": ["multiplikation", "åk4"]
+    },
+    {
+      "front": "214 × 4 = ?",
+      "back": "214 × 4 = 856.",
+      "choices": ["856", "846", "864", "896"],
+      "answerIndex": 0,
+      "tags": ["multiplikation", "åk4"]
+    },
+    {
+      "front": "67 × 8 = ?",
+      "back": "67 × 8 = 536.",
+      "choices": ["536", "526", "546", "556"],
+      "answerIndex": 0,
+      "tags": ["multiplikation", "åk4"]
+    },
+    {
+      "front": "305 × 6 = ?",
+      "back": "305 × 6 = 1830.",
+      "choices": ["1830", "1820", "1930", "1800"],
+      "answerIndex": 0,
+      "tags": ["multiplikation", "åk4"]
+    },
+    {
+      "front": "36 ÷ 6 = ?",
+      "back": "36 ÷ 6 = 6.",
+      "choices": ["5", "6", "7", "8"],
+      "answerIndex": 1,
+      "tags": ["division", "åk4"]
+    },
+    {
+      "front": "48 ÷ 8 = ?",
+      "back": "48 ÷ 8 = 6.",
+      "choices": ["6", "7", "8", "9"],
+      "answerIndex": 0,
+      "tags": ["division", "åk4"]
+    },
+    {
+      "front": "63 ÷ 9 = ?",
+      "back": "63 ÷ 9 = 7.",
+      "choices": ["6", "7", "8", "9"],
+      "answerIndex": 1,
+      "tags": ["division", "åk4"]
+    },
+    {
+      "front": "17 ÷ 5 = ? Ange svaret med rest.",
+      "back": "5 × 3 = 15, rest 2. Alltså 3 rest 2.",
+      "choices": ["3 rest 2", "3 rest 1", "4 rest 1", "2 rest 3"],
+      "answerIndex": 0,
+      "tags": ["division", "åk4"]
+    },
+    {
+      "front": "29 ÷ 4 = ? Ange svaret med rest.",
+      "back": "4 × 7 = 28, rest 1. Alltså 7 rest 1.",
+      "choices": ["7 rest 1", "6 rest 5", "7 rest 0", "8 rest 3"],
+      "answerIndex": 0,
+      "tags": ["division", "åk4"]
+    },
+    {
+      "front": "84 ÷ 7 = ?",
+      "back": "84 ÷ 7 = 12.",
+      "choices": ["11", "12", "13", "14"],
+      "answerIndex": 1,
+      "tags": ["division", "åk4"]
+    },
+    {
+      "front": "96 ÷ 8 = ?",
+      "back": "96 ÷ 8 = 12.",
+      "choices": ["11", "12", "13", "10"],
+      "answerIndex": 1,
+      "tags": ["division", "åk4"]
+    },
+    {
+      "front": "45 ÷ 6 = ? Ange svaret med rest.",
+      "back": "6 × 7 = 42, rest 3. Alltså 7 rest 3.",
+      "choices": ["7 rest 3", "6 rest 9", "7 rest 2", "8 rest 3"],
+      "answerIndex": 0,
+      "tags": ["division", "åk4"]
+    },
+    {
+      "front": "100 ÷ 4 = ?",
+      "back": "100 ÷ 4 = 25.",
+      "choices": ["20", "25", "30", "24"],
+      "answerIndex": 1,
+      "tags": ["division", "åk4"]
+    },
+    {
+      "front": "72 ÷ 9 = ?",
+      "back": "72 ÷ 9 = 8.",
+      "choices": ["6", "7", "8", "9"],
+      "answerIndex": 2,
+      "tags": ["division", "åk4"]
+    },
+    {
+      "front": "Beräkna: 3 + 4 × 2 = ?",
+      "back": "Multiplikation före addition: 3 + 8 = 11.",
+      "choices": ["14", "11", "10", "9"],
+      "answerIndex": 1,
+      "tags": ["prioriteringsregler", "åk4"]
+    },
+    {
+      "front": "Beräkna: (3 + 4) × 2 = ?",
+      "back": "Parentesen beräknas först: 7 × 2 = 14.",
+      "choices": ["14", "11", "9", "10"],
+      "answerIndex": 0,
+      "tags": ["prioriteringsregler", "åk4"]
+    },
+    {
+      "front": "Beräkna: 10 − 2 × 3 = ?",
+      "back": "Multiplikation före subtraktion: 10 − 6 = 4.",
+      "choices": ["24", "4", "6", "8"],
+      "answerIndex": 1,
+      "tags": ["prioriteringsregler", "åk4"]
+    },
+    {
+      "front": "Beräkna: 2 × (5 + 3) = ?",
+      "back": "Parentesen beräknas först: 2 × 8 = 16.",
+      "choices": ["16", "13", "10", "18"],
+      "answerIndex": 0,
+      "tags": ["prioriteringsregler", "åk4"]
+    },
+    {
+      "front": "Beräkna: 20 ÷ 4 + 3 = ?",
+      "back": "Division före addition: 5 + 3 = 8.",
+      "choices": ["8", "7", "10", "5"],
+      "answerIndex": 0,
+      "tags": ["prioriteringsregler", "åk4"]
+    },
+    {
+      "front": "Vilket tal är ett primtal?",
+      "back": "7 är ett primtal (kan bara delas jämnt med 1 och sig självt).",
+      "choices": ["9", "15", "7", "21"],
+      "answerIndex": 2,
+      "tags": ["delbarhet", "åk4"]
+    },
+    {
+      "front": "Vilket av dessa tal är INTE delbart med 3?",
+      "back": "20 går inte jämnt att dela med 3.",
+      "choices": ["24", "18", "20", "27"],
+      "answerIndex": 2,
+      "tags": ["delbarhet", "åk4"]
+    },
+    {
+      "front": "Vilket tal är jämnt (delbart med 2)?",
+      "back": "34 är jämnt.",
+      "choices": ["17", "23", "34", "45"],
+      "answerIndex": 2,
+      "tags": ["delbarhet", "åk4"]
+    },
+    {
+      "front": "Vilket är det minsta primtalet?",
+      "back": "2 är det minsta primtalet.",
+      "choices": ["0", "1", "2", "3"],
+      "answerIndex": 2,
+      "tags": ["delbarhet", "åk4"]
+    },
+    {
+      "front": "Vilket tal är delbart med både 2 och 5?",
+      "back": "20 är delbart med både 2 och 5.",
+      "choices": ["15", "20", "22", "25"],
+      "answerIndex": 1,
+      "tags": ["delbarhet", "åk4"]
+    },
+    {
+      "front": "Hur många cm är 1 meter?",
+      "back": "1 m = 100 cm.",
+      "choices": ["10", "100", "1000", "50"],
+      "answerIndex": 1,
+      "tags": ["längd", "åk4"]
+    },
+    {
+      "front": "Hur många mm är 1 cm?",
+      "back": "1 cm = 10 mm.",
+      "choices": ["10", "100", "1", "5"],
+      "answerIndex": 0,
+      "tags": ["längd", "åk4"]
+    },
+    {
+      "front": "Omvandla 3,5 m till cm.",
+      "back": "3,5 m = 350 cm.",
+      "choices": ["35", "350", "3500", "305"],
+      "answerIndex": 1,
+      "tags": ["längd", "åk4"]
+    },
+    {
+      "front": "Hur många meter är 2 km?",
+      "back": "2 km = 2000 m.",
+      "choices": ["200", "2000", "20", "20000"],
+      "answerIndex": 1,
+      "tags": ["längd", "åk4"]
+    },
+    {
+      "front": "En penna är 15 cm lång. Hur många mm är det?",
+      "back": "15 cm = 150 mm.",
+      "choices": ["15", "150", "1500", "105"],
+      "answerIndex": 1,
+      "tags": ["längd", "åk4"]
+    },
+    {
+      "front": "Vilken enhet passar bäst för att mäta avståndet mellan två städer?",
+      "back": "Kilometer (km).",
+      "choices": ["mm", "cm", "m", "km"],
+      "answerIndex": 3,
+      "tags": ["längd", "åk4"]
+    },
+    {
+      "front": "Hur många gram är 1 kg?",
+      "back": "1 kg = 1000 g.",
+      "choices": ["100", "1000", "10000", "10"],
+      "answerIndex": 1,
+      "tags": ["vikt", "åk4"]
+    },
+    {
+      "front": "Omvandla 2,5 kg till gram.",
+      "back": "2,5 kg = 2500 g.",
+      "choices": ["250", "2500", "25000", "2050"],
+      "answerIndex": 1,
+      "tags": ["vikt", "åk4"]
+    },
+    {
+      "front": "Vilket väger mest: 1 kg äpplen eller 900 g äpplen?",
+      "back": "1 kg (= 1000 g) väger mer än 900 g.",
+      "choices": ["1 kg", "900 g", "de väger lika mycket", "går ej avgöra"],
+      "answerIndex": 0,
+      "tags": ["vikt", "åk4"]
+    },
+    {
+      "front": "En påse socker väger 500 g. Hur många kg är det?",
+      "back": "500 g = 0,5 kg.",
+      "choices": ["0,5 kg", "5 kg", "0,05 kg", "50 kg"],
+      "answerIndex": 0,
+      "tags": ["vikt", "åk4"]
+    },
+    {
+      "front": "Vilken enhet passar bäst för att väga en bil?",
+      "back": "Ton.",
+      "choices": ["gram", "hektogram", "kilogram", "ton"],
+      "answerIndex": 3,
+      "tags": ["vikt", "åk4"]
+    },
+    {
+      "front": "Hur många dl är 1 liter?",
+      "back": "1 liter = 10 dl.",
+      "choices": ["10", "100", "1000", "5"],
+      "answerIndex": 0,
+      "tags": ["volym", "åk4"]
+    },
+    {
+      "front": "Hur många ml är 1 dl?",
+      "back": "1 dl = 100 ml.",
+      "choices": ["10", "100", "1000", "50"],
+      "answerIndex": 1,
+      "tags": ["volym", "åk4"]
+    },
+    {
+      "front": "Omvandla 2 liter till dl.",
+      "back": "2 liter = 20 dl.",
+      "choices": ["2", "20", "200", "2000"],
+      "answerIndex": 1,
+      "tags": ["volym", "åk4"]
+    },
+    {
+      "front": "En flaska rymmer 1,5 liter. Hur många dl är det?",
+      "back": "1,5 liter = 15 dl.",
+      "choices": ["15", "150", "1", "5"],
+      "answerIndex": 0,
+      "tags": ["volym", "åk4"]
+    },
+    {
+      "front": "Vilken enhet passar bäst för att mäta vatten i ett badkar?",
+      "back": "Liter.",
+      "choices": ["ml", "dl", "liter", "cl"],
+      "answerIndex": 2,
+      "tags": ["volym", "åk4"]
+    },
+    {
+      "front": "Klockan är 14:30. Vad säger man på svenska?",
+      "back": "Halv tre.",
+      "choices": ["kvart över två", "halv tre", "kvart i tre", "kvart över tre"],
+      "answerIndex": 1,
+      "tags": ["tid", "åk4"]
+    },
+    {
+      "front": "Hur många minuter är det i en timme?",
+      "back": "60 minuter.",
+      "choices": ["100", "60", "24", "30"],
+      "answerIndex": 1,
+      "tags": ["tid", "åk4"]
+    },
+    {
+      "front": "Ett tåg avgår kl 09:15 och resan tar 1 timme 45 minuter. Vad är ankomsttiden?",
+      "back": "09:15 + 1:45 = 11:00.",
+      "choices": ["10:45", "11:00", "10:60", "11:15"],
+      "answerIndex": 1,
+      "tags": ["tid", "åk4"]
+    },
+    {
+      "front": "Klockan är 07:50. Hur många minuter är det kvar till klockan 08:00?",
+      "back": "10 minuter.",
+      "choices": ["10", "15", "5", "20"],
+      "answerIndex": 0,
+      "tags": ["tid", "åk4"]
+    },
+    {
+      "front": "Hur många sekunder är det i 3 minuter?",
+      "back": "3 × 60 = 180 sekunder.",
+      "choices": ["300", "180", "60", "120"],
+      "answerIndex": 1,
+      "tags": ["tid", "åk4"]
+    },
+    {
+      "front": "Vad heter klockslaget 15:45 i talat språk?",
+      "back": "Kvart i fyra.",
+      "choices": ["kvart över fyra", "kvart i fyra", "halv fyra", "fem i fyra"],
+      "answerIndex": 1,
+      "tags": ["tid", "åk4"]
+    },
+    {
+      "front": "En film börjar 18:20 och slutar 20:05. Hur lång är filmen?",
+      "back": "18:20 till 20:05 är 1 timme 45 minuter.",
+      "choices": ["1 h 45 min", "1 h 35 min", "2 h 15 min", "1 h 55 min"],
+      "answerIndex": 0,
+      "tags": ["tid", "åk4"]
+    },
+    {
+      "front": "Hur många dagar har april?",
+      "back": "April har 30 dagar.",
+      "choices": ["28", "29", "30", "31"],
+      "answerIndex": 2,
+      "tags": ["tid", "åk4"]
+    },
+    {
+      "front": "Du har en 100-kronorssedel och köper något för 65 kr. Hur mycket får du tillbaka?",
+      "back": "100 − 65 = 35 kr.",
+      "choices": ["25 kr", "35 kr", "45 kr", "30 kr"],
+      "answerIndex": 1,
+      "tags": ["pengar", "åk4"]
+    },
+    {
+      "front": "Tre glassar kostar 15 kr styck. Vad kostar alla tre tillsammans?",
+      "back": "15 × 3 = 45 kr.",
+      "choices": ["30 kr", "45 kr", "50 kr", "60 kr"],
+      "answerIndex": 1,
+      "tags": ["pengar", "åk4"]
+    },
+    {
+      "front": "Du har 250 kr och vill köpa en bok för 189 kr. Hur mycket har du kvar?",
+      "back": "250 − 189 = 61 kr.",
+      "choices": ["51 kr", "61 kr", "71 kr", "161 kr"],
+      "answerIndex": 1,
+      "tags": ["pengar", "åk4"]
+    },
+    {
+      "front": "Hur mycket är fyra 50-kronorssedlar tillsammans?",
+      "back": "4 × 50 = 200 kr.",
+      "choices": ["150 kr", "200 kr", "250 kr", "100 kr"],
+      "answerIndex": 1,
+      "tags": ["pengar", "åk4"]
+    },
+    {
+      "front": "En leksak kostar 79 kr och en annan 45 kr. Vad kostar de tillsammans?",
+      "back": "79 + 45 = 124 kr.",
+      "choices": ["114 kr", "124 kr", "134 kr", "120 kr"],
+      "answerIndex": 1,
+      "tags": ["pengar", "åk4"]
+    },
+    {
+      "front": "Hur många hörn har en femhörning (pentagon)?",
+      "back": "5 hörn.",
+      "choices": ["4", "5", "6", "8"],
+      "answerIndex": 1,
+      "tags": ["geometri", "åk4"]
+    },
+    {
+      "front": "Vad kallas en fyrhörning där alla sidor är lika långa och alla vinklar räta?",
+      "back": "Kvadrat.",
+      "choices": ["rektangel", "kvadrat", "romb", "parallellogram"],
+      "answerIndex": 1,
+      "tags": ["geometri", "åk4"]
+    },
+    {
+      "front": "Hur många sidor har en hexagon?",
+      "back": "6 sidor.",
+      "choices": ["5", "6", "7", "8"],
+      "answerIndex": 1,
+      "tags": ["geometri", "åk4"]
+    },
+    {
+      "front": "Vilken figur har inga hörn och är helt rund?",
+      "back": "Cirkel.",
+      "choices": ["kvadrat", "triangel", "cirkel", "rektangel"],
+      "answerIndex": 2,
+      "tags": ["geometri", "åk4"]
+    },
+    {
+      "front": "Vad kallas en tredimensionell figur som ser ut som en låda?",
+      "back": "Rätblock.",
+      "choices": ["cirkel", "rätblock", "kon", "cylinder"],
+      "answerIndex": 1,
+      "tags": ["geometri", "åk4"]
+    },
+    {
+      "front": "Hur många hörn har en kub?",
+      "back": "8 hörn.",
+      "choices": ["4", "6", "8", "12"],
+      "answerIndex": 2,
+      "tags": ["geometri", "åk4"]
+    },
+    {
+      "front": "Vad kallas linjen som går rakt igenom mitten av en cirkel och delar den i två lika delar?",
+      "back": "Diameter.",
+      "choices": ["radie", "diameter", "omkrets", "area"],
+      "answerIndex": 1,
+      "tags": ["geometri", "åk4"]
+    },
+    {
+      "front": "Vad kallas avståndet från en cirkels mittpunkt till kanten?",
+      "back": "Radie.",
+      "choices": ["diameter", "radie", "omkrets", "area"],
+      "answerIndex": 1,
+      "tags": ["geometri", "åk4"]
+    },
+    {
+      "front": "Vad kallas en vinkel som är exakt 90°?",
+      "back": "Rät vinkel.",
+      "choices": ["spetsig vinkel", "rät vinkel", "trubbig vinkel", "rak vinkel"],
+      "answerIndex": 1,
+      "tags": ["vinklar", "åk4"]
+    },
+    {
+      "front": "Vad kallas en vinkel som är mindre än 90°?",
+      "back": "Spetsig vinkel.",
+      "choices": ["rät vinkel", "trubbig vinkel", "spetsig vinkel", "rak vinkel"],
+      "answerIndex": 2,
+      "tags": ["vinklar", "åk4"]
+    },
+    {
+      "front": "Vad kallas en vinkel som är större än 90° men mindre än 180°?",
+      "back": "Trubbig vinkel.",
+      "choices": ["rät vinkel", "spetsig vinkel", "trubbig vinkel", "rak vinkel"],
+      "answerIndex": 2,
+      "tags": ["vinklar", "åk4"]
+    },
+    {
+      "front": "Hur många grader är en rak vinkel?",
+      "back": "180°.",
+      "choices": ["90°", "180°", "270°", "360°"],
+      "answerIndex": 1,
+      "tags": ["vinklar", "åk4"]
+    },
+    {
+      "front": "Hur många grader är ett helt varv?",
+      "back": "360°.",
+      "choices": ["90°", "180°", "270°", "360°"],
+      "answerIndex": 3,
+      "tags": ["vinklar", "åk4"]
+    },
+    {
+      "front": "En rektangel har sidorna 5 cm och 3 cm. Vad är omkretsen?",
+      "back": "2 × (5 + 3) = 16 cm.",
+      "choices": ["8 cm", "15 cm", "16 cm", "18 cm"],
+      "answerIndex": 2,
+      "tags": ["omkrets", "åk4"]
+    },
+    {
+      "front": "En kvadrat har sidan 4 cm. Vad är omkretsen?",
+      "back": "4 × 4 = 16 cm.",
+      "choices": ["8 cm", "12 cm", "16 cm", "20 cm"],
+      "answerIndex": 2,
+      "tags": ["omkrets", "åk4"]
+    },
+    {
+      "front": "En triangel har sidorna 3 cm, 4 cm och 5 cm. Vad är omkretsen?",
+      "back": "3 + 4 + 5 = 12 cm.",
+      "choices": ["10 cm", "12 cm", "14 cm", "15 cm"],
+      "answerIndex": 1,
+      "tags": ["omkrets", "åk4"]
+    },
+    {
+      "front": "En rektangel har omkretsen 20 cm och den ena sidan är 6 cm. Hur lång är den andra sidan?",
+      "back": "20 ÷ 2 = 10, 10 − 6 = 4 cm.",
+      "choices": ["3 cm", "4 cm", "5 cm", "6 cm"],
+      "answerIndex": 1,
+      "tags": ["omkrets", "åk4"]
+    },
+    {
+      "front": "Vad är omkretsen av en kvadrat med sidan 7 cm?",
+      "back": "4 × 7 = 28 cm.",
+      "choices": ["14 cm", "21 cm", "28 cm", "49 cm"],
+      "answerIndex": 2,
+      "tags": ["omkrets", "åk4"]
+    },
+    {
+      "front": "En rektangel är 10 cm lång och 2 cm bred. Vad är omkretsen?",
+      "back": "2 × (10 + 2) = 24 cm.",
+      "choices": ["12 cm", "20 cm", "22 cm", "24 cm"],
+      "answerIndex": 3,
+      "tags": ["omkrets", "åk4"]
+    },
+    {
+      "front": "En rektangel är 5 cm lång och 3 cm bred. Vad är arean?",
+      "back": "5 × 3 = 15 cm².",
+      "choices": ["8 cm²", "15 cm²", "16 cm²", "30 cm²"],
+      "answerIndex": 1,
+      "tags": ["area", "åk4"]
+    },
+    {
+      "front": "En kvadrat har sidan 4 cm. Vad är arean?",
+      "back": "4 × 4 = 16 cm².",
+      "choices": ["8 cm²", "12 cm²", "16 cm²", "20 cm²"],
+      "answerIndex": 2,
+      "tags": ["area", "åk4"]
+    },
+    {
+      "front": "Hur beräknar man arean av en rektangel?",
+      "back": "Längd × bredd.",
+      "choices": ["längd + bredd", "längd × bredd", "2 × (längd + bredd)", "längd − bredd"],
+      "answerIndex": 1,
+      "tags": ["area", "åk4"]
+    },
+    {
+      "front": "En rektangel har arean 24 cm² och bredden 4 cm. Hur lång är den?",
+      "back": "24 ÷ 4 = 6 cm.",
+      "choices": ["4 cm", "5 cm", "6 cm", "8 cm"],
+      "answerIndex": 2,
+      "tags": ["area", "åk4"]
+    },
+    {
+      "front": "En figur i ett rutnät täcker 12 hela rutor, där varje ruta är 1 cm². Vad är figurens area?",
+      "back": "12 cm².",
+      "choices": ["10 cm²", "12 cm²", "14 cm²", "16 cm²"],
+      "answerIndex": 1,
+      "tags": ["area", "åk4"]
+    },
+    {
+      "front": "En kvadrat har arean 25 cm². Hur lång är sidan?",
+      "back": "5 × 5 = 25, så sidan är 5 cm.",
+      "choices": ["4 cm", "5 cm", "6 cm", "25 cm"],
+      "answerIndex": 1,
+      "tags": ["area", "åk4"]
+    },
+    {
+      "front": "Vilken bokstav har en symmetrilinje?",
+      "back": "Bokstaven A är symmetrisk (en lodrät symmetrilinje).",
+      "choices": ["F", "A", "G", "R"],
+      "answerIndex": 1,
+      "tags": ["symmetri", "åk4"]
+    },
+    {
+      "front": "Hur många symmetrilinjer har en kvadrat?",
+      "back": "4 symmetrilinjer.",
+      "choices": ["1", "2", "4", "8"],
+      "answerIndex": 2,
+      "tags": ["symmetri", "åk4"]
+    },
+    {
+      "front": "Hur många symmetrilinjer har en cirkel?",
+      "back": "Oändligt många.",
+      "choices": ["1", "2", "4", "oändligt många"],
+      "answerIndex": 3,
+      "tags": ["symmetri", "åk4"]
+    },
+    {
+      "front": "Vilken figur är symmetrisk?",
+      "back": "En liksidig triangel är symmetrisk.",
+      "choices": ["en oregelbunden fyrhörning", "en liksidig triangel", "ett slumpmässigt streck", "en oregelbunden femhörning"],
+      "answerIndex": 1,
+      "tags": ["symmetri", "åk4"]
+    },
+    {
+      "front": "I ett koordinatsystem, hur når man punkten (3, 2) från origo?",
+      "back": "3 steg åt höger och 2 steg upp.",
+      "choices": ["3 höger, 2 upp", "2 höger, 3 upp", "3 vänster, 2 ner", "2 höger, 3 ner"],
+      "answerIndex": 0,
+      "tags": ["koordinatsystem", "åk4"]
+    },
+    {
+      "front": "Vad kallas den vågräta linjen i ett koordinatsystem?",
+      "back": "x-axeln.",
+      "choices": ["y-axeln", "x-axeln", "diagonalen", "origo"],
+      "answerIndex": 1,
+      "tags": ["koordinatsystem", "åk4"]
+    },
+    {
+      "front": "Vad kallas punkten (0, 0) i ett koordinatsystem?",
+      "back": "Origo.",
+      "choices": ["origo", "medelpunkt", "nollan", "start"],
+      "answerIndex": 0,
+      "tags": ["koordinatsystem", "åk4"]
+    },
+    {
+      "front": "Vilken punkt ligger på x-axeln?",
+      "back": "(4, 0) ligger på x-axeln eftersom y-värdet är 0.",
+      "choices": ["(4, 0)", "(0, 4)", "(4, 4)", "(−4, −4)"],
+      "answerIndex": 0,
+      "tags": ["koordinatsystem", "åk4"]
+    },
+    {
+      "front": "Vad är nästa tal i mönstret: 2, 4, 6, 8, ...?",
+      "back": "10 (talen ökar med 2).",
+      "choices": ["9", "10", "12", "16"],
+      "answerIndex": 1,
+      "tags": ["mönster", "åk4"]
+    },
+    {
+      "front": "Vad är nästa tal i mönstret: 1, 3, 5, 7, ...?",
+      "back": "9 (talen ökar med 2).",
+      "choices": ["8", "9", "10", "11"],
+      "answerIndex": 1,
+      "tags": ["mönster", "åk4"]
+    },
+    {
+      "front": "Vad är nästa tal i mönstret: 3, 6, 12, 24, ...?",
+      "back": "48 (varje tal fördubblas).",
+      "choices": ["30", "36", "48", "27"],
+      "answerIndex": 2,
+      "tags": ["mönster", "åk4"]
+    },
+    {
+      "front": "Om ? + 5 = 12, vad är ??",
+      "back": "12 − 5 = 7.",
+      "choices": ["6", "7", "8", "17"],
+      "answerIndex": 1,
+      "tags": ["mönster", "algebra", "åk4"]
+    },
+    {
+      "front": "Om 4 × ? = 24, vad är ??",
+      "back": "24 ÷ 4 = 6.",
+      "choices": ["5", "6", "7", "8"],
+      "answerIndex": 1,
+      "tags": ["mönster", "algebra", "åk4"]
+    },
+    {
+      "front": "Vad är nästa tal i mönstret: 100, 90, 80, 70, ...?",
+      "back": "60 (talen minskar med 10).",
+      "choices": ["50", "60", "65", "75"],
+      "answerIndex": 1,
+      "tags": ["mönster", "åk4"]
+    },
+    {
+      "front": "Du slår en vanlig tärning. Vad är sannolikheten att få en sexa?",
+      "back": "1/6 (en gynnsam utfall av sex möjliga).",
+      "choices": ["1/6", "1/2", "1/3", "1/4"],
+      "answerIndex": 0,
+      "tags": ["sannolikhet", "åk4"]
+    },
+    {
+      "front": "I en påse finns 3 röda och 2 blå kulor. Vad är sannolikheten att dra en blå kula?",
+      "back": "2 blå av totalt 5 kulor = 2/5.",
+      "choices": ["2/5", "3/5", "2/3", "1/2"],
+      "answerIndex": 0,
+      "tags": ["sannolikhet", "åk4"]
+    },
+    {
+      "front": "Du kastar en mynt. Vad är sannolikheten att få krona?",
+      "back": "1/2.",
+      "choices": ["1/4", "1/3", "1/2", "1"],
+      "answerIndex": 2,
+      "tags": ["sannolikhet", "åk4"]
+    },
+    {
+      "front": "Vilket ord beskriver något som ALDRIG kan hända?",
+      "back": "Omöjligt.",
+      "choices": ["säkert", "troligt", "omöjligt", "osannolikt"],
+      "answerIndex": 2,
+      "tags": ["sannolikhet", "åk4"]
+    },
+    {
+      "front": "Vilket ord beskriver något som ALLTID händer?",
+      "back": "Säkert.",
+      "choices": ["säkert", "möjligt", "osäkert", "sällan"],
+      "answerIndex": 0,
+      "tags": ["sannolikhet", "åk4"]
+    },
+    {
+      "front": "I ett stapeldiagram valde 12 elever fotboll och 8 elever simning. Hur många fler valde fotboll?",
+      "back": "12 − 8 = 4 fler.",
+      "choices": ["2", "4", "6", "20"],
+      "answerIndex": 1,
+      "tags": ["statistik", "åk4"]
+    },
+    {
+      "front": "Vad kallas diagrammet där data visas som staplar?",
+      "back": "Stapeldiagram.",
+      "choices": ["linjediagram", "stapeldiagram", "cirkeldiagram", "tabell"],
+      "answerIndex": 1,
+      "tags": ["statistik", "åk4"]
+    },
+    {
+      "front": "Vad är medelvärdet av talen 2, 4, 6?",
+      "back": "(2+4+6) ÷ 3 = 4.",
+      "choices": ["3", "4", "5", "12"],
+      "answerIndex": 1,
+      "tags": ["statistik", "åk4"]
+    },
+    {
+      "front": "Vad är medelvärdet av talen 5, 7, 9, 11?",
+      "back": "(5+7+9+11) ÷ 4 = 8.",
+      "choices": ["7", "8", "9", "32"],
+      "answerIndex": 1,
+      "tags": ["statistik", "åk4"]
+    },
+    {
+      "front": "Vad kallas det värde som förekommer flest gånger i en mätserie?",
+      "back": "Typvärde.",
+      "choices": ["medelvärde", "median", "typvärde", "summa"],
+      "answerIndex": 2,
+      "tags": ["statistik", "åk4"]
+    },
+    {
+      "front": "Vad kallas det mittersta värdet när alla tal sorteras i storleksordning?",
+      "back": "Median.",
+      "choices": ["median", "medelvärde", "typvärde", "maxvärde"],
+      "answerIndex": 0,
+      "tags": ["statistik", "åk4"]
+    },
+    {
+      "front": "En tabell visar sålda glassar: mån 5, tis 8, ons 3, tors 6. Vilken dag såldes flest glassar?",
+      "back": "Tisdag (8 stycken).",
+      "choices": ["måndag", "tisdag", "onsdag", "torsdag"],
+      "answerIndex": 1,
+      "tags": ["statistik", "åk4"]
+    },
+    {
+      "front": "Ett cirkeldiagram visar hur en klass röstat om favoritfrukt. Vad representerar hela cirkeln?",
+      "back": "Alla röster (100 %).",
+      "choices": ["hälften av rösterna", "alla röster (100 %)", "en fjärdedel av rösterna", "ingenting"],
+      "answerIndex": 1,
+      "tags": ["statistik", "åk4"]
+    },
+    {
+      "front": "Anna har 45 kr. Hon får 20 kr till av mormor och köper sedan en bok för 38 kr. Hur mycket har hon kvar?",
+      "back": "45 + 20 = 65, 65 − 38 = 27 kr.",
+      "choices": ["17 kr", "27 kr", "37 kr", "7 kr"],
+      "answerIndex": 1,
+      "tags": ["problemlösning", "åk4"]
+    },
+    {
+      "front": "En klass har 28 elever. De delas in i grupper om 4. Hur många grupper blir det?",
+      "back": "28 ÷ 4 = 7 grupper.",
+      "choices": ["6", "7", "8", "4"],
+      "answerIndex": 1,
+      "tags": ["problemlösning", "åk4"]
+    },
+    {
+      "front": "Ett paket innehåller 6 pennor. Läraren köper 8 paket. Hur många pennor blir det totalt?",
+      "back": "6 × 8 = 48 pennor.",
+      "choices": ["42", "48", "54", "40"],
+      "answerIndex": 1,
+      "tags": ["problemlösning", "åk4"]
+    },
+    {
+      "front": "Familjen kör 120 km på förmiddagen och 95 km på eftermiddagen. Hur långt har de kört totalt?",
+      "back": "120 + 95 = 215 km.",
+      "choices": ["205", "215", "225", "315"],
+      "answerIndex": 1,
+      "tags": ["problemlösning", "åk4"]
+    },
+    {
+      "front": "En bonde har 156 äpplen. Han lägger dem i lådor med 12 äpplen i varje. Hur många lådor behövs?",
+      "back": "156 ÷ 12 = 13 lådor.",
+      "choices": ["12", "13", "14", "11"],
+      "answerIndex": 1,
+      "tags": ["problemlösning", "åk4"]
+    },
+    {
+      "front": "Biobiljetter kostar 85 kr för barn och 120 kr för vuxna. Vad kostar det för 2 barn och 1 vuxen?",
+      "back": "85 × 2 + 120 = 290 kr.",
+      "choices": ["270 kr", "290 kr", "205 kr", "310 kr"],
+      "answerIndex": 1,
+      "tags": ["problemlösning", "åk4"]
+    },
+    {
+      "front": "Ett lag har gjort 24 mål på 6 matcher. Hur många mål i genomsnitt per match?",
+      "back": "24 ÷ 6 = 4 mål per match.",
+      "choices": ["3", "4", "5", "6"],
+      "answerIndex": 1,
+      "tags": ["problemlösning", "statistik", "åk4"]
+    },
+    {
+      "front": "En trädgård är 8 m lång och 5 m bred. Hur stor är trädgårdens area?",
+      "back": "8 × 5 = 40 m².",
+      "choices": ["13 m²", "26 m²", "40 m²", "45 m²"],
+      "answerIndex": 2,
+      "tags": ["problemlösning", "area", "åk4"]
+    },
+    {
+      "front": "Erik läser 15 sidor varje dag. Hur många sidor har han läst efter 2 veckor (14 dagar)?",
+      "back": "15 × 14 = 210 sidor.",
+      "choices": ["200", "210", "180", "150"],
+      "answerIndex": 1,
+      "tags": ["problemlösning", "åk4"]
+    },
+    {
+      "front": "En cykeltur är totalt 60 km. Hittills har de cyklat 37 km. Hur långt är kvar?",
+      "back": "60 − 37 = 23 km.",
+      "choices": ["13 km", "23 km", "33 km", "27 km"],
+      "answerIndex": 1,
+      "tags": ["problemlösning", "åk4"]
+    }
+  ]
+}
