@@ -5,6 +5,7 @@
   "items": [
     {
       "front": "Vad är en gen?",
+      "write": true,
       "back": "Ett avsnitt av DNA som kodar för ett protein/egenskap.",
       "choices": [
         "En celltyp",
@@ -47,6 +48,7 @@
     },
     {
       "front": "Vad innebär ekologiskt fotavtryck?",
+      "write": true,
       "back": "Hur mycket resurser/mark som krävs för konsumtion.",
       "choices": [
         "Antal steg",
@@ -75,6 +77,7 @@
     },
     {
       "front": "Vad är homeostas?",
+      "write": true,
       "back": "Kroppens förmåga att hålla inre miljön stabil.",
       "choices": [
         "Rörelse",

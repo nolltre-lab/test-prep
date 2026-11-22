@@ -164,6 +164,7 @@
     },
     {
       "front": "Varför ska man såga bort från kroppen och hålla handen bakom sågbladet?",
+      "write": true,
       "back": "så att man inte skär sig om sågen slinter",
       "choices": [
         "för att det går fortare",
@@ -194,6 +195,7 @@
     },
     {
       "front": "Varför ska man ha håret uppsatt vid borrmaskinen?",
+      "write": true,
       "back": "så att det inte fastnar i maskinen",
       "choices": [
         "det behövs inte",
@@ -209,6 +211,7 @@
     },
     {
       "front": "Varför ska man ha skyddsglasögon när man slipar eller borrar?",
+      "write": true,
       "back": "för att skydda ögonen mot spån och damm",
       "choices": [
         "för att inte bli trött",
@@ -272,6 +275,7 @@
     },
     {
       "front": "Vad kallas trädets årsringar?",
+      "write": true,
       "back": "ringarna i stammen som visar hur gammalt trädet är – en ring per år",
       "choices": [
         "trädets bark",
@@ -288,6 +292,7 @@
     },
     {
       "front": "Vad är polyester?",
+      "write": true,
       "back": "ett konstgjort material gjort av olja",
       "choices": [
         "en sorts trä",
@@ -304,6 +309,7 @@
     },
     {
       "front": "Vad är ett förstygn?",
+      "write": true,
       "back": "ett enkelt stygn där tråden går upp och ner genom tyget i en rak linje",
       "choices": [
         "ett enkelt rakt stygn",
@@ -320,6 +326,7 @@
     },
     {
       "front": "Varför trär man tråden genom nålsögat?",
+      "write": true,
       "back": "för att kunna sy med nålen",
       "choices": [
         "för att klippa tyget",
@@ -336,6 +343,7 @@
     },
     {
       "front": "Vad gör man med tyget innan man syr ihop delarna, så att de ligger still?",
+      "write": true,
       "back": "nålar fast dem med knappnålar",
       "choices": [
         "spikar dem",
@@ -352,6 +360,7 @@
     },
     {
       "front": "Vad är ett mönster i textilslöjd?",
+      "write": true,
       "back": "en mall som visar hur man ska klippa tyget",
       "choices": [
         "en sorts tråd",
@@ -368,6 +377,7 @@
     },
     {
       "front": "Vad gör man först i slöjdens arbetsprocess?",
+      "write": true,
       "back": "får en idé och planerar",
       "choices": [
         "får en idé och planerar",
@@ -398,6 +408,7 @@
     },
     {
       "front": "Vad betyder det att värdera sitt slöjdarbete?",
+      "write": true,
       "back": "fundera på vad som blev bra och vad man kan göra bättre nästa gång",
       "choices": [
         "sälja det",
@@ -413,6 +424,7 @@
     },
     {
       "front": "Varför är det bra att laga och återanvända saker i stället för att köpa nytt?",
+      "write": true,
       "back": "Det sparar pengar och naturens resurser.",
       "choices": [
         "det är dåligt för miljön",

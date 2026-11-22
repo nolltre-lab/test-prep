@@ -22,7 +22,7 @@
     { "front": "Vad består en vattenmolekyl av?", "back": "Två väteatomer och en syreatom (H₂O).", "hint": "2 + 1.", "choices": ["Två syre, en väte", "En väte, en syre", "Två väte, en syre", "Tre syre"], "answerIndex": 2, "tags": ["materia","molekyler"] },
     { "front": "När vill man minimera luftmotstånd?", "back": "När man vill åka snabbare/cykla fort – strömlinjeform.", "hint": "F1-bilens form.", "choices": ["Segla uppförsbacke", "Springa på plats", "Cykla fort", "Stå still"], "answerIndex": 2, "tags": ["extra","friktion"] },
     { "front": "Vattenkraftverk – energikedja?", "back": "Lägesenergi → rörelseenergi → elektrisk energi.", "hint": "Högt vatten till el.", "choices": ["Värme → ljud → el", "Läge → rörelse → el", "Rörelse → läge → el", "Kemisk → el → värme"], "answerIndex": 1, "tags": ["energi"] },
-    { "front": "Varför skyddar bilbälte och krockkudde?", "back": "De minskar effekten av trögheten vid krock genom att bromsa kroppen mjukare.", "hint": "Mjukare inbromsning.", "choices": ["Ökar farten", "Tar bort gravitation", "Minskar tröghetens skador", "Gör bilen tyngre"], "answerIndex": 2, "tags": ["extra","tröghet"] },
+    { "front": "Varför skyddar bilbälte och krockkudde?", "write": true, "back": "De minskar effekten av trögheten vid krock genom att bromsa kroppen mjukare.", "hint": "Mjukare inbromsning.", "choices": ["Ökar farten", "Tar bort gravitation", "Minskar tröghetens skador", "Gör bilen tyngre"], "answerIndex": 2, "tags": ["extra","tröghet"] },
     { "front": "Vad visar en dynamometer?", "back": "En kraft (N).", "hint": "Fjäder med skala.", "choices": ["Massa i kg", "Tid i s", "Kraft i N", "Energi i J"], "answerIndex": 2, "tags": ["extra","mätning"] }
   ]
 }

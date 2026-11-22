@@ -47,6 +47,7 @@
     },
     {
       "front": "Vad händer vid en kemisk reaktion?",
+      "write": true,
       "back": "Ämnen reagerar och bildar nya ämnen.",
       "choices": [
         "Nya atomer skapas",
@@ -103,6 +104,7 @@
     },
     {
       "front": "Vad är indikator?",
+      "write": true,
       "back": "Ämne som byter färg beroende på pH.",
       "choices": [
         "Konserveringsmedel",

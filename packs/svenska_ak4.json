@@ -616,6 +616,7 @@
     },
     {
       "front": "Hur kan man visa att någon pratar i en text (dialog)?",
+      "write": true,
       "back": "med talstreck (–) eller citattecken (”…”)",
       "choices": [
         "med parentes",
@@ -678,6 +679,7 @@
     },
     {
       "front": "Vad är syftet med en faktatext?",
+      "write": true,
       "back": "att informera – berätta fakta om något",
       "choices": [
         "att sälja något",
@@ -726,6 +728,7 @@
     },
     {
       "front": "Vad är en insändare?",
+      "write": true,
       "back": "en text där man tycker något och försöker övertyga andra (argumenterande text)",
       "choices": [
         "en dikt",
@@ -758,6 +761,7 @@
     },
     {
       "front": "Vad gör en författare?",
+      "write": true,
       "back": "skriver böcker eller texter",
       "choices": [
         "skriver böcker",
@@ -773,6 +777,7 @@
     },
     {
       "front": "Vad kallas det när man gissar vad som ska hända i en bok innan man läser?",
+      "write": true,
       "back": "att förutspå – en lässtrategi.",
       "choices": [
         "att stava",
@@ -789,6 +794,7 @@
     },
     {
       "front": "Vad gör man när man sammanfattar en text?",
+      "write": true,
       "back": "berättar det viktigaste med egna ord, kort",
       "choices": [
         "skriver av allt",

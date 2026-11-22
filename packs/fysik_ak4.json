@@ -23,6 +23,7 @@
     },
     {
       "front": "Varför bildas en skugga?",
+      "write": true,
       "back": "Ett föremål stoppar ljuset.",
       "choices": [
         "solen går ner",
@@ -53,6 +54,7 @@
     },
     {
       "front": "Vad gör en spegel med ljuset?",
+      "write": true,
       "back": "reflekterar det – studsar tillbaka",
       "choices": [
         "reflekterar det",
@@ -83,6 +85,7 @@
     },
     {
       "front": "Varför ska man ha reflex när det är mörkt?",
+      "write": true,
       "back": "Den reflekterar billjus så att föraren ser dig mycket tidigare.",
       "choices": [
         "för att det är snyggt",
@@ -99,6 +102,7 @@
     },
     {
       "front": "Hur uppstår ljud?",
+      "write": true,
       "back": "Något vibrerar (svänger fram och tillbaka).",
       "choices": [
         "något blir varmt",
@@ -114,6 +118,7 @@
     },
     {
       "front": "Vad är ett eko?",
+      "write": true,
       "back": "Ljud som studsar mot t.ex. en bergvägg och kommer tillbaka.",
       "choices": [
         "ett starkt ljus",
@@ -191,6 +196,7 @@
     },
     {
       "front": "Vad händer om man håller två nordpoler mot varandra?",
+      "write": true,
       "back": "De stöter bort varandra.",
       "choices": [
         "ingenting",
@@ -254,6 +260,7 @@
     },
     {
       "front": "Varför är sladdar täckta med plast?",
+      "write": true,
       "back": "Plast är en isolator – den leder inte ström och skyddar oss.",
       "choices": [
         "plast gör strömmen snabbare",
@@ -286,6 +293,7 @@
     },
     {
       "front": "Vad gör en strömbrytare?",
+      "write": true,
       "back": "öppnar eller sluter kretsen – släcker och tänder",
       "choices": [
         "byter färg på ljuset",
@@ -301,6 +309,7 @@
     },
     {
       "front": "Varför faller ett äpple ner mot marken?",
+      "write": true,
       "back": "Tyngdkraften drar allt mot jorden.",
       "choices": [
         "tyngdkraften",
@@ -316,6 +325,7 @@
     },
     {
       "front": "Varför är det svårt att gå på blank is?",
+      "write": true,
       "back": "Det är nästan ingen friktion.",
       "choices": [
         "tyngdkraften försvinner",
@@ -332,6 +342,7 @@
     },
     {
       "front": "Varför strör man sand på isiga vägar?",
+      "write": true,
       "back": "för att öka friktionen så att man inte halkar",
       "choices": [
         "för att det ser fint ut",
@@ -348,6 +359,7 @@
     },
     {
       "front": "Vad händer med en boll du sparkar på gräset?",
+      "write": true,
       "back": "Den rullar långsammare och stannar – friktionen bromsar.",
       "choices": [
         "den åker uppåt",
@@ -408,6 +420,7 @@
     },
     {
       "front": "Vad händer med en vattenpöl en varm dag?",
+      "write": true,
       "back": "Vattnet avdunstar – blir vattenånga i luften.",
       "choices": [
         "vattnet sjunker ner i asfalten bara",
@@ -423,6 +436,7 @@
     },
     {
       "front": "Vad är moln gjorda av?",
+      "write": true,
       "back": "små vattendroppar eller iskristaller",
       "choices": [
         "bomull",
@@ -530,6 +544,7 @@
     },
     {
       "front": "Varför blir det dag och natt?",
+      "write": true,
       "back": "Jorden snurrar runt sin egen axel ett varv per dygn.",
       "choices": [
         "månen skymmer solen",
@@ -575,6 +590,7 @@
     },
     {
       "front": "Varför ser månen olika ut under en månad?",
+      "write": true,
       "back": "Vi ser olika mycket av den sida som solen lyser på.",
       "choices": [
         "den byter form",
@@ -620,6 +636,7 @@
     },
     {
       "front": "Hur kan du spara energi hemma?",
+      "write": true,
       "back": "släcka lampor i rum där ingen är",
       "choices": [
         "öppna kylskåpet ofta",

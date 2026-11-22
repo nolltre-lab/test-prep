@@ -5,6 +5,7 @@
   "items": [
     {
       "front": "Vad är ljud?",
+      "write": true,
       "back": "Ljud är mekaniska vibrationer i materia (t.ex. luft) som sprids som tryckvågor.",
       "choices": ["Vibrationer i materia", "Strålning från solen", "Elektriska signaler", "Ljuset som reflekteras"],
       "answerIndex": 0,
@@ -54,6 +55,7 @@
     },
     {
       "front": "Vad är ljus?",
+      "write": true,
       "back": "Ljus är elektromagnetisk strålning som kan färdas i vakuum.",
       "choices": ["Mekaniska vågor", "Elektromagnetisk strålning", "Kemiska partiklar", "Ljudvågor"],
       "answerIndex": 1,
@@ -61,6 +63,7 @@
     },
     {
       "front": "Vad händer när ljus reflekteras?",
+      "write": true,
       "back": "Ljus studsar mot en yta enligt reflektionslagen.",
       "choices": ["Det ändrar färg", "Det böjs", "Det studsar", "Det absorberas"],
       "answerIndex": 2,
@@ -82,6 +85,7 @@
     },
     {
       "front": "Varför ser himlen blå ut?",
+      "write": true,
       "back": "Blått ljus sprids mest i atmosfären (Rayleighspridning).",
       "choices": ["Luften reflekterar blått bäst", "Solen är blå", "Blått ljus sprids mest", "Moln reflekterar ljus"],
       "answerIndex": 2,
@@ -89,6 +93,7 @@
     },
     {
       "front": "Vad är totalreflektion?",
+      "write": true,
       "back": "När allt ljus reflekteras tillbaka i ett tätare medium vid stor infallsvinkel.",
       "choices": ["När ljuset helt absorberas", "När allt ljus reflekteras inom ett medium", "När ljuset byter färg", "När ljuset passerar genom vatten"],
       "answerIndex": 1,

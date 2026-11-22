@@ -19,6 +19,7 @@
     },
     {
       "front": "Vad gör en växelriktare i solcellsanläggning?",
+      "write": true,
       "back": "Omvandlar likström till växelström.",
       "choices": [
         "Lagrar energi",

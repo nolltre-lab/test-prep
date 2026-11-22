@@ -33,6 +33,7 @@
     },
     {
       "front": "Vad gör regeringen?",
+      "write": true,
       "back": "Leder landet och genomför riksdagens beslut.",
       "choices": [
         "Stiftar lagar",
@@ -47,6 +48,7 @@
     },
     {
       "front": "Vad är yttrandefrihet?",
+      "write": true,
       "back": "Rätt att uttrycka åsikter inom lagens ramar.",
       "choices": [
         "Rätt att förtala",
@@ -61,6 +63,7 @@
     },
     {
       "front": "Vad är en kommun?",
+      "write": true,
       "back": "Lokal nivå som sköter skola, omsorg m.m.",
       "choices": [
         "EU",
@@ -89,6 +92,7 @@
     },
     {
       "front": "Vad är skatt?",
+      "write": true,
       "back": "Avgift till stat/kommun/region för gemensam service.",
       "choices": [
         "Frivillig gåva",
@@ -103,6 +107,7 @@
     },
     {
       "front": "Vad är åsiktsfrihet?",
+      "write": true,
       "back": "Rätt att ha en åsikt utan att straffas för den.",
       "choices": [
         "Rätt att ljuga",

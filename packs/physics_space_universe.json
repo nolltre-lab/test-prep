@@ -40,6 +40,7 @@
     },
     {
       "front": "Varför har vi årstider?",
+      "write": true,
       "back": "Jordaxelns lutning gör att solinstrålningen varierar under året.",
       "choices": ["Jorden lutar på sin axel", "Jorden roterar runt solen", "Solen flyttar sig", "Månen blockerar solljus"],
       "answerIndex": 0,
@@ -54,6 +55,7 @@
     },
     {
       "front": "Vad är en galax?",
+      "write": true,
       "back": "En enorm samling stjärnor, gas, stoft och mörk materia.",
       "choices": ["En planet", "En stjärnhop", "En samling stjärnor, gas och mörk materia", "Ett svart hål"],
       "answerIndex": 2,

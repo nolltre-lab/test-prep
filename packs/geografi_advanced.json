@@ -5,6 +5,7 @@
   "items": [
     {
       "front": "Vad är en konvergent plattgräns?",
+      "write": true,
       "back": "Plattor rör sig mot varandra (subduktion/kollision).",
       "choices": [
         "Isär",
@@ -61,6 +62,7 @@
     },
     {
       "front": "Vad är ekologiskt fotavtryck på nationsnivå?",
+      "write": true,
       "back": "Yta/resurser som krävs för konsumtion.",
       "choices": [
         "Invånarantal",
@@ -89,6 +91,7 @@
     },
     {
       "front": "Vad är en demografisk transition?",
+      "write": true,
       "back": "Modell för befolkningsutveckling från höga till låga födelser/dödstal.",
       "choices": [
         "Klimatmodell",
@@ -103,6 +106,7 @@
     },
     {
       "front": "Vad är en global värdekedja?",
+      "write": true,
       "back": "När produktion är uppdelad över flera länder.",
       "choices": [
         "Inhemsk produktion",

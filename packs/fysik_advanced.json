@@ -5,6 +5,7 @@
   "items": [
     {
       "front": "Vad är skillnaden mellan ström och spänning?",
+      "write": true,
       "back": "Ström = laddningsflöde; spänning = drivande potential.",
       "choices": [
         "Samma sak",
@@ -33,6 +34,7 @@
     },
     {
       "front": "Vad gör en säkring?",
+      "write": true,
       "back": "Bryter strömmen vid överström.",
       "choices": [
         "Ökar spänningen",
@@ -61,6 +63,7 @@
     },
     {
       "front": "Vad är elektromagnetisk induktion?",
+      "write": true,
       "back": "Förändrat magnetfält ger spänning i ledare.",
       "choices": [
         "Ljudvåg",

@@ -5,6 +5,7 @@
   "items": [
     {
       "front": "Vad är ränta på lån?",
+      "write": true,
       "back": "Kostnaden du betalar för att låna pengar.",
       "choices": [
         "Avgift för kort",
@@ -33,6 +34,7 @@
     },
     {
       "front": "Vad är inflation?",
+      "write": true,
       "back": "Allmän prisökning över tid.",
       "choices": [
         "Prisfall",
@@ -47,6 +49,7 @@
     },
     {
       "front": "Vad gör Riksbanken?",
+      "write": true,
       "back": "Styr räntan och håller inflationen låg/stabil.",
       "choices": [
         "Sköter skolan",
@@ -61,6 +64,7 @@
     },
     {
       "front": "Vad är en budget?",
+      "write": true,
       "back": "Plan för inkomster och utgifter.",
       "choices": [
         "Sparande",

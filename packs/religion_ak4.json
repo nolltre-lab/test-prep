@@ -286,6 +286,7 @@
     },
     {
       "front": "Vad gör många muslimer under ramadan?",
+      "write": true,
       "back": "fastar – äter och dricker inte när det är ljust ute",
       "choices": [
         "badar i floden Ganges",
@@ -500,6 +501,7 @@
     },
     {
       "front": "Hur såg samerna traditionellt på naturen?",
+      "write": true,
       "back": "Allt i naturen har en själ och ska behandlas med respekt.",
       "choices": [
         "bara djuren har själ",
@@ -531,6 +533,7 @@
     },
     {
       "front": "Vad är en livsfråga?",
+      "write": true,
       "back": "en stor fråga som saknar ett enkelt rätt svar, t.ex. ”Vad händer när man dör?”",
       "choices": [
         "en fråga om vädret",
@@ -561,6 +564,7 @@
     },
     {
       "front": "Vad är etik?",
+      "write": true,
       "back": "att fundera på vad som är rätt och fel och hur vi ska vara mot varandra",
       "choices": [
         "att lära sig räkna",

@@ -75,6 +75,7 @@
     },
     {
       "front": "Vad är korrekt källhänvisning?",
+      "write": true,
       "back": "Att ange upphov, titel, år och var texten hämtats.",
       "choices": [
         "Endast länk",

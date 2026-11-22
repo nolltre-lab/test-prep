@@ -5,6 +5,7 @@
   "items": [
     {
       "front": "Vad är ett tekniskt system?",
+      "write": true,
       "back": "Sammansatta delar som samverkar för ett syfte.",
       "choices": [
         "En detalj",
@@ -19,6 +20,7 @@
     },
     {
       "front": "Vad är återkoppling i ett system?",
+      "write": true,
       "back": "När resultatet påverkar systemets fortsatta arbete.",
       "choices": [
         "Ingen påverkan",
@@ -103,6 +105,7 @@
     },
     {
       "front": "Vad är en prototyp?",
+      "write": true,
       "back": "En första fungerande modell att testa och förbättra.",
       "choices": [
         "Slutprodukt",

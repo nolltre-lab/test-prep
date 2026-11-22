@@ -5,6 +5,7 @@
   "items": [
     {
       "front": "Vad är en ordklass?",
+      "write": true,
       "back": "En ordklass är en grupp ord som fungerar på liknande sätt och har liknande egenskaper, till exempel substantiv, verb och adjektiv.",
       "hint": "Tänk \"sorter\" av ord.",
       "choices": [
@@ -368,6 +369,7 @@
     },
     {
       "front": "Vad är viktigaste skillnaden mellan ett adjektiv och ett adverb i svenskan?",
+      "write": true,
       "back": "Adjektiv beskriver substantiv (\"en snabb bil\"), medan adverb oftast beskriver verb, adjektiv eller andra adverb (\"bilen kör snabbt\").",
       "hint": "Vad beskriver vad?",
       "choices": [

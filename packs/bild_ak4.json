@@ -160,6 +160,7 @@
     },
     {
       "front": "Vad är ett collage?",
+      "write": true,
       "back": "en bild gjord av urklippta bitar som limmas på ett papper",
       "choices": [
         "en sorts pensel",
@@ -175,6 +176,7 @@
     },
     {
       "front": "Vad är en skulptur?",
+      "write": true,
       "back": "ett tredimensionellt konstverk, t.ex. av lera, sten eller trä",
       "choices": [
         "en film",
@@ -190,6 +192,7 @@
     },
     {
       "front": "Vad gör man när man skissar?",
+      "write": true,
       "back": "ritar snabbt och enkelt för att pröva en idé",
       "choices": [
         "suddar ut allt",
@@ -235,6 +238,7 @@
     },
     {
       "front": "Hur kan man få saker att se långt bort ut i en bild?",
+      "write": true,
       "back": "rita dem mindre och högre upp, ofta blekare",
       "choices": [
         "rita dem mindre",
@@ -265,6 +269,7 @@
     },
     {
       "front": "Vad är ett porträtt?",
+      "write": true,
       "back": "en bild av en person",
       "choices": [
         "en bild av ett landskap",
@@ -281,6 +286,7 @@
     },
     {
       "front": "Vad är ett stilleben?",
+      "write": true,
       "back": "en bild av saker som står still, t.ex. frukt och vaser",
       "choices": [
         "en bild av ett landskap",
@@ -372,6 +378,7 @@
     },
     {
       "front": "Vad är syftet med en reklambild?",
+      "write": true,
       "back": "att få oss att vilja köpa något",
       "choices": [
         "att lära oss räkna",
@@ -387,6 +394,7 @@
     },
     {
       "front": "Varför ska man fråga innan man lägger ut en bild på någon annan på nätet?",
+      "write": true,
       "back": "Alla har rätt att bestämma över bilder på sig själva.",
       "choices": [
         "det behövs inte",
@@ -418,6 +426,7 @@
     },
     {
       "front": "Vad är en symbol i en bild, t.ex. ett hjärta?",
+      "write": true,
       "back": "något som betyder mer än det föreställer, t.ex. kärlek",
       "choices": [
         "ett fel i bilden",

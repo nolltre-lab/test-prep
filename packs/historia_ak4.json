@@ -100,6 +100,7 @@
     },
     {
       "front": "Hur levde de första människorna i Sverige?",
+      "write": true,
       "back": "som jägare och samlare – de jagade, fiskade och plockade växter",
       "choices": [
         "som bönder i städer",
@@ -148,6 +149,7 @@
     },
     {
       "front": "Vad är brons?",
+      "write": true,
       "back": "en blandning av koppar och tenn",
       "choices": [
         "silver och bly",
@@ -164,6 +166,7 @@
     },
     {
       "front": "Vad är hällristningar?",
+      "write": true,
       "back": "bilder huggna i berghällar, t.ex. skepp och djur från bronsåldern",
       "choices": [
         "målningar på papper",
@@ -226,6 +229,7 @@
     },
     {
       "front": "Vad är en runsten?",
+      "write": true,
       "back": "en sten med runor som ofta minns en död person",
       "choices": [
         "en sten med inristade runor",
@@ -271,6 +275,7 @@
     },
     {
       "front": "Vad var tinget?",
+      "write": true,
       "back": "ett möte där fria män löste tvister och bestämde lagar",
       "choices": [
         "en sorts båt",
@@ -394,6 +399,7 @@
     },
     {
       "front": "Vad var Hansan?",
+      "write": true,
       "back": "ett förbund av tyska handelsstäder som handlade runt Östersjön",
       "choices": [
         "en kung",
@@ -425,6 +431,7 @@
     },
     {
       "front": "Vad var digerdöden?",
+      "write": true,
       "back": "en pest som dödade många människor i mitten av 1300-talet",
       "choices": [
         "en svår vinter",
@@ -455,6 +462,7 @@
     },
     {
       "front": "Vad var Kalmarunionen?",
+      "write": true,
       "back": "när Sverige, Norge och Danmark hade samma kung (från 1397)",
       "choices": [
         "en kyrka",
@@ -500,6 +508,7 @@
     },
     {
       "front": "Varför är 6 juni Sveriges nationaldag?",
+      "write": true,
       "back": "Gustav Vasa valdes till kung den dagen 1523 (och en ny grundlag kom 1809).",
       "choices": [
         "Sverige fick sin flagga i en storm",
@@ -530,6 +539,7 @@
     },
     {
       "front": "Vad gör en arkeolog?",
+      "write": true,
       "back": "letar efter och undersöker saker från förr, ofta genom att gräva",
       "choices": [
         "skriver nyheter",
@@ -545,6 +555,7 @@
     },
     {
       "front": "Vad är en historisk källa?",
+      "write": true,
       "back": "något som berättar om förr, t.ex. ett fornfynd, en runsten eller ett gammalt brev",
       "choices": [
         "en karta över framtiden",

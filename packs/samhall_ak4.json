@@ -67,6 +67,7 @@
     },
     {
       "front": "Vad är ett klassråd?",
+      "write": true,
       "back": "ett möte där eleverna får säga sin åsikt och vara med och bestämma",
       "choices": [
         "en rast",
@@ -172,6 +173,7 @@
     },
     {
       "front": "Vad gör riksdagen?",
+      "write": true,
       "back": "bestämmer Sveriges lagar och hur skattepengarna ska användas",
       "choices": [
         "lagar vägar",
@@ -296,6 +298,7 @@
     },
     {
       "front": "Varför har vi lagar och regler?",
+      "write": true,
       "back": "så att alla ska vara trygga och veta vad som gäller",
       "choices": [
         "för att alla ska vara trygga",
@@ -311,6 +314,7 @@
     },
     {
       "front": "Vad är skillnaden mellan en regel och en lag?",
+      "write": true,
       "back": "En lag bestäms av riksdagen och gäller alla; en regel kan gälla t.ex. i en skola eller familj.",
       "choices": [
         "lagar gäller bara barn",
@@ -326,6 +330,7 @@
     },
     {
       "front": "Vad är en budget?",
+      "write": true,
       "back": "en plan för hur man ska använda sina pengar",
       "choices": [
         "en bank",
@@ -341,6 +346,7 @@
     },
     {
       "front": "Vad betyder det att spara pengar?",
+      "write": true,
       "back": "lägga undan pengar för att kunna använda dem senare",
       "choices": [
         "låna pengar",
@@ -356,6 +362,7 @@
     },
     {
       "front": "Vad är lön?",
+      "write": true,
       "back": "pengar man får för att man arbetar",
       "choices": [
         "pengar för arbete",
@@ -371,6 +378,7 @@
     },
     {
       "front": "Varför finns reklam?",
+      "write": true,
       "back": "för att få oss att köpa något",
       "choices": [
         "för att vara rolig bara",

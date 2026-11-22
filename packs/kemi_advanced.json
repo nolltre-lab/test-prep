@@ -75,6 +75,7 @@
     },
     {
       "front": "Vad är säkerhetsdatablad?",
+      "write": true,
       "back": "Dokument om faror och hantering av kemikalier.",
       "choices": [
         "Receptbok",

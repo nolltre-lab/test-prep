@@ -33,6 +33,7 @@
     },
     {
       "front": "Vad är en molekyl?",
+      "write": true,
       "back": "Två eller flera atomer som sitter ihop.",
       "choices": ["En atom med extra elektroner", "Två eller fler atomer bundna till varandra", "En blandning av ämnen", "En atomkärna"],
       "answerIndex": 1,
@@ -40,6 +41,7 @@
     },
     {
       "front": "Vad är ett grundämne?",
+      "write": true,
       "back": "Ett ämne som består av enbart en sorts atomer.",
       "choices": ["En blandning av flera ämnen", "Ett ämne med minst två atomslag", "Ett ämne med endast en sorts atomer", "Ett ämne som alltid är gas"],
       "answerIndex": 2,
@@ -54,6 +56,7 @@
     },
     {
       "front": "Vad är en kemisk förening?",
+      "write": true,
       "back": "Ett ämne som är uppbyggt av minst två olika slags atomer.",
       "choices": ["Ett ämne med en sorts atomer", "Två likadana molekyler bredvid varandra", "Ett ämne byggt av minst två olika atomslag", "En blandning av vätskor"],
       "answerIndex": 2,
@@ -68,6 +71,7 @@
     },
     {
       "front": "Vad händer i en kemisk reaktion?",
+      "write": true,
       "back": "Ämnen förändras och nya ämnen bildas.",
       "choices": ["Inget förändras", "Ämnen byter bara färg", "Ämnen förändras och nya ämnen bildas", "Elektroner försvinner"],
       "answerIndex": 2,
@@ -103,6 +107,7 @@
     },
     {
       "front": "Vad gör man i slutsats och diskussion i en labbrapport?",
+      "write": true,
       "back": "Man förklarar resultatet och besvarar frågeställningen.",
       "choices": ["Man listar materialet", "Man skriver bara siffror", "Man förklarar resultatet och kopplar till frågan", "Man skriver hur labben kändes"],
       "answerIndex": 2,
@@ -110,6 +115,7 @@
     },
     {
       "front": "Vad är en hypotes?",
+      "write": true,
       "back": "En förutsägelse av vad man tror kommer hända.",
       "choices": ["En slutsats", "Ett facit", "En förutsägelse innan experimentet", "En utrustningslista"],
       "answerIndex": 2,
@@ -138,6 +144,7 @@
     },
     {
       "front": "Vad är en kemisk formel?",
+      "write": true,
       "back": "Ett sätt att visa vilka atomer som ingår i ett ämne.",
       "choices": ["Ett recept", "En lista på lösningar", "En beskrivning av vilka atomer ett ämne består av", "Antalet molekyler i ett ämne"],
       "answerIndex": 2,

@@ -5,6 +5,7 @@
   "items": [
     {
       "front": "Vad är skillnaden mellan ström och spänning?",
+      "write": true,
       "back": "Ström (A) är hur många laddningar som passerar per sekund. Spänning (V) är drivkraften som får laddningar att röra sig.",
       "choices": [
         "Ström är laddningsflöde, spänning är drivkraften",
@@ -41,6 +42,7 @@
     },
     {
       "front": "Vad är en kortslutning och varför är den farlig?",
+      "write": true,
       "back": "Strömmen tar en väg med mycket låg resistans → mycket stor ström som kan orsaka brand eller elchock.",
       "choices": [
         "Strömmen går genom kroppen – ofarligt",
@@ -53,6 +55,7 @@
     },
     {
       "front": "Vad gör en säkring eller automatsäkring?",
+      "write": true,
       "back": "Bryter strömmen om den blir för stor för att skydda ledningar och apparater.",
       "choices": [
         "Mäter hur mycket el som används",
@@ -65,6 +68,7 @@
     },
     {
       "front": "Vad gör en jordfelsbrytare?",
+      "write": true,
       "back": "Bryter snabbt om ström läcker till jord, till exempel vid fel i apparater eller våtrum, för att skydda mot elchock.",
       "choices": [
         "Mäter spänning i vägguttag",
@@ -77,6 +81,7 @@
     },
     {
       "front": "Vad händer om en lampa går sönder i serie- respektive parallellkoppling?",
+      "write": true,
       "back": "I serie slocknar alla, i parallell lyser de andra vidare.",
       "choices": [
         "I serie lyser alla ändå, i parallell slocknar alla",
@@ -113,6 +118,7 @@
     },
     {
       "front": "Vad är fördelen med LED jämfört med glödlampa?",
+      "write": true,
       "back": "LED använder mycket mindre effekt för samma ljusstyrka och håller längre.",
       "choices": [
         "LED kräver mer energi men ger mer värme",
@@ -149,6 +155,7 @@
     },
     {
       "front": "Vad är elektromagnetisk induktion?",
+      "write": true,
       "back": "När ett magnetfält förändras i en ledare uppstår en spänning (inducerad spänning).",
       "choices": [
         "Strömmen ökar när magneten står stilla",
@@ -161,6 +168,7 @@
     },
     {
       "front": "Vad gör en generator?",
+      "write": true,
       "back": "Omvandlar rörelseenergi till elektrisk energi genom elektromagnetisk induktion.",
       "choices": [
         "Omvandlar el till rörelseenergi",
@@ -173,6 +181,7 @@
     },
     {
       "front": "Varför kräver en transformator växelspänning?",
+      "write": true,
       "back": "För att ett varierande magnetfält krävs för att inducera spänning i den andra spolen.",
       "choices": [
         "För att skapa statiskt magnetfält",
@@ -185,6 +194,7 @@
     },
     {
       "front": "Hur påverkar tjocklek och längd resistansen i en ledare?",
+      "write": true,
       "back": "Längre ledare → större resistans; tjockare → mindre resistans.",
       "choices": [
         "Längre → större, tjockare → mindre resistans",
@@ -245,6 +255,7 @@
     },
     {
       "front": "Varför transporteras el oftast med hög spänning i ledningar?",
+      "write": true,
       "back": "Hög spänning ger låg ström för samma effekt → mindre värmeförluster i ledningarna.",
       "choices": [
         "För att spara koppar",

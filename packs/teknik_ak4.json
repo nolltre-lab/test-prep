@@ -22,6 +22,7 @@
     },
     {
       "front": "Varför är det lättare att rulla en tung låda uppför en ramp än att lyfta den?",
+      "write": true,
       "back": "Rampen (ett lutande plan) gör att kraften fördelas över en längre väg.",
       "choices": [
         "lådan blir mindre",
@@ -98,6 +99,7 @@
     },
     {
       "front": "Varför är ett pappersrör starkare än ett platt papper?",
+      "write": true,
       "back": "Formen gör det stabilare – profilen hjälper till att bära.",
       "choices": [
         "röret är tyngre",
@@ -128,6 +130,7 @@
     },
     {
       "front": "Vad är en balk?",
+      "write": true,
       "back": "en lång bärande del, t.ex. i ett tak eller en bro",
       "choices": [
         "en bärande del",
@@ -173,6 +176,7 @@
     },
     {
       "front": "Varför har en kastrull handtag av plast eller trä?",
+      "write": true,
       "back": "De leder inte värme lika bra, så man bränner sig inte.",
       "choices": [
         "för att de är vackra",
@@ -188,6 +192,7 @@
     },
     {
       "front": "Vad gör en kyl för att hålla maten fräsch?",
+      "write": true,
       "back": "håller den kall så att bakterier växer långsammare",
       "choices": [
         "lyser på maten",
@@ -218,6 +223,7 @@
     },
     {
       "front": "Vad är en robotdammsugare ett exempel på?",
+      "write": true,
       "back": "ett tekniskt system som styrs av sensorer och ett program",
       "choices": [
         "en programmerad maskin",
@@ -234,6 +240,7 @@
     },
     {
       "front": "Vad är en sensor?",
+      "write": true,
       "back": "en del som känner av något, t.ex. ljus, värme eller rörelse",
       "choices": [
         "något som känner av omgivningen",
@@ -294,6 +301,7 @@
     },
     {
       "front": "Vad är en algoritm?",
+      "write": true,
       "back": "en steg-för-steg-instruktion för att lösa en uppgift",
       "choices": [
         "en steg-för-steg-instruktion",
@@ -324,6 +332,7 @@
     },
     {
       "front": "Vad är en bugg?",
+      "write": true,
       "back": "ett fel i ett program",
       "choices": [
         "ett snabbt program",
@@ -354,6 +363,7 @@
     },
     {
       "front": "Vad gör man först när man ska konstruera något nytt?",
+      "write": true,
       "back": "undersöker behovet och kommer på idéer",
       "choices": [
         "kommer på idéer",
@@ -386,6 +396,7 @@
     },
     {
       "front": "Varför gör man en modell innan man bygger på riktigt?",
+      "write": true,
       "back": "för att testa idén billigt och hitta fel innan",
       "choices": [
         "för att det är roligt bara",
@@ -401,6 +412,7 @@
     },
     {
       "front": "Vad är en skiss?",
+      "write": true,
       "back": "en enkel ritning som visar en idé",
       "choices": [
         "en färdig maskin",
@@ -446,6 +458,7 @@
     },
     {
       "front": "Varför har bilar säkerhetsbälte?",
+      "write": true,
       "back": "Bältet håller kvar dig i sätet om bilen krockar eller tvärbromsar.",
       "choices": [
         "för att sitta bekvämare",
@@ -462,6 +475,7 @@
     },
     {
       "front": "Vad är ett tekniskt system?",
+      "write": true,
       "back": "flera delar som fungerar tillsammans, t.ex. elnätet eller vattenledningarna",
       "choices": [
         "delar som fungerar tillsammans",

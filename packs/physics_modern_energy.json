@@ -5,6 +5,7 @@
   "items": [
     {
       "front": "Vad är radioaktivitet?",
+      "write": true,
       "back": "När instabila atomkärnor spontant sönderfaller och avger strålning.",
       "choices": ["När atomer förstoras", "När instabila atomkärnor sönderfaller", "När neutroner laddas", "När atomer smälter"],
       "answerIndex": 1,

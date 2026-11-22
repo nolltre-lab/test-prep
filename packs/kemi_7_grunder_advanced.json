@@ -5,6 +5,7 @@
   "items": [
     {
       "front": "Varför är elektroner viktiga i kemiska reaktioner?",
+      "write": true,
       "back": "Det är elektronerna som omfördelas mellan atomer när nya ämnen bildas.",
       "choices": ["Elektronerna bildar värme", "Elektronerna omfördelas vid reaktioner", "Elektroner ändrar kärnans laddning", "Elektroner bestämmer ämnets densitet"],
       "answerIndex": 1,
@@ -19,6 +20,7 @@
     },
     {
       "front": "Varför är ädelgaser oftast mycket stabila och reagerar sällan?",
+      "write": true,
       "back": "De har fullt yttre elektronskal.",
       "choices": ["De är tunga", "De saknar protoner", "De har fullt yttre elektronskal", "De är alltid gaser vid rumstemperatur"],
       "answerIndex": 2,
@@ -47,6 +49,7 @@
     },
     {
       "front": "Varför förändras inte massan vid en kemisk reaktion?",
+      "write": true,
       "back": "Atomerna omarrangeras men försvinner inte.",
       "choices": ["Lite massa förvandlas till värme", "Massa kan skapas ur energi", "Atomer omarrangeras men försvinner inte", "Elektroner väger ingenting"],
       "answerIndex": 2,
@@ -61,6 +64,7 @@
     },
     {
       "front": "Varför kan två syreatomer bilda en syremolekyl (O₂)?",
+      "write": true,
       "back": "De delar elektroner för att få fullt yttre skal.",
       "choices": ["De delar elektroner", "De tappar neutroner", "De splittrar kärnan", "De är magnetiska"],
       "answerIndex": 0,
@@ -82,6 +86,7 @@
     },
     {
       "front": "Varför är kontroll av variabler viktigt i en undersökning?",
+      "write": true,
       "back": "För att kunna avgöra vad som påverkar resultatet.",
       "choices": ["Det gör labben kortare", "Det är ett krav från Skolverket", "Det gör resultatet roligare", "Det visar vad som påverkar resultatet"],
       "answerIndex": 3,
@@ -110,6 +115,7 @@
     },
     {
       "front": "Vad är en jon?",
+      "write": true,
       "back": "En atom som tagit upp eller lämnat ifrån sig elektroner.",
       "choices": ["En atom utan kärna", "En atom som ändrat elektronantal", "En atom som saknar protoner", "En atom som tappat neutroner"],
       "answerIndex": 1,
@@ -117,6 +123,7 @@
     },
     {
       "front": "Varför måste man aldrig hälla vatten på brinnande olja?",
+      "write": true,
       "back": "Vattnet förångas direkt och kan kasta upp brinnande olja.",
       "choices": ["Det kyler för långsamt", "Det innehåller syre", "Det kan sprida elden kraftigt", "Det förstör kastrullen"],
       "answerIndex": 2,
@@ -124,6 +131,7 @@
     },
     {
       "front": "Vad innebär det att ett ämne är frätande?",
+      "write": true,
       "back": "Det kan skada hud, ögon och material genom kemisk påverkan.",
       "choices": ["Det luktar illa", "Det skadar hud och material", "Det är alltid giftigt", "Det är magnetiskt"],
       "answerIndex": 1,
@@ -131,6 +139,7 @@
     },
     {
       "front": "Varför påverkas kokpunkten av lufttrycket?",
+      "write": true,
       "back": "Lägre lufttryck gör att vätskemolekyler lättare lämnar ytan.",
       "choices": ["Högre tryck stoppar värme", "Lägre tryck gör att molekyler lättare avdunstar", "Högre tryck ökar densiteten", "Lägre tryck gör ämnen mer giftiga"],
       "answerIndex": 1,
@@ -138,6 +147,7 @@
     },
     {
       "front": "Varför har metaller ofta hög smältpunkt?",
+      "write": true,
       "back": "Metallbindningarna är starka och kräver mycket energi att bryta.",
       "choices": ["De är tunga", "De innehåller många neutroner", "Metallbindningar är starka", "De leder värme"],
       "answerIndex": 2,

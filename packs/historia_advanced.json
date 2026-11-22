@@ -89,6 +89,7 @@
     },
     {
       "front": "Vad innebär källpluralism?",
+      "write": true,
       "back": "Att använda flera olika källor för tillförlitlighet.",
       "choices": [
         "En källa räcker",

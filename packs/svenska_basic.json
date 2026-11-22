@@ -62,6 +62,7 @@
     },
     {
       "front": "Vad är en huvudidé i en text?",
+      "write": true,
       "back": "Textens viktigaste budskap eller poäng.",
       "choices": [
         "Författarens namn",

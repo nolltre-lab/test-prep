@@ -21,6 +21,7 @@
     },
     {
       "front": "Hur kan man minska trycket från en kraft?",
+      "write": true,
       "back": "Genom att öka arean som kraften verkar på (t.ex. skidor, snöskor).",
       "hint": "Större yta → mindre tryck.",
       "choices": ["Minska arean","Öka arean","Öka kraften","Öka höjden"],
@@ -29,6 +30,7 @@
     },
     {
       "front": "Hur kan man öka trycket med samma kraft?",
+      "write": true,
       "back": "Genom att minska arean (t.ex. knivspets, spik).",
       "hint": "Mindre yta → större tryck.",
       "choices": ["Öka arean","Minska arean","Minska höjden","Sänka temperaturen"],
@@ -53,6 +55,7 @@
     },
     {
       "front": "Vad kallas den uppåtriktade kraft som verkar på ett föremål i vatten?",
+      "write": true,
       "back": "Lyftkraft (förklaras av Arkimedes princip).",
       "hint": "Gör saker lättare i vatten.",
       "choices": ["Tyngdkraft","Friktionskraft","Lyftkraft","Centripetalkraft"],
@@ -69,6 +72,7 @@
     },
     {
       "front": "Vad är ett kommunicerande kärl?",
+      "write": true,
       "back": "Kärl som sitter ihop i botten så att vätskan står på samma nivå i alla delar.",
       "hint": "Samma nivå i alla rör.",
       "choices": ["En sluten flaska","Kärl som inte påverkar varandra","Kärl som delar nivå via förbindelse","Enbart stora tankar"],
@@ -101,6 +105,7 @@
     },
     {
       "front": "Vad händer med gasens tryck när man komprimerar den i en behållare?",
+      "write": true,
       "back": "Trycket ökar (molekylerna krockar oftare).",
       "hint": "Mindre volym → fler kollisioner.",
       "choices": ["Trycket minskar","Trycket ökar","Trycket försvinner","Trycket blir 0 Pa"],
@@ -109,6 +114,7 @@
     },
     {
       "front": "Vad händer i en behållare när man suger ut luften?",
+      "write": true,
       "back": "Det uppstår ett undertryck/vakuum.",
       "hint": "Väldigt lite luft kvar.",
       "choices": ["Övertryck","Undertryck (vakuum)","Konstant tryck","Mer syre"],
@@ -117,6 +123,7 @@
     },
     {
       "front": "Varför hjälper tät plastförpackning (vakuumförpackning) maten att hålla längre?",
+      "write": true,
       "back": "Luften sugs ut → mindre syre och fukt → lägre risk för mikroorganismer; dessutom trycks plasten mot maten.",
       "hint": "Mindre luft/syre runt maten.",
       "choices": ["Mer syre bevarar","Undertryck minskar syre/fukt","Högre temperatur","UV-ljus i plasten"],
@@ -125,6 +132,7 @@
     },
     {
       "front": "Hur kan en flygplansvinge ge lyftkraft enligt beskrivningen?",
+      "write": true,
       "back": "Vingen är snett vinklad så att fler luftmolekyler krockar med undersidan än ovansidan → övertryck under vingen som trycker planet uppåt.",
       "hint": "Övertryck på undersidan.",
       "choices": ["Tyngdkraften minskar","Undertryck under vingen","Övertryck under vingen","Planet blåser uppåt själv"],

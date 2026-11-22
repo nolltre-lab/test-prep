@@ -152,6 +152,7 @@
     },
     {
       "front": "Vad gör igelkotten på vintern?",
+      "write": true,
       "back": "går i ide – sover hela vintern.",
       "choices": [
         "bygger ett bo i vattnet",
@@ -184,6 +185,7 @@
     },
     {
       "front": "Varför flyttar många fåglar söderut på hösten?",
+      "write": true,
       "back": "Det blir ont om mat (insekter) här på vintern.",
       "choices": [
         "de ska lägga ägg i snön",
@@ -264,6 +266,7 @@
     },
     {
       "front": "Vad gör bina för blommorna?",
+      "write": true,
       "back": "pollinerar dem – flyttar pollen så att det kan bli frön och frukt.",
       "choices": [
         "vattnar dem",
@@ -328,6 +331,7 @@
     },
     {
       "front": "Varför fäller lövträden sina löv på hösten?",
+      "write": true,
       "back": "för att spara vatten och klara vintern",
       "choices": [
         "för att få nya färger",
@@ -344,6 +348,7 @@
     },
     {
       "front": "Vad är en svamp?",
+      "write": true,
       "back": "varken växt eller djur – en egen grupp. Den bryter ner döda saker.",
       "choices": [
         "ett djur",
@@ -409,6 +414,7 @@
     },
     {
       "front": "Vad gör maskar och svampar i naturen?",
+      "write": true,
       "back": "bryter ner döda växter och djur till näring (nedbrytare)",
       "choices": [
         "jagar fåglar",
@@ -485,6 +491,7 @@
     },
     {
       "front": "Vad gör hjärtat?",
+      "write": true,
       "back": "pumpar runt blodet i kroppen",
       "choices": [
         "pumpar runt blodet",
@@ -515,6 +522,7 @@
     },
     {
       "front": "Vad gör skelettet?",
+      "write": true,
       "back": "håller upp kroppen och skyddar de inre organen",
       "choices": [
         "känner lukt",
@@ -640,6 +648,7 @@
     },
     {
       "front": "Varför ska man borsta tänderna?",
+      "write": true,
       "back": "för att få bort bakterier och undvika hål (karies)",
       "choices": [
         "för att få vitare tunga",
@@ -655,6 +664,7 @@
     },
     {
       "front": "Vad händer med pulsen när du springer?",
+      "write": true,
       "back": "Den går upp – hjärtat slår fortare.",
       "choices": [
         "den ändras inte",
@@ -720,6 +730,7 @@
     },
     {
       "front": "Vad betyder det att en växt är fridlyst?",
+      "write": true,
       "back": "Man får inte plocka eller skada den.",
       "choices": [
         "den är giftig",
@@ -735,6 +746,7 @@
     },
     {
       "front": "Varför är det viktigt att inte slänga skräp i naturen?",
+      "write": true,
       "back": "Djur kan skada sig eller äta det, och det tar lång tid att brytas ner.",
       "choices": [
         "det spelar ingen roll",

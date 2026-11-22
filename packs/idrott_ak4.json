@@ -7,6 +7,7 @@
   "items": [
     {
       "front": "Varför värmer man upp innan man tränar?",
+      "write": true,
       "back": "för att musklerna ska bli varma och man inte ska skada sig",
       "choices": [
         "för att det är kallt ute",
@@ -22,6 +23,7 @@
     },
     {
       "front": "Vad händer med pulsen när du tränar hårt?",
+      "write": true,
       "back": "Den går upp – hjärtat pumpar mer blod till musklerna.",
       "choices": [
         "den stannar",
@@ -98,6 +100,7 @@
     },
     {
       "front": "Varför ska man dricka vatten när man tränar?",
+      "write": true,
       "back": "Kroppen förlorar vätska när man svettas.",
       "choices": [
         "för att bli tyngre",
@@ -113,6 +116,7 @@
     },
     {
       "front": "Vad är bäst att äta före ett träningspass?",
+      "write": true,
       "back": "något lagom, t.ex. en smörgås eller frukt, en stund innan",
       "choices": [
         "tre hamburgare",
@@ -128,6 +132,7 @@
     },
     {
       "front": "Varför är sömn viktigt för den som tränar?",
+      "write": true,
       "back": "Kroppen återhämtar sig och bygger upp sig när man sover.",
       "choices": [
         "kroppen återhämtar sig",
@@ -173,6 +178,7 @@
     },
     {
       "front": "Varför ska man bära flytväst i båt?",
+      "write": true,
       "back": "den håller dig flytande om du ramlar i",
       "choices": [
         "för att det är snyggt",
@@ -220,6 +226,7 @@
     },
     {
       "front": "Vad är viktigt att tänka på när man gör upp eld i naturen?",
+      "write": true,
       "back": "följa eldningsförbud, vara försiktig och släcka ordentligt",
       "choices": [
         "kolla eldningsförbud och släcka ordentligt",
@@ -235,6 +242,7 @@
     },
     {
       "front": "Varför ska man klä sig i lager på lager ute på vintern?",
+      "write": true,
       "back": "Luften mellan lagren håller värmen och man kan ta av när man blir varm.",
       "choices": [
         "luften mellan lagren håller värmen",
@@ -265,6 +273,7 @@
     },
     {
       "front": "Vad gör man i orientering?",
+      "write": true,
       "back": "letar upp kontroller med hjälp av en karta",
       "choices": [
         "springer på en bana utan karta",
@@ -280,6 +289,7 @@
     },
     {
       "front": "Vad gör man först med kartan i orientering?",
+      "write": true,
       "back": "passar in (orienterar) kartan så att den stämmer med terrängen",
       "choices": [
         "lägger den i fickan",
@@ -340,6 +350,7 @@
     },
     {
       "front": "Vad gör du om en kompis ramlar och gör sig illa på idrotten?",
+      "write": true,
       "back": "hjälper till och säger till en vuxen",
       "choices": [
         "fortsätter spela",
@@ -385,6 +396,7 @@
     },
     {
       "front": "Vad är en bra sak att göra efter träningen?",
+      "write": true,
       "back": "varva ner och stretcha lugnt",
       "choices": [
         "springa ännu fortare",

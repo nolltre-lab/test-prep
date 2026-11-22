@@ -5,6 +5,7 @@
   "items": [
     {
       "front": "Vad är en kvarleva som historisk källa?",
+      "write": true,
       "back": "Ett föremål/spår från tiden som undersöks.",
       "choices": [
         "Senare tolkning",
@@ -33,6 +34,7 @@
     },
     {
       "front": "Vad är agrara revolutionen?",
+      "write": true,
       "back": "Förändringar i jordbruket som ökade produktionen.",
       "choices": [
         "Industriell utveckling",
@@ -61,6 +63,7 @@
     },
     {
       "front": "Vad innebär källkritikens äkthet?",
+      "write": true,
       "back": "Om källan är vad den utger sig för att vara.",
       "choices": [
         "Vad som står",
@@ -103,6 +106,7 @@
     },
     {
       "front": "Vad är en berättande källa?",
+      "write": true,
       "back": "Skriftlig/munnlig berättelse om det som hänt.",
       "choices": [
         "Föremål",

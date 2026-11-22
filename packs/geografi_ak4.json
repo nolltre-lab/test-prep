@@ -554,6 +554,7 @@
     },
     {
       "front": "Vad är en glob?",
+      "write": true,
       "back": "en modell av jorden som ett klot",
       "choices": [
         "en sorts lampa",
@@ -629,6 +630,7 @@
     },
     {
       "front": "Vad är ekvatorn?",
+      "write": true,
       "back": "en tänkt linje runt jordens mitt som delar den i norra och södra halvklotet",
       "choices": [
         "en bergskedja",
@@ -659,6 +661,7 @@
     },
     {
       "front": "Varför är det oftast varmare i södra Sverige än i norra?",
+      "write": true,
       "back": "Solen står högre och värmer mer längre söderut.",
       "choices": [
         "det finns fler städer i söder",

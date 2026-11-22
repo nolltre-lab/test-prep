@@ -5,6 +5,7 @@
   "items": [
     {
       "front": "Vad är skillnaden mellan värme och temperatur?",
+      "write": true,
       "back": "Värme = energiöverföring; temperatur = hur varmt, partiklarnas medelrörelse.",
       "choices": [
         "Samma sak",
@@ -33,6 +34,7 @@
     },
     {
       "front": "Vad händer med partiklar när temperaturen ökar?",
+      "write": true,
       "back": "De rör sig snabbare.",
       "choices": [
         "De stannar",
@@ -47,6 +49,7 @@
     },
     {
       "front": "Vad är vind?",
+      "write": true,
       "back": "Luft som rör sig från högre till lägre tryck.",
       "choices": [
         "Luft uppåt",

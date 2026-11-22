@@ -19,6 +19,7 @@
     },
     {
       "front": "Vad är Ramadan?",
+      "write": true,
       "back": "Muslimsk fastemånad som avslutas med Eid al-Fitr.",
       "choices": [
         "Hinduisk högtid",
@@ -61,6 +62,7 @@
     },
     {
       "front": "Vad är en livsåskådning?",
+      "write": true,
       "back": "Syn på livet/världen – religiös eller sekulär.",
       "choices": [
         "Politisk lag",
@@ -89,6 +91,7 @@
     },
     {
       "front": "Vad är ett samfund?",
+      "write": true,
       "back": "Organiserad grupp av troende.",
       "choices": [
         "Byggnad",

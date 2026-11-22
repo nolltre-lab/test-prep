@@ -5,6 +5,7 @@
   "items": [
     {
       "front": "Vad är cellens 'kraftverk'?",
+      "write": true,
       "back": "Mitokondrierna där cellandningen sker.",
       "choices": [
         "Kloroplaster",
@@ -33,6 +34,7 @@
     },
     {
       "front": "Vad är en producent i en näringskedja?",
+      "write": true,
       "back": "Växt/grönalg som tillverkar energi via fotosyntes.",
       "choices": [
         "Rovdjur",
@@ -75,6 +77,7 @@
     },
     {
       "front": "Vad är biodiversitet?",
+      "write": true,
       "back": "Mångfald av arter, gener och ekosystem.",
       "choices": [
         "Mängd syre",
@@ -89,6 +92,7 @@
     },
     {
       "front": "Vad gör nedbrytare?",
+      "write": true,
       "back": "Bryter ner dött material och frigör näringsämnen.",
       "choices": [
         "Producerar syre",

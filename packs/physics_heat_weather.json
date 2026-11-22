@@ -5,6 +5,7 @@
   "items": [
     {
       "front": "Vad är skillnaden mellan värme och temperatur?",
+      "write": true,
       "back": "Temperatur är ett mått på hur varmt/kallt något är (medelrörelsen hos partiklar). Värme är energi som överförs på grund av temperaturskillnad.",
       "hint": "Tänk energiöverföring vs mätvärde.",
       "choices": [
@@ -79,6 +80,7 @@
     },
     {
       "front": "Vad är specifik värmekapacitet (beskrivning, ej formelkrav)?",
+      "write": true,
       "back": "Hur mycket energi som krävs för att höja temperaturen 1 °C för 1 kg av ett ämne.",
       "choices": [
         "Energimängden för att höja 1 kg 1 °C",
@@ -103,6 +105,7 @@
     },
     {
       "front": "Vad är avdunstning och när går den snabbare?",
+      "write": true,
       "back": "Vätskemolekyler lämnar ytan som gas. Går snabbare vid hög temperatur, stor yta, luftdrag och låg luftfuktighet.",
       "choices": [
         "Molekyler lämnar vätskeytan; snabbare vid hög temp, stor yta, luftdrag",
@@ -127,6 +130,7 @@
     },
     {
       "front": "Hur uppstår vind?",
+      "write": true,
       "back": "Luft rör sig från områden med högre lufttryck till lägre. Skillnaderna skapas av ojämn uppvärmning från solen.",
       "choices": [
         "Luft rör sig från lågtryck till högtryck",
@@ -139,6 +143,7 @@
     },
     {
       "front": "Vad är skillnaden på väder och klimat?",
+      "write": true,
       "back": "Väder är tillståndet i atmosfären här och nu. Klimat är genomsnittligt väder under lång tid (minst 30 år) i ett område.",
       "choices": [
         "Väder = nu; klimat = medel över lång tid",
@@ -163,6 +168,7 @@
     },
     {
       "front": "Vad gör Golfströmmen för klimatet i Sverige?",
+      "write": true,
       "back": "För med sig varmt vatten som mildrar klimatet, vilket ger varmare vintrar än på samma breddgrad i inlandet.",
       "choices": [
         "Gör vintrarna kallare",

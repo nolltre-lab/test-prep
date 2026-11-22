@@ -22,6 +22,7 @@
     },
     {
       "front": "Varför ska man tvätta händerna innan man lagar mat?",
+      "write": true,
       "back": "för att inte föra över bakterier till maten",
       "choices": [
         "för att maten ska smaka mer",
@@ -37,6 +38,7 @@
     },
     {
       "front": "Varför ska man ha olika skärbrädor till rått kött och grönsaker?",
+      "write": true,
       "back": "så att bakterier från köttet inte hamnar på grönsakerna",
       "choices": [
         "för att det är finare",
@@ -128,6 +130,7 @@
     },
     {
       "front": "Varför är det bra att äta regelbundet?",
+      "write": true,
       "back": "kroppen får energi hela dagen och man orkar bättre",
       "choices": [
         "man orkar bättre hela dagen",
@@ -233,6 +236,7 @@
     },
     {
       "front": "Varför läser man hela receptet innan man börjar?",
+      "write": true,
       "back": "för att veta vad man behöver och hur lång tid det tar",
       "choices": [
         "för att veta vad som behövs",
@@ -308,6 +312,7 @@
     },
     {
       "front": "Vad gör man om det börjar brinna i en stekpanna?",
+      "write": true,
       "back": "lägger på ett lock och stänger av plattan – aldrig vatten",
       "choices": [
         "blåser på elden",
@@ -370,6 +375,7 @@
     },
     {
       "front": "Vad är matsvinn?",
+      "write": true,
       "back": "mat som slängs fast den hade kunnat ätas",
       "choices": [
         "en sorts kryddor",
@@ -386,6 +392,7 @@
     },
     {
       "front": "Hur kan man minska matsvinnet hemma?",
+      "write": true,
       "back": "äta upp rester och bara ta så mycket man orkar",
       "choices": [
         "köpa extra mycket",
@@ -402,6 +409,7 @@
     },
     {
       "front": "Vad är ett jämförpris?",
+      "write": true,
       "back": "priset per kilo eller liter, så att man kan jämföra varor",
       "choices": [
         "priset på kvittot",

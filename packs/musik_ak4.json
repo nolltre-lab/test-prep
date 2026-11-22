@@ -217,6 +217,7 @@
     },
     {
       "front": "Vad är en melodi?",
+      "write": true,
       "back": "en följd av toner som bildar en låt man kan nynna",
       "choices": [
         "toner som bildar en låt",
@@ -401,6 +402,7 @@
     },
     {
       "front": "Vad kallas en jojk?",
+      "write": true,
       "back": "samisk sång som beskriver en person, ett djur eller en plats",
       "choices": [
         "en dans",
@@ -431,6 +433,7 @@
     },
     {
       "front": "Varför ska man skydda öronen på en konsert med väldigt hög musik?",
+      "write": true,
       "back": "Höga ljud kan skada hörseln för alltid.",
       "choices": [
         "man behöver inte skydda dem",

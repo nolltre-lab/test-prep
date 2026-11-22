@@ -19,6 +19,7 @@
     },
     {
       "front": "Vad är religionsfrihet?",
+      "write": true,
       "back": "Rätten att tro, byta tro eller inte tro – inom lagen.",
       "choices": [
         "Plikt att tro",
@@ -47,6 +48,7 @@
     },
     {
       "front": "Vad innebär interreligiös dialog?",
+      "write": true,
       "back": "Samtal mellan religioner för förståelse.",
       "choices": [
         "Politisk debatt",

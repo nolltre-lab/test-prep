@@ -52,6 +52,7 @@
     },
     {
       "front": "Vad är luft?",
+      "write": true,
       "back": "en blandning av gaser, mest kväve och syre",
       "choices": [
         "en blandning av gaser",
@@ -112,6 +113,7 @@
     },
     {
       "front": "Vad händer med socker i varmt te?",
+      "write": true,
       "back": "Det löser sig – det blandas ut i vattnet så man inte ser det.",
       "choices": [
         "det flyter upp",
@@ -127,6 +129,7 @@
     },
     {
       "front": "Hur kan man skilja sand från vatten?",
+      "write": true,
       "back": "filtrera – häll genom ett filter (t.ex. ett kaffefilter)",
       "choices": [
         "filtrera",
@@ -190,6 +193,7 @@
     },
     {
       "front": "Vad är ett material?",
+      "write": true,
       "back": "det som en sak är gjord av, t.ex. trä, glas eller metall",
       "choices": [
         "ett verktyg",
@@ -280,6 +284,7 @@
     },
     {
       "front": "Vad gör man glas av?",
+      "write": true,
       "back": "sand (som smälts vid hög värme)",
       "choices": [
         "plast",
@@ -311,6 +316,7 @@
     },
     {
       "front": "Varför släcker man en brinnande kastrull med ett lock?",
+      "write": true,
       "back": "Locket stänger ute syret.",
       "choices": [
         "locket ger mer bränsle",
@@ -326,6 +332,7 @@
     },
     {
       "front": "Varför får man aldrig släcka brinnande olja med vatten?",
+      "write": true,
       "back": "Vattnet kokar explosivt och sprider den brinnande oljan.",
       "choices": [
         "det blir rök bara",
@@ -388,6 +395,7 @@
     },
     {
       "front": "Varför ska man återvinna?",
+      "write": true,
       "back": "för att materialen kan användas igen och naturen skonas",
       "choices": [
         "för att få mer skräp",
@@ -463,6 +471,7 @@
     },
     {
       "front": "Vad händer med en flaska vatten som glöms i frysen?",
+      "write": true,
       "back": "Vattnet blir is och tar större plats – flaskan kan spricka.",
       "choices": [
         "vattnet blir is och tar större plats",
@@ -478,6 +487,7 @@
     },
     {
       "front": "Varför flyter is på vatten?",
+      "write": true,
       "back": "Is är lättare än lika mycket vatten (mindre tät).",
       "choices": [
         "is flyter inte",
