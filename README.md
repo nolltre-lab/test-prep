@@ -4,6 +4,10 @@ A gamified, self-hosted study application for school students (Swedish curriculu
 
 ## Run it on your own computer
 
+> **Using Claude Code?** Open this folder and ask it to *"set this up for me"* — [CLAUDE.md](CLAUDE.md)
+> tells it how (Node.js, starting the server, an optional Claude key, your town's weather, packs for
+> your child's grade).
+
 Everything runs on a laptop with **no cloud server, no database and nothing to install** apart from
 Node.js. Test Prep and Kunskapsäventyret both start from the same small server, and every question
 pack is included.
