@@ -51,7 +51,19 @@ hollows and under water, peeking out now and then. Tap to walk there; a found an
 from the pack (3 stars on the first try, fewer after a miss, with a new question each time). When
 every animal in a place has been answered, a bridge appears over the stream (or a boulder rolls
 away) and the signpost leads on. A friendly dragon at the castle asks three in a row. 🔍 makes one
-hidden animal peek out. Progress is saved in the browser.
+hidden animal peek out (costs 10 points). Progress is saved in the browser.
+
+Animals hide in different ways — peeking now and then, only glinting eyes, leaving clues (tracks,
+feathers, rustling, bubbles), or running off when found — and later places get harder.
+
+**Scoring** (same rules as Test Prep Quiz): 10 points per right answer, × 2 after 3 in a row and × 3
+after 5 in a row, plus a speed bonus of +5/+3/+1 while the timer bar is still three-quarters/half/a
+quarter full. Records are kept per pack and adventure length, so you compete with yourself.
+
+**The dragon's last question** is answered in writing when the pack has questions marked
+`"write": true` and the server has a Claude key: it goes to `/api/review`, and an overall score of
+at least `WRITE_PASS_SCORE` (2 of 3) passes. A miss gives feedback and up to three tries; without
+Claude it's an ordinary question.
 
 - Source: `adventure/index.html` (one file, no dependencies; all characters and scenery are inline SVG)
 - Served on its own port: `ADVENTURE_PORT` (default `PORT + 1`, i.e. 8788), e.g.
@@ -315,6 +327,7 @@ Question packs are JSON files stored in the `packs/` directory.
 | `grades` | One of these two | Grades (åk) the pack is for, e.g. `[4]` or `[7, 8, 9]` — the pickers show it under each |
 | `category` | One of these two | For packs that aren't schoolwork: `"fun"` (shown as "Kul & spel"). Packs with neither land under "Övrigt" |
 | `subject` | Yes | Subject heading the pack is grouped under, in Swedish (`Matematik`, `Engelska`, `Film`…) |
+| `write` | No | On an item: `true` if it can be answered in your own words (explain, describe, why…) — not for a number, a single word or anything that depends on the choices. The adventure's dragon asks one of these in writing |
 | `items` | Yes | Array of questions |
 | `front` | Yes | The question text |
 | `back` | Yes | The answer/explanation |
@@ -334,6 +347,8 @@ Question packs are JSON files stored in the `packs/` directory.
 - **Language:** Swedish for every subject except English (and other language subjects). For English
   in the younger years (åk 4–6), give instructions and explanations in Swedish and keep the English
   in the words and sentences being practised, so a child can manage alone.
+- **Mark open questions with `"write": true`** — the ones a child can answer in their own words
+  ("Varför…", "Vad är…", "Hur…"), so the adventure's written final question has something to ask.
 - **Every item has four choices** with exactly one right answer, and a `back` that explains why —
   the quiz modes and the adventure show it after a wrong answer. Add a `hint` where it helps.
 - Wrong choices should be believable mistakes (half past one for "halv ett", mouses for mice), not

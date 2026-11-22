@@ -79,6 +79,12 @@ button{font:inherit;color:inherit;cursor:pointer;border:0}
 .hud .grow{flex:1}
 .pill{background:var(--paper);border-radius:99px;padding:7px 14px;font-weight:bold;box-shadow:0 4px 0 var(--shadow);font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 .hud .pill#starCount{flex:0 0 auto}
+.timer{height:10px;background:#eee3cf;border-radius:99px;overflow:hidden;margin:2px 0 10px}
+.timer i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#ffd447,#ff8fb8);border-radius:99px}
+.write-box{display:none;margin-top:6px}
+.write-box textarea{width:100%;font:inherit;font-size:18px;padding:12px;border-radius:16px;border:3px solid #eee3cf;background:#fff;resize:vertical;user-select:text;-webkit-user-select:text}
+.write-box .big-btn{margin-top:8px}
+.score-line{display:block;margin-top:6px;font-weight:bold;color:#b06a00}
 @media(max-width:520px){.hud .place{display:none}}
 .icon-btn{background:var(--paper);border-radius:99px;width:44px;height:44px;flex:0 0 44px;font-size:21px;box-shadow:0 4px 0 var(--shadow)}
 #fade{position:fixed;inset:0;background:#fffaf0;opacity:0;pointer-events:none;transition:opacity .45s;z-index:8}
@@ -203,8 +209,8 @@ button{font:inherit;color:inherit;cursor:pointer;border:0}
     <button class="icon-btn" id="homeBtn" title="Till start">🏠</button>
     <span class="pill" id="where"></span>
     <span class="grow"></span>
-    <span class="pill" id="starCount">⭐ 0</span>
-    <button class="icon-btn" id="hintSpotBtn" title="Var gömmer de sig? (kostar 1 ⭐)">🔍</button>
+    <span class="pill" id="starCount">🏆 0</span>
+    <button class="icon-btn" id="hintSpotBtn" title="Var gömmer de sig? (kostar 10 poäng)">🔍</button>
     <button class="icon-btn" id="soundBtn" title="Ljud">🔊</button>
   </div>
   <div id="banner"><b id="bannerTitle"></b><span id="bannerSub"></span></div>
@@ -218,7 +224,12 @@ button{font:inherit;color:inherit;cursor:pointer;border:0}
       <div class="who" id="dlgWho"></div>
       <div class="bubble"><span class="name" id="dlgName"></span><span id="dlgQ"></span></div>
     </div>
+    <div class="timer" id="dlgTimerBox" title="Svara snabbt för bonuspoäng"><i id="dlgTimer"></i></div>
     <div class="answers" id="dlgAns"></div>
+    <div class="write-box" id="dlgWriteBox">
+      <textarea id="dlgWrite" rows="4" placeholder="Skriv ditt svar här, med egna ord …"></textarea>
+      <button class="big-btn" id="sendWriteBtn">Ge svaret till draken 🐉</button>
+    </div>
     <div class="feedback" id="dlgFb"></div>
     <div class="dlg-foot">
       <span class="hearts" id="dlgHearts"></span>
@@ -621,6 +632,22 @@ const LENGTHS = [
 ];
 const BOSS_QUESTIONS = 3;
 
+/* Points, the same rules as Test Prep Quiz: 10 per right answer, multiplied by the streak
+   (3 in a row ×2, 5 in a row ×3), plus a speed bonus while the timer bar is still full. */
+const BASE_POINTS = 10, HINT_COST = 10;
+const streakMultiplier = streak => streak >= 5 ? 3 : streak >= 3 ? 2 : 1;
+// Seconds for the full speed bonus to run out: longer questions get more reading time.
+const speedWindow = q => clamp(10 + (q.q.length + q.choices.join("").length) / 14, 12, 30);
+function speedBonus(ms, windowS) {
+  const left = 1 - ms / (windowS * 1000);
+  return left >= .75 ? 5 : left >= .5 ? 3 : left >= .25 ? 1 : 0;
+}
+/* The dragon's last question is answered in writing when the pack has questions marked
+   "write": true and Claude is available. overall_score is 0–3; this is the pass mark. */
+const WRITE_PASS_SCORE = 2;
+const WRITE_MAX_TRIES = 3;
+let claudeOk = false;
+
 let saved = load();
 let setup = { hero: HEROES[saved.hero] ? saved.hero : "panda", name: saved.name || "", pack: null, packTitle: "", length: saved.length || 4, group: saved.group || null };
 let game = null;
@@ -706,7 +733,7 @@ function renderPacks() {
   if (!groups.includes(setup.group)) setup.group = groups[0];
   $("#groups").innerHTML = groups.map(g =>
     `<button class="group-btn ${setup.group === g ? "sel" : ""}" data-group="${g}">${groupLabel(g)}</button>`).join("");
-  const done = saved.finishedPacks || {};
+  const done = saved.bestByPack || {};
   const bySubject = {};
   packs.filter(p => packGroups(p).includes(setup.group)).forEach(p => (bySubject[p.subject || "Övrigt"] ||= []).push(p));
   $("#packs").innerHTML = Object.keys(bySubject).sort((a, b) => a.localeCompare(b, "sv")).map(subject =>
@@ -764,7 +791,7 @@ function toQuestions(items) {
       if (wrong.length < 2) return null;
       choices = [answer, ...wrong];
     }
-    return { q, choices: shuffle(choices), answer, explain: String(it.back ?? ""), hint: it.hint ? String(it.hint) : "" };
+    return { q, choices: shuffle(choices), answer, explain: String(it.back ?? ""), hint: it.hint ? String(it.hint) : "", write: it.write === true };
   }).filter(Boolean);
 }
 
@@ -859,8 +886,9 @@ async function startJourney() {
 
   game = {
     pack: setup.pack, packTitle: setup.packTitle || pack.title || setup.pack,
-    hero: setup.hero, name: setup.name, scenes, si: 0, stars: 0,
-    questions: qs, qi: 0, finished: false, startedAt: Date.now(),
+    hero: setup.hero, name: setup.name, scenes, si: 0, stars: 0, len: len.scenes,
+    points: 0, streak: 0, bestStreak: 0, firstTry: 0,
+    questions: qs, qi: 0, writeQs: qs.filter(q => q.write), finished: false, startedAt: Date.now(),
   };
   persist();
   track("session", { action: "start" });
@@ -1204,7 +1232,7 @@ function updateHud() {
   const sc = scene();
   const as = animalSpots(sc), found = as.filter(s => s.answered).length;
   $("#where").innerHTML = sc.place === "castle" ? `🏰 <span class="place">${PLACES.castle.name}</span>` : `<span class="place">${PLACES[sc.place].name} · </span>🐾 ${found}/${as.length}`;
-  $("#starCount").textContent = `⭐ ${game.stars}`;
+  $("#starCount").textContent = `🏆 ${game.points || 0}${game.streak >= 2 ? ` · 🔥${game.streak}` : ""}`;
   $("#soundBtn").textContent = sound ? "🔊" : "🔇";
   $("#hintSpotBtn").style.display = sc.place === "castle" ? "none" : "";
 }
@@ -1376,7 +1404,7 @@ $("#hintSpotBtn").onclick = () => {
     const left = animalSpots(sc).some(s => !s.answered);
     return say(left ? "Du har hittat alla – nu ska de bara få sina svar!" : "Alla djur är hittade! Gå till skylten →", innerWidth / 2, innerHeight / 3);
   }
-  if (game.stars > 0) { game.stars--; persist(); updateHud(); say("−1 ⭐", innerWidth - 120, 70, "#c07a00"); }
+  if ((game.points || 0) >= HINT_COST) { game.points -= HINT_COST; persist(); updateHud(); say(`−${HINT_COST} poäng`, innerWidth - 120, 70, "#c07a00"); }
   const [sp, i] = pick(hidden);
   const el = document.querySelector(`.spot[data-i="${i}"]`), pk = el.querySelector(".peeker");
   pk.classList.add("peek-now");
@@ -1414,14 +1442,31 @@ function leaveScene() {
 let cur = null; // { i, q, answered, mistakes, right }
 
 function openStation(i) {
-  cur = { i, q: nextQuestion(), answered: false, mistakes: 0, t0: Date.now() };
+  cur = { i, mistakes: 0 };
+  newQuestion(scene().spots[i]);
   sfx.pop();
   renderQuestion(true);
   $("#dlg").classList.add("on");
 }
 
+const canWrite = () => claudeOk && !game.writeOff && (game.writeQs || []).length > 0;
+function newQuestion(sp) {
+  cur.write = sp.kind === "boss" && sp.bossLeft === 1 && canWrite();
+  cur.q = cur.write ? pick(game.writeQs) : nextQuestion();
+  cur.tries = 0; cur.answered = false; cur.right = false; cur.t0 = Date.now();
+}
+
+function startTimer() {
+  cur.window = speedWindow(cur.q);
+  const bar = $("#dlgTimer");
+  bar.style.transition = "none"; bar.style.width = "100%"; void bar.offsetWidth;
+  bar.style.transition = `width ${cur.window}s linear`; bar.style.width = "0%";
+}
+
 function renderQuestion(first) {
+  if (cur.write) return renderWrite(first);
   const sp = scene().spots[cur.i], c = CHARACTERS[sp.animal];
+  $("#dlgWriteBox").style.display = "none"; $("#dlgTimerBox").style.display = "";
   $("#dlgWho").innerHTML = svgOf(c, "idle");
   $("#dlgName").textContent = c.name;
   const boss = sp.kind === "boss";
@@ -1436,6 +1481,45 @@ function renderQuestion(first) {
   $("#closeBtn").style.display = "";
   $("#nextBtn").style.display = "none";
   $("#dlgHearts").textContent = boss ? "🐉 " + "❤️".repeat(sp.bossLeft) : "";
+  cur.t0 = Date.now();
+  startTimer();
+}
+
+function renderWrite(first) {
+  const sp = scene().spots[cur.i], c = CHARACTERS[sp.animal];
+  $("#dlgWho").innerHTML = svgOf(c, "idle");
+  $("#dlgName").textContent = c.name;
+  const intro = cur.tries === 0
+    ? "Sista frågan! Den här svarar du på med egna ord – jag läser och bedömer ditt svar:"
+    : "Förbättra ditt svar och försök igen:";
+  $("#dlgQ").innerHTML = `${esc(intro)}<br><b>${esc(cur.q.q)}</b>`;
+  $("#dlgAns").innerHTML = "";
+  $("#dlgTimerBox").style.display = "none";
+  $("#dlgWriteBox").style.display = "block";
+  const ta = $("#dlgWrite");
+  if (cur.tries === 0) ta.value = "";
+  ta.disabled = false; $("#sendWriteBtn").disabled = false; $("#sendWriteBtn").style.display = "";
+  $("#sendWriteBtn").textContent = "Ge svaret till draken 🐉";
+  if (cur.tries === 0) { $("#dlgFb").className = "feedback"; $("#dlgFb").innerHTML = ""; }
+  $("#hintBtn").style.display = cur.q.hint ? "" : "none";
+  $("#closeBtn").style.display = "";
+  $("#nextBtn").style.display = "none";
+  $("#dlgHearts").textContent = "🐉 " + "❤️".repeat(sp.bossLeft);
+  setTimeout(() => ta.focus(), 50);
+}
+
+// Points for a right answer, with the streak and speed bonus; returns the explanation line.
+function award(withSpeed) {
+  game.streak = (game.streak || 0) + 1;
+  game.bestStreak = Math.max(game.bestStreak || 0, game.streak);
+  const mult = streakMultiplier(game.streak);
+  const bonus = withSpeed ? speedBonus(Date.now() - cur.t0, cur.window) : 0;
+  const pts = BASE_POINTS * mult + bonus;
+  game.points = (game.points || 0) + pts;
+  updateHud();
+  const parts = [`${BASE_POINTS}${mult > 1 ? ` × ${mult} (🔥 ${game.streak} i rad)` : ""}`];
+  if (bonus) parts.push(`${bonus} ⚡ snabbt`);
+  return { pts, line: `+${pts} poäng${parts.length > 1 || mult > 1 ? ` = ${parts.join(" + ")}` : ""}` };
 }
 
 $("#dlgAns").onclick = e => {
@@ -1444,6 +1528,7 @@ $("#dlgAns").onclick = e => {
   const choice = cur.q.choices[+b.dataset.k];
   const right = choice === cur.q.answer;
   cur.answered = true; cur.right = right;
+  const bar = $("#dlgTimer"); bar.style.transition = "none"; bar.style.width = getComputedStyle(bar).width;
   [...$("#dlgAns").children].forEach(x => { x.disabled = true; if (cur.q.choices[+x.dataset.k] === cur.q.answer) x.classList.add("right"); });
   track("adventure", { question: cur.q.q, userAnswer: choice, correctAnswer: cur.q.answer, isCorrect: right, timeTaken: Date.now() - cur.t0 });
 
@@ -1452,13 +1537,15 @@ $("#dlgAns").onclick = e => {
   if (right) {
     sfx.right();
     $("#dlgWho").innerHTML = svgOf(c, "happy");
+    const { pts, line } = award(true);
+    if (!boss && cur.mistakes === 0) game.firstTry = (game.firstTry || 0) + 1;
     fb.className = "feedback on good";
-    fb.innerHTML = `<b>${pick(PRAISE)}</b>${explain}`;
+    fb.innerHTML = `<b>${pick(PRAISE)}</b>${explain}<span class="score-line">${esc(line)}</span>`;
     const r = b.getBoundingClientRect();
-    say("+⭐", r.left + r.width / 2, r.top, "#f0a400");
+    say(`+${pts}`, r.left + r.width / 2, r.top, "#f0a400");
     if (boss && sp.bossLeft > 1) {
       sp.bossLeft--; game.stars++;
-      $("#nextBtn").textContent = "Nästa fråga →";
+      $("#nextBtn").textContent = sp.bossLeft === 1 && canWrite() ? "Sista frågan ✏️ →" : "Nästa fråga →";
     } else {
       if (boss) sp.bossLeft = 0;
       // 3 stars on the first try, 2 after one miss, 1 after more
@@ -1469,6 +1556,7 @@ $("#dlgAns").onclick = e => {
   } else {
     sfx.wrong();
     cur.mistakes++;
+    game.streak = 0; updateHud();
     b.classList.add("wrong");
     $("#dlgWho").innerHTML = svgOf(c, "sad");
     fb.className = "feedback bad on";
@@ -1484,7 +1572,8 @@ $("#dlgAns").onclick = e => {
 $("#nextBtn").onclick = () => {
   const sc = scene(), sp = sc.spots[cur.i];
   if (!cur.right || (sp.kind === "boss" && sp.bossLeft > 0)) {
-    cur.q = nextQuestion(); cur.answered = false; cur.t0 = Date.now();
+    if (cur.write && !cur.right && cur.tries < WRITE_MAX_TRIES && canWrite()) { cur.answered = false; return renderWrite(false); }
+    newQuestion(sp);
     return renderQuestion(false);
   }
   $("#dlg").classList.remove("on");
@@ -1497,6 +1586,80 @@ $("#nextBtn").onclick = () => {
     say(left === 1 ? "Ett djur kvar att hitta!" : `${left} djur kvar att hitta!`, innerWidth / 2, innerHeight / 3);
   }
 };
+
+$("#sendWriteBtn").onclick = async () => {
+  const ans = $("#dlgWrite").value.trim();
+  if (!ans) { say("Skriv ett svar först ✏️", innerWidth / 2, innerHeight / 3); return; }
+  const sp = scene().spots[cur.i], c = CHARACTERS[sp.animal], fb = $("#dlgFb");
+  $("#dlgWrite").disabled = true; $("#sendWriteBtn").disabled = true; $("#sendWriteBtn").textContent = "Draken läser … 📖";
+  $("#closeBtn").style.display = "none"; $("#hintBtn").style.display = "none";
+  let r;
+  try {
+    const resp = await fetch("/api/review", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ system: REVIEW_SYSTEM, user: {
+        question: cur.q.q, reference_answer: cur.q.explain || cur.q.answer, student_answer: ans, pack_title: game.packTitle,
+        style_expectations: "Eleven är ett barn. Ett kort, korrekt svar med egna ord räcker. Var uppmuntrande och skriv feedback på enkel svenska som ett barn förstår."
+      } }),
+    });
+    if (!resp.ok) throw new Error(await resp.text());
+    r = (await resp.json()).review;
+    if (!r || !Number.isFinite(Number(r.overall_score))) throw new Error("no score");
+  } catch (e) {
+    console.error(e);
+    game.writeOff = true; cur.write = false; cur.right = false; cur.answered = true; persist();
+    $("#sendWriteBtn").style.display = "none";
+    fb.className = "feedback on bad";
+    fb.innerHTML = "Oj, draken kunde inte läsa svaret just nu. Du får en vanlig fråga i stället.";
+    $("#nextBtn").textContent = "Vanlig fråga →"; $("#nextBtn").style.display = "";
+    return;
+  }
+  const score = clamp(Math.round(Number(r.overall_score)), 0, 3);
+  const pass = score >= WRITE_PASS_SCORE;
+  cur.answered = true; cur.right = pass; cur.tries++;
+  track("adventure", { question: cur.q.q, userAnswer: ans, correctAnswer: cur.q.explain, isCorrect: pass, timeTaken: Date.now() - cur.t0 });
+  $("#sendWriteBtn").style.display = "none";
+  const grade = `Betyg: ${"⭐".repeat(score)}${"☆".repeat(3 - score)} (${score} av 3)`;
+  const missing = (r.missing_points || []).filter(Boolean);
+  if (pass) {
+    sfx.right();
+    $("#dlgWho").innerHTML = svgOf(c, "happy");
+    const pts = 20 + 10 * score;
+    game.points = (game.points || 0) + pts;
+    game.streak++; game.bestStreak = Math.max(game.bestStreak || 0, game.streak); updateHud();
+    sp.bossLeft = 0; sp.stars = 3; game.stars++;
+    fb.className = "feedback on good";
+    fb.innerHTML = `<b>${esc(grade)} – godkänt!</b><br>${esc(r.summary_feedback || "")}<span class="score-line">+${pts} poäng för ett skrivet svar</span>`;
+    say(`+${pts}`, innerWidth / 2, innerHeight / 3, "#f0a400");
+    $("#nextBtn").textContent = "In i slottet! 🏰";
+  } else {
+    sfx.wrong();
+    $("#dlgWho").innerHTML = svgOf(c, "sad");
+    game.streak = 0; updateHud();
+    const last = cur.tries >= WRITE_MAX_TRIES;
+    fb.className = "feedback on bad";
+    fb.innerHTML = `<b>${esc(grade)} – nästan!</b><br>${esc(r.summary_feedback || "")}` +
+      (missing.length ? `<br><small>Tänk på: ${esc(missing.join("; "))}</small>` : "") +
+      (last ? `<br><small>Ett bra svar hade varit: ${esc(r.suggested_answer || cur.q.explain)}</small>` : "");
+    $("#nextBtn").textContent = last ? "Ny fråga →" : "Förbättra svaret ✏️";
+  }
+  $("#nextBtn").style.display = "";
+  persist();
+};
+
+// The same instructions Test Prep's Write & Review sends, calibrated to the grade in the pack title.
+const REVIEW_SYSTEM = [
+  "Du är en vänlig svensk lärare som bedömer ett barns svar i ett lärospel.",
+  "Bedöm elevens svar baserat på frågan, referenssvaret och paketets titel, som ofta anger årskurs (t.ex. 'åk 4').",
+  "Kräv INTE en lång motivering: om frågan har ett kort, entydigt svar räcker ett korrekt och tydligt kort svar.",
+  "Om frågan kräver förklaring eller resonemang, förvänta en förklaring på den nivå som årskursen rimligen klarar.",
+  "Bedöm innehållet, inte stavning eller grammatik, så länge svaret går att förstå.",
+  "Svara ENDAST med JSON enligt: {correctness_score:int, clarity_score:int, completeness_score:int, technical_accuracy_score:int, overall_score:int, summary_feedback:string, missing_points:string[], technical_notes:string, clarity_notes:string, suggested_answer:string}",
+  "Alla score-fält: 0-3 (0=bristfälligt, 1=godkänt, 2=bra, 3=utmärkt).",
+  "summary_feedback: en eller två korta, uppmuntrande meningar till barnet, på enkel svenska.",
+  "missing_points: högst två korta saker som saknas, på enkel svenska.",
+  "suggested_answer: ett kort exempel på ett bra svar på barnets nivå.",
+].join(" ");
 
 $("#closeBtn").onclick = () => { $("#dlg").classList.remove("on"); renderScene(); };
 $("#hintBtn").onclick = () => {
@@ -1512,9 +1675,12 @@ $("#hintBtn").onclick = () => {
 function finish() {
   game.finished = true;
   const animals = game.scenes.reduce((n, sc) => n + animalSpots(sc).length, 0);
-  const max = animals * 3 + BOSS_QUESTIONS;
-  saved.finishedPacks = saved.finishedPacks || {};
-  saved.finishedPacks[game.pack] = Math.max(saved.finishedPacks[game.pack] || 0, game.stars);
+  // Records per pack and length, so a game is compared with the same kind of game.
+  const key = `${game.pack}|${game.len || game.scenes.length - 1}`;
+  saved.records = saved.records || {}; saved.bestByPack = saved.bestByPack || {};
+  const prev = saved.records[key], pts = game.points || 0, record = prev == null || pts > prev;
+  if (record) saved.records[key] = pts;
+  saved.bestByPack[game.pack] = Math.max(saved.bestByPack[game.pack] || 0, pts);
   persist();
   track("session", { action: "finish", duration: Date.now() - game.startedAt });
   sfx.win();
@@ -1522,9 +1688,13 @@ function finish() {
   $("#finishArt").innerHTML = `<svg viewBox="0 0 220 120" width="300" height="160">
     <g transform="translate(0 10)"><svg width="110" height="110" viewBox="0 0 100 100">${HEROES[game.hero].draw("happy")}</svg></g>
     <g transform="translate(110 10)"><svg width="110" height="110" viewBox="0 0 100 100">${CHARACTERS.dragon.draw("happy")}</svg></g></svg>`;
-  $("#finishStars").textContent = `⭐ ${game.stars}`;
+  $("#finishStars").textContent = `🏆 ${pts} poäng`;
   const who = game.name ? `${esc(game.name)}, du` : "Du";
-  $("#finishText").innerHTML = `${who} hittade alla ${animals} gömda djur, tog dig hela vägen till slottet och samlade <b>${game.stars}</b> av ${max} möjliga stjärnor i<br><i>${esc(game.packTitle)}</i>!<br>Draken Doris bjuder på tårta. 🎂`;
+  const recordLine = record
+    ? (prev == null ? "Ditt första rekord på den här banan! 🎉" : `<b>Nytt rekord! 🎉</b> Förra rekordet var ${prev} poäng.`)
+    : `Ditt rekord är ${prev} poäng – kan du slå det nästa gång?`;
+  $("#finishText").innerHTML = `${who} hittade alla ${animals} gömda djur och tog dig hela vägen till slottet i<br><i>${esc(game.packTitle)}</i>!<br><br>
+    ${recordLine}<br><small>Längsta svit: 🔥 ${game.bestStreak || 0} i rad · Rätt på första försöket: ${game.firstTry || 0} av ${animals}</small><br><br>Draken Doris bjuder på tårta. 🎂`;
   confetti(4500);
 }
 $("#againBtn").onclick = () => { saved.game = null; game = null; persist(); show("start"); renderStart(); };
@@ -1571,7 +1741,7 @@ $("#homeBtn").onclick = () => { $("#dlg").classList.remove("on"); show("start");
 $("#soundBtn").onclick = () => { sound = !sound; persist(); updateHud(); sfx.pop(); };
 addEventListener("resize", () => { if ($("#play").classList.contains("on") && game) { fitScene(); camera(scene().hero.x, scene().hero.y, false); } });
 addEventListener("keydown", e => {
-  if (!$("#dlg").classList.contains("on")) return;
+  if (!$("#dlg").classList.contains("on") || e.target.tagName === "TEXTAREA") return;
   const k = "abcd1234".indexOf(e.key.toLowerCase());
   if (k >= 0) { const btn = $("#dlgAns").children[k % 4]; if (btn && !btn.disabled) btn.click(); }
   else if (e.key === "Enter" && $("#nextBtn").style.display !== "none") $("#nextBtn").click();
@@ -1580,6 +1750,7 @@ addEventListener("keydown", e => {
 
 renderStart();
 loadPacks();
+fetch("/api/config").then(r => r.json()).then(c => { claudeOk = !!c.hasClaude; }).catch(() => {});
 </script>
 </body>
 </html>
