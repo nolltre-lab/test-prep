@@ -396,7 +396,205 @@ const CHARACTERS = {
     ${eyes(41, 59, 33, m, 5)}${mouth(50, 53, m, 7)}
     ${m==="happy" ? `<path d="M72 46 q10 -6 18 -2 q-6 2 -6 6 q-6 -6 -12 -4z" fill="#ff8a3d"/>` : ""}
     <path d="M44 18 l6 -8 l6 8z" fill="#ffd447"/>` },
+
+  /* ---- Halloween: the hiders and Count Dracula ---- */
+  blackcat: { name: "Svarta katten Sotis", draw: m => `${shadow}
+    <path d="M72 88 q24 -2 18 -28 q-3 -10 -9 -7" stroke="#1d1a26" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <ellipse cx="50" cy="77" rx="22" ry="17" fill="#1d1a26"/>
+    <path d="M28 28 L32 52 L46 40Z M72 28 L68 52 L54 40Z" fill="#1d1a26"/>
+    <path d="M31 35 L34 48 L41 42Z M69 35 L66 48 L59 42Z" fill="#7b4fa8"/>
+    <circle cx="50" cy="52" r="22" fill="#1d1a26"/>
+    ${m === "happy"
+      ? `<path d="M37 50 q5 -6 10 0 M53 50 q5 -6 10 0" stroke="#b6ff5c" stroke-width="3" fill="none" stroke-linecap="round"/>`
+      : `<ellipse cx="42" cy="50" rx="5" ry="6" fill="#b6ff5c"/><ellipse cx="58" cy="50" rx="5" ry="6" fill="#b6ff5c"/><rect x="41" y="45" width="2" height="10" rx="1" fill="#1d1a26"/><rect x="57" y="45" width="2" height="10" rx="1" fill="#1d1a26"/>`}
+    <path d="M47 58 h6 l-3 3z" fill="#ff8fb8"/>
+    <path d="M44 ${m === "sad" ? 66 : 63} q6 ${m === "sad" ? -4 : 4} 12 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M26 58 h12 M26 62 h12 M62 58 h12 M62 62 h12" stroke="#fff" stroke-width="1.2" opacity=".8"/>
+    <path d="M36 74 q14 6 28 0" stroke="#ff7a2f" stroke-width="5" fill="none"/>` },
+
+  bat: { name: "Fladdermusen Fladdra", draw: m => `${shadow}
+    <path d="M44 52 Q28 24 4 32 Q12 40 10 52 Q18 48 24 58 Q30 52 36 62 Z M56 52 Q72 24 96 32 Q88 40 90 52 Q82 48 76 58 Q70 52 64 62 Z" fill="#3b2a52"/>
+    <path d="M36 30 L38 14 L46 26Z M64 30 L62 14 L54 26Z" fill="#4a3566"/>
+    <ellipse cx="50" cy="58" rx="16" ry="22" fill="#4a3566"/>
+    <ellipse cx="50" cy="44" rx="15" ry="13" fill="#7a5c9c"/>
+    ${eyes(44, 56, 42, m, 3.5)}${mouth(50, 49, m, 5)}
+    <path d="M45 50 l2 5 l2 -5z M51 50 l2 5 l2 -5z" fill="#fff"/>
+    <path d="M44 80 l-3 8 M56 80 l3 8" stroke="#3b2a52" stroke-width="3" stroke-linecap="round"/>` },
+
+  ghostling: { name: "Lilla spöket Kurre", draw: m => `
+    <ellipse cx="50" cy="96" rx="18" ry="3" fill="#000" opacity=".08"/>
+    <path d="M26 88 V48 a24 24 0 0 1 48 0 V88 l-6 -6 l-6 6 l-6 -6 l-6 6 l-6 -6 l-6 6 l-6 -6z" fill="#eef3ff" stroke="#c9d3ee" stroke-width="2"/>
+    ${eyes(42, 58, 48, m, 4.5)}${cheeks(36, 64, 57)}
+    ${m === "sad" ? mouth(50, 62, m, 5) : `<ellipse cx="50" cy="63" rx="5" ry="${m === "happy" ? 6 : 4}" fill="${INK}"/>`}
+    <path d="M70 52 q12 -8 14 -20" stroke="#c9d3ee" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <circle cx="85" cy="28" r="6" fill="#ffd447" opacity=".9"/>` },
+
+  spider: { name: "Spindeln Spinn", draw: m => `${shadow}
+    <path d="M50 0 V30" stroke="#d8d8e0" stroke-width="1.5"/>
+    <path d="M34 56 Q18 44 8 52 M34 62 Q16 60 6 70 M36 68 Q20 76 14 90 M40 72 Q30 84 30 96 M66 56 Q82 44 92 52 M66 62 Q84 60 94 70 M64 68 Q80 76 86 90 M60 72 Q70 84 70 96" stroke="#2a2433" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <ellipse cx="50" cy="64" rx="20" ry="18" fill="#2a2433"/>
+    <circle cx="50" cy="42" r="15" fill="#3a3346"/>
+    <circle cx="43" cy="40" r="5.5" fill="#fff"/><circle cx="57" cy="40" r="5.5" fill="#fff"/>
+    ${m === "happy" ? `<path d="M39 41 q4 -4 8 0 M53 41 q4 -4 8 0" stroke="${INK}" stroke-width="2.5" fill="none"/>` : `<circle cx="44" cy="41" r="2.6" fill="${INK}"/><circle cx="58" cy="41" r="2.6" fill="${INK}"/>`}
+    <circle cx="47" cy="33" r="1.8" fill="#ff5c8a"/><circle cx="53" cy="33" r="1.8" fill="#ff5c8a"/>
+    <path d="M44 ${m === "sad" ? 51 : 48} q6 ${m === "sad" ? -4 : 5} 12 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M42 66 l8 -6 l8 6 l-8 6z" fill="#ff7a2f" opacity=".85"/>` },
+
+  skeleton: { name: "Skelettet Skrammel", draw: m => `${shadow}
+    <path d="M50 54 V80 M38 62 q12 4 24 0 M36 68 q14 4 28 0 M38 74 q12 4 24 0" stroke="#f4f1e8" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M50 54 V80 M38 62 q12 4 24 0 M36 68 q14 4 28 0 M38 74 q12 4 24 0" stroke="#bdb5a0" stroke-width="1" fill="none"/>
+    <path d="M36 60 L24 74 L20 86 M64 60 L76 74 L82 66" stroke="#f4f1e8" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M42 82 h16 l-3 6 h-10z" fill="#f4f1e8"/><path d="M44 88 L40 96 M56 88 L60 96" stroke="#f4f1e8" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="50" cy="32" r="21" fill="#f4f1e8" stroke="#cfc8b4" stroke-width="2"/>
+    <rect x="40" y="46" width="20" height="9" rx="3" fill="#f4f1e8" stroke="#cfc8b4" stroke-width="2"/>
+    ${m === "happy" ? `<path d="M37 32 q5 -7 10 0 M53 32 q5 -7 10 0" stroke="${INK}" stroke-width="3.5" fill="none" stroke-linecap="round"/>`
+      : `<ellipse cx="42" cy="31" rx="6" ry="7" fill="${INK}"/><ellipse cx="58" cy="31" rx="6" ry="7" fill="${INK}"/><circle cx="43" cy="30" r="1.8" fill="#fff"/><circle cx="59" cy="30" r="1.8" fill="#fff"/>`}
+    <path d="M48 38 l2 4 l2 -4z" fill="${INK}"/>
+    <path d="M44 48 v6 M48 48 v6 M52 48 v6 M56 48 v6" stroke="#cfc8b4" stroke-width="1.5"/>
+    ${m === "sad" ? `<path d="M44 53 q6 -3 12 0" stroke="${INK}" stroke-width="2" fill="none"/>` : ""}` },
+
+  pumpkinhead: { name: "Pumpe Pumpahuvud", draw: m => `${shadow}
+    <path d="M34 92 L40 66 H60 L66 92Z" fill="#3b2a52"/>
+    <path d="M40 70 q-12 8 -16 16 M60 70 q12 8 16 16" stroke="#3a7d2c" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <ellipse cx="34" cy="42" rx="14" ry="22" fill="#e8741f"/><ellipse cx="66" cy="42" rx="14" ry="22" fill="#e8741f"/>
+    <ellipse cx="50" cy="42" rx="20" ry="25" fill="#f5862a"/>
+    <path d="M48 18 q2 -12 12 -12" stroke="#3a7d2c" stroke-width="6" fill="none" stroke-linecap="round"/>
+    ${m === "happy" ? `<path d="M34 38 l6 -8 l6 8z M54 38 l6 -8 l6 8z" fill="#ffe14d"/>` : `<path d="M34 34 l6 8 l6 -8z M54 34 l6 8 l6 -8z" fill="#ffe14d"/>`}
+    <path d="M36 52 ${m === "sad" ? "q14 -10 28 0 q-14 4 -28 0" : "q14 12 28 0 l-5 3 l-4 -3 l-5 4 l-5 -4 l-4 3z"}" fill="#ffe14d"/>` },
+
+  toad: { name: "Paddan Vårta", draw: m => `${shadow}
+    <ellipse cx="50" cy="72" rx="34" ry="22" fill="#7a8f3a"/>
+    <ellipse cx="50" cy="78" rx="20" ry="12" fill="#c9cf8a"/>
+    <circle cx="34" cy="48" r="12" fill="#7a8f3a"/><circle cx="66" cy="48" r="12" fill="#7a8f3a"/>
+    <ellipse cx="50" cy="60" rx="28" ry="16" fill="#7a8f3a"/>
+    <circle cx="34" cy="48" r="7.5" fill="#ffe14d"/><circle cx="66" cy="48" r="7.5" fill="#ffe14d"/>
+    ${m === "happy" ? eyes(34, 66, 49, m, 4.5) : `<rect x="31" y="46" width="6" height="4" rx="2" fill="${INK}"/><rect x="63" y="46" width="6" height="4" rx="2" fill="${INK}"/>`}
+    ${mouth(50, 64, m, 13)}
+    <circle cx="28" cy="70" r="3" fill="#5f7330"/><circle cx="70" cy="74" r="3.5" fill="#5f7330"/><circle cx="60" cy="62" r="2.5" fill="#5f7330"/>
+    <path d="M30 40 L50 4 L70 40 Z" fill="#2b2340"/><ellipse cx="50" cy="40" rx="30" ry="6" fill="#2b2340"/><path d="M38 34 h24" stroke="#7b4fa8" stroke-width="5"/>` },
+
+  dracula: { name: "Greve Dracula", draw: m => `${shadow}
+    <path d="M14 92 Q20 50 36 40 L50 52 L64 40 Q80 50 86 92Z" fill="#1d1a26"/>
+    <path d="M22 90 Q28 56 38 48 L50 58 L62 48 Q72 56 78 90Z" fill="#b3203a"/>
+    <path d="M38 90 V60 H62 V90Z" fill="#2b2340"/><path d="M46 60 l4 10 l4 -10z" fill="#fff"/><circle cx="50" cy="74" r="4" fill="#ffd447"/>
+    <path d="M30 44 L22 20 L40 36Z M70 44 L78 20 L60 36Z" fill="#1d1a26"/>
+    <ellipse cx="50" cy="38" rx="17" ry="20" fill="#e8e4f0"/>
+    <path d="M33 34 Q34 16 50 16 Q66 16 67 34 Q60 26 50 30 Q40 26 33 34Z" fill="#1d1a26"/>
+    <path d="M31 38 l-5 -6 l2 10z M69 38 l5 -6 l-2 10z" fill="#e8e4f0"/>
+    ${eyes(43, 57, 38, m, 3.5)}
+    <path d="M38 33 l8 2 M62 33 l-8 2" stroke="${INK}" stroke-width="2" stroke-linecap="round"/>
+    ${mouth(50, 47, m, 6)}
+    <path d="M45 47 l2 5 l2 -5z M51 47 l2 5 l2 -5z" fill="#fff"/>` },
+
+  /* ---- Christmas: the hiders and Grummel, the grumpy Christmas troll (an original character) ---- */
+  nisse: { name: "Tomtenissen Nisse", draw: m => `${shadow}
+    <ellipse cx="50" cy="80" rx="20" ry="15" fill="#8a8f99"/>
+    <path d="M32 80 h36" stroke="#e8433a" stroke-width="5"/>
+    <circle cx="50" cy="52" r="18" fill="#ffd9c0"/>
+    <path d="M30 54 Q50 98 70 54 Q60 68 50 68 Q40 68 30 54Z" fill="#fff" stroke="#e6e6ee"/>
+    <path d="M28 46 Q50 -4 74 30 Q66 30 72 46Z" fill="#e8433a"/>
+    <circle cx="74" cy="30" r="6" fill="#fff"/>
+    <rect x="28" y="42" width="44" height="9" rx="4.5" fill="#fff"/>
+    ${eyes(43, 57, 56, m, 3.2)}
+    <circle cx="50" cy="62" r="4" fill="#ff9f8a"/>
+    ${m === "sad" ? `<path d="M45 72 q5 -3 10 0" stroke="${INK}" stroke-width="2" fill="none"/>` : `<path d="M45 69 q5 4 10 0" stroke="${INK}" stroke-width="2" fill="none"/>`}` },
+
+  gingerbread: { name: "Pepparkaksgubben Pepparn", draw: m => `${shadow}
+    <ellipse cx="50" cy="66" rx="18" ry="22" fill="#b8722e"/>
+    <ellipse cx="28" cy="58" rx="12" ry="7" fill="#b8722e" transform="rotate(-20 28 58)"/>
+    <ellipse cx="72" cy="58" rx="12" ry="7" fill="#b8722e" transform="rotate(20 72 58)"/>
+    <ellipse cx="40" cy="88" rx="8" ry="9" fill="#b8722e"/><ellipse cx="60" cy="88" rx="8" ry="9" fill="#b8722e"/>
+    <circle cx="50" cy="36" r="17" fill="#b8722e"/>
+    <path d="M20 58 l3 -4 l3 4 l3 -4 M74 54 l3 4 l3 -4 l3 4 M35 90 l3 -3 l3 3 l3 -3 M55 90 l3 -3 l3 3 l3 -3" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+    ${eyes(44, 56, 34, m, 2.8)}
+    ${m === "sad" ? `<path d="M44 45 q6 -4 12 0" stroke="#fff" stroke-width="2.5" fill="none"/>` : `<path d="M43 42 q7 6 14 0" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>`}
+    <circle cx="50" cy="60" r="3" fill="#e8433a"/><circle cx="50" cy="70" r="3" fill="#3fa94e"/>` },
+
+  snowkid: { name: "Snöungen Flinga", draw: m => `${shadow}
+    <circle cx="50" cy="74" r="20" fill="#fff" stroke="#d8e4ef" stroke-width="2"/>
+    <path d="M32 66 L14 54 M68 66 L86 54 M18 57 l-6 -2 M82 57 l6 -2" stroke="#7a5233" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="50" cy="44" r="16" fill="#fff" stroke="#d8e4ef" stroke-width="2"/>
+    <path d="M34 38 Q50 14 66 38Z" fill="#3f9fd6"/><circle cx="50" cy="20" r="5" fill="#fff"/><rect x="33" y="35" width="34" height="6" rx="3" fill="#7ad7ff"/>
+    ${eyes(44, 56, 45, m, 2.8)}
+    <path d="M50 49 l12 2 l-12 3z" fill="#ff8a3d"/>
+    ${mouth(50, 54, m, 5)}
+    <path d="M36 58 q14 6 28 0 v6 q-14 4 -28 0z" fill="#e8433a"/><path d="M58 62 l4 12 l5 -1 l-3 -11z" fill="#e8433a"/>
+    <circle cx="50" cy="73" r="2.5" fill="${INK}"/><circle cx="50" cy="81" r="2.5" fill="${INK}"/>` },
+
+  reindeer: { name: "Renen Rulle", draw: m => `${shadow}
+    <path d="M38 30 L30 8 M30 16 L22 10 M32 22 L24 22 M62 30 L70 8 M70 16 L78 10 M68 22 L76 22" stroke="#7a5233" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <ellipse cx="50" cy="78" rx="24" ry="16" fill="#9a6640"/>
+    <ellipse cx="30" cy="38" rx="9" ry="5" fill="#9a6640" transform="rotate(-30 30 38)"/><ellipse cx="70" cy="38" rx="9" ry="5" fill="#9a6640" transform="rotate(30 70 38)"/>
+    <ellipse cx="50" cy="46" rx="17" ry="19" fill="#a8744a"/>
+    <ellipse cx="50" cy="58" rx="11" ry="8" fill="#e8c9a0"/>
+    ${eyes(43, 57, 42, m, 3.5)}
+    <ellipse cx="50" cy="55" rx="5" ry="3.5" fill="${INK}"/>
+    ${mouth(50, 60, m, 4)}
+    <path d="M34 70 q16 8 32 0" stroke="#e8433a" stroke-width="5" fill="none"/><circle cx="50" cy="76" r="4" fill="#ffd447"/>` },
+
+  polarbear: { name: "Isbjörnen Isak", draw: m => `${shadow}
+    <ellipse cx="50" cy="76" rx="28" ry="18" fill="#fbfbff" stroke="#dfe6f0" stroke-width="2"/>
+    <circle cx="32" cy="30" r="8" fill="#fbfbff" stroke="#dfe6f0" stroke-width="2"/><circle cx="68" cy="30" r="8" fill="#fbfbff" stroke="#dfe6f0" stroke-width="2"/>
+    <circle cx="50" cy="46" r="22" fill="#fbfbff" stroke="#dfe6f0" stroke-width="2"/>
+    <ellipse cx="50" cy="56" rx="11" ry="8" fill="#eef1f7"/>
+    ${eyes(42, 58, 42, m, 3.5)}${cheeks(34, 66, 52)}
+    <ellipse cx="50" cy="52" rx="5" ry="3.5" fill="${INK}"/>${mouth(50, 59, m, 4)}
+    <path d="M30 64 q20 8 40 0 v7 q-20 6 -40 0z" fill="#3fa94e"/><path d="M60 68 l3 14 l6 -2 l-4 -12z" fill="#3fa94e"/>` },
+
+  julbock: { name: "Julbocken Halmis", draw: m => `${shadow}
+    <path d="M34 26 Q20 14 28 4 M66 26 Q80 14 72 4" stroke="#e0b84a" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M30 64 H72 M28 70 H74 M32 76 H70" stroke="#d9ad3c" stroke-width="7" stroke-linecap="round"/>
+    <path d="M36 80 V94 M46 80 V94 M58 80 V94 M68 80 V94" stroke="#d9ad3c" stroke-width="6" stroke-linecap="round"/>
+    <path d="M40 64 v14 M64 64 v14" stroke="#e8433a" stroke-width="4"/>
+    <ellipse cx="50" cy="40" rx="15" ry="17" fill="#e8c35a"/>
+    <path d="M38 30 q12 -4 24 0 M38 48 q12 -4 24 0" stroke="#d9ad3c" stroke-width="2" fill="none"/>
+    <path d="M36 54 q14 8 28 0" stroke="#e8433a" stroke-width="5" fill="none"/>
+    ${eyes(44, 56, 38, m, 3)}${mouth(50, 45, m, 4)}` },
+
+  grummel: { name: "Grummel, det sura jultrollet", draw: m => `${shadow}
+    <path d="M70 60 q22 0 22 22 q0 12 -14 12 h-12z" fill="#a37a4a"/><path d="M76 60 q4 -8 10 -6" stroke="#7a5233" stroke-width="3" fill="none"/>
+    <rect x="78" y="70" width="10" height="9" fill="#e8433a"/><rect x="82" y="70" width="2" height="9" fill="#ffd447"/>
+    <ellipse cx="46" cy="76" rx="24" ry="18" fill="#7f8fa6"/>
+    <ellipse cx="46" cy="44" rx="25" ry="24" fill="#8fa0b8"/>
+    <path d="M22 34 Q24 12 46 14 Q70 12 70 34 Q62 22 54 28 Q46 18 38 28 Q30 22 22 34Z" fill="#4f7a3c"/>
+    <path d="M24 46 l-8 -4 l6 10z M68 46 l8 -4 l-6 10z" fill="#8fa0b8"/>
+    <path d="M32 ${m === "happy" ? 34 : 38} l12 ${m === "happy" ? -2 : 3} M60 ${m === "happy" ? 34 : 38} l-12 ${m === "happy" ? -2 : 3}" stroke="#3a3f4a" stroke-width="4" stroke-linecap="round"/>
+    ${m === "happy" ? eyes(38, 54, 42, m, 4) : `<circle cx="38" cy="43" r="4.5" fill="#ffd447"/><circle cx="54" cy="43" r="4.5" fill="#ffd447"/><circle cx="38" cy="44" r="2.2" fill="${INK}"/><circle cx="54" cy="44" r="2.2" fill="${INK}"/>`}
+    <ellipse cx="46" cy="52" rx="8" ry="6" fill="#6f7f96"/>
+    ${m === "happy" ? `<path d="M34 60 q12 10 24 0" stroke="${INK}" stroke-width="3" fill="#ff7a8a"/>` : `<path d="M34 64 q12 -8 24 0" stroke="${INK}" stroke-width="3" fill="none" stroke-linecap="round"/>`}` },
 };
+
+/* Holidays change the whole journey: the hiders, the hiding places, the places' names, the boss and
+   the final place. A game keeps the holiday it started with. */
+const HOLIDAYS = {
+  halloween: {
+    names: { forest: "Spökskogen", lake: "Dimmiga träsket", valley: "Häxdalen", mushroom: "Paddsvampskogen", mountain: "Fladdermusberget", castle: "Draculas slott" },
+    spots: { lake: ["reeds", "water", "tombstone", "bigpumpkin", "cauldron", "tombstone"], other: ["tombstone", "tombstone", "bigpumpkin", "cauldron", "hollow", "stump", "log", "bush"] },
+    hiders: ["blackcat", "bat", "ghostling", "spider", "skeleton", "pumpkinhead", "toad"], water: ["toad"],
+    boss: "dracula", short: "greven", emoji: "🧛", hiderWord: ["litet monster", "små monster"], icon: "🦇",
+    intro: n => `Muahaha! Jag är greve Dracula. Svara rätt på ${n} frågor så släpper jag in dig i mitt slott! Fråga 1:`,
+    waiting: "Greve Dracula väntar i sitt slott …",
+    finish: "Greve Dracula bjuder på godis och saft – bus eller godis! 🍬",
+  },
+  christmas: {
+    names: { forest: "Granskogen", lake: "Isiga sjön", valley: "Pepparkaksdalen", mushroom: "Tomteskogen", mountain: "Snöberget", castle: "Nordpolen" },
+    spots: { lake: ["giftpile", "sleigh", "snowbush", "rock", "stump", "gingerhouse"], other: ["giftpile", "sleigh", "gingerhouse", "snowbush", "log", "stump", "burrow"] },
+    hiders: ["nisse", "gingerbread", "snowkid", "reindeer", "polarbear", "julbock"], water: ["polarbear"],
+    boss: "grummel", short: "Grummel", emoji: "🎁", hiderWord: ["tomtevän", "tomtevänner"], icon: "🎅",
+    intro: n => `Hmpf! Jag är Grummel och jag har tagit alla julklappar. Svara rätt på ${n} frågor så får du tillbaka dem! Fråga 1:`,
+    waiting: "Grummel har tagit julklapparna – hitta honom vid Nordpolen!",
+    finish: "Grummel blev glad igen och lämnade tillbaka alla julklappar. Julen är räddad! 🎄",
+  },
+};
+const hol = () => (game && HOLIDAYS[game.holiday]) || null;
+const placeName = p => (hol() && hol().names[p]) || PLACES[p].name;
+const bossShort = () => (hol() && hol().short) || "draken";
+const hiderWord = n => { const w = hol() ? hol().hiderWord : ["djur", "djur"]; return n === 1 ? w[0] : w[1]; };
+function hidersFor(kind, holiday) {
+  const H = HOLIDAYS[holiday];
+  if (!H) return SPOT_KINDS[kind].animals;
+  return WATER_KINDS.includes(kind) ? H.water : H.hiders;
+}
 
 /* Heroes the player can choose — the sillier the better. */
 const HEROES = {
@@ -606,6 +804,13 @@ const SPOT_KINDS = {
   hollow:   { box: [90, 300],  size: 46, restTop: -102, hide: 16, peek: -22, out: -42, clipEllipse: [0, -110, 17, 22], eyes: [0, -110], animals: ["owl", "squirrel"] },
   treetop:  { box: [130, 340], size: 44, restTop: -270, hide: 12, peek: -26, out: -40, clipY: 0, eyes: [0, -244], animals: ["owl", "squirrel"] },
   water:    { box: [110, 80],  size: 64, restTop: 2,   hide: 0,  peek: -24, out: -52, clipY: 0, animals: ["frog", "turtle", "beaver"] },
+  // holiday hiding places (the hiders come from HOLIDAYS)
+  tombstone:  { box: [110, 105], size: 64, restTop: -90, hide: 12, peek: -28, out: -46, clipY: -4, animals: ["fox", "bunny"] },
+  bigpumpkin: { box: [140, 100], size: 66, restTop: -88, hide: 12, peek: -28, out: -48, clipY: -4, animals: ["fox", "bunny"] },
+  cauldron:   { box: [120, 90],  size: 58, restTop: -44, hide: 0,  peek: -30, out: -56, clipY: -50, eyes: [0, -54], animals: ["frog"] },
+  giftpile:   { box: [140, 100], size: 64, restTop: -88, hide: 12, peek: -28, out: -46, clipY: -4, animals: ["bunny"] },
+  sleigh:     { box: [150, 80],  size: 62, restTop: -62, hide: 12, peek: -28, out: -44, clipY: -20, animals: ["bunny"] },
+  gingerhouse:{ box: [140, 130], size: 58, restTop: -116, hide: 10, peek: -26, out: -40, clipY: -4, eyes: [-24, -48], animals: ["bunny"] },
 };
 const WATER_KINDS = ["water", "reeds"];
 const TALL_KINDS = ["hollow", "treetop"];
@@ -631,6 +836,12 @@ const EMPTY = {
   stump: ["Bara en gammal stubbe.", "Myror bor i stubben 🐜", "Tomt! Men här växer svamp 🍄"],
   burrow: ["Bara en mullvad som sover 😴", "Ett tomt hål. Ekooo!", "En mask tittade ut 🪱"],
   treetop: ["Bara löv och kvistar 🍃", "En fågel flög iväg! 🐦", "Tomt i trädkronan!"],
+  tombstone: ["Här vilar … ingen alls!", "Bara mossa och en mask 🪱", "Buuu! Nej, det var bara vinden."],
+  bigpumpkin: ["En jättepumpa – men tom!", "Pumpan luktar paj 🥧", "Bara frön inuti!"],
+  cauldron: ["Bubbel bubbel … bara grön soppa!", "Häxan har glömt sin slev här 🥄", "Det luktar paddsvamp!"],
+  giftpile: ["Bara paket – ingen här!", "Ett paket skramlade … det var en leksak!", "Tomten har lämnat paket här 🎁"],
+  sleigh: ["Släden är tom!", "Bara en filt i släden.", "Bjällror! Men ingen här 🔔"],
+  gingerhouse: ["Pepparkakshuset är tomt!", "Bara godis i fönstret 🍬", "Någon har ätit av taket!"],
 };
 
 /* =====================================================================
@@ -725,7 +936,7 @@ function renderStart() {
   $("#goBtn").disabled = !setup.pack;
   const g = saved.game;
   $("#continueBtn").style.display = g && !g.finished ? "block" : "none";
-  if (g && !g.finished) $("#continueBtn").textContent = `Fortsätt i ${PLACES[g.scenes[g.si].place].name} (${g.packTitle.slice(0, 30)})`;
+  if (g && !g.finished) $("#continueBtn").textContent = `Fortsätt i ${(HOLIDAYS[g.holiday] && HOLIDAYS[g.holiday].names[g.scenes[g.si].place]) || PLACES[g.scenes[g.si].place].name} (${g.packTitle.slice(0, 30)})`;
 }
 
 // Packs are picked by group first: a grade (åk, from the pack's "grades"), a category such as
@@ -848,15 +1059,16 @@ function giveClue(sp) {
   }
 }
 
-function buildScene(place, animals, si = 0) {
-  const def = PLACES[place];
+function buildScene(place, animals, si = 0, holiday = null) {
+  const def = PLACES[place], H = HOLIDAYS[holiday];
   const seed = Math.floor(Math.random() * 100000);
   if (place === "castle") {
     return { place, seed, open: false, hero: { x: 840, y: 790 },
-      spots: [{ kind: "boss", x: 1060, y: 790, animal: "dragon", found: true, answered: false, stars: 0, bossLeft: BOSS_QUESTIONS }] };
+      spots: [{ kind: "boss", x: 1060, y: 790, animal: H ? H.boss : "dragon", found: true, answered: false, stars: 0, bossLeft: BOSS_QUESTIONS }] };
   }
+  const spotList = H ? (place === "lake" ? H.spots.lake : H.spots.other) : def.spots;
   const count = animals + Math.max(3, animals + 1) + Math.min(si, 2);  // more empty spots further on
-  const kinds = shuffle(Array.from({ length: count }, (_, i) => def.spots[i % def.spots.length]));
+  const kinds = shuffle(Array.from({ length: count }, (_, i) => spotList[i % spotList.length]));
   const x0 = 230, x1 = GATE_X - 160, step = (x1 - x0) / (count - 1);
   const spots = kinds.map((kind, i) => {
     const x = x0 + i * step + (Math.random() - .5) * step * .5;
@@ -870,7 +1082,7 @@ function buildScene(place, animals, si = 0) {
   // Put animals in spots they like; don't use the same animal twice in a scene if avoidable.
   const used = new Set();
   shuffle(spots.map((_, i) => i)).slice(0, animals).forEach(i => {
-    const options = SPOT_KINDS[spots[i].kind].animals;
+    const options = hidersFor(spots[i].kind, holiday);
     const fresh = options.filter(a => !used.has(a));
     const a = pick(fresh.length ? fresh : options);
     used.add(a); spots[i].animal = a;
@@ -882,7 +1094,7 @@ function buildScene(place, animals, si = 0) {
     if (!sp.animal) return;
     let style = weighted(weights);
     if (style === "eyes" && !SPOT_KINDS[sp.kind].eyes) style = "clue";
-    if (style === "runner" && (runners || WATER_KINDS.includes(sp.kind) || !runTarget(spots, sp))) style = "peek";
+    if (style === "runner" && (runners || WATER_KINDS.includes(sp.kind) || !runTarget(spots, sp, holiday))) style = "peek";
     if (style === "runner") runners++;
     sp.style = style;
     if (style === "clue") giveClue(sp);
@@ -904,12 +1116,13 @@ async function startJourney() {
   if (qs.length < 3) { alert("Det här paketet har för få frågor för ett äventyr."); $("#goBtn").disabled = false; return; }
 
   const len = LENGTHS.find(l => l.scenes === setup.length) || LENGTHS[1];
-  const scenes = ROUTES[len.scenes].map((p, si) => buildScene(p, len.per, si));
-  scenes.push(buildScene("castle", 0));
+  const holiday = theme().holiday;
+  const scenes = ROUTES[len.scenes].map((p, si) => buildScene(p, len.per, si, holiday));
+  scenes.push(buildScene("castle", 0, 0, holiday));
 
   game = {
     pack: setup.pack, packTitle: setup.packTitle || pack.title || setup.pack,
-    hero: setup.hero, name: setup.name, scenes, si: 0, stars: 0, len: len.scenes,
+    hero: setup.hero, name: setup.name, scenes, si: 0, stars: 0, len: len.scenes, holiday,
     points: 0, streak: 0, bestStreak: 0, firstTry: 0,
     questions: qs, qi: 0, writeQs: qs.filter(q => q.write), finished: false, startedAt: Date.now(),
   };
@@ -962,7 +1175,7 @@ const THEME_PRESETS = {
   autumn:    { label: "Höst 🍂", season: "autumn", timeOfDay: "day", weather: "cloudy" },
   winter:    { label: "Vinter ❄️", season: "winter", timeOfDay: "day", weather: "snow" },
   night:     { label: "Natt 🌙", season: "summer", timeOfDay: "night", weather: "clear" },
-  halloween: { label: "Halloween 🎃", season: "autumn", timeOfDay: "dusk", weather: "fog", holiday: "halloween" },
+  halloween: { label: "Halloween 🎃", season: "autumn", timeOfDay: "night", weather: "clear", holiday: "halloween" },
   christmas: { label: "Jul 🎄", season: "winter", timeOfDay: "dusk", weather: "snow", holiday: "christmas" },
 };
 const SEASON_WORD = { spring: "vår", summer: "sommar", autumn: "höst", winter: "vinter" };
@@ -980,7 +1193,12 @@ function clockTheme() {
 function theme() {
   const preset = setup.theme && setup.theme !== "auto" ? THEME_PRESETS[setup.theme] : null;
   const t = preset || liveTheme || clockTheme();
-  return { season: t.season || "summer", timeOfDay: t.timeOfDay || "day", weather: t.weather || "clear", holiday: t.holiday || null };
+  const holiday = game && "holiday" in game ? game.holiday : t.holiday || null;
+  return {
+    season: holiday === "christmas" ? "winter" : holiday === "halloween" ? "autumn" : t.season || "summer",
+    timeOfDay: holiday === "halloween" ? "night" : t.timeOfDay || "day",
+    weather: t.weather || "clear", holiday,
+  };
 }
 function describeTheme(t) {
   const parts = [SEASON_WORD[t.season], WEATHER_WORD[t.weather], TIME_WORD[t.timeOfDay]];
@@ -1002,6 +1220,7 @@ const SEASON_LOOK = {
 const crownColors = (T, k = 0) => { const t = SEASON_LOOK[T.season].trees; return t[k % t.length]; };
 
 function skyColors(p, T) {
+  if (T.holiday === "halloween") return ["#140a26", "#3b1d5c"];
   if (T.timeOfDay === "night") return ["#0b1736", "#25386b"];
   if (T.timeOfDay === "dusk") return T.holiday === "halloween" ? ["#3b1d5c", "#ff8a4c"] : ["#5b4f9e", "#ffb07a"];
   if (T.timeOfDay === "dawn") return ["#8fb6e8", "#ffc9a0"];
@@ -1027,11 +1246,71 @@ function snowman(x, y) {
     <path d="M-10 -36 h20" stroke="#e8433a" stroke-width="4" stroke-linecap="round"/></g>`;
 }
 
+
+// A spider web, hanging down from (x, y).
+function web(x, y, s) {
+  const spokes = [0, 30, 60, 90, 120, 150, 180].map(a => { const r = a * Math.PI / 180; return [x + Math.cos(r) * s, y + Math.sin(r) * s]; });
+  let d = spokes.map(([px, py]) => `M${x} ${y} L${px.toFixed(1)} ${py.toFixed(1)}`).join(" ");
+  [.35, .65, 1].forEach(f => { d += " M" + spokes.map(([px, py]) => `${(x + (px - x) * f).toFixed(1)} ${(y + (py - y) * f).toFixed(1)}`).join(" L"); });
+  return `<path d="${d}" stroke="#e8e6f0" stroke-width="1.4" fill="none" opacity=".7"/>`;
+}
+function deadTree(x, y, s) {
+  return `<g transform="translate(${x} ${y}) scale(${s})" fill="none" stroke="#1e1428" stroke-linecap="round">
+    <path d="M0 4 V-70" stroke-width="12"/><path d="M0 -40 L-26 -70 L-34 -96 M-26 -70 L-48 -80 M0 -58 L22 -92 L18 -118 M22 -92 L44 -100 M0 -70 L4 -104" stroke-width="6"/></g>`;
+}
+function smallTombstone(x, y) {
+  return `<g transform="translate(${x} ${y})"><path d="M-16 0 V-30 Q-16 -42 0 -42 Q16 -42 16 -30 V0Z" fill="#6f6b7e"/><path d="M0 -34 V-14 M-7 -26 H7" stroke="#4f4b5e" stroke-width="3"/></g>`;
+}
+function candyCane(x, y) {
+  return `<g transform="translate(${x} ${y})"><path d="M0 0 V-46 Q0 -60 12 -60 Q24 -60 24 -48" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <path d="M0 0 V-46 Q0 -60 12 -60 Q24 -60 24 -48" stroke="#e8433a" stroke-width="9" fill="none" stroke-dasharray="7 7" stroke-linecap="round"/></g>`;
+}
+// Positions for larger decorations that don't cover a hiding place, the stream, the sign or the start.
+function placeFree(sc, base, n, half = 34, yMin = 660, yMax = 870) {
+  const boxes = sc.spots.map(sp => { const k = SPOT_KINDS[sp.kind] || { box: [200, 200] }; return [sp.x - k.box[0] / 2 - 24, sp.y - k.box[1] - 10, sp.x + k.box[0] / 2 + 24, sp.y + 34]; });
+  boxes.push([GATE_X - 130, 0, W, H], [0, 680, 200, 870]);
+  if (sc.place === "castle") boxes.push([620, 360, 1560, 880]);
+  const out = [];
+  for (let t = 0; out.length < n && t < n * 15; t++) {
+    const x = 60 + rnd(base + t * 3) * (W - 120), y = yMin + rnd(base + t * 3 + 1) * (yMax - yMin);
+    const b = [x - half, y - half * 1.8, x + half, y + 8];
+    if (boxes.concat(out.map(o => o.box)).some(c => b[0] < c[2] && b[2] > c[0] && b[1] < c[3] && b[3] > c[1])) continue;
+    out.push({ x, y, box: b });
+  }
+  return out;
+}
+function draculaCastle(x, y) {
+  return `<g transform="translate(${x} ${y})">
+    <rect x="-150" y="-170" width="300" height="180" fill="#2a2238"/>
+    ${[-150, -100, -50, 0, 50, 100].map(cx => `<rect x="${cx}" y="-190" width="26" height="22" fill="#2a2238"/>`).join("")}
+    <rect x="-210" y="-280" width="80" height="290" fill="#231c30"/><rect x="130" y="-280" width="80" height="290" fill="#231c30"/>
+    <rect x="-40" y="-320" width="80" height="160" fill="#231c30"/>
+    <path d="M-220 -280 L-170 -380 L-120 -280Z M120 -280 L170 -380 L220 -280Z M-50 -320 L0 -420 L50 -320Z" fill="#17121f"/>
+    ${[[-170, -220], [170, -220], [0, -260], [-90, -110], [90, -110], [-170, -140], [170, -140]].map(([wx, wy]) => `<rect x="${wx - 10}" y="${wy - 14}" width="20" height="28" rx="10" fill="#ffb347" class="pulse"/>`).join("")}
+    <path d="M-44 10 v-70 a44 44 0 0 1 88 0 v70z" fill="#120d18"/>
+    ${web(-150, -170, 40)}${web(150, -170, 40).replace("<path", '<path transform="scale(-1 1)"')}
+  </g>`;
+}
+function northPole(x, y) {
+  const house = (hx, hy, s) => `<g transform="translate(${hx} ${hy}) scale(${s})"><rect x="-60" y="-80" width="120" height="80" fill="#c8323e"/>
+    <path d="M-74 -76 L0 -136 L74 -76Z" fill="#fff"/><path d="M-74 -76 L0 -136 L74 -76" stroke="#e3ecf4" stroke-width="6" fill="none"/>
+    <rect x="-40" y="-60" width="26" height="24" fill="#ffd447" class="pulse"/><rect x="14" y="-60" width="26" height="24" fill="#ffd447" class="pulse" style="animation-delay:.6s"/>
+    <rect x="-12" y="-38" width="24" height="38" fill="#6e4528"/></g>`;
+  const tree = `<g transform="translate(-230 0)"><rect x="-10" y="-30" width="20" height="30" fill="#6e4528"/>
+    <path d="M0 -250 L60 -150 H30 L80 -70 H40 L100 -20 H-100 L-40 -70 H-80 L-30 -150 H-60Z" fill="#2f7d4a"/>
+    ${[[-30, -60], [40, -50], [0, -110], [-20, -160], [30, -140], [0, -200], [-60, -30], [60, -30]].map(([bx, by], n) => `<circle cx="${bx}" cy="${by}" r="7" fill="${["#ff5c5c", "#ffd447", "#7ad7ff", "#ff8fd8"][n % 4]}" class="pulse" style="animation-delay:${n * .25}s"/>`).join("")}
+    <path d="M0 -270 l7 14 l15 2 l-11 10 l3 15 l-14 -7 l-14 7 l3 -15 l-11 -10 l15 -2z" fill="#ffd447"/></g>`;
+  return `<g transform="translate(${x} ${y})">${house(-20, 0, 1.3)}${house(200, -10, 1)}${tree}
+    <g transform="translate(110 10)"><rect x="-8" y="-200" width="16" height="200" fill="#fff"/><path d="M-8 -200 h16 M-8 -170 h16 M-8 -140 h16 M-8 -110 h16 M-8 -80 h16 M-8 -50 h16" stroke="#e8433a" stroke-width="12"/>
+      <circle cy="-206" r="12" fill="#ffd447"/><rect x="-70" y="-176" width="140" height="34" rx="8" fill="#fff" stroke="#c8323e" stroke-width="4"/>
+      <text y="-152" text-anchor="middle" font-size="20" font-weight="bold" fill="#c8323e">NORDPOLEN</text></g></g>`;
+}
+
 function background(sc) {
   const seed = sc.seed, p = sc.place, T = theme(), look = SEASON_LOOK[T.season];
   const winter = T.season === "winter", night = T.timeOfDay === "night";
   const sky = skyColors(p, T);
-  const ground = winter ? look.ground : p === "mountain" ? ["#a9c99a", "#8fb284"] : p === "mushroom" && T.season === "summer" ? ["#7dbf7a", "#5e9f64"] : look.ground;
+  const ground = T.holiday === "halloween" ? ["#4f5a42", "#343d2e"] : winter ? look.ground : p === "mountain" ? ["#a9c99a", "#8fb284"] : p === "mushroom" && T.season === "summer" ? ["#7dbf7a", "#5e9f64"] : look.ground;
   const water = winter ? ["#d4ecf7", "#a3d2e8"] : ["#7fd0ee", "#3f9fd6"];
   let s = `<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${sky[0]}"/><stop offset="1" stop-color="${sky[1]}"/></linearGradient>
     <linearGradient id="grd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${ground[0]}"/><stop offset="1" stop-color="${ground[1]}"/></linearGradient>
@@ -1042,7 +1321,7 @@ function background(sc) {
   if (night) {
     for (let k = 0; k < 45; k++) s += `<circle cx="${(rnd(seed + 600 + k) * W).toFixed(0)}" cy="${(rnd(seed + 650 + k) * 420).toFixed(0)}" r="${(1 + rnd(seed + 700 + k) * 1.8).toFixed(1)}" fill="#fff" ${k % 3 ? "" : `class="pulse" style="animation-delay:${(rnd(seed + k) * 2).toFixed(1)}s"`}/>`;
     const mx = 1100 + rnd(seed) * 300;
-    s += `<circle cx="${mx}" cy="110" r="44" fill="#fdf6d8"/><circle cx="${mx + 14}" cy="98" r="8" fill="#ece3bd"/><circle cx="${mx - 12}" cy="124" r="6" fill="#ece3bd"/>`;
+    if (T.holiday !== "halloween") s += `<circle cx="${mx}" cy="110" r="44" fill="#fdf6d8"/><circle cx="${mx + 14}" cy="98" r="8" fill="#ece3bd"/><circle cx="${mx - 12}" cy="124" r="6" fill="#ece3bd"/>`;
   } else if (T.timeOfDay === "dawn" || T.timeOfDay === "dusk") {
     s += `<circle cx="${T.timeOfDay === "dawn" ? 260 : 1300}" cy="500" r="80" fill="${T.holiday === "halloween" ? "#ff9d4d" : "#ffb35c"}" opacity=".95"/>`;
   } else if (T.weather === "clear" || T.weather === "partly") {
@@ -1051,16 +1330,30 @@ function background(sc) {
   const clouds = { clear: 2, partly: 5, cloudy: 9, rain: 10, thunder: 10, snow: 9, fog: 6 }[T.weather];
   const cloudColor = night ? "#34446e" : ["rain", "thunder"].includes(T.weather) ? "#8d97a5" : T.weather === "cloudy" ? "#e4e8ec" : "#fff";
   for (let k = 0; k < clouds; k++) s += cloud(rnd(seed + k) * W, 60 + rnd(seed + k + 9) * 170, .7 + rnd(seed + k + 3) * .7, cloudColor);
-  if (T.holiday === "halloween") for (let k = 0; k < 4; k++) s += bat(200 + rnd(seed + 800 + k) * 1200, 120 + rnd(seed + 810 + k) * 220);
 
   if (p === "mountain" || p === "lake" || p === "valley") {
     for (let k = 0; k < 6; k++) {
       const x = k * 300 + rnd(seed + 20 + k) * 120 - 60, h = 230 + rnd(seed + 30 + k) * 170, base = p === "lake" ? 380 : 560;
-      s += `<path d="M${x - 220} ${base} L${x} ${base - h} L${x + 220} ${base}Z" fill="${winter ? (k % 2 ? "#c9d6e8" : "#b8c8de") : k % 2 ? "#a7b9d6" : "#93a8ca"}"/>
-        <path d="M${x - 50} ${base - h + 50} L${x} ${base - h} L${x + 50} ${base - h + 50} L${x + 22} ${base - h + 40} L${x} ${base - h + 54} L${x - 22} ${base - h + 40}Z" fill="#fff"/>`;
+      const dark = T.holiday === "halloween";
+      s += `<path d="M${x - 220} ${base} L${x} ${base - h} L${x + 220} ${base}Z" fill="${dark ? (k % 2 ? "#3d3354" : "#342b49") : winter ? (k % 2 ? "#c9d6e8" : "#b8c8de") : k % 2 ? "#a7b9d6" : "#93a8ca"}"/>
+        <path d="M${x - 50} ${base - h + 50} L${x} ${base - h} L${x + 50} ${base - h + 50} L${x + 22} ${base - h + 40} L${x} ${base - h + 54} L${x - 22} ${base - h + 40}Z" fill="${dark ? "#8f86a8" : "#fff"}"/>`;
     }
   }
-  if (p === "forest" || p === "mushroom" || p === "valley") {
+  const spooky = T.holiday === "halloween";
+  if (spooky) {
+    // big moon, bare black trees with webs, a graveyard fence
+    s += `<circle cx="${1150 + rnd(seed) * 200}" cy="150" r="80" fill="#ffe9b0" opacity=".2"/><circle cx="${1150 + rnd(seed) * 200}" cy="150" r="62" fill="#ffe9b0"/>`;
+    for (let k = 0; k < 6; k++) s += bat(150 + rnd(seed + 820 + k) * 1300, 90 + rnd(seed + 830 + k) * 280);
+    if (p !== "lake") {
+      s += `<path d="M0 520 Q200 440 420 500 T860 490 T1300 480 T1600 500 V640 H0Z" fill="#2d2440"/>`;
+      for (let k = 0; k < 16; k++) {
+        const tx = k * 100 + rnd(seed + 40 + k) * 50, ty = 625 - rnd(seed + 60 + k) * 30, ts = .9 + rnd(seed + 80 + k) * .6;
+        s += deadTree(tx, ty, ts);
+        if (k % 3 === 0) s += web(tx - 26 * ts, ty - 70 * ts, 22 * ts);
+      }
+    }
+  }
+  if (!spooky && (p === "forest" || p === "mushroom" || p === "valley")) {
     s += `<path d="M0 520 Q200 440 420 500 T860 490 T1300 480 T1600 500 V640 H0Z" fill="${winter ? "#e3ecf4" : p === "mushroom" ? "#8ea6d9" : T.season === "autumn" ? "#c9cf8a" : "#a6d98f"}"/>`;
     for (let k = 0; k < 24; k++) {
       const c = p === "mushroom" && T.season === "summer" ? ["#4f7d8f", "#5f8f9f"] : crownColors(T, k);
@@ -1079,11 +1372,11 @@ function background(sc) {
       <ellipse cx="${wx}" cy="635" rx="150" ry="26" fill="url(#wat)"/>
       <ellipse cx="${wx}" cy="618" rx="70" ry="12" fill="#fff" opacity=".6"/>`;
   }
-  if (p === "mountain") {
+  if (p === "mountain" && !spooky) {
     for (let k = 0; k < 18; k++) s += pine(k * 95 + rnd(seed + 50 + k) * 40, 640 - rnd(seed + 70 + k) * 30, .8 + rnd(seed + 90 + k) * .5, k % 2 ? "#2f7d4a" : "#3a8a55", true);
   }
   if (p === "lake") {
-    for (let k = 0; k < 30; k++) s += pine(k * 56 + rnd(seed + 50 + k) * 20, 384, .45 + rnd(seed + 90 + k) * .25, k % 2 ? "#2f7d4a" : "#3a8a55", winter);
+    for (let k = 0; k < 30; k++) s += spooky ? deadTree(k * 56 + rnd(seed + 50 + k) * 20, 384, .4) : pine(k * 56 + rnd(seed + 50 + k) * 20, 384, .45 + rnd(seed + 90 + k) * .25, k % 2 ? "#2f7d4a" : "#3a8a55", winter);
     s += `<rect x="0" y="380" width="${W}" height="260" fill="url(#wat)"/>`;
     for (let k = 0; k < (winter ? 10 : 26); k++) {
       const x = rnd(seed + 120 + k) * W, y = 400 + rnd(seed + 140 + k) * 210;
@@ -1096,11 +1389,11 @@ function background(sc) {
     }
   }
   if (p === "castle") {
-    s += `<path d="M0 560 Q300 480 640 540 T1300 520 T1600 540 V640 H0Z" fill="${winter ? "#e3ecf4" : "#c6e7a8"}"/>`;
-    if (!night && !["rain", "thunder"].includes(T.weather) && T.holiday !== "halloween")
+    s += `<path d="M0 560 Q300 480 640 540 T1300 520 T1600 540 V640 H0Z" fill="${T.holiday === "halloween" ? "#3a3150" : winter ? "#e3ecf4" : "#c6e7a8"}"/>`;
+    if (!night && !["rain", "thunder"].includes(T.weather) && !T.holiday)
       ["#ff8a8a", "#ffc46b", "#fff07a", "#8fe08a", "#7ad7ff", "#b39bff"].forEach((c, k) =>
         s += `<path d="M${640 + k * 14} 640 A${440 - k * 14} ${360 - k * 14} 0 0 1 ${1520 - k * 14} 640" stroke="${c}" stroke-width="14" fill="none" opacity=".75"/>`);
-    s += castleSvg(1080, 640);
+    s += spooky ? draculaCastle(1080, 640) : T.holiday === "christmas" ? northPole(1040, 660) : castleSvg(1080, 640);
   }
 
   // the ground
@@ -1111,15 +1404,26 @@ function background(sc) {
   // ground decorations, by season
   for (let k = 0; k < 40; k++) {
     const x = rnd(seed + 200 + k) * W, y = 650 + rnd(seed + 260 + k) * 240, r = rnd(seed + 320 + k);
-    if (winter) s += k % 17 === 5 && p !== "castle" ? snowman(x, y) : `<ellipse cx="${x}" cy="${y}" rx="${10 + r * 14}" ry="${4 + r * 4}" fill="#fff"/><ellipse cx="${x + 3}" cy="${y + 3}" rx="${8 + r * 10}" ry="${2 + r * 2}" fill="#c9d8e6" opacity=".6"/>`;
+    if (spooky) s += r < .5 ? tuft(x, y, "#2c3424") : r < .62 ? toadstool(x, y, .3 + r * .3, "#7b4fa8") : `<ellipse cx="${x}" cy="${y}" rx="6" ry="3" fill="${["#8a4a2a", "#5a3a2a"][k % 2]}" transform="rotate(${(r * 180).toFixed(0)} ${x} ${y})"/>`;
+    else if (winter) s += `<ellipse cx="${x}" cy="${y}" rx="${10 + r * 14}" ry="${4 + r * 4}" fill="#fff"/><ellipse cx="${x + 3}" cy="${y + 3}" rx="${8 + r * 10}" ry="${2 + r * 2}" fill="#c9d8e6" opacity=".6"/>`;
     else if (p === "mountain") s += r < .5 ? tuft(x, y, "#7fa874") : `<ellipse cx="${x}" cy="${y}" rx="${8 + r * 10}" ry="${5 + r * 5}" fill="#b6bfc9"/>`;
     else if (p === "mushroom" && r < .25) s += toadstool(x, y, .4 + r, ["#e8433a", "#b36bff", "#ff8a3d"][k % 3]);
     else if (T.season === "autumn") s += r < .35 ? tuft(x, y, look.grass) : r < .5 ? toadstool(x, y, .3 + r * .3, k % 2 ? "#e8433a" : "#b07a3b")
       : `<ellipse cx="${x}" cy="${y}" rx="7" ry="3.5" fill="${["#e8533a", "#f0a43a", "#d9822f", "#c9a23a"][k % 4]}" transform="rotate(${(r * 180).toFixed(0)} ${x} ${y})"/>`;
     else s += r < (T.season === "spring" ? .35 : .55) ? tuft(x, y, look.grass) : flower(x, y, ["#ff8fb8", "#ffd447", "#fff", "#b48bff", "#7ad7ff"][k % 5]);
   }
-  if (T.holiday === "halloween") for (let k = 0; k < 6; k++) s += pumpkin(150 + rnd(seed + 900 + k) * 1200, 660 + rnd(seed + 910 + k) * 220, .7 + rnd(seed + 920 + k) * .4);
-  if (T.holiday === "christmas") for (let k = 0; k < 5; k++) s += gift(150 + rnd(seed + 930 + k) * 1200, 670 + rnd(seed + 940 + k) * 200, ["#e8433a", "#3fa94e", "#7b6cff", "#ff8fb8", "#3f9fd6"][k]);
+  // larger decorations go only where they don't cover a hiding place
+  if (spooky) {
+    s += `<path d="M0 640 H1600" stroke="#1e1428" stroke-width="4"/>` + Array.from({ length: 40 }, (_, k) => `<path d="M${k * 40 + 10} 642 V610 l4 -8 l4 8 V642" fill="#1e1428"/>`).join("");
+    placeFree(sc, seed + 900, 7).forEach((o, k) => { s += k === 0 ? `<g transform="translate(${o.x} ${o.y}) scale(.55)"><svg x="-50" y="-96" width="100" height="100" viewBox="0 0 100 100">${CHARACTERS.skeleton.draw("idle").replace(/#f4f1e8/g, "#cfcabb")}</svg></g>`
+      : k < 3 ? smallTombstone(o.x, o.y) : pumpkin(o.x, o.y, .7 + rnd(seed + 920 + k) * .3); });
+    for (let k = 0; k < 8; k++) s += `<ellipse cx="${rnd(seed + 960 + k) * W}" cy="${690 + rnd(seed + 970 + k) * 160}" rx="${120 + rnd(seed + 980 + k) * 120}" ry="14" fill="#cfc8e8" opacity=".12"/>`;
+  } else if (T.holiday === "christmas") {
+    // mostly candy canes and snowmen: small presents would look like the present-pile hiding places
+    placeFree(sc, seed + 930, 6).forEach((o, k) => { s += k < 3 ? candyCane(o.x, o.y) : k < 5 ? snowman(o.x, o.y) : gift(o.x, o.y, "#e8433a"); });
+  } else if (winter && p !== "castle") {
+    placeFree(sc, seed + 950, 2).forEach(o => { s += snowman(o.x, o.y); });
+  }
   if (p === "mushroom" || (night && T.season === "summer")) for (let k = 0; k < 14; k++)
     s += `<circle cx="${rnd(seed + 400 + k) * W}" cy="${300 + rnd(seed + 420 + k) * 500}" r="3" fill="#fff59a" class="pulse" style="animation-delay:${(rnd(seed + 440 + k) * 2).toFixed(2)}s"/>`;
   // butterflies on nice days
@@ -1133,7 +1437,7 @@ function background(sc) {
 // Darkens the scene at night and tints it at dawn and dusk; the hero stays bright on top.
 function shadeSvg() {
   const T = theme();
-  const shade = T.timeOfDay === "night" ? ["#0a1430", .38] : T.timeOfDay === "dusk" ? [T.holiday === "halloween" ? "#3b1d5c" : "#5b3f8e", .16]
+  const shade = T.holiday === "halloween" ? ["#120826", .22] : T.timeOfDay === "night" ? ["#0a1430", .38] : T.timeOfDay === "dusk" ? [T.holiday === "halloween" ? "#3b1d5c" : "#5b3f8e", .16]
     : T.timeOfDay === "dawn" ? ["#ff9d6b", .08] : T.weather === "thunder" ? ["#2c3442", .18] : null;
   return shade ? `<rect width="${W}" height="${H}" fill="${shade[0]}" opacity="${shade[1]}" pointer-events="none"/>` : "";
 }
@@ -1173,7 +1477,7 @@ function gateSvg(sc) {
       <ellipse cx="-20" cy="-150" rx="30" ry="10" fill="#fff" opacity=".9"/></g>`;
   }
   // signpost to the next place
-  const next = PLACES[game.scenes[game.si + 1]?.place]?.name || "";
+  const nextPlace = game.scenes[game.si + 1]?.place, next = nextPlace ? placeName(nextPlace) : "";
   s += `<g class="exit ${sc.open ? "pulse" : ""}" style="cursor:pointer">
     <rect x="1530" y="650" width="10" height="110" fill="#7a5233"/>
     <path d="M1478 640 h96 l20 22 l-20 22 h-96z" fill="${sc.open ? "#ffd447" : "#d8cbb4"}" stroke="#7a5233" stroke-width="3"/>
@@ -1188,7 +1492,7 @@ function spotSvg(sp, i) {
     const done = sp.answered;
     return `<g class="spot" data-i="${i}">
       <rect x="${x - 90}" y="${y - 170}" width="180" height="180" fill="transparent" pointer-events="all"/>
-      <g class="${done ? "" : "bob"}"><svg x="${x - 80}" y="${y - 160}" width="160" height="160" viewBox="0 0 100 100">${CHARACTERS.dragon.draw(done ? "happy" : "idle")}</svg></g>
+      <g class="${done ? "" : "bob"}"><svg x="${x - 80}" y="${y - 160}" width="160" height="160" viewBox="0 0 100 100">${CHARACTERS[sp.animal].draw(done ? "happy" : "idle")}</svg></g>
       ${done ? "" : `<g class="pulse"><circle cx="${x + 60}" cy="${y - 150}" r="20" fill="#ffd447" stroke="#fff" stroke-width="4"/><text x="${x + 60}" y="${y - 141}" text-anchor="middle" font-size="26" font-weight="bold" fill="${INK}">!</text></g>`}
     </g>`;
   }
@@ -1261,19 +1565,67 @@ function tracksSvg(sc) {
   return s;
 }
 
+
+// Hiding places that only exist at Halloween and Christmas.
+function holidaySpotObject(kind, x, y, r, spooky) {
+  switch (kind) {
+    case "tombstone":
+      return { back: "", front: `<path d="M${x - 38} ${y} V${y - 70} Q${x - 38} ${y - 98} ${x} ${y - 98} Q${x + 38} ${y - 98} ${x + 38} ${y - 70} V${y}Z" fill="#8e8a9c"/>
+        <path d="M${x - 38} ${y} V${y - 70} Q${x - 38} ${y - 98} ${x} ${y - 98}" stroke="#a9a5b6" stroke-width="5" fill="none"/>
+        ${r > .5 ? `<text x="${x}" y="${y - 52}" text-anchor="middle" font-size="20" font-weight="bold" fill="#5f5a6e">RIP</text>`
+                 : `<path d="M${x} ${y - 80} V${y - 40} M${x - 14} ${y - 66} H${x + 14}" stroke="#5f5a6e" stroke-width="6" stroke-linecap="round"/>`}
+        <path d="M${x - 40} ${y} q10 -16 18 -2 q8 -14 16 0 q8 -12 16 0 q8 -14 30 2z" fill="#3e4a36"/>
+        <path d="M${x + 20} ${y - 90} q10 6 14 20" stroke="#6f8f4f" stroke-width="5" fill="none" stroke-linecap="round"/>` };
+    case "bigpumpkin":
+      return { back: "", front: `<ellipse cx="${x - 30}" cy="${y - 40}" rx="34" ry="40" fill="#e0701c"/><ellipse cx="${x + 30}" cy="${y - 40}" rx="34" ry="40" fill="#e0701c"/>
+        <ellipse cx="${x}" cy="${y - 42}" rx="38" ry="44" fill="#f5862a"/>
+        <path d="M${x - 14} ${y - 80} q0 30 0 70 M${x + 14} ${y - 80} q0 30 0 70" stroke="#d4661a" stroke-width="3" fill="none"/>
+        <path d="M${x - 4} ${y - 84} q4 -14 16 -16" stroke="#4f7a2c" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <path d="M${x + 12} ${y - 92} q22 -8 30 6 q-16 2 -30 -6z" fill="#5a8f3a"/>` };
+    case "cauldron":
+      return { back: `<ellipse cx="${x}" cy="${y - 50}" rx="44" ry="10" fill="#7cf06a"/>
+          <circle cx="${x - 14}" cy="${y - 54}" r="5" fill="#b6ff9a" class="bubble-up"/><circle cx="${x + 12}" cy="${y - 52}" r="4" fill="#b6ff9a" class="bubble-up" style="animation-delay:1.2s"/>`,
+        front: `<path d="M${x - 46} ${y - 50} Q${x - 52} ${y - 4} ${x} ${y - 2} Q${x + 52} ${y - 4} ${x + 46} ${y - 50} Q${x} ${y - 38} ${x - 46} ${y - 50}Z" fill="#2a2433"/>
+          <ellipse cx="${x}" cy="${y - 50}" rx="46" ry="10" fill="none" stroke="#3d3548" stroke-width="7"/>
+          <path d="M${x - 30} ${y - 4} l-6 10 M${x + 30} ${y - 4} l6 10" stroke="#2a2433" stroke-width="6" stroke-linecap="round"/>
+          <path d="M${x - 24} ${y + 6} q24 -14 48 0" stroke="#ff8a3d" stroke-width="5" fill="none" opacity=".8"/>` };
+    case "giftpile":
+      return { back: "", front: `${gift(x - 32, y, "#e8433a").replace('width="32" height="28"', 'width="32" height="28"')}
+        <g transform="translate(${x + 26} ${y}) scale(1.3)">${gift(0, 0, "#3fa94e")}</g>
+        <g transform="translate(${x - 4} ${y - 34}) scale(1.6)">${gift(0, 0, "#7b6cff")}</g>
+        <g transform="translate(${x + 30} ${y - 38}) scale(.9)">${gift(0, 0, "#ff8fb8")}</g>` };
+    case "sleigh":
+      return { back: `<path d="M${x - 60} ${y - 20} Q${x - 64} ${y - 60} ${x - 40} ${y - 62} H${x + 50} Q${x + 70} ${y - 62} ${x + 66} ${y - 40}" fill="#b3203a"/>`,
+        front: `<path d="M${x - 62} ${y - 20} H${x + 60} Q${x + 74} ${y - 22} ${x + 70} ${y - 46} L${x + 56} ${y - 46} Q${x + 56} ${y - 34} ${x + 40} ${y - 34} H${x - 50} Q${x - 62} ${y - 34} ${x - 62} ${y - 20}Z" fill="#d6283f"/>
+          <path d="M${x - 50} ${y - 28} H${x + 40}" stroke="#ffd447" stroke-width="4"/>
+          <path d="M${x - 70} ${y - 4} H${x + 64} Q${x + 84} ${y - 4} ${x + 82} ${y - 20} M${x - 44} ${y - 20} V${y - 4} M${x + 36} ${y - 20} V${y - 4}" stroke="#c9a23a" stroke-width="5" fill="none" stroke-linecap="round"/>` };
+    case "gingerhouse":
+      return { back: "", front: `<rect x="${x - 50}" y="${y - 76}" width="100" height="76" fill="#b8722e"/>
+        <path d="M${x - 62} ${y - 72} L${x} ${y - 124} L${x + 62} ${y - 72}Z" fill="#8a5420"/>
+        <path d="M${x - 62} ${y - 72} L${x} ${y - 124} L${x + 62} ${y - 72}" stroke="#fff" stroke-width="7" fill="none" stroke-linejoin="round"/>
+        <path d="M${x - 48} ${y - 82} q8 8 16 0 q8 8 16 0 q8 8 16 0 q8 8 16 0 q8 8 16 0 q8 8 16 0" stroke="#fff" stroke-width="4" fill="none"/>
+        <rect x="${x + 8}" y="${y - 40}" width="24" height="40" rx="10" fill="#6e4528"/>
+        <rect x="${x - 36}" y="${y - 60}" width="24" height="22" rx="3" fill="#2f1d12"/><path d="M${x - 24} ${y - 60} v22 M${x - 36} ${y - 49} h24" stroke="#fff" stroke-width="2.5"/>
+        <circle cx="${x - 40}" cy="${y - 12}" r="5" fill="#e8433a"/><circle cx="${x - 24}" cy="${y - 14}" r="5" fill="#3fa94e"/><circle cx="${x + 42}" cy="${y - 54}" r="5" fill="#7ad7ff"/>` };
+  }
+  return null;
+}
+
 function spotObject(kind, x, y, sid) {
-  const r = rnd(x + y), T = theme();
+  const r = rnd(x + y), T = theme(), spooky = T.holiday === "halloween";
   if (T.season === "winter" && kind === "bush") kind = "snowbush";
   const [crownA, crownB] = crownColors(T, Math.floor(r * 4));
+  const held = holidaySpotObject(kind, x, y, r, spooky);
+  if (held) return held;
   switch (kind) {
     case "bush": case "snowbush": {
-      const c1 = kind === "snowbush" ? "#4f8f62" : "#3f9a4a", c2 = kind === "snowbush" ? "#5ea672" : "#4fb35a";
+      const c1 = spooky ? "#34402f" : kind === "snowbush" ? "#4f8f62" : "#3f9a4a", c2 = spooky ? "#46553d" : kind === "snowbush" ? "#5ea672" : "#4fb35a";
       return { back: "", front: `<g>
         <circle cx="${x - 40}" cy="${y - 30}" r="32" fill="${c1}"/><circle cx="${x + 40}" cy="${y - 30}" r="32" fill="${c1}"/>
         <circle cx="${x}" cy="${y - 50}" r="36" fill="${c2}"/><circle cx="${x - 18}" cy="${y - 20}" r="30" fill="${c2}"/><circle cx="${x + 18}" cy="${y - 20}" r="30" fill="${c2}"/>
         ${kind === "snowbush"
           ? `<path d="M${x - 34} ${y - 80} q34 -18 68 0 q-34 8 -68 0z M${x - 70} ${y - 52} q22 -14 40 -4 q-20 6 -40 4z" fill="#fff"/>`
-          : `<circle cx="${x - 20}" cy="${y - 44}" r="5" fill="#e8433a"/><circle cx="${x + 26}" cy="${y - 30}" r="5" fill="#e8433a"/><circle cx="${x + 6}" cy="${y - 66}" r="4.5" fill="#e8433a"/>`}
+          : `<circle cx="${x - 20}" cy="${y - 44}" r="5" fill="${spooky ? "#9b4fd1" : "#e8433a"}"/><circle cx="${x + 26}" cy="${y - 30}" r="5" fill="${spooky ? "#9b4fd1" : "#e8433a"}"/><circle cx="${x + 6}" cy="${y - 66}" r="4.5" fill="${spooky ? "#9b4fd1" : "#e8433a"}"/>`}
         <path d="M${x - 50} ${y - 46} q10 -8 20 -2 M${x + 30} ${y - 56} q10 -8 20 -2" stroke="#6fd07a" stroke-width="3" fill="none" stroke-linecap="round"/></g>` };
     }
     case "log":
@@ -1302,6 +1654,11 @@ function spotObject(kind, x, y, sid) {
       return { back: `<ellipse cx="${x}" cy="${y}" rx="70" ry="10" fill="#5fb6dc" opacity=".5"/>`, front: `<g class="sway">${reeds}</g>` };
     }
     case "hollow":
+      if (spooky) return { back: `<g><path d="M${x - 26} ${y} q-14 4 -22 2 q14 -8 22 -14z M${x + 26} ${y} q14 4 22 2 q-14 -8 -22 -14z" fill="#2a1f2e"/>
+          <path d="M${x - 24} ${y} L${x - 20} ${y - 210} Q${x - 50} ${y - 250} ${x - 90} ${y - 250} M${x - 20} ${y - 170} Q${x - 60} ${y - 190} ${x - 80} ${y - 220} M${x + 20} ${y - 200} Q${x + 60} ${y - 240} ${x + 96} ${y - 236} M${x + 22} ${y - 150} Q${x + 60} ${y - 160} ${x + 76} ${y - 190}" stroke="#2a1f2e" stroke-width="12" fill="none" stroke-linecap="round"/>
+          <rect x="${x - 26}" y="${y - 214}" width="52" height="216" rx="10" fill="#3a2c3c"/>
+          ${web(x + 50, y - 214, 36)}
+          <ellipse cx="${x}" cy="${y - 110}" rx="19" ry="24" fill="#2a1f2e"/><ellipse cx="${x}" cy="${y - 110}" rx="16" ry="21" fill="#0d0812"/></g>`, front: "" };
       return { back: `<g><path d="M${x - 26} ${y} q-14 4 -22 2 q14 -8 22 -14z M${x + 26} ${y} q14 4 22 2 q-14 -8 -22 -14z" fill="#7a5233"/>
           <rect x="${x - 26}" y="${y - 210}" width="52" height="212" fill="#8a5a3b"/>
           <path d="M${x - 14} ${y - 180} v60 M${x + 12} ${y - 60} v50" stroke="#6e4528" stroke-width="3"/>
@@ -1313,11 +1670,13 @@ function spotObject(kind, x, y, sid) {
         <path d="M${x - 18} ${y - 40} v30 M${x + 12} ${y - 34} v24" stroke="#6e4528" stroke-width="3"/>
         <ellipse cx="${x}" cy="${y - 48}" rx="30" ry="9" fill="#d8a873"/><ellipse cx="${x}" cy="${y - 48}" rx="18" ry="5" fill="none" stroke="#a8784a" stroke-width="2"/>
         ${r > .5 ? toadstool(x + 26, y - 2, .3) : ""}` };
-    case "burrow":
-      return { back: `<path d="M${x - 64} ${y} Q${x - 52} ${y - 36} ${x} ${y - 38} Q${x + 52} ${y - 36} ${x + 64} ${y}Z" fill="#9a7048"/>
+    case "burrow": {
+      const soil = T.season === "winter" ? "#e9eff5" : "#9a7048";
+      return { back: `<path d="M${x - 64} ${y} Q${x - 52} ${y - 36} ${x} ${y - 38} Q${x + 52} ${y - 36} ${x + 64} ${y}Z" fill="${soil}"/>
           <ellipse cx="${x}" cy="${y - 12}" rx="25" ry="14" fill="#2f1d12"/>`,
-        front: `<path d="M${x - 27} ${y - 10} Q${x} ${y + 4} ${x + 27} ${y - 10} Q${x} ${y - 2} ${x - 27} ${y - 10}Z" fill="#9a7048"/>
+        front: `<path d="M${x - 27} ${y - 10} Q${x} ${y + 4} ${x + 27} ${y - 10} Q${x} ${y - 2} ${x - 27} ${y - 10}Z" fill="${soil}"/>
           <circle cx="${x - 46}" cy="${y - 4}" r="4" fill="#7a5233"/><circle cx="${x + 44}" cy="${y - 6}" r="3" fill="#7a5233"/>` };
+    }
     case "treetop":
       return { back: `<g><path d="M${x - 24} ${y} q-14 4 -22 2 q14 -8 22 -14z M${x + 24} ${y} q14 4 22 2 q-14 -8 -22 -14z" fill="#7a5233"/>
           <rect x="${x - 22}" y="${y - 200}" width="44" height="202" fill="#8a5a3b"/>
@@ -1368,7 +1727,7 @@ function camera(x, y, smooth) {
 function updateHud() {
   const sc = scene();
   const as = animalSpots(sc), found = as.filter(s => s.answered).length;
-  $("#where").innerHTML = sc.place === "castle" ? `🏰 <span class="place">${PLACES.castle.name}</span>` : `<span class="place">${PLACES[sc.place].name} · </span>🐾 ${found}/${as.length}`;
+  $("#where").innerHTML = sc.place === "castle" ? `${hol() ? hol().icon : "🏰"} <span class="place">${placeName("castle")}</span>` : `<span class="place">${placeName(sc.place)} · </span>🐾 ${found}/${as.length}`;
   $("#starCount").textContent = `🏆 ${game.points || 0}${game.streak >= 2 ? ` · 🔥${game.streak}` : ""}`;
   $("#soundBtn").textContent = sound ? "🔊" : "🔇";
   $("#hintSpotBtn").style.display = sc.place === "castle" ? "none" : "";
@@ -1386,9 +1745,9 @@ function enterScene(fresh) {
   const sc = scene(), as = animalSpots(sc);
   const look = sc.place === "castle" ? { x: (sc.hero.x + sc.spots[0].x) / 2, y: sc.hero.y } : sc.hero;
   requestAnimationFrame(() => camera(look.x, look.y, false));
-  if (sc.place === "castle") banner(PLACES.castle.name, "Draken Doris väntar vid slottet!");
-  else if (sc.open) banner(PLACES[sc.place].name, "Bra jobbat! Gå vidare till nästa plats →");
-  else banner(PLACES[sc.place].name, `${as.length} djur har gömt sig här. Kan du hitta dem?${game.si === 0 ? " Svep för att se dig omkring!" : ""}`);
+  if (sc.place === "castle") banner(placeName("castle"), hol() ? hol().waiting : "Draken Doris väntar vid slottet!");
+  else if (sc.open) banner(placeName(sc.place), "Bra jobbat! Gå vidare till nästa plats →");
+  else banner(placeName(sc.place), `${as.length} ${hiderWord(as.length)} har gömt sig här. Kan du hitta dem?${game.si === 0 ? " Svep för att se dig omkring!" : ""}`);
   if (fresh) sfx.open();
 }
 
@@ -1502,8 +1861,8 @@ function inspect(i) {
 }
 
 // An empty land spot the animal likes, preferably not right next door.
-function runTarget(spots, sp) {
-  const ok = spots.filter(t => t !== sp && !t.animal && !WATER_KINDS.includes(t.kind) && SPOT_KINDS[t.kind].animals.includes(sp.animal));
+function runTarget(spots, sp, holiday = game && game.holiday) {
+  const ok = spots.filter(t => t !== sp && !t.animal && !WATER_KINDS.includes(t.kind) && hidersFor(t.kind, holiday).includes(sp.animal));
   ok.sort((a, b) => Math.abs(b.x - sp.x) - Math.abs(a.x - sp.x));
   return ok[0] || null;
 }
@@ -1609,7 +1968,7 @@ function renderQuestion(first) {
   $("#dlgName").textContent = c.name;
   const boss = sp.kind === "boss";
   const intro = boss
-    ? (sp.bossLeft === BOSS_QUESTIONS ? `Rooaar! Jag vaktar slottet. Svara rätt på ${BOSS_QUESTIONS} frågor så släpper jag in dig! Fråga 1:` : `Bra! Fråga ${BOSS_QUESTIONS - sp.bossLeft + 1} av ${BOSS_QUESTIONS}:`)
+    ? (sp.bossLeft === BOSS_QUESTIONS ? (hol() ? hol().intro(BOSS_QUESTIONS) : `Rooaar! Jag vaktar slottet. Svara rätt på ${BOSS_QUESTIONS} frågor så släpper jag in dig! Fråga 1:`) : `Bra! Fråga ${BOSS_QUESTIONS - sp.bossLeft + 1} av ${BOSS_QUESTIONS}:`)
     : (first ? pick(GREETINGS) : "Okej, här kommer en ny fråga:");
   $("#dlgQ").innerHTML = `${esc(intro)}<br><b>${esc(cur.q.q)}</b>`;
   $("#dlgAns").innerHTML = cur.q.choices.map((ch, k) =>
@@ -1618,7 +1977,7 @@ function renderQuestion(first) {
   $("#hintBtn").style.display = cur.q.hint ? "" : "none";
   $("#closeBtn").style.display = "";
   $("#nextBtn").style.display = "none";
-  $("#dlgHearts").textContent = boss ? "🐉 " + "❤️".repeat(sp.bossLeft) : "";
+  $("#dlgHearts").textContent = boss ? `${hol() ? hol().emoji : "🐉"} ` + "❤️".repeat(sp.bossLeft) : "";
   cur.t0 = Date.now();
   startTimer();
 }
@@ -1637,12 +1996,12 @@ function renderWrite(first) {
   const ta = $("#dlgWrite");
   if (cur.tries === 0) ta.value = "";
   ta.disabled = false; $("#sendWriteBtn").disabled = false; $("#sendWriteBtn").style.display = "";
-  $("#sendWriteBtn").textContent = "Ge svaret till draken 🐉";
+  $("#sendWriteBtn").textContent = `Ge svaret till ${bossShort()} ${hol() ? hol().emoji : "🐉"}`;
   if (cur.tries === 0) { $("#dlgFb").className = "feedback"; $("#dlgFb").innerHTML = ""; }
   $("#hintBtn").style.display = cur.q.hint ? "" : "none";
   $("#closeBtn").style.display = "";
   $("#nextBtn").style.display = "none";
-  $("#dlgHearts").textContent = "🐉 " + "❤️".repeat(sp.bossLeft);
+  $("#dlgHearts").textContent = `${hol() ? hol().emoji : "🐉"} ` + "❤️".repeat(sp.bossLeft);
   setTimeout(() => ta.focus(), 50);
 }
 
@@ -1721,7 +2080,7 @@ $("#nextBtn").onclick = () => {
   if (animalSpots(sc).every(s => s.answered)) setTimeout(openGate, 400);
   else {
     const left = animalSpots(sc).filter(s => !s.answered).length;
-    say(left === 1 ? "Ett djur kvar att hitta!" : `${left} djur kvar att hitta!`, innerWidth / 2, innerHeight / 3);
+    say(`${left === 1 ? "Ett" : left} ${hiderWord(left)} kvar att hitta!`, innerWidth / 2, innerHeight / 3);
   }
 };
 
@@ -1729,7 +2088,7 @@ $("#sendWriteBtn").onclick = async () => {
   const ans = $("#dlgWrite").value.trim();
   if (!ans) { say("Skriv ett svar först ✏️", innerWidth / 2, innerHeight / 3); return; }
   const sp = scene().spots[cur.i], c = CHARACTERS[sp.animal], fb = $("#dlgFb");
-  $("#dlgWrite").disabled = true; $("#sendWriteBtn").disabled = true; $("#sendWriteBtn").textContent = "Draken läser … 📖";
+  $("#dlgWrite").disabled = true; $("#sendWriteBtn").disabled = true; $("#sendWriteBtn").textContent = `${bossShort()[0].toUpperCase() + bossShort().slice(1)} läser … 📖`;
   $("#closeBtn").style.display = "none"; $("#hintBtn").style.display = "none";
   let r;
   try {
@@ -1825,14 +2184,14 @@ function finish() {
   show("finish");
   $("#finishArt").innerHTML = `<svg viewBox="0 0 220 120" width="300" height="160">
     <g transform="translate(0 10)"><svg width="110" height="110" viewBox="0 0 100 100">${HEROES[game.hero].draw("happy")}</svg></g>
-    <g transform="translate(110 10)"><svg width="110" height="110" viewBox="0 0 100 100">${CHARACTERS.dragon.draw("happy")}</svg></g></svg>`;
+    <g transform="translate(110 10)"><svg width="110" height="110" viewBox="0 0 100 100">${CHARACTERS[hol() ? hol().boss : "dragon"].draw("happy")}</svg></g></svg>`;
   $("#finishStars").textContent = `🏆 ${pts} poäng`;
   const who = game.name ? `${esc(game.name)}, du` : "Du";
   const recordLine = record
     ? (prev == null ? "Ditt första rekord på den här banan! 🎉" : `<b>Nytt rekord! 🎉</b> Förra rekordet var ${prev} poäng.`)
     : `Ditt rekord är ${prev} poäng – kan du slå det nästa gång?`;
-  $("#finishText").innerHTML = `${who} hittade alla ${animals} gömda djur och tog dig hela vägen till slottet i<br><i>${esc(game.packTitle)}</i>!<br><br>
-    ${recordLine}<br><small>Längsta svit: 🔥 ${game.bestStreak || 0} i rad · Rätt på första försöket: ${game.firstTry || 0} av ${animals}</small><br><br>Draken Doris bjuder på tårta. 🎂`;
+  $("#finishText").innerHTML = `${who} hittade alla ${animals} gömda ${hiderWord(animals)} och tog dig hela vägen till ${esc(placeName("castle"))} i<br><i>${esc(game.packTitle)}</i>!<br><br>
+    ${recordLine}<br><small>Längsta svit: 🔥 ${game.bestStreak || 0} i rad · Rätt på första försöket: ${game.firstTry || 0} av ${animals}</small><br><br>${hol() ? hol().finish : "Draken Doris bjuder på tårta. 🎂"}`;
   confetti(4500);
 }
 $("#againBtn").onclick = () => { saved.game = null; game = null; persist(); show("start"); renderStart(); };
