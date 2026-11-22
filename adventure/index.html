@@ -62,6 +62,8 @@ button{font:inherit;color:inherit;cursor:pointer;border:0}
 .lengths{display:flex;gap:10px;flex-wrap:wrap}
 .len-btn{flex:1;min-width:120px;background:#fff;border-radius:14px;padding:10px;border:3px solid #eee3cf;font-size:16px}
 .len-btn.sel{border-color:var(--accent2);background:#f1efff}
+#themes .len-btn{min-width:110px;flex:1 1 110px}
+.theme-now{margin:10px 2px 0;font-size:15px;opacity:.75}
 .big-btn{display:block;width:100%;padding:16px;font-size:22px;font-weight:bold;color:#fff;border-radius:18px;
   background:var(--accent2);box-shadow:0 6px 0 #5446c9;margin-top:10px}
 .big-btn:active{transform:translateY(4px);box-shadow:0 2px 0 #5446c9}
@@ -87,6 +89,9 @@ button{font:inherit;color:inherit;cursor:pointer;border:0}
 .score-line{display:block;margin-top:6px;font-weight:bold;color:#b06a00}
 @media(max-width:520px){.hud .place{display:none}}
 .icon-btn{background:var(--paper);border-radius:99px;width:44px;height:44px;flex:0 0 44px;font-size:21px;box-shadow:0 4px 0 var(--shadow)}
+#wx{position:fixed;inset:0;pointer-events:none;z-index:4;display:none}
+#fog{position:fixed;inset:0;pointer-events:none;z-index:4;display:none;background:linear-gradient(180deg,rgba(255,255,255,0) 30%,rgba(235,240,245,.22) 65%,rgba(235,240,245,.38));animation:fog 9s ease-in-out infinite alternate}
+@keyframes fog{from{opacity:.7}to{opacity:1}}
 #fade{position:fixed;inset:0;background:#fffaf0;opacity:0;pointer-events:none;transition:opacity .45s;z-index:8}
 #fade.on{opacity:1;pointer-events:auto}
 #banner{position:fixed;left:50%;top:22%;transform:translate(-50%,-50%);background:var(--paper);border-radius:24px;padding:16px 26px;
@@ -197,6 +202,12 @@ button{font:inherit;color:inherit;cursor:pointer;border:0}
       <div class="lengths" id="lengths"></div>
     </div>
 
+    <div class="card">
+      <h2>4. Välj tema</h2>
+      <div class="lengths" id="themes"></div>
+      <p class="theme-now" id="themeNow"></p>
+    </div>
+
     <button class="big-btn alt" id="continueBtn" style="display:none">Fortsätt äventyret</button>
     <button class="big-btn" id="goBtn" disabled>Starta äventyret!</button>
   </div>
@@ -215,6 +226,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0}
   </div>
   <div id="banner"><b id="bannerTitle"></b><span id="bannerSub"></span></div>
 </section>
+<canvas id="wx"></canvas><div id="fog"></div>
 <div id="fade"></div>
 
 <!-- ================= QUESTION DIALOG ================= -->
@@ -649,14 +661,15 @@ const WRITE_MAX_TRIES = 3;
 let claudeOk = false;
 
 let saved = load();
-let setup = { hero: HEROES[saved.hero] ? saved.hero : "panda", name: saved.name || "", pack: null, packTitle: "", length: saved.length || 4, group: saved.group || null };
+let setup = { hero: HEROES[saved.hero] ? saved.hero : "panda", name: saved.name || "", pack: null, packTitle: "", length: saved.length || 4, group: saved.group || null,
+  theme: saved.theme in { auto: 1, spring: 1, summer: 1, autumn: 1, winter: 1, night: 1, halloween: 1, christmas: 1 } ? saved.theme : "auto" };
 let game = null;
 let packs = [];
 let sound = saved.sound !== false;
 
 function load() { try { return JSON.parse(localStorage.getItem(STORE) || "{}"); } catch { return {}; } }
 function persist() {
-  saved = { ...saved, hero: setup.hero, name: setup.name, length: setup.length, group: setup.group, sound, game };
+  saved = { ...saved, hero: setup.hero, name: setup.name, length: setup.length, group: setup.group, theme: setup.theme, sound, game };
   try { localStorage.setItem(STORE, JSON.stringify(saved)); } catch {}
 }
 
@@ -727,6 +740,15 @@ function allGroups() {
   return [...grades, ...rest, ...(ids.includes("other") ? ["other"] : [])];
 }
 
+function renderThemes() {
+  $("#themes").innerHTML = Object.entries(THEME_PRESETS).map(([k, t]) =>
+    `<button class="len-btn ${setup.theme === k ? "sel" : ""}" data-theme="${k}"><b>${t.label}</b></button>`).join("");
+  const live = liveTheme || clockTheme();
+  $("#themeNow").textContent = setup.theme === "auto"
+    ? `Just nu: ${describeTheme(live)}${liveTheme && liveTheme.live && liveTheme.temperatureC != null ? ` · ${Math.round(liveTheme.temperatureC)} °C` : ""} – temat följer årstid, väder och tid på dygnet.`
+    : `Temat är alltid ${THEME_PRESETS[setup.theme].label}.`;
+}
+
 function renderPacks() {
   if (!packs.length) return;
   const groups = allGroups();
@@ -755,6 +777,7 @@ async function loadPacks() {
   }
 }
 
+$("#themes").onclick = e => { const b = e.target.closest("[data-theme]"); if (!b) return; setup.theme = b.dataset.theme; persist(); sfx.pop(); renderThemes(); };
 $("#heroes").onclick = e => { const b = e.target.closest("[data-hero]"); if (!b) return; setup.hero = b.dataset.hero; sfx.pop(); renderStart(); };
 $("#lengths").onclick = e => { const b = e.target.closest("[data-len]"); if (!b) return; setup.length = +b.dataset.len; sfx.pop(); renderStart(); };
 $("#groups").onclick = e => {
@@ -915,8 +938,8 @@ function pine(x, y, s, c = "#2f7d4a", snow = false) {
     <path d="M0 -120 L36 -50 H-36Z M0 -90 L44 -14 H-44Z" fill="${c}"/>
     ${snow ? `<path d="M0 -120 L14 -94 Q0 -88 -14 -94Z M-30 -50 q30 -10 60 0 l-8 -14 h-44z" fill="#fff" opacity=".95"/>` : ""}</g>`;
 }
-function cloud(x, y, s) {
-  return `<g transform="translate(${x} ${y}) scale(${s})" opacity=".95"><ellipse rx="50" ry="20" fill="#fff"/><ellipse cx="-24" cy="-12" rx="26" ry="20" fill="#fff"/><ellipse cx="20" cy="-16" rx="30" ry="24" fill="#fff"/></g>`;
+function cloud(x, y, s, c = "#fff") {
+  return `<g transform="translate(${x} ${y}) scale(${s})" opacity=".95"><ellipse rx="50" ry="20" fill="${c}"/><ellipse cx="-24" cy="-12" rx="26" ry="20" fill="${c}"/><ellipse cx="20" cy="-16" rx="30" ry="24" fill="${c}"/></g>`;
 }
 function flower(x, y, c) {
   return `<g transform="translate(${x} ${y})"><path d="M0 0 v14" stroke="#4f9a3c" stroke-width="2.5"/>${[0, 72, 144, 216, 288].map(a =>
@@ -928,34 +951,129 @@ function toadstool(x, y, s, cap = "#e8433a") {
     <path d="M-40 -36 q40 -50 80 0 q-40 12 -80 0z" fill="${cap}"/><circle cx="-18" cy="-48" r="6" fill="#fff"/><circle cx="8" cy="-56" r="5" fill="#fff"/><circle cx="22" cy="-42" r="4" fill="#fff"/></g>`;
 }
 
-function background(sc) {
-  const seed = sc.seed, p = sc.place;
-  let s = "";
-  const sky = { forest: ["#9fdcff", "#e2f6ff"], lake: ["#8fd3ff", "#e8f8ff"], valley: ["#a7e0ff", "#eafaff"],
+/* =====================================================================
+   Themes: season, weather and time of day — live from the server (/api/theme: the weather where the
+   app is set up), or a preset chosen on the start screen. Holidays add their own decorations.
+   ===================================================================== */
+const THEME_PRESETS = {
+  auto:      { label: "Automatiskt 🌦️" },
+  spring:    { label: "Vår 🌷", season: "spring", timeOfDay: "day", weather: "partly" },
+  summer:    { label: "Sommar ☀️", season: "summer", timeOfDay: "day", weather: "clear" },
+  autumn:    { label: "Höst 🍂", season: "autumn", timeOfDay: "day", weather: "cloudy" },
+  winter:    { label: "Vinter ❄️", season: "winter", timeOfDay: "day", weather: "snow" },
+  night:     { label: "Natt 🌙", season: "summer", timeOfDay: "night", weather: "clear" },
+  halloween: { label: "Halloween 🎃", season: "autumn", timeOfDay: "dusk", weather: "fog", holiday: "halloween" },
+  christmas: { label: "Jul 🎄", season: "winter", timeOfDay: "dusk", weather: "snow", holiday: "christmas" },
+};
+const SEASON_WORD = { spring: "vår", summer: "sommar", autumn: "höst", winter: "vinter" };
+const WEATHER_WORD = { clear: "sol", partly: "lite moln", cloudy: "mulet", rain: "regn", snow: "snö", fog: "dimma", thunder: "åska" };
+const TIME_WORD = { dawn: "gryning", day: "dag", dusk: "skymning", night: "natt" };
+let liveTheme = null;  // from /api/theme
+
+// The client's own guess, until the server answers (or if it can't).
+function clockTheme() {
+  const d = new Date(), m = d.getMonth() + 1, day = d.getDate(), h = d.getHours();
+  return { season: m === 12 || m <= 2 ? "winter" : m <= 5 ? "spring" : m <= 8 ? "summer" : "autumn",
+    timeOfDay: h < 6 || h >= 21 ? "night" : h < 8 ? "dawn" : h >= 18 ? "dusk" : "day", weather: "clear",
+    holiday: (m === 10 && day >= 25) || (m === 11 && day <= 1) ? "halloween" : m === 12 && day <= 26 ? "christmas" : null };
+}
+function theme() {
+  const preset = setup.theme && setup.theme !== "auto" ? THEME_PRESETS[setup.theme] : null;
+  const t = preset || liveTheme || clockTheme();
+  return { season: t.season || "summer", timeOfDay: t.timeOfDay || "day", weather: t.weather || "clear", holiday: t.holiday || null };
+}
+function describeTheme(t) {
+  const parts = [SEASON_WORD[t.season], WEATHER_WORD[t.weather], TIME_WORD[t.timeOfDay]];
+  if (t.holiday) parts.unshift(t.holiday === "halloween" ? "Halloween 🎃" : "Jul 🎄");
+  return parts.join(" · ");
+}
+async function loadTheme() {
+  try { liveTheme = await (await fetch("/api/theme")).json(); } catch { liveTheme = null; }
+  renderThemes();
+  if (game && setup.theme === "auto" && $("#play").classList.contains("on")) { renderScene(); startWeather(); }
+}
+
+const SEASON_LOOK = {
+  spring: { ground: ["#a3e07c", "#7cc35e"], trees: [["#5cb85c", "#7fd06e"]], grass: "#68b84f" },
+  summer: { ground: ["#8fd16f", "#6cb85c"], trees: [["#3f8f4f", "#4ea35c"]], grass: "#5fae4c" },
+  autumn: { ground: ["#b8c46a", "#97a553"], trees: [["#d9772f", "#e8b23a"], ["#c9472f", "#e08a2f"], ["#b8a13a", "#d9c04a"], ["#3f8f4f", "#6f9a3c"]], grass: "#9aa64a" },
+  winter: { ground: ["#f3f7fb", "#d8e4ef"], trees: [["#e6edf4", "#cbd8e5"]], grass: "#c9d6e3" },
+};
+const crownColors = (T, k = 0) => { const t = SEASON_LOOK[T.season].trees; return t[k % t.length]; };
+
+function skyColors(p, T) {
+  if (T.timeOfDay === "night") return ["#0b1736", "#25386b"];
+  if (T.timeOfDay === "dusk") return T.holiday === "halloween" ? ["#3b1d5c", "#ff8a4c"] : ["#5b4f9e", "#ffb07a"];
+  if (T.timeOfDay === "dawn") return ["#8fb6e8", "#ffc9a0"];
+  if (T.weather === "thunder") return ["#5d6878", "#9aa5b3"];
+  if (["cloudy", "rain", "fog"].includes(T.weather)) return ["#a9b6c4", "#dde3ea"];
+  if (T.weather === "snow") return ["#c5d3e2", "#eef2f7"];
+  return { forest: ["#9fdcff", "#e2f6ff"], lake: ["#8fd3ff", "#e8f8ff"], valley: ["#a7e0ff", "#eafaff"],
     mushroom: ["#b9b0ff", "#f3e9ff"], mountain: ["#c3dcf2", "#f2f8ff"], castle: ["#ffb3c8", "#ffe9b0"] }[p];
-  s += `<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${sky[0]}"/><stop offset="1" stop-color="${sky[1]}"/></linearGradient>
-    <linearGradient id="grd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${p === "mountain" ? "#a9c99a" : p === "mushroom" ? "#7dbf7a" : "#8fd16f"}"/><stop offset="1" stop-color="${p === "mountain" ? "#8fb284" : p === "mushroom" ? "#5e9f64" : "#6cb85c"}"/></linearGradient>
-    <linearGradient id="wat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fd0ee"/><stop offset="1" stop-color="#3f9fd6"/></linearGradient></defs>
+}
+function pumpkin(x, y, s) {
+  return `<g transform="translate(${x} ${y}) scale(${s})"><ellipse cx="-14" cy="-22" rx="16" ry="22" fill="#e8741f"/><ellipse cx="14" cy="-22" rx="16" ry="22" fill="#e8741f"/>
+    <ellipse cy="-22" rx="18" ry="24" fill="#f5862a"/><path d="M-3 -44 q2 -12 10 -14" stroke="#4f7a2c" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M-16 -28 l6 -8 l6 8z M4 -28 l6 -8 l6 8z M-14 -14 q14 10 28 0 l-5 4 l-4 -4 l-5 5 l-5 -5 l-4 4z" fill="#ffe14d" class="pulse"/></g>`;
+}
+const bat = (x, y) => `<g class="flutter"><path transform="translate(${x} ${y})" d="M0 0 q-10 -12 -26 -6 q8 2 8 10 q6 -6 10 0 q2 -6 8 -4 q6 -2 8 4 q4 -6 10 0 q0 -8 8 -10 q-16 -6 -26 6z" fill="#2b1d3a"/></g>`;
+function gift(x, y, c) {
+  return `<g transform="translate(${x} ${y})"><rect x="-16" y="-28" width="32" height="28" rx="3" fill="${c}"/><rect x="-3" y="-28" width="6" height="28" fill="#ffd447"/>
+    <rect x="-16" y="-17" width="32" height="6" fill="#ffd447"/><path d="M0 -28 q-12 -12 -12 -2 q6 2 12 2 q6 0 12 -2 q0 -10 -12 2z" fill="#ffd447"/></g>`;
+}
+function snowman(x, y) {
+  return `<g transform="translate(${x} ${y})"><circle cy="-18" r="18" fill="#fff" stroke="#d8e4ef"/><circle cy="-46" r="12" fill="#fff" stroke="#d8e4ef"/>
+    <circle cx="-4" cy="-48" r="1.8" fill="${INK}"/><circle cx="4" cy="-48" r="1.8" fill="${INK}"/><path d="M0 -45 l9 2 l-9 2z" fill="#ff8a3d"/>
+    <path d="M-10 -36 h20" stroke="#e8433a" stroke-width="4" stroke-linecap="round"/></g>`;
+}
+
+function background(sc) {
+  const seed = sc.seed, p = sc.place, T = theme(), look = SEASON_LOOK[T.season];
+  const winter = T.season === "winter", night = T.timeOfDay === "night";
+  const sky = skyColors(p, T);
+  const ground = winter ? look.ground : p === "mountain" ? ["#a9c99a", "#8fb284"] : p === "mushroom" && T.season === "summer" ? ["#7dbf7a", "#5e9f64"] : look.ground;
+  const water = winter ? ["#d4ecf7", "#a3d2e8"] : ["#7fd0ee", "#3f9fd6"];
+  let s = `<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${sky[0]}"/><stop offset="1" stop-color="${sky[1]}"/></linearGradient>
+    <linearGradient id="grd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${ground[0]}"/><stop offset="1" stop-color="${ground[1]}"/></linearGradient>
+    <linearGradient id="wat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${water[0]}"/><stop offset="1" stop-color="${water[1]}"/></linearGradient></defs>
     <rect width="${W}" height="${H}" fill="url(#sky)"/>`;
-  s += `<circle cx="${180 + rnd(seed) * 300}" cy="110" r="52" fill="${p === "mushroom" ? "#fff7d6" : "#ffe36b"}" opacity=".95"/>`;
-  for (let k = 0; k < 5; k++) s += cloud(rnd(seed + k) * W, 70 + rnd(seed + k + 9) * 160, .7 + rnd(seed + k + 3) * .6);
+
+  // sun, moon and stars
+  if (night) {
+    for (let k = 0; k < 45; k++) s += `<circle cx="${(rnd(seed + 600 + k) * W).toFixed(0)}" cy="${(rnd(seed + 650 + k) * 420).toFixed(0)}" r="${(1 + rnd(seed + 700 + k) * 1.8).toFixed(1)}" fill="#fff" ${k % 3 ? "" : `class="pulse" style="animation-delay:${(rnd(seed + k) * 2).toFixed(1)}s"`}/>`;
+    const mx = 1100 + rnd(seed) * 300;
+    s += `<circle cx="${mx}" cy="110" r="44" fill="#fdf6d8"/><circle cx="${mx + 14}" cy="98" r="8" fill="#ece3bd"/><circle cx="${mx - 12}" cy="124" r="6" fill="#ece3bd"/>`;
+  } else if (T.timeOfDay === "dawn" || T.timeOfDay === "dusk") {
+    s += `<circle cx="${T.timeOfDay === "dawn" ? 260 : 1300}" cy="500" r="80" fill="${T.holiday === "halloween" ? "#ff9d4d" : "#ffb35c"}" opacity=".95"/>`;
+  } else if (T.weather === "clear" || T.weather === "partly") {
+    s += `<circle cx="${180 + rnd(seed) * 300}" cy="110" r="52" fill="${p === "mushroom" ? "#fff7d6" : "#ffe36b"}" opacity=".95"/>`;
+  }
+  const clouds = { clear: 2, partly: 5, cloudy: 9, rain: 10, thunder: 10, snow: 9, fog: 6 }[T.weather];
+  const cloudColor = night ? "#34446e" : ["rain", "thunder"].includes(T.weather) ? "#8d97a5" : T.weather === "cloudy" ? "#e4e8ec" : "#fff";
+  for (let k = 0; k < clouds; k++) s += cloud(rnd(seed + k) * W, 60 + rnd(seed + k + 9) * 170, .7 + rnd(seed + k + 3) * .7, cloudColor);
+  if (T.holiday === "halloween") for (let k = 0; k < 4; k++) s += bat(200 + rnd(seed + 800 + k) * 1200, 120 + rnd(seed + 810 + k) * 220);
 
   if (p === "mountain" || p === "lake" || p === "valley") {
     for (let k = 0; k < 6; k++) {
       const x = k * 300 + rnd(seed + 20 + k) * 120 - 60, h = 230 + rnd(seed + 30 + k) * 170, base = p === "lake" ? 380 : 560;
-      s += `<path d="M${x - 220} ${base} L${x} ${base - h} L${x + 220} ${base}Z" fill="${k % 2 ? "#a7b9d6" : "#93a8ca"}"/>
+      s += `<path d="M${x - 220} ${base} L${x} ${base - h} L${x + 220} ${base}Z" fill="${winter ? (k % 2 ? "#c9d6e8" : "#b8c8de") : k % 2 ? "#a7b9d6" : "#93a8ca"}"/>
         <path d="M${x - 50} ${base - h + 50} L${x} ${base - h} L${x + 50} ${base - h + 50} L${x + 22} ${base - h + 40} L${x} ${base - h + 54} L${x - 22} ${base - h + 40}Z" fill="#fff"/>`;
     }
   }
   if (p === "forest" || p === "mushroom" || p === "valley") {
-    s += `<path d="M0 520 Q200 440 420 500 T860 490 T1300 480 T1600 500 V640 H0Z" fill="${p === "mushroom" ? "#8ea6d9" : "#a6d98f"}"/>`;
-    const c = p === "mushroom" ? ["#4f7d8f", "#5f8f9f"] : ["#3f8f4f", "#4ea35c"];
-    for (let k = 0; k < 24; k++) s += bgTree(k * 70 + rnd(seed + 40 + k) * 30, 620 - rnd(seed + 60 + k) * 40, .9 + rnd(seed + 80 + k) * .6, c[0], c[1]);
+    s += `<path d="M0 520 Q200 440 420 500 T860 490 T1300 480 T1600 500 V640 H0Z" fill="${winter ? "#e3ecf4" : p === "mushroom" ? "#8ea6d9" : T.season === "autumn" ? "#c9cf8a" : "#a6d98f"}"/>`;
+    for (let k = 0; k < 24; k++) {
+      const c = p === "mushroom" && T.season === "summer" ? ["#4f7d8f", "#5f8f9f"] : crownColors(T, k);
+      const tx = k * 70 + rnd(seed + 40 + k) * 30, ty = 620 - rnd(seed + 60 + k) * 40, ts = .9 + rnd(seed + 80 + k) * .6;
+      s += bgTree(tx, ty, ts, c[0], c[1]);
+      if (T.season === "spring" && k % 3 === 0) s += [[-14, -78], [10, -66], [-22, -52], [20, -50]].map(([dx, dy]) => `<circle cx="${tx + dx * ts}" cy="${ty + dy * ts}" r="${4 * ts}" fill="#ffc0d8"/>`).join("");
+      if (T.holiday === "christmas" && k % 4 === 1) s += [[-20, -60], [0, -84], [18, -58], [-6, -46], [22, -76]].map(([dx, dy], n) =>
+        `<circle cx="${tx + dx * ts}" cy="${ty + dy * ts}" r="${3.5 * ts}" fill="${["#ff5c5c", "#ffd447", "#7ad7ff", "#7cf08a", "#ff8fd8"][n]}" class="pulse" style="animation-delay:${n * .3}s"/>`).join("");
+    }
   }
   if (p === "valley") {
-    // waterfall into a pond at the back
     const wx = 520 + rnd(seed + 5) * 300;
-    s += `<rect x="${wx - 40}" y="250" width="80" height="360" fill="#bfe9fb"/>
+    s += `<rect x="${wx - 40}" y="250" width="80" height="360" fill="${winter ? "#e4f3fa" : "#bfe9fb"}"/>
       <path d="M${wx - 30} 260 v340 M${wx - 10} 260 v340 M${wx + 12} 260 v340 M${wx + 30} 260 v340" stroke="#fff" stroke-width="4" stroke-dasharray="20 14" opacity=".8"/>
       <path d="M${wx - 90} 250 q90 -40 180 0 v20 h-180z" fill="#93a8ca"/>
       <ellipse cx="${wx}" cy="635" rx="150" ry="26" fill="url(#wat)"/>
@@ -965,45 +1083,59 @@ function background(sc) {
     for (let k = 0; k < 18; k++) s += pine(k * 95 + rnd(seed + 50 + k) * 40, 640 - rnd(seed + 70 + k) * 30, .8 + rnd(seed + 90 + k) * .5, k % 2 ? "#2f7d4a" : "#3a8a55", true);
   }
   if (p === "lake") {
-    for (let k = 0; k < 30; k++) s += pine(k * 56 + rnd(seed + 50 + k) * 20, 384, .45 + rnd(seed + 90 + k) * .25, k % 2 ? "#2f7d4a" : "#3a8a55");
+    for (let k = 0; k < 30; k++) s += pine(k * 56 + rnd(seed + 50 + k) * 20, 384, .45 + rnd(seed + 90 + k) * .25, k % 2 ? "#2f7d4a" : "#3a8a55", winter);
     s += `<rect x="0" y="380" width="${W}" height="260" fill="url(#wat)"/>`;
-    for (let k = 0; k < 26; k++) {
+    for (let k = 0; k < (winter ? 10 : 26); k++) {
       const x = rnd(seed + 120 + k) * W, y = 400 + rnd(seed + 140 + k) * 210;
-      s += `<path d="M${x - 18} ${y} q9 -6 18 0 q9 6 18 0" stroke="#fff" stroke-width="2.5" fill="none" opacity=".7"/>`;
+      s += winter ? `<path d="M${x - 30} ${y} l50 -6" stroke="#fff" stroke-width="2" opacity=".8"/>`
+        : `<path d="M${x - 18} ${y} q9 -6 18 0 q9 6 18 0" stroke="#fff" stroke-width="2.5" fill="none" opacity=".7"/>`;
     }
-    for (let k = 0; k < 6; k++) {
+    if (!winter) for (let k = 0; k < 6; k++) {
       const x = rnd(seed + 160 + k) * (GATE_X - 100), y = 430 + rnd(seed + 170 + k) * 150;
-      s += `<g transform="translate(${x} ${y})"><ellipse rx="22" ry="9" fill="#4fae5b"/><path d="M0 0 L22 -3 L19 5Z" fill="#5fb6dc"/>${k % 2 ? `<circle cx="-6" cy="-5" r="5" fill="#ff9fc4"/>` : ""}</g>`;
+      s += `<g transform="translate(${x} ${y})"><ellipse rx="22" ry="9" fill="${T.season === "autumn" ? "#a8a843" : "#4fae5b"}"/><path d="M0 0 L22 -3 L19 5Z" fill="#5fb6dc"/>${k % 2 && T.season !== "autumn" ? `<circle cx="-6" cy="-5" r="5" fill="#ff9fc4"/>` : ""}</g>`;
     }
   }
   if (p === "castle") {
-    s += `<path d="M0 560 Q300 480 640 540 T1300 520 T1600 540 V640 H0Z" fill="#c6e7a8"/>`;
-    // rainbow behind the castle
-    ["#ff8a8a", "#ffc46b", "#fff07a", "#8fe08a", "#7ad7ff", "#b39bff"].forEach((c, k) =>
-      s += `<path d="M${640 + k * 14} 640 A${440 - k * 14} ${360 - k * 14} 0 0 1 ${1520 - k * 14} 640" stroke="${c}" stroke-width="14" fill="none" opacity=".75"/>`);
+    s += `<path d="M0 560 Q300 480 640 540 T1300 520 T1600 540 V640 H0Z" fill="${winter ? "#e3ecf4" : "#c6e7a8"}"/>`;
+    if (!night && !["rain", "thunder"].includes(T.weather) && T.holiday !== "halloween")
+      ["#ff8a8a", "#ffc46b", "#fff07a", "#8fe08a", "#7ad7ff", "#b39bff"].forEach((c, k) =>
+        s += `<path d="M${640 + k * 14} 640 A${440 - k * 14} ${360 - k * 14} 0 0 1 ${1520 - k * 14} 640" stroke="${c}" stroke-width="14" fill="none" opacity=".75"/>`);
     s += castleSvg(1080, 640);
   }
 
   // the ground
   const groundTop = p === "lake" ? 625 : 600;
   s += `<path d="M0 ${groundTop} Q400 ${groundTop - 20} 800 ${groundTop} T1600 ${groundTop} V${H} H0Z" fill="url(#grd)"/>`;
-  if (p === "lake") s += `<path d="M0 622 Q400 600 800 620 T1600 620 V640 Q800 650 0 640Z" fill="#ead9a2"/>`;
-  if (p === "castle") s += `<path d="M120 800 Q500 820 760 760 T1080 690" stroke="#e9d3a6" stroke-width="54" fill="none" stroke-linecap="round"/>`;
-  // ground decorations
+  if (p === "lake") s += `<path d="M0 622 Q400 600 800 620 T1600 620 V640 Q800 650 0 640Z" fill="${winter ? "#eef3f8" : "#ead9a2"}"/>`;
+  if (p === "castle") s += `<path d="M120 800 Q500 820 760 760 T1080 690" stroke="${winter ? "#dfe7ef" : "#e9d3a6"}" stroke-width="54" fill="none" stroke-linecap="round"/>`;
+  // ground decorations, by season
   for (let k = 0; k < 40; k++) {
     const x = rnd(seed + 200 + k) * W, y = 650 + rnd(seed + 260 + k) * 240, r = rnd(seed + 320 + k);
-    if (p === "mountain") s += r < .5 ? tuft(x, y, "#7fa874") : `<ellipse cx="${x}" cy="${y}" rx="${8 + r * 10}" ry="${5 + r * 5}" fill="#b6bfc9"/>`;
+    if (winter) s += k % 17 === 5 && p !== "castle" ? snowman(x, y) : `<ellipse cx="${x}" cy="${y}" rx="${10 + r * 14}" ry="${4 + r * 4}" fill="#fff"/><ellipse cx="${x + 3}" cy="${y + 3}" rx="${8 + r * 10}" ry="${2 + r * 2}" fill="#c9d8e6" opacity=".6"/>`;
+    else if (p === "mountain") s += r < .5 ? tuft(x, y, "#7fa874") : `<ellipse cx="${x}" cy="${y}" rx="${8 + r * 10}" ry="${5 + r * 5}" fill="#b6bfc9"/>`;
     else if (p === "mushroom" && r < .25) s += toadstool(x, y, .4 + r, ["#e8433a", "#b36bff", "#ff8a3d"][k % 3]);
-    else s += r < .55 ? tuft(x, y) : flower(x, y, ["#ff8fb8", "#ffd447", "#fff", "#b48bff", "#7ad7ff"][k % 5]);
+    else if (T.season === "autumn") s += r < .35 ? tuft(x, y, look.grass) : r < .5 ? toadstool(x, y, .3 + r * .3, k % 2 ? "#e8433a" : "#b07a3b")
+      : `<ellipse cx="${x}" cy="${y}" rx="7" ry="3.5" fill="${["#e8533a", "#f0a43a", "#d9822f", "#c9a23a"][k % 4]}" transform="rotate(${(r * 180).toFixed(0)} ${x} ${y})"/>`;
+    else s += r < (T.season === "spring" ? .35 : .55) ? tuft(x, y, look.grass) : flower(x, y, ["#ff8fb8", "#ffd447", "#fff", "#b48bff", "#7ad7ff"][k % 5]);
   }
-  if (p === "mushroom") for (let k = 0; k < 14; k++)
+  if (T.holiday === "halloween") for (let k = 0; k < 6; k++) s += pumpkin(150 + rnd(seed + 900 + k) * 1200, 660 + rnd(seed + 910 + k) * 220, .7 + rnd(seed + 920 + k) * .4);
+  if (T.holiday === "christmas") for (let k = 0; k < 5; k++) s += gift(150 + rnd(seed + 930 + k) * 1200, 670 + rnd(seed + 940 + k) * 200, ["#e8433a", "#3fa94e", "#7b6cff", "#ff8fb8", "#3f9fd6"][k]);
+  if (p === "mushroom" || (night && T.season === "summer")) for (let k = 0; k < 14; k++)
     s += `<circle cx="${rnd(seed + 400 + k) * W}" cy="${300 + rnd(seed + 420 + k) * 500}" r="3" fill="#fff59a" class="pulse" style="animation-delay:${(rnd(seed + 440 + k) * 2).toFixed(2)}s"/>`;
-  // a butterfly or two
-  for (let k = 0; k < 2; k++) {
+  // butterflies on nice days
+  if (!night && !winter && ["clear", "partly"].includes(T.weather)) for (let k = 0; k < 2; k++) {
     const x = 200 + rnd(seed + 500 + k) * 1000, y = 560 + rnd(seed + 510 + k) * 120;
     s += `<g class="flutter" style="animation-delay:-${k * 3}s"><g transform="translate(${x} ${y})"><ellipse cx="-6" cy="0" rx="7" ry="9" fill="#ff9fc4"/><ellipse cx="6" cy="0" rx="7" ry="9" fill="#ffd447"/><rect x="-1.5" y="-7" width="3" height="14" rx="1.5" fill="${INK}"/></g></g>`;
   }
   return s;
+}
+
+// Darkens the scene at night and tints it at dawn and dusk; the hero stays bright on top.
+function shadeSvg() {
+  const T = theme();
+  const shade = T.timeOfDay === "night" ? ["#0a1430", .38] : T.timeOfDay === "dusk" ? [T.holiday === "halloween" ? "#3b1d5c" : "#5b3f8e", .16]
+    : T.timeOfDay === "dawn" ? ["#ff9d6b", .08] : T.weather === "thunder" ? ["#2c3442", .18] : null;
+  return shade ? `<rect width="${W}" height="${H}" fill="${shade[0]}" opacity="${shade[1]}" pointer-events="none"/>` : "";
 }
 
 function castleSvg(x, y) {
@@ -1130,7 +1262,9 @@ function tracksSvg(sc) {
 }
 
 function spotObject(kind, x, y, sid) {
-  const r = rnd(x + y);
+  const r = rnd(x + y), T = theme();
+  if (T.season === "winter" && kind === "bush") kind = "snowbush";
+  const [crownA, crownB] = crownColors(T, Math.floor(r * 4));
   switch (kind) {
     case "bush": case "snowbush": {
       const c1 = kind === "snowbush" ? "#4f8f62" : "#3f9a4a", c2 = kind === "snowbush" ? "#5ea672" : "#4fb35a";
@@ -1153,6 +1287,8 @@ function spotObject(kind, x, y, sid) {
         <path d="M${x - 62} ${y - 6} q18 -18 38 -10 q-10 10 -38 10z" fill="#7fbf5f"/>` };
     case "leaves": {
       const leaf = (lx, ly, rot, c) => `<ellipse cx="${lx}" cy="${ly}" rx="10" ry="5" fill="${c}" transform="rotate(${rot} ${lx} ${ly})"/>`;
+      if (T.season === "winter") return { back: "", front: `<path d="M${x - 66} ${y} Q${x - 56} ${y - 44} ${x} ${y - 54} Q${x + 56} ${y - 44} ${x + 66} ${y}Z" fill="#fff" stroke="#d3e0ec" stroke-width="2"/>
+        ${leaf(x - 30, y - 12, 20, "#d9822f")}${leaf(x + 34, y - 8, -40, "#c96a26")}` };
       return { back: "", front: `<path d="M${x - 66} ${y} Q${x - 56} ${y - 44} ${x} ${y - 54} Q${x + 56} ${y - 44} ${x + 66} ${y}Z" fill="#d9822f"/>
         ${leaf(x - 30, y - 30, 20, "#f0a43a")}${leaf(x + 10, y - 44, -30, "#e8533a")}${leaf(x + 34, y - 22, 40, "#f5c84a")}${leaf(x - 8, y - 16, -10, "#c96a26")}${leaf(x - 46, y - 10, 60, "#e8533a")}${leaf(x + 48, y - 8, -50, "#f0a43a")}` };
     }
@@ -1169,7 +1305,7 @@ function spotObject(kind, x, y, sid) {
       return { back: `<g><path d="M${x - 26} ${y} q-14 4 -22 2 q14 -8 22 -14z M${x + 26} ${y} q14 4 22 2 q-14 -8 -22 -14z" fill="#7a5233"/>
           <rect x="${x - 26}" y="${y - 210}" width="52" height="212" fill="#8a5a3b"/>
           <path d="M${x - 14} ${y - 180} v60 M${x + 12} ${y - 60} v50" stroke="#6e4528" stroke-width="3"/>
-          <circle cx="${x}" cy="${y - 262}" r="70" fill="#3f9a4a"/><circle cx="${x - 52}" cy="${y - 222}" r="46" fill="#4fb35a"/><circle cx="${x + 54}" cy="${y - 226}" r="48" fill="#4fb35a"/>
+          <circle cx="${x}" cy="${y - 262}" r="70" fill="${crownA}"/><circle cx="${x - 52}" cy="${y - 222}" r="46" fill="${crownB}"/><circle cx="${x + 54}" cy="${y - 226}" r="48" fill="${crownB}"/>
           <ellipse cx="${x}" cy="${y - 110}" rx="19" ry="24" fill="#6e4528"/><ellipse cx="${x}" cy="${y - 110}" rx="16" ry="21" fill="#2f1d12"/></g>`, front: "" };
     case "stump":
       return { back: "", front: `<path d="M${x - 40} ${y} q8 -6 10 -12 M${x + 40} ${y} q-8 -6 -10 -12" stroke="#7a5233" stroke-width="8" fill="none" stroke-linecap="round"/>
@@ -1186,9 +1322,9 @@ function spotObject(kind, x, y, sid) {
       return { back: `<g><path d="M${x - 24} ${y} q-14 4 -22 2 q14 -8 22 -14z M${x + 24} ${y} q14 4 22 2 q-14 -8 -22 -14z" fill="#7a5233"/>
           <rect x="${x - 22}" y="${y - 200}" width="44" height="202" fill="#8a5a3b"/>
           <path d="M${x - 10} ${y - 170} v60 M${x + 10} ${y - 70} v50" stroke="#6e4528" stroke-width="3"/>
-          <circle cx="${x}" cy="${y - 262}" r="72" fill="#3a8f45"/><circle cx="${x - 56}" cy="${y - 220}" r="46" fill="#46a852"/><circle cx="${x + 56}" cy="${y - 224}" r="48" fill="#46a852"/></g>`,
-        front: `<circle cx="${x - 20}" cy="${y - 238}" r="24" fill="#4fb35a"/><circle cx="${x + 20}" cy="${y - 236}" r="24" fill="#4aad55"/>
-          <circle cx="${x}" cy="${y - 222}" r="22" fill="#4fb35a"/><circle cx="${x}" cy="${y - 252}" r="17" fill="#4aad55"/>` };
+          <circle cx="${x}" cy="${y - 262}" r="72" fill="${crownA}"/><circle cx="${x - 56}" cy="${y - 220}" r="46" fill="${crownB}"/><circle cx="${x + 56}" cy="${y - 224}" r="48" fill="${crownB}"/></g>`,
+        front: `<circle cx="${x - 20}" cy="${y - 238}" r="24" fill="${crownB}"/><circle cx="${x + 20}" cy="${y - 236}" r="24" fill="${crownA}"/>
+          <circle cx="${x}" cy="${y - 222}" r="22" fill="${crownB}"/><circle cx="${x}" cy="${y - 252}" r="17" fill="${crownA}"/>` };
     case "water":
       return { back: "", front: `<ellipse cx="${x}" cy="${y}" rx="26" ry="7" fill="none" stroke="#fff" stroke-width="3" class="ripple" style="animation-delay:${(r * 2).toFixed(2)}s"/>
         <ellipse cx="${x}" cy="${y}" rx="26" ry="7" fill="none" stroke="#fff" stroke-width="3" class="ripple" style="animation-delay:${(r * 2 + 1.2).toFixed(2)}s"/>
@@ -1207,6 +1343,7 @@ function renderScene() {
     ${background(sc)}${gateSvg(sc)}
     <g id="tracks">${tracksSvg(sc)}</g>
     <g id="spots">${order.map(i => spotSvg(sc.spots[i], i)).join("")}</g>
+    ${shadeSvg()}
     <g id="fx"></g>
     <g id="hero" transform="translate(${h.x} ${h.y})"><g id="heroFlip">
       <ellipse cx="0" cy="-4" rx="30" ry="7" fill="#000" opacity=".15"/>
@@ -1245,6 +1382,7 @@ function banner(title, sub) {
 function enterScene(fresh) {
   show("play");
   renderScene();
+  startWeather();
   const sc = scene(), as = animalSpots(sc);
   const look = sc.place === "castle" ? { x: (sc.hero.x + sc.spots[0].x) / 2, y: sc.hero.y } : sc.hero;
   requestAnimationFrame(() => camera(look.x, look.y, false));
@@ -1700,6 +1838,39 @@ function finish() {
 $("#againBtn").onclick = () => { saved.game = null; game = null; persist(); show("start"); renderStart(); };
 
 /* =====================================================================
+   Weather layer: particles over the scene (rain, snow, falling leaves), thunder flashes and fog
+   ===================================================================== */
+let wxTimer = null;
+function startWeather() {
+  const T = theme(), cv = $("#wx"), ctx = cv.getContext("2d");
+  cancelAnimationFrame(wxTimer);
+  const kind = ["rain", "thunder"].includes(T.weather) ? "rain" : T.weather === "snow" ? "snow" : T.season === "autumn" && !T.holiday ? "leaves" : null;
+  $("#fog").style.display = T.weather === "fog" && $("#play").classList.contains("on") ? "block" : "none";
+  if (!kind || !$("#play").classList.contains("on")) { cv.style.display = "none"; return; }
+  cv.style.display = "block"; cv.width = innerWidth; cv.height = innerHeight;
+  const n = kind === "rain" ? 140 : kind === "snow" ? 110 : 14;
+  const parts = Array.from({ length: n }, () => ({ x: Math.random() * cv.width, y: Math.random() * cv.height, v: .6 + Math.random() * .8, a: Math.random() * 6 }));
+  const leafColors = ["#e8533a", "#f0a43a", "#d9822f", "#c9a23a"];
+  let flash = 0, nextFlash = performance.now() + 4000 + Math.random() * 6000;
+  (function frame(now) {
+    if (!$("#play").classList.contains("on")) { cv.style.display = "none"; $("#fog").style.display = "none"; return; }
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    parts.forEach((p, i) => {
+      if (kind === "rain") { p.x -= 2 * p.v; p.y += 14 * p.v; ctx.strokeStyle = "rgba(200,220,255,.55)"; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p.x - 3, p.y + 12); ctx.stroke(); }
+      else if (kind === "snow") { p.a += .02; p.x += Math.sin(p.a) * .6; p.y += 1.2 * p.v; ctx.fillStyle = "rgba(255,255,255,.9)"; ctx.beginPath(); ctx.arc(p.x, p.y, 1.5 + p.v * 2, 0, 7); ctx.fill(); }
+      else { p.a += .03; p.x += Math.sin(p.a) * 1.4 - .4; p.y += .9 * p.v; ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.a); ctx.fillStyle = leafColors[i % 4]; ctx.beginPath(); ctx.ellipse(0, 0, 7, 3.5, 0, 0, 7); ctx.fill(); ctx.restore(); }
+      if (p.y > cv.height + 10) { p.y = -12; p.x = Math.random() * (cv.width + 60); }
+      if (p.x < -20) p.x = cv.width + 10;
+    });
+    if (T.weather === "thunder") {
+      if (now > nextFlash) { flash = 1; nextFlash = now + 6000 + Math.random() * 8000; }
+      if (flash > 0) { ctx.fillStyle = `rgba(255,255,255,${(flash * .7).toFixed(2)})`; ctx.fillRect(0, 0, cv.width, cv.height); flash -= .06; }
+    }
+    wxTimer = requestAnimationFrame(frame);
+  })(performance.now());
+}
+
+/* =====================================================================
    Effects & helpers
    ===================================================================== */
 function say(txt, x, y, color = INK) {
@@ -1739,7 +1910,7 @@ function track(type, data) {
 
 $("#homeBtn").onclick = () => { $("#dlg").classList.remove("on"); show("start"); renderStart(); };
 $("#soundBtn").onclick = () => { sound = !sound; persist(); updateHud(); sfx.pop(); };
-addEventListener("resize", () => { if ($("#play").classList.contains("on") && game) { fitScene(); camera(scene().hero.x, scene().hero.y, false); } });
+addEventListener("resize", () => { if ($("#play").classList.contains("on") && game) { fitScene(); camera(scene().hero.x, scene().hero.y, false); startWeather(); } });
 addEventListener("keydown", e => {
   if (!$("#dlg").classList.contains("on") || e.target.tagName === "TEXTAREA") return;
   const k = "abcd1234".indexOf(e.key.toLowerCase());
@@ -1751,6 +1922,9 @@ addEventListener("keydown", e => {
 renderStart();
 loadPacks();
 fetch("/api/config").then(r => r.json()).then(c => { claudeOk = !!c.hasClaude; }).catch(() => {});
+renderThemes();
+loadTheme();
+setInterval(loadTheme, 15 * 60 * 1000);
 </script>
 </body>
 </html>

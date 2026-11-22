@@ -60,6 +60,13 @@ feathers, rustling, bubbles), or running off when found — and later places get
 after 5 in a row, plus a speed bonus of +5/+3/+1 while the timer bar is still three-quarters/half/a
 quarter full. Records are kept per pack and adventure length, so you compete with yourself.
 
+**Themes:** by default the scenery follows the season, the weather and the time of day where the app
+is set up (`GET /api/theme`, Open-Meteo weather for `WEATHER_LAT`/`WEATHER_LON` from the environment
+or `config.json`, default central Stockholm; cached 15 minutes; season and time from the clock if the
+weather can't be fetched), with Halloween and Christmas decorations around those dates. A theme can
+also be picked on the start screen (Vår, Sommar, Höst, Vinter, Natt, Halloween, Jul). Plans: see
+[ROADMAP.md](ROADMAP.md).
+
 **The dragon's last question** is answered in writing when the pack has questions marked
 `"write": true` and the server has a Claude key: it goes to `/api/review`, and an overall score of
 at least `WRITE_PASS_SCORE` (2 of 3) passes. A miss gives feedback and up to three tries; without

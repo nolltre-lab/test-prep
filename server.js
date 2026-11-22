@@ -33,6 +33,16 @@ if (!ANTHROPIC_API_KEY) {
                "   Set env var ANTHROPIC_API_KEY or create config.json with { \"ANTHROPIC_API_KEY\": \"sk-ant-...\" }\n");
 }
 
+// --- Where the theme's weather comes from ---
+// Set WEATHER_LAT/WEATHER_LON in the environment or config.json (which is not in git). The default is
+// central Stockholm. Keep it coarse (2 decimals is about 1 km) — the weather is the same.
+let WEATHER_LAT = 59.33, WEATHER_LON = 18.07;
+try {
+  const cfg = fs.existsSync(cfgPath) ? JSON.parse(fs.readFileSync(cfgPath, "utf-8")) : {};
+  const lat = Number(process.env.WEATHER_LAT ?? cfg.WEATHER_LAT), lon = Number(process.env.WEATHER_LON ?? cfg.WEATHER_LON);
+  if (Number.isFinite(lat) && Number.isFinite(lon) && (process.env.WEATHER_LAT ?? cfg.WEATHER_LAT) != null) { WEATHER_LAT = lat; WEATHER_LON = lon; }
+} catch {}
+
 // --- Analytics System ---
 const analytics = {
   sessions: new Map(),      // clientId -> session data
@@ -395,6 +405,74 @@ function pipeFile(res, file) {
   fs.createReadStream(file).pipe(res);
 }
 
+// --- API: theme for the adventure — season, time of day, weather and holiday where the app is set up ---
+// Weather from Open-Meteo (free, no key — the same source as the system controller), cached 15 min.
+// Without it (offline, API down) season and time of day come from the clock and the weather is "clear".
+const THEME_TTL_MS = 15 * 60 * 1000;
+let themeCache = { at: 0, data: null };
+
+function weatherKind(code) {
+  if (code == null) return "clear";
+  if (code <= 1) return "clear";
+  if (code === 2) return "partly";
+  if (code === 3) return "cloudy";
+  if (code === 45 || code === 48) return "fog";
+  if ((code >= 71 && code <= 77) || code === 85 || code === 86) return "snow";
+  if (code >= 95) return "thunder";
+  if ((code >= 51 && code <= 67) || (code >= 80 && code <= 82)) return "rain";
+  return "cloudy";
+}
+function seasonOf(month, tempC) {
+  let s = month === 12 || month <= 2 ? "winter" : month <= 5 ? "spring" : month <= 8 ? "summer" : "autumn";
+  if ((month === 3 || month === 11) && tempC != null && tempC <= 0) s = "winter";  // a cold March/November looks like winter
+  return s;
+}
+function holidayOf(month, day) {
+  if ((month === 10 && day >= 25) || (month === 11 && day <= 1)) return "halloween";
+  if (month === 12 && day <= 26) return "christmas";
+  return null;
+}
+// "YYYY-MM-DDTHH:MM" (local time at the location) → minutes since midnight
+const minutesOf = iso => { const t = String(iso).split("T")[1] || "00:00"; const [h, m] = t.split(":").map(Number); return h * 60 + m; };
+function timeOfDayOf(nowMin, sunriseMin, sunsetMin) {
+  if (nowMin < sunriseMin - 45 || nowMin > sunsetMin + 45) return "night";
+  if (Math.abs(nowMin - sunriseMin) <= 45) return "dawn";
+  if (Math.abs(nowMin - sunsetMin) <= 45) return "dusk";
+  return "day";
+}
+function clockTheme() {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Stockholm", month: "numeric", day: "numeric", hour: "numeric", hour12: false })
+    .formatToParts(new Date()).map(p => [p.type, p.value]));
+  const month = Number(parts.month), day = Number(parts.day), hour = Number(parts.hour) % 24;
+  // rough sunrise/sunset for Stockholm by month when there's no forecast
+  const sun = [[8.5, 15], [7.5, 16.5], [6.5, 18], [6, 20], [4.5, 21], [3.5, 22], [4, 22], [5, 20.5], [6.5, 19], [7.5, 17.5], [7.5, 15.5], [8.5, 15]][month - 1];
+  return { season: seasonOf(month, null), timeOfDay: timeOfDayOf(hour * 60 + 30, sun[0] * 60, sun[1] * 60), weather: "clear", temperatureC: null, holiday: holidayOf(month, day), live: false };
+}
+async function handleTheme(res) {
+  if (themeCache.data && Date.now() - themeCache.at < THEME_TTL_MS) return sendJSON(res, 200, themeCache.data);
+  let data;
+  try {
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${WEATHER_LAT}&longitude=${WEATHER_LON}` +
+      `&current=temperature_2m,weather_code,is_day&daily=sunrise,sunset&timezone=auto&forecast_days=1`;
+    const r = await fetch(url, { signal: AbortSignal.timeout(5000) });
+    if (!r.ok) throw new Error(`open-meteo ${r.status}`);
+    const j = await r.json();
+    const now = j.current.time, [, month, day] = now.split("T")[0].split("-").map(Number);
+    const temp = j.current.temperature_2m;
+    data = {
+      season: seasonOf(month, temp),
+      timeOfDay: timeOfDayOf(minutesOf(now), minutesOf(j.daily.sunrise[0]), minutesOf(j.daily.sunset[0])),
+      weather: weatherKind(j.current.weather_code),
+      temperatureC: temp, holiday: holidayOf(month, day), live: true,
+    };
+  } catch (e) {
+    console.warn("Theme: no weather –", e.message);
+    data = clockTheme();
+  }
+  themeCache = { at: Date.now(), data };
+  return sendJSON(res, 200, data);
+}
+
 // --- API: check if the Claude API key is configured ---
 async function handleConfig(res) {
   return sendJSON(res, 200, { hasClaude: !!ANTHROPIC_API_KEY });
@@ -511,6 +589,9 @@ const router = publicDir => async (req, res) => {
     // API routes
     if (req.method === "GET" && urlObj.pathname === "/api/config") {
       return handleConfig(res);
+    }
+    if (req.method === "GET" && urlObj.pathname === "/api/theme") {
+      return handleTheme(res);
     }
     if (req.method === "GET" && urlObj.pathname === "/api/packs") {
       return handleListPacks(res);
