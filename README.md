@@ -1,6 +1,100 @@
 # Test Prep - Gamified Study Trainer
 
-A gamified, self-hosted study application designed for students (grades 7-9) with multiple interactive learning modes. Features flashcards, quizzes, matching games, and AI-powered review with feedback.
+A gamified, self-hosted study application for school students (Swedish curriculum, Lgr22 — packs for åk 3, 4 and 7–9) with flashcards, quizzes, matching games and AI-powered review with feedback, plus **Kunskapsäventyret**, an adventure game for younger players built on the same question packs.
+
+## Run it on your own computer
+
+Everything runs on a laptop with **no cloud server, no database and nothing to install** apart from
+Node.js. Test Prep and Kunskapsäventyret both start from the same small server, and every question
+pack is included.
+
+**1. Install Node.js 18 or newer** — the "LTS" download from [nodejs.org](https://nodejs.org/)
+(Windows, macOS and Linux). Check with `node --version`.
+
+**2. Get the code** — either clone it:
+```bash
+git clone https://github.com/nolltre-lab/test-prep.git
+cd test-prep
+```
+or click **Code → Download ZIP** on GitHub, unzip it and open a terminal in that folder.
+
+**3. Start it** (there is no `npm install` — the server has no dependencies):
+```bash
+node server.js
+```
+
+**4. Open it in a browser:**
+
+| What | Address |
+|---|---|
+| Test Prep (flashcards, quiz, match, write & review) | http://localhost:8787 |
+| Kunskapsäventyret (the adventure game) | http://localhost:8788 |
+| Usage dashboard | http://localhost:8787/admin.html |
+
+Stop the server with `Ctrl+C`. Progress is saved in each browser.
+
+Everything works straight away **except Write & Review** in Test Prep and the dragon's written
+question in the adventure — those need a Claude API key (step 5). Without one, Write & Review is
+switched off and the dragon asks an ordinary question instead.
+
+### 5. Optional: add a Claude API key for Write & Review
+
+1. Create a key at [console.anthropic.com](https://console.anthropic.com/settings/keys) (it starts
+   with `sk-ant-`). The API is paid per use: you need to add credit to the account. Reviews use the
+   small, cheap Haiku model — a review costs a fraction of a cent.
+2. Give the key to the server in **one** of these ways, then start it again:
+
+   **Easiest, any system — a `config.json` file** in the project folder (next to `server.js`):
+   ```json
+   { "ANTHROPIC_API_KEY": "sk-ant-your-key-here" }
+   ```
+
+   **Or an environment variable** when you start the server:
+   ```bash
+   # macOS / Linux
+   ANTHROPIC_API_KEY=sk-ant-your-key-here node server.js
+   ```
+   ```powershell
+   # Windows PowerShell
+   $env:ANTHROPIC_API_KEY="sk-ant-your-key-here"; node server.js
+   ```
+   ```bat
+   :: Windows Command Prompt
+   set "ANTHROPIC_API_KEY=sk-ant-your-key-here" && node server.js
+   ```
+3. The warning `No ANTHROPIC_API_KEY set` should no longer appear when the server starts, and the
+   **Write & Review** button is enabled.
+
+Keep the key private: `config.json` and `.env` are git-ignored, so they are never committed — don't
+paste the key anywhere else in the code.
+
+### More options
+
+- **Weather for the adventure's themes:** the scenery follows the season, weather and time of day
+  for one place (default central Stockholm; weather from [Open-Meteo](https://open-meteo.com/), free,
+  no key). For your own town, add it to `config.json` — two decimals is plenty:
+  ```json
+  { "WEATHER_LAT": 57.71, "WEATHER_LON": 11.97 }
+  ```
+  Without internet, the theme still follows the season and time of day from the clock.
+- **Other ports:** `PORT=9000 node server.js` (Test Prep on 9000; the adventure goes on `PORT + 1`, or
+  set `ADVENTURE_PORT`).
+- **On a phone or tablet:** with the server running on a laptop, other devices on the same Wi-Fi can
+  open `http://<the laptop's IP address>:8787` and `:8788`. There is no login — anyone on that
+  network can use it.
+- **With Docker instead of Node:** create the two files Docker mounts, then start it:
+  ```bash
+  echo '{}' > config.json && echo '{}' > analytics.json
+  docker compose up -d --build
+  ```
+  Test Prep is then on http://localhost:8789 and the adventure on http://localhost:8790. For a Claude
+  key, put `ANTHROPIC_API_KEY=sk-ant-…` in a `.env` file (copy `.env.example`) or in `config.json`,
+  and run `docker compose up -d` again.
+- **Your own question packs:** drop a JSON file in `packs/` and restart — see
+  [Creating Question Packs](#creating-question-packs).
+
+The deployment sections further down (Raspberry Pi, Lightsail) are only for running it on a server
+for others; you don't need them to use it yourself.
 
 ## Features
 
@@ -100,43 +194,22 @@ Claude it's an ordinary question.
 
 ### Local Development (Standalone)
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/nolltre-lab/test-prep.git
-   cd test-prep
-   ```
-
-2. **Set up environment variables** (optional, for AI features)
-   ```bash
-   # Add to ~/.zshrc or ~/.bash_profile
-   export ANTHROPIC_API_KEY=sk-ant-your-actual-api-key-here
-
-   # Reload shell
-   source ~/.zshrc
-   ```
-
-3. **Start the server**
-   ```bash
-   node server.js
-   ```
-
-4. **Open in browser**
-   ```
-   http://localhost:8787
-   ```
-
-The app will run without an Anthropic API key - the "Write & Review" mode will be automatically disabled if no key is configured.
+See [Run it on your own computer](#run-it-on-your-own-computer) at the top: `node server.js`, then
+http://localhost:8787 (Test Prep) and http://localhost:8788 (Kunskapsäventyret).
 
 ### Docker (Local Testing)
 
-1. **Build and run with Docker Compose**
+1. **Create the files Docker mounts, then build and run with Docker Compose** (without them Docker
+   creates empty folders with those names)
    ```bash
-   docker compose up -d
+   echo '{}' > config.json && echo '{}' > analytics.json
+   docker compose up -d --build
    ```
 
 2. **Access the application**
    ```
-   http://localhost:8789
+   http://localhost:8789   (Test Prep)
+   http://localhost:8790   (Kunskapsäventyret)
    ```
 
 3. **To use AI features**, create a `.env` file:
@@ -230,8 +303,8 @@ ANTHROPIC_KEYCHAIN_SERVICE="${ANTHROPIC_KEYCHAIN_SERVICE:-testprep_anthropic_api
 ### Lightsail Deployment
 
 The same script also deploys to an AWS Lightsail instance (key-based SSH, behind the `apps-home`
-Caddy reverse proxy on the shared `iqe-proxy-net` Docker network) — used for internet-facing
-deployments rather than a local-network Raspberry Pi.
+Caddy reverse proxy and its sign-in, on this app's own `edge-test-prep` Docker network) — used for
+the maintainer's internet-facing deployment rather than a local-network Raspberry Pi.
 
 ```bash
 TARGET=lightsail ./docker-build-testprep.sh
@@ -261,6 +334,9 @@ by default) to provide intelligent feedback on student answers.
 ### Setting the API Key
 
 #### Local Development
+Put it in `config.json` next to `server.js` (git-ignored), or set the environment variable — see
+[step 5 of Run it on your own computer](#5-optional-add-a-claude-api-key-for-write--review) for
+macOS, Linux and Windows. To keep it set in every terminal on macOS/Linux:
 ```bash
 # Add to your shell profile (~/.zshrc or ~/.bash_profile)
 export ANTHROPIC_API_KEY=sk-ant-your-actual-api-key-here
@@ -381,26 +457,26 @@ The repository includes several example packs:
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `ANTHROPIC_API_KEY` | Anthropic (Claude) API key for AI review | None (optional) |
-| `PORT` | Server port | 8787 |
+| `ANTHROPIC_API_KEY` | Anthropic (Claude) API key for Write & Review | None (optional) |
+| `PORT` | Test Prep's port | 8787 |
+| `ADVENTURE_PORT` | Kunskapsäventyret's port | `PORT + 1` (8788) |
+| `WEATHER_LAT`, `WEATHER_LON` | Place whose weather the adventure's themes follow | 59.33, 18.07 (Stockholm) |
 
 ### config.json
 
-Non-sensitive configuration settings:
+Optional, git-ignored file next to `server.js`. The server reads these keys from it (an
+environment variable with the same name wins):
 
 ```json
 {
-  "model": "claude-haiku-4-5-20251001",
-  "host": "127.0.0.1",
-  "port": 8787,
-  "packs_dir": "./packs",
-  "public_dir": "./public",
-  "max_body_bytes": 200000,
-  "rate_limit_per_min": 30
+  "ANTHROPIC_API_KEY": "sk-ant-your-key-here",
+  "WEATHER_LAT": 59.33,
+  "WEATHER_LON": 18.07
 }
 ```
 
-**Note**: The API key should NOT be in `config.json` - use environment variables instead.
+On your own computer `config.json` is the simplest place for the key. On a shared server, prefer an
+environment variable or a `.env` file that only the server can read.
 
 ## Usage
 
@@ -436,7 +512,7 @@ The application includes a real-time analytics dashboard for teachers and admini
 
 Navigate to the `/admin.html` page:
 
-- **Local Development**: `http://localhost:8787/admin.html`
+- **Local Development**: `http://localhost:8787/admin.html` (adventure answers are included as type `adventure`)
 - **Docker**: `http://localhost:8789/admin.html`
 - **Raspberry Pi**: `http://raspberrypi.local:8789/admin.html`
 
