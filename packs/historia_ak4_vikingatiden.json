@@ -1,0 +1,1076 @@
+{
+  "title": "Historia åk 4: Vikingatiden (Lgr22)",
+  "grades": [
+    4
+  ],
+  "subject": "Historia",
+  "items": [
+    {
+      "front": "Ungefär när var vikingatiden?",
+      "back": "ca 800–1050 e.Kr.",
+      "choices": [
+        "ca 3000 f.Kr.",
+        "ca 100–200 e.Kr.",
+        "ca 800–1050 e.Kr.",
+        "ca 1500–1600"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad hette vikingarnas skrifttecken?",
+      "back": "runor",
+      "choices": [
+        "bokstäver på papper",
+        "noter",
+        "hieroglyfer",
+        "runor"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad är en runsten?",
+      "write": true,
+      "back": "en sten med runor som ofta minns en död person",
+      "choices": [
+        "en sten med inristade runor",
+        "en sorts mynt",
+        "en grav av trä",
+        "en ädelsten"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad hette vikingatidens handelsstad på Björkö i Mälaren?",
+      "back": "Birka",
+      "choices": [
+        "Birka",
+        "Sigtuna",
+        "Visby",
+        "Uppsala"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallades en slav på vikingatiden?",
+      "back": "träl",
+      "choices": [
+        "karl",
+        "kung",
+        "träl",
+        "jarl"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad var tinget?",
+      "write": true,
+      "back": "ett möte där fria män löste tvister och bestämde lagar",
+      "choices": [
+        "en sorts båt",
+        "en fest",
+        "ett möte där man bestämde lagar",
+        "en gud"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken viking seglade enligt sagorna till Nordamerika (Vinland)?",
+      "back": "Leif Eriksson",
+      "choices": [
+        "Ragnar Lodbrok",
+        "Gustav Vasa",
+        "Erik Segersäll",
+        "Leif Eriksson"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilka var vikingarnas gudar?",
+      "back": "asagudarna, t.ex. Oden, Tor och Freja",
+      "choices": [
+        "Oden, Tor och Freja",
+        "Zeus, Hera och Apollon",
+        "Jesus och Maria",
+        "Ra och Isis"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "vikingatiden",
+        "asatro",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad sysslade de flesta vikingar med till vardags?",
+      "back": "jordbruk, djurskötsel och hantverk",
+      "choices": [
+        "fabriksarbete",
+        "jordbruk och hantverk",
+        "fotboll",
+        "bara krig"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem var munken som kom till Birka för att sprida kristendomen?",
+      "back": "Ansgar",
+      "choices": [
+        "Olof",
+        "Erik",
+        "Birgitta",
+        "Ansgar"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "medeltiden",
+        "kristendomen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken religion spreds i Sverige när medeltiden började?",
+      "back": "kristendomen",
+      "choices": [
+        "islam",
+        "kristendomen",
+        "asatron",
+        "buddhismen"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "medeltiden",
+        "kristendomen",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken händelse år 793 brukar räknas som vikingatidens början?",
+      "back": "Vikingar plundrade klostret Lindisfarne i England år 793.",
+      "choices": [
+        "Vikingarna kom till Amerika",
+        "Sverige fick sin första kung",
+        "Vikingar plundrade klostret Lindisfarne i England",
+        "Birka brann ner"
+      ],
+      "answerIndex": 2,
+      "hint": "Det var ett kloster på en ö utanför England.",
+      "tags": [
+        "tid",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betydde det att \"fara i viking\"?",
+      "back": "Att ge sig ut på en resa över havet för att handla, plundra eller hitta nytt land att bo i.",
+      "choices": [
+        "Att bli bonde och odla",
+        "Att flytta in i ett långhus",
+        "Att gå med i kyrkan",
+        "Att resa över havet för att handla eller plundra"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "tid",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför tog vikingatiden slut?",
+      "back": "Länderna i Norden blev kristna och fick starkare kungar. Plundringarna slutade och städer och kyrkor byggdes.",
+      "choices": [
+        "Alla skepp förstördes i en storm",
+        "Vikingarna flyttade till Amerika",
+        "Norden blev kristet och fick starka kungar",
+        "Det blev en ny istid"
+      ],
+      "answerIndex": 2,
+      "write": true,
+      "tags": [
+        "tid",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas vikingarnas smala och snabba krigsskepp?",
+      "back": "Långskepp – smala, lätta och snabba, med plats för många roddare.",
+      "choices": [
+        "kogg",
+        "galär",
+        "karavell",
+        "långskepp"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "handel och resor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas vikingarnas breda handelsskepp?",
+      "back": "Knarr – ett brett och kraftigt skepp som kunde lasta mycket varor.",
+      "choices": [
+        "kogg",
+        "galeas",
+        "ekstock",
+        "knarr"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "handel och resor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur fick vikingarna sina skepp att röra sig framåt?",
+      "back": "Med ett stort segel och med åror när det inte blåste.",
+      "choices": [
+        "Med skovelhjul",
+        "Med ångmaskin",
+        "Med segel och åror",
+        "Bara med åror"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "handel och resor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför kunde vikingaskeppen segla långt upp i floder?",
+      "back": "De gick grunt i vattnet (låg köl), så de kunde ta sig fram där det var grunt och dras upp på stranden.",
+      "choices": [
+        "De hade motor",
+        "De var mycket tunga",
+        "De gick grunt i vattnet",
+        "De var gjorda av järn"
+      ],
+      "answerIndex": 2,
+      "write": true,
+      "tags": [
+        "handel och resor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur visste vikingarna vart de seglade utan karta och kompass?",
+      "back": "De följde kusten och tittade på solen, stjärnorna, fåglar, vågor och vindar.",
+      "choices": [
+        "De tittade på solen, stjärnorna och kusten",
+        "De följde skyltar i havet",
+        "De hade GPS",
+        "De seglade bara på natten"
+      ],
+      "answerIndex": 0,
+      "write": true,
+      "tags": [
+        "handel och resor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför fick vikingarna ibland dra skeppen över land?",
+      "back": "Floderna i Östeuropa hängde inte ihop och hade farliga forsar, så skeppen fick dras eller bäras förbi.",
+      "choices": [
+        "De ville träna sina muskler",
+        "Skeppen kunde inte flyta",
+        "Floderna hängde inte ihop och hade forsar",
+        "Havet var fruset hela året"
+      ],
+      "answerIndex": 2,
+      "write": true,
+      "tags": [
+        "handel och resor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Åt vilket håll reste vikingarna från Sverige oftast?",
+      "back": "Österut – över Östersjön och längs floderna i nuvarande Ryssland och Ukraina.",
+      "choices": [
+        "Söderut till Afrika",
+        "Västerut till England",
+        "Norrut till Nordpolen",
+        "Österut"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "handel och resor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallade vikingarna staden Konstantinopel (dagens Istanbul)?",
+      "back": "Miklagård – \"den stora staden\".",
+      "choices": [
+        "Holmgård",
+        "Midgård",
+        "Asgård",
+        "Miklagård"
+      ],
+      "answerIndex": 3,
+      "hint": "Namnet betyder \"den stora gården/staden\".",
+      "tags": [
+        "handel och resor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilka länder åkte vikingar från Danmark och Norge ofta till?",
+      "back": "Västerut: England, Irland, Skottland och Frankrike.",
+      "choices": [
+        "Australien och Nya Zeeland",
+        "Kina och Japan",
+        "England, Irland och Frankrike",
+        "Egypten och Indien"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "handel och resor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken nästan obebodd ö flyttade vikingar till på 800-talet?",
+      "back": "Island – vikingar, mest från Norge, började bosätta sig där omkring år 870.",
+      "choices": [
+        "Mallorca",
+        "Cypern",
+        "Kreta",
+        "Island"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "handel och resor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vem gav enligt sagorna Grönland dess namn?",
+      "back": "Erik Röde. Han kallade landet Grönland för att fler skulle vilja flytta dit.",
+      "choices": [
+        "Erik Röde",
+        "Leif Eriksson",
+        "Olof Skötkonung",
+        "Harald Blåtand"
+      ],
+      "answerIndex": 0,
+      "hint": "Hans son var Leif Eriksson.",
+      "tags": [
+        "handel och resor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad betalade man oftast med på vikingatidens marknader?",
+      "back": "Med silver som vägdes – ofta smycken och mynt som klipptes i bitar (bitsilver). Man bytte också varor.",
+      "choices": [
+        "Mynt med svenska kungens bild",
+        "Silver som vägdes",
+        "Betalkort",
+        "Sedlar"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "handel och resor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför hade vikingatidens handlare en liten våg med sig?",
+      "back": "För att väga silvret – det var vikten som bestämde vad det var värt.",
+      "choices": [
+        "För att väga sig själva",
+        "För att väga sina vapen",
+        "För att mäta hur djupt vattnet var",
+        "För att väga silvret de fick betalt med"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "handel och resor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varifrån kom de flesta silvermynt som hittats i vikingatida skatter i Sverige?",
+      "back": "Från arabvärlden (kalifatet, med städer som Bagdad). De kom hit genom handel österut.",
+      "choices": [
+        "Amerika",
+        "Australien",
+        "Arabvärlden",
+        "Kina"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "handel och resor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken vara sålde vikingarna ofta när de reste österut?",
+      "back": "Pälsar, men också trälar, järn, vax och bärnsten.",
+      "choices": [
+        "socker",
+        "potatis",
+        "kaffe",
+        "pälsar"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "handel och resor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken fin vara köpte vikingarna med sig hem från Miklagård och österlandet?",
+      "back": "Siden (ett tunt och glänsande tyg), men också kryddor, glas och silver.",
+      "choices": [
+        "siden",
+        "potatis",
+        "tomater",
+        "choklad"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "handel och resor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken stad grundades i slutet av vikingatiden och tog över efter Birka?",
+      "back": "Sigtuna, grundad omkring år 980 vid Mälaren. Där präglades några av Sveriges första mynt.",
+      "choices": [
+        "Sigtuna",
+        "Kiruna",
+        "Malmö",
+        "Göteborg"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "handel och resor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad var danagäld?",
+      "back": "Silver som England betalade till vikingarna för att de skulle sluta plundra.",
+      "choices": [
+        "Silver som England betalade för att vikingarna skulle sluta plundra",
+        "En gud som skyddade handlare",
+        "En sorts vikingaskepp",
+        "Vikingarnas namn på Danmark"
+      ],
+      "answerIndex": 0,
+      "write": true,
+      "tags": [
+        "handel och resor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallades en fri bonde på vikingatiden?",
+      "back": "Karl – en fri man som ofta ägde sin gård. Under honom stod trälarna, över honom jarlarna.",
+      "choices": [
+        "träl",
+        "munk",
+        "jarl",
+        "karl"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "samhälle",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad var en jarl?",
+      "back": "En rik och mäktig hövding som hade många människor under sig.",
+      "choices": [
+        "En präst",
+        "En sorts skepp",
+        "En rik och mäktig hövding",
+        "En fattig träl"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "samhälle",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur kunde någon bli träl på vikingatiden?",
+      "back": "Genom att bli tillfångatagen på en räd eller i krig, genom att födas av trälar eller genom skulder.",
+      "choices": [
+        "Genom att bli vald på tinget",
+        "Genom att bli tillfångatagen på en räd",
+        "Genom att vinna en tävling",
+        "Genom att bygga ett skepp"
+      ],
+      "answerIndex": 1,
+      "write": true,
+      "tags": [
+        "samhälle",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad hette Islands ting, ett av världens äldsta parlament?",
+      "back": "Alltinget, som började samlas år 930.",
+      "choices": [
+        "Riksdagen",
+        "Stortinget",
+        "Alltinget",
+        "Folketinget"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "samhälle",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket vapen var dyrast och fanns bara hos rika vikingar?",
+      "back": "Svärdet. Vanliga vikingar hade oftast spjut, yxa och sköld.",
+      "choices": [
+        "kniv",
+        "yxa",
+        "spjut",
+        "svärd"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "samhälle",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken dansk vikingakung har gett namn åt den trådlösa tekniken Bluetooth?",
+      "back": "Harald Blåtand. Han enade Danmark, och tekniken ska ena olika apparater. Symbolen är hans initialer i runor.",
+      "choices": [
+        "Erik Röde",
+        "Knut den store",
+        "Harald Blåtand",
+        "Ragnar Lodbrok"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "samhälle",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken sorts hus bodde de flesta vikingar i?",
+      "back": "Långhus – ett långt hus av trä, med väggar av flätat ris och lera och tak av halm eller torv. Människor och ibland djur bodde under samma tak.",
+      "choices": [
+        "tält",
+        "slott",
+        "långhus",
+        "höghus"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "vardagsliv",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Var låg elden i ett långhus?",
+      "back": "Mitt i huset, i en härd på golvet. Röken gick ut genom ett hål i taket.",
+      "choices": [
+        "Mitt i huset på golvet",
+        "I en kakelugn i hörnet",
+        "Utanför huset",
+        "Uppe på taket"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "vardagsliv",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad visade nycklarna som en vikingakvinna bar i bältet?",
+      "back": "Att hon hade ansvar för gården, hushållet och förråden.",
+      "choices": [
+        "Att hon var gift med kungen",
+        "Att hon hade ansvar för gården och förråden",
+        "Att hon var präst",
+        "Att hon var träl"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "vardagsliv",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kunde en vikingakvinna göra som kvinnor i många andra länder inte fick?",
+      "back": "Hon kunde skilja sig och hon kunde ärva och äga saker.",
+      "choices": [
+        "Skilja sig från sin man",
+        "Gå i skola",
+        "Rösta i riksdagen",
+        "Bli kung"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "vardagsliv",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gjorde vikingabarn oftast om dagarna?",
+      "back": "De hjälpte till på gården och lärde sig arbetet av de vuxna. Det fanns ingen skola.",
+      "choices": [
+        "Hjälpte till på gården och lärde sig arbetet",
+        "Gick i skola varje dag",
+        "Spelade datorspel",
+        "Gick på förskola"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "vardagsliv",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur gjorde vikingarna för att maten skulle räcka över vintern?",
+      "back": "De saltade, torkade och rökte mat, till exempel fisk och kött.",
+      "choices": [
+        "De lade den i frysen",
+        "De åt bara snö",
+        "De saltade, torkade och rökte den",
+        "De köpte konserver"
+      ],
+      "answerIndex": 2,
+      "write": true,
+      "tags": [
+        "vardagsliv",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad gjordes drycken mjöd av?",
+      "back": "Av honung och vatten som fick jäsa.",
+      "choices": [
+        "mjölk",
+        "äpplen",
+        "honung",
+        "kaffe"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "vardagsliv",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket brädspel spelade vikingarna?",
+      "back": "Hnefatafl – ett strategispel där kungen ska fly från brädet. Schack kom till Norden först senare.",
+      "choices": [
+        "schack",
+        "Monopol",
+        "Fia med knuff",
+        "hnefatafl"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "vardagsliv",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas vikingarnas religion?",
+      "back": "Asatro (fornnordisk religion) – tron på många gudar, asarna och vanerna.",
+      "choices": [
+        "kristendom",
+        "asatro",
+        "islam",
+        "buddhism"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "asatro",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken gud hade hammaren Mjölner och åskan?",
+      "back": "Tor – den starke guden som skyddade gudar och människor mot jättarna.",
+      "choices": [
+        "Tor",
+        "Loke",
+        "Oden",
+        "Frej"
+      ],
+      "answerIndex": 0,
+      "tags": [
+        "asatro",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken gud var den högste och visaste, och hade bara ett öga?",
+      "back": "Oden. Han gav bort ett öga för att få dricka ur visdomens brunn.",
+      "choices": [
+        "Tor",
+        "Oden",
+        "Loke",
+        "Balder"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "asatro",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken gudinna var gudinna för kärlek och fruktbarhet?",
+      "back": "Freja.",
+      "choices": [
+        "Idun",
+        "Hel",
+        "Ran",
+        "Freja"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "asatro",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad hette världsträdet som höll ihop världarna?",
+      "back": "Yggdrasil – en jättelik ask.",
+      "choices": [
+        "Mjölner",
+        "Valhall",
+        "Yggdrasil",
+        "Bifrost"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "asatro",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vart kom krigare som dog i strid enligt asatron?",
+      "back": "Till Valhall, Odens hall, eller till Frejas hall Folkvang.",
+      "choices": [
+        "Miklagård",
+        "Midgård",
+        "Valhall",
+        "Birka"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "asatro",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad hette människornas värld i asatron?",
+      "back": "Midgård. Gudarna bodde i Asgård och jättarna i Utgård.",
+      "choices": [
+        "Valhall",
+        "Asgård",
+        "Utgård",
+        "Midgård"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "asatro",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken veckodag har fått sitt namn efter guden Tor?",
+      "back": "Torsdag – \"Tors dag\".",
+      "choices": [
+        "söndag",
+        "torsdag",
+        "fredag",
+        "tisdag"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "asatro",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilken svensk kung brukar räknas som den förste kristne kungen?",
+      "back": "Olof Skötkonung, som döptes omkring år 1008.",
+      "choices": [
+        "Gustav Vasa",
+        "Olof Skötkonung",
+        "Harald Blåtand",
+        "Erik Röde"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "asatro",
+        "kristnandet",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur kan arkeologer se på en grav att den döda var kristen?",
+      "back": "Kristna begravdes oftast utan gravgåvor, liggande i öst–västlig riktning på en kyrkogård. Asatroende brändes ofta och fick med sig saker.",
+      "choices": [
+        "Den döda ligger i ett skepp",
+        "Den döda ligger utan gravgåvor vid en kyrka",
+        "Graven har en hög med brända ben och smycken",
+        "Graven är full av vapen"
+      ],
+      "answerIndex": 1,
+      "write": true,
+      "tags": [
+        "källor",
+        "kristnandet",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad kallas runalfabetet?",
+      "back": "Futhark – efter de sex första runorna: f, u, th, a, r, k.",
+      "choices": [
+        "kilskrift",
+        "abc",
+        "hieroglyfer",
+        "futhark"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "källor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hur många runor hade runalfabetet som vikingarna använde?",
+      "back": "16 runor (den yngre futharken). Därför fick en runa ibland stå för flera ljud.",
+      "choices": [
+        "29",
+        "8",
+        "16",
+        "50"
+      ],
+      "answerIndex": 2,
+      "tags": [
+        "källor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför bestod runorna mest av raka streck?",
+      "back": "De var lättare att rista med kniv i trä, ben och sten än runda former.",
+      "choices": [
+        "Runda streck betydde otur",
+        "De var lättare att rista i trä och sten",
+        "Vikingarna kunde inte rita cirklar",
+        "Det var en lag från kungen"
+      ],
+      "answerIndex": 1,
+      "write": true,
+      "tags": [
+        "källor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad står det oftast på en runsten?",
+      "back": "Vem som lät resa stenen och till minne av vem – ofta en död släkting.",
+      "choices": [
+        "Ett recept på mat",
+        "Vägen till närmaste stad",
+        "Kungens lagar",
+        "Vem som rest den och till minne av vem"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "källor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vilket landskap har flest runstenar i världen?",
+      "back": "Uppland – där står ungefär hälften av Sveriges runstenar.",
+      "choices": [
+        "Gotland",
+        "Skåne",
+        "Lappland",
+        "Uppland"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "källor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Vad heter runstenen med världens längsta runinskrift?",
+      "back": "Rökstenen i Östergötland, från 800-talet.",
+      "choices": [
+        "Jellingestenen",
+        "Gotlandsstenen",
+        "Kensingtonstenen",
+        "Rökstenen"
+      ],
+      "answerIndex": 3,
+      "tags": [
+        "källor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför kan de isländska sagorna vara svåra att lita på som källa om vikingatiden?",
+      "back": "De skrevs ner flera hundra år senare, på 1200-talet. Berättelserna kan ha ändrats på vägen.",
+      "choices": [
+        "De skrevs ner flera hundra år senare",
+        "De finns bara som film",
+        "De är skrivna på engelska",
+        "De skrevs av vikingarna själva medan det hände"
+      ],
+      "answerIndex": 0,
+      "write": true,
+      "tags": [
+        "källor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför beskrev munkar i England vikingarna som mycket grymma?",
+      "back": "Munkarna och deras kloster blev plundrade, så de skrev ur sin egen synvinkel. Vikingarna själva skrev nästan inga berättelser.",
+      "choices": [
+        "Deras kloster blev plundrade av vikingarna",
+        "Vikingarna betalade dem för att skriva så",
+        "De ville sälja fler böcker",
+        "De hade aldrig träffat några vikingar"
+      ],
+      "answerIndex": 0,
+      "write": true,
+      "tags": [
+        "källor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Hade vikingarna horn på hjälmarna?",
+      "back": "Nej. Det är en myt från 1800-talet, när konstnärer och operor ritade vikingar så.",
+      "choices": [
+        "Ja, för att skrämma djur",
+        "Nej, det är en myt från 1800-talet",
+        "Ja, men bara kvinnorna",
+        "Ja, alla vikingar hade det"
+      ],
+      "answerIndex": 1,
+      "tags": [
+        "källor",
+        "vikingatiden",
+        "åk4"
+      ]
+    },
+    {
+      "front": "Varför har man hittat hela vikingaskepp i gravhögar i Norge?",
+      "back": "Rika och mäktiga personer begravdes i skepp med många saker, för att ha med sig på resan till dödsriket.",
+      "choices": [
+        "Rika personer begravdes i skepp",
+        "De användes som hus",
+        "Skeppen sjönk ner i jorden av sig själva",
+        "Vikingarna gömde dem för fienden"
+      ],
+      "answerIndex": 0,
+      "write": true,
+      "tags": [
+        "källor",
+        "vikingatiden",
+        "åk4"
+      ]
+    }
+  ]
+}

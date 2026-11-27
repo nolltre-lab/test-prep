@@ -123,7 +123,11 @@ apps use the same packs, picked by grade (åk) first, then subject.
   nonsense. Every question unique (flashcards and match show the question alone).
 - Facts must be right — leave a question out rather than guess. Tell the person to read through the
   pack, since it will be used by a child.
-- Name files `<subject>_ak<grade>.json` (e.g. `historia_ak5.json`).
+- Name files `<subject>_ak<grade>.json` (e.g. `historia_ak5.json`); a topic pack
+  `<subject>_ak<grade>_<topic>.json` (e.g. `historia_ak4_vikingatiden.json`).
+- **A topic pack includes every question on that topic from the general pack** for the same subject
+  and grade (copy them in), plus its own. The overlap with the general pack is intended. Drop your
+  own question where it asks the same thing as a copied one, so the pack has no duplicates.
 - Check before saying it's done:
   ```bash
   python3 -c "import json,sys; d=json.load(open(sys.argv[1])); it=d['items']; \

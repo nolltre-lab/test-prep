@@ -440,6 +440,10 @@ Question packs are JSON files stored in the `packs/` directory.
   the quiz modes and the adventure show it after a wrong answer. Add a `hint` where it helps.
 - Wrong choices should be believable mistakes (half past one for "halv ett", mouses for mice), not
   nonsense.
+- **Topic packs include the general pack's questions on that topic.** A pack on one theme
+  (`historia_ak4_vikingatiden.json`) copies every question on that theme from the subject's general
+  pack for the grade (`historia_ak4.json`) as well as its own, so it covers the topic on its own.
+  The overlap between the two packs is intended. Within one pack, every question is still unique.
 
 ### Adding Packs
 
