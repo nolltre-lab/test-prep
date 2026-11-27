@@ -260,6 +260,12 @@
         </div>
       </div>
 
+      <!-- Claude usage per account -->
+      <div class="panel">
+        <h2>🤖 Claude usage per account</h2>
+        <div id="claudeUsage"></div>
+      </div>
+
       <!-- Student Performance Overview -->
       <div class="panel">
         <h2>👥 Student Performance by Pack</h2>
@@ -321,6 +327,7 @@
         renderPackStats(data.packUsage || [], data.packPerformance || {});
         renderTimeSpent(data.timeSpentByClient || {}, data.sessions || []);
         renderRecentActivity(data.recentQuizActivity || []);
+        loadUsage();
 
         if (data.avgScores) {
           renderReviewScores(data.avgScores);
@@ -482,6 +489,44 @@
 
       html += '</tbody></table>';
       container.innerHTML = html;
+    }
+
+    // Write & Review and the adventure's written final question are the only Claude calls.
+    // Cost is estimated from the tokens each answer used and the model's list price (USD).
+    async function loadUsage() {
+      const container = $('#claudeUsage');
+      try {
+        const r = await fetch('/api/usage');
+        if (!r.ok) throw new Error(r.status);
+        renderUsage(await r.json());
+      } catch (e) {
+        container.innerHTML = '<div class="empty-state">Could not load usage</div>';
+      }
+    }
+
+    function renderUsage(data) {
+      const container = $('#claudeUsage');
+      if (!data.accounts.length) {
+        container.innerHTML = '<div class="empty-state">No Claude reviews yet.</div>';
+        return;
+      }
+      const cell = u => `${u.reviews} <span class="timestamp">· $${u.costUSD.toFixed(u.costUSD < 1 ? 3 : 2)}</span>`;
+      const appNames = { 'test-prep': 'Test Prep', 'adventure': 'Äventyret' };
+      let html = '<table><thead><tr><th>Account</th><th>Today</th><th>Last 7 days</th><th>This month</th><th>All time</th><th>Where</th><th>Last used</th></tr></thead><tbody>';
+      data.accounts.forEach(a => {
+        const where = Object.entries(a.byApp).map(([app, n]) => `${appNames[app] || app} ${n}`).join(', ');
+        html += `<tr><td><strong>${escapeHtml(a.account)}</strong></td><td>${cell(a.today)}</td><td>${cell(a.week)}</td>` +
+          `<td>${cell(a.month)}</td><td>${cell(a.total)}</td><td>${where}</td><td class="timestamp">${a.lastDay || '-'}</td></tr>`;
+      });
+      const t = data.total;
+      html += `<tr><td><strong>Total</strong></td><td>${cell(t.today)}</td><td>${cell(t.week)}</td><td>${cell(t.month)}</td><td>${cell(t.total)}</td><td></td><td></td></tr>`;
+      html += '</tbody></table>';
+      html += `<p class="timestamp" style="margin-top:8px">Reviews · estimated cost in USD at list price (${escapeHtml(data.model)}). Counted since this was added; earlier reviews aren't included.</p>`;
+      container.innerHTML = html;
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
     }
 
     function renderReviewScores(avgScores) {

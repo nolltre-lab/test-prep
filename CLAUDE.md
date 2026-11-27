@@ -145,12 +145,13 @@ apps use the same packs, picked by grade (åk) first, then subject.
 | `server.js` | Zero-dependency `http` server. Serves `index.html`/`admin.html` on `PORT` and `adventure/` on `ADVENTURE_PORT`, plus the API. Reads `config.json` for `ANTHROPIC_API_KEY`, `WEATHER_LAT`, `WEATHER_LON` (environment variables win) |
 | `index.html` | Test Prep — one file, vanilla JS |
 | `adventure/index.html` | Kunskapsäventyret — one file, vanilla JS, all graphics inline SVG |
-| `admin.html` | Usage dashboard (reads `analytics.json`, which the server writes; git-ignored) |
+| `admin.html` | Usage dashboard (reads `analytics.json`, which the server writes; git-ignored). Behind a gateway (`X-Forwarded-User` set) it and `/api/analytics`/`/api/usage` are admin-only, and only the admin may choose the review model |
 | `packs/*.json` | Question packs |
 | `ROADMAP.md` | Ideas not built yet |
 
 **API:** `GET /api/packs`, `GET /api/pack/<file>`, `POST /api/review` (Claude, Messages API, Haiku),
-`POST /api/track` (analytics), `GET /api/analytics`, `GET /api/config` (`{hasClaude}`),
+`POST /api/track` (analytics), `GET /api/analytics`, `GET /api/usage` (Claude reviews + estimated cost
+per account, `CLAUDE_PRICES` in `server.js` — add a model there when switching), `GET /api/config` (`{hasClaude}`),
 `GET /api/theme` (season, time of day, weather, holiday).
 
 **Kunskapsäventyret** (`adventure/index.html`), from top to bottom:

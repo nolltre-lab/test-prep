@@ -51,6 +51,7 @@ const analytics = {
   packSessions: [],         // detailed pack activity sessions
   quizActivity: [],         // quiz question attempts
   packPerformance: new Map(), // clientId -> packId -> performance stats
+  claudeUsage: {},          // account -> "YYYY-MM-DD" -> { reviews, inputTokens, outputTokens, costUSD, byApp: { app: reviews } }
   lastSave: Date.now()
 };
 
@@ -68,6 +69,7 @@ try {
     if (data.packUsage) analytics.packUsage = new Map(Object.entries(data.packUsage));
     if (data.packSessions) analytics.packSessions = data.packSessions || [];
     if (data.quizActivity) analytics.quizActivity = data.quizActivity || [];
+    if (data.claudeUsage) analytics.claudeUsage = data.claudeUsage;
     if (data.packPerformance) {
       analytics.packPerformance = new Map();
       Object.entries(data.packPerformance).forEach(([clientId, packs]) => {
@@ -80,10 +82,15 @@ try {
   console.warn("Could not load analytics.json:", e.message);
 }
 
-// Save analytics to file (debounced)
+// Save analytics to file (debounced: at most once a minute, and a change inside that minute is
+// saved when it ends — so the last events before a quiet spell aren't lost)
+let saveTimer = null;
 function saveAnalytics() {
   const now = Date.now();
-  if (now - analytics.lastSave < 60000) return; // Save max once per minute
+  if (now - analytics.lastSave < 60000) {
+    if (!saveTimer) saveTimer = setTimeout(() => { saveTimer = null; saveAnalytics(); }, 60000 - (now - analytics.lastSave));
+    return;
+  }
   analytics.lastSave = now;
 
   // Convert nested Maps to objects for JSON serialization
@@ -104,6 +111,7 @@ function saveAnalytics() {
     packSessions: analytics.packSessions.slice(-2000), // Keep last 2000 sessions
     quizActivity: analytics.quizActivity.slice(-5000), // Keep last 5000 quiz attempts
     packPerformance: packPerfObj,
+    claudeUsage: analytics.claudeUsage,
     savedAt: new Date().toISOString()
   };
 
@@ -305,6 +313,46 @@ async function handleGetPack(req, res, fnameRaw) {
 const CLAUDE_DEFAULT_MODEL = "claude-haiku-4-5-20251001"; // fast/cheap — matches the review task's cost profile
 const CLAUDE_API_VERSION = "2023-06-01";
 
+// USD per million tokens (Anthropic's list prices), for the usage estimate. A model not listed
+// is still counted in tokens, just without a cost.
+const CLAUDE_PRICES = {
+  "claude-haiku-4-5": { input: 1.00, output: 5.00 },
+  "claude-haiku-5-5": { input: 0.10, output: 0.50 },
+  "claude-sonnet-4-6": { input: 3.00, output: 15.00 },
+  "claude-sonnet-5-5": { input: 2.00, output: 10.00 },
+};
+function priceOf(model) {
+  const key = Object.keys(CLAUDE_PRICES).find(k => model === k || model.startsWith(k + "-"));
+  return key ? CLAUDE_PRICES[key] : null;
+}
+
+// Who is asking. Behind the apps-home gateway Caddy sets X-Forwarded-User/-Role on every request
+// (and overwrites anything the browser sends); run locally there is no gateway and no header.
+const forwardedUser = req => req.headers["x-forwarded-user"] || null;
+const usageAccount = req => forwardedUser(req) || "local";
+/** The household admin behind the gateway, or anyone on a local run (no gateway — it's your machine). */
+const isAdminRequest = req => !forwardedUser(req) || req.headers["x-forwarded-role"] === "admin";
+
+function stockholmDate(d = new Date()) {
+  return new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Stockholm" }).format(d); // YYYY-MM-DD
+}
+
+function trackClaudeUsage(req, model, usage) {
+  const account = usageAccount(req);
+  const app = req.socket.localPort === ADVENTURE_PORT ? "adventure" : "test-prep";
+  const day = stockholmDate();
+  const byDay = analytics.claudeUsage[account] || (analytics.claudeUsage[account] = {});
+  const d = byDay[day] || (byDay[day] = { reviews: 0, inputTokens: 0, outputTokens: 0, costUSD: 0, byApp: {} });
+  const input = Number(usage?.input_tokens) || 0, output = Number(usage?.output_tokens) || 0;
+  const price = priceOf(model);
+  d.reviews += 1;
+  d.inputTokens += input;
+  d.outputTokens += output;
+  if (price) d.costUSD += (input * price.input + output * price.output) / 1e6;
+  d.byApp[app] = (d.byApp[app] || 0) + 1;
+  saveAnalytics();
+}
+
 // Claude has no OpenAI-style response_format:{type:"json_object"} guarantee, so even with a
 // strict "respond with ONLY JSON" system prompt it can occasionally wrap the object in a
 // ```json ... ``` fence or add a stray sentence around it. Pulling out the first {...} block
@@ -325,7 +373,9 @@ async function handleReview(req, res) {
   const body = await readBody(req);
   const system = typeof body.system === "string" ? body.system : "Du är en svensk ämneslärare.";
   const user = body.user || {};
-  const model = (body.model && String(body.model)) || CLAUDE_DEFAULT_MODEL;
+  // Only the admin (or a local run) may pick another model — anyone else, e.g. a shared class
+  // account, always gets the cheap default.
+  const model = (isAdminRequest(req) && body.model && String(body.model)) || CLAUDE_DEFAULT_MODEL;
 
   try {
     const r = await fetch("https://api.anthropic.com/v1/messages", {
@@ -351,6 +401,7 @@ async function handleReview(req, res) {
       return sendJSON(res, r.status, { error: "anthropic_error", detail: t });
     }
     const data = await r.json();
+    trackClaudeUsage(req, model, data?.usage);
     const text = data?.content?.[0]?.text || "{}";
     let review;
     try { review = JSON.parse(extractJsonObject(text)); } catch { review = { summary_feedback: "Kunde inte tolka svaret från modellen." }; }
@@ -553,6 +604,30 @@ async function handleAnalytics(res) {
   });
 }
 
+// --- API: Claude usage per account (today, last 7 days, this month, all time) ---
+async function handleUsage(res) {
+  const today = stockholmDate();
+  const weekAgo = stockholmDate(new Date(Date.now() - 6 * 86400000));
+  const month = today.slice(0, 7);
+  const empty = () => ({ reviews: 0, inputTokens: 0, outputTokens: 0, costUSD: 0 });
+  const add = (t, d) => { t.reviews += d.reviews; t.inputTokens += d.inputTokens; t.outputTokens += d.outputTokens; t.costUSD += d.costUSD; };
+  const accounts = Object.entries(analytics.claudeUsage).map(([account, byDay]) => {
+    const row = { account, today: empty(), week: empty(), month: empty(), total: empty(), byApp: {}, lastDay: null };
+    for (const [day, d] of Object.entries(byDay)) {
+      add(row.total, d);
+      if (day === today) add(row.today, d);
+      if (day >= weekAgo) add(row.week, d);
+      if (day.startsWith(month)) add(row.month, d);
+      for (const [app, n] of Object.entries(d.byApp || {})) row.byApp[app] = (row.byApp[app] || 0) + n;
+      if (!row.lastDay || day > row.lastDay) row.lastDay = day;
+    }
+    return row;
+  }).sort((a, b) => b.month.costUSD - a.month.costUSD || b.total.reviews - a.total.reviews);
+  const total = { today: empty(), week: empty(), month: empty(), total: empty() };
+  for (const a of accounts) for (const k of Object.keys(total)) add(total[k], a[k]);
+  return sendJSON(res, 200, { model: CLAUDE_DEFAULT_MODEL, accounts, total });
+}
+
 // --- API: track activity ---
 async function handleTrackActivity(req, res) {
   const body = await readBody(req);
@@ -603,8 +678,15 @@ const router = publicDir => async (req, res) => {
     if (req.method === "POST" && urlObj.pathname === "/api/review") {
       return handleReview(req, res);
     }
+    // The dashboard and its data (everyone's answers and usage) are for the admin only.
+    const adminOnly = urlObj.pathname === "/api/analytics" || urlObj.pathname === "/api/usage" ||
+      urlObj.pathname === "/admin.html" || urlObj.pathname === "/admin";
+    if (adminOnly && !isAdminRequest(req)) return sendJSON(res, 403, { error: "admin only" });
     if (req.method === "GET" && urlObj.pathname === "/api/analytics") {
       return handleAnalytics(res);
+    }
+    if (req.method === "GET" && urlObj.pathname === "/api/usage") {
+      return handleUsage(res);
     }
     if (req.method === "POST" && urlObj.pathname === "/api/track") {
       return handleTrackActivity(req, res);

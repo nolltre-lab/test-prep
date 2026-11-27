@@ -524,6 +524,15 @@ Navigate to the `/admin.html` page:
 - **Docker**: `http://localhost:8789/admin.html`
 - **Raspberry Pi**: `http://raspberrypi.local:8789/admin.html`
 
+Behind a login gateway that sets `X-Forwarded-User`/`X-Forwarded-Role` (like apps-home), the dashboard
+and its data are for the `admin` role only; run on your own computer (no gateway) it's open.
+
+**Claude usage per account:** every Write & Review answer (including the adventure's written final
+question) is counted per signed-in account — reviews and an estimated cost from the tokens used and the
+model's list price, today / last 7 days / this month / all time (`GET /api/usage`). Without a gateway
+everything counts as `local`. Only the admin can choose another model in Settings; everyone else always
+gets the default (Haiku).
+
 ### Dashboard Features
 
 **Summary Statistics**
@@ -649,6 +658,7 @@ All analytics data is stored in `analytics.json` in the application root directo
 | `/api/pack/:filename` | GET | Fetch specific pack contents |
 | `/api/review` | POST | Submit answer for AI review |
 | `/api/analytics` | GET | Get analytics data (sessions, pack usage, review stats) |
+| `/api/usage` | GET | Claude reviews and estimated cost per account |
 
 ## Contributing
 
