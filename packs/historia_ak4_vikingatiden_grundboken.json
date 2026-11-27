@@ -1,0 +1,967 @@
+{
+  "title": "Historia åk 4: Vikingatiden – instuderingsfrågor (SO Grundboken)",
+  "grades": [
+    4
+  ],
+  "subject": "Historia",
+  "items": [
+    {
+      "front": "Vad brukar den sista delen av järnåldern kallas för?",
+      "back": "Den sista delen av järnåldern kallas för vikingatiden.",
+      "choices": [
+        "stenåldern",
+        "bronsåldern",
+        "medeltiden",
+        "vikingatiden"
+      ],
+      "answerIndex": 3,
+      "hint": "Grundboken s. 74",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "När pågick vikingatiden?",
+      "back": "Vikingatiden pågick mellan år 800 och 1050.",
+      "choices": [
+        "år 1500–1600",
+        "år 1050–1300",
+        "år 800–1050",
+        "år 500–700"
+      ],
+      "answerIndex": 2,
+      "hint": "Grundboken s. 74",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Ungefär hur länge pågick vikingatiden?",
+      "back": "Ungefär 250 år (år 800–1050).",
+      "choices": [
+        "ungefär 50 år",
+        "ungefär 1000 år",
+        "ungefär 100 år",
+        "ungefär 250 år"
+      ],
+      "answerIndex": 3,
+      "hint": "Grundboken s. 74",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vad har vikingatiden fått sitt namn ifrån?",
+      "back": "Perioden har fått sitt namn efter den tidens sjöfarare, vikingarna.",
+      "choices": [
+        "en kung som hette Viking",
+        "en stad som hette Vik",
+        "den tidens sjöfarare, vikingarna",
+        "ett skepp som hette Vikingen"
+      ],
+      "answerIndex": 2,
+      "hint": "Grundboken s. 74",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Hur beskrevs vikingarna?",
+      "back": "Vikingarna beskrevs som läskiga sjöfarare med horn på hjälmarna.",
+      "choices": [
+        "som fredliga munkar",
+        "som rika köpmän i städer",
+        "som riddare på hästar",
+        "som läskiga sjöfarare med horn på hjälmarna"
+      ],
+      "answerIndex": 3,
+      "hint": "Grundboken s. 74",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Varför var det livsviktigt att ätten, släkten, höll ihop?",
+      "back": "Den gav trygghet. Ätten tog tillsammans hand om fattiga eller sjuka släktingar och skyddade mot fiender.",
+      "choices": [
+        "kungen bestämde det",
+        "man fick betala skatt för ätten",
+        "annars fick man inte segla",
+        "den gav trygghet och skyddade mot fiender"
+      ],
+      "answerIndex": 3,
+      "hint": "Grundboken s. 76",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Vad levde de flesta av i vikingabyn?",
+      "back": "De flesta levde av jordbruk, jakt och fiske.",
+      "choices": [
+        "att plundra andra länder",
+        "handel med silver",
+        "jordbruk, jakt och fiske",
+        "att bygga skepp"
+      ],
+      "answerIndex": 2,
+      "hint": "Grundboken s. 76",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Vad gjorde barnen i stället för att gå till skolan?",
+      "back": "Barnen fick tidigt hjälpa till med gårdens olika sysslor, som att mata djuren och laga mat.",
+      "choices": [
+        "lekte hela dagarna",
+        "seglade på vikingatåg",
+        "hjälpte till med sysslorna på gården",
+        "lärde sig läsa i kyrkan"
+      ],
+      "answerIndex": 2,
+      "hint": "Grundboken s. 76",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Vad var trälar?",
+      "back": "Trälar var slavar som ägdes av husbonden.",
+      "choices": [
+        "slavar som ägdes av husbonden",
+        "köpmän i Birka",
+        "präster som offrade till gudarna",
+        "ledare för tinget"
+      ],
+      "answerIndex": 0,
+      "hint": "Grundboken s. 76",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Vem var det som ägde gården?",
+      "back": "Husbonden ägde gården.",
+      "choices": [
+        "trälen",
+        "lagmannen",
+        "husbonden",
+        "husfrun"
+      ],
+      "answerIndex": 2,
+      "hint": "Grundboken s. 78",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vem var det som hade ansvar för gårdens skötsel?",
+      "back": "Det var husfrun som hade ansvar för gårdens skötsel.",
+      "choices": [
+        "trälarna",
+        "husbonden",
+        "barnen",
+        "husfrun"
+      ],
+      "answerIndex": 3,
+      "hint": "Grundboken s. 78",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vad bestod maten av under vikingatiden?",
+      "back": "Maten bestod av det som människorna kunde få från åkrar, natur och djur.",
+      "choices": [
+        "bara fisk",
+        "mat som man köpte i affärer",
+        "mest ris och kryddor från Asien",
+        "det man kunde få från åkrar, natur och djur"
+      ],
+      "answerIndex": 3,
+      "hint": "Grundboken s. 78",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Vad drack man till maten under vikingatiden?",
+      "back": "Till maten drack man öl och vatten.",
+      "choices": [
+        "bara mjölk",
+        "kaffe och te",
+        "öl och vatten",
+        "läsk och juice"
+      ],
+      "answerIndex": 2,
+      "hint": "Grundboken s. 78",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Hur bevarades maten under vikingatiden?",
+      "back": "Man kunde bevara maten genom att salta, torka, röka eller grava den.",
+      "choices": [
+        "genom att frysa den i frysboxar",
+        "i konservburkar",
+        "i kylskåp",
+        "genom att salta, torka, röka eller grava den"
+      ],
+      "answerIndex": 3,
+      "hint": "Grundboken s. 78",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Vad var det som kallades ting?",
+      "back": "Ting var ett slags möte.",
+      "choices": [
+        "ett slags möte",
+        "ett slags skepp",
+        "ett slags offer till gudarna",
+        "ett slags vapen"
+      ],
+      "answerIndex": 0,
+      "hint": "Grundboken s. 79",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vilka fick vara med vid tinget?",
+      "back": "Alla fria män fick vara med vid tinget.",
+      "choices": [
+        "bara kvinnor",
+        "alla fria män",
+        "alla trälar",
+        "bara kungen"
+      ],
+      "answerIndex": 1,
+      "hint": "Grundboken s. 79",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vad gjorde man vid tinget?",
+      "back": "Vid tinget diskuterades och beslutades det om sådant som rörde alla som bodde i bygden.",
+      "choices": [
+        "offrade till gudarna",
+        "handlade med pälsar",
+        "byggde skepp tillsammans",
+        "diskuterade och beslutade om sådant som rörde alla i bygden"
+      ],
+      "answerIndex": 3,
+      "hint": "Grundboken s. 79",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Vad kallades den som var ledare för tinget?",
+      "back": "Den som var ledare för tinget kallades för lagman.",
+      "choices": [
+        "husbonde",
+        "völva",
+        "lagman",
+        "jarl"
+      ],
+      "answerIndex": 2,
+      "hint": "Grundboken s. 79",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vad var tingets viktigaste uppgift?",
+      "back": "Tingets viktigaste uppgift var att fungera som en domstol.",
+      "choices": [
+        "att fira blot",
+        "att samla in skatt till kungen",
+        "att välja vem som fick segla",
+        "att fungera som en domstol"
+      ],
+      "answerIndex": 3,
+      "hint": "Grundboken s. 79",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Hur kunde man slippa att bli dömd vid tinget?",
+      "back": "Ett sätt att slippa bli dömd var att låta flera mäktiga män intyga att den anklagade var en bra person.",
+      "choices": [
+        "flera mäktiga män intygade att den anklagade var en bra person",
+        "man betalade lagmannen med silver",
+        "man flydde till Birka",
+        "man offrade en gris"
+      ],
+      "answerIndex": 0,
+      "hint": "Grundboken s. 79",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Varför kunde det vara livsfarligt att bli sjuk under vikingatiden?",
+      "back": "Det fanns inga läkare eller mediciner.",
+      "choices": [
+        "det fanns inga läkare eller mediciner",
+        "sjuka skickades ut på havet",
+        "man trodde att gudarna straffade dem",
+        "sjuka fick inte vara med i ätten"
+      ],
+      "answerIndex": 0,
+      "hint": "Grundboken s. 79",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Vad är missväxt?",
+      "back": "Missväxt är när bonden får en liten skörd ett år, eftersom grödorna växer dåligt.",
+      "choices": [
+        "när grödorna växer dåligt och skörden blir liten",
+        "när det regnar för lite på havet",
+        "när djuren blir sjuka",
+        "när bonden får extra stor skörd"
+      ],
+      "answerIndex": 0,
+      "hint": "Grundboken s. 80",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Vad kallades de viktigaste av de manliga gudarna?",
+      "back": "De viktigaste av de manliga gudarna kallades för asagudar.",
+      "choices": [
+        "jättar",
+        "lagmän",
+        "völvor",
+        "asagudar"
+      ],
+      "answerIndex": 3,
+      "hint": "Grundboken s. 81",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vem var den viktigaste av asagudarna?",
+      "back": "Den allra viktigaste asaguden var Oden.",
+      "choices": [
+        "Frej",
+        "Tyr",
+        "Oden",
+        "Tor"
+      ],
+      "answerIndex": 2,
+      "hint": "Grundboken s. 81",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vilken slags gud var Oden?",
+      "back": "Oden var krigsguden.",
+      "choices": [
+        "fruktbarhetsguden",
+        "krigsguden",
+        "åskguden",
+        "jaktens gud"
+      ],
+      "answerIndex": 1,
+      "hint": "Grundboken s. 81",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Var hade Oden sin bostad?",
+      "back": "Oden hade sin bostad i Valhall.",
+      "choices": [
+        "i Birka",
+        "i Särkland",
+        "i Valhall",
+        "i Gårdarike"
+      ],
+      "answerIndex": 2,
+      "hint": "Grundboken s. 81",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vem var Särimner?",
+      "back": "Särimner var en gris som kunde slaktas och ätas upp på kvällen, men var levande igen på morgonen.",
+      "choices": [
+        "en völva som spådde framtiden",
+        "en jätte som slogs mot Tor",
+        "Odens häst",
+        "en gris som åts på kvällen och levde igen på morgonen"
+      ],
+      "answerIndex": 3,
+      "hint": "Grundboken s. 81",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Vem var Frigg?",
+      "back": "Frigg var den främsta av gudinnorna.",
+      "choices": [
+        "jaktens och vinterns gudinna",
+        "Tors dotter",
+        "den främsta av gudinnorna",
+        "en völva"
+      ],
+      "answerIndex": 2,
+      "hint": "Grundboken s. 81",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vem var Frigg gift med?",
+      "back": "Frigg var gift med Oden.",
+      "choices": [
+        "Tyr",
+        "Tor",
+        "Oden",
+        "Frej"
+      ],
+      "answerIndex": 2,
+      "hint": "Grundboken s. 81",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vem var Tor?",
+      "back": "Tor var den starkaste av alla gudar.",
+      "choices": [
+        "den starkaste av alla gudar",
+        "den viktigaste av asagudarna",
+        "jaktens gud",
+        "en lagman"
+      ],
+      "answerIndex": 0,
+      "hint": "Grundboken s. 81",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vilken slags gud var Tor?",
+      "back": "Tor var åskguden.",
+      "choices": [
+        "fruktbarhetsguden",
+        "åskguden",
+        "havets gud",
+        "krigsguden"
+      ],
+      "answerIndex": 1,
+      "hint": "Grundboken s. 81",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vilka var Frej och Freja?",
+      "back": "Frej och Freja var fruktbarhetsgudar.",
+      "choices": [
+        "fruktbarhetsgudar",
+        "jättar",
+        "åskgudar",
+        "krigsgudar"
+      ],
+      "answerIndex": 0,
+      "hint": "Grundboken s. 81",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vad var blot?",
+      "back": "Blot var ett slags offer till gudarna och gudinnorna.",
+      "choices": [
+        "ett slags offer till gudarna och gudinnorna",
+        "ett slags möte",
+        "ett slags skepp",
+        "ett slags mat"
+      ],
+      "answerIndex": 0,
+      "hint": "Grundboken s. 81",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Vem var Skade?",
+      "back": "Skade var jaktens och vinterns gudinna.",
+      "choices": [
+        "den främsta av gudinnorna",
+        "en völva",
+        "jaktens och vinterns gudinna",
+        "fruktbarhetens gudinna"
+      ],
+      "answerIndex": 2,
+      "hint": "Grundboken s. 81",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vilken gud har gett namn åt tisdag?",
+      "back": "Tyr – tisdag betyder Tyrs dag.",
+      "choices": [
+        "Oden",
+        "Tor",
+        "Tyr",
+        "Frigg"
+      ],
+      "answerIndex": 2,
+      "hint": "Grundboken s. 81",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vilken gud har gett namn åt onsdag?",
+      "back": "Oden – onsdag betyder Odens dag.",
+      "choices": [
+        "Tyr",
+        "Tor",
+        "Frej",
+        "Oden"
+      ],
+      "answerIndex": 3,
+      "hint": "Grundboken s. 81",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vilken gud har gett namn åt torsdag?",
+      "back": "Tor – torsdag betyder Tors dag.",
+      "choices": [
+        "Tyr",
+        "Tor",
+        "Oden",
+        "Frigg"
+      ],
+      "answerIndex": 1,
+      "hint": "Grundboken s. 81",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vilken gudinna har gett namn åt fredag?",
+      "back": "Frigg – fredag betyder Friggs dag.",
+      "choices": [
+        "Frigg",
+        "Oden",
+        "Skade",
+        "Tyr"
+      ],
+      "answerIndex": 0,
+      "hint": "Grundboken s. 81",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vad var en völva?",
+      "back": "En völva var en kvinna som man trodde kunde spå om vad som skulle hända i framtiden.",
+      "choices": [
+        "den främsta av gudinnorna",
+        "en kvinna som man trodde kunde spå framtiden",
+        "ett vikingaskepp",
+        "en träl som arbetade i köket"
+      ],
+      "answerIndex": 1,
+      "hint": "Grundboken s. 81",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Vad brukar Birka kallas?",
+      "back": "Birka brukar kallas Sveriges första stad.",
+      "choices": [
+        "vikingarnas största skepp",
+        "Sveriges huvudstad",
+        "Odens bostad",
+        "Sveriges första stad"
+      ],
+      "answerIndex": 3,
+      "hint": "Grundboken s. 82",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Ungefär hur många bodde i Birka när staden var som störst?",
+      "back": "Det bodde mellan 500 och 1000 personer där.",
+      "choices": [
+        "ungefär 100 000 personer",
+        "ungefär 50 personer",
+        "mellan 500 och 1000 personer",
+        "ungefär 10 000 personer"
+      ],
+      "answerIndex": 2,
+      "hint": "Grundboken s. 82",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vad tillverkade hantverkarna i Birka i sina verkstäder?",
+      "back": "De tillverkade bland annat kläder, kammar, skor, smycken och vapen.",
+      "choices": [
+        "böcker och papper",
+        "bilar och cyklar",
+        "kläder, kammar, skor, smycken och vapen",
+        "glasögon och klockor"
+      ],
+      "answerIndex": 2,
+      "hint": "Grundboken s. 82",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Vad kunde man handla i Birka?",
+      "back": "I Birka kunde man handla till exempel järn, hudar, horn och pälsar.",
+      "choices": [
+        "guldmynt med kungens bild",
+        "potatis och tomater",
+        "kaffe och socker",
+        "järn, hudar, horn och pälsar"
+      ],
+      "answerIndex": 3,
+      "hint": "Grundboken s. 83",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Vad har man hittat vid utgrävningar i Birka?",
+      "back": "Man har hittat arabiskt silver, östeuropeiska pärlor, vackra glasbägare, keramik och tyger.",
+      "choices": [
+        "pyramider",
+        "arabiskt silver, pärlor, glasbägare, keramik och tyger",
+        "hjälmar med horn",
+        "dinosaurieben"
+      ],
+      "answerIndex": 1,
+      "hint": "Grundboken s. 83",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Varifrån tror man att ordet viking kommer?",
+      "back": "Man tror att det kommer av ordet vik, ett område med vatten som har land på tre sidor.",
+      "choices": [
+        "från en kung som hette Vike",
+        "från ordet vik – vatten med land på tre sidor",
+        "från namnet på Odens häst",
+        "från ett latinskt ord för krigare"
+      ],
+      "answerIndex": 1,
+      "hint": "Grundboken s. 83",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Hur visste vikingarna åt vilket håll de skulle segla?",
+      "back": "De styrde med hjälp av solen och stjärnorna.",
+      "choices": [
+        "med hjälp av kartor från Birka",
+        "med hjälp av solen och stjärnorna",
+        "de följde fåglar hela tiden",
+        "med hjälp av en GPS"
+      ],
+      "answerIndex": 1,
+      "hint": "Grundboken s. 83",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Vad var vikingarnas skepp byggda av?",
+      "back": "Skeppen var byggda av långa, tunna brädor som lades omlott för att överlappa varandra.",
+      "choices": [
+        "djurhudar på en ram",
+        "stenar och lera",
+        "järnplåtar",
+        "långa, tunna brädor som lades omlott"
+      ],
+      "answerIndex": 3,
+      "hint": "Grundboken s. 84",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Vad kallas den typ av krigsskepp som oftast förknippas med vikingatiden?",
+      "back": "De kallas långskepp eller drakskepp.",
+      "choices": [
+        "kogg",
+        "galär",
+        "långskepp eller drakskepp",
+        "ångbåt"
+      ],
+      "answerIndex": 2,
+      "hint": "Grundboken s. 84",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vad var vikingaskeppet utrustat med?",
+      "back": "Det var utrustat med långa åror.",
+      "choices": [
+        "skjul att sova i",
+        "långa åror",
+        "en motor",
+        "kanoner"
+      ],
+      "answerIndex": 1,
+      "hint": "Grundboken s. 85",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Var på skeppet sov vikingarna?",
+      "back": "De sov under bar himmel, oavsett väder.",
+      "choices": [
+        "i hytter under däck",
+        "i ett tält i fören",
+        "de sov aldrig på skeppet",
+        "under bar himmel, oavsett väder"
+      ],
+      "answerIndex": 3,
+      "hint": "Grundboken s. 85",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ],
+      "write": true
+    },
+    {
+      "front": "Vad är fören på en båt?",
+      "back": "Fören är den del som sitter längst fram.",
+      "choices": [
+        "botten av båten",
+        "den del som sitter längst bak",
+        "masten",
+        "den del som sitter längst fram"
+      ],
+      "answerIndex": 3,
+      "hint": "Grundboken s. 85",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vad är aktern på en båt?",
+      "back": "Aktern är den del som sitter längst bak.",
+      "choices": [
+        "den del som sitter längst fram",
+        "årorna",
+        "seglet",
+        "den del som sitter längst bak"
+      ],
+      "answerIndex": 3,
+      "hint": "Grundboken s. 85",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vad kallade vikingarna Ryssland?",
+      "back": "Ryssland kallades för Gårdarike.",
+      "choices": [
+        "Gårdarike",
+        "Valhall",
+        "Blåland",
+        "Särkland"
+      ],
+      "answerIndex": 0,
+      "hint": "Grundboken s. 87",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vad kallade vikingarna Arabernas land?",
+      "back": "Arabernas land kallades för Särkland.",
+      "choices": [
+        "Särkland",
+        "Blåland",
+        "Birka",
+        "Gårdarike"
+      ],
+      "answerIndex": 0,
+      "hint": "Grundboken s. 87",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    },
+    {
+      "front": "Vad kallade vikingarna Afrika?",
+      "back": "Afrika kallades för Blåland.",
+      "choices": [
+        "Valhall",
+        "Blåland",
+        "Gårdarike",
+        "Särkland"
+      ],
+      "answerIndex": 1,
+      "hint": "Grundboken s. 87",
+      "tags": [
+        "vikingatiden",
+        "åk4",
+        "grundboken"
+      ]
+    }
+  ]
+}
